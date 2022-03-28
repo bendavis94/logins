@@ -20,7 +20,7 @@
 
 	function fullScreenHeight() {
 		var element = $(".full-screen");
-		var $minheight = $window.height() - 61;
+		var $minheight = $window.height();
 		element.css('min-height', $minheight);
 	}
 
