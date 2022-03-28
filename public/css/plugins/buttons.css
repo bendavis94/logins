@@ -111,16 +111,16 @@
     height: auto;
 }
 .borderp{
-    width: 37px;
+    width: 36px;
     float: right;
 }
 @media screen and (max-width: 567px){
     .borderp{
-        width: 35px;
+        width: 36px;
    }
 }
 .pricing-list-price h2{
-    font-size: 33px;
+    font-size: 31px;
     float: left;
     border-bottom: none;
     margin-top: 0;
@@ -129,7 +129,7 @@
 }
 .pricing-list-price h2.text-white{
     border-bottom: none;
-    font-size: 33px;
+    font-size: 31px;
     float: left;
     margin-top: 0;
     margin-bottom: 0;
@@ -137,24 +137,24 @@
 }
 @media screen and (max-width: 567px){
     .pricing-list-price h2{
-        font-size: 31px;
+        font-size: 30px;
    }
     .pricing-list-price h2.text-white{
-        font-size: 31px;
+        font-size: 30px;
    }
 }
 .pricing-list ul{
     clear: both;
 }
 .border p:first-child{
-    font-size: 37px;
+    font-size: 35px;
     font-weight: 700;
     float: left;
     font-family:"Montserrat",sans-serif;
 }
 @media screen and (max-width: 567px){
     .border p:first-child{
-        font-size: 33px;
+        font-size: 31px;
    }
 }
 .white{
