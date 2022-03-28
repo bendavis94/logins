@@ -293,56 +293,6 @@
                 }
             });
         }
-        
-        $('#testmonials-style2').owlCarousel({
-            loop: true,
-            responsiveClass: true,
-            nav: true,
-            dots: false,
-            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-            responsive: {
-                0: {
-                    items: 2,
-                    margin: 15,
-                },
-                768: {
-                    items: 3,
-                    margin: 20,
-                },
-                992: {
-                    items: 4,
-                    margin: 30,
-                }
-            }
-        });
-        $('#services-carousel').owlCarousel({
-            loop: true,
-            responsiveClass: true,
-            dots: true,
-            nav: true,
-            autoplay: true,
-            autoplayTimeout: 1000,
-            autoplayHoverPause: true,
-            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-            responsive: {
-                0: {
-                    items: 2,
-                    margin: 10,
-                },
-                768: {
-                    items: 3,
-                    margin: 20,
-                },
-                992: {
-                    items: 3,
-                    margin: 30,
-                },
-                1200: {
-                    items: 5,
-                    margin: 20,
-                }
-            }
-        });
      
         $('.owl-carousel').owlCarousel({
             items: 1,
