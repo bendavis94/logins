@@ -1034,3 +1034,20 @@ td{
     padding: 0;
     border-radius: 3px;
 }
+
+@media (min-width:768px){
+    footer.bg-img{
+        background-position:0 0;
+        background-repeat:repeat-x;
+        animation:animatedBackground 30s linear infinite
+    }
+}
+
+@keyframes animatedBackground{
+    from{
+        background-position:0 0
+    }
+    to{
+        background-position:100% 0
+    }
+}
