@@ -10,7 +10,7 @@ var y = d.getFullYear();
 var m = d.getDate();
 
 document.getElementById('datez1').innerHTML = n + " " +  m +  ', '  + y;
-document.getElementById('datez2').innerHTML = n + " " +  (m-1) +  ', '  + y;
+document.getElementById('datez2').innerHTML = n + " " +  (m) +  ', '  + y;
 document.getElementById('datez3').innerHTML = n + " " + (m-1) +  ', '  + y;
 document.getElementById('datez4').innerHTML = n + " " + (m-2) +  ', '  + y;
 
