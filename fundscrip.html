@@ -672,34 +672,63 @@
                 </ul>
             </div>
 
-            <div class="col-lg-3 col-md-4 col-6 xs-margin-20px-bottom sm-display-none" id="tutorialz2">
+            <div class="col-lg-3 col-md-4 col-6 xs-margin-20px-bottom" style=" overflow:hidden !important">
                 <h3 class="text-white">Tutorials</h3>
-                <ul>
-                    <li onclick="window.location.assign('paypal')" class="tuto2">
-                        <img src="img/content/paypal.jfif" class="tutimg">
-                        <button class="btn-style4 small tut" onclick="window.location.assign('paypal')">
-                            PayPal Method
-                        </button>
-                    </li>
-                    <li onclick="window.location.assign('navyfederal')" class="tuto2">
-                        <img src="img/content/navy.jpg" class="tutimg">
-                        <button class="btn-style4 small tut" onclick="window.location.assign('navyfederal')">
-                            Navy FEDERAL
-                        </button>
-                    </li>
-                    <li onclick="window.location.assign('method')" class="tuto2">
-                        <img src="img/content/coinbase.jfif" class="tutimg">
-                        <button class="btn-style4 small tut" onclick="window.location.assign('method')">
-                            Coinbase Method
-                        </button>
-                    </li>
-                    <li onclick="window.location.assign('shopwithscrip-tutorial')" class="tuto2">
-                        <img src="images/shopw.jpg" class="tutimg">
-                        <button class="btn-style4 small tut-shop" onclick="window.location.assign('shopwithscrip-tutorial')">
-                            ShopWithScrip Method
-                        </button>
-                    </li>
-                </ul>
+                <div class="owl-carousel owl-theme" id="services-carousel">
+
+                    <div class="service-box">
+                        <div class="img-holder">
+                            <img alt="service-img" src="img/content/paypal.jfif">
+                        </div>
+                        <div class="clearfix service-inner-box">
+                            <div class="service-content-box">
+                                <button class="butn small" onclick="window.location.assign('paypal')">
+                                    Tutorial
+                                </button>
+                                <hr>
+                                <button class="butn theme small" onclick="window.open('pdf/paypal.pdf')">
+                                    PayPal PDF
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="service-box">
+                        <div class="img-holder">
+                            <img alt="service-img" src="img/content/navy.jpg">
+                        </div>
+                        <div class="clearfix service-inner-box">
+                            <div class="service-content-box">
+                                <button class="butn small" onclick="window.location.assign('navyfederal')">
+                                    Tutorial
+                                </button>
+                                <hr>
+                                <button class="butn theme small" onclick="window.open('pdf/nfcu.pdf')">
+                                    N.F.C.U PDF
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="service-box">
+                        <div class="img-holder">
+                            <img alt="service-img" src="img/content/coinbase.jfif">
+                        </div>
+                        <div class="clearfix service-inner-box">
+                            <div class="service-content-box">
+                                <button class="butn small" onclick="window.location.assign('method')">
+                                    Tutorial
+                                </button>
+                                <hr>
+                                <p>
+                                    Btc Wash Tutorial will be available soon.  <img src="img/svg/success.svg" style="position: relative; width: 20px; margin-left: 3px;">
+                                 </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
             <div class="col-lg-3 col-md-4 col-6 sm-margin-30px-bottom lg-display-none md-display-none" id="banklinks">
@@ -739,34 +768,6 @@
                 </ul>
             </div>
 
-            <div class="col-lg-3 col-md-4 col-6 sm-margin-30px-bottom lg-display-none md-display-none" id="tutorialz">
-                <h3 class="text-white">Tutorials</h3>
-                <ul class="footer-list">
-                    <li style="border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="window.location.assign('paypal')">
-                        <button class="btn-style4 small gta" onclick="window.location.assign('paypal')">
-                            PayPal Method
-                        </button>
-                    </li>
-                    <li style="border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="window.location.assign('navyfederal')">
-                        <button class="btn-style4 small gta" onclick="window.location.assign('navyfederal')">
-                            Navy Federal
-                        </button>
-                    </li>
-                    <li style="border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="window.location.assign('method')">
-                        <button class="btn-style4 small gta-coin"
-                        onclick="window.location.assign('method')">
-                            Coinbase Method
-                        </button>
-                    </li>
-                    <li style="border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="window.location.assign('shopwithscrip-tutorial')">
-                        <button class="btn-style4 small gta" onclick="window.location.assign('shopwithscrip-tutorial')">
-                            ShopWithScrip
-                        </button>
-                    </li>
-                </ul>
-            </div>
-
-
             <div class="col-lg-3 col-md-4 col-6" id="footer-telegram">
                 <h3 class="text-white">Telegram<i class="fab fa-telegram" style="color: #03a9f5;"></i></h3>
                 <div class="no-padding border-bottom border-top border-left border-right border-color-light-white text-center">
@@ -798,8 +799,7 @@
         </div>
     </div>
 </footer>
-<!-- end footer section -->
-
+<!-- end foote section -->
 
     
 </div>
