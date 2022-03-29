@@ -58,7 +58,7 @@
             dots: true,
             nav: true,
             autoplay: true,
-            autoplayTimeout: 1000,
+            autoplayTimeout: 2000,
             autoplayHoverPause: true,
             navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
             responsive: {
