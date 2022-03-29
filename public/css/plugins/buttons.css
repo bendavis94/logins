@@ -188,7 +188,7 @@ select{
 #invoiceHolder{
     font-size: 24px;
     font-weight: 700;
-    color: white;
+    color: aqua;
 }
 @media screen and (max-width: 567px){
     #invoiceHolder{
@@ -843,7 +843,7 @@ td{
 #invoiceHolder3{
     text-align: center;
     color: #36a3f5;
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 700;
 }
 #invoice-col-table{
