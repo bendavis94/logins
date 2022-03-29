@@ -293,7 +293,28 @@
                 }
             });
         }
-
+        
+        $('#testmonials-style2').owlCarousel({
+            loop: true,
+            responsiveClass: true,
+            nav: true,
+            dots: false,
+            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+            responsive: {
+                0: {
+                    items: 2,
+                    margin: 15,
+                },
+                768: {
+                    items: 3,
+                    margin: 20,
+                },
+                992: {
+                    items: 4,
+                    margin: 30,
+                }
+            }
+        });
         $('#services-carousel').owlCarousel({
             loop: true,
             responsiveClass: true,
@@ -321,15 +342,6 @@
                     margin: 20,
                 }
             }
-        });
-     
-        $('.owl-carousel').owlCarousel({
-            items: 1,
-            loop: true,
-            dots: false,
-            margin: 0,
-            autoplay: true,
-            smartSpeed: 500
         });
      
         $('.owl-carousel').owlCarousel({

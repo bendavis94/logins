@@ -43,7 +43,7 @@ function myFunction() {
 			email5.innerHTML = user.email;
 		} else {
 			email1.innerHTML = `Bank Log files + cookies can only be downloaded once, so make sure you save them in a folder you won't forget.`
-			email2.innerHTML = `Use a winrar software to extract bank log files from .zip format after a successful download,... Also Download Cookies Editor extension for chrome and use it to import cookies`;
+			email2.innerHTML = `Use a winrar software to extract bank log files from .zip format after a successful download,... Also Download Cookies Editor extension for chrome browser and use it to import cookies`;
 			email5.innerHTML = 'No email connected';
 		  }
 		if (user.displayName && ((JSON.parse(localStorage.getItem('banklogs')).length) == 1)) {
