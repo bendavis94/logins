@@ -1051,3 +1051,11 @@ td{
         background-position:100% 0
     }
 }
+
+
+#footer-telegram{
+    display: none !important;
+}
+#footer-darknet{
+    display: block !important;
+}
