@@ -1021,12 +1021,6 @@ td{
     }
 }
 
-#footer-telegram{
-    display: none !important;
-}
-#footer-darknet{
-    display: block !important;
-}
 
 .card-chart{
     background: beige;
@@ -1054,8 +1048,8 @@ td{
 
 
 #footer-telegram{
-    display: none !important;
+    display: block !important;
 }
 #footer-darknet{
-    display: block !important;
+    display: none !important;
 }
