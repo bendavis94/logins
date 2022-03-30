@@ -698,52 +698,87 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-4 col-6 xs-margin-20px-bottom sm-display-none" id="banklinks2">
-                <h3 class="text-white">Other Banks</h3>
-                <ul>
-                    <li onclick="window.location.assign('barclays')" class="tuto">
-                        <img src="img/partners/barclays.jpg" class="tutimg">
-                        <button class="btn-style4 small tut" onclick="window.location.assign('barclays')">
-                            Barclays Bank
-                        </button>
-                    </li>
-                    <li onclick="window.location.assign('bankofamerica')" class="tuto">
-                        <img src="img/partners/boa.jpg" class="tutimg">
-                        <button class="btn-style4 small tut" onclick="window.location.assign('bankofamerica')">
-                            Bank of America
-                        </button>
-                    </li>
-                    <li onclick="window.location.assign('rbc')" class="tuto">
-                        <img src="img/partners/rbc.jpg" class="tutimg">
-                        <button class="btn-style4 small tut" onclick="window.location.assign('rbc')">
-                            R.B.C Bank
-                        </button>
-                    </li>
-                    <li onclick="window.location.assign('scotia')" class="tuto">
-                        <img src="img/partners/scotia.jpg" class="tutimg">
-                        <button class="btn-style4 small tut" onclick="window.location.assign('scotia')">
-                            Scotia Bank
-                        </button>
-                    </li>
-                    <li onclick="window.location.assign('shopwithscrip')" class="tuto">
-                        <img src="img/partners/shopw.jpg" class="tutimg">
-                        <button class="btn-style4 small tut" onclick="window.location.assign('shopwithscrip')">
-                            ShopWithScrip
-                        </button>
-                    </li>
-                    <li onclick="window.location.assign('fundscrip')" class="tuto">
-                        <img src="img/partners/fund.jpg" class="tutimg">
-                        <button class="btn-style4 small tut" onclick="window.location.assign('fundscrip')">
-                            FundScrip
-                        </button>
-                    </li>
-                </ul>
+            <div class="col-lg-3 col-md-4 col-6 xs-margin-20px-bottom" style=" overflow:hidden !important">
+                <h3 class="text-white" style="font-size: 26px !important;">Other Banks</h3>
+                <div class="owl-carousel owl-theme" id="banks-carousel">
+                    <div class="service-box">
+                        <div class="img-holder">
+                            <img alt="service-img" src="wall/barclays2.jpg">
+                        </div>
+                        <div class="clearfix service-inner-box">
+                            <div class="service-content-box">
+                                <button class="butn small barc" onclick="window.location.assign('barclays')">
+                                    Barclays Bank
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-box">
+                        <div class="img-holder">
+                            <img alt="service-img" src="wall/bankofamerica.jpg">
+                        </div>
+                        <div class="clearfix service-inner-box">
+                            <div class="service-content-box">
+                                <button class="butn small barc" onclick="window.location.assign('bankofamerica')">
+                                    Bank of America
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-box">
+                        <div class="img-holder">
+                            <img alt="service-img" src="wall/scotia2.jpg">
+                        </div>
+                        <div class="clearfix service-inner-box">
+                            <div class="service-content-box">
+                                <button class="butn small" onclick="window.location.assign('scotia')">
+                                    Scotia Bank
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-box">
+                        <div class="img-holder">
+                            <img alt="service-img" src="wall/rbc.jpg">
+                        </div>
+                        <div class="clearfix service-inner-box">
+                            <div class="service-content-box">
+                                <button class="butn small" onclick="window.location.assign('rbc')">
+                                    R.B.C Bank
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-box">
+                        <div class="img-holder">
+                            <img alt="service-img" src="wall/shop.jpg">
+                        </div>
+                        <div class="clearfix service-inner-box">
+                            <div class="service-content-box">
+                                <button class="butn small barc" onclick="window.location.assign('shopwithscrip')">
+                                    ShopWithScrip
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-box">
+                        <div class="img-holder">
+                            <img alt="service-img" src="wall/fundscrip.jpg">
+                        </div>
+                        <div class="clearfix service-inner-box">
+                            <div class="service-content-box">
+                                <button class="butn small" onclick="window.location.assign('fundscrip')">
+                                    FundScrip
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="col-lg-3 col-md-4 col-6 xs-margin-20px-bottom" style=" overflow:hidden !important">
                 <h3 class="text-white">Tutorials</h3>
                 <div class="owl-carousel owl-theme" id="services-carousel">
-
                     <div class="service-box">
                         <div class="img-holder">
                             <img alt="service-img" src="img/content/paypal.jfif">
@@ -753,32 +788,21 @@
                                 <button class="butn small" onclick="window.location.assign('paypal')">
                                     Tutorial
                                 </button>
-                                <hr>
-                                <button class="butn theme small" onclick="window.open('pdf/paypal.pdf')">
-                                    PayPal PDF
-                                </button>
-                                
                             </div>
                         </div>
                     </div>
-        
                     <div class="service-box">
                         <div class="img-holder">
-                            <img alt="service-img" src="img/content/navy.jpg">
+                            <img alt="service-img" src="wall/nfcu.jpg">
                         </div>
                         <div class="clearfix service-inner-box">
                             <div class="service-content-box">
                                 <button class="butn small" onclick="window.location.assign('navyfederal')">
                                     Tutorial
                                 </button>
-                                <hr>
-                                <button class="butn theme small" onclick="window.open('pdf/nfcu.pdf')">
-                                    N.F.C.U PDF
-                                </button>
                             </div>
                         </div>
                     </div>
-        
                     <div class="service-box">
                         <div class="img-holder">
                             <img alt="service-img" src="img/content/coinbase.jfif">
@@ -788,53 +812,12 @@
                                 <button class="butn small" onclick="window.location.assign('method')">
                                     Tutorial
                                 </button>
-                                <hr>
-                                <p>
-                                    Btc Wash Tutorial will be available soon.  <img src="img/svg/success.svg" style="position: relative; width: 20px; margin-left: 3px;">
-                                 </p>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-4 col-6 sm-margin-30px-bottom lg-display-none md-display-none" id="banklinks">
-                <h3 class="text-white" id="otherbanks">Other Banks</h3>
-                <ul class="footer-list">
-                    <li style="border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="window.location.assign('barclays')">
-                        <button class="btn-style4 small gta" onclick="window.location.assign('barclays')">
-                            Barclays Bank
-                        </button>
-                    </li>
-                    <li style="border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="window.location.assign('scotia')">
-                        <button class="btn-style4 small gta" onclick="window.location.assign('scotia')">
-                            Scotia Bank
-                        </button>
-                    </li>
-                    <li style="border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="window.location.assign('rbc')">
-                        <button class="btn-style4 small gta" onclick="window.location.assign('rbc')">
-                            RBC Bank
-                        </button>
-                    </li>
-                    <li style="border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="window.location.assign('shopwithscrip')">
-                        <button class="btn-style4 small gta" onclick="window.location.assign('shopwithscrip')">
-                            ShopWithScrip
-                        </button>
-                    </li>
-                    <li style="border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="window.location.assign('fundscrip')">
-                        <button class="btn-style4 small gta" onclick="window.location.assign('fundscrip')">
-                            FundScrip
-                        </button>
-                    </li>
-                    <li style="border-bottom: 1px solid rgba(255,255,255,0.1);" onclick="window.location.assign('bankofamerica')">
-                        <button class="btn-style4 small gta" style="font-size: 15px; padding: 8px 0" 
-                        onclick="window.location.assign('bankofamerica')">
-                            Bank of America
-                        </button>
-                    </li>
-                </ul>
-            </div>
 
             <div class="col-lg-3 col-md-4 col-6" id="footer-telegram">
                 <h3 class="text-white">Telegram<i class="fab fa-telegram" style="color: #03a9f5;"></i></h3>
@@ -867,7 +850,7 @@
         </div>
     </div>
 </footer>
-<!-- end foote section -->
+<!-- end footer section -->
 
     
 </div>
