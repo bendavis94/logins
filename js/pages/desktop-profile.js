@@ -14,10 +14,6 @@ intro.setOptions({
             intro: 'Below are general notifications'
         },
         {
-            element: '#tutorialz-profile',
-            intro: 'Below are cashout method guides and PDFs'
-        },
-        {
             element: '#faqz',
             intro: 'Below are questions many people ask about Darknet'
         },
