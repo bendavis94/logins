@@ -1053,3 +1053,23 @@ td{
 #footer-darknet{
     display: none !important;
 }
+
+#banks-carousel .img-holder img, #services-carousel .img-holder img{
+    height: 180px !important;
+    width: 100% !important;
+}
+
+
+@media (max-width:768px){
+    .barc{
+        font-size: 17px !important;
+        padding: 10px 3px !important;
+        margin: 0 !important;
+    }
+    #banks-carousel .img-holder img, #services-carousel .img-holder img{
+        height: 150px !important;
+        width: 100% !important;
+    }
+    
+}
+
