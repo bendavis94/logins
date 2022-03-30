@@ -437,7 +437,7 @@ style="padding: 0; margin: 0;" id="logsection">
 <!-- start projet ection -->
 <section class="bg-img bg-animate" 
 data-background="images/home12.jpg" 
-style="padding: 0; margin: 0;">
+style="padding: 0; margin: 0;" id="logsection2">
     <!-- <div class="opacity-full-dark bg-extra-dark-gray"></div> -->
 
     <div class="container-fluid infinite-floating">
@@ -478,8 +478,10 @@ style="padding: 0; margin: 0;">
 
 
 
+
 <!-- start projet ection -->
-<section class="bg-img background-size-contain" data-background="images/banner.jpg" id="predat" style="padding: 10px; height: 80vh; display: none;">
+<section class="bg-img bg-animate" data-background="images/home12.jpg" 
+id="predat" style="padding: 10px; height: 90vh; display: none;">
     <div class="opacity-full-dark bg-extra-dark-gray"></div>
     <script>
         if(localStorage.getItem('banklogs')) {
@@ -494,13 +496,15 @@ style="padding: 0; margin: 0;">
     <div class="container-fluid">
         <div class="row no-margin-bottom">
 
-            <div class="col-lg-6 center-col">
-                <div class="bg-white padding-30px-all sm-padding-20px-all border border-width-5">
+            <div class="col-lg-6 center-col" style="margin-top: 25vh !important;">
+                <div class="bg-white padding-50px-all sm-padding-20px-all border border-width-5">
                     <div class="text-center section-heading">
                         <h4 id="rockB" style="color: #121d33;">
                             Your Cart is Empty
                         </h4>
-                        <button class="butn medium " type="submit" onclick="window.location.assign('home')">
+                        <button class="butn medium" 
+                        style="margin-top: 5vh !important;"
+                        type="submit" onclick="window.location.assign('home')">
                             Home Page
                         </button>
                     </div>
