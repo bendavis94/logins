@@ -39,6 +39,23 @@
     <link rel="stylesheet" href="datatables/css/jquery.datatables3.min.css" />
     <link rel="stylesheet" href="datatables/css/jquery.datatables_themeroller.css" />
     <link href="css/plugins/buttons.css" rel="stylesheet">
+
+    <style>
+        .bg-animate{
+            background-position:0 0;
+            background-repeat:repeat-x;
+            animation:animatedBackground 30s linear infinite
+        }
+
+        @keyframes animatedBackground{
+            from{
+                background-position:0 0
+            }
+            to{
+                background-position:100% 0
+            }
+        }
+    </style>
     
 </head>
 <body onload="myFunction(); move()" id="thebodyz" style="background: #121d33;">
@@ -289,7 +306,9 @@
 
 
 <!-- start projet ection -->
-<section class="bg-img background-size-contain" data-background="images/banner.jpg" style="padding: 0; margin: 0;" id="logsection">
+<section class="bg-img bg-animate" 
+data-background="images/home12.jpg" 
+style="padding: 0; margin: 0;" id="logsection">
     <div class="opacity-full-dark bg-extra-dark-gray"></div>
 
     <div class="container-fluid">
@@ -411,8 +430,15 @@
 
     </div>
     </div>
+</section>
 
 
+
+<!-- start projet ection -->
+<section class="bg-img bg-animate" 
+data-background="images/home12.jpg" 
+style="padding: 0; margin: 0;">
+    <!-- <div class="opacity-full-dark bg-extra-dark-gray"></div> -->
 
     <div class="container-fluid infinite-floating">
         <div class="section-heading">
