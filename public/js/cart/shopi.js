@@ -209,24 +209,12 @@ function updateCartTotal() {
         total = total + (price2 * 1);
     }
 
-    if(JSON.parse(localStorage.getItem('banklogs')).length == 2){
-        document.getElementById('omanyala').innerHTML = `$${total.toLocaleString()}`;
-        document.getElementById('omanyala2').innerHTML = `$${(Math.round(total * 0.75)).toLocaleString()}`;
-        document.getElementById('omanyala2').style.display = 'block';
-        document.getElementById('omanyala').style.color = 'rgba(255,0,0,0.7)';
-        document.getElementById('the-other-one').style.color = 'rgba(255,0,0,0.7)'
-        document.getElementById('omanyala').style.textDecoration = 'line-through';
-        document.getElementById('omanyala').style.textDecorationStyle = 'double';
-        document.getElementById('bitcoin-logo').style.display = 'none';
-        document.getElementById('satoshinakamoto').style.fontSize = '19px'
-    } else {
-        document.getElementById('omanyala').innerHTML = `$${total.toLocaleString()}`;
-    }
+    document.getElementById('omanyala').innerHTML = `$${total.toLocaleString()}`;
 
 
     if(JSON.parse(localStorage.getItem('banklogs')).length === 2) {
         document.getElementById('showtoasts').innerHTML = 'Download 2 Bank Logs✅';
-        document.getElementById('titlelogs2').innerText = 'Cart: 2, Total price before Discount: $' + total.toLocaleString();
+        document.getElementById('titlelogs2').innerText = 'Cart: 2, Total: $' + total.toLocaleString();
     } else if((JSON.parse(localStorage.getItem('banklogs')).length) == 1) {
         document.getElementById('showtoasts').innerHTML = 'Download 1 Bank Log ✅';
         document.getElementById('titlelogs2').innerText = 'Cart: 1, Total: $' + total.toLocaleString();
