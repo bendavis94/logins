@@ -405,7 +405,7 @@ function updateCartTotal() {
                 In Cart ${data.price3}
                 `;
                 singleLog[i].classList.add('theme');
-                singleLog[i].style.background = 'aqua';
+                singleLog[i].style.background = 'lime';
                 singleLog[i].style.fontWeight = '700';
                 singleLog[i].style.fontSize = '20px';
                 singleLog[i].style.color = '#121d33';
