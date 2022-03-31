@@ -429,9 +429,9 @@ button#thetot, button#thetot1,button#thetot3{
     font-size: 28px;
     margin: 25px;
     padding: 10px;
-    background: lime;
+    background: yellow;
     color: #121d33;
-    border: 1px solid limegreen;
+    border: 1px solid gold;
 }
 @media (max-width: 768px) {
     button#thetot, button#thetot1,button#thetot3{
@@ -439,9 +439,9 @@ button#thetot, button#thetot1,button#thetot3{
         font-size: 28px;
         margin: 16px;
         padding: 10px;
-        background: lime;
+        background: yellow;
         color: #121d33;
-        border: 1px solid limegreen;
+        border: 1px solid gold;
     }
 }
 button#thetot_2{
@@ -449,18 +449,18 @@ button#thetot_2{
     font-size: 28px;
     margin: 6px 0;
     padding: 10px;
-    background: lime;
+    background: yellow;
     color: #121d33;
-    border: 1px solid limegreen;
+    border: 1px solid gold;
 }
 .moneycoming{
     font-weight: 700;
     font-size: 28px;
     margin: 6px 0;
     padding: 13px;
-    background: lime;
+    background: yellow;
     color: #121d33;
-    border: 1px solid limegreen;
+    border: 1px solid gold;
 }
 .clozing{
     background: lightgray;
