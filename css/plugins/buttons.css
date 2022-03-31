@@ -625,7 +625,7 @@ td{
     font-size: 14px;
     color: #121d33;
 }
-#the-other-one, #the-other-one2{
+#the-other-one{
     font-weight: 700;
 }
 .close{
@@ -866,7 +866,7 @@ td{
     margin: 0;
     background: white;
 }
-#omanyala, #omanyala2{
+#omanyala{
     margin-left: 10px !important;
     font-size: 32px !important;
     font-weight: 700;
@@ -906,10 +906,6 @@ td{
         color: #fff;
     }
     #omanyala{
-        color: #fff;
-        margin-left: 10px;
-    }
-    #omanyala2{
         color: #fff;
         margin-left: 10px;
     }
