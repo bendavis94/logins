@@ -406,7 +406,7 @@ function updateCartTotal() {
             if(singleLog[i].parentElement.parentElement.children[0].children[0].innerText == data.balance.replace('Balance: ','')){
                 singleLog[i].innerHTML = `In Cart: ${data.price3}`;
                 singleLog[i].classList.add('themezo');
-                singleLog[i].style.background = 'lime';
+                singleLog[i].style.background = 'yellow';
                 var bunist = singleLog[i].parentElement.parentElement;
                 bunist.classList.add('display-nones');
             } 
@@ -423,7 +423,7 @@ function updateCartTotal() {
             if(singleLog2[i].parentElement.parentElement.children[0].children[0].innerHTML == files.balance.replace('Balance: ','')){
                 singleLog2[i].innerHTML = `In Cart: ${files.price3}`;
                 singleLog2[i].classList.add('themezo');
-                singleLog[i].style.background = 'lime';
+                singleLog[i].style.background = 'yellow';
                 var bunist2 = singleLog2[i].parentElement.parentElement;
                 bunist2.classList.add('display-nones2');
             } 
