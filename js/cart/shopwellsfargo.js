@@ -1,5 +1,7 @@
 let items = [];
+var table1 = jQuery('#example1').DataTable();
 var table3 = jQuery('#example3').DataTable();
+
 
 if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
     items = JSON.parse(localStorage.getItem('banklogs'));
@@ -8,12 +10,9 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
     items.map(data=>{
         var image = `<td><img src=${data.image} width="50px" style="border-radius: 2px"></td>`
         var balance = `<td class="btn-balance">${data.balance}</td>`
-        var account = `<td>${data.account}</td>`
-
-        var remove = `<td><img src="failure.svg" class="cart-thumb btn-remove" style="width: 35px; height: 35px; margin: 0; cursor: pointer" alt=""></td>`;
-       
         var price = `<td class="btn-price">${data.price}</td>`
-
+        var remove = `<td><img src="failure.svg" class="cart-thumb btn-remove" style="width: 35px; height: 35px; margin: 0; cursor: pointer" alt=""></td>`;
+        var account = `<td>${data.account}</td>`
         var website = `<td>${data.website}</td>`
         var info1 = `<td>${data.info1}</td>`
         var info2 = `<td>${data.info2}</td>`
@@ -23,6 +22,21 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
         var info6 = `<td>${data.info6}</td>`
         var info7 = `<td>${data.info7}</td>`
         
+        table1.row.add([
+            image,
+            balance,      
+            account,   
+            remove,
+            price,
+            website,   
+            info1,   
+            info2,   
+            info3,   
+            info4,   
+            info5,   
+            info6,   
+            info7,   
+        ]).draw();
         table3.row.add([
             image,
             balance,      
@@ -41,8 +55,11 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
     });
 
     for(var i = 0; i < items.length; i++) {
+        var cartRow2 = document.createElement('li');
         var cartRow3 = document.createElement('li');
+        cartRow2.classList.add('bg-black','champez3li');
         cartRow3.classList.add('bg-black','champez3li');
+        var cartItems2 = document.getElementsByClassName('mobile1')[0];
         var cartItems3 = document.getElementsByClassName('mobile2')[0];
         var cartRowContents2 = `
             <table class="table table-bordered table-mobile">
@@ -92,9 +109,13 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
             </table>
         `;
 
+        cartRow2.innerHTML = cartRowContents2;
         cartRow3.innerHTML = cartRowContents2;
+        cartItems2.prepend(cartRow2);
         cartItems3.prepend(cartRow3);
+        cartRow2.getElementsByClassName('champez3fail')[0].addEventListener('click', removeCartItem2);
         cartRow3.getElementsByClassName('champez3fail')[0].addEventListener('click', removeCartItem2);
+    
     }
 
     var removeFromCartButtons = document.getElementsByClassName('btn-remove');
@@ -112,6 +133,7 @@ for(var i = 0; i <addToCartButtons.length; i++){
     var button = addToCartButtons[i];
     button.addEventListener('click', addToCartClicked)
 }
+
 
 function addToCartClicked(event) {
     var button = event.target;
@@ -177,10 +199,15 @@ function removeCartItem2(event){
     updateCartTotal2()
 }
 
+
 function addItemToCart(price, balance, account,website, image,info1,info2,info3,info4,info5,info6,info7){
+    var cartRow2 = document.createElement('li');
     var cartRow3 = document.createElement('li');
+    cartRow2.classList.add('bg-black','champez3li');
     cartRow3.classList.add('bg-black','champez3li');
+    var cartItems2 = document.getElementsByClassName('mobile1')[0];
     var cartItems3 = document.getElementsByClassName('mobile2')[0];
+
 
     var image1 = `<td><img src=${image} width="50px" style="border-radius: 2px"></td>`
     var balance1 = `<td class="btn-balance">${balance}</td>`
@@ -196,9 +223,9 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
     var info61 = `<td>${info6}</td>`
     var info71 = `<td>${info7}</td>`
 
-    var cartItemNames = cartItems3.getElementsByClassName('btn-balance');
+    var cartItemNames = document.getElementsByClassName('btn-balance');
     for(var i = 0; i < cartItemNames.length; i++) {
-        if(cartItemNames.length == 2) {
+        if(cartItemNames.length > 2.5) {
             alert(`Cart is full, checkout the 2 logs in cart first, follow the steps to cashout carefully, then buy more later`);
             window.location.assign('invoice')
             return
@@ -206,6 +233,22 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
     }
 
     addToLocalStorage(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+
+    table1.row.add([
+        image1,
+        balance1,      
+        account1,   
+        remove1,
+        price1,
+        website1,   
+        info11,   
+        info21,   
+        info31,   
+        info41,   
+        info51,   
+        info61,   
+        info71,   
+    ]).draw();
 
     table3.row.add([
         image1,
@@ -222,6 +265,7 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
         info61,   
         info71,   
     ]).draw();
+
 
     var cartRowContents2 = `
         <table class="table table-bordered table-mobile">
@@ -271,10 +315,15 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
         </table>
     `;
 
+    cartRow2.innerHTML = cartRowContents2;
     cartRow3.innerHTML = cartRowContents2;
+    cartItems2.prepend(cartRow2);
     cartItems3.prepend(cartRow3)
     updateCartTotal();
+
+    cartRow2.getElementsByClassName('champez3fail')[0].addEventListener('click', removeCartItem2);
     cartRow3.getElementsByClassName('champez3fail')[0].addEventListener('click', removeCartItem2);
+
 
     var removeFromCartButtons = document.getElementsByClassName('btn-remove');
     for(var i = 0; i <removeFromCartButtons.length; i++){
@@ -282,6 +331,7 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
         button.addEventListener('click', removeCartItem)
     }
 }
+
 
 function addToLocalStorage(price, balance, account,website, image,info1,info2,info3,info4,info5,info6,info7){
     let item = {
@@ -330,7 +380,7 @@ function removeItemFromCart(price, balance,account,website,image,info1,info2,inf
 }
 
 function updateCartTotal() {
-    var cartItemContainer = document.getElementsByClassName('champez3')[0];
+    var cartItemContainer = document.getElementsByClassName('champez1')[0];
     var cartRows = cartItemContainer.getElementsByTagName('tr');
     var total = 0;
     for (var i = 0; i < cartRows.length; i++){
@@ -340,8 +390,12 @@ function updateCartTotal() {
         var price2 = parseFloat(pric.replace(',',''))
         total = total + (price2 * 1);
     }
+    document.getElementById('thetot1').innerHTML = `Checkout:  $${total.toLocaleString()}`;
     document.getElementById('thetot3').innerHTML = `Checkout:  $${total.toLocaleString()}`;
+
+    document.getElementById('theno1').innerHTML = 'Cart: ' + JSON.parse(localStorage.getItem('banklogs')).length + ' , Total: $' + total.toLocaleString();
     document.getElementById('theno3').innerHTML = 'Cart: ' + JSON.parse(localStorage.getItem('banklogs')).length + ' , Total: $' + total.toLocaleString();
+
 
     var logsContainer =  document.getElementsByClassName('grid')[0];
     var singleLog = logsContainer.getElementsByClassName('btn-addon');
@@ -355,7 +409,6 @@ function updateCartTotal() {
                 singleLog[i].style.background = 'lime';
                 var bunist = singleLog[i].parentElement.parentElement;
                 bunist.classList.add('display-nones');
-                singleLog[i].disabled = 'disabled';
             } 
         });
     }
@@ -373,15 +426,17 @@ function updateCartTotal() {
                 singleLog[i].style.background = 'lime';
                 var bunist2 = singleLog2[i].parentElement.parentElement;
                 bunist2.classList.add('display-nones2');
-                singleLog2[i].disabled = 'disabled';
             } 
         });
     }
-    localStorage.setItem('time-left',600);
+
+
+    localStorage.setItem('time-left',600)
 }
 
+
 function updateCartTotal2() {
-    var cartItemContainer = document.getElementsByClassName('champez3')[0];
+    var cartItemContainer = document.getElementsByClassName('champez1')[0];
     var cartRows = cartItemContainer.getElementsByTagName('tr');
     var total = 0;
     for (var i = 0; i < cartRows.length; i++){
@@ -391,8 +446,10 @@ function updateCartTotal2() {
         var price2 = parseFloat(pric.replace(',',''))
         total = total + (price2 * 1);
     }
+    document.getElementById('thetot1').innerHTML = `Checkout:  $${total.toLocaleString()}`;
     document.getElementById('thetot3').innerHTML = `Checkout:  $${total.toLocaleString()}`;
-    document.getElementById('theno3').innerHTML = 'Cart: ' + JSON.parse(localStorage.getItem('banklogs')).length + ' , Total: $' + total.toLocaleString();
 
+    document.getElementById('theno1').innerHTML = 'Cart: ' + JSON.parse(localStorage.getItem('banklogs')).length + ' , Total: $' + total.toLocaleString();
+    document.getElementById('theno3').innerHTML = 'Cart: ' + JSON.parse(localStorage.getItem('banklogs')).length + ' , Total: $' + total.toLocaleString();
     localStorage.setItem('time-left',600)
 }
