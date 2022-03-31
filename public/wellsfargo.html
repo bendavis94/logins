@@ -102,6 +102,27 @@
             align-items: center !important;
             justify-content: center !important;
         }
+        #saleimg{
+            height: 320px !important; width: 100% !important;
+        }
+        @media screen and (max-width: 568px){
+            #saleimg{
+                height: 400px !important;
+                width: 100% !important;
+            }
+            #saleli{
+                top: 150px !important;
+            }
+        }
+        @media (min-width: 569px) and (max-width: 870px) {
+            #saleimg{
+                height: 550px !important;
+                width: 100% !important;
+            }
+            #saleli{
+                top: 250px !important;
+            }
+        }
     </style>
 </head>
 
@@ -3199,7 +3220,7 @@
             <ul class="jaymoule">
 
 
-                <li>
+                <li id="saleli">
                     <div class="modal-dialog" style="margin: 0; padding: 5px">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -3207,7 +3228,7 @@
                                 <img src="images/citi.jpg" class="wells-img2">
                             </div>
                             <div class="modal-body" style="padding: 0; margin: 0;">
-                                <img src="images/sale.jpg" style="height: 320px !important; width: 100% !important;" alt="img02"/>
+                                <img src="images/sale.jpg" id="saleimg" alt="img02"/>
                                 <figcaption>
                                     <p>citi.com</p>
                                     <p>Username + Password</p>
