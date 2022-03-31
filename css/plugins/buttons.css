@@ -509,9 +509,7 @@ button#thetot_2{
 .champez3li{
     margin: 0;
     padding: 0;
-    border: 1px solid rgba(0, 255, 0, 0.3) !important;
-    border-left: none !important;
-    border-right: none !important;
+    border: none !important;
 }
 .champez3li:nth-child(2){
     border-top: none !important;
