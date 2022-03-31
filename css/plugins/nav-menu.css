@@ -49,7 +49,7 @@ header{
     position:relative 
 }
 .navbar-nav li.has-sub a:hover{
-    color:lime 
+    color:yellow 
 }
 .navbar-nav li a{
     display:block;
@@ -274,7 +274,7 @@ header{
    animation-iteration-count:infinite;
     animation-name:Floating;
    animation-timing-function:ease-in-out;
-    color: lime;
+    color: yellow
 }
 .fa-angle-down{
     animation-duration:1s;
@@ -339,7 +339,7 @@ header{
 #cartlength{
     animation: blinker 1s linear infinite;
     color: #121d33;
-    background: lime;
+    background: yellow;
 }
 .attr-nav>ul>li.dropdown ul.dropdown-menu{
     position:absolute;
@@ -347,7 +347,7 @@ header{
     border-radius:0;
     overflow-y: hidden;
     padding:0;
-    background: lime;
+    background: yellow;
     min-width:225px;
     margin:20px 0 0 10px;
     -webkit-box-shadow:0px 5px 10px 0px aqua;
@@ -401,7 +401,7 @@ header{
     float:right;
     width:40px;
     height:40px;
-   /* background: lime;
+   /* background: yellow;
     */
 }
 .photo img{
@@ -415,7 +415,7 @@ header{
     float:right;
     width:160px;
     height:50px;
-   /* border: 1px solid lime;
+   /* border: 1px solid yellow;
     */
 }
 .photo2 h6{
@@ -440,7 +440,7 @@ header{
     font-size:12px;
     font-weight: 500;
     display:inline-block;
-    color: lime;
+    color: yellow;
 }
 #thetot,#thetot1,#thetot3{
     font-size: 18px;
@@ -467,7 +467,7 @@ header{
 .navbar ul.cart-list>li.total{
     padding:5px;
     border:none;
-    border-bottom: 1px solid lime;
+    border-bottom: 1px solid yellow;
     display:inline-block;
     width:100%;
     vertical-align:top 
@@ -1218,7 +1218,7 @@ header{
 }
 /*# sourceMappingURL=nav-menu.css.map */
 .champez2 li{
-    border-bottom: 1px solid lime;
+    border-bottom: 1px solid yellow;
 }
 
 @media screen and (max-width: 769px) and (min-width: 568px){
@@ -1265,7 +1265,7 @@ header{
         margin-right: 55px !important;
     }
     .attr-nav ul li a::after{
-        color: lime !important;
+        color: yellow !important;
         margin: 0 !important;
         padding: 0 !important;
         margin-left: -70px !important;
@@ -1300,7 +1300,7 @@ header{
         margin-right: 65px !important;
     }
     .attr-nav ul li a::after{
-        color: lime !important;
+        color: yellow !important;
         margin: 0 !important;
         padding: 0 !important;
         margin-left: -0px !important;
