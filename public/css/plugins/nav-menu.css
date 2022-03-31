@@ -1226,11 +1226,17 @@ header{
         width: 45%;
     }
 }
+@media screen and (max-width:450px){
+    .attr-nav>ul>li.dropdown ul.dropdown-menu{
+        left: -62.3vw;
+        width: 100vw;
+        top:68px;
+        display:none !important
+    }
+}
 @media screen and (max-width:400px){
     .attr-nav>ul>li.dropdown ul.dropdown-menu{
-        /* left:-230px; */
-        /* width: 390px; */
-        left: -59vw;
+        left: -60.13vw;
         width: 100vw;
         top:68px;
         display:none !important
@@ -1238,10 +1244,8 @@ header{
 }
 @media screen and (max-width:370px){
     .attr-nav>ul>li.dropdown ul.dropdown-menu{
-        /* left:-230px; */
-        /* width: 390px; */
-        left: -55vw;
-        width: 99vw;
+        left: -56.8vw;
+        width: 100vw;
         top:68px;
         display:none !important
     }
