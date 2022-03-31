@@ -92,7 +92,7 @@
         elems.forEach(function(html) {
             var switchery = new Switchery(html,{
                 size: 'small',
-                color: 'lime'
+                color: 'yellow'
             });
         });
     };

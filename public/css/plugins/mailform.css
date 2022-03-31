@@ -644,14 +644,14 @@
   animation: notifanim 0.4s ease-in-out forwards;
 }
 .mfProgress.fail .msg {
-  background: lime;
+  background: yellow;
 }
 .mfProgress.fail .msg:before {
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 6px 6px 6px 0;
-  border-color: transparent lime transparent transparent;
+  border-color: transparent gold transparent transparent;
 }
 @media (max-width: 767px) {
   .mfProgress.fail .msg:before {
@@ -659,7 +659,7 @@
     height: 0;
     border-style: solid;
     border-width: 0 6px 6px 6px;
-    border-color: transparent transparent lime transparent;
+    border-color: transparent transparent gold transparent;
   }
 }
 .mfProgress.success .msg {
