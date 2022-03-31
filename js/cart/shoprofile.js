@@ -9,10 +9,15 @@ var n = month[d.getMonth()];
 var y = d.getFullYear();
 var m = d.getDate();
 
+// document.getElementById('datez1').innerHTML = n + " " +  m +  ', '  + y;
+// document.getElementById('datez2').innerHTML = n + " " +  (m-1) +  ', '  + y;
+// document.getElementById('datez3').innerHTML = n + " " + (m-1) +  ', '  + y;
+// document.getElementById('datez4').innerHTML = n + " " + (m-2) +  ', '  + y;
+
 document.getElementById('datez1').innerHTML = n + " " +  m +  ', '  + y;
-document.getElementById('datez2').innerHTML = n + " " +  (m) +  ', '  + y;
-document.getElementById('datez3').innerHTML = n + " " + (m-1) +  ', '  + y;
-document.getElementById('datez4').innerHTML = n + " " + (m-2) +  ', '  + y;
+document.getElementById('datez2').innerHTML = "March 31, 2022";
+document.getElementById('datez3').innerHTML = "March 30, 2022";
+document.getElementById('datez4').innerHTML = "March 29, 2022";
 
 
 if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
