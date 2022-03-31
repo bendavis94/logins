@@ -100,7 +100,8 @@
 
 .btn-addon {
     font-weight: 700;
-    border: 1px solid skyblue;
+    background: gold;
+    border: 1px solid goldenrod;
 }
 
 
