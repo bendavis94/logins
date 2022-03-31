@@ -64,6 +64,11 @@
             smartSpeed: 500
         });
 
+        $('.countup').counterUp({
+            delay: 25,
+            time: 2000
+        });
+
     });
     $window.on("load", function() {
         $('.gallery').magnificPopup({
