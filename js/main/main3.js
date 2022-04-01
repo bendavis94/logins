@@ -303,7 +303,7 @@
             elems.forEach(function(html) {
                 var switchery = new Switchery(html,{
                     size: 'small',
-                    color: 'yellow'
+                    color: 'lime'
                 });
             });
         };
