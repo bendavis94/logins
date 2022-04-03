@@ -1039,7 +1039,12 @@ td{
         background-position:100% 0
     }
 }
-
+#footer-telegram{
+    display: block !important;
+}
+#footer-darknet{
+    display: none !important;
+}
 #banks-carousel .img-holder img, #services-carousel .img-holder img{
     height: 180px !important;
     width: 100% !important;
