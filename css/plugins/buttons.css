@@ -1057,3 +1057,13 @@ td{
     }
     
 }
+
+#footer-p{
+    font-size: 20px !important;
+}
+
+@media (max-width:391px){
+    #footer-p{
+        font-size: 19px !important;
+    }
+}
