@@ -944,7 +944,7 @@ td{
     .modal-body{
         background: transparent !important;
     }
-    .mobile2{
+    .mobile2, .mobile1{
         background: transparent !important;
         background: #ffeeba !important;
     }
