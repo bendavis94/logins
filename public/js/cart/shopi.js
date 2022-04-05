@@ -121,8 +121,8 @@ function removeItemFromCart(price, balance,account,website,image,info1,info2,inf
 
 
 function updateCartTotal() {
-    var cartItemContainer = document.getElementsByClassName('champez2')[0];
-    var cartRows = cartItemContainer.getElementsByClassName('bg-black');
+    var cartItemContainer = document.getElementById('example');
+    var cartRows = cartItemContainer.getElementsByClassName('table-warning');
     var total = 0;
     for (var i = 0; i < cartRows.length; i++){
         var cartRow = cartRows[i];
