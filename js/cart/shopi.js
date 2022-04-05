@@ -209,7 +209,7 @@ function updateCartTotal() {
         total = total + (price2 * 1);
     }
 
-    document.getElementById('omanyala').innerHTML = parseInt(total);
+    document.getElementById('omanyala').innerHTML = parseInt(total).toLocaleString();
 
 
     if(JSON.parse(localStorage.getItem('banklogs')).length === 2) {
