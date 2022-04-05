@@ -69,7 +69,7 @@
     float:right;
     font-size:28px;
     font-weight:700;
-    color:#121d33;
+    color:red;
     -webkit-text-shadow:0 1px 0 #fff;
     text-shadow:0 1px 0 #fff;
     opacity:.8;
@@ -79,7 +79,7 @@
 }
 .toast-close-button:focus,
 .toast-close-button:hover{
-    color:#000;
+    color:red;
     text-decoration:none;
     cursor:pointer;
     opacity:.4;
@@ -259,8 +259,8 @@ button.toast-close-button{
     bottom:0;
     height:7px;
     border-radius: 1px;
-    background-color: #121d33;
-    border-right: 2px solid red;
+    background-color: limegreen;
+    border-right: 2px solid lime;
     opacity:1;
     -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     filter:alpha(opacity=100)
@@ -310,12 +310,12 @@ button.toast-close-button{
 }
 
 
-/* #toast-container>.toast-success{
+#toast-container>.toast-success{
 	background-color:#E8F7ED;
 	color:forestgreen;
 	border-color:#30B661
 }
-#toast-container>.toast-success{
+/* #toast-container>.toast-success{
 	background-color:#D9E7F9;
 	color:#2F73C8;
 	border-color:#2F73C8
@@ -329,13 +329,13 @@ button.toast-close-button{
 	background-color:#FBDBDE;
 	color: rgba(255, 0, 0, 0.9);
 	border-color:#D83945
-} */
+}
 
 #toast-container>.toast-success{
 	background-color:#F9E69B;
 	color: rgba(255, 0, 0, 0.9);
 	border-color:#D83945
-}
+} */
 
 #toast-container>div:hover{
 	box-shadow:none
