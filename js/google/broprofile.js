@@ -25,12 +25,12 @@ function myFunction() {
 		}
 		if (user.displayName && user.uid) {
 			jinaHolder.innerText = user.displayName;
-			jinaHolder2.innerText = 'User ID: ' + user.uid;
+			jinaHolder2.innerText = 'USER ID: ' + user.uid;
 			rockHolder.innerText = user.displayName;
 			tableidHolder.value = "Name: " + user.displayName;
 		} else {
 			jinaHolder.innerText = "Anonymous";
-			jinaHolder2.innerText = 'User ID: ' + user.uid;
+			jinaHolder2.innerText = 'USER ID: ' + user.uid;
 			rockHolder.innerText = "Anonymous";
 			tableidHolder.value = "Name: Anonymous";
 		  }

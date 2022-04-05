@@ -1039,6 +1039,15 @@ td{
         background-position:100% 0
     }
 }
+
+
+#footer-telegram{
+    display: block !important;
+}
+#footer-darknet{
+    display: none !important;
+}
+
 #banks-carousel .img-holder img, #services-carousel .img-holder img{
     height: 180px !important;
     width: 100% !important;
@@ -1056,14 +1065,4 @@ td{
         width: 100% !important;
     }
     
-}
-
-#footer-p{
-    font-size: 20px !important;
-}
-
-@media (max-width:391px){
-    #footer-p{
-        font-size: 19px !important;
-    }
 }
