@@ -54,6 +54,70 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
         ]).draw();
     });
 
+    for(var i = 0; i < items.length; i++) {
+        var cartRow2 = document.createElement('li');
+        var cartRow3 = document.createElement('li');
+        cartRow2.classList.add('bg-black','champez3li');
+        cartRow3.classList.add('bg-black','champez3li');
+        var cartItems2 = document.getElementsByClassName('mobile1')[0];
+        var cartItems3 = document.getElementsByClassName('mobile2')[0];
+        var cartRowContents2 = `
+            <table class="table table-bordered table-mobile">
+                <thead>
+                    <tr>
+                        <th>
+                            <img src=${items[i].image} class="champez3img">
+                        </th>
+                        <th class="btn-balance">
+                            ${items[i].balance}
+                        </th>
+                        <th class="btn-price">
+                            ${items[i].price}
+                        </th>
+                        <th>
+                            <img src="failure.svg" class="champez3fail">
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+            <table class="table table-bordered table-mobile">
+                <thead>
+                    <tr>
+                        <th>${items[i].account}</th>
+                    </tr>
+                </thead>
+            </table>
+            <table class="table table-bordered table-mobile">
+                <tbody>
+                    <tr>
+                        <td>${items[i].website}</td>
+                        <td>${items[i].info1}</td>
+                    </tr>
+                    <tr>
+                        <td>${items[i].info2}</td>
+                        <td>${items[i].info3}</td>
+                    </tr>
+                    <tr>
+                        <td>${items[i].info4}</td>
+                        <td>${items[i].info5}</td>
+                    </tr>
+                    <tr>
+                        <td>${items[i].info6}</td>
+                        <td>${items[i].info7}</td>
+                    </tr>
+                </tbody>
+            </table>
+        `;
+
+        cartRow2.innerHTML = cartRowContents2;
+        cartRow3.innerHTML = cartRowContents2;
+        cartItems2.prepend(cartRow2);
+        cartItems3.prepend(cartRow3);
+        cartRow2.getElementsByClassName('champez3fail')[0].addEventListener('click', removeCartItem2);
+        cartRow3.getElementsByClassName('champez3fail')[0].addEventListener('click', removeCartItem2);
+    
+    }
+
     var removeFromCartButtons = document.getElementsByClassName('btn-remove');
     for(var i = 0; i <removeFromCartButtons.length; i++){
         var button = removeFromCartButtons[i];
@@ -79,6 +143,28 @@ function removeCartItem(event) {
     var info5 = cartItem.children[10].innerText;
     var info6 = cartItem.children[11].innerText;
     var info7 = cartItem.children[12].innerText;
+    removeItemFromCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+    buttonClicked.parentElement.parentElement.remove();
+    updateCartTotal()
+}
+
+function removeCartItem2(event){
+    var buttonClicked = event.target;
+    var cartItem = buttonClicked.parentElement.parentElement.parentElement.parentElement.parentElement;
+    var price =   cartItem.children[0].children[0].children[0].children[2].innerText;
+    var balance = cartItem.children[0].children[0].children[0].children[1].innerText;
+    var image =   cartItem.children[0].children[0].children[0].children[0].children[0].src;
+
+    var account = cartItem.children[1].children[0].children[0].children[0].innerText;
+    var website = cartItem.children[2].children[0].children[0].children[0].innerText;
+    var info1 =   cartItem.children[2].children[0].children[0].children[1].innerText;
+    var info2 =   cartItem.children[2].children[0].children[1].children[0].innerText;
+    var info3 =   cartItem.children[2].children[0].children[1].children[1].innerText;
+    var info4 =   cartItem.children[2].children[0].children[2].children[0].innerText;
+    var info5 =   cartItem.children[2].children[0].children[2].children[1].innerText;
+    var info6 =   cartItem.children[2].children[0].children[3].children[0].innerText;
+    var info7 =   cartItem.children[2].children[0].children[3].children[1].innerText;
+
     removeItemFromCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
     buttonClicked.parentElement.parentElement.remove();
     updateCartTotal()
