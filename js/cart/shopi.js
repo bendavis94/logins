@@ -17,7 +17,6 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
         var price3 = price2.replace('Price: ', 'In Cart: ');
 
         var cartItems =  document.getElementsByClassName('champez')[0];
-        var cartItems2 = document.getElementsByClassName('champez2')[0];
         var cartItems3 = document.getElementsByClassName('xenon3')[0]
         var cartRowContents = `
             <td><img src=${items[i].image} width="50px" style="border-radius: 2px"></td>
