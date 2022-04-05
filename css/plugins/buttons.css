@@ -779,10 +779,6 @@ td{
         height:50vh !important;
     }
 }
-.mobile1{
-    padding: 0 !important;
-    margin: 0 !important;
-}
 
 #exampleModal .modal-header{
     margin: 3px;
@@ -944,10 +940,7 @@ td{
     .modal-body{
         background: transparent !important;
     }
-    .mobile2, .mobile1{
-        background: transparent !important;
-        background: #ffeeba !important;
-    }
+
     .champez3li{
         background: transparent !important;
     }
