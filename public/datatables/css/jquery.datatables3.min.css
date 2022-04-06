@@ -492,34 +492,13 @@ table.dataTable td{
 
 .dataTables_wrapper .dataTables_paginate{
     background: #121d33 !important;
-    display: none !important;
-}
-.dataTables_wrapper .dataTables_paginate .paginate_button{
-    display: none !important;
-}
-.dataTables_wrapper .dataTables_info{
-    display: none !important;
 }
 
 @media screen and (max-width: 640px){
-    .dataTables_wrapper .dataTables_length{
-        display: none !important;
-    }
     .dataTables_wrapper .dataTables_paginate{
         background: #121d33 !important;
-        display: none !important;
-    }
-    .dataTables_wrapper .dataTables_paginate .paginate_button{
-        display: none !important;
-    }
-    .dataTables_wrapper .dataTables_info{
-        display: none !important;
     }
     .dataTables_wrapper .dataTables_filter{
         color: white !important;
     }
-}
-
-.dataTables_wrapper .dataTables_length{
-    display: none;
 }

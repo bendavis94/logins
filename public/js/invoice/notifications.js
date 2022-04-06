@@ -18,40 +18,53 @@ $(document).ready(function() {
 		let items = [];
 		items = JSON.parse(localStorage.getItem('banklogs'));
 
-		if(((JSON.parse(localStorage.getItem('banklogs')).length) == 2)){
-			for(var i = 0; i < items.length; i++) {
-				var msgs = [
-				` 	${toastbitcoin} bitcoin payment for 
-					${items[0].account} with ${items[0].balance}, 
-					and ${items[1].account} with ${items[1].balance}, 
-					not detected, scan the bitcoin address and send 
-					$${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 
-				`
-				];
-				i++;
-				if (i === msgs.length) {
-					i = 0;
-				}
+		// if(((JSON.parse(localStorage.getItem('banklogs')).length) == 2)){
+		// 	for(var i = 0; i < items.length; i++) {
+		// 		var msgs = [
+		// 		` 	${toastbitcoin} bitcoin payment for 
+		// 			${items[0].account} with ${items[0].balance}, 
+		// 			and ${items[1].account} with ${items[1].balance}, 
+		// 			not detected, scan the bitcoin address and send 
+		// 			$${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 
+		// 		`
+		// 		];
+		// 		i++;
+		// 		if (i === msgs.length) {
+		// 			i = 0;
+		// 		}
 		
-				return msgs[i];
-			}
-		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 1)){
-			for(var i = 0; i < items.length; i++) {
-				var msgs = [
-				` 	${toastbitcoin} bitcoin payment for 
-					${items[0].account} with ${items[0].balance}, 
-					not detected, scan the bitcoin address and send 
-					$${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 
-				`
-				];
-				i++;
-				if (i === msgs.length) {
-					i = 0;
-				}
+		// 		return msgs[i];
+		// 	}
+		// } else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 1)){
+		// 	for(var i = 0; i < items.length; i++) {
+		// 		var msgs = [
+		// 		` 	${toastbitcoin} bitcoin payment for 
+		// 			${items[0].account} with ${items[0].balance}, 
+		// 			not detected, scan the bitcoin address and send 
+		// 			$${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 
+		// 		`
+		// 		];
+		// 		i++;
+		// 		if (i === msgs.length) {
+		// 			i = 0;
+		// 		}
 		
-				return msgs[i];
+		// 		return msgs[i];
+		// 	}
+		// }
+
+		var msgs = [
+			` 	${toastbitcoin} bitcoin payment
+				not detected, scan the bitcoin address and send 
+				$${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 
+			`
+			];
+			i++;
+			if (i === msgs.length) {
+				i = 0;
 			}
-		}
+	
+			return msgs[i];
 	};
 
 	var getMessageWithClearButton = function(msg) {

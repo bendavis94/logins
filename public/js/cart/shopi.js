@@ -121,26 +121,24 @@ function removeItemFromCart(price, balance,account,website,image,info1,info2,inf
 
 
 function updateCartTotal() {
-    var cartItemContainer = document.getElementById('example');
-    var cartRows = cartItemContainer.getElementsByClassName('table-warning');
+    let items3 = (JSON.parse(localStorage.getItem('banklogs')));
     var total = 0;
-    for (var i = 0; i < cartRows.length; i++){
-        var cartRow = cartRows[i];
-        var priceElement = cartRow.getElementsByClassName('btn-price')[0]
-        var pric = priceElement.innerHTML.replace('Price: $','')
-        var price2 = parseFloat(pric.replace(',',''))
-        total = total + (price2 * 1);
-    }
+    items3.map(data=>{
+        var price4 = data.price.replace('Price: ','').replace(',','').replace('$','');
+        total = total + (price4 * 1);
+    });
 
     document.getElementById('omanyala').innerHTML = parseInt(total).toLocaleString();
 
 
-    if(JSON.parse(localStorage.getItem('banklogs')).length === 2) {
-        document.getElementById('showtoasts').innerHTML = 'Download 2 Bank Logs✅';
-        document.getElementById('titlelogs2').innerText = 'Cart: 2, Total: $' + total.toLocaleString();
-    } else if((JSON.parse(localStorage.getItem('banklogs')).length) == 1) {
-        document.getElementById('showtoasts').innerHTML = 'Download 1 Bank Log ✅';
+    if(JSON.parse(localStorage.getItem('banklogs')).length === 1) {
+        document.getElementById('showtoasts').innerHTML = 'Download 1 Bank Log✅';
         document.getElementById('titlelogs2').innerText = 'Cart: 1, Total: $' + total.toLocaleString();
+    } else {
+        document.getElementById('showtoasts').innerHTML = `Download 
+            ${JSON.parse(localStorage.getItem('banklogs')).length}
+        Bank Logs✅`;
+        document.getElementById('titlelogs2').innerText = `Cart: ${JSON.parse(localStorage.getItem('banklogs')).length}, Total: $${total.toLocaleString()}`
     }
     localStorage.setItem('banktotal',total);
 }
