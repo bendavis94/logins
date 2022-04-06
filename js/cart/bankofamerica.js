@@ -15,13 +15,14 @@ if(!localStorage.getItem('loadedboa')){
     document.getElementById("bankofamerica6").innerHTML = localStorage.getItem('bankofamerica6');
     document.getElementById("bankofamerica7").innerHTML = localStorage.getItem('bankofamerica7');
 
-    document.getElementById("bankofamerica01").innerHTML = 'Buy: $' + ((localStorage.getItem('bankofamerica1').replace('$','').replace(',','')) / 50).toFixed(0);
-    document.getElementById("bankofamerica02").innerHTML = 'Buy: $' + ((localStorage.getItem('bankofamerica2').replace('$','').replace(',','')) / 50).toFixed(0);
-    document.getElementById("bankofamerica03").innerHTML = 'Buy: $' + ((localStorage.getItem('bankofamerica3').replace('$','').replace(',','')) / 50).toFixed(0);
-    document.getElementById("bankofamerica04").innerHTML = 'Buy: $' + ((localStorage.getItem('bankofamerica4').replace('$','').replace(',','')) / 50).toFixed(0);
-    document.getElementById("bankofamerica05").innerHTML = 'Buy: $' + ((localStorage.getItem('bankofamerica5').replace('$','').replace(',','')) / 50).toFixed(0);
-    document.getElementById("bankofamerica06").innerHTML = 'Buy: $' + ((localStorage.getItem('bankofamerica6').replace('$','').replace(',','')) / 50).toFixed(0);
-    document.getElementById("bankofamerica07").innerHTML = 'Buy: $' + ((localStorage.getItem('bankofamerica7').replace('$','').replace(',','')) / 50).toFixed(0);
+
+    document.getElementById("bankofamerica01").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('bankofamerica1').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
+    document.getElementById("bankofamerica02").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('bankofamerica2').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
+    document.getElementById("bankofamerica03").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('bankofamerica3').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
+    document.getElementById("bankofamerica04").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('bankofamerica4').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
+    document.getElementById("bankofamerica05").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('bankofamerica5').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
+    document.getElementById("bankofamerica06").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('bankofamerica6').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
+    document.getElementById("bankofamerica07").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('bankofamerica7').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
 
 } else{
     document.getElementById("bankofamerica1").innerHTML = localStorage.getItem('bankofamerica1');
@@ -32,14 +33,14 @@ if(!localStorage.getItem('loadedboa')){
     document.getElementById("bankofamerica6").innerHTML = localStorage.getItem('bankofamerica6');
     document.getElementById("bankofamerica7").innerHTML = localStorage.getItem('bankofamerica7');
 
-    document.getElementById("bankofamerica01").innerHTML = 'Buy: $' + ((localStorage.getItem('bankofamerica1').replace('$','').replace(',','')) / 50).toFixed(0);
-    document.getElementById("bankofamerica02").innerHTML = 'Buy: $' + ((localStorage.getItem('bankofamerica2').replace('$','').replace(',','')) / 50).toFixed(0);
-    document.getElementById("bankofamerica03").innerHTML = 'Buy: $' + ((localStorage.getItem('bankofamerica3').replace('$','').replace(',','')) / 50).toFixed(0);
-    document.getElementById("bankofamerica04").innerHTML = 'Buy: $' + ((localStorage.getItem('bankofamerica4').replace('$','').replace(',','')) / 50).toFixed(0);
-    document.getElementById("bankofamerica05").innerHTML = 'Buy: $' + ((localStorage.getItem('bankofamerica5').replace('$','').replace(',','')) / 50).toFixed(0);
-    document.getElementById("bankofamerica06").innerHTML = 'Buy: $' + ((localStorage.getItem('bankofamerica6').replace('$','').replace(',','')) / 50).toFixed(0);
-    document.getElementById("bankofamerica07").innerHTML = 'Buy: $' + ((localStorage.getItem('bankofamerica7').replace('$','').replace(',','')) / 50).toFixed(0);
 
+    document.getElementById("bankofamerica01").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('bankofamerica1').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
+    document.getElementById("bankofamerica02").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('bankofamerica2').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
+    document.getElementById("bankofamerica03").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('bankofamerica3').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
+    document.getElementById("bankofamerica04").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('bankofamerica4').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
+    document.getElementById("bankofamerica05").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('bankofamerica5').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
+    document.getElementById("bankofamerica06").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('bankofamerica6').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
+    document.getElementById("bankofamerica07").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('bankofamerica7').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
 }
 
 localStorage.setItem('loadedboa',true);
