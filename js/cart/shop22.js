@@ -233,7 +233,6 @@ function updateCartTotal() {
     items3.map(data=>{
         var price4 = data.price.replace('Price: ','').replace(',','').replace('$','');
         total = total + (price4 * 1);
-        console.log(total)
     });
 
     document.getElementById('thetot1').innerHTML = `Checkout:  $${total.toLocaleString()}`;
@@ -274,7 +273,6 @@ function updateCartTotal2() {
     items3.map(data=>{
         var price4 = data.price.replace('Price: ','').replace(',','').replace('$','');
         total = total + (price4 * 1);
-        console.log(total)
     });
     document.getElementById('thetot1').innerHTML = `Checkout:  $${total.toLocaleString()}`;
     document.getElementById('thetot3').innerHTML = `Checkout:  $${total.toLocaleString()}`;
