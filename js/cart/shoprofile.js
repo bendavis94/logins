@@ -60,16 +60,12 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
 }
 
 function updateCartTotal() {
-    var cartItemContainer = document.getElementById('example');
-    var cartRows = cartItemContainer.getElementsByClassName('table-warning');
+    let items3 = (JSON.parse(localStorage.getItem('banklogs')));
     var total = 0;
-    for (var i = 0; i < cartRows.length; i++){
-        var cartRow = cartRows[i];
-        var priceElement = cartRow.getElementsByClassName('btn-price')[0]
-        var pric = priceElement.innerHTML.replace('$','')
-        var price2 = parseFloat(pric.replace(',',''))
-        total = total + (price2 * 1);
-    }
+    items3.map(data=>{
+        var price4 = data.price.replace('Price: ','').replace(',','').replace('$','');
+        total = total + (price4 * 1);
+    });
     console.log(total)
     document.getElementById('thetot').innerHTML = `Checkout: $${total.toLocaleString()}`;
     localStorage.setItem('time-left',600);
