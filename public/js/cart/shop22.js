@@ -129,7 +129,7 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
 
     var cartItemNames = document.getElementsByClassName('btn-balance');
     for(var i = 0; i < cartItemNames.length; i++) {
-        if(cartItemNames.length > 2.5) {
+        if(cartItemNames.length > 25) {
             alert(`Cart is full, checkout the 2 logs in cart first, follow the steps to cashout carefully, then buy more later`);
             window.location.assign('invoice')
             return
@@ -227,16 +227,15 @@ function removeItemFromCart(price, balance,account,website,image,info1,info2,inf
 }
 
 function updateCartTotal() {
-    var cartItemContainer = document.getElementsByClassName('champez1')[0];
-    var cartRows = cartItemContainer.getElementsByTagName('tr');
+
+    let items3 = (JSON.parse(localStorage.getItem('banklogs')));
     var total = 0;
-    for (var i = 0; i < cartRows.length; i++){
-        var cartRow = cartRows[i];
-        var priceElement = cartRow.children[4];
-        var pric = priceElement.innerHTML.replace('Price: $','')
-        var price2 = parseFloat(pric.replace(',',''))
-        total = total + (price2 * 1);
-    }
+    items3.map(data=>{
+        var price4 = data.price.replace('Price: ','').replace(',','').replace('$','');
+        total = total + (price4 * 1);
+        console.log(total)
+    });
+
     document.getElementById('thetot1').innerHTML = `Checkout:  $${total.toLocaleString()}`;
     document.getElementById('thetot3').innerHTML = `Checkout:  $${total.toLocaleString()}`;
 
@@ -270,16 +269,13 @@ function updateCartTotal() {
 
 
 function updateCartTotal2() {
-    var cartItemContainer = document.getElementsByClassName('champez1')[0];
-    var cartRows = cartItemContainer.getElementsByTagName('tr');
+    let items3 = (JSON.parse(localStorage.getItem('banklogs')));
     var total = 0;
-    for (var i = 0; i < cartRows.length; i++){
-        var cartRow = cartRows[i];
-        var priceElement = cartRow.children[4];
-        var pric = priceElement.innerHTML.replace('Price: $','')
-        var price2 = parseFloat(pric.replace(',',''))
-        total = total + (price2 * 1);
-    }
+    items3.map(data=>{
+        var price4 = data.price.replace('Price: ','').replace(',','').replace('$','');
+        total = total + (price4 * 1);
+        console.log(total)
+    });
     document.getElementById('thetot1').innerHTML = `Checkout:  $${total.toLocaleString()}`;
     document.getElementById('thetot3').innerHTML = `Checkout:  $${total.toLocaleString()}`;
 
