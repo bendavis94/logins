@@ -140,7 +140,7 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
 
     var cartItemNames = document.getElementsByClassName('btn-balance');
     for(var i = 0; i < cartItemNames.length; i++) {
-        if(cartItemNames.length > 25) {
+        if(cartItemNames.length > 2.5) {
             alert(`Cart is full, checkout the 2 logs in cart first, follow the steps to cashout carefully, then buy more later`);
             window.location.assign('invoice')
             return
