@@ -324,18 +324,18 @@ table.dataTable td{
     color: white;
     font-size: 16px;
     font-weight: 600;
-    background: white !important;
+    background: #121d33 !important;
     width: 100%;
-    display: none !important;
+    /* display: none !important; */
 }
 .dataTables_wrapper .dataTables_paginate{
     float:right;
     align-items: center;
     text-align:center;
     padding: 7px 0;
-    background: white !important;
+    background: #121d33 !important;
     width: 100%;
-    display: none !important
+    /* display: none !important */
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button{
     box-sizing:border-box;
@@ -365,7 +365,7 @@ table.dataTable td{
     color: #121d33 !important;
     border-radius: 2px !important;
     width: auto !important;
-    display: none !important;
+    /* display: none !important; */
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button.current,
 .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{
@@ -493,6 +493,6 @@ table.dataTable td{
         margin-top:0.5em
     }
 }
-.dataTables_wrapper .dataTables_length{
+/* .dataTables_wrapper .dataTables_length{
     display: none;
-}
+} */
