@@ -1,21 +1,4 @@
 let items = [];
-var month = new Array();
-
-month[3] = "April";
-month[4] = "May";
-month[5] = "June";
-month[6] = "July";
-var d = new Date();
-var n = month[d.getMonth()];
-var y = d.getFullYear();
-var m = d.getDate();
-
-document.getElementById('datez1').innerHTML = n + " " +  m +  ', '  + y;
-document.getElementById('datez2').innerHTML = n + " " +  (m-1) +  ', '  + y;
-document.getElementById('datez3').innerHTML = n + " " + (m-1) +  ', '  + y;
-document.getElementById('datez4').innerHTML = n + " " + (m-2) +  ', '  + y;
-
-
 
 if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
 
