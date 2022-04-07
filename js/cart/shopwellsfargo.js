@@ -248,9 +248,6 @@ function updateCartTotal() {
     document.getElementById('thetot1').innerHTML = `Checkout:  $${total.toLocaleString()}`;
     document.getElementById('thetot3').innerHTML = `Checkout:  $${total.toLocaleString()}`;
 
-    document.getElementById('theno1').innerHTML = 'Cart: ' + JSON.parse(localStorage.getItem('banklogs')).length + ' , Total: $' + total.toLocaleString();
-    document.getElementById('theno3').innerHTML = 'Cart: ' + JSON.parse(localStorage.getItem('banklogs')).length + ' , Total: $' + total.toLocaleString();
-
 
     var logsContainer =  document.getElementsByClassName('grid')[0];
     var singleLog = logsContainer.getElementsByClassName('btn-addon');
@@ -299,8 +296,6 @@ function updateCartTotal2() {
     });
     document.getElementById('thetot1').innerHTML = `Checkout:  $${total.toLocaleString()}`;
     document.getElementById('thetot3').innerHTML = `Checkout:  $${total.toLocaleString()}`;
-
-    document.getElementById('theno1').innerHTML = 'Cart: ' + JSON.parse(localStorage.getItem('banklogs')).length + ' , Total: $' + total.toLocaleString();
-    document.getElementById('theno3').innerHTML = 'Cart: ' + JSON.parse(localStorage.getItem('banklogs')).length + ' , Total: $' + total.toLocaleString();
+    
     localStorage.setItem('time-left',600)
 }
