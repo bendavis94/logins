@@ -430,7 +430,7 @@ select{
 button#thetot, button#thetot1,button#thetot3{
     font-weight: 700;
     font-size: 28px;
-    margin: 25px;
+    margin: 7px 50px !important;
     padding: 10px;
     background: yellow;
     color: #121d33;
@@ -974,7 +974,7 @@ td{
 .modal-checkout{
     margin: 0; 
     display: grid; 
-    padding: 7px 10px;
+    padding: 0 10px !important;
 }
 
 #table-profile{
