@@ -22,16 +22,16 @@ if(!localStorage.getItem('loadedbar')){
     document.getElementById("barclays10").innerHTML = localStorage.getItem('barclays10');
 
 
-    document.getElementById("barclays01").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays1').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("barclays02").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays2').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("barclays03").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays3').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("barclays04").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays4').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("barclays05").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays5').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("barclays06").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays6').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("barclays07").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays7').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("barclays08").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays8').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("barclays09").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays9').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("barclays010").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays10').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
+    document.getElementById("barclays01").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays1').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("barclays02").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays2').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("barclays03").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays3').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("barclays04").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays4').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("barclays05").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays5').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("barclays06").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays6').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("barclays07").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays7').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("barclays08").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays8').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("barclays09").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays9').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("barclays010").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays10').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
 } else{
     document.getElementById("barclays1").innerHTML = localStorage.getItem('barclays1');
     document.getElementById("barclays2").innerHTML = localStorage.getItem('barclays2');
@@ -45,16 +45,16 @@ if(!localStorage.getItem('loadedbar')){
     document.getElementById("barclays10").innerHTML = localStorage.getItem('barclays10');
 
 
-    document.getElementById("barclays01").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays1').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("barclays02").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays2').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("barclays03").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays3').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("barclays04").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays4').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("barclays05").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays5').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("barclays06").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays6').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("barclays07").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays7').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("barclays08").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays8').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("barclays09").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays9').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("barclays010").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays10').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
+    document.getElementById("barclays01").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays1').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("barclays02").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays2').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("barclays03").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays3').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("barclays04").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays4').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("barclays05").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays5').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("barclays06").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays6').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("barclays07").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays7').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("barclays08").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays8').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("barclays09").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays9').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("barclays010").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('barclays10').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
 }
 
 localStorage.setItem('loadedbar',true);
