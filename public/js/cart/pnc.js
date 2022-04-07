@@ -28,19 +28,19 @@ if(!localStorage.getItem('loadedpnc')){
     document.getElementById("pnc13").innerHTML = localStorage.getItem('pnc13');
 
 
-    document.getElementById("pnc01").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc1').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc02").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc2').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc03").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc3').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc04").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc4').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc05").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc5').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc06").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc6').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc07").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc7').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc08").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc8').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc09").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc9').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc010").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc10').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc011").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc11').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc012").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc12').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc013").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc13').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
+    document.getElementById("pnc01").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc1').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc02").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc2').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc03").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc3').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc04").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc4').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc05").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc5').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc06").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc6').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc07").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc7').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc08").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc8').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc09").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc9').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc010").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc10').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc011").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc11').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc012").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc12').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc013").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc13').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
 
 } else{
     document.getElementById("pnc1").innerHTML = localStorage.getItem('pnc1');
@@ -58,19 +58,19 @@ if(!localStorage.getItem('loadedpnc')){
     document.getElementById("pnc13").innerHTML = localStorage.getItem('pnc13');
 
 
-    document.getElementById("pnc01").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc1').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc02").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc2').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc03").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc3').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc04").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc4').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc05").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc5').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc06").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc6').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc07").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc7').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc08").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc8').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc09").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc9').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc010").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc10').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc011").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc11').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc012").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc12').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
-    document.getElementById("pnc013").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc13').replace('$','').replace(',','')/12.5).toFixed(0)).toLocaleString();
+    document.getElementById("pnc01").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc1').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc02").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc2').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc03").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc3').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc04").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc4').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc05").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc5').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc06").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc6').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc07").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc7').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc08").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc8').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc09").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc9').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc010").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc10').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc011").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc11').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc012").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc12').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
+    document.getElementById("pnc013").innerHTML = 'Buy: $' + parseFloat((localStorage.getItem('pnc13').replace('$','').replace(',','')/50).toFixed(0)).toLocaleString();
 }
 
 localStorage.setItem('loadedpnc',true);
