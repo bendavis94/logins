@@ -15,10 +15,7 @@ function myFunction() {
     if (user.displayName && user.uid) {
       jinaHolder.innerText = user.displayName;
       jinaHolder2.innerText = 'USER ID: ' + user.uid;
-    } else{
-      jinaHolder.innerText = 'Anonymous';
-      jinaHolder2.innerText = 'USER ID: ' + user.uid;
-    }
+    } 
   });
 
   document.getElementById("thebodyz").oncontextmenu = function() {
