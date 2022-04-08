@@ -12,21 +12,10 @@
     <link rel="apple-touch-icon" href="img/logos/logo5.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/logos/logo5.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/logos/logo5.png">
-    <link rel="stylesheet" href="css/plugins.css" />
-    <link href="css/switcher.css" rel="stylesheet">
-    <link href="css/btn.css" rel="stylesheet" id="colors">
-    <link rel="stylesheet" href="css/plugins/animate.css" />
-
-
-
     <link rel="stylesheet" href="css/plugins/bootstrap.min.css" />
     <link rel="stylesheet" href="css/plugins/default.css" />
     <link rel="stylesheet" href="css/plugins/fontawesome-all.min.css" />
     <link rel="stylesheet" href="css/plugins/animate.css" />
-    <link href="css/switcher.css" rel="stylesheet">
-    <link href="css/btn.css" rel="stylesheet" id="colors">
-    <link href="css/styles-5.css" rel="stylesheet" id="colors">
-    <link href="css/plugins/buttons.css" rel="stylesheet">
     <link href="css/btn.css" rel="stylesheet" id="colors">
     <style>
         .signAnony{
@@ -50,26 +39,6 @@
             }
             to{
                 background-position:100% 0
-            }
-        }
-        .modal-dialog{
-            max-width: 27vw !important;
-        }
-        @media (min-width: 767px) and (max-width: 1091px) {
-            #profileModal .modal-dialog{
-                max-width: 60vw !important;
-                top: 8vw !important;
-            }
-        }
-        @media (min-width:1092px){
-            .modal-dialog{
-                max-width:27vw !important;
-                margin:1.75rem auto 
-            }
-        }
-        @media (max-width: 568px) {
-            .modal-dialog{
-                max-width: 100vw !important;
             }
         }
     </style>
@@ -140,20 +109,18 @@
                 </div>
 
                 <p class="font-size24 sm-font-size16 letter-spacing-2 text-uppercase text-white text-center alt-font center-col margin-40px-bottom sm-margin-30px-bottom">
-                    Pay $10 to access website
+                    Bank Logs
                 </p> 
 
                 <p class="font-size20 sm-font-size20 letter-spacing-2 text-white text-center text-uppercase alt-font center-col margin-20px-bottom sm-margin-30px-bottom">
-                    <button id="signGoogle" class="btn" style="font-weight: 700;  font-size: 24px; color: #121d33; padding: 14px; border: 1px solid skyblue;"
-                    data-toggle="modal" data-target="#profileModal">
+                    <button id="signGoogle" class="btn" style="font-weight: 700;  font-size: 24px; color: #121d33; padding: 14px; border: 1px solid skyblue;">
                         Login with Google
                         <img style="height: 25px;" src="img/svg/google.svg">
                     </button>
                 </p>
 
                 <p class="font-size20 sm-font-size20 letter-spacing-2 text-white text-center text-uppercase alt-font center-col margin-30px-bottom sm-margin-30px-bottom">
-                    <button id="signAnony" class="btn" style="font-weight: 700;  font-size: 24px; color: #121d33; padding: 14px; border: 1px solid skyblue;"
-                    data-toggle="modal" data-target="#profileModal">
+                    <button id="signAnony" class="btn" style="font-weight: 700;  font-size: 24px; color: #121d33; padding: 14px; border: 1px solid skyblue;">
                             Login Anonymously
                             <i class="fas fa-user-secret"></i>
                     </button>
@@ -168,90 +135,15 @@
 </section>
 
 
-<div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <script src="js/cart/donate.js"></script>
-    <div class="modal-dialog">
-        <div class="modal-content" id="modalsend">
-            <div class="modal-header" id="discountz">
-                <h4 class="modal-title" id="modal-amount">
-                    Send $10
-                </h4>
-                <button type="button" class="close" id="bitcoin-logo" 
-                data-dismiss="modal" aria-label="Close">
-                    <i class="fab fa-bitcoin"></i>
-                </button>
-            </div>
-
-            <div class="modal-header" id="invoice-header">
-                <strong id="satoshinakamoto">
-                    <i class="fas fa-spin fa-sync-alt spinner-bordez"></i> 
-                    awaiting  
-                    <span id="the-other-one"></span> 
-                    bitcoin payment
-                </strong>
-            </div>
-
-            <div class="modal-body" id="invoice-body">
-                <div id="invoice-body-div">
-                    <input type="text"  class="form-control" value="1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp"
-                        id="text-to-copy" onclick="this.select()">
-                    <button type="button" class="butn medium" id="copy-text">     
-                        Copy 
-                        <i class="fas fa-copy" style="margin-left: 1px;"></i>
-                    </button>
-                </div>
-                <div class="xzoom-container">
-                    <img class="xzoom5" id="span-test" src="images/download.jpeg" 
-                    xoriginal="images/download.jpeg"/>
-                </div>
-            </div>  
-            <div class="modal-footer" id="invoice-to-email">
-                <h3 id="invoiceHolder3">
-                   After payment, site will redirect you to the home page
-                </h3>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-
-    var binance = new WebSocket("wss://ws.blockchain.info/inv");
-    binance.onopen = function(){
-        binance.send(JSON.stringify({
-            "op": "unconfirmed_sub"
-        }))
-    }
-    binance.onmessage = function(onmsg){
-        var response = JSON.parse(onmsg.data);
-        var address1 = response.x.out[0].addr;
-        var address2 = '1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp';
-
-        if(address1 == address2) {
-            document.getElementById('modal-amount').innerHTML ='Sent ' +((response.x.inputs[0].prev_out.value) / 100000000 ).toFixed(4);
-            document.getElementById('modal-amount').style.color = '#f2a900';
-            document.getElementById('modal-amount').style.fontSize = '2px'
-            document.getElementById('satoshinakamoto').innerHTML = `
-                Received <i class="fas fa-check"></i> 
-                <span style="font-weight: 700">${((response.x.inputs[0].prev_out.value) / 100000000 ).toFixed(4)}</span> bitcoin payment
-            `;
-            document.getElementById('satoshinakamoto').style.color = 'lime';
-            alert('Bitcoin Payment Received!, Site will redirect you to the home page');
-            window.location.assign('home1.html')
-        }else {
-            console.log('Payment Not Received');
-        }
-    }
-    </script>
-
 <script src="js/main/core.home.js"></script>
 <script src="js/main/mainhome.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+<script src="js/google/fir.js"></script>
+<script src="js/google/google.js"></script>
+
 <script src="js/pages/particles.js"></script>
 <script src="js/pages/app.js"></script>
-
-<script src="js/invoice/copy.js"></script>
-
-<script src="js/pages/ui-modals.js"></script>
 
 </body>
 </html> 
