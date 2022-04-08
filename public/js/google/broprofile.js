@@ -11,8 +11,6 @@ function myFunction() {
 	const email1 = document.getElementById('yourEmail1');
 	const email2 = document.getElementById('yourEmail2');
 	const email5 = document.getElementById('yourEmail5');
-	const tableName = document.getElementById('name-on-table0');
-	const tableName2 = document.getElementById('name-on-table1');
 	const auth = firebase.auth();
 
 	auth.onAuthStateChanged(user => {
@@ -45,19 +43,24 @@ function myFunction() {
 			email1.innerHTML = `Bank Log files + cookies can only be downloaded once, so make sure you save them in a folder you won't forget.`
 			email2.innerHTML = `Use a winrar software to extract bank log files from .zip format after a successful download,... Also Download Cookies Editor extension for chrome browser and use it to import cookies`;
 			email5.innerHTML = 'No email connected';
-		  }
-		if (user.displayName && ((JSON.parse(localStorage.getItem('banklogs')).length) == 1)) {
-			tableName.innerHTML = user.displayName;
-		} else if(!user.displayName && ((JSON.parse(localStorage.getItem('banklogs')).length) == 1)) {
-			tableName.innerHTML = 'Anonymous';
 		}
-		if (user.displayName && ((JSON.parse(localStorage.getItem('banklogs')).length) == 2)) {
-			tableName.innerHTML = user.displayName;
-			tableName2.innerHTML = user.displayName;
-		} else if (!user.displayName && ((JSON.parse(localStorage.getItem('banklogs')).length) == 2)) {
-			tableName.innerHTML = 'Anonymous';
-			tableName2.innerHTML = 'Anonymous'
+
+		let goodies = [];
+
+		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.displayName){
+			goodies = JSON.parse(localStorage.getItem('banklogs'));
+			for(var i = 0; i < goodies.length; i++) {
+				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.displayName;
+			}
+		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && !user.displayName){
+			goodies = JSON.parse(localStorage.getItem('banklogs'));
+			for(var i = 0; i < goodies.length; i++) {
+				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous';
+			}
+		} else{
+			console.log('No items are present')
 		}
+
 	});
 
 	const editInformation = () => {
