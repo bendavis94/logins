@@ -12,6 +12,15 @@ const signInWithGoogle = () => {
 };
 signGoogle.addEventListener("click", signInWithGoogle);
 
+const loginAnonymously = () => {
+  auth.signInAnonymously().then(() => {
+    window.location.assign("home");
+  }).catch(error => {
+    console.error(error);
+  });
+};
+signAnony.addEventListener("click", loginAnonymously);
+
 auth.onAuthStateChanged(user => {
   if (user) {
     window.location.assign("home");
