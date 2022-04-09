@@ -1,13 +1,13 @@
 if(!localStorage.getItem('loadedrbc')){
-    localStorage.setItem('rbc1', ('$' + (Math.floor((Math.random() * 3000) + 11025)).toLocaleString()));
-    localStorage.setItem('rbc2', ('$' + (Math.floor((Math.random() * 3000) + 14025)).toLocaleString()));
-    localStorage.setItem('rbc3', ('$' + (Math.floor((Math.random() * 3000) + 17025)).toLocaleString()));
-    localStorage.setItem('rbc4', ('$' + (Math.floor((Math.random() * 3000) + 20025)).toLocaleString()));
-    localStorage.setItem('rbc5', ('$' + (Math.floor((Math.random() * 3000) + 23025)).toLocaleString()));
-    localStorage.setItem('rbc6', ('$' + (Math.floor((Math.random() * 3000) + 26025)).toLocaleString()));
-    localStorage.setItem('rbc7', ('$' + (Math.floor((Math.random() * 3000) + 29025)).toLocaleString()));
-    localStorage.setItem('rbc8', ('$' + (Math.floor((Math.random() * 3000) + 32025)).toLocaleString()));
-    localStorage.setItem('rbc9', ('$' + (Math.floor((Math.random() * 3000) + 35025)).toLocaleString()));
+    localStorage.setItem('rbc1', ('$' + (Math.floor((Math.random() * 2000) + 5025)).toLocaleString()));
+    localStorage.setItem('rbc2', ('$' + (Math.floor((Math.random() * 2000) + 7025)).toLocaleString()));
+    localStorage.setItem('rbc3', ('$' + (Math.floor((Math.random() * 2000) + 9025)).toLocaleString()));
+    localStorage.setItem('rbc4', ('$' + (Math.floor((Math.random() * 2000) + 11025)).toLocaleString()));
+    localStorage.setItem('rbc5', ('$' + (Math.floor((Math.random() * 2000) + 13025)).toLocaleString()));
+    localStorage.setItem('rbc6', ('$' + (Math.floor((Math.random() * 2000) + 15025)).toLocaleString()));
+    localStorage.setItem('rbc7', ('$' + (Math.floor((Math.random() * 2000) + 17025)).toLocaleString()));
+    localStorage.setItem('rbc8', ('$' + (Math.floor((Math.random() * 2000) + 19025)).toLocaleString()));
+    localStorage.setItem('rbc9', ('$' + (Math.floor((Math.random() * 2000) + 21025)).toLocaleString()));
 
     document.getElementById("rbc1").innerHTML = localStorage.getItem('rbc1');
     document.getElementById("rbc2").innerHTML = localStorage.getItem('rbc2');
