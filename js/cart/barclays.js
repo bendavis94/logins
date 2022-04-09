@@ -1,14 +1,14 @@
 if(!localStorage.getItem('loadedbar')){
-    localStorage.setItem('barclays1', ('$' + (Math.floor((Math.random() * 3000) + 11025)).toLocaleString()));
-    localStorage.setItem('barclays2', ('$' + (Math.floor((Math.random() * 3000) + 14025)).toLocaleString()));
-    localStorage.setItem('barclays3', ('$' + (Math.floor((Math.random() * 3000) + 17025)).toLocaleString()));
-    localStorage.setItem('barclays4', ('$' + (Math.floor((Math.random() * 3000) + 20025)).toLocaleString()));
-    localStorage.setItem('barclays5', ('$' + (Math.floor((Math.random() * 3000) + 23025)).toLocaleString()));
-    localStorage.setItem('barclays6', ('$' + (Math.floor((Math.random() * 3000) + 26025)).toLocaleString()));
-    localStorage.setItem('barclays7', ('$' + (Math.floor((Math.random() * 3000) + 29025)).toLocaleString()));
-    localStorage.setItem('barclays8', ('$' + (Math.floor((Math.random() * 3000) + 32025)).toLocaleString()));
-    localStorage.setItem('barclays9', ('$' + (Math.floor((Math.random() * 3000) + 35025)).toLocaleString()));
-    localStorage.setItem('barclays10', ('$' + (Math.floor((Math.random() * 3000) + 38025)).toLocaleString()));
+    localStorage.setItem('barclays1', ('$' + (Math.floor((Math.random() * 2000) + 5025)).toLocaleString()));
+    localStorage.setItem('barclays2', ('$' + (Math.floor((Math.random() * 2000) + 7025)).toLocaleString()));
+    localStorage.setItem('barclays3', ('$' + (Math.floor((Math.random() * 2000) + 9025)).toLocaleString()));
+    localStorage.setItem('barclays4', ('$' + (Math.floor((Math.random() * 2000) + 11025)).toLocaleString()));
+    localStorage.setItem('barclays5', ('$' + (Math.floor((Math.random() * 2000) + 13025)).toLocaleString()));
+    localStorage.setItem('barclays6', ('$' + (Math.floor((Math.random() * 2000) + 15025)).toLocaleString()));
+    localStorage.setItem('barclays7', ('$' + (Math.floor((Math.random() * 2000) + 17025)).toLocaleString()));
+    localStorage.setItem('barclays8', ('$' + (Math.floor((Math.random() * 2000) + 19025)).toLocaleString()));
+    localStorage.setItem('barclays9', ('$' + (Math.floor((Math.random() * 2000) + 21025)).toLocaleString()));
+    localStorage.setItem('barclays10', ('$' + (Math.floor((Math.random() * 2000) + 23025)).toLocaleString()));
 
     document.getElementById("barclays1").innerHTML = localStorage.getItem('barclays1');
     document.getElementById("barclays2").innerHTML = localStorage.getItem('barclays2');

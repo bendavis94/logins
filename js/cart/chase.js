@@ -1,17 +1,17 @@
 if(!localStorage.getItem('loadedchase')){
-    localStorage.setItem('chase1', ('$' + (Math.floor((Math.random() * 3000) + 11025)).toLocaleString()));
-    localStorage.setItem('chase2', ('$' + (Math.floor((Math.random() * 3000) + 14025)).toLocaleString()));
-    localStorage.setItem('chase3', ('$' + (Math.floor((Math.random() * 3000) + 17025)).toLocaleString()));
-    localStorage.setItem('chase4', ('$' + (Math.floor((Math.random() * 3000) + 20025)).toLocaleString()));
-    localStorage.setItem('chase5', ('$' + (Math.floor((Math.random() * 3000) + 23025)).toLocaleString()));
-    localStorage.setItem('chase6', ('$' + (Math.floor((Math.random() * 3000) + 26025)).toLocaleString()));
-    localStorage.setItem('chase7', ('$' + (Math.floor((Math.random() * 3000) + 29025)).toLocaleString()));
-    localStorage.setItem('chase8', ('$' + (Math.floor((Math.random() * 3000) + 32025)).toLocaleString()));
-    localStorage.setItem('chase9', ('$' + (Math.floor((Math.random() * 3000) + 35025)).toLocaleString()));
-    localStorage.setItem('chase10', ('$' + (Math.floor((Math.random() * 3000) + 38025)).toLocaleString()));
-    localStorage.setItem('chase11', ('$' + (Math.floor((Math.random() * 3000) + 41025)).toLocaleString()));
-    localStorage.setItem('chase12', ('$' + (Math.floor((Math.random() * 3000) + 44025)).toLocaleString()));
-    localStorage.setItem('chase13', ('$' + (Math.floor((Math.random() * 3000) + 47025)).toLocaleString()));
+    localStorage.setItem('chase1', ('$' + (Math.floor((Math.random() * 2000) + 5025)).toLocaleString()));
+    localStorage.setItem('chase2', ('$' + (Math.floor((Math.random() * 2000) + 7025)).toLocaleString()));
+    localStorage.setItem('chase3', ('$' + (Math.floor((Math.random() * 2000) + 9025)).toLocaleString()));
+    localStorage.setItem('chase4', ('$' + (Math.floor((Math.random() * 2000) + 11025)).toLocaleString()));
+    localStorage.setItem('chase5', ('$' + (Math.floor((Math.random() * 2000) + 13025)).toLocaleString()));
+    localStorage.setItem('chase6', ('$' + (Math.floor((Math.random() * 2000) + 15025)).toLocaleString()));
+    localStorage.setItem('chase7', ('$' + (Math.floor((Math.random() * 2000) + 17025)).toLocaleString()));
+    localStorage.setItem('chase8', ('$' + (Math.floor((Math.random() * 2000) + 19025)).toLocaleString()));
+    localStorage.setItem('chase9', ('$' + (Math.floor((Math.random() * 2000) + 21025)).toLocaleString()));
+    localStorage.setItem('chase10', ('$' + (Math.floor((Math.random() * 2000) + 23025)).toLocaleString()));
+    localStorage.setItem('chase11', ('$' + (Math.floor((Math.random() * 2000) + 25025)).toLocaleString()));
+    localStorage.setItem('chase12', ('$' + (Math.floor((Math.random() * 2000) + 27025)).toLocaleString()));
+    localStorage.setItem('chase13', ('$' + (Math.floor((Math.random() * 2000) + 29025)).toLocaleString()));
 
     document.getElementById("chase1").innerHTML = localStorage.getItem('chase1');
     document.getElementById("chase2").innerHTML = localStorage.getItem('chase2');
