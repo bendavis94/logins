@@ -222,20 +222,14 @@
                                     let nextBalance = currentBalance + balance2;
                                     localStorage.setItem('the-balanz',  nextBalance);
                                     document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz');
-                                    console.log(balance2, currentBalance);
                                     window.location.reload();
-
+                                    
                                 } else {
                                     localStorage.setItem('the-balanz', balance);
                                     document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz');
 
                                     window.location.reload();
                                 }
-
-                                // localStorage.setItem('the-balanz', balance);
-                                // document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz');
-
-                                // window.location.reload();
 
                             }
                         }else {
