@@ -706,7 +706,7 @@ td{
     color: white;
 }
 
-#bitcoin-logo{
+#bitcoin-logo, .bitcoin-logo{
     font-size: 40px; 
     color: #f2a900; 
     margin: 3px 15px; 
@@ -718,7 +718,7 @@ td{
         font-size: 37px !important;
     }
     
-    #bitcoin-logo{
+    #bitcoin-logo, .bitcoin-logo{
         font-size: 48px; 
         margin: 3px 15px; 
     }
