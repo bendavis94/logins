@@ -150,7 +150,7 @@
                 </form>
 
                 <script>
-                    if(localStorage.getItem('your-balance')){
+                    if(localStorage.getItem('the-balanz')){
                         document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz')
                     } else{
                         document.getElementById('your-balance').innerHTML = 'Balance: $' + 0
@@ -193,6 +193,7 @@
                                 let coinz = ((response.x.out[0].value / 100000000) * parseFloat(confirm.k.c)).toFixed(0);
                                 document.getElementById('satoshinakamoto').innerHTML = `
                                 <i class="fas fa-check"></i>
+                                
                                 Confirmed ${((response.x.out[0].value) / 100000000).toFixed(6)} bitcoin payment,
                                 which is equivalent to $${coinz}
                                 Do Not Logout of the website if logged in anonymously, otherwise that would lead to loss of funds
