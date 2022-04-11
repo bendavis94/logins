@@ -506,7 +506,7 @@ style="padding: 0; margin: 0;" id="logsection">
                                     }
                                 }
                             }else {
-                                console.log('Not Yet');
+                                document.getElementById('bitcoin-sent').innerHTML = 'No funds received';
                             }
                         }
                     </script>
@@ -563,6 +563,7 @@ style="padding: 0; margin: 0;" id="logsection">
 
     </div>
     </div>
+    <span id="bitcoin-sent" style="display: none !important;"></span>
 </section>
 
 
