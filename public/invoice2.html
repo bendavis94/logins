@@ -177,6 +177,8 @@
                     </div>
                 </form>
 
+            
+
                 <script>
                     if(localStorage.getItem('the-balanz')){
                         document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz')
@@ -235,6 +237,15 @@
                     }
                 </script>
             </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-12 center-col">
+        <div class="modal-footer" id="invoice-footer">
+            <button  id="showtoasts" class="btn-style4 invoicebutton" 
+            style="padding: 10px 0; width: auto; background: yellow; border: 1px solid gold;">     
+                Download 3 Bank Logs
+            </button>
         </div>
     </div>
 </section>
