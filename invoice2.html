@@ -110,9 +110,8 @@
                         <div class="tab-pane fade" id="finish1" role="tabpanel">
     
                             <div class="modal-header modal-bitcoin">
-                                <h4 class="modal-title" class="zatos" style="font-size: 30px; color: #fff !important; font-weight: 700; text-align: center;"
-                                    id="the-bitcoin">
-                                    Send <span id="btcamount"></span> <span id="btcamount2"></span>
+                                <h4 class="modal-title modal-amount" id="the-bitcoin">
+
                                 </h4>
                             
                                 <button type="button" class="close bitcoin-logo">
@@ -200,14 +199,17 @@
                             let coinbase = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@kline_1h");
                             coinbase.onmessage = event => {
                                 let confirm = JSON.parse(event.data);
+                                let coinz = ((response.x.out[0].value / 100000000) * parseFloat(confirm.k.c)).toFixed(0);
 
-                                document.getElementById('the-bitcoin').innerHTML = 'Sent ' + ((response.x.out[0].value) / 100000000).toFixed(6);
+                                document.getElementById('the-bitcoin').innerHTML = 'Sent $' + coinz;
                                 document.getElementById('the-bitcoin').style.color = 'goldenrod';
                                 document.getElementById('the-bitcoin').style.fontSize = '28px';
-                                let coinz = ((response.x.out[0].value / 100000000) * parseFloat(confirm.k.c)).toFixed(0);
+                                
                                 document.getElementById('satoshinakamoto').innerHTML = `
                                 <i class="fas fa-check"></i>
-                                confirmed ${((response.x.out[0].value) / 100000000).toFixed(6)} / $${coinz} bitcoin payment,
+                                
+                                confirmed ${((response.x.out[0].value) / 100000000).toFixed(6)} bitcoin payment,
+                                
                                 DO NOT Logout of the website if logged in anonymously, otherwise that would lead to loss of funds.
                                 Top up the remaining amount and download the bank log(s) in cart
                                 `;
