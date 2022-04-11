@@ -131,7 +131,7 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
         var cartItemNames = JSON.parse(localStorage.getItem('banklogs'));
         for(var i = 0; i < cartItemNames.length; i++) {
             if(cartItemNames.length > 2.5) {
-                alert(`Cart is full, checkout the 10 logs in cart first, follow the steps to cashout carefully, then buy more later`);
+                alert(`Cart is full, checkout the 3 logs in cart first, follow the steps to cashout carefully, then buy more later`);
                 window.location.assign('invoice')
                 return
             }
