@@ -20,8 +20,16 @@ $(document).ready(function() {
             if($percent == 0){
                 $('#rootwizard').find('.progress-bar').css({width:50+'%'});
             }
-            if($percent == 100){
+            if($percent > 30){
                 document.getElementById('pablos').classList.remove("bg-warning");
+                document.getElementById('pablos').classList.add("bg-warning");
+            }
+            if($percent > 66){
+                document.getElementById('pablos').classList.remove("bg-warning");
+                document.getElementById('pablos').classList.add("bg-info");
+            }
+            if($percent == 100){
+                document.getElementById('pablos').classList.remove("bg-info");
                 document.getElementById('pablos').classList.add("bg-success");
             }
         },

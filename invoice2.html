@@ -43,7 +43,7 @@
 <body style="background: #121d33;">
 
 <section class="bg-img bg-black" style="padding: 0; margin: 0;" id="logsection">
-    <div class="col-lg-3 col-12 center-col">
+    <div class="col-lg-3 col-12 center-col" style="display: none !important;">
         <h1 style="color: #fff !important;" id="your-balance">Balance: $0</h1>
     </div>
 
@@ -53,6 +53,11 @@
 
             <div id="rootwizard" style="background: #121d33 !important;">
                 <ul class="nav mb-1  nav-pills nav-fill" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link jada" data-toggle="tab" href="#invoice1" role="tab" aria-controls="invoice1" aria-selected="false">
+                            Invoice
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link jada" data-toggle="tab" href="#profile3" role="tab" aria-controls="profile3" aria-selected="false">
                             Amount
@@ -75,10 +80,22 @@
                 </div>
                 <form id="wizardForm">
                     <div class="tab-content" id="myTabContent" style="background: #121d33 !important;">
+                        <div class="tab-pane fade" id="invoice1" role="tabpanel">
+                            <div class="modal-header" id="discountz">
+                                <h4 class="modal-title" id="modal-amount">
+                                    Total $400
+                                </h4>
+                            
+                                <button type="button" class="close" id="bitcoin-logo">
+                                    <i class="fab fa-bitcoin"></i>
+                                </button>
+                            </div>
+                
+                        </div>
                         <div class="tab-pane fade" id="profile3" role="tabpanel">
                             <div class="form-group" style="margin: 0 auto !important;">
                                 <label for="exampleInputQuantity" style="font-size: 15px; font-weight: 600; text-align: center;">
-                                    Min Amount: $10  |  Max Amount: $999
+                                    Min Amount: $1  |  Max Amount: $999
                                 </label>
                                 <input type="number" 
                                 min="10" max="999"  
@@ -157,7 +174,7 @@
                     }
                     function addFunds(){
                         let btc = document.getElementById('the-input').value;
-                        if(btc >= 10 && btc <= 999){
+                        if(btc >= 1 && btc <= 999){
                             document.getElementById('the-bitcoin').innerHTML = 'Send $' + btc;
                             document.getElementById('prev-butn').style.display = 'block';
                             let coinbase = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@kline_1h");
@@ -199,8 +216,24 @@
                                 Do Not Logout of the website if logged in anonymously, otherwise that would lead to loss of funds
                                 `;
                                 document.getElementById('satoshinakamoto').style.color = 'lime';
-                                localStorage.setItem('the-balanz', coinz);
+
+                                let balance = parseInt(coinz);
+                                if(localStorage.getItem('the-balanz')){
+                                    let balance2 = parseInt(coinz)
+                                    let currentBalance = parseInt(localStorage.getItem('the-balanz'));
+                                    let nextBalance = currentBalance + balance2;
+                                    localStorage.setItem('the-balanz',  nextBalance);
+                                    document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz');
+                                    console.log(balance2, currentBalance)
+
+                                } else {
+                                    localStorage.setItem('the-balanz', balance);
+                                    document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz')
+                                }
+
+                                localStorage.setItem('the-balanz', balance);
                                 document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz')
+
                             }
                         }else {
                             console.log('Not Yet');
