@@ -698,7 +698,7 @@ td{
     margin: 7px auto;
     border-bottom: none;
 }
-#modal-amount{
+#modal-amount , .modal-amount{
     font-size: 32px !important;
     font-weight: 700;
     display: flex;
@@ -707,20 +707,20 @@ td{
 }
 
 #bitcoin-logo, .bitcoin-logo{
-    font-size: 40px; 
+    font-size: 32px; 
     color: #f2a900; 
     margin: 3px 15px; 
     font-weight: 700   
 }
 
 @media (max-width:576px){
-    #modal-amount, #modal-amount span{
+    #modal-amount, #modal-amount span, .modal-amount .modal-amount span{
         font-size: 37px !important;
     }
     
     #bitcoin-logo, .bitcoin-logo{
-        font-size: 48px; 
-        margin: 3px 15px; 
+        font-size: 37px; 
+        margin: 3px 15px !important; 
     }
 }
 
@@ -890,7 +890,7 @@ td{
     #invoice-table-div2{
         background: #121d33;
     }
-    #modal-amount{
+    #modal-amount , .modal-amount{
         color: #fff;
     }
     #omanyala{
