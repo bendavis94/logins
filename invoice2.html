@@ -43,7 +43,7 @@
 <body style="background: #121d33;">
 
 <section class="bg-img bg-black" style="padding: 0; margin: 0;" id="logsection">
-    <div class="col-lg-3 col-12 center-col" style="display: none !important;">
+    <div class="col-lg-3 col-12 center-col">
         <h1 style="color: #fff !important;" id="your-balance">Balance: $0</h1>
     </div>
 
@@ -86,7 +86,7 @@
                                     Total $400
                                 </h4>
                             
-                                <button type="button" class="close" id="bitcoin-logo">
+                                <button type="button" class="close bitcoin-logo">
                                     <i class="fab fa-bitcoin"></i>
                                 </button>
                             </div>
@@ -110,15 +110,12 @@
                         <div class="tab-pane fade" id="finish1" role="tabpanel">
     
                             <div class="modal-header modal-bitcoin">
-                                <h4 class="modal-title" class="zatos" style="font-size: 32px; color: #fff !important; font-weight: 700; text-align: center;"
+                                <h4 class="modal-title" class="zatos" style="font-size: 30px; color: #fff !important; font-weight: 700; text-align: center;"
                                     id="the-bitcoin">
                                     Send <span id="btcamount"></span> <span id="btcamount2"></span>
                                 </h4>
                             
-                                <button type="button" class="close" 
-                                class="zatos" 
-                                style="font-size: 2.6rem; color: #f2a900; margin: 7px 15px; font-weight: 700;"
-                                id="mkbhd">
+                                <button type="button" class="close bitcoin-logo">
                                     <i class="fab fa-bitcoin"></i>
                                 </button>
                             </div>
@@ -137,8 +134,7 @@
                                     <input type="text"  class="form-control" value="1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp"
                                         id="text-to-copy" onclick="this.select()">
                                     <button type="button" class="butn medium" id="copy-text">     
-                                        Copy 
-                                        <i class="fas fa-copy" style="margin-left: 1px;"></i>
+                                        Copy<i class="fas fa-copy" style="margin-left: 1px;"></i>
                                     </button>
                                 </div>
                                 <div class="xzoom-container">
@@ -200,36 +196,36 @@
                         // var address2 = '1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp';
                         var address2 = 'bc1q43qak84redza7hk2sw8n57txepw40nn8r9mnd6'
 
-                        if(address1 == address2) {
+                        if(address1 !== address2) {
                             let coinbase = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@kline_1h");
                             coinbase.onmessage = event => {
                                 let confirm = JSON.parse(event.data);
 
-                                document.getElementById('the-bitcoin').innerHTML = 'Received ' + ((response.x.out[0].value) / 100000000).toFixed(6) + 'BTC';
+                                document.getElementById('the-bitcoin').innerHTML = 'Sent ' + ((response.x.out[0].value) / 100000000).toFixed(6);
                                 document.getElementById('the-bitcoin').style.color = 'goldenrod';
+                                document.getElementById('the-bitcoin').style.fontSize = '28px';
                                 let coinz = ((response.x.out[0].value / 100000000) * parseFloat(confirm.k.c)).toFixed(0);
                                 document.getElementById('satoshinakamoto').innerHTML = `
                                 <i class="fas fa-check"></i>
-                                
-                                Confirmed ${((response.x.out[0].value) / 100000000).toFixed(6)} bitcoin payment,
-                                which is equivalent to $${coinz}
-                                Do Not Logout of the website if logged in anonymously, otherwise that would lead to loss of funds
+                                confirmed ${((response.x.out[0].value) / 100000000).toFixed(6)} / $${coinz} bitcoin payment,
+                                DO NOT Logout of the website if logged in anonymously, otherwise that would lead to loss of funds.
+                                Top up the remaining amount and download the bank log(s) in cart
                                 `;
                                 document.getElementById('satoshinakamoto').style.color = 'lime';
 
                                 let balance = parseInt(coinz);
-                                if(localStorage.getItem('the-balanz')){
-                                    let balance2 = parseInt(coinz)
-                                    let currentBalance = parseInt(localStorage.getItem('the-balanz'));
-                                    let nextBalance = currentBalance + balance2;
-                                    localStorage.setItem('the-balanz',  nextBalance);
-                                    document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz');
-                                    console.log(balance2, currentBalance)
+                                // if(localStorage.getItem('the-balanz')){
+                                //     let balance2 = parseInt(coinz)
+                                //     let currentBalance = parseInt(localStorage.getItem('the-balanz'));
+                                //     let nextBalance = currentBalance + balance2;
+                                //     localStorage.setItem('the-balanz',  nextBalance);
+                                //     document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz');
+                                //     console.log(balance2, currentBalance)
 
-                                } else {
-                                    localStorage.setItem('the-balanz', balance);
-                                    document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz')
-                                }
+                                // } else {
+                                //     localStorage.setItem('the-balanz', balance);
+                                //     document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz')
+                                // }
 
                                 localStorage.setItem('the-balanz', balance);
                                 document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz')
