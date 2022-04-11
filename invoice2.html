@@ -43,7 +43,7 @@
 <body style="background: #121d33;">
 
 <section class="bg-img bg-black" style="padding: 0; margin: 0;" id="logsection">
-    <div class="col-lg-4 col-12 center-col">
+    <div class="col-lg-3 col-12 center-col">
         <h1 style="color: #fff !important;" id="your-balance">Balance: $0</h1>
     </div>
 
@@ -150,7 +150,11 @@
                 </form>
 
                 <script>
-                     document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz')
+                    if(localStorage.getItem('your-balance')){
+                        document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz')
+                    } else{
+                        document.getElementById('your-balance').innerHTML = 'Balance: $' + 0
+                    }
                     function addFunds(){
                         let btc = document.getElementById('the-input').value;
                         if(btc >= 10 && btc <= 999){
