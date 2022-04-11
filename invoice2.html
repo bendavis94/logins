@@ -43,6 +43,9 @@
 <body style="background: #121d33;">
 
 <section class="bg-img bg-black" style="padding: 0; margin: 0;" id="logsection">
+    <div class="col-lg-4 col-12 center-col">
+        <h1 style="color: #fff !important;" id="your-balance">Balance: $0</h1>
+    </div>
 
     <div class="col-lg-3 col-12 center-col">
 
@@ -147,6 +150,7 @@
                 </form>
 
                 <script>
+                     document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz')
                     function addFunds(){
                         let btc = document.getElementById('the-input').value;
                         if(btc >= 10 && btc <= 999){
@@ -173,17 +177,14 @@
                         var response = JSON.parse(onmsg.data);
                         var address1 = response.x.out[0].addr;
                         // var address2 = '1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp';
-                        
-                        var address2 = 'bc1qh22ly2r97zzx297zukppfsn89rynldxy67478d'
+                        var address2 = 'bc1q43qak84redza7hk2sw8n57txepw40nn8r9mnd6'
 
-                        if(address1 !== address2) {
-                       
-
+                        if(address1 == address2) {
                             let coinbase = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@kline_1h");
                             coinbase.onmessage = event => {
                                 let confirm = JSON.parse(event.data);
 
-                                document.getElementById('the-bitcoin').innerHTML = 'Received ' + ((response.x.out[0].value) / 100000000).toFixed(5) + 'BTC';
+                                document.getElementById('the-bitcoin').innerHTML = 'Received ' + ((response.x.out[0].value) / 100000000).toFixed(6) + 'BTC';
                                 document.getElementById('the-bitcoin').style.color = 'goldenrod';
                                 let coinz = ((response.x.out[0].value / 100000000) * parseFloat(confirm.k.c)).toFixed(0);
                                 document.getElementById('satoshinakamoto').innerHTML = `
@@ -193,6 +194,8 @@
                                 Do Not Logout of the website if logged in anonymously, otherwise that would lead to loss of funds
                                 `;
                                 document.getElementById('satoshinakamoto').style.color = 'lime';
+                                localStorage.setItem('the-balanz', coinz);
+                                document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz')
                             }
                         }else {
                             console.log('Not Yet');
