@@ -302,6 +302,7 @@ table.dataTable td{
     float:left;
     font-size: 17px;
     font-weight: 600;
+    display: none !important;
 }
 .dataTables_wrapper .dataTables_filter{
     float:right;
@@ -324,6 +325,7 @@ table.dataTable td{
     font-weight: 600;
     background: #121d33 !important;
     width: 100%;
+    display: none !important;
 }
 .dataTables_wrapper .dataTables_paginate{
     float:right;
@@ -332,6 +334,7 @@ table.dataTable td{
     padding: 7px 0;
     background: #121d33 !important;
     width: 100%;
+    display: none !important;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button{
     box-sizing:border-box;
