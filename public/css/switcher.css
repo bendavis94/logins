@@ -255,7 +255,7 @@ th{
     color: rgba(0, 0, 25, 1);
 }
 #satoshinakamoto{
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
     font-family:"Montserrat",sans-serif;
     color: aqua;
@@ -314,7 +314,7 @@ th{
 }
 @media screen and (max-width: 567px) {
     #satoshinakamoto {
-        font-size: 20px;
+        font-size: 19px;
    }
 }
 .zatozi {
