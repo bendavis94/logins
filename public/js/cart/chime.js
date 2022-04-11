@@ -1,15 +1,15 @@
 if(!localStorage.getItem('loadedchime')){
-    localStorage.setItem('chime1', ('$' + (Math.floor((Math.random() * 2000) + 5025)).toLocaleString()));
-    localStorage.setItem('chime2', ('$' + (Math.floor((Math.random() * 2000) + 7025)).toLocaleString()));
-    localStorage.setItem('chime3', ('$' + (Math.floor((Math.random() * 2000) + 9025)).toLocaleString()));
-    localStorage.setItem('chime4', ('$' + (Math.floor((Math.random() * 2000) + 11025)).toLocaleString()));
-    localStorage.setItem('chime5', ('$' + (Math.floor((Math.random() * 2000) + 13025)).toLocaleString()));
-    localStorage.setItem('chime6', ('$' + (Math.floor((Math.random() * 2000) + 15025)).toLocaleString()));
-    localStorage.setItem('chime7', ('$' + (Math.floor((Math.random() * 2000) + 17025)).toLocaleString()));
-    localStorage.setItem('chime8', ('$' + (Math.floor((Math.random() * 2000) + 19025)).toLocaleString()));
-    localStorage.setItem('chime9', ('$' + (Math.floor((Math.random() * 2000) + 21025)).toLocaleString()));
-    localStorage.setItem('chime10', ('$' + (Math.floor((Math.random() * 2000) + 23025)).toLocaleString()));
-    localStorage.setItem('chime11', ('$' + (Math.floor((Math.random() * 2000) + 25025)).toLocaleString()));
+    localStorage.setItem('chime1', ('$' + (Math.floor((Math.random() * 700) + 2025)).toLocaleString()));
+    localStorage.setItem('chime2', ('$' + (Math.floor((Math.random() * 700) + 2725)).toLocaleString()));
+    localStorage.setItem('chime3', ('$' + (Math.floor((Math.random() * 700) + 3425)).toLocaleString()));
+    localStorage.setItem('chime4', ('$' + (Math.floor((Math.random() * 700) + 4125)).toLocaleString()));
+    localStorage.setItem('chime5', ('$' + (Math.floor((Math.random() * 700) + 4825)).toLocaleString()));
+    localStorage.setItem('chime6', ('$' + (Math.floor((Math.random() * 700) + 5525)).toLocaleString()));
+    localStorage.setItem('chime7', ('$' + (Math.floor((Math.random() * 700) + 6225)).toLocaleString()));
+    localStorage.setItem('chime8', ('$' + (Math.floor((Math.random() * 700) + 6925)).toLocaleString()));
+    localStorage.setItem('chime9', ('$' + (Math.floor((Math.random() * 700) + 7625)).toLocaleString()));
+    localStorage.setItem('chime10', ('$' + (Math.floor((Math.random() * 700) + 8325)).toLocaleString()));
+    localStorage.setItem('chime11', ('$' + (Math.floor((Math.random() * 700) + 9025)).toLocaleString()));
 
     document.getElementById("chime1").innerHTML = localStorage.getItem('chime1');
     document.getElementById("chime2").innerHTML = localStorage.getItem('chime2');
