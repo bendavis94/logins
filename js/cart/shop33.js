@@ -130,14 +130,14 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
     var info61 = `<td>${info6}</td>`
     var info71 = `<td>${info7}</td>`
 
-    var cartItemNames = JSON.parse(localStorage.getItem('banklogs'));
-    for(var i = 0; i < cartItemNames.length; i++) {
-        if(cartItemNames.length > 9.5) {
-            alert(`Cart is full, checkout the 10 logs in cart first, follow the steps to cashout carefully, then buy more later`);
-            window.location.assign('invoice')
-            return
-        }
-    }
+    // var cartItemNames = JSON.parse(localStorage.getItem('banklogs'));
+    // for(var i = 0; i < cartItemNames.length; i++) {
+    //     if(cartItemNames.length > 9.5) {
+    //         alert(`Cart is full, checkout the 10 logs in cart first, follow the steps to cashout carefully, then buy more later`);
+    //         window.location.assign('invoice')
+    //         return
+    //     }
+    // }
 
     addToLocalStorage(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 
