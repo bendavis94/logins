@@ -254,7 +254,7 @@ th{
     font-family:"Montserrat",sans-serif;
     color: rgba(0, 0, 25, 1);
 }
-#satoshinakamoto{
+#satoshinakamoto, .satoshinakamoto{
     font-size: 15px;
     font-weight: 700;
     font-family:"Montserrat",sans-serif;
@@ -313,7 +313,7 @@ th{
     padding: 10px;
 }
 @media screen and (max-width: 567px) {
-    #satoshinakamoto {
+    #satoshinakamoto , .satoshinakamoto{
         font-size: 19px;
    }
 }

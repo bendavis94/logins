@@ -900,7 +900,7 @@ td{
     #invoiceHolder3{
         color: aqua;
     }
-    #satoshinakamoto{
+    #satoshinakamoto, .satoshinakamoto{
         color: aqua;
     }
     #invoiceHolder{
