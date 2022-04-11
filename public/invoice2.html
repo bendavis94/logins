@@ -43,8 +43,16 @@
 <body style="background: #121d33;">
 
 <section class="bg-img bg-black" style="padding: 0; margin: 0;" id="logsection">
-    <div class="col-lg-3 col-12 center-col">
-        <h1 style="color: #fff !important;" id="your-balance">Balance: $0</h1>
+    <div class="col-lg-3 col-12 center-col" style="padding: 0; margin: 0 auto;">
+        <div class="modal-header modal-bitcoin">
+            <h4 class="modal-title modal-amount" id="your-balance">
+                Balance: $0
+            </h4>
+        
+            <button type="button" class="close bitcoin-logo" style="color: limegreen;">
+                <i class="fas fa-piggy-bank"></i>
+            </button>
+        </div>
     </div>
 
     <div class="col-lg-3 col-12 center-col">
@@ -120,8 +128,9 @@
                             </div>
 
                             <div class="modal-header" style="padding: 0">
-                                <strong id="satoshinakamoto">
-                                    <i class="fas fa-spin fa-sync-alt spinner-bordez"></i> awaiting  
+                                <strong class="satoshinakamoto">
+                                    <i class="fas fa-spin fa-sync-alt spinner-bordez"></i> 
+                                    awaiting  
                                     <span id="the-other-one"></span> 
                                     bitcoin payment
                                 </strong>
@@ -171,7 +180,6 @@
                         let btc = document.getElementById('the-input').value;
                         if(btc >= 1 && btc <= 999){
                             document.getElementById('the-bitcoin').innerHTML = 'Send $' + btc;
-                            document.getElementById('prev-butn').style.display = 'block';
                             let coinbase = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@kline_1h");
                             const bitcoin = document.getElementById("the-other-one");
                             coinbase.onmessage = event => {
@@ -200,21 +208,6 @@
                             coinbase.onmessage = event => {
                                 let confirm = JSON.parse(event.data);
                                 let coinz = ((response.x.out[0].value / 100000000) * parseFloat(confirm.k.c)).toFixed(0);
-
-                                document.getElementById('the-bitcoin').innerHTML = 'Sent $' + coinz;
-                                document.getElementById('the-bitcoin').style.color = 'goldenrod';
-                                document.getElementById('the-bitcoin').style.fontSize = '28px';
-                                
-                                document.getElementById('satoshinakamoto').innerHTML = `
-                                <i class="fas fa-check"></i>
-
-                                confirmed ${((response.x.out[0].value) / 100000000).toFixed(6)} bitcoin payment,
-                                
-                                DO NOT Logout of the website if logged in anonymously, otherwise that would lead to loss of funds.
-                                Top up the remaining amount and download the bank log(s) in cart
-                                `;
-                                document.getElementById('satoshinakamoto').style.color = 'lime';
-
                                 let balance = parseInt(coinz);
                                 if(localStorage.getItem('the-balanz')){
                                     let balance2 = parseInt(coinz)
@@ -222,16 +215,12 @@
                                     let nextBalance = currentBalance + balance2;
                                     localStorage.setItem('the-balanz',  nextBalance);
                                     document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz');
-                                    console.log(balance2, currentBalance);
                                     window.location.reload();
-                                    
                                 } else {
                                     localStorage.setItem('the-balanz', balance);
                                     document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz');
-
                                     window.location.reload();
                                 }
-
                             }
                         }else {
                             console.log('Not Yet');
