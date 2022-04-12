@@ -27,15 +27,16 @@ function myFunction() {
 			jinaHolder2.innerText = 'User ID ' + user.uid;
 			rockHolder.innerText = user.displayName;
 			tableidHolder.value = "Name: " + user.displayName;
+			idHolder3.innerText = 'User ID ' + user.uid;
 		} else {
 			jinaHolder.innerText = "Anonymous";
 			jinaHolder2.innerText = 'User ID ' + user.uid;
 			rockHolder.innerText = "Anonymous";
 			tableidHolder.value = "Name: Anonymous";
+			idHolder3.innerText = 'User ID ' + user.uid;
 		  }
 		if (user.uid) {
 			uidHolder.innerText = user.uid;
-			idHolder3 = user.uid;
 		}
 		if (user.email) {
 			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
