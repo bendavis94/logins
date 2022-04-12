@@ -430,7 +430,7 @@ select{
 button#thetot, button#thetot1,button#thetot3{
     font-weight: 700;
     font-size: 28px;
-    margin: 15px 50px !important;
+    margin: 10px 50px !important;
     padding: 10px;
     background: yellow;
     color: #121d33;
@@ -671,6 +671,7 @@ td{
 }
 .table-mobile th{
     border: 1px solid lightgoldenrodyellow !important;
+    border-top: none !important;
     border-bottom: none !important;
     padding: 3px 0 !important;
     font-size: 20px !important;
@@ -1071,6 +1072,9 @@ td{
         text-align: center;
    }
 }
-
+.mobile1, .mobile2{
+    padding: 0 !important;
+    margin: 0 !important;
+}
 
 
