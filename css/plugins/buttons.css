@@ -830,13 +830,13 @@ td{
 }
 #invoiceHolder3{
     text-align: center;
-    color: #36a3f5;
-    font-size: 15px;
+    color: aqua;
+    font-size: 17px;
     font-weight: 700;
 }
 @media (max-width:576px){
     #invoiceHolder3{
-        font-size: 19px;
+        font-size: 20px;
     }
 }
 #invoice-col-table{
