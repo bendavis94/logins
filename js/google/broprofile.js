@@ -11,6 +11,7 @@ function myFunction() {
 	const email1 = document.getElementById('yourEmail1');
 	const email2 = document.getElementById('yourEmail2');
 	const email5 = document.getElementById('yourEmail5');
+	const invoiceHolder3 = document.getElementById('invoiceHolder3');
 	const auth = firebase.auth();
 
 	auth.onAuthStateChanged(user => {
@@ -34,6 +35,7 @@ function myFunction() {
 		  }
 		if (user.uid) {
 			uidHolder.innerText = user.uid;
+			invoiceHolder3 = 'User ID: ' + user.uid;
 		}
 		if (user.email) {
 			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
