@@ -67,7 +67,7 @@
 <link rel="stylesheet" href="css/stylebro.css" />
     
 </head>
-<body onload="myFunction()" id="thebodyz" style="background: #121d33;">
+<body onload="myFunction(); move()" id="thebodyz" style="background: #121d33;">
     <div id="preloader">
         <div class="row loader">
             <div class="loader-icon"></div>
@@ -309,6 +309,8 @@
 </header>
 
 
+<script src="js/cart/invoice2.js"></script>
+
 
 
 <!-- start projet ection -->
@@ -415,6 +417,18 @@ style="padding: 0; margin: 0;" id="logsection">
                                         <span id="the-other-one"></span> 
                                         bitcoin payment
                                     </strong>
+                                </div>
+
+                                <div class="modal-body" style="padding: 0; margin: 0;">
+                                    <div class="progress progress-md progress-rounded mb-0 mt-0" style="border: 1px solid lightgray;">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated  bg-success" 
+                                            id="escobar"
+                                            style="width: 100%;">
+                                            <span id="escoz">
+                                                Time Left: 10:00
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
     
     
