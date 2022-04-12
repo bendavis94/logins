@@ -1018,7 +1018,7 @@ td{
     footer.bg-img{
         background-position:0 0;
         background-repeat:repeat-x;
-        animation:animatedBackground 30s linear infinite
+        animation:animatedBackground 10s linear infinite
     }
 }
 
@@ -1053,3 +1053,13 @@ td{
 #footer-p{
     font-size: 19px !important;
 }
+#footer-email{
+    font-size: 20px !important;
+    font-weight: 600 !important;
+}
+
+
+
+
+
+
