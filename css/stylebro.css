@@ -52,10 +52,10 @@
 
 .nav-link{
     margin: 0;
-    padding: 7px 1px;
+    padding: 5px 2px;
     color: black;
     font-family:"Montserrat",sans-serif;
-    font-size: 17px;
+    font-size: 23px;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -64,7 +64,7 @@
 }
 @media screen and (max-width: 524px) {
     .nav-link{
-        font-size: 17px;
+        font-size: 23px;
         padding: 5px 2px !important;
     }
 }
