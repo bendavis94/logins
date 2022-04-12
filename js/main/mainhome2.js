@@ -40,6 +40,74 @@
         }, 500);
         event.preventDefault();
     });
+    $(document).ready(function() {
+     
+        $('#services-carousel').owlCarousel({
+            loop: true,
+            responsiveClass: true,
+            dots: true,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 10
+                },
+                768: {
+                    items: 1,
+                    margin: 10
+                },
+                992: {
+                    items: 1,
+                    margin: 10
+                },
+                1200: {
+                    items: 1,
+                    margin: 10
+                }
+            }
+        });
+        $('#banks-carousel').owlCarousel({
+            loop: true,
+            responsiveClass: true,
+            dots: true,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 10
+                },
+                768: {
+                    items: 1,
+                    margin: 10
+                },
+                992: {
+                    items: 1,
+                    margin: 10
+                },
+                1200: {
+                    items: 1,
+                    margin: 10
+                }
+            }
+        });
+        $('.owl-carousel').owlCarousel({
+            items: 1,
+            loop: true,
+            dots: false,
+            margin: 0,
+            autoplay: true,
+            smartSpeed: 500
+        });
+    
+    });
     function ScreenFixedHeight() {
         var $headerHeight = $("header").height();
         var element = $(".screen-height");
