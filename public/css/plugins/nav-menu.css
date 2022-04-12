@@ -346,6 +346,7 @@ header{
     border:1px dotted aqua;
     border-radius:0;
     overflow-y: hidden;
+    overflow-x: scroll !important;
     padding:0;
     background: yellow;
     min-width:225px;
@@ -1228,7 +1229,7 @@ header{
 }
 @media screen and (max-width:470px){
     .attr-nav>ul>li.dropdown ul.dropdown-menu{
-        left: -62.3vw;
+        left: -63.68vw;
         width: 100vw;
         top:68px;
         display:none !important
@@ -1236,7 +1237,7 @@ header{
 }
 @media screen and (max-width:400px){
     .attr-nav>ul>li.dropdown ul.dropdown-menu{
-        left: -60.13vw;
+        left: -61.5vw;
         width: 100vw;
         top:68px;
         display:none !important
@@ -1244,7 +1245,7 @@ header{
 }
 @media screen and (max-width:370px){
     .attr-nav>ul>li.dropdown ul.dropdown-menu{
-        left: -56.8vw;
+        left: -58.2vw;
         width: 100vw;
         top:68px;
         display:none !important
