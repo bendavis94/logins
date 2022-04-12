@@ -14,21 +14,65 @@ $(document).ready(function() {
 	var $toastlast;
 
 	var getMessage = function() {
-
 		let items = [];
 		items = JSON.parse(localStorage.getItem('banklogs'));
 
-		var msgs = [
-			` 	Your account has insufficient funds, 
-                Top up your account by making a deposit and try again
-			`
-			];
-			i++;
-			if (i === msgs.length) {
-				i = 0;
+		if(((JSON.parse(localStorage.getItem('banklogs')).length) == 2)){
+			for(var i = 0; i < items.length; i++) {
+				var msgs = [
+				
+				` 	
+				Your account has insufficient funds to download
+				${items[0].account} with ${items[0].balance}, 
+				and ${items[1].account} with ${items[1].balance}, 
+				Deposit to your account a total of ${toastbitcoin} bitcoin/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
+				and try again
+				`
+				];
+				i++;
+				if (i === msgs.length) {
+					i = 0;
+				}
+		
+				return msgs[i];
 			}
-	
-			return msgs[i];
+		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 1)){
+			for(var i = 0; i < items.length; i++) {
+				var msgs = [
+				` 	
+					Your account has insufficient funds to download
+					${items[0].account} with ${items[0].balance}, 
+					Deposit to your account a total of ${toastbitcoin} bitcoin/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
+					and try again
+				`
+				];
+				i++;
+				if (i === msgs.length) {
+					i = 0;
+				}
+		
+				return msgs[i];
+			}
+		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 3)){
+			for(var i = 0; i < items.length; i++) {
+				var msgs = [
+					` 	
+					Your account has insufficient funds to download
+					${items[0].account} with ${items[0].balance}, 
+					and ${items[1].account} with ${items[1].balance}, 
+					and ${items[2].account} with ${items[2].balance}, 
+					Deposit to your account a total of ${toastbitcoin} bitcoin/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
+					and try again
+					`
+				];
+				i++;
+				if (i === msgs.length) {
+					i = 0;
+				}
+		
+				return msgs[i];
+			}
+		}
 	};
 
 	var getMessageWithClearButton = function(msg) {
