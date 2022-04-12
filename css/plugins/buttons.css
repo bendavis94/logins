@@ -1059,7 +1059,18 @@ td{
 }
 
 
-
+#theno1,#theno3{
+    text-align: center;
+    font-weight: 700;
+    font-size: 28px;
+    color: white
+}
+@media (max-width:576px){
+    #theno1,#theno3{
+        font-size: 30px;
+        text-align: center;
+   }
+}
 
 
 

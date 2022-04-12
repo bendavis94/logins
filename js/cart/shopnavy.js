@@ -100,5 +100,7 @@ function updateCartTotal() {
     });
     document.getElementById('thetot3').innerHTML = `Checkout:  $${total.toLocaleString()}`;
 
+    document.getElementById('theno3').innerHTML = 'Cart: ' + JSON.parse(localStorage.getItem('banklogs')).length + ' , Total: $' + total.toLocaleString();
+
     localStorage.setItem('time-left',600);
 }
