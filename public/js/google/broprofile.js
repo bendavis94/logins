@@ -11,7 +11,7 @@ function myFunction() {
 	const email1 = document.getElementById('yourEmail1');
 	const email2 = document.getElementById('yourEmail2');
 	const email5 = document.getElementById('yourEmail5');
-	const idHolder3 = document.getElementById('invoiceHolder3');
+	// const idHolder3 = document.getElementById('invoiceHolder3');
 	const auth = firebase.auth();
 
 	auth.onAuthStateChanged(user => {
@@ -27,13 +27,13 @@ function myFunction() {
 			jinaHolder2.innerText = 'User ID ' + user.uid;
 			rockHolder.innerText = user.displayName;
 			tableidHolder.value = "Name: " + user.displayName;
-			idHolder3.innerText = 'User ID ' + user.uid;
+			// idHolder3.innerText = 'User ID ' + user.uid;
 		} else {
 			jinaHolder.innerText = "Anonymous";
 			jinaHolder2.innerText = 'User ID ' + user.uid;
 			rockHolder.innerText = "Anonymous";
 			tableidHolder.value = "Name: Anonymous";
-			idHolder3.innerText = 'User ID ' + user.uid;
+			// idHolder3.innerText = 'User ID ' + user.uid;
 		  }
 		if (user.uid) {
 			uidHolder.innerText = user.uid;
