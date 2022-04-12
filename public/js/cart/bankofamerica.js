@@ -1,11 +1,11 @@
 if(!localStorage.getItem('loadedboa')){
-    localStorage.setItem('bankofamerica1', ('$' + (Math.floor((Math.random() * 2000) + 5025)).toLocaleString()));
-    localStorage.setItem('bankofamerica2', ('$' + (Math.floor((Math.random() * 2000) + 7025)).toLocaleString()));
-    localStorage.setItem('bankofamerica3', ('$' + (Math.floor((Math.random() * 2000) + 9025)).toLocaleString()));
-    localStorage.setItem('bankofamerica4', ('$' + (Math.floor((Math.random() * 2000) + 11025)).toLocaleString()));
-    localStorage.setItem('bankofamerica5', ('$' + (Math.floor((Math.random() * 2000) + 13025)).toLocaleString()));
-    localStorage.setItem('bankofamerica6', ('$' + (Math.floor((Math.random() * 2000) + 15025)).toLocaleString()));
-    localStorage.setItem('bankofamerica7', ('$' + (Math.floor((Math.random() * 2000) + 17025)).toLocaleString()));
+    localStorage.setItem('bankofamerica1', ('$' + (Math.floor((Math.random() * 700) + 5025)).toLocaleString()));
+    localStorage.setItem('bankofamerica2', ('$' + (Math.floor((Math.random() * 700) + 5725)).toLocaleString()));
+    localStorage.setItem('bankofamerica3', ('$' + (Math.floor((Math.random() * 700) + 6425)).toLocaleString()));
+    localStorage.setItem('bankofamerica4', ('$' + (Math.floor((Math.random() * 700) + 7125)).toLocaleString()));
+    localStorage.setItem('bankofamerica5', ('$' + (Math.floor((Math.random() * 700) + 7825)).toLocaleString()));
+    localStorage.setItem('bankofamerica6', ('$' + (Math.floor((Math.random() * 700) + 8525)).toLocaleString()));
+    localStorage.setItem('bankofamerica7', ('$' + (Math.floor((Math.random() * 700) + 9225)).toLocaleString()));
 
     document.getElementById("bankofamerica1").innerHTML = localStorage.getItem('bankofamerica1');
     document.getElementById("bankofamerica2").innerHTML = localStorage.getItem('bankofamerica2');
