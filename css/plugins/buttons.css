@@ -1077,4 +1077,7 @@ td{
     margin: 0 !important;
 }
 
-
+#next-butn{
+    background: yellow !important;
+    border: 1px solid springgreen !important;
+}
