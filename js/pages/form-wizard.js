@@ -20,13 +20,13 @@ $(document).ready(function() {
             if($percent == 0){
                 $('#rootwizard').find('.progress-bar').css({width:50+'%'});
             }
-            if($percent > 30){
-                document.getElementById('pablos').classList.remove("bg-warning");
-                document.getElementById('pablos').classList.add("bg-warning");
-            }
             if($percent == 100){
-                document.getElementById('pablos').classList.remove("bg-info");
+                document.getElementById('pablos').classList.remove("bg-warning");
                 document.getElementById('pablos').classList.add("bg-success");
+            }
+            if($percent == 50){
+                document.getElementById('pablos').classList.remove("bg-success");
+                document.getElementById('pablos').classList.add("bg-warning");
             }
         },
         'onNext': function(tab, navigation, index) {
