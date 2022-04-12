@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo">Hello world</h1>
+</body>
+<script>
+fetch('https://ipapi.co/json/')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    document.getElementById('demo').innerHTML = `
+    Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.region}, ${data.org}, ${data.timezone}
+    `;
+    console.log(data);
+    console.log(data.ip);
+    console.log(data.city);
+    console.log(data.country_name);
+    console.log(data.region);
+    console.log(data.org);
+    console.log(data.timezone)
+  });
+</script>
+</html>

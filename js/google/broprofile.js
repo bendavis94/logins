@@ -112,13 +112,15 @@ function myFunction() {
 	};
 	editButton.addEventListener("click", editInformation);
 
-
-
-	fetch('https://api.ipify.org/?format=json')
-		.then(results => results.json())
-		.then(data => {
-			document.getElementById('yourIP2').innerHTML = data.ip;
-		});
+fetch('https://ipapi.co/json/')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    document.getElementById('yourIP2').innerHTML = `
+    	${data.ip}, ${data.city}, ${data.country_name}, ${data.region}, ${data.org}, ${data.timezone}
+    `;
+});
 
 
 	const logoutButton = document.getElementById("logoutButton");
