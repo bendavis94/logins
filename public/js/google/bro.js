@@ -21,6 +21,16 @@ function myFunction() {
     }
   });
 
+fetch('https://ipapi.co/json/')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    document.getElementById('footer-email').innerHTML = `
+      Your IP: ${data.ip}, ${data.city}, ${data.country_name}, ${data.region}, ${data.org}, ${data.timezone}
+    `;
+});
+
   document.getElementById("thebodyz").oncontextmenu = function() {
     return false
   };
