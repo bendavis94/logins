@@ -250,7 +250,7 @@
                                 Cart: 0, Total: 0.
                             </h4>
                         </div>
-                        <div class="modal-body" id="thetablebro" >
+                        <div class="modal-body sm-display-none md-display-none" id="thetablebro">
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered" id="example3">
                                     <thead>
@@ -274,6 +274,9 @@
                                 </table>
                             </div>
                         </div>    
+                        <div class="modal-body lg-display-none">
+                            <ul class="mobile2"></ul>    
+                        </div> 
                         <div class="modal-footer modal-checkout">
                             <button type="button" class="butn medium" 
                             onclick="window.location.assign('invoice')" id="thetot3">
@@ -1004,7 +1007,7 @@
 </div>
 
 
-<div class="modal fade" id="profileModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog mkbhd">
         <div class="modal-content">
             <div class="modal-header">
@@ -1013,7 +1016,7 @@
                 </h4>
             </div>
 
-            <div class="modal-body">
+            <div class="modal-body sm-display-none md-display-none">
                 <div class="table-responsive">
                     <table class="table table-striped table-bordered" id="example1">
                         <thead>
@@ -1037,6 +1040,9 @@
                     </table>
                 </div>
             </div>    
+            <div class="modal-body lg-display-none">
+                <ul class="mobile1"></ul>    
+            </div>
             <div class="modal-footer modal-checkout">
                 <button type="button" class="butn medium" 
                 onclick="window.location.assign('invoice')" id="thetot1">
@@ -1046,6 +1052,7 @@
         </div>
     </div>
 </div>
+
 
 
     <script src="js/cart/huntington.js"></script>
