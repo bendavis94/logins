@@ -310,12 +310,12 @@ button.toast-close-button{
 }
 
 
-#toast-container>.toast-success{
+/* #toast-container>.toast-success{
 	background-color:#E8F7ED;
 	color:forestgreen;
 	border-color:#30B661
 }
-/* #toast-container>.toast-success{
+#toast-container>.toast-success{
 	background-color:#D9E7F9;
 	color:#2F73C8;
 	border-color:#2F73C8
@@ -329,13 +329,13 @@ button.toast-close-button{
 	background-color:#FBDBDE;
 	color: rgba(255, 0, 0, 0.9);
 	border-color:#D83945
-}
+} */
 
 #toast-container>.toast-success{
 	background-color:#F9E69B;
 	color: rgba(255, 0, 0, 0.9);
 	border-color:#D83945
-} */
+}
 
 #toast-container>div:hover{
 	box-shadow:none
