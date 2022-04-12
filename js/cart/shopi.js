@@ -1,14 +1,51 @@
 let items = [];
 
+var table1 = jQuery('#example').DataTable();
+
 if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
 
     items = JSON.parse(localStorage.getItem('banklogs'));
     document.getElementById('cartlength').innerText = (JSON.parse(localStorage.getItem('banklogs')).length);
 
+    items.map(data=>{
+        var image = `<td><img src=${data.image} width="50px" style="border-radius: 2px"></td>`
+        var balance =`<td class="btn-balance">${data.balance}</td>`
+        var account = `<td>${data.account}</td>`
+        var remove = `<td>
+        <img src="failure.svg" class="cart-thumb btn-remove" 
+            style="width: 35px; height: 35px; margin: 0; cursor: pointer"
+                alt="">
+        </td>
+        `
+        var price = `<td class="btn-price">${data.price}</td>`
+        var website = `<td>${data.website}</td>`
+        var info1 = `<td>${data.info1}</td>`
+        var info2 = `<td>${data.info2}</td>`
+        var info3 = `<td>${data.info3}</td>`
+        var info4 = `<td>${data.info4}</td>`
+        var info5 = `<td>${data.info5}</td>`
+        var info6 = `<td>${data.info6}</td>`
+        var info7 = `<td>${data.info7}</td>`
+        
+        table1.row.add([
+            image,
+            balance,      
+            account,   
+            remove,
+            price,
+            website,   
+            info1,   
+            info2,   
+            info3,   
+            info4,   
+            info5,   
+            info6,   
+            info7,   
+        ]).draw();
+    });
+
     for(var i = 0; i < items.length; i++) {
-        var cartRow = document.createElement('tr');
         var cartRow3 = document.createElement('div');
-        cartRow.classList.add('table-warning');
         cartRow3.classList.add('col-lg-3', 'col-lg-3', 'col-xl-2', 'col-md-4', 'col-6');
 
         var balance2 = items[i].balance;
@@ -16,28 +53,8 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
         var balance3 = balance2.replace('Balance: ', '');
         var price3 = price2.replace('Price: ', 'In Cart: ');
 
-        var cartItems =  document.getElementsByClassName('champez')[0];
-        var cartItems3 = document.getElementsByClassName('xenon3')[0]
-        var cartRowContents = `
-            <td><img src=${items[i].image} width="50px" style="border-radius: 2px"></td>
-            <td class="btn-balance">${items[i].balance}</td>
-            <td>${items[i].account}</td>
-            <td>
-                <img src="failure.svg" class="cart-thumb btn-remove" 
-                style="width: 35px; height: 35px; margin: 0; cursor: pointer"
-                alt="">
-            </td>
-            <td class="btn-price">${items[i].price}</td>
-            <td>${items[i].website}</td>
-            <td>${items[i].info1}</td>
-            <td>${items[i].info2}</td>
-            <td>${items[i].info3}</td>
-            <td>${items[i].info4}</td>
-            <td>${items[i].info5}</td>
-            <td>${items[i].info6}</td>
-            <td>${items[i].info7}</td>
-        `
 
+        var cartItems3 = document.getElementsByClassName('xenon3')[0]
         var cartRowContents3 = `
             <div class="feature-box-04">
                 <div class="no-padding border">
@@ -59,14 +76,17 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
                 </div>
             </div>
         `;
-        cartRow.innerHTML = cartRowContents;
         cartRow3.innerHTML = cartRowContents3;
 
-        cartItems.prepend(cartRow);
         cartItems3.prepend(cartRow3);
-        updateCartTotal();
+    }
 
-        cartRow.getElementsByClassName('btn-remove')[0].addEventListener('click', removeCartItem)
+    updateCartTotal();
+
+    var removeFromCartButtons = document.getElementsByClassName('btn-remove');
+    for(var i = 0; i <removeFromCartButtons.length; i++){
+        var button = removeFromCartButtons[i];
+        button.addEventListener('click', removeCartItem)
     }
 } else {
     document.getElementById('logsection').style.display = 'none';

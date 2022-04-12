@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/plugins/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/plugins/default.css" />
+    <link rel="stylesheet" href="css/plugins/fontawesome-all.min.css" />
+</head>
+<style>
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+.progress {
+  width: 150px;
+  height: 150px;
+  background: none;
+  position: relative;
+}
+
+.progress::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px solid #eee;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.progress>span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.progress .progress-left {
+  left: 0;
+}
+
+.progress .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 6px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+
+.progress .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+
+.progress .progress-right {
+  right: 0;
+}
+
+.progress .progress-right .progress-bar {
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  -webkit-transform-origin: center right;
+  transform-origin: center right;
+}
+
+.progress .progress-value {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSE
+* ==========================================
+*
+*/
+
+body {
+  background: #ff7e5f;
+  background: -webkit-linear-gradient(to right, #ff7e5f, #feb47b);
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  min-height: 100vh;
+}
+
+.rounded-lg {
+  border-radius: 1rem;
+}
+
+.text-gray {
+  color: #aaa;
+}
+
+div.h4 {
+  line-height: 1rem;
+}
+</style>
+<body>
+    
+<div class="container py-5">
+    <div class="row">
+  
+      <div class="col-xl-3 col-lg-6 mb-4">
+        <div class="bg-white rounded-lg p-5 shadow">
+          <!-- Progress bar 3 -->
+          <div class="progress mx-auto" data-value='76'>
+            <span class="progress-left">
+                <span class="progress-bar border-success"></span>
+            </span>
+            <span class="progress-right">
+                <span class="progress-bar border-success"></span>
+            </span>
+            <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+              <div class="h2 font-weight-bold">76<sup class="small">%</sup></div>
+            </div>
+          </div>
+          <!-- END -->
+
+        </div>
+      </div>
+  
+      <div class="col-xl-3 col-lg-6 mb-4">
+        <div class="bg-white rounded-lg p-5 shadow">
+          <!-- Progress bar 4 -->
+          <div class="progress mx-auto" data-value='82'>
+            <span class="progress-left">
+                <span class="progress-bar border-warning"></span>
+            </span>
+            <span class="progress-right">
+                <span class="progress-bar border-warning"></span>
+            </span>
+            <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+              <div class="h2 font-weight-bold">12<sup class="small">%</sup></div>
+            </div>
+          </div>
+          <!-- END -->
+  
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="js/main/core.min.js"></script>
+<script src="switchery/switchery.min.js"></script>
+<script src="js/main/main2.js"></script>
+
+<script>
+    $(function() {
+    
+      $(".progress").each(function() {
+    
+        var value = $(this).attr('data-value');
+        var left = $(this).find('.progress-left .progress-bar');
+        var right = $(this).find('.progress-right .progress-bar');
+    
+        if (value > 0) {
+          if (value <= 50) {
+            right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
+          } else {
+            right.css('transform', 'rotate(180deg)')
+            left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
+          }
+        }
+    
+      })
+    
+      function percentageToDegrees(percentage) {
+    
+        return percentage / 100 * 360
+    
+      }
+    
+    });
+    </script>
+</html>
+
+
+
+
