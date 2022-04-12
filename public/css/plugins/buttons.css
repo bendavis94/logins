@@ -885,6 +885,8 @@ td{
         margin: 7px 0;
     }
     #invoice-col-table-1{
+        margin: 0 !important;
+        padding: 0 !important;
         margin-top: 4px !important;
     }
     #invoice-table{
