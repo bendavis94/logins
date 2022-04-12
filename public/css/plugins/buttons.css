@@ -430,7 +430,7 @@ select{
 button#thetot, button#thetot1,button#thetot3{
     font-weight: 700;
     font-size: 28px;
-    margin: 20px 50px !important;
+    margin: 15px 50px !important;
     padding: 10px;
     background: yellow;
     color: #121d33;
