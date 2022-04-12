@@ -346,7 +346,6 @@ header{
     border:1px dotted aqua;
     border-radius:0;
     overflow-y: hidden;
-    overflow-x: scroll !important;
     padding:0;
     background: yellow;
     min-width:225px;
