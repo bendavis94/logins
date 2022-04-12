@@ -25,8 +25,7 @@ $(document).ready(function() {
 					${items[0].account} with ${items[0].balance}, 
 					and ${items[1].account} with ${items[1].balance}, 
 					not detected, scan the bitcoin address and send 
-					$${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} , 
-					else you can top up your account on the profile page and complete the purchase 
+					$${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
 				`
 				];
 				i++;
@@ -42,8 +41,7 @@ $(document).ready(function() {
 				` 	${toastbitcoin} bitcoin payment for 
 					${items[0].account} with ${items[0].balance}, 
 					not detected, scan the bitcoin address and send 
-					$${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}, 
-					else you can top up your account on the profile page and complete the purchase 
+					$${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
 				`
 				];
 				i++;
@@ -61,8 +59,7 @@ $(document).ready(function() {
 					and ${items[1].account} with ${items[1].balance}, 
 					and ${items[2].account} with ${items[2].balance}, 
 					not detected, scan the bitcoin address and send 
-					$${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}, 
-					else you can top up your account on the profile page and complete the purchase 
+					$${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
 				`
 				];
 				i++;
