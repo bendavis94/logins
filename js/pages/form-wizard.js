@@ -24,10 +24,6 @@ $(document).ready(function() {
                 document.getElementById('pablos').classList.remove("bg-warning");
                 document.getElementById('pablos').classList.add("bg-warning");
             }
-            if($percent > 66){
-                document.getElementById('pablos').classList.remove("bg-warning");
-                document.getElementById('pablos').classList.add("bg-info");
-            }
             if($percent == 100){
                 document.getElementById('pablos').classList.remove("bg-info");
                 document.getElementById('pablos').classList.add("bg-success");
