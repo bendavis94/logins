@@ -458,7 +458,7 @@ style="padding: 0; margin: 0;" id="logsection">
     
                             <ul class="pagination wizard">
                                 <li class="previous nav-but">
-                                    <a href="#" class="btn" id="prev-butn">
+                                    <a href="#" class="btn" id="prev-butn" style="opacity: 0;" onclick="showNext()">
                                         Previous
                                     </a>
                                 </li>
@@ -490,9 +490,16 @@ style="padding: 0; margin: 0;" id="logsection">
                                     const confirm = JSON.parse(event.data);
                                     bitcoin.innerHTML = (btc / parseFloat(confirm.k.c)).toFixed(5);
                                 }
+                                document.getElementById('prev-butn').style.opacity = '1';
+                                document.getElementById('next-butn').style.opacity = '0';
                             } else{
                                 document.getElementById('the-bitcoin').innerHTML = 'Send: $0'
                             }
+                        }
+
+                        function showNext(){
+                            document.getElementById('next-butn').style.opacity = '1';
+                            document.getElementById('prev-butn').style.opacity = '0';
                         }
     
                         var binance = new WebSocket("wss://ws.blockchain.info/inv");
