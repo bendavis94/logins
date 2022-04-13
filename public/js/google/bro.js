@@ -14,11 +14,14 @@ function myFunction() {
     }
     if (user.displayName && user.uid) {
       jinaHolder.innerText = user.displayName;
-      jinaHolder2.innerText = 'User ID ' + user.uid;
+      jinaHolder2.innerText = 'USER ID: ' + user.uid;
+    } else{
+      jinaHolder.innerText = 'Anonymous';
+      jinaHolder2.innerText = 'USER ID: ' + user.uid;
     }
   });
 
-fetch('https://ipapi.co/json/')
+  fetch('https://ipapi.co/json/')
   .then(function(response) {
     return response.json();
   })
