@@ -1,14 +1,14 @@
 if(!localStorage.getItem('loadedwood')){
-    localStorage.setItem('wood1', ('$' + (Math.floor((Math.random() * 700) + 2025)).toLocaleString()));
-    localStorage.setItem('wood2', ('$' + (Math.floor((Math.random() * 700) + 2725)).toLocaleString()));
-    localStorage.setItem('wood3', ('$' + (Math.floor((Math.random() * 700) + 3425)).toLocaleString()));
-    localStorage.setItem('wood4', ('$' + (Math.floor((Math.random() * 700) + 4125)).toLocaleString()));
-    localStorage.setItem('wood5', ('$' + (Math.floor((Math.random() * 700) + 4825)).toLocaleString()));
-    localStorage.setItem('wood6', ('$' + (Math.floor((Math.random() * 700) + 5525)).toLocaleString()));
-    localStorage.setItem('wood7', ('$' + (Math.floor((Math.random() * 700) + 6225)).toLocaleString()));
-    localStorage.setItem('wood8', ('$' + (Math.floor((Math.random() * 700) + 6925)).toLocaleString()));
-    localStorage.setItem('wood9', ('$' + (Math.floor((Math.random() * 700) + 7625)).toLocaleString()));
-    localStorage.setItem('wood10', ('$' + (Math.floor((Math.random() * 700) + 8325)).toLocaleString()));
+    localStorage.setItem('wood1', ('$' + (Math.floor((Math.random() * 700) + 3025)).toLocaleString()));
+    localStorage.setItem('wood2', ('$' + (Math.floor((Math.random() * 700) + 3725)).toLocaleString()));
+    localStorage.setItem('wood3', ('$' + (Math.floor((Math.random() * 700) + 4425)).toLocaleString()));
+    localStorage.setItem('wood4', ('$' + (Math.floor((Math.random() * 700) + 5125)).toLocaleString()));
+    localStorage.setItem('wood5', ('$' + (Math.floor((Math.random() * 700) + 5825)).toLocaleString()));
+    localStorage.setItem('wood6', ('$' + (Math.floor((Math.random() * 700) + 6525)).toLocaleString()));
+    localStorage.setItem('wood7', ('$' + (Math.floor((Math.random() * 700) + 7225)).toLocaleString()));
+    localStorage.setItem('wood8', ('$' + (Math.floor((Math.random() * 700) + 7925)).toLocaleString()));
+    localStorage.setItem('wood9', ('$' + (Math.floor((Math.random() * 700) + 8625)).toLocaleString()));
+    localStorage.setItem('wood10', ('$' + (Math.floor((Math.random() * 700) + 9325)).toLocaleString()));
 
     document.getElementById("wood1").innerHTML = localStorage.getItem('wood1');
     document.getElementById("wood2").innerHTML = localStorage.getItem('wood2');
