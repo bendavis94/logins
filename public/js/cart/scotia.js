@@ -1,13 +1,12 @@
 if(!localStorage.getItem('loadedscotia')){
-    localStorage.setItem('scotia1', ('$' + (Math.floor((Math.random() * 700) + 5025)).toLocaleString()));
-    localStorage.setItem('scotia2', ('$' + (Math.floor((Math.random() * 700) + 5725)).toLocaleString()));
-    localStorage.setItem('scotia3', ('$' + (Math.floor((Math.random() * 700) + 6425)).toLocaleString()));
-    localStorage.setItem('scotia4', ('$' + (Math.floor((Math.random() * 700) + 7125)).toLocaleString()));
-    localStorage.setItem('scotia5', ('$' + (Math.floor((Math.random() * 700) + 7825)).toLocaleString()));
-    localStorage.setItem('scotia6', ('$' + (Math.floor((Math.random() * 700) + 8525)).toLocaleString()));
-    localStorage.setItem('scotia7', ('$' + (Math.floor((Math.random() * 700) + 9225)).toLocaleString()));
-    localStorage.setItem('scotia8', ('$' + (Math.floor((Math.random() * 700) + 9925)).toLocaleString()));
-
+    localStorage.setItem('scotia1', ('$' + (Math.floor((Math.random() * 700) + 2025)).toLocaleString()));
+    localStorage.setItem('scotia2', ('$' + (Math.floor((Math.random() * 700) + 2725)).toLocaleString()));
+    localStorage.setItem('scotia3', ('$' + (Math.floor((Math.random() * 700) + 3425)).toLocaleString()));
+    localStorage.setItem('scotia4', ('$' + (Math.floor((Math.random() * 700) + 4125)).toLocaleString()));
+    localStorage.setItem('scotia5', ('$' + (Math.floor((Math.random() * 700) + 4825)).toLocaleString()));
+    localStorage.setItem('scotia6', ('$' + (Math.floor((Math.random() * 700) + 5525)).toLocaleString()));
+    localStorage.setItem('scotia7', ('$' + (Math.floor((Math.random() * 700) + 6225)).toLocaleString()));
+    localStorage.setItem('scotia8', ('$' + (Math.floor((Math.random() * 700) + 6925)).toLocaleString()));
 
     document.getElementById("scotia1").innerHTML = localStorage.getItem('scotia1');
     document.getElementById("scotia2").innerHTML = localStorage.getItem('scotia2');

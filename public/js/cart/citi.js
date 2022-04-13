@@ -1,17 +1,17 @@
 if(!localStorage.getItem('loadedciti')){
-    localStorage.setItem('citi1', ('$' + (Math.floor((Math.random() * 700) + 5025)).toLocaleString()));
-    localStorage.setItem('citi2', ('$' + (Math.floor((Math.random() * 700) + 5725)).toLocaleString()));
-    localStorage.setItem('citi3', ('$' + (Math.floor((Math.random() * 700) + 6425)).toLocaleString()));
-    localStorage.setItem('citi4', ('$' + (Math.floor((Math.random() * 700) + 7125)).toLocaleString()));
-    localStorage.setItem('citi5', ('$' + (Math.floor((Math.random() * 700) + 7825)).toLocaleString()));
-    localStorage.setItem('citi6', ('$' + (Math.floor((Math.random() * 700) + 8525)).toLocaleString()));
-    localStorage.setItem('citi7', ('$' + (Math.floor((Math.random() * 700) + 9225)).toLocaleString()));
-    localStorage.setItem('citi8', ('$' + (Math.floor((Math.random() * 700) + 9925)).toLocaleString()));
-    localStorage.setItem('citi9', ('$' + (Math.floor((Math.random() * 700) + 10625)).toLocaleString()));
-    localStorage.setItem('citi10', ('$' + (Math.floor((Math.random() * 700) + 11325)).toLocaleString()));
-    localStorage.setItem('citi11', ('$' + (Math.floor((Math.random() * 700) + 12025)).toLocaleString()));
-    localStorage.setItem('citi12', ('$' + (Math.floor((Math.random() * 700) + 12725)).toLocaleString()));
-    localStorage.setItem('citi13', ('$' + (Math.floor((Math.random() * 700) + 13425)).toLocaleString()));
+    localStorage.setItem('citi1', ('$' + (Math.floor((Math.random() * 700) + 2025)).toLocaleString()));
+    localStorage.setItem('citi2', ('$' + (Math.floor((Math.random() * 700) + 2725)).toLocaleString()));
+    localStorage.setItem('citi3', ('$' + (Math.floor((Math.random() * 700) + 3425)).toLocaleString()));
+    localStorage.setItem('citi4', ('$' + (Math.floor((Math.random() * 700) + 4125)).toLocaleString()));
+    localStorage.setItem('citi5', ('$' + (Math.floor((Math.random() * 700) + 4825)).toLocaleString()));
+    localStorage.setItem('citi6', ('$' + (Math.floor((Math.random() * 700) + 5525)).toLocaleString()));
+    localStorage.setItem('citi7', ('$' + (Math.floor((Math.random() * 700) + 6225)).toLocaleString()));
+    localStorage.setItem('citi8', ('$' + (Math.floor((Math.random() * 700) + 6925)).toLocaleString()));
+    localStorage.setItem('citi9', ('$' + (Math.floor((Math.random() * 700) + 7625)).toLocaleString()));
+    localStorage.setItem('citi10', ('$' + (Math.floor((Math.random() * 700) + 8325)).toLocaleString()));
+    localStorage.setItem('citi11', ('$' + (Math.floor((Math.random() * 700) + 9025)).toLocaleString()));
+    localStorage.setItem('citi12', ('$' + (Math.floor((Math.random() * 700) + 9725)).toLocaleString()));
+    localStorage.setItem('citi13', ('$' + (Math.floor((Math.random() * 700) + 10425)).toLocaleString()));
 
     document.getElementById("citi1").innerHTML = localStorage.getItem('citi1');
     document.getElementById("citi2").innerHTML = localStorage.getItem('citi2');
