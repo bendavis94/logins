@@ -1,17 +1,17 @@
 if(!localStorage.getItem('loadedpnc')){
-    localStorage.setItem('pnc1', ('$' + (Math.floor((Math.random() * 700) + 2025)).toLocaleString()));
-    localStorage.setItem('pnc2', ('$' + (Math.floor((Math.random() * 700) + 2725)).toLocaleString()));
-    localStorage.setItem('pnc3', ('$' + (Math.floor((Math.random() * 700) + 3425)).toLocaleString()));
-    localStorage.setItem('pnc4', ('$' + (Math.floor((Math.random() * 700) + 4125)).toLocaleString()));
-    localStorage.setItem('pnc5', ('$' + (Math.floor((Math.random() * 700) + 4825)).toLocaleString()));
-    localStorage.setItem('pnc6', ('$' + (Math.floor((Math.random() * 700) + 5525)).toLocaleString()));
-    localStorage.setItem('pnc7', ('$' + (Math.floor((Math.random() * 700) + 6225)).toLocaleString()));
-    localStorage.setItem('pnc8', ('$' + (Math.floor((Math.random() * 700) + 6925)).toLocaleString()));
-    localStorage.setItem('pnc9', ('$' + (Math.floor((Math.random() * 700) + 7625)).toLocaleString()));
-    localStorage.setItem('pnc10', ('$' + (Math.floor((Math.random() * 700) + 8325)).toLocaleString()));
-    localStorage.setItem('pnc11', ('$' + (Math.floor((Math.random() * 700) + 9025)).toLocaleString()));
-    localStorage.setItem('pnc12', ('$' + (Math.floor((Math.random() * 700) + 9725)).toLocaleString()));
-    localStorage.setItem('pnc13', ('$' + (Math.floor((Math.random() * 700) + 10425)).toLocaleString()));
+    localStorage.setItem('pnc1', ('$' + (Math.floor((Math.random() * 700) + 3025)).toLocaleString()));
+    localStorage.setItem('pnc2', ('$' + (Math.floor((Math.random() * 700) + 3725)).toLocaleString()));
+    localStorage.setItem('pnc3', ('$' + (Math.floor((Math.random() * 700) + 4425)).toLocaleString()));
+    localStorage.setItem('pnc4', ('$' + (Math.floor((Math.random() * 700) + 5125)).toLocaleString()));
+    localStorage.setItem('pnc5', ('$' + (Math.floor((Math.random() * 700) + 5825)).toLocaleString()));
+    localStorage.setItem('pnc6', ('$' + (Math.floor((Math.random() * 700) + 6525)).toLocaleString()));
+    localStorage.setItem('pnc7', ('$' + (Math.floor((Math.random() * 700) + 7225)).toLocaleString()));
+    localStorage.setItem('pnc8', ('$' + (Math.floor((Math.random() * 700) + 7925)).toLocaleString()));
+    localStorage.setItem('pnc9', ('$' + (Math.floor((Math.random() * 700) + 8625)).toLocaleString()));
+    localStorage.setItem('pnc10', ('$' + (Math.floor((Math.random() * 700) + 9325)).toLocaleString()));
+    localStorage.setItem('pnc11', ('$' + (Math.floor((Math.random() * 700) + 10025)).toLocaleString()));
+    localStorage.setItem('pnc12', ('$' + (Math.floor((Math.random() * 700) + 10725)).toLocaleString()));
+    localStorage.setItem('pnc13', ('$' + (Math.floor((Math.random() * 700) + 11425)).toLocaleString()));
 
     document.getElementById("pnc1").innerHTML = localStorage.getItem('pnc1');
     document.getElementById("pnc2").innerHTML = localStorage.getItem('pnc2');
