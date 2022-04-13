@@ -1,17 +1,17 @@
 if(!localStorage.getItem('loadedbbt')){
-    localStorage.setItem('bbt1', ('$' + (Math.floor((Math.random() * 700) + 3025)).toLocaleString()));
-    localStorage.setItem('bbt2', ('$' + (Math.floor((Math.random() * 700) + 3725)).toLocaleString()));
-    localStorage.setItem('bbt3', ('$' + (Math.floor((Math.random() * 700) + 4425)).toLocaleString()));
-    localStorage.setItem('bbt4', ('$' + (Math.floor((Math.random() * 700) + 5125)).toLocaleString()));
-    localStorage.setItem('bbt5', ('$' + (Math.floor((Math.random() * 700) + 5825)).toLocaleString()));
-    localStorage.setItem('bbt6', ('$' + (Math.floor((Math.random() * 700) + 6525)).toLocaleString()));
-    localStorage.setItem('bbt7', ('$' + (Math.floor((Math.random() * 700) + 7225)).toLocaleString()));
-    localStorage.setItem('bbt8', ('$' + (Math.floor((Math.random() * 700) + 7925)).toLocaleString()));
-    localStorage.setItem('bbt9', ('$' + (Math.floor((Math.random() * 700) + 8625)).toLocaleString()));
-    localStorage.setItem('bbt10', ('$' + (Math.floor((Math.random() * 700) + 9325)).toLocaleString()));
-    localStorage.setItem('bbt11', ('$' + (Math.floor((Math.random() * 700) + 10025)).toLocaleString()));
-    localStorage.setItem('bbt12', ('$' + (Math.floor((Math.random() * 700) + 10725)).toLocaleString()));
-    localStorage.setItem('bbt13', ('$' + (Math.floor((Math.random() * 700) + 11425)).toLocaleString()));
+    localStorage.setItem('bbt1', ('$' + (Math.floor((Math.random() * 700) + 5025)).toLocaleString()));
+    localStorage.setItem('bbt2', ('$' + (Math.floor((Math.random() * 700) + 5725)).toLocaleString()));
+    localStorage.setItem('bbt3', ('$' + (Math.floor((Math.random() * 700) + 6425)).toLocaleString()));
+    localStorage.setItem('bbt4', ('$' + (Math.floor((Math.random() * 700) + 7125)).toLocaleString()));
+    localStorage.setItem('bbt5', ('$' + (Math.floor((Math.random() * 700) + 7825)).toLocaleString()));
+    localStorage.setItem('bbt6', ('$' + (Math.floor((Math.random() * 700) + 8525)).toLocaleString()));
+    localStorage.setItem('bbt7', ('$' + (Math.floor((Math.random() * 700) + 9225)).toLocaleString()));
+    localStorage.setItem('bbt8', ('$' + (Math.floor((Math.random() * 700) + 9925)).toLocaleString()));
+    localStorage.setItem('bbt9', ('$' + (Math.floor((Math.random() * 700) + 10625)).toLocaleString()));
+    localStorage.setItem('bbt10', ('$' + (Math.floor((Math.random() * 700) + 11325)).toLocaleString()));
+    localStorage.setItem('bbt11', ('$' + (Math.floor((Math.random() * 700) + 12025)).toLocaleString()));
+    localStorage.setItem('bbt12', ('$' + (Math.floor((Math.random() * 700) + 12725)).toLocaleString()));
+    localStorage.setItem('bbt13', ('$' + (Math.floor((Math.random() * 700) + 13425)).toLocaleString()));
 
     document.getElementById("bbt1").innerHTML = localStorage.getItem('bbt1');
     document.getElementById("bbt2").innerHTML = localStorage.getItem('bbt2');

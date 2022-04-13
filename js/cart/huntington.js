@@ -1,17 +1,17 @@
 if(!localStorage.getItem('loadedhunt')){
-    localStorage.setItem('hunt1', ('$' + (Math.floor((Math.random() * 700) + 3025)).toLocaleString()));
-    localStorage.setItem('hunt2', ('$' + (Math.floor((Math.random() * 700) + 3725)).toLocaleString()));
-    localStorage.setItem('hunt3', ('$' + (Math.floor((Math.random() * 700) + 4425)).toLocaleString()));
-    localStorage.setItem('hunt4', ('$' + (Math.floor((Math.random() * 700) + 5125)).toLocaleString()));
-    localStorage.setItem('hunt5', ('$' + (Math.floor((Math.random() * 700) + 5825)).toLocaleString()));
-    localStorage.setItem('hunt6', ('$' + (Math.floor((Math.random() * 700) + 6525)).toLocaleString()));
-    localStorage.setItem('hunt7', ('$' + (Math.floor((Math.random() * 700) + 7225)).toLocaleString()));
-    localStorage.setItem('hunt8', ('$' + (Math.floor((Math.random() * 700) + 7925)).toLocaleString()));
-    localStorage.setItem('hunt9', ('$' + (Math.floor((Math.random() * 700) + 8625)).toLocaleString()));
-    localStorage.setItem('hunt10', ('$' + (Math.floor((Math.random() * 700) + 9325)).toLocaleString()));
-    localStorage.setItem('hunt11', ('$' + (Math.floor((Math.random() * 700) + 10025)).toLocaleString()));
-    localStorage.setItem('hunt12', ('$' + (Math.floor((Math.random() * 700) + 10725)).toLocaleString()));
-    localStorage.setItem('hunt13', ('$' + (Math.floor((Math.random() * 700) + 11425)).toLocaleString()));
+    localStorage.setItem('hunt1', ('$' + (Math.floor((Math.random() * 700) + 5025)).toLocaleString()));
+    localStorage.setItem('hunt2', ('$' + (Math.floor((Math.random() * 700) + 5725)).toLocaleString()));
+    localStorage.setItem('hunt3', ('$' + (Math.floor((Math.random() * 700) + 6425)).toLocaleString()));
+    localStorage.setItem('hunt4', ('$' + (Math.floor((Math.random() * 700) + 7125)).toLocaleString()));
+    localStorage.setItem('hunt5', ('$' + (Math.floor((Math.random() * 700) + 7825)).toLocaleString()));
+    localStorage.setItem('hunt6', ('$' + (Math.floor((Math.random() * 700) + 8525)).toLocaleString()));
+    localStorage.setItem('hunt7', ('$' + (Math.floor((Math.random() * 700) + 9225)).toLocaleString()));
+    localStorage.setItem('hunt8', ('$' + (Math.floor((Math.random() * 700) + 9925)).toLocaleString()));
+    localStorage.setItem('hunt9', ('$' + (Math.floor((Math.random() * 700) + 10625)).toLocaleString()));
+    localStorage.setItem('hunt10', ('$' + (Math.floor((Math.random() * 700) + 11325)).toLocaleString()));
+    localStorage.setItem('hunt11', ('$' + (Math.floor((Math.random() * 700) + 12025)).toLocaleString()));
+    localStorage.setItem('hunt12', ('$' + (Math.floor((Math.random() * 700) + 12725)).toLocaleString()));
+    localStorage.setItem('hunt13', ('$' + (Math.floor((Math.random() * 700) + 13425)).toLocaleString()));
 
     document.getElementById("hunt1").innerHTML = localStorage.getItem('hunt1');
     document.getElementById("hunt2").innerHTML = localStorage.getItem('hunt2');

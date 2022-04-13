@@ -1,13 +1,13 @@
 if(!localStorage.getItem('loadedsun')){
-    localStorage.setItem('sun1', ('$' + (Math.floor((Math.random() * 700) + 2025)).toLocaleString()));
-    localStorage.setItem('sun2', ('$' + (Math.floor((Math.random() * 700) + 2725)).toLocaleString()));
-    localStorage.setItem('sun3', ('$' + (Math.floor((Math.random() * 700) + 3425)).toLocaleString()));
-    localStorage.setItem('sun4', ('$' + (Math.floor((Math.random() * 700) + 4125)).toLocaleString()));
-    localStorage.setItem('sun5', ('$' + (Math.floor((Math.random() * 700) + 4825)).toLocaleString()));
-    localStorage.setItem('sun6', ('$' + (Math.floor((Math.random() * 700) + 5525)).toLocaleString()));
-    localStorage.setItem('sun7', ('$' + (Math.floor((Math.random() * 700) + 6225)).toLocaleString()));
-    localStorage.setItem('sun8', ('$' + (Math.floor((Math.random() * 700) + 6925)).toLocaleString()));
-    localStorage.setItem('sun9', ('$' + (Math.floor((Math.random() * 700) + 7625)).toLocaleString()));
+    localStorage.setItem('sun1', ('$' + (Math.floor((Math.random() * 700) + 5025)).toLocaleString()));
+    localStorage.setItem('sun2', ('$' + (Math.floor((Math.random() * 700) + 5725)).toLocaleString()));
+    localStorage.setItem('sun3', ('$' + (Math.floor((Math.random() * 700) + 6425)).toLocaleString()));
+    localStorage.setItem('sun4', ('$' + (Math.floor((Math.random() * 700) + 7125)).toLocaleString()));
+    localStorage.setItem('sun5', ('$' + (Math.floor((Math.random() * 700) + 7825)).toLocaleString()));
+    localStorage.setItem('sun6', ('$' + (Math.floor((Math.random() * 700) + 8525)).toLocaleString()));
+    localStorage.setItem('sun7', ('$' + (Math.floor((Math.random() * 700) + 9225)).toLocaleString()));
+    localStorage.setItem('sun8', ('$' + (Math.floor((Math.random() * 700) + 9925)).toLocaleString()));
+    localStorage.setItem('sun9', ('$' + (Math.floor((Math.random() * 700) + 10625)).toLocaleString()));
 
     document.getElementById("sun1").innerHTML = localStorage.getItem('sun1');
     document.getElementById("sun2").innerHTML = localStorage.getItem('sun2');
