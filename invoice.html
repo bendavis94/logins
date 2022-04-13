@@ -61,23 +61,9 @@
             }
         }
     </style>
-
-<link rel="stylesheet" href="plugins/bootstrap-datepicker/css/datepicker.css" />                                 
-        
-<link rel="stylesheet" href="css/stylebro.css" />
-
-<style>
-    label.error{
-	color:red !important;
-	font-weight:500;
-	margin-top:5px;
-	display:inline-block;
-	font-size:16px;
-}
-</style>
     
 </head>
-<body onload="myFunction()" id="thebodyz" style="background: #121d33;">
+<body onload="myFunction(); move()" id="thebodyz" style="background: #121d33;">
     <div id="preloader">
         <div class="row loader">
             <div class="loader-icon"></div>
@@ -319,7 +305,8 @@
 </header>
 
 
-<!-- <script src="js/cart/invoice2.js"></script> -->
+<script src="js/cart/invoice.js"></script>
+
 
 
 
@@ -330,234 +317,86 @@ style="padding: 0; margin: 0;" id="logsection">
     <div class="opacity-full-dark bg-extra-dark-gray"></div>
 
     <div class="container-fluid">
+    <script src="js/cart/bitcoin.js"></script>
     <div class="row no-margin-bottom">
 
         <div class="col-xl-3 col-lg-4 col-md-5 col-12" id="invoice-col">
 
-            <div class="modal-body" style="padding: 0; margin: 0; background: #121d33 !important;">
-         
-                <div id="rootwizard" style="background: #121d33 !important;">
-                    <ul class="nav mb-1  nav-pills nav-fill" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link jada" data-toggle="tab" href="#invoice1" role="tab" aria-controls="invoice1" aria-selected="false">
-                                Amount
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link jada" data-toggle="tab" href="#finish1" role="tab" aria-controls="finish1" aria-selected="false">
-                                Deposit
-                            </a>
-                        </li>
-                    </ul>
-    
+            <div class="modal-content" id="modalsend">
+                <div class="modal-header" id="discountz">
+                    <h4 class="modal-title" id="modal-amount">
+                        Send $<span id="omanyala" class="countup"></span>
+                    </h4>
+                
+                    <button type="button" class="close" id="bitcoin-logo">
+                        <i class="fab fa-bitcoin"></i>
+                    </button>
+                </div>
+                <div class="modal-body" style="padding: 0; margin: 0;">
                     <div class="progress progress-md progress-rounded mb-0 mt-0" style="border: 1px solid lightgray;">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-                        id="pablos" 
-                        role="progressbar" 
-                        aria-valuenow="50" aria-valuemin="0" 
-                        aria-valuemax="100" style="width: 50%">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated  bg-success" 
+                            id="pablos"
+                            style="width: 100%;">
+                            <span id="escoz">
+                                Time Left: 10:00
+                            </span>
                         </div>
                     </div>
-                    <form id="wizardForm">
-                        <div class="tab-content" id="myTabContent" style="background: #121d33 !important;">
-                            <div class="tab-pane fade" id="invoice1" role="tabpanel">
-
-                                <div class="modal-header modal-bitcoin" style="margin: 0 auto !important;">
-                                    <h4 class="modal-title modal-amount" id="your-balance">
-                                        Balance: $0
-                                    </h4>
-                                
-                                    <button type="button" class="close bitcoin-logo" style="border-radius: 0 !important;">
-                                        <i class="fas fa-wallet" style="border-radius: 0 !important;"></i>
-                                    </button>
-                                </div>
-
-                                <div class="form-group" style="margin: 0 auto !important;">
-                                    <label for="exampleInputQuantity" style="font-size: 15px; font-weight: 600; text-align: center;">
-                                        Min Amount: $1  ,  Max Amount: $999
-                                    </label>
-                                    <input type="number" 
-                                    min="1" max="999"  
-                                    id="the-input" 
-                                    class="form-control" 
-                                    style=" color: black; font-size: 1.1rem; font-weight: 600; border-radius: 0;border: 2px solid #121d33; font-family: 'Montserrat',  sans-serif;
-                                    width: 100% !important; box-shadow:0 0 0 .2rem rgba(0,123,255,.25)" 
-                                    name="exampleInputQuantity" id="exampleInputQuantity" 
-                                    placeholder="Deposit Amount...">
-                                </div>
-
-                                <div class="modal-header" id="discountz">
-                                    <h4 class="modal-title" id="modal-amount">
-                                        Total $<span id="omanyala" class="countup"></span>
-                                    </h4>
-                                
-                                    <button type="button" class="close bitcoin-logo">
-                                        <i class="fab fa-bitcoin"></i>
-                                    </button>
-                                </div>
-    
-                                <div class="modal-footer" id="invoice-to-email">
-                                    <h3 id="invoiceHolder3">
-                                        
-                                    </h3>
-                                </div>
-                
-                    
-                            </div>
-
-                            <div class="tab-pane fade" id="finish1" role="tabpanel">
-        
-                                <div class="modal-header modal-bitcoin">
-                                    <h4 class="modal-title modal-amount" id="the-bitcoin">
-    
-                                    </h4>
-                                
-                                    <button type="button" class="close bitcoin-logo">
-                                        <i class="fab fa-bitcoin"></i>
-                                    </button>
-                                </div>
-    
-                                <div class="modal-header" style="padding: 0">
-                                    <strong class="satoshinakamoto">
-                                        <i class="fas fa-spin fa-sync-alt spinner-bordez"></i> 
-                                        awaiting  
-                                        <span id="the-other-one"></span> 
-                                        bitcoin payment
-                                    </strong>
-                                </div>
-
-                                <!-- <div class="modal-body" style="padding: 0; margin: 0;">
-                                    <div class="progress progress-md progress-rounded mb-0 mt-0" style="border: 1px solid lightgray;">
-                                        <div class="progress-bar progress-bar-striped progress-bar-animated  bg-success" 
-                                            id="escobar"
-                                            style="width: 100%;">
-                                            <span id="escoz">
-                                                Time Left: 10:00
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div> -->
-    
-    
-                                <div class="modal-body" id="invoice-body">
-                                    <div id="invoice-body-div">
-                                        <input type="text"  class="form-control" value="1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp"
-                                            id="text-to-copy" onclick="this.select()">
-                                        <button type="button" class="butn medium" id="copy-text">     
-                                            Copy<i class="fas fa-copy" style="margin-left: 1px;"></i>
-                                        </button>
-                                    </div>
-                                    <div class="xzoom-container">
-                                        <img class="xzoom5" id="span-test" src="images/download.jpeg" 
-                                        xoriginal="images/download.jpeg"/>
-                                    </div>
-                                </div>  
-    
-                            </div>
-    
-    
-                            <ul class="pagination wizard">
-                                <li class="previous nav-but">
-                                    <a href="#" class="btn" id="prev-butn" style="background: bisque !important;opacity: 0;" onclick="showNext()">
-                                        Previous
-                                    </a>
-                                </li>
-                                <li class="next nav-but">
-                                    <a href="#" class="btn" id="next-butn" onclick="addFunds()">
-                                        Next
-                                    </a>
-                                </li>
-                            </ul>
-    
-                        </div>
-                    </form>
-    
-                
-    
-                    <script>
-                        if(localStorage.getItem('the-balanz')){
-                            document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz')
-                        } else{
-                            document.getElementById('your-balance').innerHTML = 'Balance: $' + 0
-                        }
-                        function addFunds(){
-                            let btc = document.getElementById('the-input').value;
-                            if(btc >= 1 && btc <= 999){
-                                document.getElementById('the-bitcoin').innerHTML = 'Send $' + btc;
-                                let coinbase = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@kline_1h");
-                                const bitcoin = document.getElementById("the-other-one");
-                                coinbase.onmessage = event => {
-                                    const confirm = JSON.parse(event.data);
-                                    bitcoin.innerHTML = (btc / parseFloat(confirm.k.c)).toFixed(5);
-                                }
-                                document.getElementById('prev-butn').style.opacity = '1';
-                                document.getElementById('next-butn').style.opacity = '0';
-                            } else{
-                                document.getElementById('the-bitcoin').innerHTML = 'Send: $0'
-                            }
-                        }
-
-                        function showNext(){
-                            document.getElementById('next-butn').style.opacity = '1';
-                            document.getElementById('prev-butn').style.opacity = '0';
-                        }
-    
-                        var binance = new WebSocket("wss://ws.blockchain.info/inv");
-                        binance.onopen = function(){
-                            binance.send(JSON.stringify({
-                                "op": "unconfirmed_sub"
-                            }))
-                        }
-                        binance.onmessage = function(onmsg){
-                            var response = JSON.parse(onmsg.data);
-                            var address1 = response.x.out[0].addr;
-                            var address2 = '1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp';
-                            // var address2 = 'bc1q43qak84redza7hk2sw8n57txepw40nn8r9mnd6'
-    
-                            if(address1 == address2) {
-                                let coinbase = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@kline_1h");
-                                coinbase.onmessage = event => {
-                                    let confirm = JSON.parse(event.data);
-                                    let coinz = ((response.x.out[0].value / 100000000) * parseFloat(confirm.k.c)).toFixed(0);
-                                    let balance = parseInt(coinz);
-                                    if(localStorage.getItem('the-balanz')){
-                                        let balance2 = parseInt(coinz)
-                                        let currentBalance = parseInt(localStorage.getItem('the-balanz'));
-                                        let nextBalance = currentBalance + balance2;
-                                        localStorage.setItem('the-balanz',  nextBalance);
-                                        document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz');
-                                        window.location.reload();
-                                    } else {
-                                        localStorage.setItem('the-balanz', balance);
-                                        document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz');
-                                        window.location.reload();
-                                    }
-                                }
-                            }else {
-                                document.getElementById('bitcoin-sent').innerHTML = 'No funds received';
-                            }
-                        }
-                    </script>
                 </div>
+    
+                <div class="modal-header" id="invoice-header">
+                    <strong id="satoshinakamoto">
+                        <i class="fas fa-spin fa-sync-alt spinner-bordez"></i> 
+                        awaiting <span id="the-other-one"></span> bitcoin payment
+                    </strong>
+                </div>
+
+                <div class="modal-body" id="invoice-body">
+                    <div id="invoice-body-div">
+                        <input type="text"  class="form-control" value="1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp"
+                            id="text-to-copy" onclick="this.select()">
+                        <button type="button" class="butn medium" id="copy-text">     
+                            Copy 
+                            <i class="fas fa-copy" style="margin-left: 1px;"></i>
+                        </button>
+                    </div>
+                    <div class="xzoom-container">
+                        <img class="xzoom5" id="span-test" src="images/download.jpeg" 
+                        xoriginal="images/download.jpeg"/>
+                    </div>
+                </div>  
+
+                <div class="modal-footer" id="invoice-footer">
+                    <button  id="showtoasts" class="btn-style4 invoicebutton" 
+                    style="padding: 10px 0; width: auto; background: yellow; border: 1px solid gold;">     
+
+                    </button>
+                </div>
+
+                <div class="modal-footer lg-display-none md-display-none" id="invoice-to-email">
+                    <h3 id="invoiceHolder3">
+                        
+                    </h3>
+                </div>
+
             </div>
+
         </div>
 
 
-        <div class="col-xl-9 col-lg-8 col-md-7 col-12" id="invoice-col-table-1">
+        <div class="col-xl-9 col-lg-8 col-md-7 col-12" id="invoice-col-table">
             <div class="modal-content" id="invoice-table">
-                <div class="modal-header display-none" id="invoice-email-large">
+                <div class="modal-header sm-display-none" id="invoice-email-large">
                     <h4 class="modal-title" id="invoiceHolder">
-                    
+                        
                     </h4>
                 </div>
-
                 <div class="modal-header" style="margin: 0 !important; padding: 0 !important;">
                     <div class="alert alert-success alert-dismissible" style="margin: 0 !important; padding: 7px !important;">
                         <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
                         Your IP address is : <strong id="yourIP2"></strong>, Protect your privacy by using a good VPN.
                     </div>
                 </div>
-                
                 <div class="modal-body sm-display-none" id="invoice-table-div">
                     <div class="table-responsive" id="invoice-table-div2">
                         <table id="example" class="display table table-bordered table-hover table-striped" style="width: 100%;">
@@ -591,13 +430,6 @@ style="padding: 0; margin: 0;" id="logsection">
                     </ul>    
                 </div>
 
-                <div class="modal-footer" id="invoice-footer">
-                    <button  id="showtoasts" class="btn-style4 invoicebutton" 
-                    style="padding: 10px 0; width: auto; background: yellow; border: 1px solid gold;">     
-
-                    </button>
-                </div>
-
             </div>
         </div>
 
@@ -605,7 +437,6 @@ style="padding: 0; margin: 0;" id="logsection">
 
     </div>
     </div>
-    <span id="bitcoin-sent" style="display: none !important;"></span>
 </section>
 
 
@@ -714,31 +545,23 @@ id="predat" style="padding: 10px; height: 90vh; display: none;">
 
     <script src="js/pages/clock.js"></script>
     <script src="js/invoice/copy.js"></script>
-    <script src="js/google/broinvoice2.js"></script>
+    <script src="js/google/broinvoice.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
     <script src="js/google/fir.js"></script>
     <script src="js/main/core.invoice.js"></script>
-
-    <script src="plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-    <script src="plugins/jquery-validation/jquery.validate.min.js"></script>
-    <script src="plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
-
     <script src="js/main/maininvoice.js"></script>
     <script src="js/invoice/toastr.js"></script>
-    <script src="js/invoice/notifications2.js"></script>
+    <script src="js/invoice/notifications.js"></script>
     <script src="js/invoice/xzoom.js"></script>
     <script src="js/invoice/setup.js"></script>
 
     <script src="js/pages/table-data.js"></script>
     <script src="datatables/js/jquery.datatable2.min.js"></script> 
+
     <script src="js/cart/shopi.js"></script>
 
     <script src="js/pages/particles.js"></script>
     <script src="js/pages/app.js"></script>
-
- 
-    <script src="js/pages/form-wizard.js"></script>
-
 </body>
 </html>
