@@ -21,11 +21,13 @@ $(document).ready(function() {
 		if(((JSON.parse(localStorage.getItem('banklogs')).length) == 2)){
 			for(var i = 0; i < items.length; i++) {
 				var msgs = [
-				` 	${toastbitcoin} bitcoin payment for 
+				` 
+					Your account has insufficient funds to complete the download,
+					Send a one time payment of $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} / ${toastbitcoin} bitcoin to buy 
 					${items[0].account} with ${items[0].balance}, 
 					and ${items[1].account} with ${items[1].balance}, 
-					not detected, scan the bitcoin address and send 
-					$${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+					<br>
+					Or, you can top up funds on the profile page and buy bank logs with your account balance
 				`
 				];
 				i++;
@@ -38,10 +40,12 @@ $(document).ready(function() {
 		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 1)){
 			for(var i = 0; i < items.length; i++) {
 				var msgs = [
-				` 	${toastbitcoin} bitcoin payment for 
+				` 	
+					Your account has insufficient funds to complete the download,
+					Send a one time payment of $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} / ${toastbitcoin} bitcoin to buy 
 					${items[0].account} with ${items[0].balance}, 
-					not detected, scan the bitcoin address and send 
-					$${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+					<br>
+					Or, you can top up funds on the profile page and buy bank logs with your account balance
 				`
 				];
 				i++;
@@ -54,12 +58,14 @@ $(document).ready(function() {
 		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 3)){
 			for(var i = 0; i < items.length; i++) {
 				var msgs = [
-				` 	${toastbitcoin} bitcoin payment for 
+				` 
+					Your account has insufficient funds to complete the download,
+					Send a one time payment of $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} / ${toastbitcoin} bitcoin to buy 
 					${items[0].account} with ${items[0].balance}, 
 					and ${items[1].account} with ${items[1].balance}, 
 					and ${items[2].account} with ${items[2].balance}, 
-					not detected, scan the bitcoin address and send 
-					$${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+					<br>
+					Or, you can top up funds on the profile page and buy bank logs with your account balance
 				`
 				];
 				i++;
