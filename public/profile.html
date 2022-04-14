@@ -315,6 +315,678 @@
     <div class="container-fluid infinite-floating"> 
     <div class="row">
 
+        <div class="container-fluid infinite-floating">
+            <div class="row">
+    
+                <div class="col-lg-4 col-md-6 col-12 center-col" style="margin: 5px 0;">        
+                    <div class="section-heading">
+                        <h4 class="text-white" id="recentsales">
+                            Deposit
+                        </h4>
+                    </div>
+        
+                    <div class="modal-body" style="padding: 0; margin: 0; background: #121d33 !important;">
+                        <div id="rootwizard" style="background: #121d33 !important;">
+                            <ul class="nav mb-1  nav-pills nav-fill" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link jada" data-toggle="tab" href="#invoice1" role="tab" aria-controls="invoice1" aria-selected="false">
+                                        Amount
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link jada" data-toggle="tab" href="#finish1" role="tab" aria-controls="finish1" aria-selected="false">
+                                        Deposit
+                                    </a>
+                                </li>
+                            </ul>
+            
+                            <div class="progress progress-md progress-rounded mb-0 mt-0" style="border: 1px solid lightgray;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
+                                id="pablos" 
+                                role="progressbar" 
+                                aria-valuenow="50" aria-valuemin="0" 
+                                aria-valuemax="100" style="width: 50%">
+                                </div>
+                            </div>
+                            <form id="wizardForm">
+                                <div class="tab-content" id="myTabContent" style="background: #121d33 !important;">
+                                    <div class="tab-pane fade" id="invoice1" role="tabpanel">
+                                        <div class="modal-header modal-bitcoin" style="margin: 0 auto !important;">
+                                            <h4 class="modal-title modal-amount" id="your-balance">
+                                                Balance: $0
+                                            </h4>
+                                        
+                                            <button type="button" class="close bitcoin-logo" style="border-radius: 0 !important;">
+                                                <i class="fas fa-wallet" style="color: #f2a900 !important;"></i>
+                                            </button>
+                                        </div>
+        
+                                        <div class="form-group" style="margin: 0 auto !important;">
+                                            <label for="exampleInputQuantity" style="font-size: 15px; font-weight: 600; text-align: center;">
+                                                Min Amount: $1  ,  Max Amount: $999
+                                            </label>
+                                            <input type="number" 
+                                            min="1" max="999"  
+                                            id="the-input" 
+                                            class="form-control" 
+                                            style=" color: black; font-size: 1.1rem; font-weight: 600; border-radius: 0;border: 2px solid #121d33; font-family: 'Montserrat',  sans-serif;
+                                            width: 100% !important; box-shadow:0 0 0 .2rem rgba(0,123,255,.25)" 
+                                            name="exampleInputQuantity" id="exampleInputQuantity" 
+                                            placeholder="Deposit Amount...">
+                                        </div>
+                                        <div class="modal-footer" id="invoice-to-email" style="display: block !important;">
+                                            <h3 id="invoiceHolder4" style="display: block !important;">
+                                                
+                                            </h3>
+                                        </div>
+                                    </div>
+        
+                                    <div class="tab-pane fade" id="finish1" role="tabpanel">
+                                        <div class="modal-header modal-bitcoin">
+                                            <h4 class="modal-title modal-amount" id="the-bitcoin"></h4>
+                                            <button type="button" class="close bitcoin-logo" style="border-radius: 0 !important;">
+                                                <i class="fab fa-bitcoin" style="color: #f2a900 !important;"></i>
+                                            </button>
+                                        </div>
+                                        <div class="modal-header" style="padding: 0">
+                                            <strong class="satoshinakamoto">
+                                                <i class="fas fa-spin fa-sync-alt spinner-bordez"></i> 
+                                                awaiting  
+                                                <span id="the-other-one"></span> 
+                                                bitcoin payment
+                                            </strong>
+                                        </div>    
+                                        <div class="modal-body" id="invoice-body">
+                                            <div id="invoice-body-div">
+                                                <input type="text"  class="form-control" value="1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp"
+                                                    id="text-to-copy" onclick="this.select()">
+                                                <button type="button" class="butn medium" id="copy-text">     
+                                                    Copy<i class="fas fa-copy" style="margin-left: 1px;"></i>
+                                                </button>
+                                            </div>
+                                            <div class="xzoom-container">
+                                                <img class="xzoom5" id="span-test" src="images/download.jpeg" 
+                                                xoriginal="images/download.jpeg"/>
+                                            </div>
+                                        </div>  
+                                    </div>
+            
+                                    <ul class="pagination wizard">
+                                        <li class="previous nav-but">
+                                            <a href="javascript:void(0)" class="btn" id="prev-butn" style="background: bisque !important;opacity: 0;" onclick="showNext()">
+                                                Previous
+                                            </a>
+                                        </li>
+                                        <li class="next nav-but">
+                                            <a href="javascript:void(0)" class="btn" id="next-butn" onclick="addFunds()">
+                                                Next
+                                            </a>
+                                        </li>
+                                    </ul>
+            
+                                </div>
+                            </form>
+            
+                            <script>
+                                if(localStorage.getItem('the-balanz')){
+                                    document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz')
+                                } else{
+                                    document.getElementById('your-balance').innerHTML = 'Balance: $' + 0
+                                }
+                                function addFunds(){
+                                    let btc = document.getElementById('the-input').value;
+                                    if(btc >= 1 && btc <= 999){
+                                        document.getElementById('the-bitcoin').innerHTML = 'Send $' + btc;
+                                        let coinbase = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@kline_1h");
+                                        const bitcoin = document.getElementById("the-other-one");
+                                        coinbase.onmessage = event => {
+                                            const confirm = JSON.parse(event.data);
+                                            bitcoin.innerHTML = (btc / parseFloat(confirm.k.c)).toFixed(5);
+                                        }
+                                        document.getElementById('prev-butn').style.opacity = '1';
+                                        document.getElementById('next-butn').style.opacity = '0';
+                                    } else{
+                                        document.getElementById('the-bitcoin').innerHTML = 'Send: $0'
+                                    }
+                                }
+        
+                                function showNext(){
+                                    document.getElementById('next-butn').style.opacity = '1';
+                                    document.getElementById('prev-butn').style.opacity = '0';
+                                }
+            
+                                var binance = new WebSocket("wss://ws.blockchain.info/inv");
+                                binance.onopen = function(){
+                                    binance.send(JSON.stringify({
+                                        "op": "unconfirmed_sub"
+                                    }))
+                                }
+                                binance.onmessage = function(onmsg){
+                                    var response = JSON.parse(onmsg.data);
+                                    var address1 = response.x.out[0].addr;
+                                    var address2 = '1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp';
+                                    // var address2 = 'bc1q43qak84redza7hk2sw8n57txepw40nn8r9mnd6'
+            
+                                    if(address1 == address2) {
+                                        let coinbase = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@kline_1h");
+                                        coinbase.onmessage = event => {
+                                            let confirm = JSON.parse(event.data);
+                                            let coinz = ((response.x.out[0].value / 100000000) * parseFloat(confirm.k.c)).toFixed(0);
+                                            let balance = parseInt(coinz);
+                                            if(localStorage.getItem('the-balanz')){
+                                                let balance2 = parseInt(coinz)
+                                                let currentBalance = parseInt(localStorage.getItem('the-balanz'));
+                                                let nextBalance = currentBalance + balance2;
+                                                localStorage.setItem('the-balanz',  nextBalance);
+                                                document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz');
+                                                window.location.reload();
+                                            } else {
+                                                localStorage.setItem('the-balanz', balance);
+                                                document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz');
+                                                window.location.reload();
+                                            }
+                                        }
+                                    }else {
+                                        console.log('No funds received')
+                                    }
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-8 col-md-12 col-12">
+                    <div class="section-heading">
+                        <h3 class="text-white">Free Logins</h3>
+                    </div>
+                    <div class="modal-content">
+                        <div class="modal-body" id="table-profile">
+                            <div class="table-responsive">
+        
+                                <table id="example2" class="table table-bordered table-hover table-striped" style="width: 100%">
+                                    <thead>
+                                        <tr class="table-info">
+                                            <th>Acc</th>
+                                            <th>Website</th>
+                                            <th>Login</th>
+                                            <th>Password</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/paxful.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://paxful.com/</td>
+                                            <td>itsyourdask@gmail.com</td>
+                                            <td>06041994vdD</td>
+                                        </tr>
+                                        
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/blockchain.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://login.blockchain.com/</td>
+                                            <td>georis.distn10@gmail.com</td>
+                                            <td>Stiefpapa2</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/blockchain.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://login.blockchain.com/</td>
+                                            <td>7e5f3697-d049-47ac-a87e-558a50f12bfc</td>
+                                            <td>Stiefpapa2</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/paypal.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://www.paypal.com/</td>
+                                            <td>Beheer.OpticNetwork@gmail.com</td>
+                                            <td>Je.Bolle@Oma.34?7</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/paypal.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://www.paypal.com/</td>
+                                            <td>vdaskalakiss@gmail.com</td>
+                                            <td>06041994vdDD</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/paypal.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://www.paypal.com/</td>
+                                            <td>daskalakesnikos10@gmail.com</td>
+                                            <td>6978880697vdD!</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/paypal.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://www.paypal.com/</td>
+                                            <td>whitetyphooon@gmail.com</td>
+                                            <td>6978880697m</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/amazon.png" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://www.amazon.com/</td>
+                                            <td>vdaskalakiss@gmail.com</td>
+                                            <td>06041994vdD</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/paypal.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://www.paypal.com/</td>
+                                            <td>imthejohnwick@gmail.com</td>
+                                            <td>06041994vdD!</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/blockchain.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://exchange.blockchain.com/</td>
+                                            <td>georis.distn10@gmail.com</td>
+                                            <td>Stiefpapa2</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/skrill.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://pay.skrill.com/</td>
+                                            <td>georis.distn10@gmail.com</td>
+                                            <td>Stiefpapa2</td>
+                                        </tr>
+    
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/skrill.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://account.skrill.com/</td>
+                                            <td>georis.distn10@gmail.com</td>
+                                            <td>Stiefpapa2</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/coinbase.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://www.coinbase.com/</td>
+                                            <td>georis.distn10@gmail.com</td>
+                                            <td>Stiefpapa2</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/paysafe.jfif" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://login.paysafecard.com/</td>
+                                            <td>vaggelisdask</td>
+                                            <td>06041994vdD</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/paysafe.jfif" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://my.paysafecard.com/</td>
+                                            <td>kiritoD</td>
+                                            <td>06041994vdD</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/pireaus.png" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://paycenter.piraeusbank.gr/</td>
+                                            <td>vdaskalakiss@gmail.com</td>
+                                            <td>386</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/blockchain.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://login.blockchain.com/</td>
+                                            <td>56296acf-f607-4a61-b56b-c4afc2b6b4a7</td>
+                                            <td>06041994vd!</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/blockchain.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://login.blockchain.com/</td>
+                                            <td>itsyourdask@gmail.com</td>
+                                            <td>06041994vd!</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/paysafe.jfif" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://login.paysafecard.com/</td>
+                                            <td>HellenNas</td>
+                                            <td>6978880697m</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/kraken.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://www.kraken.com/</td>
+                                            <td>distngrs</td>
+                                            <td>Stiefpapa2#</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/netflix.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://www.netflix.com/</td>
+                                            <td>georis.distn10@gmail.com</td>
+                                            <td>Stiefpapa2</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/winbank.png" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://e-banking.winbank.gr/</td>
+                                            <td>vagdas94</td>
+                                            <td>6978880697m</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/login-live.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://login.live.com/</td>
+                                            <td>georis.distn10@gmail.com</td>
+                                            <td>Stiefpapa2</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/meganz.jfif" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://mega.nz/</td>
+                                            <td>whitetyphooon@gmail.com</td>
+                                            <td>06041994vd</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/netflix.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://www.netflix.com/</td>
+                                            <td>vdaskalakiss@gmail.com</td>
+                                            <td>06041994vdD</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/netflix.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://www.netflix.com/</td>
+                                            <td>whitetyphooon@gmail.com</td>
+                                            <td>06041994vdD</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/ebay.jfif" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://reg.ebay.com/</td>
+                                            <td>vaggelis.fy@hotmail.com</td>
+                                            <td>06041994vd</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/playstation.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://auth.api.sonyentertainmentnetwork.com/</td>
+                                            <td>georis.distn10@gmail.com</td>
+                                            <td>Stiefpapa2</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/chronologist.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://panel.chronichost.nl/</td>
+                                            <td>georis.distn10@gmail.com</td>
+                                            <td>Stiefpapa2</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/minecraft.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://minecraft.net/</td>
+                                            <td>georis.distn10@gmail.com</td>
+                                            <td>Stiefpapa2</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/nvidia.jfif" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://login.nvgs.nvidia.com/</td>
+                                            <td>NickDaskV2</td>
+                                            <td>0607011013vdD</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/vodafone.jfif" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>android://com.myvodafone.android/</td>
+                                            <td>Vaggelis_Dask</td>
+                                            <td>04061994vd</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/discord.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://discord.com/</td>
+                                            <td>georis.distn10@gmail.com</td>
+                                            <td>stiefpapa2</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/steam.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://steamcommunity.com/</td>
+                                            <td>distngrs</td>
+                                            <td>Stiefpapa2</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/labymod.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://www.labymod.net/</td>
+                                            <td>_EliteLightning</td>
+                                            <td>Stiefpapa2</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/skype.jfif" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://login.skype.com/</td>
+                                            <td>vaggelis.daskalakis4</td>
+                                            <td>06041994vd</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/spotify.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://accounts.spotify.com/</td>
+                                            <td>georis.distn10@gmail.com</td>
+                                            <td>Stiefpapa2</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/google.jfif" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://accounts.google.com/</td>
+                                            <td>iNetworkDataBase2@gmail.com</td>
+                                            <td>iA2esaSwwfXX</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/contabo.png" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://my.contabo.com/</td>
+                                            <td>georis.distn10@gmail.com</td>
+                                            <td>Stiefpapa2</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/spotify.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://accounts.spotify.com/</td>
+                                            <td>vdaskalakiss@gmail.com</td>
+                                            <td>06041994vd</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/spotify.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://accounts.spotify.com/</td>
+                                            <td>itsyourdask@gmail.com</td>
+                                            <td>06041994vdD</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/easports.png" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://signin.ea.com/</td>
+                                            <td>itsyourdask@gmail.com</td>
+                                            <td>6978880697mD!</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/easports.png" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://signin.ea.com/</td>
+                                            <td>whitetyphooon@gmail.com</td>
+                                            <td>06041994vdD!</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/easports.png" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://signin.ea.com/</td>
+                                            <td>whitetyphooon@gmail.com</td>
+                                            <td>06041994vdD!</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/spotify.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://accounts.spotify.com/</td>
+                                            <td>nickdaskal4@gmail.com</td>
+                                            <td>6978880697mM</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/labymod.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://www.labymod.net/</td>
+                                            <td>_Distn</td>
+                                            <td>Stiefpapa2</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/minecraft.jpg" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://minecraft.net/</td>
+                                            <td>_Distn</td>
+                                            <td>Stiefpapa1</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/cloudfare.jfif" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://dash.cloudflare.com/</td>
+                                            <td>georis.distn10@gmail.com</td>
+                                            <td>Stiefpapa2#</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/microsoft.jfif" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://login.microsoftonline.com/</td>
+                                            <td>distn.georis@leerling.viio.be</td>
+                                            <td>Familie1</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/shoppy.png" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>https://shoppy.gg/</td>
+                                            <td>distngrs</td>
+                                            <td>Stiefpapa2</td>
+                                        </tr>
+    
+                                        <tr class="table-success">
+                                            <td>
+                                                <img src="images/logos/mojang.jfif" style="width: 50px; border-radius: 3px">
+                                            </td>
+                                            <td>georis.distn10@gmail.com</td>
+                                            <td>distngrs</td>
+                                            <td>Stiefpapa1</td>
+                                        </tr>
+        
+                                    </tbody>                                                        
+                                </table>
+                            </div>
+                        </div>    
+            
+                    </div>
+                </div>
+    
+
+            </div>
+        </div>
+
         <div class="col-xl-7 col-lg-7 col-md-7 col-12">
             <div class="section-heading">
                 <h4 class="text-white" id="recentsales">
@@ -4083,6 +4755,7 @@
 
     </div>
 
+
     <div class="container-fluid infinite-floating">
         <div class="row">
 
@@ -4107,681 +4780,13 @@
 
             <div class="col-lg-4 col-md-6 col-12 center-col" style="margin: 5px 0;">        
                 <div class="section-heading">
-                    <h4 class="text-white" id="recentsales">
-                        Deposit
-                    </h4>
-                </div>
-    
-                <div class="modal-body" style="padding: 0; margin: 0; background: #121d33 !important;">
-                    <div id="rootwizard" style="background: #121d33 !important;">
-                        <ul class="nav mb-1  nav-pills nav-fill" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link jada" data-toggle="tab" href="#invoice1" role="tab" aria-controls="invoice1" aria-selected="false">
-                                    Amount
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link jada" data-toggle="tab" href="#finish1" role="tab" aria-controls="finish1" aria-selected="false">
-                                    Deposit
-                                </a>
-                            </li>
-                        </ul>
-        
-                        <div class="progress progress-md progress-rounded mb-0 mt-0" style="border: 1px solid lightgray;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-                            id="pablos" 
-                            role="progressbar" 
-                            aria-valuenow="50" aria-valuemin="0" 
-                            aria-valuemax="100" style="width: 50%">
-                            </div>
-                        </div>
-                        <form id="wizardForm">
-                            <div class="tab-content" id="myTabContent" style="background: #121d33 !important;">
-                                <div class="tab-pane fade" id="invoice1" role="tabpanel">
-                                    <div class="modal-header modal-bitcoin" style="margin: 0 auto !important;">
-                                        <h4 class="modal-title modal-amount" id="your-balance">
-                                            Balance: $0
-                                        </h4>
-                                    
-                                        <button type="button" class="close bitcoin-logo" style="border-radius: 0 !important;">
-                                            <i class="fas fa-wallet" style="color: #f2a900 !important;"></i>
-                                        </button>
-                                    </div>
-    
-                                    <div class="form-group" style="margin: 0 auto !important;">
-                                        <label for="exampleInputQuantity" style="font-size: 15px; font-weight: 600; text-align: center;">
-                                            Min Amount: $1  ,  Max Amount: $999
-                                        </label>
-                                        <input type="number" 
-                                        min="1" max="999"  
-                                        id="the-input" 
-                                        class="form-control" 
-                                        style=" color: black; font-size: 1.1rem; font-weight: 600; border-radius: 0;border: 2px solid #121d33; font-family: 'Montserrat',  sans-serif;
-                                        width: 100% !important; box-shadow:0 0 0 .2rem rgba(0,123,255,.25)" 
-                                        name="exampleInputQuantity" id="exampleInputQuantity" 
-                                        placeholder="Deposit Amount...">
-                                    </div>
-                                    <div class="modal-footer" id="invoice-to-email" style="display: block !important;">
-                                        <h3 id="invoiceHolder4" style="display: block !important;">
-                                            
-                                        </h3>
-                                    </div>
-                                </div>
-    
-                                <div class="tab-pane fade" id="finish1" role="tabpanel">
-                                    <div class="modal-header modal-bitcoin">
-                                        <h4 class="modal-title modal-amount" id="the-bitcoin"></h4>
-                                        <button type="button" class="close bitcoin-logo" style="border-radius: 0 !important;">
-                                            <i class="fab fa-bitcoin" style="color: #f2a900 !important;"></i>
-                                        </button>
-                                    </div>
-                                    <div class="modal-header" style="padding: 0">
-                                        <strong class="satoshinakamoto">
-                                            <i class="fas fa-spin fa-sync-alt spinner-bordez"></i> 
-                                            awaiting  
-                                            <span id="the-other-one"></span> 
-                                            bitcoin payment
-                                        </strong>
-                                    </div>    
-                                    <div class="modal-body" id="invoice-body">
-                                        <div id="invoice-body-div">
-                                            <input type="text"  class="form-control" value="1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp"
-                                                id="text-to-copy" onclick="this.select()">
-                                            <button type="button" class="butn medium" id="copy-text">     
-                                                Copy<i class="fas fa-copy" style="margin-left: 1px;"></i>
-                                            </button>
-                                        </div>
-                                        <div class="xzoom-container">
-                                            <img class="xzoom5" id="span-test" src="images/download.jpeg" 
-                                            xoriginal="images/download.jpeg"/>
-                                        </div>
-                                    </div>  
-                                </div>
-        
-                                <ul class="pagination wizard">
-                                    <li class="previous nav-but">
-                                        <a href="javascript:void(0)" class="btn" id="prev-butn" style="background: bisque !important;opacity: 0;" onclick="showNext()">
-                                            Previous
-                                        </a>
-                                    </li>
-                                    <li class="next nav-but">
-                                        <a href="javascript:void(0)" class="btn" id="next-butn" onclick="addFunds()">
-                                            Next
-                                        </a>
-                                    </li>
-                                </ul>
-        
-                            </div>
-                        </form>
-        
-                        <script>
-                            if(localStorage.getItem('the-balanz')){
-                                document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz')
-                            } else{
-                                document.getElementById('your-balance').innerHTML = 'Balance: $' + 0
-                            }
-                            function addFunds(){
-                                let btc = document.getElementById('the-input').value;
-                                if(btc >= 1 && btc <= 999){
-                                    document.getElementById('the-bitcoin').innerHTML = 'Send $' + btc;
-                                    let coinbase = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@kline_1h");
-                                    const bitcoin = document.getElementById("the-other-one");
-                                    coinbase.onmessage = event => {
-                                        const confirm = JSON.parse(event.data);
-                                        bitcoin.innerHTML = (btc / parseFloat(confirm.k.c)).toFixed(5);
-                                    }
-                                    document.getElementById('prev-butn').style.opacity = '1';
-                                    document.getElementById('next-butn').style.opacity = '0';
-                                } else{
-                                    document.getElementById('the-bitcoin').innerHTML = 'Send: $0'
-                                }
-                            }
-    
-                            function showNext(){
-                                document.getElementById('next-butn').style.opacity = '1';
-                                document.getElementById('prev-butn').style.opacity = '0';
-                            }
-        
-                            var binance = new WebSocket("wss://ws.blockchain.info/inv");
-                            binance.onopen = function(){
-                                binance.send(JSON.stringify({
-                                    "op": "unconfirmed_sub"
-                                }))
-                            }
-                            binance.onmessage = function(onmsg){
-                                var response = JSON.parse(onmsg.data);
-                                var address1 = response.x.out[0].addr;
-                                var address2 = '1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp';
-                                // var address2 = 'bc1q43qak84redza7hk2sw8n57txepw40nn8r9mnd6'
-        
-                                if(address1 == address2) {
-                                    let coinbase = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@kline_1h");
-                                    coinbase.onmessage = event => {
-                                        let confirm = JSON.parse(event.data);
-                                        let coinz = ((response.x.out[0].value / 100000000) * parseFloat(confirm.k.c)).toFixed(0);
-                                        let balance = parseInt(coinz);
-                                        if(localStorage.getItem('the-balanz')){
-                                            let balance2 = parseInt(coinz)
-                                            let currentBalance = parseInt(localStorage.getItem('the-balanz'));
-                                            let nextBalance = currentBalance + balance2;
-                                            localStorage.setItem('the-balanz',  nextBalance);
-                                            document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz');
-                                            window.location.reload();
-                                        } else {
-                                            localStorage.setItem('the-balanz', balance);
-                                            document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz');
-                                            window.location.reload();
-                                        }
-                                    }
-                                }else {
-                                    console.log('No funds received')
-                                }
-                            }
-                        </script>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-12 center-col" style="margin: 5px 0;">        
-                <div class="section-heading">
                     <h3 class="text-white">Bank Logs Data</h3>
                 </div>
                 <div class="card-body card-chart">
                     <canvas id="myPieChart" height="300"></canvas>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <div class="container-fluid infinite-floating">
-        <div class="row">
-
-            <div class="col-lg-8 col-md-12 col-12">
-                <div class="section-heading">
-                    <h3 class="text-white">Free Logins</h3>
-                </div>
-                <div class="modal-content">
-                    <div class="modal-body" id="table-profile">
-                        <div class="table-responsive">
-    
-                            <table id="example2" class="table table-bordered table-hover table-striped" style="width: 100%">
-                                <thead>
-                                    <tr class="table-info">
-                                        <th>Acc</th>
-                                        <th>Website</th>
-                                        <th>Login</th>
-                                        <th>Password</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="champez">
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/paxful.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://paxful.com/</td>
-                                        <td>itsyourdask@gmail.com</td>
-                                        <td>06041994vdD</td>
-                                    </tr>
-                                    
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/blockchain.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://login.blockchain.com/</td>
-                                        <td>georis.distn10@gmail.com</td>
-                                        <td>Stiefpapa2</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/blockchain.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://login.blockchain.com/</td>
-                                        <td>7e5f3697-d049-47ac-a87e-558a50f12bfc</td>
-                                        <td>Stiefpapa2</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/paypal.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://www.paypal.com/</td>
-                                        <td>Beheer.OpticNetwork@gmail.com</td>
-                                        <td>Je.Bolle@Oma.34?7</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/paypal.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://www.paypal.com/</td>
-                                        <td>vdaskalakiss@gmail.com</td>
-                                        <td>06041994vdDD</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/paypal.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://www.paypal.com/</td>
-                                        <td>daskalakesnikos10@gmail.com</td>
-                                        <td>6978880697vdD!</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/paypal.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://www.paypal.com/</td>
-                                        <td>whitetyphooon@gmail.com</td>
-                                        <td>6978880697m</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/amazon.png" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://www.amazon.com/</td>
-                                        <td>vdaskalakiss@gmail.com</td>
-                                        <td>06041994vdD</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/paypal.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://www.paypal.com/</td>
-                                        <td>imthejohnwick@gmail.com</td>
-                                        <td>06041994vdD!</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/blockchain.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://exchange.blockchain.com/</td>
-                                        <td>georis.distn10@gmail.com</td>
-                                        <td>Stiefpapa2</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/skrill.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://pay.skrill.com/</td>
-                                        <td>georis.distn10@gmail.com</td>
-                                        <td>Stiefpapa2</td>
-                                    </tr>
-
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/skrill.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://account.skrill.com/</td>
-                                        <td>georis.distn10@gmail.com</td>
-                                        <td>Stiefpapa2</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/coinbase.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://www.coinbase.com/</td>
-                                        <td>georis.distn10@gmail.com</td>
-                                        <td>Stiefpapa2</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/paysafe.jfif" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://login.paysafecard.com/</td>
-                                        <td>vaggelisdask</td>
-                                        <td>06041994vdD</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/paysafe.jfif" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://my.paysafecard.com/</td>
-                                        <td>kiritoD</td>
-                                        <td>06041994vdD</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/pireaus.png" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://paycenter.piraeusbank.gr/</td>
-                                        <td>vdaskalakiss@gmail.com</td>
-                                        <td>386</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/blockchain.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://login.blockchain.com/</td>
-                                        <td>56296acf-f607-4a61-b56b-c4afc2b6b4a7</td>
-                                        <td>06041994vd!</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/blockchain.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://login.blockchain.com/</td>
-                                        <td>itsyourdask@gmail.com</td>
-                                        <td>06041994vd!</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/paysafe.jfif" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://login.paysafecard.com/</td>
-                                        <td>HellenNas</td>
-                                        <td>6978880697m</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/kraken.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://www.kraken.com/</td>
-                                        <td>distngrs</td>
-                                        <td>Stiefpapa2#</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/netflix.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://www.netflix.com/</td>
-                                        <td>georis.distn10@gmail.com</td>
-                                        <td>Stiefpapa2</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/winbank.png" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://e-banking.winbank.gr/</td>
-                                        <td>vagdas94</td>
-                                        <td>6978880697m</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/login-live.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://login.live.com/</td>
-                                        <td>georis.distn10@gmail.com</td>
-                                        <td>Stiefpapa2</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/meganz.jfif" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://mega.nz/</td>
-                                        <td>whitetyphooon@gmail.com</td>
-                                        <td>06041994vd</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/netflix.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://www.netflix.com/</td>
-                                        <td>vdaskalakiss@gmail.com</td>
-                                        <td>06041994vdD</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/netflix.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://www.netflix.com/</td>
-                                        <td>whitetyphooon@gmail.com</td>
-                                        <td>06041994vdD</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/ebay.jfif" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://reg.ebay.com/</td>
-                                        <td>vaggelis.fy@hotmail.com</td>
-                                        <td>06041994vd</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/playstation.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://auth.api.sonyentertainmentnetwork.com/</td>
-                                        <td>georis.distn10@gmail.com</td>
-                                        <td>Stiefpapa2</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/chronologist.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://panel.chronichost.nl/</td>
-                                        <td>georis.distn10@gmail.com</td>
-                                        <td>Stiefpapa2</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/minecraft.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://minecraft.net/</td>
-                                        <td>georis.distn10@gmail.com</td>
-                                        <td>Stiefpapa2</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/nvidia.jfif" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://login.nvgs.nvidia.com/</td>
-                                        <td>NickDaskV2</td>
-                                        <td>0607011013vdD</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/vodafone.jfif" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>android://com.myvodafone.android/</td>
-                                        <td>Vaggelis_Dask</td>
-                                        <td>04061994vd</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/discord.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://discord.com/</td>
-                                        <td>georis.distn10@gmail.com</td>
-                                        <td>stiefpapa2</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/steam.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://steamcommunity.com/</td>
-                                        <td>distngrs</td>
-                                        <td>Stiefpapa2</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/labymod.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://www.labymod.net/</td>
-                                        <td>_EliteLightning</td>
-                                        <td>Stiefpapa2</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/skype.jfif" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://login.skype.com/</td>
-                                        <td>vaggelis.daskalakis4</td>
-                                        <td>06041994vd</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/spotify.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://accounts.spotify.com/</td>
-                                        <td>georis.distn10@gmail.com</td>
-                                        <td>Stiefpapa2</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/google.jfif" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://accounts.google.com/</td>
-                                        <td>iNetworkDataBase2@gmail.com</td>
-                                        <td>iA2esaSwwfXX</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/contabo.png" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://my.contabo.com/</td>
-                                        <td>georis.distn10@gmail.com</td>
-                                        <td>Stiefpapa2</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/spotify.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://accounts.spotify.com/</td>
-                                        <td>vdaskalakiss@gmail.com</td>
-                                        <td>06041994vd</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/spotify.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://accounts.spotify.com/</td>
-                                        <td>itsyourdask@gmail.com</td>
-                                        <td>06041994vdD</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/easports.png" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://signin.ea.com/</td>
-                                        <td>itsyourdask@gmail.com</td>
-                                        <td>6978880697mD!</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/easports.png" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://signin.ea.com/</td>
-                                        <td>whitetyphooon@gmail.com</td>
-                                        <td>06041994vdD!</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/easports.png" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://signin.ea.com/</td>
-                                        <td>whitetyphooon@gmail.com</td>
-                                        <td>06041994vdD!</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/spotify.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://accounts.spotify.com/</td>
-                                        <td>nickdaskal4@gmail.com</td>
-                                        <td>6978880697mM</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/labymod.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://www.labymod.net/</td>
-                                        <td>_Distn</td>
-                                        <td>Stiefpapa2</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/minecraft.jpg" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://minecraft.net/</td>
-                                        <td>_Distn</td>
-                                        <td>Stiefpapa1</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/cloudfare.jfif" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://dash.cloudflare.com/</td>
-                                        <td>georis.distn10@gmail.com</td>
-                                        <td>Stiefpapa2#</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/microsoft.jfif" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://login.microsoftonline.com/</td>
-                                        <td>distn.georis@leerling.viio.be</td>
-                                        <td>Familie1</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/shoppy.png" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>https://shoppy.gg/</td>
-                                        <td>distngrs</td>
-                                        <td>Stiefpapa2</td>
-                                    </tr>
-
-                                    <tr class="table-success">
-                                        <td>
-                                            <img src="images/logos/mojang.jfif" style="width: 50px; border-radius: 3px">
-                                        </td>
-                                        <td>georis.distn10@gmail.com</td>
-                                        <td>distngrs</td>
-                                        <td>Stiefpapa1</td>
-                                    </tr>
-    
-                                </tbody>                                                        
-                            </table>
-                        </div>
-                    </div>    
-        
-                </div>
-            </div>
 
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="section-heading">
