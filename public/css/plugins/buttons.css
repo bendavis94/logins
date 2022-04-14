@@ -580,7 +580,13 @@ button#thetot_2{
    }
 }
 .telep{
-    font-size: 24px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: white;
+    margin-top: 15px;
+}
+.tele-mail{
+    font-size: 17px;
     margin-bottom: 15px;
     color: white;
     margin-top: 15px;
@@ -1102,4 +1108,12 @@ td{
 }
 .footer-bar{
     margin-top: -5px !important;
+}
+
+label.error{
+    color:red !important;
+    font-weight:500;
+    margin-top:5px;
+    display:inline-block;
+    font-size:16px;
 }

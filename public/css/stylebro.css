@@ -1,10 +1,3 @@
-.modal-content{
-    margin: 5px 0;
-    background: aliceblue;
-}
-.modal-body{
-    background: aliceblue;
-}
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link{
     background-color:bisque
@@ -18,7 +11,7 @@
     color:#fff;
     background-color:bisque
 }
-.nav-item {
+#rootwizard .nav-item {
     line-height:inherit;
     z-index:1;
     overflow:hidden;
@@ -35,22 +28,22 @@
     transition-timing-function:ease-in-out;
     border: 1px solid skyblue;
 }
-.nav-item:after{
+#rootwizard .nav-item:after{
     content:"";position:absolute;top:0;left:0;
     width:500%;height:1000%;background:rgba(255,255,255,0.3);
     z-index:-1;transform-origin:0% 0%;transform:translateX(calc(20% - 20px)) translateY(10%) rotate(-45deg);
     transition:transform 0.3s
 }
-.nav-item:hover:after{
+#rootwizard .nav-item:hover:after{
     transform:translateY(10%) translateX(-20px) rotate(-45deg);
     color: aliceblue;
 }
-.nav-item i{margin-left:6px;vertical-align:middle;position:relative;top:-1px}
-.nav-item:hover,.nav-item:active,.nav-item:focus{background-color:#000 !important;
+#rootwizard .nav-item i{margin-left:6px;vertical-align:middle;position:relative;top:-1px}
+#rootwizard .nav-item:hover,.nav-item:active,.nav-item:focus{background-color:#000 !important;
     color:#fff !important;box-shadow:none !important;
 }
 
-.nav-link{
+#rootwizard .nav-link{
     margin: 0;
     padding: 5px 2px;
     color: black;
@@ -59,16 +52,16 @@
     font-weight: 600;
     text-transform: uppercase;
 }
-.nav-link:hover{
+#rootwizard .nav-link:hover{
     color: aliceblue;
 }
 @media screen and (max-width: 524px) {
-    .nav-link{
+    #rootwizard .nav-link{
         font-size: 23px;
         padding: 5px 2px !important;
     }
 }
-.nav-link.active {
+#rootwizard .nav-link.active {
     /* border-bottom: 2px solid black; */
     color: black;
 }
@@ -117,7 +110,7 @@
 }
 
 
-.btn{
+#rootwizard .btn{
     border:2px solid red;
     line-height:inherit;
     z-index:1;
@@ -135,9 +128,10 @@
     transition-duration:0.3s;
     transition-timing-function:ease-in-out;
     font-size: 24px !important;
+    padding: 10px !important;
 }
 
-.awaiting-payment{
+#rootwizard .awaiting-payment{
     font-size: 16px;
     font-weight: 700;
     font-family:"Montserrat",sans-serif;
