@@ -1092,3 +1092,6 @@ td{
     background: yellow !important;
     border: 1px solid springgreen !important;
 }
+.footer-bar{
+    margin-top: -5px !important;
+}
