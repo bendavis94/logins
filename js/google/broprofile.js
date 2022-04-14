@@ -24,7 +24,7 @@ function myFunction() {
 		}
 		if (user.displayName && user.uid) {
 			jinaHolder.innerText = user.displayName;
-			jinaHolder2.innerText = 'User ID ' + user.uid;
+			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			rockHolder.innerText = user.displayName;
 			tableidHolder.value = "Name: " + user.displayName;
 			idHolder4.innerText = 'User ID: ' + user.uid;
