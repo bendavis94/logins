@@ -27,7 +27,7 @@ function myFunction() {
   })
   .then(function(data) {
     document.getElementById('footer-email').innerHTML = `
-      Your IP: ${data.ip}, ${data.city}, ${data.country_name}, ${data.region}, ${data.org}, ${data.timezone}
+      Your IP: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
     `;
 });
 
