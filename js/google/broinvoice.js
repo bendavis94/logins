@@ -36,7 +36,7 @@ function myFunction() {
     })
     .then(function(data) {
       document.getElementById('yourIP2').innerHTML = `
-        ${data.ip}, ${data.city}, ${data.country_name}, ${data.region}, ${data.org}, ${data.timezone}
+       ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.timezone}
       `;
   });
 
