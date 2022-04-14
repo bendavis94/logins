@@ -41,7 +41,6 @@ function myFunction() {
       document.getElementById('yourIP2-large').innerHTML = `
         ${data.ip}, ${data.city}, ${data.country_name}, ${data.region}, ${data.org}, ${data.timezone}
      `;
-      console.log(data)
   });
 
   document.getElementById("thebodyz").oncontextmenu = function() {
