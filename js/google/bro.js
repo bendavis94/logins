@@ -22,10 +22,12 @@ function myFunction() {
         })
         .then(function(data) {
           document.getElementById('footer-email-small').innerHTML = `
-            ${user.displayName}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
+            ${user.displayName}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, 
+            protect your privacy by using VPN.
           `;
           document.getElementById('footer-email-large').innerHTML = `
-            ${user.displayName}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name},  ${data.region} ,${data.org}, ${data.timezone}
+            ${user.displayName}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name},  ${data.region} ,${data.org}, ${data.timezone}, 
+            protect your privacy by using VPN
         `;
       });
     }
