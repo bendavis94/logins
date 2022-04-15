@@ -847,7 +847,7 @@ td{
 #invoiceHolder4{
     text-align: center;
     color: aqua;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
 }
 @media (max-width:576px){
@@ -855,7 +855,7 @@ td{
         font-size: 20px;
     }
     #invoiceHolder4{
-        font-size: 19px;
+        font-size: 18px;
     }
 }
 #invoice-col-table{
