@@ -22,7 +22,7 @@ function myFunction() {
         })
         .then(function(data) {
           document.getElementById('footer-email-small').innerHTML = `
-            ${user.displayName}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, 
+            ${user.displayName}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, 
             protect your privacy by using VPN.
           `;
           document.getElementById('footer-email-large').innerHTML = `
