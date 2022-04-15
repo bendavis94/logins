@@ -17,24 +17,30 @@ function myFunction() {
     if (user.displayName && user.uid) {
       jinaHolder.innerText = user.displayName;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
+
+      fetch('https://ipapi.co/json/')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        document.getElementById('yourIP2-small').innerHTML = `
+            <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
+            ${user.displayName}, Your IP address is : 
+            <strong>${data.ip}, ${data.city}, ${data.country_name}</strong>
+            protect your privacy by using VPN
+        `;
+        document.getElementById('yourIP2-large').innerHTML = `
+          <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
+          ${user.displayName}, Your IP address is : 
+          <strong>${data.ip}, ${data.city}, ${data.country_name}</strong>
+          protect your privacy by using VPN
+       `;
+    });
     } 
     if (user.email && user.uid){
         invoiceHolder.innerText = 'Invoice to: '+ user.email;
         invoiceHolder3.innerText = 'Invoice to: '+ user.email;
     } 
-  });
-
-  fetch('https://ipapi.co/json/')
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(data) {
-      document.getElementById('yourIP2-small').innerHTML = `
-        ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.timezone}
-      `;
-      document.getElementById('yourIP2-large').innerHTML = `
-        ${data.ip}, ${data.city}, ${data.country_name}, ${data.region}, ${data.org}, ${data.timezone}
-     `;
   });
 
   document.getElementById("thebodyz").oncontextmenu = function() {
