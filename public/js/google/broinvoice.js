@@ -25,14 +25,12 @@ function myFunction() {
       .then(function(data) {
         document.getElementById('yourIP2-small').innerHTML = `
             <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-            ${user.displayName}, Your IP address is : 
-            <strong>${data.ip}, ${data.city}, ${data.country_name}</strong>
+            ${user.displayName}, Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}</strong>
             protect your privacy by using VPN
         `;
         document.getElementById('yourIP2-large').innerHTML = `
           <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-          ${user.displayName}, Your IP address is : 
-          <strong>${data.ip}, ${data.city}, ${data.country_name}</strong>
+          ${user.displayName}, Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}</strong>
           protect your privacy by using VPN
        `;
     });
