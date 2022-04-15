@@ -371,15 +371,17 @@ th{
     padding: 0;
 }
 .btciframe{
+    margin: 0 !important;
+    padding: 0 !important;
     width: 100%;
-    height: 84vh;
-    border: 1px solid gold;
-    border-radius: 4px;
-    background: white;
+    height: 80vh;
+    border: 1px solid #121d33;
+    border-radius: 0;
+    background: azure;
 }
 @media screen and (max-width: 567px) {
     .btciframe {
-        height: 77vh;
+        height: 75vh;
    }
 }
 @keyframes popups {
