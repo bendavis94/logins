@@ -37,7 +37,7 @@ function myFunction() {
     .then(function(data) {
       document.getElementById('yourIP').innerHTML = `
           <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-          ${user.displayName}, your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}</strong>
+          Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}</strong>
           protect your privacy by using VPN
       `;
   });
