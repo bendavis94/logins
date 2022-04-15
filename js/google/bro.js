@@ -15,20 +15,22 @@ function myFunction() {
     if (user.displayName && user.uid) {
       jinaHolder.innerText = user.displayName;
       jinaHolder2.innerText = 'USER ID: ' + user.uid;
-
-      fetch('https://ipapi.co/json/')
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(data) {
-          document.getElementById('footer-email').innerHTML = `
-            ${user.displayName}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, 
-            protect your privacy by using VPN.
-          `;
-      });
+    } else {
+      jinaHolder.innerText = 'Anonymous';
+      jinaHolder2.innerText = 'USER ID: ' + user.uid;
     }
   });
 
+  fetch('https://ipapi.co/json/')
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      document.getElementById('footer-email').innerHTML = `
+        Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, 
+        protect your privacy by using VPN.
+      `;
+  });
 
   document.getElementById("thebodyz").oncontextmenu = function() {
     return false

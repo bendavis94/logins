@@ -17,23 +17,29 @@ function myFunction() {
     if (user.displayName && user.uid) {
       jinaHolder.innerText = user.displayName;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
-
-      fetch('https://ipapi.co/json/')
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(data) {
-        document.getElementById('yourIP').innerHTML = `
-            <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-            ${user.displayName}, your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}</strong>
-            protect your privacy by using VPN
-        `;
-    });
-    } 
+    } else {
+      jinaHolder.innerText = 'Anonymous';
+      jinaHolder2.innerText = 'USER ID: ' + user.uid;
+    }
     if (user.email && user.uid){
         invoiceHolder.innerText = 'Invoice to: '+ user.email;
         invoiceHolder3.innerText = 'Invoice to: '+ user.email;
-    } 
+    } else {
+      invoiceHolder.innerText = 'User ID: ' + user.uid;
+      invoiceHolder3.innerText = 'User ID: ' + user.uid;
+    }
+  });
+
+  fetch('https://ipapi.co/json/')
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      document.getElementById('yourIP').innerHTML = `
+          <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
+          ${user.displayName}, your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}</strong>
+          protect your privacy by using VPN
+      `;
   });
 
   document.getElementById("thebodyz").oncontextmenu = function() {
