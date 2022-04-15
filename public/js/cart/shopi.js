@@ -112,33 +112,9 @@ function removeCartItem(event) {
     var info7 = cartItem.children[12].innerText;
     removeItemFromCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
     buttonClicked.parentElement.parentElement.remove();
+    localStorage.setItem('time-left',600);
     updateCartTotal()
 }
-
-
-function removeCartItem2(event){
-    var buttonClicked = event.target;
-    var cartItem = buttonClicked.parentElement.parentElement.parentElement.parentElement.parentElement;
-    var price =   cartItem.children[0].children[0].children[0].children[2].innerText;
-    var balance = cartItem.children[0].children[0].children[0].children[1].innerText;
-    var image =   cartItem.children[0].children[0].children[0].children[0].children[0].src;
-
-    var account = cartItem.children[1].children[0].children[0].children[0].innerText;
-    var website = cartItem.children[2].children[0].children[0].children[0].innerText;
-    var info1 =   cartItem.children[2].children[0].children[0].children[1].innerText;
-    var info2 =   cartItem.children[2].children[0].children[1].children[0].innerText;
-    var info3 =   cartItem.children[2].children[0].children[1].children[1].innerText;
-    var info4 =   cartItem.children[2].children[0].children[2].children[0].innerText;
-    var info5 =   cartItem.children[2].children[0].children[2].children[1].innerText;
-    var info6 =   cartItem.children[2].children[0].children[3].children[0].innerText;
-    var info7 =   cartItem.children[2].children[0].children[3].children[1].innerText;
-
-    removeItemFromCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-    buttonClicked.parentElement.parentElement.remove();
-    localStorage.setItem('time-left',600)
-    updateCartTotal()
-}
-
 
 
 function removeItemFromCart(price, balance,account,website,image,info1,info2,info3,info4,info5,info6,info7){
@@ -160,7 +136,6 @@ function removeItemFromCart(price, balance,account,website,image,info1,info2,inf
         return JSON.stringify(items) !== JSON.stringify(item)
     }
     localStorage.setItem('banklogs', JSON.stringify(items.filter(checkAdult)));
-    localStorage.setItem('time-left',600);
     items = items.filter(checkAdult);
     window.location.reload()
 }
