@@ -26,7 +26,7 @@ function myFunction() {
             protect your privacy by using VPN.
           `;
           document.getElementById('footer-email-large').innerHTML = `
-            ${user.displayName}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name},  ${data.region} ,${data.org}, ${data.timezone}, 
+            ${user.displayName}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name},
             protect your privacy by using VPN
         `;
       });
