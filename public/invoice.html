@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/plugins/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/plugins/xzoom.css" />
     <link rel="stylesheet" href="css/plugins/animate.css" />
+    <link rel="stylesheet" href="switchery/switchery.min.css" />
     <link href="css/switcher.css" rel="stylesheet">
     <link href="css/styles-5.css" rel="stylesheet" id="colors">
     <link href="css/toastr.css" rel="stylesheet">
@@ -58,6 +59,14 @@
         @media (min-width:1092px){
             .table-responsive{
                 overflow-x: auto !important;
+            }
+        }
+        #style-switcher{
+            top: 24%;
+        }
+        @media (max-width:592px){
+            #style-switcher{
+                top: 19%;
             }
         }
     </style>
@@ -305,7 +314,7 @@
 </header>
 
 
-<script src="js/cart/invoice.js"></script>
+<!-- <script src="js/cart/invoice.js"></script> -->
 
 
 
@@ -551,6 +560,27 @@ id="predat" style="padding: 10px; height: 90vh; display: none;">
 </div>
 <!-- end page main wrapper -->
 
+<div id="style-switcher" class="infinite-floating">
+    <a href="javascript:void(0)" class="switcher-setting">
+        <input type="checkbox" class="js-switch" checked />
+    </a>
+    <div class="choose-color">
+        <h2>Change Theme Color</h2>
+        <ul class="colors" id="color1">
+            <li><a href="javascript:void(0)" class="style1"></a></li>
+            <li><a href="javascript:void(0)" class="style2"></a></li>
+            <li><a href="javascript:void(0)" class="style3"></a></li>
+            <li><a href="javascript:void(0)" class="style4"></a></li>
+            <li><a href="javascript:void(0)" class="style5"></a></li>
+            <li><a href="javascript:void(0)" class="style6"></a></li>
+            <li><a href="javascript:void(0)" class="style7"></a></li>
+            <li><a href="javascript:void(0)" class="style8"></a></li>
+        </ul>
+    </div>
+</div>
+<a href="javascript:void(0)" class="scroll-to-top infinite-floating">
+    <i class="fas fa-angle-up"></i>
+</a>
 
 
 
@@ -561,6 +591,7 @@ id="predat" style="padding: 10px; height: 90vh; display: none;">
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
     <script src="js/google/fir.js"></script>
     <script src="js/main/core.invoice.js"></script>
+    <script src="switchery/switchery.min.js"></script>
     <script src="js/main/maininvoice.js"></script>
     <script src="js/invoice/toastr.js"></script>
     <script src="js/invoice/notifications.js"></script>
