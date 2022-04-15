@@ -27,9 +27,9 @@ function myFunction() {
     })
     .then(function(data) {
       document.getElementById('footer-email').innerHTML = `
-        Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, 
-        protect your privacy by using VPN.
+        Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
       `;
+      console.log(data)
   });
 
   document.getElementById("thebodyz").oncontextmenu = function() {
