@@ -20,10 +20,10 @@ function drawFace(ctx, radius) {
   ctx.fill();
   grad = ctx.createRadialGradient(0,0,radius*0.05, 0,0,radius*2.5);
   grad.addColorStop(0, '#121d33');
-  grad.addColorStop(0.5, 'white');
+  grad.addColorStop(0.5, 'rgba(0,0,0,0)');
   grad.addColorStop(1, '#121d33');
   ctx.strokeStyle = grad;
-  ctx.lineWidth = radius*0.1;
+  ctx.lineWidth = radius*0;
   ctx.stroke();
   ctx.beginPath();
   ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
