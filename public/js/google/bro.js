@@ -15,21 +15,22 @@ function myFunction() {
     if (user.displayName && user.uid) {
       jinaHolder.innerText = user.displayName;
       jinaHolder2.innerText = 'USER ID: ' + user.uid;
+
+      fetch('https://ipapi.co/json/')
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          document.getElementById('footer-email-small').innerHTML = `
+            ${user.displayName}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
+          `;
+          document.getElementById('footer-email-large').innerHTML = `
+            ${user.displayName}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name},  ${data.region} ,${data.org}, ${data.timezone}
+        `;
+      });
     }
   });
 
-  fetch('https://ipapi.co/json/')
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(data) {
-    document.getElementById('footer-email-small').innerHTML = `
-      Your IP: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
-    `;
-    document.getElementById('footer-email-large').innerHTML = `
-    Your IP: ${data.ip}, ${data.city}, ${data.country_name},  ${data.region} ,${data.org}, ${data.timezone}
-  `;
-});
 
   document.getElementById("thebodyz").oncontextmenu = function() {
     return false
