@@ -3466,22 +3466,6 @@ h1.title-style2.white,h2.title-style2.white,h3.title-style2.white,h4.title-style
  .pricing-list-button:hover button{
 	 color:#fab702;
 }
- .single-plan{
-	 position:relative;
-	 z-index:99;
-	 margin-bottom: 15px;
-	 border-radius: 5px;
-	 border:1px solid #efefef;
-	 background:#fff;
-	 -webkit-box-shadow:0 5px 10px 0 #fab702;
-	 box-shadow:0 5px 10px 0 #fab702;
-}
- .single-plan:hover{
-	 -webkit-box-shadow:0 0 #16a086;
-	 box-shadow:0 0 #16a086;
-	 transform: scale(1.02);
-	 z-index: 1000;
-}
 .portfolio-item{
 	border-radius: 1px;
 	background: white;
@@ -3497,13 +3481,6 @@ h1.title-style2.white,h2.title-style2.white,h3.title-style2.white,h4.title-style
 	 animation-name:Floating2;
 	animation-timing-function:ease-in-out ;
 	z-index: 10000;
-}
- .single-plan .head-plan h4{
-	 padding:10px;
-	 margin:0;
-	 color:#fff;
-	 font-weight:600;
-	 font-size:20px 
 }
  .head-plan{
 	 border-radius: 5px;
