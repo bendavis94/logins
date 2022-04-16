@@ -3478,18 +3478,6 @@ h1.title-style2.white,h2.title-style2.white,h3.title-style2.white,h4.title-style
    z-index: 10000;
 }
 
- .shop-category{
-	-webkit-box-shadow:1px 5px 22px -3px rgba(0,0,0,0.1);
-	-moz-box-shadow:1px 5px 22px -3px rgba(0,0,0,0.1);
-	box-shadow:1px 5px 22px -3px rgba(0,0,0,0.1)
-}
-.shop-category li{
-	border-color:#eaeaea;
-	padding:0 0 10px 40px
-}
-.shop-category.list-style-5 li:before{
-	left:15px
-}
  .label-offer{
 	 position:absolute;
 	left:0;
@@ -3708,9 +3696,6 @@ h1.title-style2.white,h2.title-style2.white,h3.title-style2.white,h4.title-style
 		font-family:Font Awesome\ 5 Free;
 		content:"\f107";
 		float:right
-	}
-	.categories .shop-category{
-		display:none
 	}
 }
 .latest_blog_inner{
