@@ -3440,68 +3440,6 @@ h1.title-style2.white,h2.title-style2.white,h3.title-style2.white,h4.title-style
 	line-height:24px;
 	text-align:left
 }
-.accordion-style2 .card{
-	background:transparent;
-	box-shadow:none;
-	margin-top:0 !important;
-	border:none
-}
-.accordion-style2 .card-header{
-	border:0px;
-	padding:0;
-	border-bottom:1px solid rgba(255,255,255,0.15);
-	background:none
-}
-.accordion-style2 .btn-link{
-	background:#ededed !important;
-	color:#232323;
-	font-size:14px;
-	line-height:20px;
-	position:relative;
-	border:none;
-	display:block;
-	width:100%;
-	text-align:left;
-	white-space:normal;
-	border-radius:0;
-	padding:15px 30px 15px 15px;
-	text-decoration:none
-}
-.accordion-style2 .btn-link:hover{
-	background:#ededed !important;
-	border:none;
-	text-decoration:none
-}
-.accordion-style2 .btn-link.collapsed:after{
-	background:none;
-	content:"+";
-	right:15px;
-	left:inherit;
-	font-size:20px;
-	height:auto;
-	transform:none;
-	width:auto;
-	top:15px
-}
-.accordion-style2 .btn-link:after{
-	background:none;
-	content:"-";
-	right:17px;
-	left:inherit;
-	font-size:20px;
-	height:auto;
-	transform:none;
-	width:auto;
-	top:15px;
-	position:absolute;
-	color:#232323
-}
-.accordion-style2 .card-body{
-	padding:10px 15px;
-	line-height:24px;
-	text-align:left;
-	background:#f9f9f9
-}
 .services-single-menu{
 	border:1px solid #ececec
 }
