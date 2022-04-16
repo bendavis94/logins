@@ -143,22 +143,6 @@ a:hover,a:active{
 .line-through{
 	text-decoration:line-through
 }
-.left-title{
-	position:relative
-}
-.left-title:before{
-	content:"";
-	background:#16a086;
-	width:15px;
-	height:2px;
-	display:inline-block;
-	vertical-align:middle;
-	margin-top:-4px;
-	margin-right:10px
-}
-.left-title.white:before{
-	background:#fff
-}
  .abundalakk{
 	 border: 1px solid #16a086;
 	 margin: 0;

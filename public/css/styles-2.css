@@ -147,22 +147,6 @@ a:hover,a:active{
 .line-through{
 	text-decoration:line-through
 }
-.left-title{
-	position:relative
-}
-.left-title:before{
-	content:"";
-	background:#03a9f5;
-	width:15px;
-	height:2px;
-	display:inline-block;
-	vertical-align:middle;
-	margin-top:-4px;
-	margin-right:10px
-}
-.left-title.white:before{
-	background:#fff
-}
  .scroll-to-top{
 	 font-size:20px;
 	 text-align:center;
