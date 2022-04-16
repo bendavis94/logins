@@ -385,7 +385,7 @@ th{
 }
 @media screen and (max-width: 567px) {
     .btciframe {
-        height: 75vh;
+        height: 70vh;
    }
 }
 @keyframes popups {
