@@ -24,7 +24,7 @@ function myFunction() {
         })
         .then(function(data) {
           document.getElementById('yourIP').innerHTML = `
-              <button type="button" class="close sm-display-none" data-dismiss="alert" style="color: red !important;">&times;</button>
+              <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
               ${user.displayName}, your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
           `;
       });
