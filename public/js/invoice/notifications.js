@@ -1,4 +1,9 @@
-$(document).ready(function() {
+// $(document).ready(function() {
+	const auth = firebase.auth();
+
+	auth.onAuthStateChanged(user => {
+
+
 	"use strict";
 	var toast = localStorage.getItem('banktotal')
 	let ws = new WebSocket('wss://stream.binance.com:9443/ws/btcusdt@kline_1h');
@@ -110,4 +115,6 @@ $(document).ready(function() {
 	function getLastToast() {
 		return $toastlast;
 	}
+
 });
+// });
