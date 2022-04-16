@@ -132,20 +132,6 @@ a:hover,a:active{
 .left-title.white:before{
 	background:#fff
 }
-@media screen and (max-width: 575px){
-	.no-mobile-margin-15px-bottom{
-		margin-bottom:0 !important
-	}
-	.mobile-margin-15px-bottom{
-		margin-bottom:15px
-	}
-	.mobile-margin-20px-bottom{
-		margin-bottom:20px
-	}
-	.mobile-margin-30px-bottom{
-		margin-bottom:30px
-	}
-}
 .primary-list{
 	padding-left:0
 }
