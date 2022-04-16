@@ -250,49 +250,7 @@ a:hover,a:active{
 .butn.medium{
 	padding:8px 16px
 }
-.butn-style3{
-	text-align:center;
-	display:inline-block;
-	font-size:14px;
-	padding:9px 22px;
-	min-width:150px;
-	background:transparent;
-	border:2px solid #16a086;
-	border-radius:25px;
-	box-shadow:rgba(0,0,0,0.1) 0px 2px 1px !important;
-	color:#16a086;
-	letter-spacing:.5px;
-	line-height:inherit;
-	width:auto;
-	font-family:'Montserrat', sans-serif;
-	font-weight:600;
-	transition-duration:0.3s;
-	transition-timing-function:ease-in-out
-}
-.butn-style3:hover{
-	background:#16a086;
-	color:#fff
-}
-.butn-style3.theme{
-	background:#16a086;
-	border:2px solid #16a086;
-	color:#fff
-}
-.butn-style3.theme:hover{
-	background:transparent;
-	color:#fff;
-	border-color:#fff
-}
-.butn-style3.white{
-	background:transparent;
-	border:2px solid #fff;
-	color:#fff
-}
-.butn-style3:hover{
-	background:#16a086;
-	color:#fff;
-	border-color:#16a086
-}
+
 .btn-style4{
 	display:inline-block;
 	border:2px solid transparent;
@@ -399,9 +357,6 @@ a:hover,a:active{
 	.butn.medium{
 		padding:8px 18px
 	}
-	.butn-style3{
-		min-width:130px
-	}
 	.btn-style4{
 		padding:10px 10px;
 		min-width:150px;
@@ -429,9 +384,6 @@ a:hover,a:active{
 	}
 	.butn.medium{
 		padding:6px 12px
-	}
-	.butn-style3{
-		min-width:inherit
 	}
 	.btn-style4{
 		padding:8px 8px;
