@@ -3641,36 +3641,6 @@ h1.title-style2.white,h2.title-style2.white,h3.title-style2.white,h4.title-style
 .product-rating .fas:hover{
 	color:#232323
 }
-.shop-cart-table{
-	width:100%;
-	overflow-x:auto
-}
-.shop-cart-table .product-thumbnail{
-	min-width:100px
-}
-.shop-cart-table .shop-cart td{
-	line-height:26px;
-	vertical-align:middle;
-	padding:16px 8px
-}
-.table.cart-sub-total{
-	border-color:transparent;
-	vertical-align:middle;
-	padding:10px 30px
-}
-.table.cart-sub-total td,.table.cart-sub-total th{
-	border-color:transparent;
-	vertical-align:middle;
-	padding:10px 30px
-}
-.table.cart-sub-total td{
-	padding-right:0
-}
-.shop-cart-table input[type="text"]{
-	height:35px;
-	width:50px;
-	margin:0
-}
 .product-list .product-block:hover>img{
 	opacity:0.65
 }
