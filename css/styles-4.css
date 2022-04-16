@@ -160,37 +160,6 @@ a:hover,a:active{
 	color:#47588f;
 	padding-right:10px
 }
-.white-list{
-	padding-left:0
-}
-.white-list li{
-	color:#fff;
-	font-size:14px;
-	font-weight:500;
-	margin-top:15px;
-	list-style-type:none
-}
-.white-list li i{
-	color:#47588f;
-	padding-right:15px
-}
-.list-style-16 li:after{
-	color:#47588f
-}
-.white-list{
-	padding-left:0
-}
-.white-list li{
-	color:#fff;
-	font-size:14px;
-	font-weight:500;
-	margin-top:15px;
-	list-style-type:none
-}
-.white-list li i{
-	color:#47588f;
-	padding-right:15px
-}
  blink{
 	 animation:blinker 3s linear infinite;
 	 color:#fff;

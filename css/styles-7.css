@@ -160,20 +160,6 @@ a:hover,a:active{
 	color:#49c0d0;
 	padding-right:10px
 }
-.white-list{
-	padding-left:0
-}
-.white-list li{
-	color:#fff;
-	font-size:14px;
-	font-weight:500;
-	margin-top:15px;
-	list-style-type:none
-}
-.white-list li i{
-	color:#49c0d0;
-	padding-right:15px
-}
  blink{
 	 animation:blinker 3s linear infinite;
 	 color:#fff;
@@ -200,23 +186,6 @@ a:hover,a:active{
 	50%{
 		opacity:0
 	}
-}
- .list-style-16 li:after{
-	color:#49c0d0
-}
- .white-list{
-	padding-left:0
-}
-.white-list li{
-	color:#fff;
-	font-size:14px;
-	font-weight:500;
-	margin-top:15px;
-	list-style-type:none
-}
-.white-list li i{
-	color:#49c0d0;
-	padding-right:15px
 }
  .abundalakk{
 	 border: 1px solid #49c0d0;

@@ -187,37 +187,6 @@ a:hover,a:active{
 	color:#16a086;
 	padding-right:10px
 }
-.white-list{
-	padding-left:0
-}
-.white-list li{
-	color:#fff;
-	font-size:14px;
-	font-weight:500;
-	margin-top:15px;
-	list-style-type:none
-}
-.white-list li i{
-	color:#16a086;
-	padding-right:15px
-}
-.list-style-16 li:after{
-	color:#16a086
-}
-.white-list{
-	padding-left:0
-}
-.white-list li{
-	color:#fff;
-	font-size:14px;
-	font-weight:500;
-	margin-top:15px;
-	list-style-type:none
-}
-.white-list li i{
-	color:#16a086;
-	padding-right:15px
-}
  .abundalakk{
 	 border: 1px solid #16a086;
 	 margin: 0;
