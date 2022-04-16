@@ -88,12 +88,6 @@ a:hover,a:active{
 .bg-theme{
 	background-color:#47588f
 }
-.bg-theme-90{
-	background:rgba(71,88,143,0.9)
-}
-.bg-theme-80{
-	background:rgba(71,88,143,0.8)
-}
 .theme-overlay[data-overlay-dark]:before,.theme-overlay[data-overlay-light]:before{
 	background:#47588f
 }
