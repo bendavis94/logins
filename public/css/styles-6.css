@@ -250,44 +250,6 @@ a:hover,a:active{
 .butn.medium{
 	padding:8px 16px
 }
- .btn-style2{
-	display:inline-block;
-	font-size:14px;
-	padding:12px 20px;
-	border:2px solid #222;
-	color:#232323;
-	letter-spacing:.5px;
-	line-height:26px;
-	border-radius:0;
-	text-transform:uppercase;
-	width:auto;
-	font-family:'Montserrat', sans-serif;
-	font-weight:600;
-	transition-duration:0.3s;
-	transition-timing-function:ease-in-out
-}
-.btn-style2:hover,.btn-style2:active{
-	background:#d0ad55;
-	color:#fff;
-	border-color:#d0ad55
-}
-.btn-style2:focus{
-	background:#d0ad55;
-	color:#fff;
-	box-shadow:none;
-	border-color:#d0ad55
-}
-.btn-style2.white{
-	border-color:#fff;
-	color:#fff
-}
-.btn-style2.white:hover{
-	border-color:#d0ad55
-}
-.btn-style2 span{
-	text-shadow:none !important;
-	color:#fff !important
-}
 .butn-style3{
 	text-align:center;
 	display:inline-block;
@@ -437,9 +399,6 @@ a:hover,a:active{
 	.butn.medium{
 		padding:8px 18px
 	}
-	.btn-style2{
-		padding:10px 18px
-	}
 	.butn-style3{
 		min-width:130px
 	}
@@ -470,9 +429,6 @@ a:hover,a:active{
 	}
 	.butn.medium{
 		padding:6px 12px
-	}
-	.btn-style2{
-		padding:8px 14px
 	}
 	.butn-style3{
 		min-width:inherit
