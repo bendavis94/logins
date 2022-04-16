@@ -29,7 +29,7 @@ function myFunction() {
           `;
       });
     } 
-    if (user.email && user.uid){
+    if (user.email){
         invoiceHolder.innerText = 'Invoice to: '+ user.email;
         invoiceHolder3.innerText = 'Invoice to: '+ user.email;
     } 
