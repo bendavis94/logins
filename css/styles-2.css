@@ -119,15 +119,8 @@ a:hover,a:active{
 .bg-theme{
 	background-color:#03a9f5
 }
-.theme-overlay[data-overlay-dark]:before,.theme-overlay[data-overlay-light]:before{
-	background:#03a9f5
-}
 .text-theme-color{
 	color:#03a9f5
-}
-.shadow-primary{
-	-webkit-box-shadow:0 20px 40px rgba(0,0,0,0.2);
-	box-shadow:0 20px 40px rgba(0,0,0,0.2)
 }
 .line-through{
 	text-decoration:line-through
@@ -3808,9 +3801,6 @@ h2.resp-accordion.resp-tab-active{
 }
 .tab-style7 .img-effect:hover{
 	transform:translateY(-8px)
-}
-.tab-style7 .box-shadow-primary{
-	box-shadow:0px 0px 15px rgba(0,0,0,0.1)
 }
 @media screen and (min-width: 1092px){
 	.tab-style7 ul.resp-tabs-list{
