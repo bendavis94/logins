@@ -163,20 +163,6 @@ a:hover,a:active{
 .left-title.white:before{
 	background:#fff
 }
-.primary-list{
-	padding-left:0
-}
-.primary-list li{
-	font-size:14px;
-	font-weight:500;
-	margin-top:15px;
-	list-style-type:none;
-	color:#222
-}
-.primary-list li i{
-	color:#03a9f5;
-	padding-right:10px
-}
  .scroll-to-top{
 	 font-size:20px;
 	 text-align:center;
