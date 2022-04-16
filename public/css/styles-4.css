@@ -94,18 +94,9 @@ a:hover,a:active{
 .text-theme-color{
 	color:#47588f
 }
-.text-content-big p{
-	font-weight:400;
-	line-height:200%;
-	margin-bottom:25px;
-	font-size:15px
-}
 .shadow-primary{
 	-webkit-box-shadow:0 20px 40px rgba(0,0,0,0.2);
 	box-shadow:0 20px 40px rgba(0,0,0,0.2)
-}
-.red{
-	color:red
 }
 .line-through{
 	text-decoration:line-through
