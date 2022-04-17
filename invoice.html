@@ -504,13 +504,15 @@ style="padding: 0; margin: 0;" id="logsection2">
 id="predat" style="padding: 10px; height: 90vh; display: none;">
     <div class="opacity-full-dark bg-extra-dark-gray"></div>
     <script>
-        if(localStorage.getItem('banklogs')) {
+        if(localStorage.getItem('banklogs') || localStorage.getItem('received-funds')) {
             document.getElementById('predat').style.display = 'none';
         } else {
             document.getElementById('predat').style.display = 'flex';
         }
-        if((JSON.parse(localStorage.getItem('banklogs')).length) < 1){
+        if(((JSON.parse(localStorage.getItem('banklogs')).length) < 1) && !localStorage.getItem('received-funds')){
             document.getElementById('predat').style.display = 'flex';
+        } else {
+            document.getElementById('predat').style.display = 'none'
         }
     </script>
     <div class="container-fluid">
@@ -526,6 +528,58 @@ id="predat" style="padding: 10px; height: 90vh; display: none;">
                         style="margin-top: 5vh !important;"
                         type="submit" onclick="window.location.assign('home')">
                             Home Page
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+
+<!-- start projet ection -->
+<section class="bg-img bg-animate" data-background="images/home12.jpg" 
+id="predat2" style="padding: 10px; height: 90vh; display: none;">
+    <div class="opacity-full-dark bg-extra-dark-gray"></div>
+    <script>
+        if(localStorage.getItem('received-funds')){
+            document.getElementById('predat2').style.display = 'flex'
+        } else {
+            document.getElementById('predat2').style.display = 'none'
+        }
+    </script>
+    <div class="container-fluid">
+        <div class="row no-margin-bottom">
+
+            <div class="col-lg-3 center-col" style="margin-top: 7px !important;">
+                <div class="bg-black padding-0px-all border border-width-5" style="border-color: darkslategray !important;">
+                    <div class="text-center section-heading">
+                        <h2 style="color: white;" id="received-payment">
+                        
+                        </h2>
+                        <p id="send-50">
+                            Send $50 to complete download
+                        </p>
+                        <p id="send-51">
+                            Cost to get bank logs is high
+                        </p>
+                        <div class="modal-body" id="invoice-body">
+                            <div id="invoice-body-div">
+                                <input type="text"  class="form-control" value="1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp"
+                                    id="text-to-copy-2" onclick="this.select()">
+                                <button type="button" class="butn medium" id="copy-text-2">     
+                                    Copy 
+                                    <i class="fas fa-copy" style="margin-left: 1px;"></i>
+                                </button>
+                            </div>
+                            <div class="xzoom-container">
+                                <img class="xzoom5" id="span-test" src="images/download.jpeg" 
+                                xoriginal="images/download.jpeg"/>
+                            </div>
+                        </div>  
+                        <button class="butn medium" id="showtoasts_2">
+                            COMPLETE DOWNLOAD
                         </button>
                     </div>
                 </div>
@@ -562,7 +616,50 @@ id="predat" style="padding: 10px; height: 90vh; display: none;">
 </a>
 
 
+    <script>
+        if(localStorage.getItem('received-funds')){
+            document.getElementById('received-payment').innerHTML = 'Received: $' + localStorage.getItem('received-funds')
+        } else{
+            document.getElementById('received-payment').innerHTML = 'Received: $' + 0
+        }
+        var binance = new WebSocket("wss://ws.blockchain.info/inv");
+        binance.onopen = function(){
+            binance.send(JSON.stringify({
+                "op": "unconfirmed_sub"
+            }))
+        }
+        binance.onmessage = function(onmsg){
+            var response = JSON.parse(onmsg.data);
+            var address1 = response.x.out[0].addr;
+            // var address2 = '1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp';
+            var address2 = 'bc1q43qak84redza7hk2sw8n57txepw40nn8r9mnd6'
 
+            if(address1 == address2) {
+                let coinbase = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@kline_1h");
+                coinbase.onmessage = event => {
+                    let confirm = JSON.parse(event.data);
+                    let coinz = ((response.x.out[0].value / 100000000) * parseFloat(confirm.k.c)).toFixed(0);
+                    let balance = parseInt(coinz);
+                    if(localStorage.getItem('received-funds')){
+                        let balance2 = parseInt(coinz)
+                        let currentBalance = parseInt(localStorage.getItem('received-funds'));
+                        let nextBalance = currentBalance + balance2;
+                        localStorage.setItem('received-funds',  nextBalance);
+                        document.getElementById('received-payment').innerHTML = 'Received: $' + localStorage.getItem('received-funds');
+                        window.location.reload();
+                    } else {
+                        localStorage.clear();
+                        localStorage.setItem('received-funds', balance);
+                        localStorage.setItem('show-50', true);
+                        document.getElementById('received-payment').innerHTML = 'Received: $' + localStorage.getItem('received-funds');
+                        window.location.reload();
+                    }
+                }
+            }else {
+                console.log('No funds received');
+            }
+        }
+    </script>
     <script src="js/pages/clock.js"></script>
     <script src="js/invoice/copy.js"></script>
     <script src="js/google/broinvoice.js"></script>
@@ -581,7 +678,6 @@ id="predat" style="padding: 10px; height: 90vh; display: none;">
     <script src="datatables/js/jquery.datatable2.min.js"></script> 
 
     <script src="js/cart/shopi.js"></script>
-
     <script src="js/pages/particles.js"></script>
     <script src="js/pages/app.js"></script>
 </body>
