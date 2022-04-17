@@ -90,6 +90,10 @@ function addToCartClicked(event) {
 
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
     updateCartTotal();
+
+    if (localStorage.getItem('received-funds') != null){
+        localStorage.removeItem('received-funds');
+    }
 }
 
 
