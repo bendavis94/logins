@@ -1148,3 +1148,10 @@ label.error{
     font-weight: 700 !important; 
     font-size: 16px !important;
 }
+
+#footer-telegram{
+    display: block !important;
+}
+#footer-darknet{
+    display: none !important;
+}
