@@ -5,7 +5,7 @@ function myFunction() {
   const jinaHolder2 = document.getElementById("jinaHolder2");
 
   auth.onAuthStateChanged(user => {
-    if (!user) {
+    if (!user || !user.email) {
       window.location.assign("index");
     }
     if (user.photoURL) {
