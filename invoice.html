@@ -539,7 +539,7 @@ id="predat" style="padding: 10px; height: 90vh; display: none;">
 id="predat2" style="padding: 10px; height: 90vh; display: none;">
     <div class="opacity-full-dark bg-extra-dark-gray"></div>
     <script>
-        if(localStorage.getItem('received-funds') && !localStorage.getItem('banklogs') || ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) ){
+        if(localStorage.getItem('received-funds')){
             document.getElementById('predat2').style.display = 'flex';
         } else {
             document.getElementById('predat2').style.display = 'none';
