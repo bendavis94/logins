@@ -25,7 +25,20 @@ function myFunction() {
            ${user.displayName}, your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
           `;
       });
-    } 
+    } else {
+      jinaHolder.innerText = 'Anonymous';
+      jinaHolder2.innerText = 'USER ID: ' + user.uid;
+
+      fetch('https://ipapi.co/json/')
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          document.getElementById('footer-email').innerHTML = `
+           Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
+          `;
+      });
+    }
   });
 
   document.getElementById("thebodyz").oncontextmenu = function() {
