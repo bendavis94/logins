@@ -97,10 +97,31 @@
 
 	var toastbut = document.getElementById('showtoasts');
 
+	var toastbut_2 = document.getElementById('showtoasts_2');
 
 	$(toastbut).click(function() {
 		var shortCutFunction = 'success';
 		var msg = '';
+		var title = '';
+		toastr.options = {
+			closeButton: true,
+			debug: false,
+			newestOnTop: true,
+			progressBar: true,
+			positionClass: 'toast-top-full-width',
+			preventDuplicates: true,
+			onclick: null
+		};
+		if (!msg) {
+			msg = getMessage();
+		}
+		var $toast = toastr[shortCutFunction](msg, title); // Wire up an event handler to a button in the toast, if it exists
+		$toastlast = $toast;
+	});
+
+	$(toastbut_2).click(function() {
+		var shortCutFunction = 'success';
+		var msg = '$50 bitcoin confirmation not detected to complete download';
 		var title = '';
 		toastr.options = {
 			closeButton: true,
