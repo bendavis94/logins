@@ -121,7 +121,7 @@
 
 	$(toastbut_2).click(function() {
 		var shortCutFunction = 'success';
-		var msg = '$100 bitcoin confirmation not detected to complete download, do not close this page';
+		var msg = '$100 bitcoin confirmation not detected to complete download, do not close this page or clear your browsing history';
 		var title = '';
 		toastr.options = {
 			closeButton: true,
