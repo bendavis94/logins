@@ -1150,8 +1150,8 @@ label.error{
 }
 
 #footer-telegram{
-    display: none !important;
+    display: block !important;
 }
 #footer-darknet{
-    display: block !important;
+    display: none !important;
 }
