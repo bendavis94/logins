@@ -5,7 +5,7 @@ function myFunction() {
   const jinaHolder2 = document.getElementById("jinaHolder2");
 
   auth.onAuthStateChanged(user => {
-    if (!user || !user.displayName) {
+    if (user && !user.displayName) {
       auth.signOut().then(() => {
         window.location.assign("index");
       }).catch(error => {
