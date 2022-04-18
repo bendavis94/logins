@@ -57,6 +57,7 @@
             responsiveClass: true,
             dots: true,
             nav: true,
+            smartSpeed: 500,
             autoplay: true,
             autoplayTimeout: 2000,
             autoplayHoverPause: true,
@@ -80,20 +81,6 @@
                 }
             }
         });
-        $('.owl-carousel').owlCarousel({
-            items: 1,
-            loop: true,
-            dots: false,
-            margin: 0,
-            autoplay: true,
-            smartSpeed: 500
-        });
-
-
-
-
-       
-
     });
 
     function toggleFullScreen() {
