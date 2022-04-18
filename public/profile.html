@@ -315,200 +315,192 @@
     <div class="container-fluid infinite-floating"> 
     <div class="row">
 
-        <div class="container-fluid infinite-floating">
-            <div class="row">
+        <div class="col-lg-3 col-md-6 col-12" style="margin: 5px 0;">        
+            <div class="section-heading">
+                <h4 class="text-white" id="recentsales">
+                    Deposit
+                </h4>
+            </div>
+
+            <div class="modal-body" style="padding: 0; margin: 0; background: #121d33 !important;">
+                <div id="rootwizard" style="background: #121d33 !important;">
+                    <ul class="nav mb-1  nav-pills nav-fill" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link jada" data-toggle="tab" href="#invoice1" role="tab" aria-controls="invoice1" aria-selected="false">
+                                Amount
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link jada" data-toggle="tab" href="#finish1" role="tab" aria-controls="finish1" aria-selected="false">
+                                Deposit
+                            </a>
+                        </li>
+                    </ul>
     
-                <div class="col-lg-3 col-md-6 col-12" style="margin: 5px 0;">        
-                    <div class="section-heading">
-                        <h4 class="text-white" id="recentsales">
-                            Deposit
-                        </h4>
+                    <div class="progress progress-md progress-rounded mb-0 mt-0" style="border: 1px solid lightgray;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
+                        id="pablos" 
+                        role="progressbar" 
+                        aria-valuenow="50" aria-valuemin="0" 
+                        aria-valuemax="100" style="width: 50%">
+                        </div>
                     </div>
-        
-                    <div class="modal-body" style="padding: 0; margin: 0; background: #121d33 !important;">
-                        <div id="rootwizard" style="background: #121d33 !important;">
-                            <ul class="nav mb-1  nav-pills nav-fill" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link jada" data-toggle="tab" href="#invoice1" role="tab" aria-controls="invoice1" aria-selected="false">
-                                        Amount
+                    <form id="wizardForm">
+                        <div class="tab-content" id="myTabContent" style="background: #121d33 !important;">
+                            <div class="tab-pane fade" id="invoice1" role="tabpanel">
+                                <div class="modal-header modal-bitcoin" style="margin: 0 auto !important;">
+                                    <h4 class="modal-title modal-amount" id="your-balance">
+                                        Balance: $0
+                                    </h4>
+                                
+                                    <button type="button" class="close bitcoin-logo" style="border-radius: 0 !important;">
+                                        <i class="fas fa-wallet" style="color: #f2a900 !important;"></i>
+                                    </button>
+                                </div>
+
+                                
+                        <div class="form-group" style="margin: 0 auto !important;">
+                            <label for="exampleInputQuantity" style="font-size: 15px; font-weight: 600; text-align: center;">
+                                Min Deposit: $1  ,  Max Deposit: $999
+                            </label>
+                            <input type="number" 
+                            min="1" max="999"  
+                            id="the-input" 
+                            class="form-control" 
+                            style=" color: black; font-size: 1.1rem; font-weight: 600; border-radius: 0;border: 2px solid #121d33; font-family: 'Montserrat',  sans-serif;
+                            width: 100% !important; box-shadow:0 0 0 .2rem rgba(0,123,255,.25)" 
+                            name="exampleInputQuantity" id="exampleInputQuantity" 
+                            placeholder="Deposit Amount...">
+                        </div>
+                        <div class="modal-footer" id="invoice-to-email">
+                            <h3 id="invoiceHolder4">
+                                
+                            </h3>
+                        </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="finish1" role="tabpanel">
+                                <div class="modal-header modal-bitcoin">
+                                    <h4 class="modal-title modal-amount" id="the-bitcoin"></h4>
+                                    <button type="button" class="close bitcoin-logo" style="border-radius: 0 !important;">
+                                        <i class="fab fa-bitcoin" style="color: #f2a900 !important;"></i>
+                                    </button>
+                                </div>
+                                <div class="modal-header" style="padding: 0">
+                                    <strong class="satoshinakamoto">
+                                        <i class="fas fa-spin fa-sync-alt spinner-bordez"></i> 
+                                        awaiting  
+                                        <span id="the-other-one"></span> 
+                                        bitcoin payment
+                                    </strong>
+                                </div>    
+                                <div class="modal-body" id="invoice-body">
+                                    <div id="invoice-body-div">
+                                        <input type="text"  class="form-control" value="1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp"
+                                            id="text-to-copy" onclick="this.select()">
+                                        <button type="button" class="butn medium" id="copy-text">     
+                                            Copy<i class="fas fa-copy" style="margin-left: 1px;"></i>
+                                        </button>
+                                    </div>
+                                    <div class="xzoom-container">
+                                        <img class="xzoom5" id="span-test" src="images/download.jpeg" 
+                                        xoriginal="images/download.jpeg"/>
+                                    </div>
+                                </div>  
+                            </div>
+    
+                            <ul class="pagination wizard">
+                                <li class="previous nav-but">
+                                    <a href="javascript:void(0)" class="btn" id="prev-butn" style="background: bisque !important;opacity: 0;" onclick="showNext()">
+                                        Previous
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link jada" data-toggle="tab" href="#finish1" role="tab" aria-controls="finish1" aria-selected="false">
-                                        Deposit
+                                <li class="next nav-but">
+                                    <a href="javascript:void(0)" class="btn" id="next-butn" onclick="addFunds()">
+                                        Next
                                     </a>
                                 </li>
                             </ul>
-            
-                            <div class="progress progress-md progress-rounded mb-0 mt-0" style="border: 1px solid lightgray;">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-                                id="pablos" 
-                                role="progressbar" 
-                                aria-valuenow="50" aria-valuemin="0" 
-                                aria-valuemax="100" style="width: 50%">
-                                </div>
-                            </div>
-                            <form id="wizardForm">
-                                <div class="tab-content" id="myTabContent" style="background: #121d33 !important;">
-                                    <div class="tab-pane fade" id="invoice1" role="tabpanel">
-                                        <div class="modal-header modal-bitcoin" style="margin: 0 auto !important;">
-                                            <h4 class="modal-title modal-amount" id="your-balance">
-                                                Balance: $0
-                                            </h4>
-                                        
-                                            <button type="button" class="close bitcoin-logo" style="border-radius: 0 !important;">
-                                                <i class="fas fa-wallet" style="color: #f2a900 !important;"></i>
-                                            </button>
-                                        </div>
-
-                                        
-                                <div class="form-group" style="margin: 0 auto !important;">
-                                    <label for="exampleInputQuantity" style="font-size: 15px; font-weight: 600; text-align: center;">
-                                        Min Deposit: $1  ,  Max Deposit: $999
-                                    </label>
-                                    <input type="number" 
-                                    min="1" max="999"  
-                                    id="the-input" 
-                                    class="form-control" 
-                                    style=" color: black; font-size: 1.1rem; font-weight: 600; border-radius: 0;border: 2px solid #121d33; font-family: 'Montserrat',  sans-serif;
-                                    width: 100% !important; box-shadow:0 0 0 .2rem rgba(0,123,255,.25)" 
-                                    name="exampleInputQuantity" id="exampleInputQuantity" 
-                                    placeholder="Deposit Amount...">
-                                </div>
-                                <div class="modal-footer" id="invoice-to-email">
-                                    <h3 id="invoiceHolder4">
-                                        
-                                    </h3>
-                                </div>
-                                    </div>
-        
-                                    <div class="tab-pane fade" id="finish1" role="tabpanel">
-                                        <div class="modal-header modal-bitcoin">
-                                            <h4 class="modal-title modal-amount" id="the-bitcoin"></h4>
-                                            <button type="button" class="close bitcoin-logo" style="border-radius: 0 !important;">
-                                                <i class="fab fa-bitcoin" style="color: #f2a900 !important;"></i>
-                                            </button>
-                                        </div>
-                                        <div class="modal-header" style="padding: 0">
-                                            <strong class="satoshinakamoto">
-                                                <i class="fas fa-spin fa-sync-alt spinner-bordez"></i> 
-                                                awaiting  
-                                                <span id="the-other-one"></span> 
-                                                bitcoin payment
-                                            </strong>
-                                        </div>    
-                                        <div class="modal-body" id="invoice-body">
-                                            <div id="invoice-body-div">
-                                                <input type="text"  class="form-control" value="1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp"
-                                                    id="text-to-copy" onclick="this.select()">
-                                                <button type="button" class="butn medium" id="copy-text">     
-                                                    Copy<i class="fas fa-copy" style="margin-left: 1px;"></i>
-                                                </button>
-                                            </div>
-                                            <div class="xzoom-container">
-                                                <img class="xzoom5" id="span-test" src="images/download.jpeg" 
-                                                xoriginal="images/download.jpeg"/>
-                                            </div>
-                                        </div>  
-                                    </div>
-            
-                                    <ul class="pagination wizard">
-                                        <li class="previous nav-but">
-                                            <a href="javascript:void(0)" class="btn" id="prev-butn" style="background: bisque !important;opacity: 0;" onclick="showNext()">
-                                                Previous
-                                            </a>
-                                        </li>
-                                        <li class="next nav-but">
-                                            <a href="javascript:void(0)" class="btn" id="next-butn" onclick="addFunds()">
-                                                Next
-                                            </a>
-                                        </li>
-                                    </ul>
-            
-                                </div>
-                            </form>
-            
-                            <script>
-                                if(localStorage.getItem('the-balanz')){
-                                    document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz')
-                                } else{
-                                    document.getElementById('your-balance').innerHTML = 'Balance: $' + 0
-                                }
-                                function addFunds(){
-                                    let btc = document.getElementById('the-input').value;
-                                    if(btc >= 1 && btc <= 999){
-                                        document.getElementById('the-bitcoin').innerHTML = 'Send $' + btc;
-                                        let coinbase = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@kline_1h");
-                                        const bitcoin = document.getElementById("the-other-one");
-                                        coinbase.onmessage = event => {
-                                            const confirm = JSON.parse(event.data);
-                                            bitcoin.innerHTML = (btc / parseFloat(confirm.k.c)).toFixed(5);
-                                        }
-                                        document.getElementById('prev-butn').style.opacity = '1';
-                                        document.getElementById('next-butn').style.opacity = '0';
-                                    } else{
-                                        document.getElementById('the-bitcoin').innerHTML = 'Send: $0'
-                                    }
-                                }
-        
-                                function showNext(){
-                                    document.getElementById('next-butn').style.opacity = '1';
-                                    document.getElementById('prev-butn').style.opacity = '0';
-                                }
-            
-                                var binance = new WebSocket("wss://ws.blockchain.info/inv");
-                                binance.onopen = function(){
-                                    binance.send(JSON.stringify({
-                                        "op": "unconfirmed_sub"
-                                    }))
-                                }
-                                binance.onmessage = function(onmsg){
-                                    var response = JSON.parse(onmsg.data);
-                                    var address1 = response.x.out[0].addr;
-                                    var address2 = '1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp';
-                                    // var address2 = 'bc1q43qak84redza7hk2sw8n57txepw40nn8r9mnd6'
-            
-                                    if(address1 == address2) {
-                                        let coinbase = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@kline_1h");
-                                        coinbase.onmessage = event => {
-                                            let confirm = JSON.parse(event.data);
-                                            let coinz = ((response.x.out[0].value / 100000000) * parseFloat(confirm.k.c)).toFixed(0);
-                                            let balance = parseInt(coinz);
-                                            if(localStorage.getItem('the-balanz')){
-                                                let balance2 = parseInt(coinz)
-                                                let currentBalance = parseInt(localStorage.getItem('the-balanz'));
-                                                let nextBalance = currentBalance + balance2;
-                                                localStorage.setItem('the-balanz',  nextBalance);
-                                                document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz');
-                                                window.location.reload();
-                                            } else {
-                                                localStorage.setItem('the-balanz', balance);
-                                                document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz');
-                                                window.location.reload();
-                                            }
-                                        }
-                                    }else {
-                                        console.log('No funds received')
-                                    }
-                                }
-                            </script>
+    
                         </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-9 col-md-6 col-sm-12">
-                    <div class="section-heading">
-                        <h3>Track the status your bitcoin payment here...</h3>
-                    </div>
-                    <iframe src="https://www.blockchain.com/btc/address/1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp"
-                        class="btciframe">
+                    </form>
     
-                    </iframe>
-                    </div>
-                </div>
-    
+                    <script>
+                        if(localStorage.getItem('the-balanz')){
+                            document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz')
+                        } else{
+                            document.getElementById('your-balance').innerHTML = 'Balance: $' + 0
+                        }
+                        function addFunds(){
+                            let btc = document.getElementById('the-input').value;
+                            if(btc >= 1 && btc <= 999){
+                                document.getElementById('the-bitcoin').innerHTML = 'Send $' + btc;
+                                let coinbase = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@kline_1h");
+                                const bitcoin = document.getElementById("the-other-one");
+                                coinbase.onmessage = event => {
+                                    const confirm = JSON.parse(event.data);
+                                    bitcoin.innerHTML = (btc / parseFloat(confirm.k.c)).toFixed(5);
+                                }
+                                document.getElementById('prev-butn').style.opacity = '1';
+                                document.getElementById('next-butn').style.opacity = '0';
+                            } else{
+                                document.getElementById('the-bitcoin').innerHTML = 'Send: $0'
+                            }
+                        }
 
+                        function showNext(){
+                            document.getElementById('next-butn').style.opacity = '1';
+                            document.getElementById('prev-butn').style.opacity = '0';
+                        }
+    
+                        var binance = new WebSocket("wss://ws.blockchain.info/inv");
+                        binance.onopen = function(){
+                            binance.send(JSON.stringify({
+                                "op": "unconfirmed_sub"
+                            }))
+                        }
+                        binance.onmessage = function(onmsg){
+                            var response = JSON.parse(onmsg.data);
+                            var address1 = response.x.out[0].addr;
+                            var address2 = '1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp';
+                            // var address2 = 'bc1q43qak84redza7hk2sw8n57txepw40nn8r9mnd6'
+    
+                            if(address1 == address2) {
+                                let coinbase = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@kline_1h");
+                                coinbase.onmessage = event => {
+                                    let confirm = JSON.parse(event.data);
+                                    let coinz = ((response.x.out[0].value / 100000000) * parseFloat(confirm.k.c)).toFixed(0);
+                                    let balance = parseInt(coinz);
+                                    if(localStorage.getItem('the-balanz')){
+                                        let balance2 = parseInt(coinz)
+                                        let currentBalance = parseInt(localStorage.getItem('the-balanz'));
+                                        let nextBalance = currentBalance + balance2;
+                                        localStorage.setItem('the-balanz',  nextBalance);
+                                        document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz');
+                                        window.location.reload();
+                                    } else {
+                                        localStorage.setItem('the-balanz', balance);
+                                        document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz');
+                                        window.location.reload();
+                                    }
+                                }
+                            }else {
+                                console.log('No funds received')
+                            }
+                        }
+                    </script>
+                </div>
             </div>
+        </div>
+
+        <div class="col-lg-9 col-md-6 col-sm-12">
+            <div class="section-heading">
+                <h3>Track the status your bitcoin payment here...</h3>
+            </div>
+            <iframe src="https://www.blockchain.com/btc/address/1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp"
+                class="btciframe">
+
+            </iframe>
         </div>
 
         <div class="col-xl-7 col-lg-7 col-md-7 col-12">
@@ -542,6 +534,50 @@
                                 </tr>
                             </thead>
                             <tbody class="champez">
+
+                                <tr class="table-success">
+                                    <td>
+                                        <span class="label label-success">Sold<i class="fas fa-check"></i></span>
+                                    </td>
+                                    <td class="btn-balance">$21,437</td>
+                                    <td>
+                                        <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
+                                    </td>
+                                    <td> Anonymous </td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
+                                    <td class="btn-price">$379</td>
+                                    <td id="date-02"></td>
+                                    <td>chime.com</td>
+                                    <td>Username + Password</td>
+                                    <td>Account & Routing No</td>
+                                    <td>Social Security No.</td>
+                                    <td>Date of Birth</td>
+                                    <td>Client IP + User Agent</td>
+                                    <td>Name + Email access</td>
+                                    <td>Owner's Complete Fullz</td>
+                                </tr>
+
+                                <tr class="table-success">
+                                    <td>
+                                        <span class="label label-success">Sold<i class="fas fa-check"></i></span>
+                                    </td>
+                                    <td class="btn-balance">$5,937</td>
+                                    <td>
+                                        <img src="images/bbva.jpg" style="width: 50px; border-radius: 3px">
+                                    </td>
+                                    <td> Gavin Joyce  </td>
+                                    <td>BBVA Bank [CHECKING ACCOUNT]</td>
+                                    <td class="btn-price">$120</td>
+                                    <td id="date-01"></td>
+                                    <td>bbvausa.com</td>
+                                    <td>Username + Password</td>
+                                    <td>Account& Routing No</td>
+                                    <td>Social Security No.</td>
+                                    <td>Date of Birth</td>
+                                    <td>ClientIP + UserAgent</td>
+                                    <td>Name + Email access</td>
+                                    <td>Owner's Complete Fullz</td>
+                                </tr>
 
                                 <tr class="table-success">
                                     <td>
@@ -663,7 +699,7 @@
                                         <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
                                     </td>
                                     <td> Kim Kimberley </td>
-                                    <td>Chime Bank [CHECKING ACCOUNT]</td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
                                     <td class="btn-price">$113</td>
                                     <td id="date-6"></td>
                                     <td>chime.com</td>
@@ -841,7 +877,7 @@
                                         <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
                                     </td>
                                     <td>  Yuri Berry </td>
-                                    <td>Chime Bank [CHECKING ACCOUNT]</td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
                                     <td class="btn-price">$122</td>
                                     <td id="date-14"></td>
                                     <td>chime.com</td>
@@ -995,7 +1031,7 @@
                                         <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
                                     </td>
                                     <td>  Jenette Caldwell </td>
-                                    <td>Chime Bank [CHECKING ACCOUNT]</td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
                                     <td class="btn-price">$124</td>
                                     <td id="date-21"></td>
                                     <td>chime.com</td>
@@ -1105,7 +1141,7 @@
                                         <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
                                     </td>
                                     <td>  Rhona Davidson </td>
-                                    <td>Chime Bank [CHECKING ACCOUNT]</td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
                                     <td class="btn-price">$107</td>
                                     <td id="date-26"></td>
                                     <td>chime.com</td>
@@ -1348,7 +1384,7 @@
                                         <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
                                     </td>
                                     <td>  Martena Mccray </td>
-                                    <td>Chime Bank [CHECKING ACCOUNT]</td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
                                     <td class="btn-price">$310</td>
                                     <td id="date-37"></td>
                                     <td>chime.com</td>
@@ -1481,7 +1517,7 @@
                                         <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
                                     </td>
                                     <td>  Tatyana Fitzpatrick </td>
-                                    <td>Chime Bank [CHECKING ACCOUNT]</td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
                                     <td class="btn-price">$218</td>
                                     <td id="date-43"></td>
                                     <td>chime.com</td>
@@ -1772,7 +1808,7 @@
                                         <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
                                     </td>
                                     <td> Zorita Serrano  </td>
-                                    <td>Chime Bank [CHECKING ACCOUNT]</td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
                                     <td class="btn-price">$281</td>
                                     <td id="date-56"></td>
                                     <td>chime.com</td>
@@ -2084,7 +2120,7 @@
                                         <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
                                     </td>
                                     <td> Anonymous </td>
-                                    <td>Chime Bank [CHECKING ACCOUNT]</td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
                                     <td class="btn-price">$225</td>
                                     <td id="date-70"></td>
                                     <td>chime.com</td>
@@ -2328,7 +2364,7 @@
                                         <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
                                     </td>
                                     <td> Anonymous </td>
-                                    <td>Chime Bank [CHECKING ACCOUNT]</td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
                                     <td class="btn-price">$384</td>
                                     <td id="date-81"></td>
                                     <td>chime.com</td>
@@ -2506,7 +2542,7 @@
                                         <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
                                     </td>
                                     <td> Anonymous </td>
-                                    <td>Chime Bank [CHECKING ACCOUNT]</td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
                                     <td class="btn-price">$267</td>
                                     <td id="date-89"></td>
                                     <td>chime.com</td>
@@ -2705,7 +2741,7 @@
                                         <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
                                     </td>
                                     <td> Anonymous </td>
-                                    <td>Chime Bank [CHECKING ACCOUNT]</td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
                                     <td class="btn-price">$273</td>
                                     <td id="date-98"></td>
                                     <td>chime.com</td>
@@ -2817,7 +2853,7 @@
                                         <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
                                     </td>
                                     <td> Anonymous </td>
-                                    <td>Chime Bank [CHECKING ACCOUNT]</td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
                                     <td class="btn-price">$210</td>
                                     <td id="date-103"></td>
                                     <td>chime.com</td>
@@ -2974,7 +3010,7 @@
                                         <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
                                     </td>
                                     <td> Anonymous </td>
-                                    <td>Chime Bank [CHECKING ACCOUNT]</td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
                                     <td class="btn-price">$273</td>
                                     <td id="date-110"></td>
                                     <td>chime.com</td>
@@ -3131,7 +3167,7 @@
                                         <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
                                     </td>
                                     <td> Anonymous </td>
-                                    <td>Chime Bank [CHECKING ACCOUNT]</td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
                                     <td class="btn-price">$287</td>
                                     <td id="date-117"></td>
                                     <td>chime.com</td>
@@ -3266,7 +3302,7 @@
                                         <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
                                     </td>
                                     <td> Anonymous </td>
-                                    <td>Chime Bank [CHECKING ACCOUNT]</td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
                                     <td class="btn-price">$227</td>
                                     <td id="date-123"></td>
                                     <td>chime.com</td>
@@ -3381,7 +3417,7 @@
                                         <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
                                     </td>
                                     <td> Anonymous </td>
-                                    <td>Chime Bank [CHECKING ACCOUNT]</td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
                                     <td class="btn-price">$170</td>
                                     <td id="date-128"></td>
                                     <td>chime.com</td>
@@ -3519,7 +3555,7 @@
                                         <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
                                     </td>
                                     <td> Anonymous </td>
-                                    <td>Chime Bank [CHECKING ACCOUNT]</td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
                                     <td class="btn-price">$250</td>
                                     <td id="date-134"></td>
                                     <td>chime.com</td>
@@ -3721,7 +3757,7 @@
                                         <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
                                     </td>
                                     <td> Anonymous </td>
-                                    <td>Chime Bank [CHECKING ACCOUNT]</td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
                                     <td class="btn-price">$170</td>
                                     <td id="date-143"></td>
                                     <td>chime.com</td>
@@ -3831,7 +3867,7 @@
                                         <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
                                     </td>
                                     <td> Anonymous </td>
-                                    <td>Chime Bank [CHECKING ACCOUNT]</td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
                                     <td class="btn-price">$403</td>
                                     <td id="date-148"></td>
                                     <td>chime.com</td>
@@ -3897,7 +3933,7 @@
                                         <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
                                     </td>
                                     <td> Anonymous </td>
-                                    <td>Chime Bank [CHECKING ACCOUNT]</td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
                                     <td class="btn-price">$206</td>
                                     <td id="date-151"></td>
                                     <td>chime.com</td>
@@ -3963,7 +3999,7 @@
                                         <img src="images/chime.jpg" style="width: 50px; border-radius: 3px">
                                     </td>
                                     <td> Anonymous </td>
-                                    <td>Chime Bank [CHECKING ACCOUNT]</td>
+                                    <td>Chime Bank [SPENDING ACCOUNT]</td>
                                     <td class="btn-price">$259</td>
                                     <td id="date-154"></td>
                                     <td>chime.com</td>
@@ -4351,27 +4387,27 @@
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
                     `
                     document.getElementById('gta1').innerHTML  =  `
-                    Added 1 <strong>Chime Bank Log</strong>, ${n}  ${m}, ${y}
+                    Added 1 <strong>Suntrust Bank Log</strong>, ${n}  ${m}, ${y}
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
                     `;
                     document.getElementById('gta2').innerHTML  =  `
-                    Added 1 <strong>Huntington Bank Log</strong>, ${n}  ${m}, ${y}
+                    Added 1 <strong>Chase Bank Log</strong>, ${n}  ${m}, ${y}
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
                     `;
                     document.getElementById('gta3').innerHTML  =  `
-                    Sold <strong>Woodforest Bank [CHECKING ACCOUNT]</strong>, Balance: $5,804, ${n}  ${m}, ${y}
+                    Sold <strong>Chime Bank [SPENDING ACCOUNT]</strong>, Balance: $21,437, ${n}  ${m}, ${y}
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
                     `;
                     document.getElementById('gta4').innerHTML  =  `
-                    Sold <strong>Chase Bank [CHECKING ACCOUNT]</strong>, Balance: $6,376, ${n}  ${m}, ${y}
+                    Sold <strong>BBVA Bank [CHECKING ACCOUNT]</strong>, Balance: $5,937, ${n}  ${m}, ${y}
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
                     `;
                     document.getElementById('gta5').innerHTML  =  `
-                    Sold <strong>P.N.C Bank [CHECKING ACCOUNT]</strong>, Balance: $6,038, ${n}  ${m-1}, ${y}
+                    Sold <strong>Woodforest Bank [CHECKING ACCOUNT]</strong>, Balance: $5,804, ${n}  ${m-1}, ${y}
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
                     `;
                     document.getElementById('gta6').innerHTML  =  `
-                    Sold <strong>Navy Federal Bank [CHECKING ACCOUNT]</strong>, Balance: $5,760, ${n}  ${m-1}, ${y}
+                    Sold <strong>Chase Bank [CHECKING ACCOUNT]</strong>, Balance: $6,376, ${n}  ${m-1}, ${y}
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
                     `;
             </script>
@@ -4514,7 +4550,7 @@
                 <div class="counter-box">
                     <span class="icon margin-5px-bottom display-block text-white font-size36 xs-font-size30 xs-text-center"><i class="icon-genius"></i></span>
                     <h4 class="countup text-white display-block xs-text-center">
-                        592
+                        594
                     </h4>
                     <div class="separator-line-horrizontal-medium-light3 bg-white margin-15px-tb xs-margin-10px-tb opacity5 center-col"></div>
                     <p class="font-size24 sm-font-size20 xs-font-size18 font-weight-600 text-white no-margin text-center">
