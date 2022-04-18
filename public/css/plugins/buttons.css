@@ -1155,3 +1155,8 @@ label.error{
 #footer-darknet{
     display: block !important;
 }
+
+.countup.checkout{
+    font-weight: 700 !important;
+    margin: 0 !important;
+}
