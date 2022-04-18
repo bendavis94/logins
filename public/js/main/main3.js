@@ -61,6 +61,7 @@
 			loop: true,
 			nav: false,
 			dots: false,
+            smartSpeed: 500,
 			autoplay: true,
 			autoplayTimeout: 500,
 			responsiveClass: true,
@@ -78,6 +79,7 @@
             responsiveClass: true,
             dots: true,
             nav: true,
+            smartSpeed: 500,
             autoplay: true,
             autoplayTimeout: 2000,
             autoplayHoverPause: true,
@@ -100,13 +102,6 @@
                     margin: 10
                 }
             }
-        });
-        $('.owl-carousel').owlCarousel({
-            items: 1,
-            loop: true,
-            margin: 0,
-            autoplay: true,
-            smartSpeed: 500
         });
 
         $('.slider-fade .owl-carousel').owlCarousel({

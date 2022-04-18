@@ -44,6 +44,7 @@
 			loop: true,
 			nav: false,
 			dots: false,
+            smartSpeed: 500,
 			autoplay: true,
 			autoplayTimeout: 500,
 			responsiveClass: true,
@@ -55,15 +56,7 @@
                 1200: {items: 17, margin: 16}
 			}
 		});
-        $('.owl-carousel').owlCarousel({
-            items: 1,
-            loop: true,
-            dots: false,
-            margin: 0,
-            autoplay: true,
-            smartSpeed: 500
-        });
-
+        
         $('.countup').counterUp({
             delay: 25,
             time: 2000
