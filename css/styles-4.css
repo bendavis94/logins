@@ -3071,6 +3071,13 @@ h1.title-style2.white,h2.title-style2.white,h3.title-style2.white,h4.title-style
 		 font-size: 23px;
 	}
 }
+.filtering span:nth-child(1){
+	background: #47588f;
+	color: white;
+}
+.filtering span:nth-child(1) >i {
+	color: white;
+}
  .filtering-style2 span{
 	font-size:12px;
 	font-weight:700
