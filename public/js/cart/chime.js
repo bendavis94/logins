@@ -119,7 +119,7 @@ if(!localStorage.getItem('loadedchime')){
     document.getElementById("chime47").innerHTML = localStorage.getItem('chime47');
     document.getElementById("chime48").innerHTML = localStorage.getItem('chime48');
     document.getElementById("chime49").innerHTML = localStorage.getItem('chime49');
-    document.getElementById("chime10").innerHTML = localStorage.getItem('chime50');
+    document.getElementById("chime50").innerHTML = localStorage.getItem('chime50');
 
 
     document.getElementById("chime51").innerHTML = localStorage.getItem('chime51');
@@ -255,7 +255,7 @@ if(!localStorage.getItem('loadedchime')){
     document.getElementById("chime47").innerHTML = localStorage.getItem('chime47');
     document.getElementById("chime48").innerHTML = localStorage.getItem('chime48');
     document.getElementById("chime49").innerHTML = localStorage.getItem('chime49');
-    document.getElementById("chime10").innerHTML = localStorage.getItem('chime50');
+    document.getElementById("chime50").innerHTML = localStorage.getItem('chime50');
 
 
     document.getElementById("chime51").innerHTML = localStorage.getItem('chime51');
