@@ -63,8 +63,6 @@
                     "Chase Bank", 
                     "Chime Bank", 
                     "Citi Bank", 
-                    "FundScrip",
-                    
                     
                     "Huntington",
                     "Navy Federal",
@@ -72,16 +70,15 @@
                     "R.B.C Bank",
 
                     "Scotia Bank",
-                    "ShopWithScrip",
                     "Suntrust",
                     "Woodforest"
                 ],
                 datasets: [{
                     data: [
                         55, 50, 59, 52, 
-                        58, 60, 57, 27, 
+                        58, 60, 57, 
                         56, 55, 54, 41, 
-                        37, 23, 50, 50
+                        37, 50, 50
                     ],
                     backgroundColor: [
                         'rgba(107, 185, 131,0.8)', 
@@ -93,8 +90,6 @@
                         'rgba(240, 217, 207,0.8)', 
                         'rgba(135, 174, 180,0.8)', 
                         'rgba(21, 62, 92,0.8)', 
-                        'rgba(237, 85, 96,0.8)', 
-
 
                         'rgba(201, 223, 241,0.8)', 
                         'rgba(240, 217, 207,0.9)',
@@ -102,7 +97,6 @@
                         'rgba(242, 190, 84,0.8)', 
 
 
-                        'rgba(240, 217, 207,0.8)', 
                         'rgba(135, 174, 180,0.8)', 
                         'rgba(21, 62, 92,0.8)', 
                         'rgba(237, 85, 96,0.8)', 
@@ -111,7 +105,7 @@
             };
             if (chBar) {
                 new Chart(chBar,{
-                    type: 'bar',
+                    type: 'doughnut',
                     data: chartData,
                     options: {
                         scales: {
@@ -147,8 +141,7 @@
                         "Chase Bank", 
                         "Chime Bank", 
                         "Citi Bank", 
-                        "FundScrip",
-                        
+
                         
                         "Huntington",
                         "Navy Federal",
@@ -156,16 +149,15 @@
                         "R.B.C Bank",
     
                         "Scotia Bank",
-                        "ShopWithScrip",
                         "Suntrust",
                         "Woodforest"
                     ],
                     datasets: [{
                         data: [
                             55, 50, 59, 52, 
-                            58, 60, 57, 27, 
+                            58, 60, 57, 
                             56, 55, 54, 41, 
-                            37, 23, 50, 50
+                            37, 50, 50
                         ],
                         backgroundColor: [
                             'rgba(107, 185, 131,0.8)', 
@@ -173,20 +165,15 @@
                             'rgba(237, 99, 83,0.8)', 
                             'rgba(242, 190, 84,0.8)', 
     
-    
                             'rgba(240, 217, 207,0.8)', 
                             'rgba(135, 174, 180,0.8)', 
                             'rgba(21, 62, 92,0.8)', 
-                            'rgba(237, 85, 96,0.8)', 
-    
     
                             'rgba(201, 223, 241,0.8)', 
                             'rgba(240, 217, 207,0.9)',
                             'rgba(135, 174, 180,0.8)',
                             'rgba(242, 190, 84,0.8)', 
     
-    
-                            'rgba(240, 217, 207,0.8)', 
                             'rgba(135, 174, 180,0.8)', 
                             'rgba(21, 62, 92,0.8)', 
                             'rgba(237, 85, 96,0.8)', 
