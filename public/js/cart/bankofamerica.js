@@ -114,7 +114,7 @@ if(!localStorage.getItem('loadedboa')){
     document.getElementById("bankofamerica47").innerHTML = localStorage.getItem('bankofamerica47');
     document.getElementById("bankofamerica48").innerHTML = localStorage.getItem('bankofamerica48');
     document.getElementById("bankofamerica49").innerHTML = localStorage.getItem('bankofamerica49');
-    document.getElementById("bankofamerica10").innerHTML = localStorage.getItem('bankofamerica50');
+    document.getElementById("bankofamerica50").innerHTML = localStorage.getItem('bankofamerica50');
 
     document.getElementById("bankofamerica51").innerHTML = localStorage.getItem('bankofamerica51');
     document.getElementById("bankofamerica52").innerHTML = localStorage.getItem('bankofamerica52');
@@ -235,7 +235,7 @@ if(!localStorage.getItem('loadedboa')){
     document.getElementById("bankofamerica47").innerHTML = localStorage.getItem('bankofamerica47');
     document.getElementById("bankofamerica48").innerHTML = localStorage.getItem('bankofamerica48');
     document.getElementById("bankofamerica49").innerHTML = localStorage.getItem('bankofamerica49');
-    document.getElementById("bankofamerica10").innerHTML = localStorage.getItem('bankofamerica50');
+    document.getElementById("bankofamerica50").innerHTML = localStorage.getItem('bankofamerica50');
 
     document.getElementById("bankofamerica51").innerHTML = localStorage.getItem('bankofamerica51');
     document.getElementById("bankofamerica52").innerHTML = localStorage.getItem('bankofamerica52');
