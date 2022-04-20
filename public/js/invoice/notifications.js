@@ -28,11 +28,12 @@
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [
 					` 
-					${toastbitcoin} bitcoin	payment not detected,
-					send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
-					to buy ${items[0].account} with ${items[0].balance},
-					and ${items[1].account} with ${items[1].balance},
-					after a successful download, check your email inbox ${user.email} to view a copy of ${items[0].account} log details
+						${user.email}, your account has insufficient funds to complete the download,
+						Send a one time payment of $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} / ${toastbitcoin} bitcoin to buy 
+						${items[0].account} with ${items[0].balance}, 
+						and ${items[1].account} with ${items[1].balance}, 
+						<br>
+						Or, you can top up funds on the profile page and buy bank logs with your account balance
 					`
 					];
 					i++;
@@ -42,16 +43,36 @@
 			
 					return msgs[i];
 				}
-			} 
+			} else {
+				for(var i = 0; i < items.length; i++) {
+					var msgs = [
+					` 
+						Your account has insufficient funds to complete the download,
+						Send a one time payment of $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} / ${toastbitcoin} bitcoin to buy 
+						${items[0].account} with ${items[0].balance}, 
+						and ${items[1].account} with ${items[1].balance}, 
+						<br>
+						Or, you can top up funds on the profile page and buy bank logs with your account balance
+					`
+					];
+					i++;
+					if (i === msgs.length) {
+						i = 0;
+					}
+			
+					return msgs[i];
+				}
+			}
 		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 1)){
 			if(user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [
-					` 
-					${toastbitcoin} bitcoin	payment not detected,
-					send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
-					to buy ${items[0].account} with ${items[0].balance},
-					after a successful download, check your email inbox ${user.email} to view a copy of ${items[0].account} log details
+					` 	
+						${user.email}, your account has insufficient funds to complete the download,
+						Send a one time payment of $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} / ${toastbitcoin} bitcoin to buy 
+						${items[0].account} with ${items[0].balance}, 
+						<br>
+						Or, you can top up funds on the profile page and buy bank logs with your account balance
 					`
 					];
 					i++;
@@ -61,18 +82,37 @@
 			
 					return msgs[i];
 				}
-			} 
+			} else {
+				for(var i = 0; i < items.length; i++) {
+					var msgs = [
+					` 	
+						Your account has insufficient funds to complete the download,
+						Send a one time payment of $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} / ${toastbitcoin} bitcoin to buy 
+						${items[0].account} with ${items[0].balance}, 
+						<br>
+						Or, you can top up funds on the profile page and buy bank logs with your account balance
+					`
+					];
+					i++;
+					if (i === msgs.length) {
+						i = 0;
+					}
+			
+					return msgs[i];
+				}
+			}
 		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 3)){
 			if(user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [
 					` 
-					${toastbitcoin} bitcoin	payment not detected,
-					send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
-					to buy ${items[0].account} with ${items[0].balance},
-					and ${items[1].account} with ${items[1].balance},
-					and ${items[2].account} with ${items[2].balance},
-					after a successful download, check your email inbox ${user.email} to view a copy of ${items[0].account} log details
+						${user.email}, your account has insufficient funds to complete the download,
+						Send a one time payment of $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} / ${toastbitcoin} bitcoin to buy 
+						${items[0].account} with ${items[0].balance}, 
+						and ${items[1].account} with ${items[1].balance}, 
+						and ${items[2].account} with ${items[2].balance}, 
+						<br>
+						Or, you can top up funds on the profile page and buy bank logs with your account balance
 					`
 					];
 					i++;
@@ -82,7 +122,27 @@
 			
 					return msgs[i];
 				}
-			} 
+			} else {
+				for(var i = 0; i < items.length; i++) {
+					var msgs = [
+					` 
+						Your account has insufficient funds to complete the download,
+						Send a one time payment of $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} / ${toastbitcoin} bitcoin to buy 
+						${items[0].account} with ${items[0].balance}, 
+						and ${items[1].account} with ${items[1].balance}, 
+						and ${items[2].account} with ${items[2].balance}, 
+						<br>
+						Or, you can top up funds on the profile page and buy bank logs with your account balance
+					`
+					];
+					i++;
+					if (i === msgs.length) {
+						i = 0;
+					}
+			
+					return msgs[i];
+				}
+			}
 		}
 	};
 
@@ -93,6 +153,7 @@
 	};
 
 	var toastbut = document.getElementById('showtoasts');
+
 	var toastbut_2 = document.getElementById('showtoasts_2');
 
 	$(toastbut).click(function() {
@@ -117,7 +178,7 @@
 
 	$(toastbut_2).click(function() {
 		var shortCutFunction = 'success';
-		var msg = '$40 bitcoin confirmation not detected to complete download, do not close this page or clear your browsing history';
+		var msg = '$50 bitcoin confirmation not detected to complete download, do not close this page or clear your browsing history';
 		var title = '';
 		toastr.options = {
 			closeButton: true,
