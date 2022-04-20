@@ -27,12 +27,12 @@ function myFunction() {
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			rockHolder.innerText = user.displayName;
 			tableidHolder.value = "Name: " + user.displayName;
-			idHolder4.innerText = 'User ID: ' + user.uid;
 		} 
 		if (user.uid) {
 			uidHolder.innerText = user.uid;
 		}
 		if (user.email) {
+			idHolder4.innerText = 'Account: ' + user.email;
 			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
 			email5.innerHTML = user.email;
