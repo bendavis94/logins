@@ -741,6 +741,10 @@ td{
     .shopwi{
         font-size: 17px !important;
     }
+    .bankof{
+        font-size: 17px !important;
+        padding: 7px 2px !important;
+    }
 }
 
 .wells-img{
