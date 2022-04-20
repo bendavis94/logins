@@ -61,13 +61,13 @@
     -webkit-transition-duration:.7s;
     transition-duration:.7s;
 }
-#style-switcher:hover{
-	/* transition-timing-function:ease-in-out; */
-	/* transition-duration:.2s; */
-    left: 0;
-}
-#style-switcher:not(:hover){
-    left: -260px !important;
+@media screen and (min-width: 1067px) {
+    #style-switcher:hover{
+        left: 0;
+    }
+    #style-switcher:not(:hover){
+        left: -260px !important;
+    }
 }
 #style-switcher > div{
     float:left;
