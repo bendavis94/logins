@@ -3296,13 +3296,6 @@ h1.title-style2.white,h2.title-style2.white,h3.title-style2.white,h4.title-style
 	 color:#fff;
 	 padding: 5px;
 }
- .pricing-list h4{
-	 color:#232323;
-	 font-size:25px;
-	 font-weight:500;
-	 letter-spacing:2px;
-	 margin-bottom:10px 
-}
  .pricing-list h2{
 	 display:inline-block;
 	 color:#121d33;
@@ -3313,12 +3306,6 @@ h1.title-style2.white,h2.title-style2.white,h3.title-style2.white,h4.title-style
 }
  .pricing-list h2.text-white{
 	 border-bottom: 1px solid #fff;
-}
- .pricing-list h2 sup{
-	 color:#232323;
-	 font-size:30px;
-	 font-weight:500;
-	 vertical-align:sub 
 }
  .pricing-list span{
 	 display:inline-block;
