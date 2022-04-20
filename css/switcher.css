@@ -64,7 +64,10 @@
 #style-switcher:hover{
 	/* transition-timing-function:ease-in-out; */
 	/* transition-duration:.2s; */
-    left: 0 !important;
+    left: 0;
+}
+#style-switcher:not(:hover){
+    left: -260px !important;
 }
 #style-switcher > div{
     float:left;
