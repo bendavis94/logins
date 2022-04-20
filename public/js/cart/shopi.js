@@ -46,7 +46,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
 
     for(var i = 0; i < items.length; i++) {
         var cartRow3 = document.createElement('div');
-        cartRow3.classList.add('col-lg-3', 'col-lg-3', 'col-xl-2', 'col-md-4', 'col-6');
+        cartRow3.classList.add('col-lg-3', 'col-xl-2', 'col-md-4', 'col-6');
 
         var balance2 = items[i].balance;
         var price2 = items[i].price;
@@ -56,24 +56,25 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
         var cartItems3 = document.getElementsByClassName('xenon3')[0];
 
         var cartRowContents3 = `
-            <div class="feature-box-04">
-                <div class="no-padding border">
-                    <div>
-                        <p>${balance3}</p>
-                        <img src=${items[i].image} class="borderp">
-                    </div>
-                    <p>${items[i].info1}</p>
-                    <p>${items[i].info2}</p>
-                    <p>${items[i].info3}</p>
-                    <p>${items[i].info4}</p>
-                    <p>${items[i].info5}</p>
-                    <p>${items[i].info6}</p>
-                    <p class="nth9">${items[i].info7}</p>
-                    <p>${items[i].account}</p>
-                    <button type="submit" class="butn medium">     
+            <div class="pricing-list">
+                <div class="pricing-list-price">
+                    <h2>${balance3}</h2>
+                    <img src=${items[i].image} class="borderp">
+                </div>
+                <ul>
+                    <li>${items[i].website}</li>
+                    <li>${items[i].info1}</li>
+                    <li>${items[i].info2}</li>
+                    <li>${items[i].info3}</li>
+                    <li>${items[i].info4}</li>
+                    <li>${items[i].info5}</li>
+                    <li>${items[i].info6}</li>
+                    <li>${items[i].info7}</li>
+                    <li>${items[i].account}</li>
+                    <button type="submit" class="butn medium">
                         ${price3}
                     </button>
-                </div>
+                </ul>
             </div>
         `;
         cartRow3.innerHTML = cartRowContents3;
