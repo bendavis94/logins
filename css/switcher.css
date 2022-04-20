@@ -61,6 +61,11 @@
     -webkit-transition-duration:.7s;
     transition-duration:.7s;
 }
+#style-switcher:hover{
+	/* transition-timing-function:ease-in-out; */
+	/* transition-duration:.2s; */
+    left: 0 !important;
+}
 #style-switcher > div{
     float:left;
     width:100%;
