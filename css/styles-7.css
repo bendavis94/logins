@@ -3293,16 +3293,21 @@ h1.title-style2.white,h2.title-style2.white,h3.title-style2.white,h4.title-style
 	 color:#fff;
 	 padding: 5px;
 }
- .pricing-list h2{
-	 display:inline-block;
-	 color:#121d33;
-	 font-weight: 700;
-	 letter-spacing:2px;
-	 margin: 0 auto;
-	 font-size: 36px;
+.pricing-list h2{
+	display:inline-block;
+	color:#121d33;
+	font-weight: 700;
+	letter-spacing:1px;
+	margin: 0 auto !important;
+	font-size: 33px !important;
 }
- .pricing-list h2.text-white{
-	 border-bottom: 1px solid #fff;
+.pricing-list h2.text-white{
+	border-bottom: 1px solid #fff;
+}
+@media screen and (max-width: 769px) {
+   .pricing-list h2{
+	   font-size: 31px !important;
+   }
 }
  .pricing-list span{
 	 display:inline-block;
