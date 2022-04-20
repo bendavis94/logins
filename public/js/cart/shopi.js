@@ -45,41 +45,72 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
     });
 
     for(var i = 0; i < items.length; i++) {
-        var cartRow3 = document.createElement('div');
-        cartRow3.classList.add('col-lg-3', 'col-xl-2', 'col-md-4', 'col-6');
 
-        var balance2 = items[i].balance;
-        var price2 = items[i].price;
-        var balance3 = balance2.replace('Balance: ', '');
-        var price3 = price2.replace('Price: ', 'In Cart: ');
-
-        var cartItems3 = document.getElementsByClassName('xenon3')[0];
-
-        var cartRowContents3 = `
-            <div class="pricing-list">
-                <div class="pricing-list-price">
-                    <h2>${balance3}</h2>
-                    <img src=${items[i].image} class="borderp">
+        if((items[i].account).includes('CHECKING')){
+            var cartRow3 = document.createElement('div');
+            cartRow3.classList.add('col-lg-3', 'col-xl-2', 'col-md-4', 'col-6');
+            var balance2 = items[i].balance;
+            var price2 = items[i].price;
+            var balance3 = balance2.replace('Balance: ', '');
+            var price3 = price2.replace('Price: ', 'In Cart: ');
+            var cartItems3 = document.getElementsByClassName('xenon3')[0];
+            var cartRowContents3 = `
+                <div class="pricing-list highlight">
+                    <div class="pricing-list-price">
+                        <h2 class="text-white">${balance3}</h2>
+                        <img src=${items[i].image} class="borderp">
+                    </div>
+                    <ul>
+                        <li class="text-white">${items[i].website} </li>
+                        <li class="text-white">${items[i].info1} </li>
+                        <li class="text-white">${items[i].info2} </li>
+                        <li class="text-white">${items[i].info3} </li>
+                        <li class="text-white">${items[i].info4} </li>
+                        <li class="text-white">${items[i].info5} </li>
+                        <li class="text-white">${items[i].info6} </li>
+                        <li class="text-white">${items[i].info7} </li>
+                        <li class="text-white">${items[i].account} </li>
+                        <button type="submit" class="butn medium white">
+                            ${price3}
+                        </button>
+                    </ul>
                 </div>
-                <ul>
-                    <li>${items[i].website}</li>
-                    <li>${items[i].info1}</li>
-                    <li>${items[i].info2}</li>
-                    <li>${items[i].info3}</li>
-                    <li>${items[i].info4}</li>
-                    <li>${items[i].info5}</li>
-                    <li>${items[i].info6}</li>
-                    <li>${items[i].info7}</li>
-                    <li>${items[i].account}</li>
-                    <button type="submit" class="butn medium">
-                        ${price3}
-                    </button>
-                </ul>
-            </div>
-        `;
-        cartRow3.innerHTML = cartRowContents3;
-
-        cartItems3.prepend(cartRow3);
+            `;
+            cartRow3.innerHTML = cartRowContents3;
+            cartItems3.prepend(cartRow3);
+        } else {
+            var cartRow3 = document.createElement('div');
+            cartRow3.classList.add('col-lg-3', 'col-xl-2', 'col-md-4', 'col-6');
+            var balance2 = items[i].balance;
+            var price2 = items[i].price;
+            var balance3 = balance2.replace('Balance: ', '');
+            var price3 = price2.replace('Price: ', 'In Cart: ');
+            var cartItems3 = document.getElementsByClassName('xenon3')[0];
+            var cartRowContents3 = `
+                <div class="pricing-list">
+                    <div class="pricing-list-price">
+                        <h2>${balance3}</h2>
+                        <img src=${items[i].image} class="borderp">
+                    </div>
+                    <ul>
+                        <li>${items[i].website} </li>
+                        <li>${items[i].info1} </li>
+                        <li>${items[i].info2} </li>
+                        <li>${items[i].info3} </li>
+                        <li>${items[i].info4} </li>
+                        <li>${items[i].info5} </li>
+                        <li>${items[i].info6} </li>
+                        <li>${items[i].info7} </li>
+                        <li>${items[i].account} </li>
+                        <button type="submit" class="butn medium">
+                            ${price3}
+                        </button>
+                    </ul>
+                </div>
+            `;
+            cartRow3.innerHTML = cartRowContents3;
+            cartItems3.prepend(cartRow3);
+        }
     }
 
     updateCartTotal();
