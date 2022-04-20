@@ -50,9 +50,9 @@
 					var msgs = [
 					` 
 					${toastbitcoin} bitcoin	confirmation not detected,
-					send a one time payment of $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
+					send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
 					to buy ${items[0].account} with ${items[0].balance},
-					after a successful download, check your email inbox ${user.email} spam folder to view a copy of the ${items[0].account} log details
+					after a successful download, check your email inbox ${user.email} to view a copy of the ${items[0].account} log details
 					`
 					];
 					i++;
