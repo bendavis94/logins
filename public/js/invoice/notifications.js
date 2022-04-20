@@ -28,12 +28,11 @@
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [
 					` 
-					${toastbitcoin} bitcoin	confirmation not detected,
-					send a one time payment of $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
-					to buy ${items[0].account} with ${items[0].balance}, 
-					and ${items[1].account} with ${items[1].balance}
-					after a successful download, check your email inbox ${user.email} spam folder to 
-					view a copy of ${items[0].account}, and ${items[1].account} log details
+					${toastbitcoin} bitcoin	payment not detected,
+					send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
+					to buy ${items[0].account} with ${items[0].balance},
+					and ${items[1].account} with ${items[1].balance},
+					after a successful download, check your email inbox ${user.email} to view a copy of ${items[0].account} log details
 					`
 					];
 					i++;
@@ -49,10 +48,10 @@
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [
 					` 
-					${toastbitcoin} bitcoin	confirmation not detected,
+					${toastbitcoin} bitcoin	payment not detected,
 					send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
 					to buy ${items[0].account} with ${items[0].balance},
-					after a successful download, check your email inbox ${user.email} to view a copy of the ${items[0].account} log details
+					after a successful download, check your email inbox ${user.email} to view a copy of ${items[0].account} log details
 					`
 					];
 					i++;
@@ -68,11 +67,12 @@
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [
 					` 
-						${user.email}, your account has insufficient funds to complete the download,
-						Send a one time payment of $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} / ${toastbitcoin} bitcoin to buy 
-						${items[0].account} with ${items[0].balance}, 
-						and ${items[1].account} with ${items[1].balance}, 
-						and ${items[2].account} with ${items[2].balance}
+					${toastbitcoin} bitcoin	payment not detected,
+					send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")},
+					to buy ${items[0].account} with ${items[0].balance},
+					and ${items[1].account} with ${items[1].balance},
+					and ${items[2].account} with ${items[2].balance},
+					after a successful download, check your email inbox ${user.email} to view a copy of ${items[0].account} log details
 					`
 					];
 					i++;
