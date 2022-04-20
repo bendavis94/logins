@@ -1160,3 +1160,11 @@ label.error{
     font-weight: 700 !important;
     margin: 0 !important;
 }
+
+.small-footer-list{
+    border-bottom: none !important;
+    margin: 5px 0;
+}
+.small-footer-list button{
+    background: white !important;
+}
