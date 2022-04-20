@@ -19,14 +19,20 @@
     <link rel="stylesheet" href="css/plugins/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/plugins/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/plugins/animate.css" />
+    <link rel="stylesheet" href="css/plugins/animate.css" />
     <link rel="stylesheet" href="switchery/switchery.min.css" />
     <link href="css/switcher.css" rel="stylesheet">
 
     <link rel="stylesheet" href="datatables/css/jquery.datatables.min.css" />
     <link rel="stylesheet" href="datatables/css/jquery.datatables_themeroller.css" />
-    
-    <link href="css/styles-5.css" rel="stylesheet" id="colors">
+
+    <link rel="stylesheet" href="css/rev_slider/settings.css">
+    <link rel="stylesheet" href="css/rev_slider/layers.css">
+    <link rel="stylesheet" href="css/rev_slider/navigation.css">
+
+    <link href="css/styles-2.css" rel="stylesheet" id="colors">
     <link href="css/plugins/buttons.css" rel="stylesheet">
+    <link href="css/plugins/particles.css" rel="stylesheet">
 </head>
 <body onload="myFunction()" id="thebodyz">
     <div id="preloader">
@@ -37,7 +43,7 @@
 
     <div class="main-wrapper">
         <audio autoplay="true" loop="true">
-            <source src="images/playsom.mp3" type="audio/mpeg">
+            <source src="images/a-little-bit-of-fear.mp3" type="audio/mpeg">
         </audio>
 
 <header class="header-style2"  id="home">
@@ -50,7 +56,7 @@
 
     <div class="navbar-header navbar-header-custom">
         <a href="home" class="navbar-brand logoinner" style="display: flex;">
-            <img id="logo" src="img/logos/logo5.png" alt="">
+            <img id="logo" src="img/logos/logo2.png" alt="">
             <div style="display: grid;">
                 <span id="jinaHolder"> </span>
                 <span id="jinaHolder2"></span>
@@ -59,7 +65,6 @@
     </div>
 
     <div class="navbar-toggler"></div>
-
 
     <ul class="navbar-nav ml-auto" id="nav" style="display: none;">
         <li class="sm-display-none md-display-none" style="background: lightblue;">
@@ -122,7 +127,7 @@
                 Bani Loii
             </a>
         </li>
-    
+        
         <li class="lg-display-none" onclick="window.location.assign('profile')">
             <img src="img/svg/reset.svg" class="keimage" style="background: lightblue;">
             <button class="btn-style4 small gta" onclick="window.location.assign('profile')">
@@ -295,47 +300,53 @@
 </header>
 
 
-
-
-<!-- start slideshow-->
-<div class="container-fluid full-screen">
-    <div class="row slider-fade">
-        <div class="owl-carousel owl-theme width-100">
-            <div class="text-center item bg-img" data-overlay-dark="7" data-background="wall/chase.jpg">
-                <div class="absolute-middle-center caption">
-                    <div class="overflow-hidden infinite-floating">
-                        <h3 class="alt-font font-size28 sm-font-size18 text-white no-margin">
-                            23 Accounts Available
-                        </h3>
-                        <h1 class="text-white">
-                            Checking Accounts
-                        </h1>
-                        <button data-scroll-nav="5" class='btn-style4 white scroll-down'>
-                            View Accounts <i class="fas fa-angle-down" style="margin-left: 5px;"></i>
-                        </button>
-                    </div>
+<!-- start revolution slideshow-->
+<div class="rev_slider_wrapper">
+    <div class="rev_slider" id="rev_slider_2" data-version="5.4.5">
+        <ul>
+            <li data-fstransition="fade" data-transition="scaledownfrombottom" data-easein="default" data-easeout="default" data-slotamount="1" data-masterspeed="1200" data-delay="4000" 
+            data-title="Checking Accounts">
+                <div class="opacity-full bg-black z-index-1"></div>
+                <img src="wall/chase.jpg" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgparallax="7" class="rev-slidebg">
+                <div class="tp-caption small-text text-white slider-text text-uppercase font-weight-300" data-x="30" data-y="center" data-voffset="[-102,-88,-98,-128]" data-fontsize="[21,21,21,21]" data-lineheight="34" data-width="[600, 500, 400, 300]" data-whitespace="[nowrap, nowrap, nowrap, normal]" data-frames='[{ "delay":1000,"speed":900,"frame":"0","from":"y:150px;opacity:0;","ease":"Power3.easeOut","to":"o:1;" },{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeOut"}]'>
+                    <p class="white-space">
+                        23 Accounts Available
+                    </p>
                 </div>
-            </div>
-            <div class="text-center item bg-img" data-overlay-dark="6" data-background="wall/chase2.jpg">
-                <div class="absolute-middle-center caption">
-                    <div class="overflow-hidden  infinite-floating">
-                        <h3 class="alt-font font-size28 sm-font-size18 text-white no-margin">
-                            35 Accounts Available
-                        </h3>
-                        <h1 class="text-white">
-                            Savings Accounts
-                        </h1>
-                        <button data-scroll-nav="5" class='btn-style4 white scroll-down'>
-                            View Accounts <i class="fas fa-angle-down" style="margin-left: 5px;"></i>
-                        </button>
-                    </div>
+                <div class="tp-caption hero-text text-white alt-font font-weight-500 text-uppercase" data-x="30" data-y="center" data-voffset="[-28,-10,-20,-40]"  data-fontsize="[72,62,52,46]" data-lineheight="[72,62,52,46]" data-width="[none, none, none, 300]" data-whitespace="[nowrap, nowrap, nowrap, normal]" data-frames='[{"delay":1100,"speed":900,"frame":"0","from":"y:150px;opacity:0;","ease":"Power3.easeOut","to":"o:1;"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeOut"}]' data-splitout="none">
+                        Checking Accounts
                 </div>
-            </div>
+                <div class="tp-caption" data-x="30" data-y="center" data-voffset="[64,100,85,94]" data-lineheight="55" data-hoffset="0" data-frames='[{"delay":1200,"speed":900,"frame":"0","from":"y:150px;opacity:0;","ease":"Power3.easeOut","to":"o:1;"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeOut"}]'>
+                    <button data-scroll-nav="5" class='btn-style4 white scroll-down'>
+                        View Accounts <i class="fas fa-angle-down" style="margin-left: 5px;"></i>
+                    </button>
+                </div>
+            </li>
 
-        </div>
+            
+
+            <li data-transition="scaledownfrombottom" data-easein="default" data-easeout="default" data-slotamount="1" data-masterspeed="1200" data-delay="4000" 
+            data-title="Savings Accounts">
+                <div class="opacity-full bg-black z-index-1"></div>
+                <img src="wall/chase2.jpg" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgparallax="7" class="rev-slidebg">
+                <div class="tp-caption small-text text-white slider-text text-uppercase font-weight-300" data-x="30" data-y="center" data-voffset="[-102,-88,-98,-128]" data-fontsize="[21,21,21,21]" data-lineheight="34" data-width="[600, 500, 400, 300]" data-whitespace="[nowrap, nowrap, nowrap, normal]" data-frames='[{"delay":1000,"speed":900,"frame":"0","from":"y:150px;opacity:0;","ease":"Power3.easeOut","to":"o:1;"},{"delay":"wait", "speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeOut"}]'>
+                    <p class="white-space">
+                        35 Accounts Available
+                    </p>
+                </div>
+                <div class="tp-caption hero-text text-white alt-font font-weight-500 text-uppercase" data-x="30" data-y="center" data-voffset="[-28,-10,-20,-40]" data-fontsize="[72,62,52,46]" data-lineheight="[72,62,52,46]" data-width="[none, none, none, 300]" data-whitespace="[nowrap, nowrap, nowrap, normal]" data-frames='[{"delay":1100,"speed":900,"frame":"0","from":"y:150px;opacity:0;","ease":"Power3.easeOut","to":"o:1;"},{"delay":"wait", "speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeOut"}]' data-splitout="none">
+                        Savings Accounts
+                </div>
+                <div class="tp-caption" data-x="30" data-y="center"  data-voffset="[64,100,85,94]" data-lineheight="55" data-hoffset="0" data-frames='[{"delay":1200,"speed":900,"frame":"0","from":"y:150px;opacity:0;","ease":"Power3.easeOut","to":"o:1;"},{"delay":"wait","speed":1000, "frame":"999", "to":"opacity:0;","ease":"Power3.easeOut"}]'>
+                    <button data-scroll-nav="5" class='btn-style4 white scroll-down'>
+                        View Accounts <i class="fas fa-angle-down" style="margin-left: 5px;"></i>
+                    </button>
+                </div>
+            </li>
+        </ul>
     </div>
 </div>
-<!-- end slideshow-->
+<!-- end revolution slideshow-->
 
 
 
@@ -343,30 +354,27 @@
 
 
 
-
-<!-- start projet ection -->
-<section class="bg-img background-size-contain" data-background="images/banner.jpg" style="padding: 0; margin: 0;" data-scroll-index="5">
+<!-- start contact info section -->
+<section class="parallax" data-background="images/banner.jpg" style="padding: 0;" data-scroll-index="5">
     <div class="opacity-full-dark bg-extra-dark-gray"></div>
-
     <div class="container-fluid infinite-floating">
     <div class="row">
-        <img src="img/partners/chase.jpg" style="display: none;">
-
-        <!-- Start links -->
-<div class="filtering col-sm-12 text-center">
-    <span data-filter='.checking'>
-        <i class="fas fa-wallet"></i>
-    CHECKING
-    </span>
-    <span data-filter='.savings'>
-        <i class="fas fa-piggy-bank"></i>
-    SAVINGS
-    </span>
-</div>
-<!-- End links -->
-
-
-        <div class="gallery text-center width-100">
+    
+    <img src="img/partners/chase.jpg" style="display: none;">
+    
+    <!-- Start links -->
+    <div class="filtering col-sm-12 text-center">
+        <span data-filter='.checking'>
+            <i class="fas fa-wallet"></i>
+        CHECKING
+        </span>
+        <span data-filter='.savings'>
+            <i class="fas fa-piggy-bank"></i>
+        SAVINGS
+        </span>
+    </div>
+    <!-- End links -->
+    <div class="gallery text-center width-100 product-grid">
 
             <div class="col-lg-3 col-xl-2 col-md-4 col-6 items savings  wow fadeInRight">
                 <div class="pricing-list">     
@@ -1967,6 +1975,7 @@
 </footer>
 <!-- end footer ection -->
 
+
     
 </div>
 <!-- end main-wrapper section -->
@@ -1991,7 +2000,6 @@
 <a href="javascript:void(0)" class="scroll-to-top infinite-floating">
     <i class="fas fa-angle-up"></i>
 </a>
-
 
 
 
@@ -2053,6 +2061,7 @@
 
 
 
+
 <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog mkbhd">
         <div class="modal-content">
@@ -2097,25 +2106,24 @@
 </div>
 
 
-
-
     <script src="js/cart/chase.js"></script>
     <script src="js/pages/clock.js"></script>
-
     <script src="js/google/bro.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
     <script src="js/google/fir.js"></script>
     <script src="js/main/core.min.js"></script>
     <script src="switchery/switchery.min.js"></script>
-    <script src="js/main/main3.js"></script>
+    <script src="js/main/main2.js"></script>
     <script src="js/pages/ui-modals2.js"></script>
 
     <script src="datatables/js/jquery.datatable2.min.js"></script>
     <script src="js/cart/shop33.js"></script>
 
+    <script src="js/rev_slider/jquery.themepunch.tools.min.js"></script>
+    <script src="js/rev_slider/jquery.themepunch.revolution.min.js"></script>
+
     <script src="js/pages/particles.js"></script>
     <script src="js/pages/app.js"></script>
-
 </body>
 </html>
