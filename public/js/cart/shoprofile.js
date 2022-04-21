@@ -1,5 +1,15 @@
 let items = [];
 
+var month = new Array();
+month[2] = "March";
+month[3] = "April";
+month[4] = "May";
+month[5] = "June";
+var d = new Date();
+var n = month[d.getMonth()];
+var y = d.getFullYear();
+var m = d.getDate();
+
 if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
 
     items = JSON.parse(localStorage.getItem('banklogs'));
@@ -22,6 +32,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
             <td id=${'name-on-table' + items.indexOf(items[i])} style="filter: blur(0px);"></td> 
             <td>${items[i].account}</td>
             <td class="btn-price">${(items[i].price).replace('Price: ','')}</td>
+            <td>${n} ${m}, ${y}</td>
             <td>${items[i].website}</td>
             <td>${items[i].info1}</td>
             <td>${items[i].info2}</td>
