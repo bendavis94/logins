@@ -185,6 +185,12 @@ select{
     font-size: 18px;
     width: 99%;
 }
+@media screen and (max-width: 769px){
+    #showtoasts{
+        font-size: 21px;
+        width: 99%;
+    }
+}
 .modal-title{
     font-size: 20px;
     font-weight: 600;
@@ -824,25 +830,37 @@ td{
     justify-content: center;
     margin: 5px 0;
 }
-#text-to-copy, #text-to-copy-2{
+#text-to-copy{
     color: #121d33 !important;
     font-size: 16px;
     font-weight: 700;
     margin: 0;
-    width: 72%;
+    width: 70%;
     padding: 5px;
     border-radius: 1px;
+    font-size: 17px !important;
     border: 2px solid rgba(135,206,235,0.2);
     background: white !important;
 }
-#copy-text, #copy-text-2{
+#copy-text{
     background: yellow;
-    padding: 3px 1px;
-    margin-left: 2px;
+    padding: 5px;
+    margin-left: 1px;
     border: 1px solid gold;
     width: 28%;
     color: #121d33;
     display: flex !important;
+}
+@media (max-width:576px){
+    #text-to-copy{
+        width: 75%;
+        font-size: 20px !important;
+    }
+    #copy-text{
+        padding: 7px 5px !important;
+        width: 25%;
+        font-size: 23px !important;
+    }
 }
 #invoice-footer{
     margin: 0;
