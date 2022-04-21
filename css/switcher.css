@@ -61,6 +61,14 @@
     -webkit-transition-duration:.7s;
     transition-duration:.7s;
 }
+@media screen and (min-width: 1067px) {
+    #style-switcher:hover{
+        left: 0;
+    }
+    #style-switcher:not(:hover){
+        left: -260px !important;
+    }
+}
 #style-switcher > div{
     float:left;
     width:100%;
