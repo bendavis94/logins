@@ -28,13 +28,7 @@ function myFunction() {
 			rockHolder.innerText = user.displayName;
 			tableidHolder.value = "Name: " + user.displayName;
 			idHolder4.innerText = 'User ID: ' + user.uid;
-		} else {
-			jinaHolder.innerText = "Anonymous";
-			jinaHolder2.innerText = 'USER ID: ' + user.uid;
-			rockHolder.innerText = "Anonymous";
-			tableidHolder.value = "Name: Anonymous";
-			idHolder4.innerText = 'USER ID: ' + user.uid;
-		}
+		} 
 		if (user.uid) {
 			uidHolder.innerText = user.uid;
 		}
@@ -42,22 +36,13 @@ function myFunction() {
 			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
 			email5.innerHTML = user.email;
-		} else {
-			email1.innerHTML = `Bank Log files + cookies can only be downloaded once, so make sure you save them in a folder you won't forget.`
-			email2.innerHTML = `Use a winrar software to extract bank log files from .zip format after a successful download,... Also Download Cookies Editor extension for chrome browser and use it to import cookies`;
-			email5.innerHTML = 'No email connected';
-		}
+		} 
 		let goodies = [];
 
 		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.displayName){
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
 			for(var i = 0; i < goodies.length; i++) {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.displayName;
-			}
-		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && !user.displayName){
-			goodies = JSON.parse(localStorage.getItem('banklogs'));
-			for(var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous';
 			}
 		} else{
 			console.log('No items are present')
