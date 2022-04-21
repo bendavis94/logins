@@ -27,29 +27,16 @@ function myFunction() {
               <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
               ${user.displayName}, your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
           `;
-      });
-    } else {
-      jinaHolder.innerText = 'Anonymous';
-      jinaHolder2.innerText = 'USER ID: ' + user.uid;
-
-      fetch('https://ipapi.co/json/')
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(data) {
-          document.getElementById('yourIP').innerHTML = `
-              <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-              Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
-          `;
-      });
-    }
+          document.getElementById('yourIP2').innerHTML = `
+            <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
+            ${user.displayName}, your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}</strong>
+        `;
+        });
+    } 
     if (user.email){
         invoiceHolder.innerText = 'Invoice to: '+ user.email;
         invoiceHolder3.innerText = 'Invoice to: '+ user.email;
-    } else {
-      invoiceHolder.innerText = 'User ID: ' + user.uid;
-      invoiceHolder3.innerText = 'User ID: ' + user.uid;
-    }
+    } 
   });
 
   document.getElementById("thebodyz").oncontextmenu = function() {
