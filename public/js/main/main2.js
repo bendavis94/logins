@@ -1,9 +1,9 @@
 (function($) {
     "use strict";
     var $window = $(window);
-    // $('#preloader').fadeOut('normall', function() {
-    //     $(this).remove();
-    // });
+    $('#preloader').fadeOut('normall', function() {
+        $(this).remove();
+    });
     $window.on('scroll', function() {
         var scroll = $window.scrollTop();
         if (scroll <= 50) {
