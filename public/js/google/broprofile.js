@@ -11,7 +11,6 @@ function myFunction() {
 	const email1 = document.getElementById('yourEmail1');
 	const email2 = document.getElementById('yourEmail2');
 	const email5 = document.getElementById('yourEmail5');
-	const idHolder4 = document.getElementById('invoiceHolder4');
 	const auth = firebase.auth();
 
 	auth.onAuthStateChanged(user => {
@@ -95,19 +94,18 @@ function myFunction() {
 	};
 	editButton.addEventListener("click", editInformation);
 
-fetch('https://ipapi.co/json/')
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(data) {
-    document.getElementById('yourIP2').innerHTML = `
-    	${data.ip}, ${data.city}, ${data.country_name}, ${data.region}, ${data.org}, ${data.timezone}
-    `;
-});
+	fetch('https://ipapi.co/json/')
+	.then(function(response) {
+		return response.json();
+	})
+	.then(function(data) {
+		document.getElementById('yourIP2').innerHTML = `
+			${data.ip}, ${data.city}, ${data.country_name}, ${data.region}, ${data.org}, ${data.timezone}
+		`;
+	});
 
 
 	const logoutButton = document.getElementById("logoutButton");
-
 	logoutButton.addEventListener("click", e => {
 		e.preventDefault();
 		auth.signOut().then(() => {
@@ -116,7 +114,6 @@ fetch('https://ipapi.co/json/')
 			console.error(error);
 		});
 	});
-
 	document.getElementById("thebodyz").oncontextmenu = function() {
 		return false
 	};
