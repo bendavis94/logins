@@ -6,7 +6,7 @@ function myFunction() {
 
   auth.onAuthStateChanged(user => {
     if (!user) {
-      window.location.assign("index");
+      // window.location.assign("index");
     }
     if (user.photoURL) {
       logoHolder.setAttribute("src", user.photoURL);
@@ -23,6 +23,19 @@ function myFunction() {
         .then(function(data) {
           document.getElementById('footer-email').innerHTML = `
            ${user.displayName}, your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
+          `;
+      });
+    } else {
+      jinaHolder.innerText = 'Anonymous';
+      jinaHolder2.innerText = 'USER ID: ' + user.uid;
+
+      fetch('https://ipapi.co/json/')
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          document.getElementById('footer-email').innerHTML = `
+           Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
           `;
       });
     } 

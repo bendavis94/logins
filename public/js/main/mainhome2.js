@@ -13,6 +13,19 @@
 
         }
     });
+    $window.on('scroll', function() {
+        if ($(this).scrollTop() > 500) {
+            $(".scroll-to-top").fadeIn(400);
+        } else {
+            $(".scroll-to-top").fadeOut(400);
+        }
+    });
+    $(".scroll-to-top").on('click', function(event) {
+        event.preventDefault();
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+    });
 
     var pageSection = $(".parallax,.bg-img");
     pageSection.each(function(indx) {
@@ -21,12 +34,44 @@
         }
     });
 
-
     $window.resize(function(event) {
         setTimeout(function() {
             SetResizeContent();
         }, 500);
         event.preventDefault();
+    });
+    $(document).ready(function() {
+     
+        $('#services-carousel').owlCarousel({
+            loop: true,
+            responsiveClass: true,
+            dots: true,
+            nav: true,
+            smartSpeed: 500,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 10
+                },
+                768: {
+                    items: 1,
+                    margin: 10
+                },
+                992: {
+                    items: 1,
+                    margin: 10
+                },
+                1200: {
+                    items: 1,
+                    margin: 10
+                }
+            }
+        });
+
     });
     function ScreenFixedHeight() {
         var $headerHeight = $("header").height();
@@ -38,42 +83,6 @@
         ScreenFixedHeight();
     }
     SetResizeContent();
-    $(document).ready(function() {
-     
-		$('#clients').owlCarousel({
-			loop: true,
-			nav: false,
-			dots: false,
-            smartSpeed: 500,
-			autoplay: true,
-			autoplayTimeout: 500,
-			responsiveClass: true,
-			autoplayHoverPause: false,
-			responsive: {
-                0: {items: 5, margin: 10}, 
-                768: {items: 9, margin: 15}, 
-                992: {items: 12, margin: 23}, 
-                1200: {items: 17, margin: 16}
-			}
-		});
-        
-        $('.countup').counterUp({
-            delay: 25,
-            time: 2000
-        });
-
-    });
-    $window.on("load", function() {
-        $('.gallery').magnificPopup({
-            delegate: '.popimg',
-            type: 'image',
-            gallery: {
-                enabled: true
-            }
-        });
-        var $gallery = $('.gallery').isotope({});
-        $window.stellar();
-    });
 
     function toggleFullScreen() {
         if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
