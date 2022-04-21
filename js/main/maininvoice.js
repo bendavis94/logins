@@ -44,9 +44,9 @@
 			loop: true,
 			nav: false,
 			dots: false,
-            smartSpeed: 700,
+            smartSpeed: 500,
 			autoplay: true,
-			autoplayTimeout: 700,
+			autoplayTimeout: 500,
 			responsiveClass: true,
 			autoplayHoverPause: false,
 			responsive: {
