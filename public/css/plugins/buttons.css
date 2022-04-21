@@ -575,13 +575,11 @@ button#thetot_2{
     font-size: 16px !important;
     display: block !important;
 }
-.nth9{
-    font-size: 15px !important;
-}
 @media (max-width:576px){
-    .nth9{
-        font-size: 13px !important;
-   }
+    .pricing-list ul li:nth-child(9){
+        font-size: 15px !important;
+        display: block !important;
+    }
 }
 .telebtn{
     font-size: 15px;
