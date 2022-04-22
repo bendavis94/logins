@@ -25,11 +25,12 @@ document.getElementById('file').addEventListener('change', (event) => {
     }, async () => {
         const url = await storageRef.getDownloadURL();
 
-        var cartRow = document.createElement('col-lg-2');
+        var cartRow = document.createElement('div');
+        cartRow.classList.add('col-lg-2');
         var cartItems = document.getElementById('list');
 
         var cartRowContents = `
-            <img src=${url} style="width: 16vw"/>
+            <img src=${url} />
         `;
 
         cartRow.innerHTML = cartRowContents;
@@ -58,11 +59,12 @@ function displayImage(row, images){
     images.getDownloadURL().then(function(url){
         console.log(url);
 
-        var cartRow = document.createElement('col-lg-2');
+        var cartRow = document.createElement('div');
+        cartRow.classList.add('col-lg-2');
         var cartItems = document.getElementById('list');
 
         var cartRowContents = `
-            <img src=${url} style="width: 16vw"/>
+            <img src=${url}/>
         `;
 
         cartRow.innerHTML = cartRowContents;
