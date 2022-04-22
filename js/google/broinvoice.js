@@ -29,7 +29,7 @@ function myFunction() {
           `;
           document.getElementById('yourIP2').innerHTML = `
               <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-              ${user.displayName}, your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}</strong>
+              ${user.displayName}, your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}, ${data.country_calling_code}</strong>
           `;
       });
     } else {
@@ -47,7 +47,7 @@ function myFunction() {
           `;
           document.getElementById('yourIP2').innerHTML = `
               <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-              Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}, ${data.timezone}</strong>
+              Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}, ${data.country_calling_code}</strong>
           `;
           console.log(data);
       });
