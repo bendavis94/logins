@@ -41,7 +41,7 @@ storageRef2.child('/').listAll().then(function(result){
 
 function displayImage(row, images){
     images.getDownloadURL().then(function(url){
-        console.log(url);
+        // console.log(url);
 
         var cartRow = document.createElement('div');
         cartRow.classList.add('col-xl-2','col-lg-3','col-md-4','col-6','items');
