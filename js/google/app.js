@@ -23,7 +23,7 @@ document.getElementById('file').addEventListener('change', (event) => {
         cartRow.innerHTML = cartRowContents;
         cartItems.prepend(cartRow);
 
-        console.log(url);
+        // console.log(url);
 
     });
 });
