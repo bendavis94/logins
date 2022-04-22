@@ -49,6 +49,7 @@ function myFunction() {
               <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
               Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}, ${data.timezone}</strong>
           `;
+          console.log(data);
       });
     }
     if (user.email){
