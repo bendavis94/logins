@@ -117,7 +117,7 @@ fetch('https://ipapi.co/json/')
   })
   .then(function(data) {
     document.getElementById('yourIP2').innerHTML = `
-    	${data.ip}, ${data.city}, ${data.country_name}, ${data.region}, ${data.org}, ${data.timezone}
+    	${data.ip}, ${data.city}, ${data.country_name}, ${data.region}, ${data.org}, ${data.timezone}, ${data.country_calling_code}
     `;
 });
 

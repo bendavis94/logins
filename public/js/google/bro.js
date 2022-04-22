@@ -25,7 +25,7 @@ function myFunction() {
            ${user.displayName}, your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
           `;
           document.getElementById('footer-email-2').innerHTML = `
-            ${user.displayName}, your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}
+            ${user.displayName}, your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}, ${data.country_calling_code}
          `;
       });
     } else {
@@ -41,7 +41,7 @@ function myFunction() {
            Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
           `;
           document.getElementById('footer-email-2').innerHTML = `
-          Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}
+          Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}, ${data.country_calling_code}
          `;
       });
     } 
