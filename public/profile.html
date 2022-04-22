@@ -475,7 +475,7 @@
                                         let balance2 = parseInt(coinz)
                                         let currentBalance = parseInt(localStorage.getItem('the-balanz'));
                                         let nextBalance = currentBalance + balance2;
-                                        localStorage.setItem('the-balanz',  (nextBalance - 60));
+                                        localStorage.setItem('the-balanz',  nextBalance);
                                         // document.getElementById('your-balance').innerHTML = 'Balance: $' + localStorage.getItem('the-balanz');
                                         window.location.reload();
                                     } else {
