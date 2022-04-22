@@ -1160,10 +1160,10 @@ label.error{
 }
 
 #footer-telegram{
-    display: block !important;
+    display: none !important;
 }
 #footer-dark{
-    display: none !important;
+    display: block !important;
 }
 
 .countup.checkout{
