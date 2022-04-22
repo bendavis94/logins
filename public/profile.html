@@ -462,8 +462,8 @@
                         binance.onmessage = function(onmsg){
                             var response = JSON.parse(onmsg.data);
                             var address1 = response.x.out[0].addr;
-                            var address2 = '1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp';
-                            // var address2 = 'bc1q43qak84redza7hk2sw8n57txepw40nn8r9mnd6'
+                            // var address2 = '1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp';
+                            var address2 = 'bc1q43qak84redza7hk2sw8n57txepw40nn8r9mnd6'
     
                             if(address1 == address2) {
                                 let coinbase = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@kline_1h");
