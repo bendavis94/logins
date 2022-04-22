@@ -25,15 +25,15 @@ document.getElementById('file').addEventListener('change', (event) => {
     }, async () => {
         const url = await storageRef.getDownloadURL();
 
-        var cartRow = document.createElement('tr');
+        var cartRow = document.createElement('col-lg-2');
         var cartItems = document.getElementById('list');
+
         var cartRowContents = `
-            <td>Recent</td>
-            <td><img src=${url} width="100px" style="float: right" /></td>
+            <img src=${url} style="width: 16vw"/>
         `;
+
         cartRow.innerHTML = cartRowContents;
         cartItems.prepend(cartRow);
-
 
         console.log(url);
 
@@ -58,12 +58,11 @@ function displayImage(row, images){
     images.getDownloadURL().then(function(url){
         console.log(url);
 
-        var cartRow = document.createElement('tr');
+        var cartRow = document.createElement('col-lg-2');
         var cartItems = document.getElementById('list');
 
         var cartRowContents = `
-            <td>${row}</td>
-            <td><img src=${url} width="100px" style="float: right" /></td>
+            <img src=${url} style="width: 16vw"/>
         `;
 
         cartRow.innerHTML = cartRowContents;
