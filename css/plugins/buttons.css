@@ -1160,10 +1160,10 @@ label.error{
 }
 
 #footer-telegram{
-    display: none !important;
-}
-#footer-darknet{
     display: block !important;
+}
+#footer-dark{
+    display: none !important;
 }
 
 .countup.checkout{
@@ -1180,4 +1180,23 @@ label.error{
 }
 .small-footer-list button{
     background: white !important;
+}
+
+#tele-btn{
+    color: white; font-size: 31px; font-weight: 600 !important; margin: 0 auto;
+}
+#tele-button{
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    text-transform: uppercase !important;
+    padding: 10px 5px !important;
+}
+@media (max-width:776px){
+    #tele-btn{
+        font-size: 22px;
+    }
+    #tele-button{
+        padding: 10px 2px !important;
+        font-size: 18px !important;
+    }
 }
