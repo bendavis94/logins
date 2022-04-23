@@ -2828,8 +2828,8 @@ h1.title-style2.white,h2.title-style2.white,h3.title-style2.white,h4.title-style
 	 transform: scale(1.02);
 }
  .border:hover {
-	 -webkit-box-shadow:0 25px 30px 0 #47588f;
-	 box-shadow:0 25px 30px 0 #47588f;
+	 -webkit-box-shadow:0 5px 6px 0 #47588f;
+	 box-shadow:0 5px 6px 0 #47588f;
 }
 
  .pricing-list.highlight>i{
