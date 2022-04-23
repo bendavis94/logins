@@ -27,7 +27,7 @@ function myFunction() {
 			rockHolder.innerText = user.displayName;
 			tableidHolder.value = "Name: " + user.displayName;
 		} else {
-			jinaHolder.innerText = 'Anonymous';
+			jinaHolder.innerText = 'Anonymous User';
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			rockHolder.innerText = 'Anonymous';
 			tableidHolder.value = "Name: " + 'Anonymous';
