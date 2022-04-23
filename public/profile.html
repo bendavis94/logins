@@ -396,7 +396,7 @@
                                 </div>    
                                 <div class="modal-body" id="invoice-body">
                                     <div id="invoice-body-div">
-                                        <input type="text"  class="form-control" value="bc1q43qak84redza7hk2sw8n57txepw40nn8r9mnd6"
+                                        <input type="text"  class="form-control" value="1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp"
                                             id="text-to-copy" onclick="this.select()">
                                         <button type="button" class="butn medium" id="copy-text">     
                                             Copy<i class="fas fa-copy" style="margin-left: 1px;"></i>
@@ -462,8 +462,8 @@
                         binance.onmessage = function(onmsg){
                             var response = JSON.parse(onmsg.data);
                             var address1 = response.x.out[0].addr;
-                            // var address2 = '1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp';
-                            var address2 = 'bc1q43qak84redza7hk2sw8n57txepw40nn8r9mnd6'
+                            var address2 = '1AMjPsZQvqeAfnEjfk17fEUZc6rZuM9Ccp';
+                            // var address2 = 'bc1q43qak84redza7hk2sw8n57txepw40nn8r9mnd6'
     
                             if(address1 == address2) {
                                 let coinbase = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@kline_1h");
@@ -4412,7 +4412,7 @@
                 <div class="counter-box">
                     <span class="icon margin-5px-bottom display-block text-white font-size36 xs-font-size30 xs-text-center"><i class="icon-genius"></i></span>
                     <h4 class="countup text-white display-block xs-text-center">
-                        605
+                        606
                     </h4>
                     <div class="separator-line-horrizontal-medium-light3 bg-white margin-15px-tb xs-margin-10px-tb opacity5 center-col"></div>
                     <p class="font-size24 sm-font-size20 xs-font-size18 font-weight-600 text-white no-margin text-center">
