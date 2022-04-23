@@ -32,7 +32,25 @@ function myFunction() {
               ${user.displayName}, your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}</strong>
           `;
       });
-    } 
+    } else {
+      jinaHolder.innerText = 'Github User';
+      jinaHolder2.innerText = 'User ID: ' + user.uid;
+
+      fetch('https://ipapi.co/json/')
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          document.getElementById('yourIP').innerHTML = `
+              <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
+              Github User, Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
+          `;
+          document.getElementById('yourIP2').innerHTML = `
+              <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
+              Github User, Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}</strong>
+          `;
+      });
+    }
     if (user.email){
         invoiceHolder.innerText = 'Invoice to: '+ user.email;
         invoiceHolder3.innerText = 'Invoice to: '+ user.email;
