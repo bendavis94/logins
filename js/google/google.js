@@ -1,7 +1,7 @@
 const signGoogle = document.getElementById("signGoogle");
 const signGithub = document.getElementById("signGithub");
 const signYahoo = document.getElementById("signYahoo");
-const signMicrosoft = document.getElementById("signMicrosoft");
+// const signMicrosoft = document.getElementById("signMicrosoft");
 
 const auth = firebase.auth();
 
@@ -35,15 +35,15 @@ const signInWithYahoo = () => {
 }
 signYahoo.addEventListener("click", signInWithYahoo);
 
-const signInWithMicrosoft = () => {
-  const microsoftProvider = new firebase.auth.OAuthProvider('microsoft.com');
-  auth.signInWithPopup(microsoftProvider).then(() => {
-    window.location.assign("home");
-  }).catch(error => {
-    console.error(error);
-  })
-}
-signMicrosoft.addEventListener("click", signInWithMicrosoft);
+// const signInWithMicrosoft = () => {
+//   const microsoftProvider = new firebase.auth.OAuthProvider('microsoft.com');
+//   auth.signInWithPopup(microsoftProvider).then(() => {
+//     window.location.assign("home");
+//   }).catch(error => {
+//     console.error(error);
+//   })
+// }
+// signMicrosoft.addEventListener("click", signInWithMicrosoft);
 
 auth.onAuthStateChanged(user => {
   if (user) {
