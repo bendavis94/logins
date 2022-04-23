@@ -43,6 +43,11 @@
         }
     </style>
     <link rel="stylesheet" href="css/styles-7.css" />
+    <style>
+        .modal-dialog{
+            width: 30vw !important;
+        }
+    </style>
 </head>
 
 <body id="thebodyz" style="background: #121d33;">
@@ -156,8 +161,6 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <img src="img/svg/mail.svg"
-                    alt="" style="width: 70px;"/>
                 <h4 class="modal-title" style="font-weight: 600;" id="loginModalLabel">
                     Login with Email
                 </h4>
@@ -174,11 +177,10 @@
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="butn medium moneycoming" 
-                    data-dismiss="modal" data-toggle="modal" data-dismiss="modal" data-target="#signUpModal" >
+                    data-dismiss="modal" data-toggle="modal" data-dismiss="modal" data-target="#signUpModal"  style="margin-right: 140px !important;">
                       SignUp
                     </button>
-                    <button type="submit" class="butn medium moneycoming" 
-                    data-dismiss="modal" data-toggle="modal" data-target="#profileModal" >
+                    <button type="submit" class="butn medium white" style="background: lime;">
                       Login  
                     </button>
                 </div>
@@ -193,8 +195,6 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <img src="img/svg/mail.svg"
-                    alt="" style="width: 70px;"/>
                 <h4 class="modal-title" style="font-weight: 600;" id="signUpModalLabel">
                     Create an Account
                 </h4>
@@ -215,11 +215,11 @@
                 <div class="modal-footer">
                     <button type="submit" class="butn medium moneycoming" 
                     data-dismiss="modal" data-toggle="modal" data-target="#loginModal" >
-                        Login Instead
+                        Login
                     </button>
                     <button type="submit" class="butn medium moneycoming" 
                     data-dismiss="modal" data-toggle="modal" data-target="#profileModal" >
-                      Login  
+                      SignUp
                     </button>
                 </div>
             </div>
