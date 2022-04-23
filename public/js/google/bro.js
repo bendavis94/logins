@@ -28,22 +28,6 @@ function myFunction() {
             ${user.displayName}, your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}, ${data.country_calling_code}
          `;
       });
-    } else {
-      jinaHolder.innerText = 'Anonymous';
-      jinaHolder2.innerText = 'USER ID: ' + user.uid;
-
-      fetch('https://ipapi.co/json/')
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(data) {
-          document.getElementById('footer-email').innerHTML = `
-           Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
-          `;
-          document.getElementById('footer-email-2').innerHTML = `
-          Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}, ${data.country_calling_code}
-         `;
-      });
     } 
   });
 
