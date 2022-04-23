@@ -27,10 +27,10 @@ function myFunction() {
 			rockHolder.innerText = user.displayName;
 			tableidHolder.value = "Name: " + user.displayName;
 		} else {
-			jinaHolder.innerText = 'Anonymous User';
+			jinaHolder.innerText = 'Anonymous';
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			rockHolder.innerText = 'Anonymous User';
-			tableidHolder.value = "Name: " + 'Anonymous User';
+			rockHolder.innerText = 'Anonymous';
+			tableidHolder.value = "Name: " + 'Anonymous';
 		}
 		if (user.uid) {
 			uidHolder.innerText = user.uid;
@@ -50,7 +50,7 @@ function myFunction() {
 		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && !user.displayName){
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
 			for(var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous User';
+				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous';
 			}
 		} else{
 			console.log('No items are present')
