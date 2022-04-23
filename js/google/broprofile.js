@@ -39,7 +39,11 @@ function myFunction() {
 			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
 			email5.innerHTML = user.email;
-		} 
+		} else {
+			email1.innerHTML = `Bank Log files can only be downloaded once, so make sure you save them in a folder you won't forget`;
+			email2.innerHTML = `Use winrar software to extract bank log files from .zip format`;
+			email5.innerHTML = 'Anonymous';
+		}
 		let goodies = [];
 
 		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.displayName){
