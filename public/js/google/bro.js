@@ -25,7 +25,7 @@ function myFunction() {
            ${user.displayName}, your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
           `;
           document.getElementById('footer-email-2').innerHTML = `
-            ${user.displayName}, your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}, ${data.country_calling_code}
+            ${user.displayName}, your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}
          `;
       });
     } 
