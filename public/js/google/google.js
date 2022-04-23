@@ -25,7 +25,7 @@ const signInWithGithub = () => {
 signGithub.addEventListener("click", signInWithGithub);
 
 const signInWithYahoo = () => {
-  const yahooProvider = new firebase.auth.YahooAuthProvider;
+  const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
   auth.signInWithPopup(yahooProvider).then(() => {
     window.location.assign("home");
   }).catch(error => {
