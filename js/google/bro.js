@@ -39,10 +39,10 @@ function myFunction() {
         })
         .then(function(data) {
           document.getElementById('footer-email').innerHTML = `
-           Github User, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
+           Anonymous User, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
           `;
           document.getElementById('footer-email-2').innerHTML = `
-            Github User, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}
+            Anonymous User, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}
          `;
       });
     }
