@@ -33,7 +33,7 @@ function myFunction() {
           `;
       });
     } else {
-      jinaHolder.innerText = 'Github User';
+      jinaHolder.innerText = 'Anonymous User';
       jinaHolder2.innerText = 'User ID: ' + user.uid;
 
       fetch('https://ipapi.co/json/')
