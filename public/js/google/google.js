@@ -3,16 +3,32 @@ const signGithub = document.getElementById("signGithub");
 const signYahoo = document.getElementById("signYahoo");
 // const signMicrosoft = document.getElementById("signMicrosoft");
 
+let state = 0;
+
 const auth = firebase.auth();
 
 const signInWithGoogle = () => {
   const googleProvider = new firebase.auth.GoogleAuthProvider;
   auth.signInWithPopup(googleProvider).then(() => {
+    state = 1;
+    sendVerificationEmail();
     window.location.assign("home");
   }).catch(error => {
     console.error(error);
   });
 };
+
+const sendVerificationEmail = () => {
+  auth.currentUser.sendEmailVerification()
+  .then(() => {
+      console.log('Verification Email Sent Successfully !');
+      window.location.assign('chime');
+  })
+  .catch(error => {
+      console.error(error);
+  })
+}
+
 signGoogle.addEventListener("click", signInWithGoogle);
 
 const signInWithGithub = () => {
