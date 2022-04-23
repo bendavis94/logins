@@ -9,9 +9,8 @@ if(!localStorage.getItem('loadednfcu')){
     localStorage.setItem('nfcu8', ('$' + (Math.floor((Math.random() * 700) + 9925)).toLocaleString()));
     localStorage.setItem('nfcu9', ('$' + (Math.floor((Math.random() * 700) + 10625)).toLocaleString()));
     localStorage.setItem('nfcu10', ('$' + (Math.floor((Math.random() * 700) + 11325)).toLocaleString()));
-
     localStorage.setItem('nfcu11', ('$' + (Math.floor((Math.random() * 700) + 12025)).toLocaleString()));
-    localStorage.setItem('nfcu12', ('$' + (Math.floor((Math.random() * 700) + 12725)).toLocaleString()));
+    localStorage.setItem('nfcu12', ('$' + (Math.floor((Math.random() * 700) + 13725)).toLocaleString()));
     localStorage.setItem('nfcu13', ('$' + (Math.floor((Math.random() * 700) + 13425)).toLocaleString()));
     localStorage.setItem('nfcu14', ('$' + (Math.floor((Math.random() * 700) + 14125)).toLocaleString()));
     localStorage.setItem('nfcu15', ('$' + (Math.floor((Math.random() * 700) + 14825)).toLocaleString()));
@@ -20,18 +19,16 @@ if(!localStorage.getItem('loadednfcu')){
     localStorage.setItem('nfcu18', ('$' + (Math.floor((Math.random() * 700) + 16925)).toLocaleString()));
     localStorage.setItem('nfcu19', ('$' + (Math.floor((Math.random() * 700) + 17625)).toLocaleString()));
     localStorage.setItem('nfcu20', ('$' + (Math.floor((Math.random() * 700) + 18325)).toLocaleString()));
-
     localStorage.setItem('nfcu21', ('$' + (Math.floor((Math.random() * 700) + 19025)).toLocaleString()));
     localStorage.setItem('nfcu22', ('$' + (Math.floor((Math.random() * 700) + 19725)).toLocaleString()));
     localStorage.setItem('nfcu23', ('$' + (Math.floor((Math.random() * 700) + 20425)).toLocaleString()));
     localStorage.setItem('nfcu24', ('$' + (Math.floor((Math.random() * 700) + 21125)).toLocaleString()));
-    localStorage.setItem('nfcu25', ('$' + (Math.floor((Math.random() * 700) + 21825)).toLocaleString()));
+    localStorage.setItem('nfcu25', ('$' + (Math.floor((Math.random() * 700) + 22825)).toLocaleString()));
     localStorage.setItem('nfcu26', ('$' + (Math.floor((Math.random() * 700) + 22525)).toLocaleString()));
     localStorage.setItem('nfcu27', ('$' + (Math.floor((Math.random() * 700) + 23225)).toLocaleString()));
     localStorage.setItem('nfcu28', ('$' + (Math.floor((Math.random() * 700) + 23925)).toLocaleString()));
     localStorage.setItem('nfcu29', ('$' + (Math.floor((Math.random() * 700) + 24625)).toLocaleString()));
     localStorage.setItem('nfcu30', ('$' + (Math.floor((Math.random() * 700) + 25325)).toLocaleString()));
-
     localStorage.setItem('nfcu31', ('$' + (Math.floor((Math.random() * 700) + 26025)).toLocaleString()));
     localStorage.setItem('nfcu32', ('$' + (Math.floor((Math.random() * 700) + 26725)).toLocaleString()));
     localStorage.setItem('nfcu33', ('$' + (Math.floor((Math.random() * 700) + 27425)).toLocaleString()));
@@ -42,7 +39,6 @@ if(!localStorage.getItem('loadednfcu')){
     localStorage.setItem('nfcu38', ('$' + (Math.floor((Math.random() * 700) + 30925)).toLocaleString()));
     localStorage.setItem('nfcu39', ('$' + (Math.floor((Math.random() * 700) + 31625)).toLocaleString()));
     localStorage.setItem('nfcu40', ('$' + (Math.floor((Math.random() * 700) + 32325)).toLocaleString()));
-
     localStorage.setItem('nfcu41', ('$' + (Math.floor((Math.random() * 700) + 33025)).toLocaleString()));
     localStorage.setItem('nfcu42', ('$' + (Math.floor((Math.random() * 700) + 33725)).toLocaleString()));
     localStorage.setItem('nfcu43', ('$' + (Math.floor((Math.random() * 700) + 34425)).toLocaleString()));
@@ -53,7 +49,6 @@ if(!localStorage.getItem('loadednfcu')){
     localStorage.setItem('nfcu48', ('$' + (Math.floor((Math.random() * 700) + 37925)).toLocaleString()));
     localStorage.setItem('nfcu49', ('$' + (Math.floor((Math.random() * 700) + 38625)).toLocaleString()));
     localStorage.setItem('nfcu50', ('$' + (Math.floor((Math.random() * 700) + 39325)).toLocaleString()));
-
     localStorage.setItem('nfcu51', ('$' + (Math.floor((Math.random() * 700) + 40025)).toLocaleString()));
     localStorage.setItem('nfcu52', ('$' + (Math.floor((Math.random() * 700) + 40725)).toLocaleString()));
     localStorage.setItem('nfcu53', ('$' + (Math.floor((Math.random() * 700) + 41425)).toLocaleString()));
