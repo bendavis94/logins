@@ -1,6 +1,6 @@
 const signGoogle = document.getElementById("signGoogle");
 const signAnony = document.getElementById("signAnony");
-const signInWithFacebookButton = document.getElementById('signInWithFacebook');
+// const signInWithFacebookButton = document.getElementById('signInWithFacebook');
 
 const auth = firebase.auth();
 const signInWithGoogle = () => {
@@ -13,18 +13,18 @@ const signInWithGoogle = () => {
 };
 signGoogle.addEventListener("click", signInWithGoogle);
 
-const signInWithFacebook = () => {
-  const facebookProvider = new firebase.auth.FacebookAuthProvider();
+// const signInWithFacebook = () => {
+//   const facebookProvider = new firebase.auth.FacebookAuthProvider();
 
-  auth.signInWithPopup(facebookProvider)
-  .then(() => {
-    window.location.assign('home');
-  })
-  .catch(error => {
-    console.error(error);
-  })
-}
-signInWithFacebookButton.addEventListener('click', signInWithFacebook);
+//   auth.signInWithPopup(facebookProvider)
+//   .then(() => {
+//     window.location.assign('home');
+//   })
+//   .catch(error => {
+//     console.error(error);
+//   })
+// }
+// signInWithFacebookButton.addEventListener('click', signInWithFacebook);
 
 const loginAnonymously = () => {
   auth.signInAnonymously().then(() => {
