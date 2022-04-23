@@ -47,6 +47,12 @@
         .modal-dialog{
             width: 30vw !important;
         }
+        @media screen and (max-width: 767px) {
+            .modal-dialog{
+                width: 100vw !important;
+                top: 7vh !important;
+            }
+        }
         label{
             color: #121d33;
         }
@@ -160,12 +166,10 @@
                     <img src="img/svg/failure.svg" width="35px">
                 </button>
             </div>
-            <div class="modal-body" style="padding: 0;">
+            <div class="modal-body" style="padding: 0 !important; margin: 0 !important;">
 
 
-
-                <div class="col-12">
-                    <div class="bg-white p-4 border border-width-5">
+                    <div class="bg-white p-4 border border-width-5" style="margin: 0 !important;">
 
                         <form method="post">
 
@@ -200,15 +204,6 @@
 
                             </div>
 
-                            <div class="row">
-                                <div class="col-sm-12 mb-2">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="terms-condition">
-                                        <label class="custom-control-label" for="terms-condition">I agree to the <a href="#!" class="text-primary">Terms & Conditions</a></label>
-                                    </div>
-                                </div>
-
-                            </div>
 
                             <button type="button" class="butn small w-50"><span>Register</span></button>
                             <div class="text-center text-small mt-4">
@@ -218,7 +213,6 @@
                         </form>
                         
                     </div>
-                </div>
 
 
 
