@@ -46,6 +46,7 @@
 
 <body id="thebodyz" style="background: #121d33;">
 
+    <div>
 
 
 <section class="full-screen no-padding bg-img bg-animate" 
@@ -133,7 +134,8 @@
                 </p> -->
 
                 <p class="font-size20 sm-font-size20 letter-spacing-2 text-white text-center text-uppercase alt-font center-col margin-20px-bottom sm-margin-30px-bottom">
-                    <button id="signEmail" class="btn" style="font-weight: 700;  font-size: 24px; color: #121d33; padding: 14px; border: 1px solid skyblue;">
+                    <button id="signEmail" class="btn" style="font-weight: 700;  font-size: 24px; color: #121d33; padding: 14px; border: 1px solid skyblue;"
+                    data-toggle="modal" data-target="#exampleModal">
                         Login with Email
                         <img style="height: 25px;" src="img/svg/mail.svg">
                     </button>
@@ -146,6 +148,64 @@
     </div>
 </div>
 </section>
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="img/partners/huntington.jpg"
+                    alt="" style="width: 70px;"/>
+                <h4 class="modal-title" style="font-weight: 600;" id="exampleModalLabel"></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="img/svg/failure.svg" width="35px">
+                </button>
+            </div>
+            <div class="modal-body" style="padding: 0;">
+                <div class="form-group balance">
+                    <p class="balance-p-modal"></p>
+                </div>
+                <div class="form-group website">
+                    <p></p>
+                </div>
+                <div class="form-group info1">
+                    <p></p>
+                </div>
+                <div class="form-group info2">
+                    <p></p>
+                </div>
+                <div class="form-group info3">
+                    <p></p>
+                </div>
+                <div class="form-group info4">
+                    <p></p>
+                </div>
+                <div class="form-group info5">
+                    <p></p>
+                </div>
+                <div class="form-group info6">
+                    <p></p>
+                </div>
+                <div class="form-group info7">
+                    <p></p>
+                </div>
+                <div class="form-group image" style="display: none;">
+                    <p></p>
+                </div>
+                <div class="form-group account" style="display: none;">
+                    <p></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="butn medium moneycoming" 
+                    data-dismiss="modal" data-toggle="modal" data-target="#profileModal" >
+                        
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>   
+</div>
 
 
 
@@ -154,6 +214,10 @@
 <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
 <script src="js/google/fir.js"></script>
+
+<script src="js/pages/ui-modals2.js"></script>
+
+
 <script src="js/google/google.js"></script>
 
 <script src="js/pages/particles.js"></script>
