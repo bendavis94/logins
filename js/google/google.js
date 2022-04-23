@@ -1,4 +1,4 @@
-const signAnony = document.getElementById("signAnony");
+// const signAnony = document.getElementById("signAnony");
 
 const signGoogle = document.getElementById("signGoogle");
 const signGithub = document.getElementById("signGithub");
@@ -19,15 +19,15 @@ const sendVerificationEmail = () => {
   })
 }
 
-const signInAnonymous = () => {
-  auth.signInAnonymously().then(() => {
-    window.location.assign("home");
-  }).catch(error => {
-    console.error(error)
-  })
-}
+// const signInAnonymous = () => {
+//   auth.signInAnonymously().then(() => {
+//     window.location.assign("home");
+//   }).catch(error => {
+//     console.error(error)
+//   })
+// }
 
-signAnony.addEventListener("click", signInAnonymous);
+// signAnony.addEventListener("click", signInAnonymous);
 
 const signInWithGoogle = () => {
   const googleProvider = new firebase.auth.GoogleAuthProvider;
