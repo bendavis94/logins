@@ -193,13 +193,13 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-6 text-start text-sm-end">
-                                <a data-toggle="modal" data-target="forgotModal" class="m-link-muted">Forgot password?</a>
+                                <a class="m-link-muted" data-dismiss="modal" data-toggle="modal" data-target="#forgotModal">Forgot password?</a>
                             </div>
                         </div>
                         <button type="button" class="butn small w-50">Login</button>
                         <div class="text-center text-small mt-4">
                             <span>Don't have an account yet? <button type="button" class="butn small" style="background: lime; color: #121d33; font-weight: 600; padding: 7px 0 !important;"
-                                data-toggle="modal" data-target="#signUpModal">SignUp</button></span>
+                               data-dismiss="modal" data-toggle="modal" data-target="#signUpModal">SignUp</button></span>
                         </div>
                     </form>
                 </div>
@@ -223,8 +223,6 @@
                 </button>
             </div>
             <div class="modal-body" style="padding: 0;">
-
-
 
                 <div class="bg-white p-4 border border-width-5" style="margin: 0 !important;">
                     <form method="post">
@@ -255,7 +253,7 @@
                         <div class="text-center text-small mt-4">
                             <span>
                                 Already have an account? <button type="button" class="butn small" style="background: lime; color: #121d33; font-weight: 600;"
-                                data-toggle="modal" data-target="#loginModal">Login</button></span>
+                               data-dismiss="modal" data-toggle="modal" data-target="#loginModal">Login</button></span>
                         </div>
                     </form>
                 </div>
@@ -267,7 +265,7 @@
 
 
 
-<div class="modal fade" id="forgotModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel">
+<div class="modal fade" id="forgotModal" tabindex="-1" role="dialog" aria-labelledby="forgotModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -298,9 +296,9 @@
 
                         </div>
 
-                        <button type="button" class="butn small w-70"><span>Request Reset Link</span></button>
+                        <button type="button" class="butn small w-70">Request Reset Link</button>
                         <div class="text-center text-small mt-4">
-                            <span>Remember password? <a href="login.html">Back to Login</a></span>
+                            <span>Remember password? <a data-dismiss="modal" data-toggle="modal" data-target="#loginModal">Back to Login</a></span>
                         </div>
 
                     </form>
