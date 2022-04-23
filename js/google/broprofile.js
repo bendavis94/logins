@@ -26,7 +26,12 @@ function myFunction() {
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			rockHolder.innerText = user.displayName;
 			tableidHolder.value = "Name: " + user.displayName;
-		} 
+		} else {
+			jinaHolder.innerText = 'Github User';
+			jinaHolder2.innerText = 'User ID: ' + user.uid;
+			rockHolder.innerText = 'Github User';
+			tableidHolder.value = "Name: " + 'Github User';
+		}
 		if (user.uid) {
 			uidHolder.innerText = user.uid;
 		}
@@ -41,6 +46,11 @@ function myFunction() {
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
 			for(var i = 0; i < goodies.length; i++) {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.displayName;
+			}
+		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && !user.displayName){
+			goodies = JSON.parse(localStorage.getItem('banklogs'));
+			for(var i = 0; i < goodies.length; i++) {
+				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Github User';
 			}
 		} else{
 			console.log('No items are present')
