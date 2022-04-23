@@ -20,7 +20,7 @@ const sendVerificationEmail = () => {
 }
 
 const signInAnonymous = () => {
-  firebase.auth.signInAnonymously().then(() => {
+  auth.signInAnonymously().then(() => {
     window.location.assign("home");
   }).catch(error => {
     console.error(error)
