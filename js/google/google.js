@@ -12,7 +12,8 @@ const signInWithGoogle = () => {
   auth.signInWithPopup(googleProvider).then(() => {
     state = 1;
     sendVerificationEmail();
-    window.location.assign("home");
+    // window.location.assign("home");
+    console.log('lets see what happens')
   }).catch(error => {
     console.error(error);
   });
