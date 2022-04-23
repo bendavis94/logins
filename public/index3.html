@@ -53,8 +53,15 @@
                 top: 7vh !important;
             }
         }
-        label{
+        label, a{
             color: #121d33;
+            font-family: "Montserrat", sans-serif;
+            font-size: 17px;
+        }
+        span{
+            font-family: "Montserrat", sans-serif;
+            color: #121d33 !important;
+            font-size: 17px !important;
         }
     </style>
 </head>
@@ -168,54 +175,34 @@
             </div>
             <div class="modal-body" style="padding: 0 !important; margin: 0 !important;">
 
-
-                    <div class="bg-white p-4 border border-width-5" style="margin: 0 !important;">
-
-                        <form method="post">
-
-                            <div class="row">
-
-                                <div class="col-12">
-
-                                    <div class="form-group">
-                                        <label>Email Address</label>
-                                        <input type="email" class="form-control" name="email" placeholder="Your email here">
-                                    </div>
-
+                <div class="bg-white p-4 border border-width-5" style="margin: 0 !important;">
+                    <form method="post">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label>User Name</label>
+                                    <input type="text" class="form-control" name="name" placeholder="Your user name here">
                                 </div>
-
-                                <div class="col-12">
-
-                                    <div class="form-group">
-                                        <label>Password</label>
-                                        <input type="password" class="form-control" name="password" placeholder="Your password here">
-                                    </div>
-
-                                </div>
-
-                                <div class="col-12">
-
-                                    <div class="form-group">
-                                        <label>Re-Password</label>
-                                        <input type="password" class="form-control" name="re-password" placeholder="Your re-password here">
-                                    </div>
-
-                                </div>
-
                             </div>
-
-
-                            <button type="button" class="butn small w-50"><span>Register</span></button>
-                            <div class="text-center text-small mt-4">
-                                <span>Already have an account? <a href="login.html">Login</a></span>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label>Password </label>
+                                    <input type="password" class="form-control" name="password" placeholder="Your password here">
+                                </div>
                             </div>
-
-                        </form>
-                        
-                    </div>
-
-
-
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 text-start text-sm-end">
+                                <a data-toggle="modal" data-target="forgotModal" class="m-link-muted">Forgot password?</a>
+                            </div>
+                        </div>
+                        <button type="button" class="butn small w-50">Login</button>
+                        <div class="text-center text-small mt-4">
+                            <span>Don't have an account yet? <button type="button" class="butn small" style="background: lime; color: #121d33; font-weight: 600; padding: 7px 0 !important;"
+                                data-toggle="modal" data-target="#signUpModal">SignUp</button></span>
+                        </div>
+                    </form>
+                </div>
 
             </div>
         </div>
@@ -236,103 +223,88 @@
                 </button>
             </div>
             <div class="modal-body" style="padding: 0;">
-                <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Enter Email">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Enter Password">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Repeat Password">
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="butn medium moneycoming" 
-                    data-dismiss="modal" data-toggle="modal" data-target="#loginModal" >
-                        Login
-                    </button>
-                    <button type="submit" class="butn medium moneycoming" 
-                    data-dismiss="modal" data-toggle="modal" data-target="#profileModal" >
-                      SignUp
-                    </button>
-                </div>
 
 
 
+                <div class="bg-white p-4 border border-width-5" style="margin: 0 !important;">
+                    <form method="post">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label>Email Address</label>
+                                    <input type="email" class="form-control" name="email" placeholder="Your email here">
+                                </div>
 
-                <div class="col-4">
-                    <div class="bg-white p-4 border border-width-5">
-                        <div class="section-heading">
-                            <h2>Registration</h2>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control" name="password" placeholder="Your password here">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label>Re-Password</label>
+                                    <input type="password" class="form-control" name="re-password" placeholder="Your re-password here">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="butn small w-50">
+                            Register
+                        </button>
+                        <div class="text-center text-small mt-4">
+                            <span>
+                                Already have an account? <button type="button" class="butn small" style="background: lime; color: #121d33; font-weight: 600;"
+                                data-toggle="modal" data-target="#loginModal">Login</button></span>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>   
+</div>
+
+
+
+<div class="modal fade" id="forgotModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" style="font-weight: 600;" id="signUpModalLabel">
+                    Reset Password 
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="img/svg/failure.svg" width="35px">
+                </button>
+            </div>
+            <div class="modal-body" style="padding: 0;">
+
+
+
+                <div class="bg-white p-4 border border-width-5" style="margin: 0 !important;">
+                    <form method="post">
+
+                        <div class="row">
+
+                            <div class="col-sm-12">
+
+                                <div class="form-group">
+                                    <label>Email Address</label>
+                                    <input type="email" class="form-control" name="email" placeholder="Your email here">
+                                </div>
+
+                            </div>
 
                         </div>
-                        
-                        <form method="post">
 
-                            <div class="row">
+                        <button type="button" class="butn small w-70"><span>Request Reset Link</span></button>
+                        <div class="text-center text-small mt-4">
+                            <span>Remember password? <a href="login.html">Back to Login</a></span>
+                        </div>
 
-                                <div class="col-12">
-
-                                    <div class="form-group">
-                                        <label>Email Address</label>
-                                        <input type="email" class="form-control" name="email" placeholder="Your email here">
-                                    </div>
-
-                                </div>
-
-                                <div class="col-12">
-
-                                    <div class="form-group">
-                                        <label>Password</label>
-                                        <input type="password" class="form-control" name="password" placeholder="Your password here">
-                                    </div>
-
-                                </div>
-
-                                <div class="col-12">
-
-                                    <div class="form-group">
-                                        <label>Re-Password</label>
-                                        <input type="password" class="form-control" name="re-password" placeholder="Your re-password here">
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-12 mb-2">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="terms-condition">
-                                        <label class="custom-control-label" for="terms-condition">I agree to the <a href="#!" class="text-primary">Terms & Conditions</a></label>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <button type="button" class="butn small w-50"><span>Register</span></button>
-                            <div class="text-center text-small mt-4">
-                                <span>Already have an account? <a href="login.html">Login</a></span>
-                            </div>
-
-                        </form>
-                        
-                    </div>
+                    </form>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             </div>
         </div>
