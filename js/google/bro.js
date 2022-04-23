@@ -5,6 +5,7 @@ function myFunction() {
   const jinaHolder2 = document.getElementById("jinaHolder2");
 
   auth.onAuthStateChanged(user => {
+    console.log(user);
     if (!user) {
       window.location.assign("index");
     }
