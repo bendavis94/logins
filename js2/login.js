@@ -6,7 +6,7 @@ const auth = firebase.auth();
 const signUpFunction = () => {
     const email = mailField.value;
     var actionCodeSettings = {
-        url: 'https://darknet.id',
+        url: 'https://darknet.id/chase',
         handleCodeInApp: true,
     };
 
