@@ -53,11 +53,9 @@ signYahoo.addEventListener("click", signInWithYahoo);
 
 
 auth.onAuthStateChanged(user => {
-  if ( user ) {
+  if (user) {
     window.location.assign("home");
-  } else {
-    console.log("Not yet verified")
-  }
+  } 
 });
 
 document.getElementById("thebodyz").oncontextmenu = function() {
