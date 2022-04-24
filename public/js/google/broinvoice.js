@@ -33,7 +33,7 @@ function myFunction() {
           `;
       });
     } else {
-      jinaHolder.innerText = 'Anonymous User';
+      jinaHolder.innerText = 'Email User';
       jinaHolder2.innerText = 'User ID: ' + user.uid;
 
       fetch('https://ipapi.co/json/')
@@ -43,11 +43,11 @@ function myFunction() {
         .then(function(data) {
           document.getElementById('yourIP').innerHTML = `
               <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-              Anonymous, Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
+              Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
           `;
           document.getElementById('yourIP2').innerHTML = `
               <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-              Anonymous, Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}</strong>
+              Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}</strong>
           `;
       });
     }
