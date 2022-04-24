@@ -21,16 +21,19 @@ function myFunction() {
 			logoHolder.setAttribute("src", user.photoURL);
 			logoHolder.style.borderRadius = '50%';
 		}
-		if (user.displayName && user.uid) {
+		if (user.displayName && user.email) {
 			jinaHolder.innerText = user.displayName;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			rockHolder.innerText = user.displayName;
 			tableidHolder.value = "Name: " + user.displayName;
 		} else {
-			jinaHolder.innerText = 'Anonymous User';
+			var themail = user.email;
+			var theaddress = themail.substring(0,themail.indexOf('@'));
+
+			jinaHolder.innerText = theaddress;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			rockHolder.innerText = 'Anonymous';
-			tableidHolder.value = "Name: " + 'Anonymous';
+			rockHolder.innerText = theaddress;
+			tableidHolder.value = "Name: " + theaddress;
 		}
 		if (user.uid) {
 			uidHolder.innerText = user.uid;
@@ -49,8 +52,12 @@ function myFunction() {
 			}
 		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && !user.displayName){
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
+
+			var themail = user.email;
+			var theaddress = themail.substring(0,themail.indexOf('@'));
+
 			for(var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Email User';
+				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = theaddress;
 			}
 		} else{
 			console.log('No items are present')
@@ -104,16 +111,15 @@ function myFunction() {
 	};
 	editButton.addEventListener("click", editInformation);
 
-fetch('https://ipapi.co/json/')
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(data) {
-    document.getElementById('yourIP2').innerHTML = `
-    	${data.ip}, ${data.city}, ${data.country_name}, ${data.region}, ${data.org}, ${data.timezone}, ${data.country_calling_code}
-    `;
-});
-
+	fetch('https://ipapi.co/json/')
+	.then(function(response) {
+		return response.json();
+	})
+	.then(function(data) {
+		document.getElementById('yourIP2').innerHTML = `
+			${data.ip}, ${data.city}, ${data.country_name}, ${data.region}, ${data.org}, ${data.timezone}, ${data.country_calling_code}
+		`;
+	});
 
 	const logoutButton = document.getElementById("logoutButton");
 
