@@ -11,7 +11,7 @@ const signUpFunction = () => {
     };
     auth.sendSignInLinkToEmail(email, actionCodeSettings)
     .then(() => {
-        console.log('Link Sent Successfully');
+        alert('Check your email' + email + 'inbox for a verification message');
         window.localStorage.setItem('emailForSignIn', email);
     })
     .catch(error => {
