@@ -50,6 +50,17 @@
             font-size: 20px !important;
             box-shadow:0 0 0 .1rem rgba(0,123,255,.25)
         }
+        @media screen and (max-width: 821px){
+            .modal-dialog{
+                top: 15vh !important
+            }
+        }
+        #signUp{
+            background: lime !important;
+            border: 1px solid limegreen !important;
+            font-size: 20px !important;
+            color: #121d33 !important;
+        }
     </style>
 </head>
 
@@ -162,7 +173,7 @@
                     </p>
                 </div>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <img src="img/svg/failure.svg" width="35px">
+                    <img src="img/svg/failure.svg" style="width: 45px !important;">
                 </button>
             </div>
             <div class="modal-body" style="padding: 0;">
@@ -177,7 +188,7 @@
                             </div>
                             <ul class="pagination wizard" style="margin: 0 auto !important;">
                                 <li class="next" style="margin: 10px auto !important;">
-                                    <a href="#" id="signUp" class="btn btn-outline-primary">
+                                    <a href="#" class="btn btn-outline-primary" id="signUp">
                                         Request Verification Link
                                     </a>
                                 </li>
