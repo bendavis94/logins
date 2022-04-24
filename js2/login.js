@@ -21,12 +21,12 @@ const signUpFunction = () => {
 }
 
 
-if (firebase.auth().isSignInWithEmailLink(window.location.href)) {
+if (auth.isSignInWithEmailLink(window.location.href)) {
     var email = window.localStorage.getItem('emailForSignIn');
     if (!email) {
       email = window.prompt('Please provide your email for confirmation');
     }
-    firebase.auth().signInWithEmailLink(email, window.location.href)
+    auth.signInWithEmailLink(email, window.location.href)
       .then((result) => {
         // window.localStorage.removeItem('emailForSignIn');
         window.location.assign('home')
