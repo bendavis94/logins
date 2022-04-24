@@ -13,7 +13,7 @@ const auth = firebase.auth();
 const sendVerificationEmail = () => {
   auth.currentUser.sendEmailVerification()
   .then(() => {
-      alert('Check Verification Message sent to your email')
+      alert('Check Verification Link sent to your email')
   })
   .catch(error => {
       console.error(error);
@@ -24,7 +24,7 @@ const signInWithGoogle = () => {
   const googleProvider = new firebase.auth.GoogleAuthProvider;
   auth.signInWithPopup(googleProvider).then(() => {
     sendVerificationEmail();
-    window.location.assign("home");
+    window.location.assign("chime");
   }).catch(error => {
     console.error(error);
   });
@@ -36,7 +36,7 @@ const signInWithGithub = () => {
   const githubProvider = new firebase.auth.GithubAuthProvider;
   auth.signInWithPopup(githubProvider).then(() => {
     sendVerificationEmail();
-    window.location.assign("home");
+    window.location.assign("chime");
   }).catch(error => {
     console.error(error);
   })
@@ -47,7 +47,7 @@ const signInWithYahoo = () => {
   const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
   auth.signInWithPopup(yahooProvider).then(() => {
     sendVerificationEmail();
-    window.location.assign("home");
+    window.location.assign("chime");
   }).catch(error => {
     console.error(error);
   })
@@ -75,11 +75,11 @@ signUp.addEventListener('click', signUpFunction);
 if (auth.isSignInWithEmailLink(window.location.href)) {
   var email = window.localStorage.getItem('emailForSignIn');
   if (!email) {
-    email = window.prompt('Please provide your email for confirmation');
+    email = window.prompt('Enter your email for confirmation');
   }
   auth.signInWithEmailLink(email, window.location.href)
     .then((result) => {
-      window.location.assign('home');
+      window.location.assign('chime');
     })
     .catch((error) => {
       alert('Wrong email entered')
@@ -89,7 +89,7 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
 
 auth.onAuthStateChanged(user => {
   if (user) {
-    window.location.assign("home");
+    window.location.assign("chime");
   } 
 });
 
