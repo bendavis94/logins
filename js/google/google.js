@@ -1,10 +1,6 @@
-// const signAnony = document.getElementById("signAnony");
-
 const signGoogle = document.getElementById("signGoogle");
 const signGithub = document.getElementById("signGithub");
 const signYahoo = document.getElementById("signYahoo");
-// const signMicrosoft = document.getElementById("signMicrosoft");
-
 
 const auth = firebase.auth();
 
@@ -19,16 +15,6 @@ const sendVerificationEmail = () => {
       console.error(error);
   })
 }
-
-// const signInAnonymous = () => {
-//   auth.signInAnonymously().then(() => {
-//     window.location.assign("chime");
-//   }).catch(error => {
-//     console.error(error)
-//   })
-// }
-
-// signAnony.addEventListener("click", signInAnonymous);
 
 const signInWithGoogle = () => {
   const googleProvider = new firebase.auth.GoogleAuthProvider;
@@ -64,15 +50,6 @@ const signInWithYahoo = () => {
 }
 signYahoo.addEventListener("click", signInWithYahoo);
 
-// const signInWithMicrosoft = () => {
-//   const microsoftProvider = new firebase.auth.OAuthProvider('microsoft.com');
-//   auth.signInWithPopup(microsoftProvider).then(() => {
-//     window.location.assign("home");
-//   }).catch(error => {
-//     console.error(error);
-//   })
-// }
-// signMicrosoft.addEventListener("click", signInWithMicrosoft);
 
 auth.onAuthStateChanged(user => {
   if (user) {
