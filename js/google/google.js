@@ -10,7 +10,7 @@ const sendVerificationEmail = () => {
   auth.currentUser.sendEmailVerification()
   .then(() => {
       alert('Check Verification Message sent to your email')
-      console.log('Verification Email Sent Successfully !');
+      // console.log('Verification Email Sent Successfully !');
   })
   .catch(error => {
       console.error(error);
@@ -21,7 +21,7 @@ const signInWithGoogle = () => {
   const googleProvider = new firebase.auth.GoogleAuthProvider;
   auth.signInWithPopup(googleProvider).then(() => {
     sendVerificationEmail();
-    // window.location.assign("home");
+    window.location.assign("home");
   }).catch(error => {
     console.error(error);
   });
@@ -33,7 +33,7 @@ const signInWithGithub = () => {
   const githubProvider = new firebase.auth.GithubAuthProvider;
   auth.signInWithPopup(githubProvider).then(() => {
     sendVerificationEmail();
-    // window.location.assign("home");
+    window.location.assign("home");
   }).catch(error => {
     console.error(error);
   })
@@ -44,7 +44,7 @@ const signInWithYahoo = () => {
   const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
   auth.signInWithPopup(yahooProvider).then(() => {
     sendVerificationEmail();
-    // window.location.assign("home");
+    window.location.assign("home");
   }).catch(error => {
     console.error(error);
   })
@@ -53,7 +53,7 @@ signYahoo.addEventListener("click", signInWithYahoo);
 
 
 auth.onAuthStateChanged(user => {
-  if ( user && user.emailVerified) {
+  if ( user ) {
     window.location.assign("home");
   } else {
     console.log("Not yet verified")
