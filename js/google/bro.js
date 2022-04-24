@@ -31,7 +31,7 @@ function myFunction() {
       });
     } else {
       var themail = user.email;
-      var theaddress = themail.substring(0,email.indexOf('@'));
+      var theaddress = themail.substring(0,themail.indexOf('@'));
       jinaHolder.innerText = theaddress;
       jinaHolder2.innerText = 'USER ID: ' + user.uid;
 
