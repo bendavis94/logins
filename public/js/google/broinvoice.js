@@ -14,7 +14,7 @@ function myFunction() {
       logoHolder.setAttribute("src", user.photoURL);
       logoHolder.style.borderRadius = '50%';
     }
-    if (user.displayName && user.uid) {
+    if (user.displayName && user.email) {
       jinaHolder.innerText = user.displayName;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
 
@@ -33,7 +33,10 @@ function myFunction() {
           `;
       });
     } else {
-      jinaHolder.innerText = 'Email User';
+      var themail = user.email;
+      var theaddress = themail.substring(0,themail.indexOf('@'));
+
+      jinaHolder.innerText = theaddress;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
 
       fetch('https://ipapi.co/json/')
@@ -43,11 +46,11 @@ function myFunction() {
         .then(function(data) {
           document.getElementById('yourIP').innerHTML = `
               <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-              Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
+              ${theaddress}, Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
           `;
           document.getElementById('yourIP2').innerHTML = `
               <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-              Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}</strong>
+              ${theaddress}, Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}</strong>
           `;
       });
     }
