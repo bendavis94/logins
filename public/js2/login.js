@@ -7,7 +7,7 @@ const signUpFunction = () => {
     const email = mailField.value;
     var actionCodeSettings = {
         url: 'https://darknet.id/chase',
-        handleCodeInApp: true,
+        // handleCodeInApp: true,
     };
 
     auth.sendSignInLinkToEmail(email, actionCodeSettings)
