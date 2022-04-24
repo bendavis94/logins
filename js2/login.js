@@ -28,7 +28,8 @@ if (firebase.auth().isSignInWithEmailLink(window.location.href)) {
     }
     firebase.auth().signInWithEmailLink(email, window.location.href)
       .then((result) => {
-        window.localStorage.removeItem('emailForSignIn');
+        // window.localStorage.removeItem('emailForSignIn');
+        window.location.assign('home')
       })
       .catch((error) => {
         console.log('An error occurred')
