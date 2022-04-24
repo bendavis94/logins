@@ -62,7 +62,7 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
       window.location.assign('home');
     })
     .catch((error) => {
-      console.log('An error occurred')
+      alert('Wrong email entered')
     });
 }
 
