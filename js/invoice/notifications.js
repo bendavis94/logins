@@ -28,10 +28,10 @@
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [
 					` 
-						${user.email}, your account has insufficient funds to complete the download,
-						Send a one time payment of $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} / ${toastbitcoin} bitcoin to buy 
-						${items[0].account} with ${items[0].balance}, 
-						and ${items[1].account} with ${items[1].balance}
+					${toastbitcoin} bitcoin payment not detected, scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}, 
+					to download ${items[0].account} with ${items[0].balance}, 
+					and ${items[1].account} with ${items[1].balance}, 
+					a copy of bank log details will be sent to ${user.email} after payment
 					`
 					];
 					i++;
@@ -47,9 +47,10 @@
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [
 					` 	
-						${user.email}, your account has insufficient funds to complete the download,
-						Send a one time payment of $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} / ${toastbitcoin} bitcoin to buy 
-						${items[0].account} with ${items[0].balance}
+						${toastbitcoin} bitcoin payment not detected, scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}, 
+						to download ${items[0].account} with ${items[0].balance}, 
+						a copy of bank log details will be sent to ${user.email} after payment
+
 					`
 					];
 					i++;
@@ -65,11 +66,11 @@
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [
 					` 
-						${user.email}, your account has insufficient funds to complete the download,
-						Send a one time payment of $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} / ${toastbitcoin} bitcoin to buy 
-						${items[0].account} with ${items[0].balance}, 
+						${toastbitcoin} bitcoin payment not detected, scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}, 
+						to download ${items[0].account} with ${items[0].balance}, 
 						and ${items[1].account} with ${items[1].balance}, 
-						and ${items[2].account} with ${items[2].balance}
+						and ${items[2].account} with ${items[2].balance},
+						a copy of bank log details will be sent to ${user.email} after payment
 					`
 					];
 					i++;
