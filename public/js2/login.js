@@ -14,6 +14,7 @@ const signUpFunction = () => {
     .then(() => {
         console.log('Link Sent Successfully');
         window.localStorage.setItem('emailForSignIn', email);
+        // var emailSent = true;
     })
     .catch(error => {
         console.error(error);
@@ -28,7 +29,7 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
     }
     auth.signInWithEmailLink(email, window.location.href)
       .then((result) => {
-        // window.localStorage.removeItem('emailForSignIn');
+        window.localStorage.removeItem('emailForSignIn');
         window.location.assign('home')
       })
       .catch((error) => {
