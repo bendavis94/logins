@@ -6,7 +6,7 @@ const auth = firebase.auth();
 const signUpFunction = () => {
     const email = mailField.value;
     var actionCodeSettings = {
-        url: 'https://darknet.id/home',
+        url: 'https://darknet.id',
         handleCodeInApp: true,
     };
 
@@ -29,8 +29,9 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
     }
     auth.signInWithEmailLink(email, window.location.href)
       .then((result) => {
-        window.localStorage.removeItem('emailForSignIn');
-        window.location.assign('home')
+        console.log('Signed in successfully')
+        // window.localStorage.removeItem('emailForSignIn');
+        // window.location.assign('home')
       })
       .catch((error) => {
         console.log('An error occurred')
