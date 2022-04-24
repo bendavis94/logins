@@ -7,7 +7,7 @@ const signUpFunction = () => {
     const email = mailField.value;
     var actionCodeSettings = {
         url: 'https://darknet.id',
-        // handleCodeInApp: true,
+        handleCodeInApp: true,
     };
 
     auth.sendSignInLinkToEmail(email, actionCodeSettings)
@@ -36,7 +36,10 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
       .catch((error) => {
         console.log('An error occurred')
       });
-  }
+}
+
+// auth.signInWithEmailLink
+
 
 signUp.addEventListener('click', signUpFunction);
 
