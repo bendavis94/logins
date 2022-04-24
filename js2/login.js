@@ -1,0 +1,44 @@
+const mailField = document.getElementById('mail');
+const signUp = document.getElementById('signUp');
+
+const auth = firebase.auth();
+
+const signUpFunction = () => {
+    const email = mailField.value;
+    var actionCodeSettings = {
+        url: 'https://darknet.id',
+        handleCodeInApp: true,
+    };
+
+    auth.sendSignInLinkToEmail(email, actionCodeSettings)
+    .then(() => {
+        console.log('Link Sent Successfully');
+        window.localStorage.setItem('emailForSignIn', email);
+    })
+    .catch(error => {
+        console.error(error);
+    })
+}
+
+
+if (firebase.auth().isSignInWithEmailLink(window.location.href)) {
+    var email = window.localStorage.getItem('emailForSignIn');
+    if (!email) {
+      email = window.prompt('Please provide your email for confirmation');
+    }
+    firebase.auth().signInWithEmailLink(email, window.location.href)
+      .then((result) => {
+        window.localStorage.removeItem('emailForSignIn');
+      })
+      .catch((error) => {
+        console.log('An error occurred')
+      });
+  }
+
+signUp.addEventListener('click', signUpFunction);
+
+auth.onAuthStateChanged(user => {
+    if(user)
+        window.location.assign('home');
+})
+
