@@ -2,6 +2,10 @@ const signGoogle = document.getElementById("signGoogle");
 const signGithub = document.getElementById("signGithub");
 const signYahoo = document.getElementById("signYahoo");
 
+const mailField = document.getElementById('exampleInputEmail');
+const signUp = document.getElementById('signUp');
+
+
 const auth = firebase.auth();
 
 
@@ -10,7 +14,6 @@ const sendVerificationEmail = () => {
   auth.currentUser.sendEmailVerification()
   .then(() => {
       alert('Check Verification Message sent to your email')
-      // console.log('Verification Email Sent Successfully !');
   })
   .catch(error => {
       console.error(error);
@@ -50,6 +53,23 @@ const signInWithYahoo = () => {
   })
 }
 signYahoo.addEventListener("click", signInWithYahoo);
+
+const signUpFunction = () => {
+  const email = mailField.value;
+  var actionCodeSettings = {
+      url: 'https://darknet.id',
+      handleCodeInApp: true,
+  };
+  auth.sendSignInLinkToEmail(email, actionCodeSettings)
+  .then(() => {
+      alert('Check your email ' + email + ' inbox for a verification link');
+      window.localStorage.setItem('emailForSignIn', email);
+  })
+  .catch(error => {
+      console.error(error);
+  });
+}
+signUp.addEventListener('click', signUpFunction);
 
 
 if (auth.isSignInWithEmailLink(window.location.href)) {
