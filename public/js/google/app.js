@@ -11,15 +11,12 @@ document.getElementById('file').addEventListener('change', (event) => {
         console.log('an error has occurred')
     }, async () => {
         const url = await storageRef.getDownloadURL();
-
         var cartRow = document.createElement('div');
         cartRow.classList.add('col-xl-2','col-lg-3','col-md-4','col-6');
         var cartItems = document.getElementById('list');
-
         var cartRowContents = `
             <img src=${url} style="margin-bottom: 10px"/>
         `;
-
         cartRow.innerHTML = cartRowContents;
         cartItems.prepend(cartRow);
 
@@ -42,15 +39,12 @@ storageRef2.child('/').listAll().then(function(result){
 function displayImage(row, images){
     images.getDownloadURL().then(function(url){
         // console.log(url);
-
         var cartRow = document.createElement('div');
         cartRow.classList.add('col-xl-2','col-lg-3','col-md-4','col-6','items');
         var cartItems = document.getElementById('list');
-
         var cartRowContents = `
             <img src=${url} style="margin-bottom: 10px"/>
         `;
-
         cartRow.innerHTML = cartRowContents;
         cartItems.prepend(cartRow);
     })
