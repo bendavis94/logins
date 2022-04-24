@@ -41,10 +41,10 @@ function myFunction() {
         })
         .then(function(data) {
           document.getElementById('footer-email').innerHTML = `
-           Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
+          ${theaddress} Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
           `;
           document.getElementById('footer-email-2').innerHTML = `
-            Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}
+           ${theaddress} Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}
          `;
       });
     }
