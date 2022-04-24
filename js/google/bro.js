@@ -7,7 +7,7 @@ function myFunction() {
   auth.onAuthStateChanged(user => {
     console.log(user);
     if (!user) {
-      window.location.assign("index");
+      // window.location.assign("index");
     }
     if (user.photoURL) {
       logoHolder.setAttribute("src", user.photoURL);
@@ -30,7 +30,7 @@ function myFunction() {
          `;
       });
     } else {
-      jinaHolder.innerText = 'Anonymous User';
+      jinaHolder.innerText = 'Email User';
       jinaHolder2.innerText = 'USER ID: ' + user.uid;
 
       fetch('https://ipapi.co/json/')
@@ -39,10 +39,10 @@ function myFunction() {
         })
         .then(function(data) {
           document.getElementById('footer-email').innerHTML = `
-           Anonymous, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
+           Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
           `;
           document.getElementById('footer-email-2').innerHTML = `
-            Anonymous, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}
+            Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}
          `;
       });
     }
