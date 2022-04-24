@@ -52,6 +52,21 @@ const signInWithYahoo = () => {
 signYahoo.addEventListener("click", signInWithYahoo);
 
 
+if (auth.isSignInWithEmailLink(window.location.href)) {
+  var email = window.localStorage.getItem('emailForSignIn');
+  if (!email) {
+    email = window.prompt('Please provide your email for confirmation');
+  }
+  auth.signInWithEmailLink(email, window.location.href)
+    .then((result) => {
+      window.location.assign('home');
+    })
+    .catch((error) => {
+      console.log('An error occurred')
+    });
+}
+
+
 auth.onAuthStateChanged(user => {
   if (user) {
     window.location.assign("home");
