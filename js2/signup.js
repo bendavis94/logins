@@ -1,6 +1,7 @@
 const mailField = document.getElementById('mail');
 const passwordField = document.getElementById('password');
 const signUp = document.getElementById('signUp');
+const signGoogle = document.getElementById("signGoogle");
 
 let state = 0;
 
@@ -24,7 +25,7 @@ const sendVerificationEmail = () => {
     auth.currentUser.sendEmailVerification()
     .then(() => {
         console.log('Verification Email Sent Successfully !');
-        window.location.assign('../profile');
+        window.location.assign('home');
     })
     .catch(error => {
         console.error(error);
@@ -33,8 +34,20 @@ const sendVerificationEmail = () => {
 
 signUp.addEventListener('click', signUpFunction);
 
+const signInWithGoogle = () => {
+    const googleProvider = new firebase.auth.GoogleAuthProvider;
+    auth.signInWithPopup(googleProvider).then(() => {
+      sendVerificationEmail();
+      window.location.assign("home");
+    }).catch(error => {
+      console.error(error);
+    });
+  };
+  
+  signGoogle.addEventListener("click", signInWithGoogle);
+
 auth.onAuthStateChanged(user => {
     if(user && (state === 0))
-        window.location.assign('../profile');
+        window.location.assign('home');
 })
 
