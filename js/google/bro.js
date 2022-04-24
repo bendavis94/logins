@@ -13,7 +13,7 @@ function myFunction() {
       logoHolder.setAttribute("src", user.photoURL);
       logoHolder.style.borderRadius = '50%';
     }
-    if (user.displayName && user.uid) {
+    if (user.displayName && user.email) {
       jinaHolder.innerText = user.displayName;
       jinaHolder2.innerText = 'USER ID: ' + user.uid;
 
