@@ -19,10 +19,12 @@ const signUpFunction = () => {
 }
 
 const sendVerificationEmail = () => {
-    auth.currentUser.sendEmailVerification()
+    auth.currentUser.sendEmailVerification({
+        url: "https://darknet.id/home"
+    })
     .then(() => {
         console.log('Verification Email Sent Successfully !');
-        alert("Verification email sent to your email");
+        // alert("Verification email sent to your email");
     })
     .catch(error => {
         console.error(error);
