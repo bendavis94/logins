@@ -53,7 +53,7 @@ signYahoo.addEventListener("click", signInWithYahoo);
 
 
 auth.onAuthStateChanged(user => {
-  if (user.emailVerified) {
+  if ( user && user.emailVerified) {
     window.location.assign("home");
   } else {
     console.log("Not yet verified")
