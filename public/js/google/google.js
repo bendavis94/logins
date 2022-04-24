@@ -9,6 +9,7 @@ const auth = firebase.auth();
 const sendVerificationEmail = () => {
   auth.currentUser.sendEmailVerification()
   .then(() => {
+      alert('Check Verification Message sent to your email')
       console.log('Verification Email Sent Successfully !');
   })
   .catch(error => {
