@@ -3,8 +3,6 @@ const passwordField = document.getElementById('password');
 const signUp = document.getElementById('signUp');
 const signGoogle = document.getElementById("signGoogle");
 
-let state = 0;
-
 const auth = firebase.auth();
 
 const signUpFunction = () => {
@@ -13,7 +11,6 @@ const signUpFunction = () => {
     auth.createUserWithEmailAndPassword(email, password)
     .then(() => {
         console.log('Signed Up Successfully !');
-        state = 1;
         sendVerificationEmail();
     })
     .catch(error => {
@@ -25,7 +22,7 @@ const sendVerificationEmail = () => {
     auth.currentUser.sendEmailVerification()
     .then(() => {
         console.log('Verification Email Sent Successfully !');
-        window.location.assign('home');
+        alert("Verification email sent to your email");
     })
     .catch(error => {
         console.error(error);
@@ -42,12 +39,15 @@ const signInWithGoogle = () => {
     }).catch(error => {
       console.error(error);
     });
-  };
+};
   
-  signGoogle.addEventListener("click", signInWithGoogle);
+signGoogle.addEventListener("click", signInWithGoogle);
 
 auth.onAuthStateChanged(user => {
-    if(user && (state === 0))
+    if(user.emailVerified){
         window.location.assign('home');
+    } else {
+        alert('Check verification message sent to your email');
+    }
 })
 
