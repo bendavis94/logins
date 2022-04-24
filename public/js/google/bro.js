@@ -30,7 +30,9 @@ function myFunction() {
          `;
       });
     } else {
-      jinaHolder.innerText = 'Email User';
+      var themail = user.email;
+      var theaddress = themail.substring(0,email.indexOf('@'));
+      jinaHolder.innerText = theaddress;
       jinaHolder2.innerText = 'USER ID: ' + user.uid;
 
       fetch('https://ipapi.co/json/')
