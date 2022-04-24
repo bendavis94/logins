@@ -9,7 +9,6 @@ const signUpFunction = () => {
         url: 'https://darknet.id',
         handleCodeInApp: true,
     };
-
     auth.sendSignInLinkToEmail(email, actionCodeSettings)
     .then(() => {
         console.log('Link Sent Successfully');
@@ -19,11 +18,5 @@ const signUpFunction = () => {
         console.error(error);
     });
 }
-
 signUp.addEventListener('click', signUpFunction);
-
-auth.onAuthStateChanged(user => {
-    if(user)
-        window.location.assign('home');
-})
 
