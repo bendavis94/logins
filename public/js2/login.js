@@ -1,4 +1,4 @@
-const mailField = document.getElementById('mail');
+const mailField = document.getElementById('exampleInputEmail');
 const signUp = document.getElementById('signUp');
 
 const auth = firebase.auth();
@@ -11,7 +11,7 @@ const signUpFunction = () => {
     };
     auth.sendSignInLinkToEmail(email, actionCodeSettings)
     .then(() => {
-        alert('Check your email' + email + 'inbox for a verification message');
+        alert('Check your email ' + email + ' inbox for a verification link');
         window.localStorage.setItem('emailForSignIn', email);
     })
     .catch(error => {
