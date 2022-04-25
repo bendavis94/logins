@@ -57,9 +57,6 @@ function myFunction() {
     if (user.email && user.uid){
         invoiceHolder.innerText = 'Invoice to: '+ user.email;
         invoiceHolder3.innerText = 'Invoice to: '+ user.email;
-    } else {
-        invoiceHolder.innerText =   'User ID: '+ user.uid;
-        invoiceHolder3.innerText =  'User ID: '+ user.uid;
     } 
   });
 
