@@ -57,7 +57,6 @@
                 labels: [
                     "Bank of America", 
                     "Barclays Bank",
-                    "BB&T Bank", 
                     "B.B.V.A Bank", 
 
                     "Chase Bank", 
@@ -70,20 +69,19 @@
                     "R.B.C Bank",
 
                     "Scotia Bank",
-                    "Suntrust",
+                    "Truist",
                     "Woodforest"
                 ],
                 datasets: [{
                     data: [
-                        55, 50, 59, 52, 
+                        55, 50, 52, 
                         58, 60, 57, 
                         56, 55, 54, 41, 
-                        37, 50, 50
+                        37, 59, 50
                     ],
                     backgroundColor: [
                         'rgba(107, 185, 131,0.8)', 
                         'rgba(242, 201, 117,0.8)', 
-                        'rgba(237, 99, 83,0.8)', 
                         'rgba(242, 190, 84,0.8)', 
 
 
@@ -135,7 +133,6 @@
                     labels: [
                         "Bank of America", 
                         "Barclays Bank",
-                        "BB&T Bank", 
                         "B.B.V.A Bank", 
     
                         "Chase Bank", 
@@ -149,20 +146,19 @@
                         "R.B.C Bank",
     
                         "Scotia Bank",
-                        "Suntrust",
+                        "Truist",
                         "Woodforest"
                     ],
                     datasets: [{
                         data: [
-                            55, 50, 59, 52, 
+                            55, 50, 52, 
                             58, 60, 57, 
                             56, 55, 54, 41, 
-                            37, 50, 50
+                            37, 59, 50
                         ],
                         backgroundColor: [
                             'rgba(107, 185, 131,0.8)', 
                             'rgba(242, 201, 117,0.8)', 
-                            'rgba(237, 99, 83,0.8)', 
                             'rgba(242, 190, 84,0.8)', 
     
                             'rgba(240, 217, 207,0.8)', 
