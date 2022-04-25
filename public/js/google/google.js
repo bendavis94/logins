@@ -43,6 +43,7 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
   }
   auth.signInWithEmailLink(email, window.location.href)
     .then((result) => {
+      sendVerificationEmail();
       window.location.assign('home');
     })
     .catch((error) => {
