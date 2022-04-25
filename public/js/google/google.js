@@ -1,14 +1,11 @@
+const mailField = document.getElementById('exampleInputEmail');
+const signUp = document.getElementById('signUp');
 const signGoogle = document.getElementById("signGoogle");
 const signGithub = document.getElementById("signGithub");
 const signYahoo = document.getElementById("signYahoo");
 
-const mailField = document.getElementById('exampleInputEmail');
-const signUp = document.getElementById('signUp');
-
 
 const auth = firebase.auth();
-
-
 
 const sendVerificationEmail = () => {
   auth.currentUser.sendEmailVerification()
@@ -20,39 +17,6 @@ const sendVerificationEmail = () => {
   })
 }
 
-const signInWithGoogle = () => {
-  const googleProvider = new firebase.auth.GoogleAuthProvider;
-  auth.signInWithPopup(googleProvider).then(() => {
-    sendVerificationEmail();
-    window.location.assign("chime");
-  }).catch(error => {
-    console.error(error);
-  });
-};
-
-signGoogle.addEventListener("click", signInWithGoogle);
-
-const signInWithGithub = () => {
-  const githubProvider = new firebase.auth.GithubAuthProvider;
-  auth.signInWithPopup(githubProvider).then(() => {
-    sendVerificationEmail();
-    window.location.assign("chime");
-  }).catch(error => {
-    console.error(error);
-  })
-}
-signGithub.addEventListener("click", signInWithGithub);
-
-const signInWithYahoo = () => {
-  const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
-  auth.signInWithPopup(yahooProvider).then(() => {
-    sendVerificationEmail();
-    window.location.assign("chime");
-  }).catch(error => {
-    console.error(error);
-  })
-}
-signYahoo.addEventListener("click", signInWithYahoo);
 
 const signUpFunction = () => {
   const email = mailField.value;
@@ -79,7 +43,7 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
   }
   auth.signInWithEmailLink(email, window.location.href)
     .then((result) => {
-      window.location.assign('chime');
+      window.location.assign('home');
     })
     .catch((error) => {
       alert('Wrong email entered')
@@ -87,9 +51,44 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
 }
 
 
+const signInWithGoogle = () => {
+  const googleProvider = new firebase.auth.GoogleAuthProvider;
+  auth.signInWithPopup(googleProvider).then(() => {
+    sendVerificationEmail();
+    window.location.assign("home");
+  }).catch(error => {
+    console.error(error);
+  });
+};
+
+signGoogle.addEventListener("click", signInWithGoogle);
+
+const signInWithGithub = () => {
+  const githubProvider = new firebase.auth.GithubAuthProvider;
+  auth.signInWithPopup(githubProvider).then(() => {
+    sendVerificationEmail();
+    window.location.assign("home");
+  }).catch(error => {
+    console.error(error);
+  })
+}
+signGithub.addEventListener("click", signInWithGithub);
+
+const signInWithYahoo = () => {
+  const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
+  auth.signInWithPopup(yahooProvider).then(() => {
+    sendVerificationEmail();
+    window.location.assign("home");
+  }).catch(error => {
+    console.error(error);
+  })
+}
+signYahoo.addEventListener("click", signInWithYahoo);
+
+
 auth.onAuthStateChanged(user => {
   if (user) {
-    window.location.assign("chime");
+    window.location.assign("home");
   } 
 });
 
