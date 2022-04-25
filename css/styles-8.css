@@ -3994,4 +3994,21 @@ footer h3.footer-title-style7:before{
 		transform: scale(1.0);
 	}
  }
+
+
+
+ ::-webkit-scrollbar {
+    width: 14px;
+}
+::-webkit-scrollbar-track {
+    background: #121d33 !important;
+    border-radius: 16px !important;
+}
+::-webkit-scrollbar-thumb {
+    background: #16a086 !important;
+    border-radius: 16px !important;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #fff !important;
+}
 /*# sourceMappingURL=styles-2.css.map */
