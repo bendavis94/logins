@@ -19,6 +19,7 @@ const sendVerificationEmail = () => {
 
 
 const signUpFunction = () => {
+  event.preventDefault();
   const email = mailField.value;
   var actionCodeSettings = {
       url: 'https://darknet.id',
@@ -34,6 +35,7 @@ const signUpFunction = () => {
   });
 }
 signUp.addEventListener('click', signUpFunction);
+document.getElementById('the-form').addEventListener('submit', signUpFunction);
 
 
 if (auth.isSignInWithEmailLink(window.location.href)) {
