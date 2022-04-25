@@ -260,7 +260,7 @@ button.toast-close-button{
     height:7px;
     border-radius: 1px;
     background-color: lime;
-    border-right: 8px solid rgb(0, 50, 150);
+    border-right: 3px solid rgb(0, 50, 150);
     opacity:1;
     -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
     filter:alpha(opacity=100)
