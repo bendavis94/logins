@@ -302,7 +302,7 @@ table.dataTable td{
     float:left;
     font-size: 17px;
     font-weight: 600;
-    display: none !important;
+    /* display: none !important; */
 }
 .dataTables_wrapper .dataTables_filter{
     float:right;
@@ -503,5 +503,8 @@ table.dataTable td{
     }
     .dataTables_wrapper .dataTables_filter{
         color: white !important;
+    }
+    .dataTables_wrapper .dataTables_length{
+        display: none !important;
     }
 }

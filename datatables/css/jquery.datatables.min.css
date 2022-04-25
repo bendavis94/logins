@@ -492,7 +492,7 @@ table.dataTable td{
     .dataTables_wrapper .dataTables_filter{
         margin-top:0.5em
     }
-}
-.dataTables_wrapper .dataTables_length{
-    display: none;
+    .dataTables_wrapper .dataTables_length{
+        display: none !important;
+    }
 }
