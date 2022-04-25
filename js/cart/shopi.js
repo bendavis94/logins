@@ -142,9 +142,9 @@ function removeCartItem(event) {
     var info5 = cartItem.children[10].innerText;
     var info6 = cartItem.children[11].innerText;
     var info7 = cartItem.children[12].innerText;
+    localStorage.setItem('time-left',600);
     removeItemFromCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
     buttonClicked.parentElement.parentElement.remove();
-    localStorage.setItem('time-left',600);
     updateCartTotal()
 }
 
