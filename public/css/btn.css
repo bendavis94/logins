@@ -100,3 +100,71 @@
 	height: 100% !important;
 	z-index: 2 !important;
 }
+
+label{
+	color: red;
+	font-size: 17px;
+	font-family: "Montserrat", sans-serif;
+}
+#link-p{
+	color: #121d33 !important;
+	font-size: 16px !important;
+	font-family: "Montserrat", sans-serif;
+}
+#exampleInputEmail{
+	border-radius: 1px !important;
+	outline:0;
+	font-size: 20px !important;
+	box-shadow:0 0 0 .1rem rgba(0,123,255,.25)
+}
+@media screen and (max-width: 821px){
+	.modal-dialog{
+		top: 15vh !important
+	}
+}
+.section-heading{
+	margin-bottom:0px;
+	text-align:center
+}
+.section-heading h4{
+	position:relative;
+	padding-bottom:5px;
+	font-weight:600;
+	margin-bottom:5px;
+	position:relative;
+	line-height:140%;
+	color: white;
+}
+.section-heading h4:after{
+	content:'';
+	display:block;
+	width:200px;
+	height:2px;
+	background:#49c0d0;
+	border-radius: 5px;
+	margin:0 auto;
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:0 
+}
+#signUp{
+	background: lime !important;
+	border: 1px solid limegreen !important;
+	font-size: 20px !important;
+	color: #121d33 !important;
+}
+.bg-animate{
+	background-position:0 0;
+	background-repeat:repeat-x;
+	animation:animatedBackground 30s linear infinite
+}
+
+@keyframes animatedBackground{
+	from{
+		background-position:0 0
+	}
+	to{
+		background-position:100% 0
+	}
+}
