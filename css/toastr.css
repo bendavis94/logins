@@ -317,7 +317,7 @@ button.toast-close-button{
 }
 #toast-container>.toast-success{
 	background-color:#D9E7F9;
-	color:rgb(34, 34, 100);
+	color:rgb(0, 50, 150);
 	border-color:#2F73C8
 }
 /* #toast-container>.toast-success{
