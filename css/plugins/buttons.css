@@ -845,7 +845,7 @@ td{
     font-size: 16px;
     font-weight: 700;
     margin: 0;
-    width: 75%;
+    width: 78%;
     padding: 5px;
     border-radius: 1px;
     border: 2px solid rgba(135,206,235,0.2);
@@ -854,7 +854,7 @@ td{
 #copy-text, #copy-text-2{
     background: yellow;
     border: 1px solid gold;
-    width: 25%;
+    width: 22%;
     margin: 0 !important;
     padding: 0 !important;
     color: #121d33;
