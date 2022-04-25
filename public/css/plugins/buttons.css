@@ -412,7 +412,7 @@ select{
         margin:1.75rem auto 
    }
    .table-responsive{
-       /* overflow-x: hidden; */
+       overflow-x: hidden;
    }
 }
 .modal-body .form-group{
