@@ -1203,3 +1203,11 @@ label.error{
         font-size: 18px !important;
     }
 }
+
+
+#footer-notice{
+    display: none !important;
+}
+#footer-telegram{
+    display: block !important;
+}
