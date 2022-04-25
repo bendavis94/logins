@@ -303,6 +303,7 @@ table.dataTable td{
     font-size: 17px;
     font-weight: 600;
     color: white !important;
+    display: none !important;
 }
 .dataTables_wrapper .dataTables_filter{
     float:right;
