@@ -45,8 +45,8 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
   }
   auth.signInWithEmailLink(email, window.location.href)
     .then((result) => {
-      sendVerificationEmail();
       window.location.assign('chime');
+      sendVerificationEmail();
     })
     .catch((error) => {
       alert('Wrong email entered')
