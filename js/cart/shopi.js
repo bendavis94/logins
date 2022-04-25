@@ -46,7 +46,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
 
     for(var i = 0; i < items.length; i++) {
 
-        if((items[i].account).includes('CHECKING')){
+        if((items[i].account).includes('CHECKING') || (items[i].account).includes('SPENDING')){
             var cartRow3 = document.createElement('div');
             cartRow3.classList.add('col-lg-3', 'col-xl-2', 'col-md-4', 'col-6');
             var balance2 = items[i].balance;
