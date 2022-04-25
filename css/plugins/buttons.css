@@ -412,7 +412,7 @@ select{
         margin:1.75rem auto 
    }
    .table-responsive{
-       overflow-x: hidden;
+       /* overflow-x: hidden; */
    }
 }
 .modal-body .form-group{
@@ -1221,4 +1221,29 @@ label.error{
 .margin-0-padding-0{
     margin: 0 !important;
     padding: 0 !important;
+}
+
+
+
+
+/* Designing for scroll-bar */
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: skyblue !important;
+    border-radius: 16px !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #121d33 !important;
+    border-radius: 16px !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: yellow !important;
 }
