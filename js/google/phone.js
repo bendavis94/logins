@@ -33,6 +33,5 @@ const signInWithPhone = sentCodeId => {
     console.error(error);
   })
 }
-
 getCodeButton.addEventListener('click', sendVerificationCode);
 
