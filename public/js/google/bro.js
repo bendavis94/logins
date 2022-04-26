@@ -63,23 +63,7 @@ function myFunction() {
           ${user.phoneNumber}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}
         `;
       });
-    } else {
-      jinaHolder.innerText = 'Anonymous';
-      jinaHolder2.innerText = 'USER ID: ' + user.uid;
-
-      fetch('https://ipapi.co/json/')
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(data) {
-          document.getElementById('footer-email').innerHTML = `
-          Anonymous, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
-          `;
-          document.getElementById('footer-email-2').innerHTML = `
-          Anonymous, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}
-        `;
-      });
-    }
+    } 
   });
 
   document.getElementById("thebodyz").oncontextmenu = function() {
