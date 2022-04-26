@@ -174,7 +174,8 @@
 
                 <form id="myform">
                     <div class="form-group col-md-12">
-                        <input type="tel" required class="form-control" id="phoneInput" pattern="[0-9]" placeholder="Enter Phone Number...">
+                        <!-- <input type="tel" required class="form-control" id="phoneInput" pattern="[0-9]" placeholder="Enter Phone Number..."> -->
+                        <input type="tel" id="phone" class="form-control" placeholder="Enter Phone Number..." name="phone" pattern="[+]{1}[0-9]{11,14}" required />
                     </div>
                     <div id="recaptcha-container"></div>
                     <li class="next" style="margin: 10px auto !important; text-align: center !important;">
@@ -210,7 +211,7 @@
 
                 <form>
                     <div class="form-group col-md-12">
-                        <input type="tel" required class="form-control" id="phoneInput" placeholder="Enter Verification Code...">
+                        <input type="text" required maxlength="8" class="form-control" id="phoneInput" placeholder="Enter Verification Code...">
                     </div>
                     <div id="recaptcha-container"></div>
                     <li class="next" style="margin: 10px auto !important; text-align: center !important;">

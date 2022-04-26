@@ -164,7 +164,7 @@ label{
 	right:0;
 	bottom:0 
 }
-#signUp{
+#signUp, #signPhone{
 	background: lime !important;
 	border: 1px solid limegreen !important;
 	font-size: 20px !important;
