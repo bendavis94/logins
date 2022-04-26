@@ -127,7 +127,7 @@ label{
 	font-size: 20px !important;
 	box-shadow:0 0 0 .1rem rgba(0,123,255,.25)
 }
-#phoneInput{
+#phoneInput, #code{
 	border-radius: 1px !important;
 	outline:0;
 	font-size: 20px !important;
