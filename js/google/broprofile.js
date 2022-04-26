@@ -26,7 +26,7 @@ function myFunction() {
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			rockHolder.innerText = user.displayName;
 			tableidHolder.value = "Name: " + user.displayName;
-		} else {
+		} else if(!user.displayName && user.email){
 			var themail = user.email;
 			var theaddress = themail.substring(0,themail.indexOf('@'));
 
@@ -34,6 +34,11 @@ function myFunction() {
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			rockHolder.innerText = theaddress;
 			tableidHolder.value = "Name: " + theaddress;
+		} else if(!user.displayName && !user.email && user.phoneNumber) {
+			jinaHolder.innerText = user.phoneNumber;
+			jinaHolder2.innerText = 'User ID: ' + user.uid;
+			rockHolder.innerText = user.phoneNumber;
+			tableidHolder.value = "Name: " + user.phoneNumber;
 		}
 		if (user.uid) {
 			uidHolder.innerText = user.uid;
@@ -42,15 +47,19 @@ function myFunction() {
 			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
 			email5.innerHTML = user.email;
-		} 
+		} else if(!user.email && user.phoneNumber){
+			email1.innerHTML = `Check your phone messages @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
+			email2.innerHTML = `Cashout Method is also sent to your phone number @:<strong>${user.phoneNumber}</strong>`;
+			email5.innerHTML = user.email;
+		}
 		let goodies = [];
 
-		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.displayName){
+		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.displayName && user.email){
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
 			for(var i = 0; i < goodies.length; i++) {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.displayName;
 			}
-		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && !user.displayName){
+		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && !user.displayName && user.email){
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
 
 			var themail = user.email;
@@ -58,6 +67,11 @@ function myFunction() {
 
 			for(var i = 0; i < goodies.length; i++) {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = theaddress;
+			}
+		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && !user.displayName && !user.email && user.phoneNumber){
+			goodies = JSON.parse(localStorage.getItem('banklogs'));
+			for(var i = 0; i < goodies.length; i++) {
+				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
 			}
 		} else{
 			console.log('No items are present')
