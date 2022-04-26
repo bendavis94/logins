@@ -49,7 +49,7 @@ function myFunction() {
       });
     } else if(!user.displayName && !user.email && user.phoneNumber){
       jinaHolder.innerText = user.phoneNumber;
-      jinaHolder.innerText = 'USER ID: ' + user.uid;
+      jinaHolder2.innerText = 'USER ID: ' + user.uid;
 
       fetch('https://ipapi.co/json/')
         .then(function(response) {
@@ -65,7 +65,7 @@ function myFunction() {
       });
     } else {
       jinaHolder.innerText = 'Anonymous';
-      jinaHolder.innerText = 'USER ID: ' + user.uid;
+      jinaHolder2.innerText = 'USER ID: ' + user.uid;
 
       fetch('https://ipapi.co/json/')
         .then(function(response) {
