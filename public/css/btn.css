@@ -111,11 +111,22 @@ label{
 	font-size: 16px !important;
 	font-family: "Montserrat", sans-serif;
 }
+.link-phone{
+	color: #121d33 !important;
+	font-size: 16px !important;
+	font-family: "Montserrat", sans-serif;
+}
 #exampleInputEmail{
 	border-radius: 1px !important;
 	outline:0;
 	font-size: 20px !important;
 	box-shadow:0 0 0 .1rem rgba(0,123,255,.25)
+}
+#phoneInput{
+	border-radius: 1px !important;
+	outline:0;
+	font-size: 20px !important;
+	box-shadow:0 0 0 .1rem rgba(0,123,255,.25)	
 }
 @media screen and (max-width: 821px){
 	.modal-dialog{
