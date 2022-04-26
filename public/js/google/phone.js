@@ -27,7 +27,7 @@ const signInWithPhone = sentCodeId => {
   const credential = firebase.auth.PhoneAuthProvider.credential(sentCodeId, code);
   auth.signInWithCredential(credential)
   .then(() => {
-    window.location.assign('./profile');
+    window.location.assign('home');
   })
   .catch(error => {
     console.error(error);
