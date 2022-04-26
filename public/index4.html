@@ -172,7 +172,7 @@
             </div>
             <div class="modal-body" style="padding: 0;">
 
-                <form>
+                <form id="myform">
                     <div class="form-group col-md-12">
                         <input type="tel" required class="form-control" id="phoneInput" pattern="[0-9]" placeholder="Enter Phone Number...">
                     </div>
@@ -239,6 +239,15 @@
 
 <script src="js/pages/particles.js"></script>
 <script src="js/pages/app.js"></script>
+
+<script>
+    $('#myform').on('submit', function(ev) {
+    $('#codeModal').modal('show');
+    $('#phoneModal').modal('hide');
+    ev.preventDefault();
+});
+
+</script>
 
 </body>
 </html> 
