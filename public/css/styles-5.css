@@ -3815,6 +3815,7 @@ footer h3.footer-title-style7:before{
 
 ::-webkit-scrollbar {
     width: 10px;
+	height: 7px !important;
 }
 ::-webkit-scrollbar-track {
     background: #121d33 !important;

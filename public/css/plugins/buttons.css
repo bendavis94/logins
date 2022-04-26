@@ -411,9 +411,6 @@ select{
         min-width:98vw;
         margin:1.75rem auto 
    }
-   .table-responsive{
-       overflow-x: hidden;
-   }
 }
 .modal-body .form-group{
     margin: 0;
