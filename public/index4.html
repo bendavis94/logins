@@ -174,11 +174,11 @@
 
                 <form>
                     <div class="form-group col-md-12">
-                        <input type="tel" required class="form-control" id="phoneInput" placeholder="Enter Phone Number...">
+                        <input type="tel" required class="form-control" id="phoneInput" pattern="[0-9]" placeholder="Enter Phone Number...">
                     </div>
                     <div id="recaptcha-container"></div>
                     <li class="next" style="margin: 10px auto !important; text-align: center !important;">
-                        <button type="submit" class="btn btn-outline-primary" id="getCode" data-dismiss="modal" data-toggle="modal" data-target="#codeModal">
+                        <button type="submit" class="btn btn-outline-primary" id="getCode">
                             Get Verification Code
                         </button>
                     </li>
@@ -199,7 +199,7 @@
                         Enter Verification Code
                     </h4>
                     <p id="link-code">
-                        Check your phone messages
+                        Check your phone messages, and enter the code received.
                     </p>
                 </div>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
