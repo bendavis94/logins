@@ -98,7 +98,6 @@
                     </button>
                 </p>
 
-
                 <div class="border-top border-color-light-white margin-20px-bottom sm-margin-30px-bottom"></div>
 
             </div>
@@ -130,7 +129,7 @@
 
                 <form id="the-form">
                     <div class="form-group col-md-12">
-                        <input type="email" required class="form-control" id="exampleInputEmail" placeholder="Enter email...">
+                        <input type="email" required class="form-control" id="exampleInputEmail" placeholder="Enter email">
                     </div>
                     <li class="next" style="margin: 10px auto !important; text-align: center !important;">
                         <button type="submit" class="btn btn-outline-primary" id="signUp">
@@ -146,84 +145,11 @@
 
 
 
-<div class="modal fade" id="phoneModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="section-heading">
-                    <h4 style="color: #121d33 !important;">
-                        Login with Phone
-                    </h4>
-                    <p id="link-phone">
-                        A verification code will be sent to the phone number you input below 👇🏼👇🏼.
-                        Use that code to login to the website
-                    </p>
-                </div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <img src="img/svg/failure.svg" style="width: 45px !important;">
-                </button>
-            </div>
-            <div class="modal-body" style="padding: 0;">
-
-                <form id="myform">
-                    <div class="form-group col-md-12">
-                        <input type="tel" id="phoneNumber" class="form-control" placeholder="Enter Phone Number..." name="phone" pattern="[+]{1}[0-9]{11,14}" required />
-                    </div>
-                    <div id="recaptcha-container"></div>
-                    <li class="next" style="margin: 10px auto !important; text-align: center !important;">
-                        <button type="submit" class="btn btn-outline-primary" id="getCode">
-                            Get Verification Code
-                        </button>
-                    </li>
-                </form>
-
-            </div>
-        </div>
-    </div>   
-</div>
-
-
-<div class="modal fade" id="codeModal" tabindex="-1" role="dialog" aria-labelledby="codeModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="section-heading">
-                    <h4 style="color: #121d33 !important;">
-                        Enter Verification Code
-                    </h4>
-                    <p id="link-code">
-                        Check your phone messages, and enter the code received.
-                    </p>
-                </div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <img src="img/svg/failure.svg" style="width: 45px !important;">
-                </button>
-            </div>
-            <div class="modal-body" style="padding: 0;">
-
-                <!-- <form> -->
-                    <div class="form-group col-md-12">
-                        <input type="text" required maxlength="8" class="form-control" id="code" placeholder="Enter Verification Code...">
-                    </div>
-                    <li class="next" style="margin: 10px auto !important; text-align: center !important;">
-                        <button type="button" class="btn btn-outline-primary" id="signInWithPhone">
-                            Verify Code
-                        </button>
-                    </li>
-                <!-- </form> -->
-
-            </div>
-        </div>
-    </div>   
-</div>
-
-
-
 <script src="js/main/core.home.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
 <script src="js/google/fir.js"></script>
-<script src="js/google/googlephone.js"></script>
+<script src="js/google/google.js"></script>
 
 
 <script src="js/pages/home-modal.js"></script>
@@ -231,14 +157,6 @@
 
 <script src="js/pages/particles.js"></script>
 <script src="js/pages/app.js"></script>
-
-<script>
-    $('#myform').on('submit', function(ev) {
-    $('#codeModal').modal('show');
-    $('#phoneModal').modal('hide');
-    ev.preventDefault();
-});
-</script>
 
 </body>
 </html> 
