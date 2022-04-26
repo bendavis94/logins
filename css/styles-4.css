@@ -3964,15 +3964,16 @@ footer h3.footer-title-style7:before{
 
 
 ::-webkit-scrollbar {
-    width: 14px;
+    width: 10px;
+	height: 7px !important;
 }
 ::-webkit-scrollbar-track {
-    background: #47588f !important;
-    border-radius: 16px !important;
+    background: #121d33 !important;
+    border-radius: 10px !important;
 }
 ::-webkit-scrollbar-thumb {
-    background: #86bc42 !important;
-    border-radius: 16px !important;
+    background: #47588f !important;
+    border-radius: 10px !important;
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #fff !important;
