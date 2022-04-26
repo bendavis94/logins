@@ -1,6 +1,6 @@
 const mailField = document.getElementById('exampleInputEmail');
 const signUp = document.getElementById('signUp');
-// const signFacebook = document.getElementById("signFacebook");
+const signFacebook = document.getElementById("signFacebook");
 const signGoogle = document.getElementById("signGoogle");
 const signGithub = document.getElementById("signGithub");
 const signYahoo = document.getElementById("signYahoo");
@@ -17,7 +17,6 @@ const sendVerificationEmail = () => {
       console.error(error);
   })
 }
-
 
 const signUpFunction = () => {
   event.preventDefault();
@@ -54,16 +53,16 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
     });
 }
 
-// const signInWithFacebook = () => {
-//   const facebookProvider = new firebase.auth.FacebookAuthProvider;
-//   auth.signInWithPopup(facebookProvider).then(() => {
-//     sendVerificationEmail();
-//     window.location.assign("home");
-//   }).catch(error => {
-//     alert(error.message);
-//   });
-// };
-// signFacebook.addEventListener("click", signInWithFacebook);
+const signInWithFacebook = () => {
+  const facebookProvider = new firebase.auth.FacebookAuthProvider;
+  auth.signInWithPopup(facebookProvider).then(() => {
+    sendVerificationEmail();
+    window.location.assign("home");
+  }).catch(error => {
+    alert(error.message);
+  });
+};
+signFacebook.addEventListener("click", signInWithFacebook);
 
 const signInWithGoogle = () => {
   const googleProvider = new firebase.auth.GoogleAuthProvider;
