@@ -29,7 +29,7 @@ function myFunction() {
             ${user.displayName}, your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}
          `;
       });
-    } else {
+    } else if(!user.displayName && user.email) {
       var themail = user.email;
       var theaddress = themail.substring(0,themail.indexOf('@'));
       jinaHolder.innerText = theaddress;
@@ -41,11 +41,43 @@ function myFunction() {
         })
         .then(function(data) {
           document.getElementById('footer-email').innerHTML = `
-          ${theaddress} Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
+          ${theaddress}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
           `;
           document.getElementById('footer-email-2').innerHTML = `
-           ${theaddress} Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}
+           ${theaddress}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}
          `;
+      });
+    } else if(!user.displayName && !user.email && user.phoneNumber){
+      jinaHolder.innerText = user.phoneNumber;
+      jinaHolder.innerText = 'USER ID: ' + user.uid;
+
+      fetch('https://ipapi.co/json/')
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          document.getElementById('footer-email').innerHTML = `
+          ${user.phoneNumber}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
+          `;
+          document.getElementById('footer-email-2').innerHTML = `
+          ${user.phoneNumber}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}
+        `;
+      });
+    } else {
+      jinaHolder.innerText = 'Anonymous';
+      jinaHolder.innerText = 'USER ID: ' + user.uid;
+
+      fetch('https://ipapi.co/json/')
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          document.getElementById('footer-email').innerHTML = `
+          Anonymous, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
+          `;
+          document.getElementById('footer-email-2').innerHTML = `
+          Anonymous, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}
+        `;
       });
     }
   });
