@@ -2,7 +2,6 @@ const mailField = document.getElementById('exampleInputEmail');
 const signUp = document.getElementById('signUp');
 const signGoogle = document.getElementById("signGoogle");
 const signGithub = document.getElementById("signGithub");
-const signMicrosoft = document.getElementById("signMicrosoft");
 const signYahoo = document.getElementById("signYahoo");
 
 
@@ -74,18 +73,6 @@ const signInWithGithub = () => {
   })
 }
 signGithub.addEventListener("click", signInWithGithub);
-
-
-const signInWithMicrosoft = () => {
-  const microsoftProvider = new firebase.auth.OAuthProvider('microsoft.com');
-  auth.signInWithPopup(microsoftProvider).then(() => {
-    sendVerificationEmail();
-    window.location.assign("home");
-  }).catch(error => {
-    console.error(error);
-  })
-}
-signMicrosoft.addEventListener("click", signInWithMicrosoft);
 
 const signInWithYahoo = () => {
   const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
