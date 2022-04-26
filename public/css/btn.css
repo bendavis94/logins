@@ -111,7 +111,12 @@ label{
 	font-size: 16px !important;
 	font-family: "Montserrat", sans-serif;
 }
-.link-phone{
+#link-phone{
+	color: #121d33 !important;
+	font-size: 16px !important;
+	font-family: "Montserrat", sans-serif;
+}
+#link-code{
 	color: #121d33 !important;
 	font-size: 16px !important;
 	font-family: "Montserrat", sans-serif;

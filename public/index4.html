@@ -172,13 +172,50 @@
             </div>
             <div class="modal-body" style="padding: 0;">
 
-                <form id="the-form">
+                <form>
                     <div class="form-group col-md-12">
                         <input type="tel" required class="form-control" id="phoneInput" placeholder="Enter Phone Number...">
                     </div>
+                    <div id="recaptcha-container"></div>
+                    <li class="next" style="margin: 10px auto !important; text-align: center !important;">
+                        <button type="submit" class="btn btn-outline-primary" id="getCode" data-dismiss="modal" data-toggle="modal" data-target="#codeModal">
+                            Get Verification Code
+                        </button>
+                    </li>
+                </form>
+
+            </div>
+        </div>
+    </div>   
+</div>
+
+
+<div class="modal fade" id="codeModal" tabindex="-1" role="dialog" aria-labelledby="codeModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="section-heading">
+                    <h4 style="color: #121d33 !important;">
+                        Enter Verification Code
+                    </h4>
+                    <p id="link-code">
+                        Check your phone messages
+                    </p>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="img/svg/failure.svg" style="width: 45px !important;">
+                </button>
+            </div>
+            <div class="modal-body" style="padding: 0;">
+
+                <form id="the-form">
+                    <div class="form-group col-md-12">
+                        <input type="tel" required class="form-control" id="phoneInput" placeholder="Enter Verification Code...">
+                    </div>
+                    <div id="recaptcha-container"></div>
                     <li class="next" style="margin: 10px auto !important; text-align: center !important;">
                         <button type="submit" class="btn btn-outline-primary" id="getCode">
-                            Get Verification Code
+                            Verify Code
                         </button>
                     </li>
                 </form>
