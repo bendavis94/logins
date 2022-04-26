@@ -102,7 +102,7 @@
                     <button id="signEmail" class="btn" style="font-weight: 700;  font-size: 24px; color: #121d33; padding: 14px; border: 1px solid goldenrod;"
                     data-toggle="modal" data-target="#phoneModal">
                         Login with Phone
-                        <img style="height: 25px;" src="img/svg/mail.svg">
+                        <img style="height: 25px;" src="img/svg/phone.svg">
                     </button>
                 </p>
 
@@ -137,11 +137,48 @@
 
                 <form id="the-form">
                     <div class="form-group col-md-12">
-                        <input type="email" required class="form-control" id="exampleInputEmail" placeholder="Enter email">
+                        <input type="email" required class="form-control" id="exampleInputEmail" placeholder="Enter email...">
                     </div>
                     <li class="next" style="margin: 10px auto !important; text-align: center !important;">
                         <button type="submit" class="btn btn-outline-primary" id="signUp">
                             Request Verification Link
+                        </button>
+                    </li>
+                </form>
+
+            </div>
+        </div>
+    </div>   
+</div>
+
+
+
+<div class="modal fade" id="phoneModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="section-heading">
+                    <h4 style="color: #121d33 !important;">
+                        Login with Phone
+                    </h4>
+                    <p id="link-p">
+                        A verification code will be sent to the phone number you input below 👇🏼👇🏼.
+                        Use that code to login to the website
+                    </p>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="img/svg/failure.svg" style="width: 45px !important;">
+                </button>
+            </div>
+            <div class="modal-body" style="padding: 0;">
+
+                <form id="the-form">
+                    <div class="form-group col-md-12">
+                        <input type="tel" required class="form-control" id="phoneInput" placeholder="Enter Phone Number...">
+                    </div>
+                    <li class="next" style="margin: 10px auto !important; text-align: center !important;">
+                        <button type="submit" class="btn btn-outline-primary" id="getCode">
+                            Get Verification Code
                         </button>
                     </li>
                 </form>
