@@ -3814,15 +3814,15 @@ footer h3.footer-title-style7:before{
 
 
 ::-webkit-scrollbar {
-    width: 14px;
+    width: 10px;
 }
 ::-webkit-scrollbar-track {
     background: #121d33 !important;
-    border-radius: 16px !important;
+    border-radius: 10px !important;
 }
 ::-webkit-scrollbar-thumb {
     background: #fab702 !important;
-    border-radius: 16px !important;
+    border-radius: 10px !important;
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #fff !important;
