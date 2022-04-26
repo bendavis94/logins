@@ -18,7 +18,6 @@ const sendVerificationEmail = () => {
   })
 }
 
-
 const signUpFunction = () => {
   event.preventDefault();
   const email = mailField.value;
