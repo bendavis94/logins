@@ -50,7 +50,7 @@ function myFunction() {
 		} else if(!user.email && user.phoneNumber){
 			email1.innerHTML = `Check your phone messages @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method is also sent to your phone number @:<strong>${user.phoneNumber}</strong>`;
-			email5.innerHTML = user.email;
+			email5.innerHTML = `No email connected, logged in by phone number ${user.phoneNumber}, a link will be sent by messages where you can see the bank log details you bought`;
 		}
 		let goodies = [];
 
