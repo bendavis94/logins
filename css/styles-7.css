@@ -1430,61 +1430,6 @@ a:hover,a:active{
 		margin-bottom:15px
 	}
 }
-.counter-box h3,.counter-box h4{
-	display:inline-block;
-	font-weight:600
-}
-.social-icons a:hover{
-	opacity:1
-}
-.counter-box{
-	position:relative;
-	text-align:center
-}
-.counter-box h3:after{
-	content:'+'
-}
-.counter-box h4{
-	font-size:35px;
-	line-height:normal;
-	margin:0
-}
-.counter-box h4:after{
-	content:'+'
-}
-.counter-box h3{
-	font-size:45px
-}
-@media screen and (max-width: 767px){
-	.counter-box p:before{
-		margin:0;
-		position:absolute;
-		top:45px
-	}
-	.counter-box p:after{
-		margin:0;
-		left:14px;
-		right:0;
-		top:45px
-	}
-	.counter-box.black p:after{
-		margin:0;
-		left:14px;
-		right:0;
-		top:45px
-	}
-	.counter-box h4{
-		font-size:26px
-	}
-}
-.counter-box-style2{
-	position:relative;
-	box-shadow:2px 5px 10px rgba(0,0,0,0.1);
-	padding:20px 10px
-}
-.counter-box-style2 h3:after,.counter-box-style2 h4:after{
-	content:'+'
-}
 
 .owl-theme .owl-dots .owl-dot.active span,.owl-theme .owl-dots .owl-dot:hover span{
 	background-color:#49c0d0
