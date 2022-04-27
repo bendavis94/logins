@@ -6,21 +6,9 @@
     position:relative;
     z-index:1;
 }
-.washington{
-    text-transform: uppercase;
-    font-weight: 600;
-}
-#btn-prices{
-    font-weight: 600;
-    font-size: 18px;
-}
 #text-to-copy:hover{
     transform: scale(1.05);
 }
-/* #showtoast:hover{
-    transform: scale(1.1);
-}
-*/
 .main-wrapper.wrapper-boxed{
     background-color:#ffffff;
     box-shadow:0 0 10px rgba(0, 0, 0, 0.3);
