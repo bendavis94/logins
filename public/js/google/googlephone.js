@@ -78,16 +78,12 @@ const signInWithGithub = () => {
 }
 signGithub.addEventListener("click", signInWithGithub);
 
-const signInWithYahoo = () => {
-  const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
-  auth.signInWithPopup(yahooProvider).then(() => {
-    sendVerificationEmail();
-    window.location.assign("home");
-  }).catch(error => {
-    console.error(error);
-  })
-}
-signYahoo.addEventListener("click", signInWithYahoo);
+
+
+
+
+
+
 
 
 
@@ -123,6 +119,22 @@ auth.signInWithCredential(credential)
 getCodeButton.addEventListener('click', sendVerificationCode);
 
 
+
+
+
+
+
+
+const signInWithYahoo = () => {
+  const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
+  auth.signInWithPopup(yahooProvider).then(() => {
+    sendVerificationEmail();
+    window.location.assign("home");
+  }).catch(error => {
+    console.error(error);
+  })
+}
+signYahoo.addEventListener("click", signInWithYahoo);
 
 
 
