@@ -1171,7 +1171,7 @@ label.error{
 
 .small-footer-list{
     border-bottom: none !important;
-    margin: 3px 0;
+    margin: 10px 0;
 }
 .small-footer-list:first-child{
     margin-top: 0 !important;
