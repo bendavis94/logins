@@ -516,24 +516,6 @@ a:hover,a:active{
 	background-color:rgba(255,255,255,0.85);
 	margin:0
 }
-.section-heading.title-style4 h1,.section-heading.title-style4 h2,.section-heading.title-style4 h3,.section-heading.title-style4 h4,.section-heading.title-style4 h5,.section-heading.title-style4 h6{
-	text-transform:uppercase;
-	font-weight:700;
-	padding:0;
-	margin:0
-}
-.section-heading.title-style4 p{
-	padding-top:0
-}
-.section-heading.title-style4 span{
-	color:#49c0d0;
-	font-size:32px;
-	font-weight:700;
-	text-transform:uppercase
-}
-.section-heading.title-style4 h1:after,.section-heading.title-style4 h2:after,.section-heading.title-style4 h3:after,.section-heading.title-style4 h4:after,.section-heading.title-style4 h5:after,.section-heading.title-style4 h6:after{
-	content:none
-}
 .section-heading.title-style5 h1,.section-heading.title-style5 h2,.section-heading.title-style5 h3,.section-heading.title-style5 h4,.section-heading.title-style5 h5,.section-heading.title-style5 h6{
 	padding:0;
 	margin:0
@@ -572,11 +554,6 @@ a:hover,a:active{
 .section-heading.title-style5.left .square .separator-left{
 	display:none
 }
-@media screen and (max-width: 1199px){
-	.section-heading.title-style4 span{
-		font-size:30px
-	}
-}
 @media screen and (max-width: 991px){
 	.section-heading{
 		margin-bottom:5px
@@ -584,14 +561,6 @@ a:hover,a:active{
 	.section-heading p{
 		padding-top:10px;
 		font-size:14px
-	}
-	.section-heading.title-style4 span{
-		font-size:28px
-	}
-}
-@media screen and (max-width: 767px){
-	.section-heading.title-style4 span{
-		font-size:28px
 	}
 }
 
