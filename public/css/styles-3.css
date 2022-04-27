@@ -2128,21 +2128,6 @@ a:hover,a:active{
    animation-timing-function:ease-in-out ;
    z-index: 10000;
 }
- .label-offer{
-	 position:absolute;
-	left:0;
-	 top:0;
-	height:25px;
-	 width: 100%;
-	 line-height:25px;
-	 display:inline-block;
-	 padding:0px 12px;
-	 color:#fff;
-	 text-transform:uppercase;
-	 font-weight:600;
-	 font-size:12px;
-	 z-index:1 
-}
  .product-grid .border{
 	float:left;
 	width:100%;
