@@ -67,14 +67,17 @@
 
 .tuto{
     margin: 16px 0;
+    list-style-type: none !important; 
+    margin: 0 !important; 
+    padding: 0 !important;
 }
 .tut{
     background: white;
     border: 1px solid rgba(18, 29, 51,0.3);
     color: #121d33;
     font-weight: 700;
-    font-size: 14px;
-    width: 60%;
+    font-size: 19px;
+    width: 72%;
     padding: 5px 0;
     align-items: center;
 }
@@ -1171,7 +1174,11 @@ label.error{
 
 .small-footer-list{
     border-bottom: none !important;
-    margin: 10px 0;
+
+    list-style-type: none !important; 
+    margin: 0 !important; 
+    padding: 0 !important;
+    text-align: center !important;
 }
 .small-footer-list:first-child{
     margin-top: 0 !important;
@@ -1200,12 +1207,6 @@ label.error{
 }
 
 
-#footer-notice{
-    display: none !important;
-}
-#footer-telegram{
-    display: block !important;
-}
 
 #yourIP, #yourIP2{
     margin: 0 !important; 
@@ -1217,3 +1218,35 @@ label.error{
     margin: 0 !important;
     padding: 0 !important;
 }
+
+.margin-0-padding10-0{
+    margin: 0 !important;
+    padding: 10px 0 !important;
+}
+
+
+@media screen and (max-width: 821px){
+    #banklinks-large{
+        display: none !important;
+    }
+    #banklinks-small{
+        display: block !important;
+    }
+}
+
+
+@media screen and (min-width: 821px){
+    #banklinks-large{
+        display: block !important;
+    }
+    #banklinks-small{
+        display: none !important;
+    }
+}
+
+
+
+
+
+
+
