@@ -806,18 +806,6 @@ a:hover,a:active{
    animation-timing-function:ease-in-out ;
 }
 
-
-@media screen and (max-width: 991px){
-	.sm-bg{
-		min-height:400px
-	}
-}
-@media screen and (max-width: 767px){
-	.sm-bg{
-		min-height:320px
-	}
-}
-
  .owl-carousel .service-box{
 	 margin: 0px 
 }
