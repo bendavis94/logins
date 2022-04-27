@@ -206,18 +206,14 @@
                 </button>
             </div>
             <div class="modal-body" style="padding: 0;">
-
-                <!-- <form id="code-form"> -->
-                    <div class="form-group col-md-12">
-                        <input type="text" required maxlength="8" class="form-control" id="code" placeholder="Enter Verification Code...">
-                    </div>
-                    <li class="next" style="margin: 10px auto !important; text-align: center !important;">
-                        <button type="submit" class="btn btn-outline-primary" id="signInWithPhone">
-                            Verify Code
-                        </button>
-                    </li>
-                <!-- </form> -->
-
+                <div class="form-group col-md-12">
+                    <input type="text" required maxlength="7" class="form-control" id="code" placeholder="Enter Verification Code...">
+                </div>
+                <li class="next" style="margin: 10px auto !important; text-align: center !important;">
+                    <button type="submit" class="btn btn-outline-primary" id="signInWithPhone">
+                        Verify Code
+                    </button>
+                </li>
             </div>
         </div>
     </div>   
@@ -231,20 +227,10 @@
 <script src="js/google/fir.js"></script>
 <script src="js/google/googlephone.js"></script>
 
-
 <script src="js/pages/home-modal.js"></script>
-
-
 <script src="js/pages/particles.js"></script>
 <script src="js/pages/app.js"></script>
 
-<script>
-    $('#myform').on('submit', function(ev) {
-    $('#codeModal').modal('show');
-    $('#phoneModal').modal('hide');
-    ev.preventDefault();
-});
-</script>
 
 </body>
 </html> 
