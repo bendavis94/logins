@@ -1486,22 +1486,6 @@ a:hover,a:active{
 	content:'+'
 }
 
-.progress-text{
-	font-size:13px;
-	font-weight:500;
-	color:#232323;
-	margin-bottom:5px
-}
-.progress-medium{
-	height:8px;
-	border-radius:50px;
-	box-shadow:none
-}
-.progress-bold{
-	height:12px;
-	border-radius:50px;
-	box-shadow:none
-}
 .owl-theme .owl-dots .owl-dot.active span,.owl-theme .owl-dots .owl-dot:hover span{
 	background-color:#49c0d0
 }
