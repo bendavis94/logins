@@ -497,53 +497,6 @@ a:hover,a:active{
 	text-transform:uppercase;
 	letter-spacing:.075em
 }
-.title-style2{
-	position:relative;
-	padding-bottom:20px;
-	margin-bottom:0
-}
-.title-style2:after{
-	content:'';
-	width:60px;
-	height:2px;
-	background:#16a086;
-	position:absolute;
-	bottom:0;
-	left:calc(50% - 30px)
-}
-.title-style2:before{
-	content:'';
-	height:1px;
-	background:rgba(0,0,0,0.2);
-	position:absolute;
-	bottom:0;
-	left:0;
-	right:0;
-	margin:0 auto;
-	width:250px
-}
-.section-heading.left .title-style2{
-	left:0;
-	margin:0
-}
-.section-heading.left .title-style2:before{
-	width:125px;
-	left:0;
-	margin:0
-}
-.section-heading.left .title-style2:after{
-	width:50px;
-	left:37px
-}
-h1.title-style2.white,h2.title-style2.white,h3.title-style2.white,h4.title-style2.white,h5.title-style2.white,h6.title-style2.white{
-	color:#fff
-}
-.section-heading .title-style2.white:after{
-	background:#16a086
-}
-.section-heading .title-style2.white:before{
-	background:rgba(255,255,255,0.8)
-}
 .section-heading.title-style3{
 	text-align:left;
 	margin-bottom:30px;
