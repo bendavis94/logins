@@ -516,44 +516,7 @@ a:hover,a:active{
 	background-color:rgba(255,255,255,0.85);
 	margin:0
 }
-.section-heading.title-style5 h1,.section-heading.title-style5 h2,.section-heading.title-style5 h3,.section-heading.title-style5 h4,.section-heading.title-style5 h5,.section-heading.title-style5 h6{
-	padding:0;
-	margin:0
-}
-.section-heading.title-style5.white h1,.section-heading.title-style5.white h2,.section-heading.title-style5.white h3,.section-heading.title-style5.white h4,.section-heading.title-style5.white h5,.section-heading.title-style5.white h6{
-	color:#fff
-}
-.section-heading.title-style5 h1:after,.section-heading.title-style5 h2:after,.section-heading.title-style5 h3:after,.section-heading.title-style5 h4:after,.section-heading.title-style5 h5:after,.section-heading.title-style5 h6:after{
-	content:none
-}
-.section-heading.title-style5 .separator-left,.section-heading.title-style5 .separator-right{
-	height:1px;
-	position:absolute;
-	top:50%;
-	width:70px;
-	margin-top:-1px;
-	margin-bottom:0
-}
-.section-heading.title-style5 .separator-left{
-	left:-80px
-}
-.section-heading.title-style5 .separator-right{
-	right:-80px
-}
-.section-heading.title-style5 .square{
-	width:10px;
-	height:10px;
-	background-color:transparent;
-	border-width:1px;
-	border-style:solid;
-	border-color:#fab702;
-	display:inline-block;
-	vertical-align:text-bottom;
-	position:relative
-}
-.section-heading.title-style5.left .square .separator-left{
-	display:none
-}
+
 @media screen and (max-width: 991px){
 	.section-heading{
 		margin-bottom:5px
