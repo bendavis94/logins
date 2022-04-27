@@ -594,57 +594,7 @@ a:hover,a:active{
 		font-size:28px
 	}
 }
-.section-heading.title-style6 h1,.section-heading.title-style6 h2,.section-heading.title-style6 h3,.section-heading.title-style6 h4,.section-heading.title-style6 h5,.section-heading.title-style6 h6{
-	position:relative;
-	padding-bottom:10px;
-	font-weight:500;
-	margin-bottom:10px;
-	position:relative;
-	line-height:140%;
-	text-transform:inherit
-}
-.section-heading.title-style6 h1:after,.section-heading.title-style6 h2:after,.section-heading.title-style6 h3:after,.section-heading.title-style6 h4:after,.section-heading.title-style6 h5:after,.section-heading.title-style6 h6:after{
-	content:'';
-	display:block;
-	width:50px;
-	height:1px;
-	background:#49c0d0;
-	margin:0 auto;
-	position:absolute;
-	left:0;
-	right:0;
-	bottom:0
-}
-.section-heading.title-style6 span{
-	color:#232323;
-	font-weight:600;
-	font-size:32px;
-	line-height:normal
-}
-.section-heading.title-style6.white span{
-	color:#fff
-}
-.section-heading.title-style6.left{
-	text-align:left
-}
-.section-heading.title-style6.left h1:after,.section-heading.title-style6.left h2:after,.section-heading.title-style6.left h3:after,.section-heading.title-style6.left h4:after,.section-heading.title-style6.left h5:after,.section-heading.title-style6.left h6:after{
-	margin:0
-}
-@media screen and (max-width: 1199px){
-	.section-heading.title-style6 span{
-		font-size:30px
-	}
-}
-@media screen and (max-width: 991px){
-	.section-heading.title-style6 span{
-		font-size:28px
-	}
-}
-@media screen and (max-width: 767px){
-	.section-heading.title-style6 span{
-		font-size:26px
-	}
-}
+
 @media screen and (max-width: 991px){
 	.header-style8 .navbar ul ul li.active>a{
 		color:#49c0d0
