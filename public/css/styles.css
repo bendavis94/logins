@@ -784,20 +784,6 @@ a:hover,a:active{
 		font-size:30px !important;
 		line-height:normal !important
 	}
-	.custom-controls .tp-leftarrow,.custom-controls .tp-rightarrow{
-		width:40px !important;
-		height:40px !important
-	}
-	.custom-controls .tp-leftarrow{
-		left:-15px !important
-	}
-	.custom-controls .tp-rightarrow{
-		left:inherit !important;
-		right:-55px !important
-	}
-	.custom-controls .tparrows:before{
-		line-height:20px !important
-	}
 }
 @media screen and (max-width: 479px) {
 	.rev_slider .max-style{
@@ -2122,22 +2108,6 @@ a:hover,a:active{
 	font-weight:500;
 	color:#232323;
 	margin-bottom:5px
-}
-.custom-progress{
-	height:4px;
-	border-radius:50px;
-	box-shadow:none;
-	margin-bottom:15px
-}
-.custom-bar{
-	height:100%;
-	background-color:#86bc42;
-	box-shadow:none
-}
-.custom-bar-dark{
-	height:100%;
-	background-color:#232323;
-	box-shadow:none
 }
 .progress-medium{
 	height:8px;
