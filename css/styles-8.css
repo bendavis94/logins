@@ -812,20 +812,6 @@ a:hover,a:active{
 }
 
 
-.content-bg1{
-	background-image:url("../img/content/feature-01.jpg")
-}
-@media screen and (max-width: 991px){
-	.sm-bg{
-		min-height:400px
-	}
-}
-@media screen and (max-width: 767px){
-	.sm-bg{
-		min-height:320px
-	}
-}
-
  .owl-carousel .service-box{
 	 margin: 0px 
 }
