@@ -2258,45 +2258,6 @@ a:hover,a:active{
 	margin-left:20px;
 	border-bottom:1px solid #fff
 }
-.product-detail .label-sale{
-	margin-left:5px;
-	vertical-align:top;
-	padding:2px 7px
-}
-.product-detail .offer-price{
-	text-decoration:line-through;
-	color:red
-}
-.product-rating .fas:hover{
-	color:#232323
-}
-.product-list .product-block:hover>img{
-	opacity:0.65
-}
-.product-list .buttons{
-	float:left;
-	width:100%
-}
- .product-list .buttons button{
-	 float:left;
-	 text-align:center;
-	 padding:8px 23px 
-}
- .product-list .buttons button:hover{
-	 opacity:0.8 
-}
- @media screen and (max-width: 991px){
-	.categories .collapse-sm:after{
-		font-family:Font Awesome\ 5 Free;
-		content:"\f105";
-		float:right
-	}
-	.categories .collapse-sm.current:after{
-		font-family:Font Awesome\ 5 Free;
-		content:"\f107";
-		float:right
-	}
-}
 .blockquote{
 	background:#f1f1f1;
 	border-left:4px solid #49c0d0;
