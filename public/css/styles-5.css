@@ -2432,41 +2432,6 @@ footer h3:after{
 		 width: 170px;
 	}
 }
- .footer-recent-post{
-	 margin: 10px 0;
-	 padding: 7px 
-}
- .footer-recent-post-thumb{
-	 float:left;
-	 width:25% 
-}
- .footer-recent-post img{
-	 width: 100px;
-	 height: 55px;
-	 border-radius: 2px;
-}
- .footer-recent-post-content{
-	 float:left;
-	 width:75%;
-	 padding-left:10px 
-}
- .footer-recent-post-content a{
-	 display:block;
-	 text-transform: uppercase;
-	 color:#fff;
-	 font-size:16px;
-	 font-weight:500;
-	 line-height:normal;
-	 margin-top:10px 
-}
- .footer-recent-post-content a:hover{
-	 color:#fff 
-}
- .footer-recent-post-content span{
-	 font-size:13px;
-	 font-weight:300;
-	 color:#fff 
-}
  .footer-bar{
 	 padding-top:20px;
 	 padding-bottom:20px;
