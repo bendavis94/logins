@@ -397,15 +397,6 @@ a:hover,a:active{
 		padding:10px 36px 12px;
 		line-height:24px
 	}
-	.xs-default-gutter{
-		margin:0 -15px
-	}
-	.xs-default-gutter>[class*="col-"]{
-		padding-right:15px;
-		padding-left:15px;
-		padding-bottom:0;
-		padding-top:0
-	}
 }
 .section-heading{
 	margin-bottom:0px;
