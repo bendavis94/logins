@@ -2180,46 +2180,6 @@ a:hover,a:active{
 	 border: none;
 }
 
-ul.countdown li{
-	border-right:1px solid #626262;
-	display:inline-block;
-	padding:0 30px;
-	text-align:center
-}
-ul.countdown li:last-child{
-	border:medium none;
-	padding-right:0
-}
-ul.countdown li span{
-	font-size:36px;
-	font-weight:700;
-	line-height:normal;
-	position:relative
-}
-ul.countdown li span::before{
-	content:"";
-	height:1px;
-	position:absolute;
-	width:100%
-}
-ul.countdown li p.timeRefDays,ul.countdown li p.timeRefHours,ul.countdown li p.timeRefMinutes,ul.countdown li p.timeRefSeconds{
-	font-size:12px;
-	font-weight:500;
-	margin:0;
-	padding:0;
-	text-transform:uppercase
-}
-@media screen and (max-width: 767px){
-	ul.countdown li{
-		padding:0 8px
-	}
-	.social-links li{
-		margin-right:15px
-	}
-	ul.countdown li span{
-		font-size:22px
-	}
-}
  footer{
 	 padding:5px 0 0;
 	 background:#000;
