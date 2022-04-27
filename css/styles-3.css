@@ -496,26 +496,6 @@ a:hover,a:active{
 	text-transform:uppercase;
 	letter-spacing:.075em
 }
-.section-heading.title-style3{
-	text-align:left;
-	margin-bottom:30px;
-	padding-bottom:10px;
-	border-bottom:1px solid #eee
-}
-.section-heading.title-style3 h1,.section-heading.title-style3 h2,.section-heading.title-style3 h3,.section-heading.title-style3 h4,.section-heading.title-style3 h5,.section-heading.title-style3 h6{
-	padding:0;
-	margin:0
-}
-.section-heading.title-style3 h1:after,.section-heading.title-style3 h2:after,.section-heading.title-style3 h3:after,.section-heading.title-style3 h4:after,.section-heading.title-style3 h5:after,.section-heading.title-style3 h6:after{
-	content:none
-}
-.title-overlay{
-	mix-blend-mode:lighten;
-	overflow:hidden;
-	background-color:rgba(255,255,255,0.85);
-	margin:0
-}
-
 @media screen and (max-width: 991px){
 	.section-heading{
 		margin-bottom:5px
