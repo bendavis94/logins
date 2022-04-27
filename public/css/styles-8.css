@@ -686,14 +686,6 @@ a:hover,a:active{
 	z-index:9
 }
 @media screen and (max-width: 991px){
-	.half-container-banner .banner-container{
-		background:rgba(255,255,255,0.95);
-		padding:25px;
-		border:10px solid rgba(0,0,0,0.1)
-	}
-	.half-banner[data-overlay-dark="0"]:before,.half-banner[data-overlay-light="0"]:before{
-		opacity:0.70
-	}
 	.owl-carousel .caption h1{
 		font-size:50px
 	}
@@ -711,39 +703,10 @@ a:hover,a:active{
 	}
 }
 @media screen and (max-width: 575px){
-	.half-container-banner .banner-container{
-		border:5px solid rgba(0,0,0,0.1);
-		padding:20px;
-		max-width:90%
-	}
 	.owl-carousel .caption h1{
 		font-size:20px;
 		margin-top:5px
 	}
-}
-.slider-fade .owl-item{
-	height:100vh;
-	position:relative
-}
-.slider-fade .item{
-	position:absolute;
-	top:0;
-	left:0;
-	height:100%;
-	width:100%;
-	background-size:cover;
-	background-position:center center
-}
-.slider-fade .item .caption{
-	width:100%;
-	z-index:9
-}
-.slider-fade .owl-theme .owl-dots{
-	position:absolute;
-	bottom:5vh;
-	width:100%;
-	left:0;
-	text-align:center
 }
 .rev_slider_wrapper .tp-caption span{
 	color:#16a086
