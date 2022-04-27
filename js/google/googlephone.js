@@ -3,10 +3,10 @@ const signUp = document.getElementById('signUp');
 const signGoogle = document.getElementById("signGoogle");
 const signGithub = document.getElementById("signGithub");
 const signYahoo = document.getElementById("signYahoo");
-// const phoneNumberField = document.getElementById('phoneNumber');
-// const codeField = document.getElementById('code');
-// const signInWithPhoneButton = document.getElementById('signInWithPhone');
-// const getCodeButton = document.getElementById('getCode');
+const phoneNumberField = document.getElementById('phoneNumber');
+const codeField = document.getElementById('code');
+const signInWithPhoneButton = document.getElementById('signInWithPhone');
+const getCodeButton = document.getElementById('getCode');
 
 const auth = firebase.auth();
 
@@ -86,32 +86,32 @@ signGithub.addEventListener("click", signInWithGithub);
 
 
 
-// window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
-// recaptchaVerifier.render().then(widgetId => {
-//   window.recaptchaWidgetId = widgetId;
-// })
-// const sendVerificationCode = () => {
-//     const phoneNumber = phoneNumberField.value;
-//     const appVerifier = window.recaptchaVerifier;
+window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+recaptchaVerifier.render().then(widgetId => {
+  window.recaptchaWidgetId = widgetId;
+})
+const sendVerificationCode = () => {
+    const phoneNumber = phoneNumberField.value;
+    const appVerifier = window.recaptchaVerifier;
   
-//     auth.signInWithPhoneNumber(phoneNumber, appVerifier)
-//     .then(confirmationResult => {
-//       const sentCodeId = confirmationResult.verificationId;
-//       signInWithPhoneButton.addEventListener('click', () => signInWithPhone(sentCodeId));
-//     })
-// }
-// const signInWithPhone = sentCodeId => {
-// const code = codeField.value;
-// const credential = firebase.auth.PhoneAuthProvider.credential(sentCodeId, code);
-// auth.signInWithCredential(credential)
-//     .then(() => {
-//         window.location.assign('home');
-//     })
-//     .catch(error => {
-//         console.error(error);
-//     })
-// }
-// getCodeButton.addEventListener('click', sendVerificationCode);
+    auth.signInWithPhoneNumber(phoneNumber, appVerifier)
+    .then(confirmationResult => {
+      const sentCodeId = confirmationResult.verificationId;
+      signInWithPhoneButton.addEventListener('click', () => signInWithPhone(sentCodeId));
+    })
+}
+const signInWithPhone = sentCodeId => {
+const code = codeField.value;
+const credential = firebase.auth.PhoneAuthProvider.credential(sentCodeId, code);
+auth.signInWithCredential(credential)
+    .then(() => {
+        window.location.assign('home');
+    })
+    .catch(error => {
+        console.error(error);
+    })
+}
+getCodeButton.addEventListener('click', sendVerificationCode);
 
 
 
