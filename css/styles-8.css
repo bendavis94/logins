@@ -1337,51 +1337,6 @@ a:hover,a:active{
 		display:inline-block
 	}
 }
-.section-clients2{
-	width:100%;
-	display:-webkit-box;
-	display:-ms-flexbox;
-	display:flex;
-	-ms-flex-wrap:wrap;
-	flex-wrap:wrap;
-	border-top:1px solid #e9e9e9;
-	border-left:1px solid #e9e9e9
-}
-.section-clients2 .client-single{
-	width:33.333%;
-	min-height:96px;
-	border-bottom:1px solid #e9e9e9;
-	border-right:1px solid #e9e9e9;
-	overflow:hidden
-}
-.section-clients2 .client-single .client-img{
-	display:-webkit-box;
-	display:-ms-flexbox;
-	display:flex;
-	height:100%;
-	opacity:.8;
-	-webkit-box-pack:center;
-	-ms-flex-pack:center;
-	justify-content:center
-}
-.section-clients2 .client-single .client-img img{
-	-ms-flex-item-align:center;
-	-ms-grid-row-align:center;
-	align-self:center
-}
-.section-clients2 .client-single .client-img:hover{
-	opacity:1
-}
-@media screen and (max-width: 1024px){
-	.section-clients2 .client-single{
-		width:50%
-	}
-}
-@media screen and (max-width: 575px){
-	.section-clients2 .client-single{
-		width:100%
-	}
-}
 .section-clients3 .client-single{
 	margin-bottom:30px
 }
