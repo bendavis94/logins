@@ -722,13 +722,6 @@ a:hover,a:active{
  .rev_slider_wrapper .butn.white:hover span{
 	color:#fff
 }
- @media screen and (min-width: 767px){
-	 .custom-paragraph .slider-text p{
-		width:450px !important;
-		font-size:15px !important;
-		line-height:26px !important
-	}
-}
  @media screen and (min-width: 1024px){
 	 .rev_slider .max-style{
 		font-size:60px !important;
@@ -748,10 +741,6 @@ a:hover,a:active{
 		font-size:45px !important;
 		line-height:50px !important
 	}
-	.custom-paragraph .slider-text p{
-		font-size:16px !important;
-		line-height:28px !important
-	}
 }
  @media screen and (max-width: 766px){
 	 .rev_slider .max-style{
@@ -761,13 +750,6 @@ a:hover,a:active{
 	.rev_slider .max-style span{
 		font-size:30px !important;
 		line-height:normal !important
-	}
-	.custom-paragraph .slider-text p{
-		text-align:center !important;
-		font-size:14px !important;
-		line-height:24px !important;
-		width:480px !important;
-		padding:0 15px
 	}
 	.custom-controls .tp-leftarrow,.custom-controls .tp-rightarrow{
 		width:40px !important;
@@ -792,10 +774,6 @@ a:hover,a:active{
 	.rev_slider .max-style span{
 		font-size:20px !important;
 		line-height:normal !important
-	}
-	.custom-paragraph .slider-text p{
-		width:320px !important;
-		padding:0 15px
 	}
 }
  .list-style-5 li::before{
