@@ -644,79 +644,10 @@ a:hover,a:active{
 		font-size:26px
 	}
 }
-.inner-title h1,.inner-title h2,.inner-title h3,.inner-title h4,.inner-title h5,.inner-title h6{
-	font-size:18px;
-	margin-bottom:30px;
-	padding-bottom:10px;
-	position:relative;
-	font-weight:600
-}
-.inner-title h1:after,.inner-title h2:after,.inner-title h3:after,.inner-title h4:after,.inner-title h5:after,.inner-title h6:after{
-	content:'';
-	display:block;
-	width:40px;
-	height:2px;
-	background:#0073ad;
-	margin:0;
-	position:absolute;
-	left:0;
-	right:0;
-	bottom:0
-}
-.inner-title.half h1,.inner-title.half h2,.inner-title.half h3,.inner-title.half h4,.inner-title.half h5,.inner-title.half h6{
-	margin-bottom:15px
-}
 @media screen and (max-width: 991px){
 	.header-style8 .navbar ul ul li.active>a{
 		color:#0073ad
 	}
-}
-.vertical-header{
-	align-items:flex-start;
-	bottom:0;
-	display:flex;
-	flex-direction:column;
-	justify-content:center;
-	left:0;
-	position:absolute;
-	top:0;
-	width:56px
-}
-.vertical-header.new-work-vertical-header{
-	padding-bottom:120px
-}
-.vertical-header-text{
-	left:-124px;
-	margin-bottom:0;
-	margin-top:0;
-	position:relative;
-	text-align:center;
-	transform:rotate(-90deg);
-	width:300px;
-	font-size:14px;
-	text-transform:uppercase
-}
-.vertical-header-text:after{
-	background:#0073ad;
-	content:"";
-	display:inline-block;
-	height:1px;
-	left:32px;
-	position:absolute;
-	right:0;
-	top:10px;
-	width:20px
-}
-.vertical-header-text:before{
-	background:#0073ad;
-	content:"";
-	display:inline-block;
-	height:1px;
-	left:247px;
-	position:absolute;
-	right:0;
-	top:10px;
-	width:20px
 }
 .owl-carousel .caption .overflow-hidden{
 	display:inline-block
@@ -751,32 +682,6 @@ a:hover,a:active{
 	position:relative;
 	top:1px;
 	z-index:9
-}
-.carousel-style3 .owl-carousel .owl-item img{
-	width:100%
-}
-.carousel-style4 .owl-carousel .owl-item img{
-	width:100%
-}
-.home-business-slider .owl-nav .owl-next{
-	position:absolute;
-	right:15px;
-	top:50%;
-	background:none !important;
-	opacity:0.35
-}
-.home-business-slider .owl-nav .owl-next:hover{
-	opacity:1
-}
-.home-business-slider .owl-nav .owl-prev{
-	position:absolute;
-	left:15px;
-	top:50%;
-	background:none !important;
-	opacity:0.35
-}
-.home-business-slider .owl-nav .owl-prev:hover{
-	opacity:1
 }
 @media screen and (max-width: 991px){
 	.half-container-banner .banner-container{
