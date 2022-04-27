@@ -410,9 +410,6 @@ a:hover,a:active{
 	margin-bottom:0px;
 	text-align:center
 }
-.section-heading.half{
-	margin-bottom:30px
-}
  .section-heading h1,.section-heading h2,.section-heading h3,.section-heading h4,.section-heading h5,.section-heading h6{
 	 position:relative;
 	padding-bottom:5px;
@@ -435,67 +432,7 @@ a:hover,a:active{
 	right:0;
 	bottom:0
 }
-.section-heading.white h1,.section-heading.white h2,.section-heading.white h3,.section-heading.white h4,.section-heading.white h5,.section-heading.white h6{
-	color:#fff
-}
-.section-heading.grey h1,.section-heading.grey h2,.section-heading.grey h3,.section-heading.grey h4,.section-heading.grey h5,.section-heading.grey h6{
-	color:#b7b7b7
-}
-.section-heading.grey h1:after,.section-heading.grey h2:after,.section-heading.grey h3:after,.section-heading.grey h4:after,.section-heading.grey h5:after,.section-heading.grey h6:after{
-	background:#b7b7b7
-}
-.section-heading.left{
-	text-align:left
-}
-.section-heading.left h1,.section-heading.left h2,.section-heading.left h3,.section-heading.left h4,.section-heading.left h5,.section-heading.left h6{
-	padding-bottom:15px
-}
-.section-heading.left h1:after,.section-heading.left h2:after,.section-heading.left h3:after,.section-heading.left h4:after,.section-heading.left h5:after,.section-heading.left h6:after{
-	margin:0;
-	left:0
-}
-.section-heading strong{
-	font-weight:600
-}
-.section-heading.white p{
-	color:#fff
-}
-.section-heading p{
-	font-size:15px;
-	font-weight:400;
-	padding-top:15px;
-	margin:0 auto
-}
-.section-heading span{
-	position:relative;
-	font-size:15px;
-	font-weight:500;
-	color:#0073ad;
-	line-height:200%;
-	margin-bottom:10px
-}
-.section-heading.white span{
-	color:#fff
-}
-.section-heading.grey span{
-	color:#b7b7b7
-}
-.section-heading .badge{
-	display:inline-block;
-	padding:7px 19px;
-	font-size:12px;
-	font-weight:700;
-	line-height:1;
-	text-align:center;
-	white-space:nowrap;
-	vertical-align:baseline;
-	border-radius:14px;
-	color:#0073ad;
-	border:1px solid #0073ad;
-	background:transparent;
-	text-transform:uppercase;
-	letter-spacing:.075em
-}
+
 @media screen and (max-width: 991px){
 	.section-heading{
 		margin-bottom:5px
