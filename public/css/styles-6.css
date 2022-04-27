@@ -945,39 +945,6 @@ a:hover,a:active{
 	}
 }
 
-.service-simple{
-	position:relative;
-	background:#fff;
-	border:1px solid #ececec;
-	border-radius:5px;
-	overflow:hidden;
-	height:100%;
-	-webkit-box-shadow:0 10px 30px 0 rgba(50,50,50,0.16);
-	-moz-box-shadow:0 10px 30px 0 rgba(50,50,50,0.16);
-	box-shadow:0 10px 30px 0 rgba(50,50,50,0.16)
-}
-.service-simple img{
-	width:100%;
-	transition:all 0.5s ease 0s
-}
-.service-simple img:hover{
-	transform:scale(1.1)
-}
-.service-simple-inner{
-	position:relative;
-	padding:25px 25px 20px
-}
-.service-simple-inner p{
-	max-width:95%
-}
-.service-simple-inner a{
-	display:inline-block
-}
-.service-simple h4{
-	font-size:18px;
-	line-height:normal;
-	margin-bottom:0
-}
  .owl-carousel .service-box{
 	 margin: 0px 
 }
