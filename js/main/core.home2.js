@@ -55,21 +55,6 @@ animateIn:!1},e.prototype.swap=function(){if(1===this.core.settings.items&&a.sup
           $('#style-switcher').addClass('active');
       }
   });
-  $('.boxed,.pattren-wrap a').on('click', function() {
-      $('.main-wrapper').addClass('wrapper-boxed');
-      $('.main-wrapper').removeClass('wrapper-wide');
-      $(window).resize();
-  });
-  $('.wide').on('click', function() {
-      $('.main-wrapper').addClass('wrapper-wide');
-      $('.main-wrapper').removeClass('wrapper-boxed');
-      $(window).resize();
-  });
-  $('.bg-list li a').on('click', function() {
-      var bg = $(this).css("backgroundImage");
-      $("body").css("backgroundImage", bg);
-      $(window).resize();
-  });
   $(".style1").on("click", function() {
       $("#colors").attr("href", "css/styles.css");
       $("#logo").attr("src", "img/logos/logo1.png");
