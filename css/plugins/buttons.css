@@ -1040,9 +1040,15 @@ td{
 }
 
 .modal-checkout{
-    margin: 0; 
+    margin: 0 !important; 
     display: grid; 
-    padding: 15px 10px !important;
+    width: auto !important;
+    padding: 15px 5px !important;
+}
+@media (max-width:768px){
+    .modal-checkout{
+        padding: 10px 0 !important;
+    }
 }
 
 #table-profile{
