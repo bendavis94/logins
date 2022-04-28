@@ -63,17 +63,6 @@
         });
 
     });
-    $window.on("load", function() {
-        $('.gallery').magnificPopup({
-            delegate: '.popimg',
-            type: 'image',
-            gallery: {
-                enabled: true
-            }
-        });
-        var $gallery = $('.gallery').isotope({});
-        $window.stellar();
-    });
 
     function toggleFullScreen() {
         if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
