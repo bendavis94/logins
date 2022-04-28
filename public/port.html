@@ -4,15 +4,22 @@
 <head>
     <link rel="stylesheet" href="css/light-gallery.css">
     <link rel="stylesheet" href="css/style-gallery.css">
+    <style>
+        .portfolio-gallery-isotope img, .portfolio-gallery-isotope{
+            width: 30vw !important;
+            display: flex !important;
+            margin: 0 10vw !important;
+        }
+    </style>
 </head>
 
 <body>
     <section>
-        <div class="container-fluid">
+        <div class="container">
 
-            <div class="row portfolio-gallery-isotope text-center mt-n1-9">
+            <div class="portfolio-gallery-isotope">
 
-                <div class="col-lg-3 col-md-6 items design mt-1-9" data-src="img/pro-1.jpg" data-sub-html="<h4 class='text-white'>Creative Book #01</h4><p>Design</p>">
+                <div data-src="img/pro-1.jpg" data-sub-html="<h4 class='text-white'>Creative Book #01</h4><p>Design</p>">
                     <div class="project-grid-style2">
                         <div class="project-details">
                             <img src="img/pro-1.jpg" alt="...">
@@ -28,7 +35,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 items design mt-1-9" data-src="img/pro-3.jpg" data-sub-html="<h4 class='text-white'>Responsive Design #02</h4><p>Design</p>">
+                <div data-src="img/pro-3.jpg" data-sub-html="<h4 class='text-white'>Responsive Design #02</h4><p>Design</p>">
                     <div class="project-grid-style2">
                         <div class="project-details">
                             <img src="img/pro-3.jpg" alt="...">
