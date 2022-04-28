@@ -1,12 +1,3 @@
-/*-----------------------------------------------------------------------------------
-
-    Theme Name: Fabrex - Multipurpose Business and Admin Template
-    Description: Multipurpose Business and Admin Template
-    Author: Chitrakoot Web
-    Version: 3.3
-
-    ---------------------------------- */
-
     (function($) {
         "use strict";
         var $window = $(window);
@@ -50,73 +41,10 @@
             }, 500);
             event.preventDefault();
         });
-        function fullScreenHeight() {
-            var element = $(".full-screen");
-            var $minheight = $window.height();
-            element.css('min-height', $minheight);
-        }
-        function ScreenFixedHeight() {
-            var $headerHeight = $("header").height();
-            var element = $(".screen-height");
-            var $screenheight = $window.height() - $headerHeight;
-            element.css('height', $screenheight);
-        }
-        function SetResizeContent() {
-            fullScreenHeight();
-            ScreenFixedHeight();
-        }
+
         SetResizeContent();
-        $(document).ready(function() {
 
-            $('#clients').owlCarousel({
-                loop: true,
-                nav: false,
-                dots: false,
-                smartSpeed: 500,
-                autoplay: true,
-                autoplayTimeout: 500,
-                responsiveClass: true,
-                autoplayHoverPause: false,
-                responsive: {
-                    0: {items: 5, margin: 10}, 
-                    768: {items: 9, margin: 15}, 
-                    992: {items: 12, margin: 23}, 
-                    1200: {items: 17, margin: 16}
-                }
-            });
-        });
         $window.on("load", function() {
-            var wow = new WOW({
-                boxClass: 'wow',
-                animateClass: 'animated',
-                offset: 0,
-                mobile: false,
-                live: true
-            });
-            wow.init();
-            $('.single-img').magnificPopup({
-                delegate: '.popimg',
-                type: 'image'
-            });
-            $('.gallery').magnificPopup({
-                delegate: '.popimg',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-            var $gallery = $('.gallery').isotope({});
-            $('.filtering').on('click', 'span', function() {
-                var filterValue = $(this).attr('data-filter');
-                $gallery.isotope({
-                    filter: filterValue
-                });
-            });
-            $('.filtering').on('click', 'span', function() {
-                $(this).addClass('active').siblings().removeClass('active');
-            });
-            $window.stellar();
-
             function toggleFullScreen() {
                 if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
                     if (document.documentElement.requestFullscreen) {
