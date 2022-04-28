@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="css/rev_slider/layers.css">
     <link rel="stylesheet" href="css/rev_slider/navigation.css">
 
-    <!-- gridgallery plugin -->
     <link rel="stylesheet" href="gridgallery/css/component.css" />
     <link rel="stylesheet" href="css/plugins/icomoon/style.css" />
 
@@ -28,9 +27,12 @@
     <link href="css/styles-2.css" rel="stylesheet" id="colors">
     
     <link rel="stylesheet" href="css/plugins/animate.css" />
-    <link href="css/plugins/buttons.css" rel="stylesheet">
     <link href="css/stylewells.css" rel="stylesheet" />
     <link href="css/plugins/buttons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="datatables/css/jquery.datatables.min.css" />
+    <link rel="stylesheet" href="datatables/css/jquery.datatables_themeroller.css" />
+
     <style>
         .moneycoming{
             padding: 5px;
@@ -54,25 +56,6 @@
             transition:all .5s ease;
             padding: 0;
         }
-        .dataTables_wrapper .dataTables_paginate .paginate_button{
-            width: auto !important;
-        }
-        section .modal-body{
-            background: transparent !important;
-            border: 1px solid rgba(135,206,235,0.2);
-            border-left: none !important;
-            border-right: none !important;
-            border-top: none !important;
-        }
-        section .modal-content{
-            border: 1px solid rgba(135,206,235,0.2);
-            background: rgba(18,29,51,0.92) !important;
-        }
-    </style>
-    <link rel="stylesheet" href="datatables/css/jquery.datatables.min.css" />
-    <link rel="stylesheet" href="datatables/css/jquery.datatables_themeroller.css" />
-
-    <style>
         @media screen and (max-width: 640px){
             .dataTables_wrapper .dataTables_length{
                 display: none !important;
@@ -83,23 +66,6 @@
             .dataTables_wrapper .dataTables_info{
                 display: none !important;
             }
-        }
-        section .modal-header{
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-        section .modal-header h4{
-            font-size: 34px !important;
-        }
-        @media screen and (max-width: 640px){
-            section .modal-header h4{
-                font-size: 28px !important;
-            }
-        }
-        figcaption{
-            text-align: center !important;
-            align-items: center !important;
-            justify-content: center !important;
         }
         .saleimg{
             height: 300px !important; width: 100% !important;
@@ -122,7 +88,34 @@
                 top: 250px !important;
             }
         }
+
+        figcaption{
+            text-align: center !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+        section .modal-header{
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        section .modal-header h4{
+            font-size: 34px !important;
+        }
+        @media screen and (max-width: 640px){
+            section .modal-header h4{
+                font-size: 28px !important;
+            }
+        }
+        section .modal-body{
+            background: transparent !important;
+            border: 1px solid rgba(135,206,235,0.2);
+            border-left: none !important;
+            border-right: none !important;
+            border-top: none !important;
+        }
         section .modal-content{
+            border: 1px solid rgba(135,206,235,0.2);
+            background: rgba(18,29,51,0.92) !important;
             background: white !important;
         }
         section .modal-title{
