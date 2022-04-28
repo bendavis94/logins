@@ -34,12 +34,6 @@
         }
     });
 
-    $window.resize(function(event) {
-        setTimeout(function() {
-            SetResizeContent();
-        }, 500);
-        event.preventDefault();
-    });
     $(document).ready(function() {
      
         $('#services-carousel').owlCarousel({
@@ -73,16 +67,6 @@
         });
 
     });
-    function ScreenFixedHeight() {
-        var $headerHeight = $("header").height();
-        var element = $(".screen-height");
-        var $screenheight = $window.height() - $headerHeight;
-        element.css('height', $screenheight);
-    }
-    function SetResizeContent() {
-        ScreenFixedHeight();
-    }
-    SetResizeContent();
 
     function toggleFullScreen() {
         if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
