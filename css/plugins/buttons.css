@@ -1250,8 +1250,22 @@ label.error{
     }
 }
 
+#jinaHolder{
+    width: 235px !important;
+    overflow-x: hidden !important;
+}
 
+@media (min-width: 569px) and (max-width: 1091px) {
+    #jinaHolder{
+        width: 100% !important;
+    }
+}
 
+@media (max-width: 569px) {
+    #jinaHolder{
+        width: 190px !important;
+    }
+}
 
 
 
