@@ -34,40 +34,8 @@
         }
     });
 
-    $window.resize(function(event) {
-        setTimeout(function() {
-            SetResizeContent();
-        }, 500);
-        event.preventDefault();
-    });
-    function ScreenFixedHeight() {
-        var $headerHeight = $("header").height();
-        var element = $(".screen-height");
-        var $screenheight = $window.height() - $headerHeight;
-        element.css('height', $screenheight);
-    }
-    function SetResizeContent() {
-        ScreenFixedHeight();
-    }
-    SetResizeContent();
     $(document).ready(function() {
      
-		$('#clients').owlCarousel({
-			loop: true,
-			nav: false,
-			dots: false,
-            smartSpeed: 500,
-			autoplay: true,
-			autoplayTimeout: 500,
-			responsiveClass: true,
-			autoplayHoverPause: false,
-			responsive: {
-                0: {items: 5, margin: 10}, 
-                768: {items: 9, margin: 15}, 
-                992: {items: 12, margin: 23}, 
-                1200: {items: 17, margin: 16}
-			}
-		});
         $('#services-carousel').owlCarousel({
             loop: true,
             responsiveClass: true,
