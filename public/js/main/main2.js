@@ -34,22 +34,6 @@
         }
     });
 
-    $window.resize(function(event) {
-        setTimeout(function() {
-            SetResizeContent();
-        }, 500);
-        event.preventDefault();
-    });
-    function ScreenFixedHeight() {
-        var $headerHeight = $("header").height();
-        var element = $(".screen-height");
-        var $screenheight = $window.height() - $headerHeight;
-        element.css('height', $screenheight);
-    }
-    function SetResizeContent() {
-        ScreenFixedHeight();
-    }
-    SetResizeContent();
     $(document).ready(function() {
      
 		$('#clients').owlCarousel({
