@@ -169,48 +169,75 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
         cartItemNames.map(data=>{
             if(data.balance == balance){
                 alert('This item is in cart');
-                return;
+            } else if(data.balance !== balance){
+                addToLocalStorage(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+                table1.row.add([
+                    image1,
+                    balance1,      
+                    account1,   
+                    remove1,
+                    price1,
+                    website1,   
+                    info11,   
+                    info21,   
+                    info31,   
+                    info41,   
+                    info51,   
+                    info61,   
+                    info71,   
+                ]).draw();
+                table3.row.add([
+                    image1,
+                    balance1,      
+                    account1,   
+                    remove1,
+                    price1,
+                    website1,   
+                    info11,   
+                    info21,   
+                    info31,   
+                    info41,   
+                    info51,   
+                    info61,   
+                    info71,   
+                ]).draw();
+                updateCartTotal();
             }
         })
     } else {
-        console.log('Hello')
+        addToLocalStorage(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+        table1.row.add([
+            image1,
+            balance1,      
+            account1,   
+            remove1,
+            price1,
+            website1,   
+            info11,   
+            info21,   
+            info31,   
+            info41,   
+            info51,   
+            info61,   
+            info71,   
+        ]).draw();
+        table3.row.add([
+            image1,
+            balance1,      
+            account1,   
+            remove1,
+            price1,
+            website1,   
+            info11,   
+            info21,   
+            info31,   
+            info41,   
+            info51,   
+            info61,   
+            info71,   
+        ]).draw();
+        updateCartTotal();   
     }
-
-    addToLocalStorage(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-
-    table1.row.add([
-        image1,
-        balance1,      
-        account1,   
-        remove1,
-        price1,
-        website1,   
-        info11,   
-        info21,   
-        info31,   
-        info41,   
-        info51,   
-        info61,   
-        info71,   
-    ]).draw();
-
-    table3.row.add([
-        image1,
-        balance1,      
-        account1,   
-        remove1,
-        price1,
-        website1,   
-        info11,   
-        info21,   
-        info31,   
-        info41,   
-        info51,   
-        info61,   
-        info71,   
-    ]).draw();
-
-    updateCartTotal();
 
     var removeFromCartButtons = document.getElementsByClassName('btn-remove');
     for(var i = 0; i <removeFromCartButtons.length; i++){
