@@ -115,6 +115,23 @@ function ad3(event) {
     updateCartTotal();
 }
 
+function ad4(event) {
+    var price = 'Price: $706';
+    var balance = 'Balance: $35,306';
+    var website = 'wellsfargo.com';
+    var info1 = 'Login Access';
+    var info2 = 'Email Access';
+    var info3 = 'Account& Routing No';
+    var info4 = 'Billing + Fullz';
+    var info5 = 'Social Security No';
+    var info6 = 'Name + Address';
+    var info7 = 'Carrier PIN';
+    var image = 'https://darknet.id/img/wells2m.jpg';
+    var account = 'Citizens Bank [CHECKING]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+    updateCartTotal();
+}
+
 function removeCartItem(event) {
     var buttonClicked = event.target
     var cartItem = buttonClicked.parentElement.parentElement;
