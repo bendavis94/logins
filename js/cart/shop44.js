@@ -104,7 +104,7 @@ function ad3(event) {
     var website = 'citizensbank.com';
     var info1 = 'Question & Answer';
     var info2 = 'Name: "Michael"+ Address';
-    var info3 = 'Account & Routing No';
+    var info3 = 'Account& Routing No';
     var info4 = 'Carrier: T-Mobile';
     var info5 = 'ClientIP+ UserAgent';
     var info6 = 'Online Access';
