@@ -78,6 +78,7 @@ function ad1(event) {
     var image = 'https://darknet.id/img/wells103.jpg';
     var account = 'Wells Fargo Savings';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+    updateCartTotal();
 }
 
 function ad2(event) {
@@ -94,6 +95,7 @@ function ad2(event) {
     var image = 'https://darknet.id/img/wells18.jpg';
     var account = 'Wells Fargo Everyday Checking';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+    updateCartTotal();
 }
 
 function ad3(event) {
@@ -110,6 +112,7 @@ function ad3(event) {
     var image = 'https://darknet.id/img/michael.jpg';
     var account = 'Citizens Bank [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+    updateCartTotal();
 }
 
 function removeCartItem(event) {
