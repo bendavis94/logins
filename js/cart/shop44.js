@@ -164,6 +164,18 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
         console.log('Hello')
     }
 
+    if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
+        var cartItemNames = JSON.parse(localStorage.getItem('banklogs'));
+        cartItemNames.map(data=>{
+            if(data.balance == balance){
+                alert('This item is in cart');
+                return;
+            }
+        })
+    } else {
+        console.log('Hello')
+    }
+
     addToLocalStorage(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 
     table1.row.add([
@@ -259,6 +271,14 @@ function removeItemFromCart(price, balance,account,website,image,info1,info2,inf
 }
 
 function updateCartTotal() {
+
+    // if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
+    //     var cartItemNames = JSON.parse(localStorage.getItem('banklogs'));
+    //     cartItemNames.map(data=>{
+    //         console.log(data.balance)
+    //     })
+    // }
+
     let items3 = (JSON.parse(localStorage.getItem('banklogs')));
     var total = 0;
     items3.map(data=>{
