@@ -64,7 +64,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
     document.getElementById('cartlength').style.display = 'none';
 }
 
-function addToCartClicked1(event) {
+function ad1(event) {
     var price = 'Price: $480';
     var balance = 'Balance: $18,380';
     var website = 'citi.com';
@@ -81,7 +81,7 @@ function addToCartClicked1(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function addToCartClicked2(event) {
+function ad2(event) {
     var price = 'Price: $350';
     var balance = 'Balance: $18,380';
     var website = 'citi.com';
@@ -98,7 +98,7 @@ function addToCartClicked2(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function addToCartClicked3(event) {
+function ad3(event) {
     var price = 'Price: $283';
     var balance = 'Balance: $18,380';
     var website = 'citizensbank.com';
