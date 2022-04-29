@@ -71,30 +71,32 @@ for(var i = 0; i <addToCartButtons.length; i++){
 }
 
 function addToCartClicked(event) {
-    var button = event.target;
-    var pri = button.innerText;
-    var pric = pri.replace('Buy: ','');
-    var price = 'Price: '+  pric;
-    var balance = button.parentElement.parentElement.children[0].children[0].innerText;
-    var website = button.parentElement.parentElement.children[1].children[0].innerText;
-    var info1 = button.parentElement.parentElement.children[2].children[0].innerText;
-    var info2 = button.parentElement.parentElement.children[3].children[0].innerText;
-    var info3 = button.parentElement.parentElement.children[4].children[0].innerText;
-    var info4 = button.parentElement.parentElement.children[5].children[0].innerText;
-    var info5 = button.parentElement.parentElement.children[6].children[0].innerText;
-    var info6 = button.parentElement.parentElement.children[7].children[0].innerText;
-    var info7 = button.parentElement.parentElement.children[8].children[0].innerText;
+    // var price = 'Price: $480';
+    // var balance = 'Hello';
+    // var website = 'Hello';
+    // var info1 = 'hello';
+    // var info2 = 'hello';
+    // var info3 = 'hello';
+    // var info4 = 'hello';
+    // var info5 = 'hello';
+    // var info6 = 'hello';
+    // var info7 = 'hello';
 
-    var image = button.parentElement.parentElement.children[9].children[0].innerText;
-    var account = button.parentElement.parentElement.children[10].children[0].innerText;
+    // var image = 'https://darknet.id/img/partners/truist-logo.png';
+    // var account = 'hello';
 
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+    // addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+
+    addItemToCart('Price: $480','Balance: $18,380','Wells Fargo [CHECKING ACCOUNT]','wellsfargo.com','https://darknet.id/img/partners/truist-logo.png','hello','hello','hello','hello','hello','hello','hello');
+    
     updateCartTotal();
 
     if (localStorage.getItem('received-funds') != null){
         localStorage.removeItem('received-funds');
     }
 }
+
+
 
 
 
