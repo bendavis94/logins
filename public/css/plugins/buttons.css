@@ -28,6 +28,15 @@
     padding: 8px;
     align-items: center;
 }
+.gta-shop{
+    background: white;
+    border: 1px solid rgba(18, 29, 51,0.3);
+    color: #121d33;
+    font-weight: 700;
+    width: 92% !important;
+    padding: 8px 0 !important;
+    align-items: center;
+}
 .gta-boa{
     font-size: 16px; 
     background: white;
