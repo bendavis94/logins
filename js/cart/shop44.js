@@ -64,12 +64,6 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
     document.getElementById('cartlength').style.display = 'none';
 }
 
-var addToCartButtons = document.getElementsByClassName('moneycoming');
-for(var i = 0; i <addToCartButtons.length; i++){
-    var button = addToCartButtons[i];
-    button.addEventListener('click', addToCartClicked)
-}
-
 function addToCartClicked1(event) {
     // var price = 'Price: $480';
     // var balance = 'Hello';
