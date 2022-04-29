@@ -65,34 +65,22 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
 }
 
 function addToCartClicked1(event) {
-    // var price = 'Price: $480';
-    // var balance = 'Hello';
-    // var website = 'Hello';
-    // var info1 = 'hello';
-    // var info2 = 'hello';
-    // var info3 = 'hello';
-    // var info4 = 'hello';
-    // var info5 = 'hello';
-    // var info6 = 'hello';
-    // var info7 = 'hello';
+    var price = 'Price: $480';
+    var balance = 'Balance: $18,380';
+    var website = 'citi.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Name + Address';
+    var info3 = 'Email Access';
+    var info4 = 'Social Security Number';
+    var info5 = 'Accont& Routing Number';
+    var info6 = 'Date of Birth';
+    var info7 = 'Owner\'s Complete Fullz';
 
-    // var image = 'https://darknet.id/img/partners/truist-logo.png';
-    // var account = 'hello';
+    var image = 'https://darknet.id/img/partners/citi.jpg';
+    var account = 'Citi Bank [SAVINGS ACCOUNT]';
 
-    // addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-
-    addItemToCart('Price: $480','Balance: $18,380','Wells Fargo [CHECKING ACCOUNT]','wellsfargo.com','https://darknet.id/img/partners/truist-logo.png','hello','hello','hello','hello','hello','hello','hello');
-    
-    updateCartTotal();
-
-    if (localStorage.getItem('received-funds') != null){
-        localStorage.removeItem('received-funds');
-    }
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
-
-
-
-
 
 function removeCartItem(event) {
     var buttonClicked = event.target
@@ -183,6 +171,10 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
     for(var i = 0; i <removeFromCartButtons.length; i++){
         var button = removeFromCartButtons[i];
         button.addEventListener('click', removeCartItem)
+    }
+
+    if (localStorage.getItem('received-funds') != null){
+        localStorage.removeItem('received-funds');
     }
 }
 
