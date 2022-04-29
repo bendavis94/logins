@@ -413,13 +413,13 @@ pre code{
 	overflow-y:scroll
 }
 .container{
-	width:100%;
+	width:100% !important;
 	padding-right:15px;
 	padding-left:15px;
 	margin-right:auto;
 	margin-left:auto
 }
-@media (min-width:576px){
+/* @media (min-width:576px){
 	.container{
 		max-width:570px
 	}
@@ -438,7 +438,7 @@ pre code{
 	.container{
 		max-width:1190px
 	}
-}
+} */
 .container-fluid{
 	width:100%;
 	padding-right:15px;
