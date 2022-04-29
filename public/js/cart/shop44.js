@@ -278,7 +278,7 @@ function updateCartTotal() {
         let cart = JSON.parse(localStorage.getItem('banklogs'));
         cart.map(data=>{
             data.price3 = data.price.replace('Price: ','');
-            if(singleLog[i].innerText == data.price.replace('Price: ', 'Buy: ') && singleLog[i].parentElement.children[0].innerText == data.website){
+            if(singleLog[i].innerText == data.price.replace('Price: ', 'Buy: ') && singleLog[i].parentElement.children[1].innerText == data.website){
                 singleLog[i].innerHTML = `
                 In Cart ${data.price3}
                 `;
