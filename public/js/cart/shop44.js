@@ -75,8 +75,41 @@ function addToCartClicked1(event) {
     var info5 = 'Accont& Routing Number';
     var info6 = 'Date of Birth';
     var info7 = 'Owner\'s Complete Fullz';
-
     var image = 'https://darknet.id/img/partners/citi.jpg';
+    var account = 'Citi Bank [SAVINGS ACCOUNT]';
+
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function addToCartClicked2(event) {
+    var price = 'Price: $350';
+    var balance = 'Balance: $18,380';
+    var website = 'citi.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Name + Address';
+    var info3 = 'Email Access';
+    var info4 = 'Social Security Number';
+    var info5 = 'Accont& Routing Number';
+    var info6 = 'Date of Birth';
+    var info7 = 'Owner\'s Complete Fullz';
+    var image = 'https://darknet.id/img/partners/chime.jpg';
+    var account = 'Citi Bank [SAVINGS ACCOUNT]';
+
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function addToCartClicked3(event) {
+    var price = 'Price: $420';
+    var balance = 'Balance: $18,380';
+    var website = 'citi.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Name + Address';
+    var info3 = 'Email Access';
+    var info4 = 'Social Security Number';
+    var info5 = 'Accont& Routing Number';
+    var info6 = 'Date of Birth';
+    var info7 = 'Owner\'s Complete Fullz';
+    var image = 'https://darknet.id/img/partners/bbva.jpg';
     var account = 'Citi Bank [SAVINGS ACCOUNT]';
 
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
