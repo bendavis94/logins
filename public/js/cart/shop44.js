@@ -71,8 +71,8 @@ function ad1(event) {
     var info1 = 'Login Access';
     var info2 = 'Email Access';
     var info3 = 'Billing';
-    var info4 = 'Social Security Number';
-    var info5 = 'Accont& Routing Number';
+    var info4 = 'Social Security No';
+    var info5 = 'Accont& Routing No';
     var info6 = 'Date of Birth';
     var info7 = 'Carrier PIN';
     var image = 'https://darknet.id/img/wells103.jpg';
@@ -88,8 +88,8 @@ function ad2(event) {
     var info1 = 'Login Access';
     var info2 = 'Billing';
     var info3 = 'Email Access';
-    var info4 = 'Social Security Number';
-    var info5 = 'Accont& Routing Number';
+    var info4 = 'Social Security No';
+    var info5 = 'Accont& Routing No';
     var info6 = 'Date of Birth';
     var info7 = 'Owner\'s Complete Fullz';
     var image = 'https://darknet.id/img/wells18.jpg';
@@ -103,8 +103,8 @@ function ad3(event) {
     var balance = 'Balance: $14,474';
     var website = 'citizensbank.com';
     var info1 = 'Question & Answer';
-    var info2 = 'Name: "Michael" + Address';
-    var info3 = 'Account & Routing Number';
+    var info2 = 'Name: "Michael"+ Address';
+    var info3 = 'Account & Routing No';
     var info4 = 'Carrier: T-Mobile';
     var info5 = 'ClientIP+ UserAgent';
     var info6 = 'Online Access';
