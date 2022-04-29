@@ -70,7 +70,7 @@ for(var i = 0; i <addToCartButtons.length; i++){
     button.addEventListener('click', addToCartClicked)
 }
 
-function addToCartClicked(event) {
+function addToCartClicked1(event) {
     // var price = 'Price: $480';
     // var balance = 'Hello';
     // var website = 'Hello';
