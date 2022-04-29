@@ -99,18 +99,18 @@ function addToCartClicked2(event) {
 }
 
 function addToCartClicked3(event) {
-    var price = 'Price: $420';
+    var price = 'Price: $283';
     var balance = 'Balance: $18,380';
-    var website = 'citi.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Name + Address';
-    var info3 = 'Email Access';
-    var info4 = 'Social Security Number';
-    var info5 = 'Accont& Routing Number';
-    var info6 = 'Date of Birth';
-    var info7 = 'Owner\'s Complete Fullz';
-    var image = 'https://darknet.id/img/partners/bbva.jpg';
-    var account = 'Citi Bank [SAVINGS ACCOUNT]';
+    var website = 'citizensbank.com';
+    var info1 = 'Question & Answer';
+    var info2 = 'Name: "Michael" + Address';
+    var info3 = 'Account & Routing Number';
+    var info4 = 'Carrier: T-Mobile';
+    var info5 = 'ClientIP+ UserAgent';
+    var info6 = 'Online Access';
+    var info7 = 'CC Info';
+    var image = 'https://darknet.id/img/michael.jpg';
+    var account = 'Citizens Bank [CHECKING]';
 
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
