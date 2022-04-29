@@ -168,7 +168,7 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
         var cartItemNames = JSON.parse(localStorage.getItem('banklogs'));
         cartItemNames.map(data=>{
             if(data.balance == balance){
-                alert('This item is in cart');
+                alert(`${account} with ${balance} is in cart`);
             } else if(data.balance !== balance){
                 addToLocalStorage(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
                 table1.row.add([
