@@ -7,6 +7,12 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
     items = JSON.parse(localStorage.getItem('banklogs'));
     document.getElementById('cartlength').innerText = (JSON.parse(localStorage.getItem('banklogs')).length);
 
+    for(var i =0 ; i <items.length; i++){
+        if(items[i].balance == 'Balance: $35,306'){
+            console.log('found it', items[i].balance)
+        }
+    }
+
     items.map(data=>{
         var image = `<td><img src=${data.image} width="50px" style="border-radius: 2px"></td>`
         var balance = `<td class="btn-balance">${data.balance}</td>`
@@ -60,28 +66,16 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
         button.addEventListener('click', removeCartItem)
     }
     updateCartTotal();
+
+
+
 } else {
     document.getElementById('cartlength').style.display = 'none';
 }
 
-function ad1(event) {
-    var price = 'Price: $2,067';
-    var balance = 'Balance: $103,318';
-    var website = 'wellsfargo.com';
-    var info1 = 'Login Access';
-    var info2 = 'Email Access';
-    var info3 = 'Billing';
-    var info4 = 'Social Security No';
-    var info5 = 'Accont& Routing No';
-    var info6 = 'Date of Birth';
-    var info7 = 'Carrier PIN';
-    var image = 'https://darknet.id/img/wells103.jpg';
-    var account = 'Wells Fargo Savings';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-    updateCartTotal();
-}
 
-function ad2(event) {
+
+function ad1(event) {
     var price = 'Price: $377';
     var balance = 'Balance: $18,878';
     var website = 'wellsfargo.com';
@@ -94,6 +88,23 @@ function ad2(event) {
     var info7 = 'Owner\'s Complete Fullz';
     var image = 'https://darknet.id/img/wells18.jpg';
     var account = 'Wells Fargo Everyday Checking';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+    updateCartTotal();
+}
+
+function ad2(event) {
+    var price = 'Price: $2,067';
+    var balance = 'Balance: $103,318';
+    var website = 'wellsfargo.com';
+    var info1 = 'Login Access';
+    var info2 = 'Email Access';
+    var info3 = 'Billing';
+    var info4 = 'Social Security No';
+    var info5 = 'Accont& Routing No';
+    var info6 = 'Date of Birth';
+    var info7 = 'Carrier PIN';
+    var image = 'https://darknet.id/img/wells103.jpg';
+    var account = 'Wells Fargo Savings';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
     updateCartTotal();
 }
@@ -171,7 +182,7 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
     if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
         var cartItemNames = JSON.parse(localStorage.getItem('banklogs'));
         for(var i = 0; i < cartItemNames.length; i++) {
-            if(cartItemNames.length > 2.5) {
+            if(cartItemNames.length > 12.5) {
                 alert(`Cart is full, checkout the 3 logs in cart first, follow the steps to cashout carefully, then buy more later`);
                 window.location.assign('invoice')
                 return
@@ -184,6 +195,10 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
     if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
         var cartItemNames = JSON.parse(localStorage.getItem('banklogs'));
         cartItemNames.map(data=>{
+            for(var i = 0; i < cartItemNames.length; i++){
+                console.log(cartItemNames[i].balance)
+            }
+            // console.log(cartItemNames.length)
             if(data.balance == balance){
                 alert(`${account} with ${balance} is in cart`);
             } else if(data.balance !== balance){
