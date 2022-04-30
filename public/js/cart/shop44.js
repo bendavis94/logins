@@ -2,7 +2,6 @@ let items = [];
 var table1 = jQuery('#example1').DataTable();
 var table3 = jQuery('#example3').DataTable();
 
-
 if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
     items = JSON.parse(localStorage.getItem('banklogs'));
     document.getElementById('cartlength').innerText = (JSON.parse(localStorage.getItem('banklogs')).length);
@@ -59,21 +58,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
         var button = removeFromCartButtons[i];
         button.addEventListener('click', removeCartItem)
     }
-    updateCartTotal();
-
-    // var cartItems = document.getElementsByClassName('champez3')[0]
-    // var cartItemNames = cartItems.getElementsByTagName('tr');
-    // for (var i = 0; i < cartItemNames.length; i++) {
-    //     // if (cartItemNames[i].innerText == title) {
-    //     //     alert('This item is already added to the cart')
-    //     //     return
-    //     // }
-    //     console.log(cartItemNames[i].innerHTML)
-    //     if(cartItemNames[i].innerHTML.includes('Balance: $14,474')){
-    //         console.log('h3ll')
-    //     }
-    // }
-
+    updateCartTotal()
 } else {
     document.getElementById('cartlength').style.display = 'none';
 }
@@ -168,13 +153,13 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
     var cartItems = document.getElementsByClassName('champez3')[0]
     var cartItemNames = cartItems.getElementsByTagName('tr');
     for (var i = 0; i < cartItemNames.length; i++) {
-        // if (cartItemNames[i].innerText == title) {
-        //     alert('This item is already added to the cart')
-        //     return
-        // }
-        // console.log(cartItemNames[i].innerHTML)
         if(cartItemNames[i].innerHTML.includes(balance)){
             alert(`${account} with ${balance} is in cart`)
+            return
+        }
+        if(cartItemNames.length > 2.5) {
+            alert(`Cart is full, checkout the 3 logs in cart first, follow the steps to cashout carefully, then buy more later`);
+            window.location.assign('invoice')
             return
         }
     }
