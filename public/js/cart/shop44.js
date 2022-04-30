@@ -124,7 +124,23 @@ function ad4(event) {
     var info6 = 'Name + Address';
     var info7 = 'Carrier PIN';
     var image = 'https://darknet.id/img/wells2m.jpg';
-    var account = 'Citizens Bank [CHECKING]';
+    var account = 'Wells Fargo [SAVINGS]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function ad5(event) {
+    var price = 'Price: $276';
+    var balance = 'Balance: $13,977';
+    var website = 'wellsfargo.com';
+    var info1 = 'Online Access';
+    var info2 = 'Email Access';
+    var info3 = 'Fullz Info';
+    var info4 = 'Billing';
+    var info5 = 'Date of Birth';
+    var info6 = 'ClientIP + UserAgent';
+    var info7 = 'Card Details';
+    var image = 'https://darknet.id/img/wells13-2.jpg';
+    var account = 'Wells Fargo [SAVINGS]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
