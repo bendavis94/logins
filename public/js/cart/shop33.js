@@ -86,7 +86,8 @@ function addToCartClicked(event) {
     var info7 = button.parentElement.parentElement.children[8].children[0].innerText;
 
     var image = button.parentElement.parentElement.children[9].children[0].innerText;
-    var account = button.parentElement.parentElement.children[10].children[0].innerText;
+    var accoun = button.parentElement.parentElement.children[10].children[0].innerText;
+    var account = accoun.replace('Bank','');
 
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
     updateCartTotal();
