@@ -7,12 +7,6 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
     items = JSON.parse(localStorage.getItem('banklogs'));
     document.getElementById('cartlength').innerText = (JSON.parse(localStorage.getItem('banklogs')).length);
 
-    for(var i =0 ; i <items.length; i++){
-        if(items[i].balance == 'Balance: $35,306'){
-            console.log('found it', items[i].balance)
-        }
-    }
-
     items.map(data=>{
         var image = `<td><img src=${data.image} width="50px" style="border-radius: 2px"></td>`
         var balance = `<td class="btn-balance">${data.balance}</td>`
@@ -67,12 +61,22 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
     }
     updateCartTotal();
 
-
+    // var cartItems = document.getElementsByClassName('champez3')[0]
+    // var cartItemNames = cartItems.getElementsByTagName('tr');
+    // for (var i = 0; i < cartItemNames.length; i++) {
+    //     // if (cartItemNames[i].innerText == title) {
+    //     //     alert('This item is already added to the cart')
+    //     //     return
+    //     // }
+    //     console.log(cartItemNames[i].innerHTML)
+    //     if(cartItemNames[i].innerHTML.includes('Balance: $14,474')){
+    //         console.log('h3ll')
+    //     }
+    // }
 
 } else {
     document.getElementById('cartlength').style.display = 'none';
 }
-
 
 
 function ad1(event) {
@@ -89,7 +93,6 @@ function ad1(event) {
     var image = 'https://darknet.id/img/wells18.jpg';
     var account = 'Wells Fargo Everyday Checking';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-    updateCartTotal();
 }
 
 function ad2(event) {
@@ -106,7 +109,6 @@ function ad2(event) {
     var image = 'https://darknet.id/img/wells103.jpg';
     var account = 'Wells Fargo Savings';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-    updateCartTotal();
 }
 
 function ad3(event) {
@@ -123,7 +125,6 @@ function ad3(event) {
     var image = 'https://darknet.id/img/michael.jpg';
     var account = 'Citizens Bank [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-    updateCartTotal();
 }
 
 function ad4(event) {
@@ -140,7 +141,6 @@ function ad4(event) {
     var image = 'https://darknet.id/img/wells2m.jpg';
     var account = 'Citizens Bank [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-    updateCartTotal();
 }
 
 function removeCartItem(event) {
@@ -165,6 +165,20 @@ function removeCartItem(event) {
 
 function addItemToCart(price, balance, account,website, image,info1,info2,info3,info4,info5,info6,info7){
 
+    var cartItems = document.getElementsByClassName('champez3')[0]
+    var cartItemNames = cartItems.getElementsByTagName('tr');
+    for (var i = 0; i < cartItemNames.length; i++) {
+        // if (cartItemNames[i].innerText == title) {
+        //     alert('This item is already added to the cart')
+        //     return
+        // }
+        // console.log(cartItemNames[i].innerHTML)
+        if(cartItemNames[i].innerHTML.includes(balance)){
+            alert(`${account} with ${balance} is in cart`)
+            return
+        }
+    }
+
     var image1 = `<td><img src=${image} width="50px" style="border-radius: 2px"></td>`
     var balance1 = `<td class="btn-balance">${balance}</td>`
     var price1 = `<td class="btn-price">${price}</td>`
@@ -179,97 +193,41 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
     var info61 = `<td>${info6}</td>`
     var info71 = `<td>${info7}</td>`
 
-    if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
-        var cartItemNames = JSON.parse(localStorage.getItem('banklogs'));
-        for(var i = 0; i < cartItemNames.length; i++) {
-            if(cartItemNames.length > 12.5) {
-                alert(`Cart is full, checkout the 3 logs in cart first, follow the steps to cashout carefully, then buy more later`);
-                window.location.assign('invoice')
-                return
-            }
-        }
-    } else {
-        console.log('Hello')
-    }
+    addToLocalStorage(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 
-    if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
-        var cartItemNames = JSON.parse(localStorage.getItem('banklogs'));
-        cartItemNames.map(data=>{
-            for(var i = 0; i < cartItemNames.length; i++){
-                console.log(cartItemNames[i].balance)
-            }
-            // console.log(cartItemNames.length)
-            if(data.balance == balance){
-                alert(`${account} with ${balance} is in cart`);
-            } else if(data.balance !== balance){
-                addToLocalStorage(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-                table1.row.add([
-                    image1,
-                    balance1,      
-                    account1,   
-                    remove1,
-                    price1,
-                    website1,   
-                    info11,   
-                    info21,   
-                    info31,   
-                    info41,   
-                    info51,   
-                    info61,   
-                    info71,   
-                ]).draw();
-                table3.row.add([
-                    image1,
-                    balance1,      
-                    account1,   
-                    remove1,
-                    price1,
-                    website1,   
-                    info11,   
-                    info21,   
-                    info31,   
-                    info41,   
-                    info51,   
-                    info61,   
-                    info71,   
-                ]).draw();
-                updateCartTotal();
-            }
-        })
-    } else {
-        addToLocalStorage(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-        table1.row.add([
-            image1,
-            balance1,      
-            account1,   
-            remove1,
-            price1,
-            website1,   
-            info11,   
-            info21,   
-            info31,   
-            info41,   
-            info51,   
-            info61,   
-            info71,   
-        ]).draw();
-        table3.row.add([
-            image1,
-            balance1,      
-            account1,   
-            remove1,
-            price1,
-            website1,   
-            info11,   
-            info21,   
-            info31,   
-            info41,   
-            info51,   
-            info61,   
-            info71,   
-        ]).draw();
-        updateCartTotal();   
-    }
+    table1.row.add([
+        image1,
+        balance1,      
+        account1,   
+        remove1,
+        price1,
+        website1,   
+        info11,   
+        info21,   
+        info31,   
+        info41,   
+        info51,   
+        info61,   
+        info71,   
+    ]).draw();
+
+    table3.row.add([
+        image1,
+        balance1,      
+        account1,   
+        remove1,
+        price1,
+        website1,   
+        info11,   
+        info21,   
+        info31,   
+        info41,   
+        info51,   
+        info61,   
+        info71,   
+    ]).draw();
+
+    updateCartTotal();
 
     var removeFromCartButtons = document.getElementsByClassName('btn-remove');
     for(var i = 0; i <removeFromCartButtons.length; i++){
@@ -330,13 +288,6 @@ function removeItemFromCart(price, balance,account,website,image,info1,info2,inf
 }
 
 function updateCartTotal() {
-
-    // if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
-    //     var cartItemNames = JSON.parse(localStorage.getItem('banklogs'));
-    //     cartItemNames.map(data=>{
-    //         console.log(data.balance)
-    //     })
-    // }
 
     let items3 = (JSON.parse(localStorage.getItem('banklogs')));
     var total = 0;
