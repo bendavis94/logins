@@ -31,7 +31,7 @@
 					${toastbitcoin} bitcoin payment not detected, scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}, 
 					to download ${items[0].account} with ${items[0].balance}, <br> 
 					and ${items[1].account} with ${items[1].balance}, <br>
-					a copy of bank log details will be sent to ${user.email} after payment
+					a copy of bank log details will be sent to ${user.email} after $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} payment
 					`
 					];
 					i++;
@@ -49,7 +49,7 @@
 					` 	
 						${toastbitcoin} bitcoin payment not detected, scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}, 
 						to download ${items[0].account} with ${items[0].balance}, <br>
-						a copy of bank log details will be sent to ${user.email} after payment
+						a copy of bank log details will be sent to ${user.email} after $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} payment
 
 					`
 					];
@@ -70,7 +70,7 @@
 						to download ${items[0].account} with ${items[0].balance}, <br>
 						and ${items[1].account} with ${items[1].balance}, <br>
 						and ${items[2].account} with ${items[2].balance}, <br>
-						a copy of bank log details will be sent to ${user.email} after payment
+						a copy of bank log details will be sent to ${user.email} after $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} payment
 					`
 					];
 					i++;
