@@ -128,6 +128,23 @@ function ad004(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
+function ad006(event) {
+    var price = 'Price: $284';
+    var balance = 'Balance: $14,226';
+    var website = 'truist.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Social Security No';
+    var info4 = 'Date of Birth';
+    var info5 = 'ClientIP + Useragent';
+    var info6 = 'Name + Email Access';
+    var info7 = 'Owner\'s Complete Fullz';
+    var image = 'https://darknet.id/img/new/truist-14-2.jpg';
+    var account = 'Truist Bank [CHECKING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+
 function ad28(event) {
     var price = 'Price: $237';
     var balance = 'Balance: $11,871';
