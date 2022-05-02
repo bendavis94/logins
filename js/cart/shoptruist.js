@@ -320,6 +320,86 @@ function ad16(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
+function ad17(event) {
+    var price = 'Price: $373';
+    var balance = 'Balance: $16,917';
+    var website = 'wellsfargo.com';
+    var info1 = 'Online Access';
+    var info2 = 'Email Access';
+    var info3 = 'State: New York';
+    var info4 = 'Social Security No';
+    var info5 = 'Date of Birth';
+    var info6 = 'Debit Details';
+    var info7 = 'ATM PIN';
+    var image = 'https://darknet.id/img/sharon.jpg';
+    var account = 'Wells Fargo [Way2Save Checking]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function ad18(event) {
+    var price = 'Price: $262';
+    var balance = 'Balance: $13,575';
+    var website = 'wellsfargo.com';
+    var info1 = 'Online& Email Access';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Billing';
+    var info4 = 'Social Security No';
+    var info5 = 'Date of Birth';
+    var info6 = 'ClientIP + Useragent';
+    var info7 = 'Zelle History';
+    var image = 'https://darknet.id/img/derrick.jpg';
+    var account = 'Wells Fargo [SAVINGS ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function ad19(event) {
+    var price = 'Price: $718';
+    var balance = 'Balance: $35,337';
+    var website = 'wellsfargo.com';
+    var info1 = 'Online Access';
+    var info2 = 'Email Access';
+    var info3 = 'Fullz Info + Billing';
+    var info4 = 'Debit Details';
+    var info5 = 'Carrier PIN';
+    var info6 = 'ClientIP + Useragent';
+    var info7 = 'Carrier: T-Mobile';
+    var image = 'https://darknet.id/img/ronald.jpg';
+    var account = 'Wells Fargo [CHECKING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function ad20(event) {
+    var price = 'Price: $2,804';
+    var balance = 'Balance: $140,075';
+    var website = 'bankofamerica.com';
+    var info1 = 'Online Access';
+    var info2 = 'Email Access';
+    var info3 = 'Complete Fullz';
+    var info4 = 'Card Details';
+    var info5 = 'Name + Address';
+    var info6 = 'ClientIP + Useragent';
+    var info7 = 'Social Security No';
+    var image = 'https://darknet.id/img/natalya.jpg';
+    var account = 'Bank of America [SAVINGS ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function ad21(event) {
+    var price = 'Price: $4,718';
+    var balance = 'Balance: $236,176';
+    var website = 'wellsfargo.com';
+    var info1 = 'Online Access';
+    var info2 = 'Email Access';
+    var info3 = 'Owner Complete Fullz';
+    var info4 = 'Account& Routing No';
+    var info5 = 'Carrier PIN: T-Mobile';
+    var info6 = 'ClientIP + Useragent';
+    var info7 = 'Social Security No';
+    var image = 'https://darknet.id/img/john.jpg';
+    var account = 'Wells Fargo [HIGH PERF MMA]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
 
 function removeCartItem(event) {
     var buttonClicked = event.target
