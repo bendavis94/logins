@@ -401,6 +401,93 @@ function ad21(event) {
 }
 
 
+
+
+
+
+
+
+
+
+
+function ad22(event) {
+    var price = 'Price: $283';
+    var balance = 'Balance: $14,474';
+    var website = 'citizensbank.com';
+    var info1 = 'Question & Answer';
+    var info2 = 'Name: "Michael"';
+    var info3 = 'Carrier: T-Mobile';
+    var info4 = 'Account& Routing No';
+    var info5 = 'CC Info + Address';
+    var info6 = 'ClientIP + Useragent';
+    var info7 = 'Online Access';
+    var image = 'https://darknet.id/img/michael.jpg';
+    var account = 'Citizens Bank [DEPOSIT ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function ad23(event) {
+    var price = 'Price: $278';
+    var balance = 'Balance: $13,881';
+    var website = 'citizensbank.com';
+    var info1 = 'Question & Answer';
+    var info2 = 'Name: "James"+ Address';
+    var info3 = 'Carrier: Verizon';
+    var info4 = 'Account& Routing No';
+    var info5 = 'ATM PIN + Debit Info';
+    var info6 = 'Online & Email Access';
+    var info7 = 'ClientIP+ UserAgent';
+    var image = 'https://darknet.id/img/jamescitizen.jpg';
+    var account = 'Citizens Bank [DEPOSIT ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function ad24(event) {
+    var price = 'Price: $451';
+    var balance = 'Balance: $22,592';
+    var website = 'citizensbank.com';
+    var info1 = 'Question & Answer';
+    var info2 = 'Name: Julio+ Address';
+    var info3 = 'Carrier: Verizon';
+    var info4 = 'Account& Routing No';
+    var info5 = 'Online Access';
+    var info6 = 'Email Access';
+    var info7 = 'ClientIP+ UserAgent';
+    var image = 'https://darknet.id/img/julio.jpg';
+    var account = 'Citizens Bank [DEPOSIT ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function ad25(event) {
+    var price = 'Price: $390';
+    var balance = 'Balance: $13,881';
+    var website = 'citizensbank.com';
+    var info1 = '10 Question & Answer';
+    var info2 = 'Name: Edward+ Address';
+    var info3 = 'Carrier: Verizon';
+    var info4 = 'Account& Routing No';
+    var info5 = 'Online& Email Access';
+    var info6 = 'ATM PIN, Debit Card';
+    var info7 = 'ClientIP+ UserAgent';
+    var image = 'https://darknet.id/img/edward.jpg';
+    var account = 'Citizens Bank [DEPOSIT ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function removeCartItem(event) {
     var buttonClicked = event.target
     var cartItem = buttonClicked.parentElement.parentElement;
