@@ -364,7 +364,23 @@ function ad18(event) {
     var info6 = 'Name + Address';
     var info7 = 'Carrier PIN';
     var image = 'https://darknet.id/img/wells2m.jpg';
-    var account = 'Wells Fargo [SAVINGS]';
+    var account = 'Wells Fargo [SAVINGS ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function ad1801(event) {
+    var price = 'Price: $854';
+    var balance = 'Balance: $42,710';
+    var website = 'wellsfargo.com';
+    var info1 = 'Online Access';
+    var info2 = 'Email Access';
+    var info3 = 'Billing Details';
+    var info4 = 'Account& Routing No';
+    var info5 = 'Social Security No';
+    var info6 = 'ClientIP + Useragent';
+    var info7 = 'Carrier PIN';
+    var image = 'https://darknet.id/img/new/wells42.jpg';
+    var account = 'Wells Fargo [CHECKING ACCOUNT]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
