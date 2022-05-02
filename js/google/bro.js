@@ -24,9 +24,6 @@ function myFunction() {
           document.getElementById('footer-email').innerHTML = `
            ${user.displayName}, your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
           `;
-          document.getElementById('footer-email-2').innerHTML = `
-            ${user.displayName}, your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}
-         `;
       });
     } else if(!user.displayName && user.email) {
       var themail = user.email;
@@ -42,9 +39,6 @@ function myFunction() {
           document.getElementById('footer-email').innerHTML = `
           ${theaddress}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
           `;
-          document.getElementById('footer-email-2').innerHTML = `
-           ${theaddress}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}
-         `;
       });
     } 
   });
