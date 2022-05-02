@@ -311,7 +311,7 @@ function ad16(event) {
     var info1 = 'Online Access';
     var info2 = 'Email Access';
     var info3 = 'Bill Pay ON';
-    var info4 = 'Carrier bill in mail';
+    var info4 = 'Carrier Bill in MailBox';
     var info5 = 'Name + Address';
     var info6 = 'Carrier: T-Mobile';
     var info7 = 'Social Security No';
