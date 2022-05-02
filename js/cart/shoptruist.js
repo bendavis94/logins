@@ -112,8 +112,23 @@ function ad003(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
+function ad004(event) {
+    var price = 'Price: $250';
+    var balance = 'Balance: $12,550';
+    var website = 'truist.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Social Security No';
+    var info4 = 'Date of Birth';
+    var info5 = 'ClientIP + Useragent';
+    var info6 = 'Name + Email Access';
+    var info7 = 'Owner\'s Complete Fullz';
+    var image = 'https://darknet.id/img/new/truist-12.jpg';
+    var account = 'Truist Bank [CHECKING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
 
-function ad1(event) {
+function ad28(event) {
     var price = 'Price: $237';
     var balance = 'Balance: $11,871';
     var website = 'bankofamerica.com';
@@ -128,6 +143,24 @@ function ad1(event) {
     var account = 'Bank of America [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
+
+
+function ad1(event) {
+    var price = 'Price: $251';
+    var balance = 'Balance: $12,568';
+    var website = 'citi.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Name + Address';
+    var info3 = 'Email Access';
+    var info4 = 'Social Security No';
+    var info5 = 'Date of Birth';
+    var info6 = 'Account& Routing No';
+    var info7 = 'Owner Complete Fullz';
+    var image = 'https://darknet.id/images/sale.jpg';
+    var account = 'Citi Bank [CHECKING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
 
 function ad2(event) {
     var price = 'Price: $261';
