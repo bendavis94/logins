@@ -1,31 +1,33 @@
 if(!localStorage.getItem('loadedfund')){
-    localStorage.setItem('fund1', ('$' + (Math.floor((Math.random() * 700) + 5025)).toLocaleString()));
-    localStorage.setItem('fund2', ('$' + (Math.floor((Math.random() * 700) + 5725)).toLocaleString()));
-    localStorage.setItem('fund3', ('$' + (Math.floor((Math.random() * 700) + 6425)).toLocaleString()));
-    localStorage.setItem('fund4', ('$' + (Math.floor((Math.random() * 700) + 7125)).toLocaleString()));
-    localStorage.setItem('fund5', ('$' + (Math.floor((Math.random() * 700) + 7825)).toLocaleString()));
-    localStorage.setItem('fund6', ('$' + (Math.floor((Math.random() * 700) + 8525)).toLocaleString()));
-    localStorage.setItem('fund7', ('$' + (Math.floor((Math.random() * 700) + 9225)).toLocaleString()));
-    localStorage.setItem('fund8', ('$' + (Math.floor((Math.random() * 700) + 9925)).toLocaleString()));
-    localStorage.setItem('fund9', ('$' + (Math.floor((Math.random() * 700) + 10625)).toLocaleString()));
-    localStorage.setItem('fund10', ('$' + (Math.floor((Math.random() * 700) + 11325)).toLocaleString()));
-    localStorage.setItem('fund11', ('$' + (Math.floor((Math.random() * 700) + 12025)).toLocaleString()));
-    localStorage.setItem('fund12', ('$' + (Math.floor((Math.random() * 700) + 12725)).toLocaleString()));
-    localStorage.setItem('fund13', ('$' + (Math.floor((Math.random() * 700) + 13425)).toLocaleString()));
-    localStorage.setItem('fund14', ('$' + (Math.floor((Math.random() * 700) + 14125)).toLocaleString()));
-    localStorage.setItem('fund15', ('$' + (Math.floor((Math.random() * 700) + 14825)).toLocaleString()));
-    localStorage.setItem('fund16', ('$' + (Math.floor((Math.random() * 700) + 15525)).toLocaleString()));
-    localStorage.setItem('fund17', ('$' + (Math.floor((Math.random() * 700) + 16225)).toLocaleString()));
-    localStorage.setItem('fund18', ('$' + (Math.floor((Math.random() * 700) + 16925)).toLocaleString()));
-    localStorage.setItem('fund19', ('$' + (Math.floor((Math.random() * 700) + 17625)).toLocaleString()));
-    localStorage.setItem('fund20', ('$' + (Math.floor((Math.random() * 700) + 18325)).toLocaleString()));
-    localStorage.setItem('fund21', ('$' + (Math.floor((Math.random() * 700) + 19025)).toLocaleString()));
-    localStorage.setItem('fund22', ('$' + (Math.floor((Math.random() * 700) + 19725)).toLocaleString()));
-    localStorage.setItem('fund23', ('$' + (Math.floor((Math.random() * 700) + 20425)).toLocaleString()));
-    localStorage.setItem('fund24', ('$' + (Math.floor((Math.random() * 700) + 21125)).toLocaleString()));
-    localStorage.setItem('fund25', ('$' + (Math.floor((Math.random() * 700) + 22825)).toLocaleString()));
-    localStorage.setItem('fund26', ('$' + (Math.floor((Math.random() * 700) + 22525)).toLocaleString()));
-    localStorage.setItem('fund27', ('$' + (Math.floor((Math.random() * 700) + 23225)).toLocaleString()));
+    localStorage.setItem('fund1', ('$' + (Math.floor((Math.random() * 700) + 10025)).toLocaleString()));
+    localStorage.setItem('fund2', ('$' + (Math.floor((Math.random() * 700) + 10725)).toLocaleString()));
+    localStorage.setItem('fund3', ('$' + (Math.floor((Math.random() * 700) + 11425)).toLocaleString()));
+    localStorage.setItem('fund4', ('$' + (Math.floor((Math.random() * 700) + 12125)).toLocaleString()));
+    localStorage.setItem('fund5', ('$' + (Math.floor((Math.random() * 700) + 12825)).toLocaleString()));
+    localStorage.setItem('fund6', ('$' + (Math.floor((Math.random() * 700) + 13525)).toLocaleString()));
+    localStorage.setItem('fund7', ('$' + (Math.floor((Math.random() * 700) + 14225)).toLocaleString()));
+    localStorage.setItem('fund8', ('$' + (Math.floor((Math.random() * 700) + 14925)).toLocaleString()));
+    localStorage.setItem('fund9', ('$' + (Math.floor((Math.random() * 700) + 15625)).toLocaleString()));
+    localStorage.setItem('fund10', ('$' + (Math.floor((Math.random() * 700) + 16325)).toLocaleString()));
+    localStorage.setItem('fund11', ('$' + (Math.floor((Math.random() * 700) + 17025)).toLocaleString()));
+    localStorage.setItem('fund12', ('$' + (Math.floor((Math.random() * 700) + 17725)).toLocaleString()));
+    localStorage.setItem('fund13', ('$' + (Math.floor((Math.random() * 700) + 18425)).toLocaleString()));
+    localStorage.setItem('fund14', ('$' + (Math.floor((Math.random() * 700) + 19125)).toLocaleString()));
+    localStorage.setItem('fund15', ('$' + (Math.floor((Math.random() * 700) + 19825)).toLocaleString()));
+    localStorage.setItem('fund16', ('$' + (Math.floor((Math.random() * 700) + 20525)).toLocaleString()));
+    localStorage.setItem('fund17', ('$' + (Math.floor((Math.random() * 700) + 21225)).toLocaleString()));
+    localStorage.setItem('fund18', ('$' + (Math.floor((Math.random() * 700) + 21925)).toLocaleString()));
+    localStorage.setItem('fund19', ('$' + (Math.floor((Math.random() * 700) + 22625)).toLocaleString()));
+    localStorage.setItem('fund20', ('$' + (Math.floor((Math.random() * 700) + 23325)).toLocaleString()));
+    localStorage.setItem('fund21', ('$' + (Math.floor((Math.random() * 700) + 24025)).toLocaleString()));
+    localStorage.setItem('fund22', ('$' + (Math.floor((Math.random() * 700) + 24725)).toLocaleString()));
+    localStorage.setItem('fund23', ('$' + (Math.floor((Math.random() * 700) + 25425)).toLocaleString()));
+    localStorage.setItem('fund24', ('$' + (Math.floor((Math.random() * 700) + 26125)).toLocaleString()));
+    localStorage.setItem('fund25', ('$' + (Math.floor((Math.random() * 700) + 27825)).toLocaleString()));
+    localStorage.setItem('fund26', ('$' + (Math.floor((Math.random() * 700) + 27525)).toLocaleString()));
+    localStorage.setItem('fund27', ('$' + (Math.floor((Math.random() * 700) + 28225)).toLocaleString()));
+
+
 
 
 

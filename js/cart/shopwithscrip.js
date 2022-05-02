@@ -25,6 +25,7 @@ if(!localStorage.getItem('loadedshop')){
 
 
 
+
     document.getElementById("shop1").innerHTML = localStorage.getItem('shop1');
     document.getElementById("shop2").innerHTML = localStorage.getItem('shop2');
     document.getElementById("shop3").innerHTML = localStorage.getItem('shop3');
