@@ -474,6 +474,56 @@ function ad25(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
+function ad26(event) {
+    var price = 'Price: $251';
+    var balance = 'Balance: $12,568';
+    var website = 'citi.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Name + Address';
+    var info3 = 'Email Access';
+    var info4 = 'Social Security No';
+    var info5 = 'Date of Birth';
+    var info6 = 'Account& Routing No';
+    var info7 = 'Owner Complete Fullz';
+    var image = 'https://darknet.id/images/sale.jpg';
+    var account = 'Citi Bank [CHECKING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function ad27(event) {
+    var price = 'Price: $1,246';
+    var balance = 'Balance: $62,333';
+    var website = 'citi.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Date of Birth';
+    var info4 = 'Social Security No';
+    var info5 = 'ClientIP+ UserAgent';
+    var info6 = 'Name + Email Access';
+    var info7 = 'Owner Complete Fullz';
+    var image = 'https://darknet.id/images/chime-60.jpg';
+    var account = 'Chime Bank [SPENDING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function ad28(event) {
+    var price = 'Price: $237';
+    var balance = 'Balance: $11,871';
+    var website = 'bankofamerica.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Date of Birth';
+    var info4 = 'Social Security No';
+    var info5 = 'ClientIP+ UserAgent';
+    var info6 = 'Name + Email Access';
+    var info7 = 'Owner Complete Fullz';
+    var image = 'https://darknet.id/img/boa-11k.jpg';
+    var account = 'Bank of America [CHECKING]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+
+
 
 
 
