@@ -69,7 +69,7 @@ function ad1(event) {
     var balance = 'Balance: $18,878';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
-    var info2 = 'Billing';
+    var info2 = 'Billing Details';
     var info3 = 'Email Access';
     var info4 = 'Social Security No';
     var info5 = 'Accont& Routing No';
@@ -86,7 +86,7 @@ function ad2(event) {
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
     var info2 = 'Email Access';
-    var info3 = 'Billing';
+    var info3 = 'Billing Details';
     var info4 = 'Social Security No';
     var info5 = 'Accont& Routing No';
     var info6 = 'Date of Birth';
@@ -119,7 +119,7 @@ function ad4(event) {
     var info1 = 'Online Access';
     var info2 = 'Email Access';
     var info3 = 'Fullz Info';
-    var info4 = 'Billing';
+    var info4 = 'Billing Details';
     var info5 = 'Date of Birth';
     var info6 = 'ClientIP + UserAgent';
     var info7 = 'Card Details';
@@ -135,7 +135,7 @@ function ad5(event) {
     var info1 = 'Login Access';
     var info2 = 'Email Access';
     var info3 = 'Account& Routing No';
-    var info4 = 'Billing';
+    var info4 = 'Billing Details';
     var info5 = 'Social Security No';
     var info6 = 'ClientIP + UserAgent';
     var info7 = 'Name + Address';
@@ -183,7 +183,7 @@ function ad8(event) {
     var info1 = 'Login Access';
     var info2 = 'Email Access';
     var info3 = 'Carrier PIN';
-    var info4 = 'Billing';
+    var info4 = 'Billing Details';
     var info5 = 'Social Security No';
     var info6 = 'ClientIP + UserAgent';
     var info7 = 'Date of Birth';
@@ -199,7 +199,7 @@ function ad9(event) {
     var info1 = 'Login Access';
     var info2 = 'Email Access';
     var info3 = 'Social Security No';
-    var info4 = 'Billing';
+    var info4 = 'Billing Details';
     var info5 = 'Account& Routing No';
     var info6 = 'ClientIP + UserAgent';
     var info7 = 'Date of Birth';
@@ -215,7 +215,7 @@ function ad10(event) {
     var info1 = 'Login Access';
     var info2 = 'Email Access';
     var info3 = 'Social Security No';
-    var info4 = 'Billing';
+    var info4 = 'Billing Details';
     var info5 = 'Account& Routing No';
     var info6 = 'ClientIP + UserAgent';
     var info7 = 'Carrier PIN';
@@ -247,7 +247,7 @@ function ad12(event) {
     var info1 = 'Login Access';
     var info2 = 'Email Access';
     var info3 = 'Debit Details';
-    var info4 = 'Billing';
+    var info4 = 'Billing Details';
     var info5 = 'Social Security No';
     var info6 = 'ClientIP + UserAgent';
     var info7 = 'Owner Complete Fullz';
@@ -279,7 +279,7 @@ function ad14(event) {
     var info1 = 'Login Access';
     var info2 = 'Email Access';
     var info3 = 'Driving License';
-    var info4 = 'Billing';
+    var info4 = 'Billing Details';
     var info5 = 'Social Security No';
     var info6 = 'Carrier PIN';
     var info7 = 'Date of Birth';
@@ -342,7 +342,7 @@ function ad18(event) {
     var website = 'wellsfargo.com';
     var info1 = 'Online& Email Access';
     var info2 = 'Account& Routing No';
-    var info3 = 'Billing';
+    var info3 = 'Billing Details';
     var info4 = 'Social Security No';
     var info5 = 'Date of Birth';
     var info6 = 'ClientIP + Useragent';
