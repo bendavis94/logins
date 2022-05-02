@@ -579,6 +579,11 @@ function updateCartTotal() {
                 singleLog[i].style.fontSize = '20px';
                 singleLog[i].style.color = '#121d33';
                 var bunist = singleLog[i].parentElement.parentElement;
+                var buni = bunist.parentElement;
+                console.log(buni.dataset.subHtml)
+                buni.dataset.subHtml = `
+                <button type='submit' class='butn medium white display-nones' 
+                style='background: lime' data-toggle='modal' data-target='#profileModal'>In Cart: ${data.price3}</button>`;
                 bunist.classList.add('display-nones');
                 singleLog[i].disabled = 'disabled';
             } 
