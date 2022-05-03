@@ -21,9 +21,7 @@ function myFunction() {
           return response.json();
         })
         .then(function(data) {
-          document.getElementById('footer-email').innerHTML = `
-           ${user.displayName}, your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
-          `;
+          document.getElementById('footer-email').innerHTML = `${user.displayName}, your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
       });
     } else if(!user.displayName && user.email) {
       var themail = user.email;
@@ -36,11 +34,20 @@ function myFunction() {
           return response.json();
         })
         .then(function(data) {
-          document.getElementById('footer-email').innerHTML = `
-          ${theaddress}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}
-          `;
+          document.getElementById('footer-email').innerHTML = `${theaddress}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
       });
-    } 
+    } else if(!user.displayName && !user.email && user.phoneNumber){
+      jinaHolder.innerText = user.phoneNumber;
+      jinaHolder2.innerText = 'USER ID: ' + user.uid;
+
+      fetch('https://ipapi.co/json/')
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          document.getElementById('footer-email').innerHTML = `${user.phoneNumber}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
+      });
+    }
   });
 
   document.getElementById("thebodyz").oncontextmenu = function() {
