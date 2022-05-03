@@ -221,7 +221,7 @@ select{
 @media screen and (max-width: 567px){
     #invoiceHolder{
         font-size: 18px;
-        color: aqua;
+        color: aqua !important;
    }
     .closeimg{
         width: 50px;
@@ -880,26 +880,6 @@ td{
     margin: 0;
     padding: 5px 0;
 }
-#invoiceHolder3{
-    text-align: center;
-    color: aqua;
-    font-size: 17px;
-    font-weight: 700;
-}
-#invoiceHolder4{
-    text-align: center;
-    color: aqua;
-    font-size: 15px;
-    font-weight: 700;
-}
-@media (max-width:576px){
-    #invoiceHolder3{
-        font-size: 20px;
-    }
-    #invoiceHolder4{
-        font-size: 18px;
-    }
-}
 #invoice-col-table{
     margin: 0;
     padding: 3px;
@@ -970,9 +950,6 @@ td{
     #omanyala{
         color: #fff;
         margin-left: 2px;
-    }
-    #invoiceHolder3{
-        color: aqua;
     }
     #satoshinakamoto, .satoshinakamoto{
         color: aqua;
