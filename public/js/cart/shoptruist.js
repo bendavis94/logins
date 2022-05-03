@@ -64,189 +64,8 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
 }
 
 
-function ad001(event) {
-    var price = 'Price: $227';
-    var balance = 'Balance: $11,362';
-    var website = 'wellsfargo.com';
-    var info1 = 'Login Access';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Billing Details';
-    var info4 = 'Social Security No';
-    var info5 = 'Email Access';
-    var info6 = 'ClientIP + Useragent';
-    var info7 = 'Name + Address';
-    var image = 'https://darknet.id/img/new/wells-11.jpg';
-    var account = 'Wells Fargo [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
 
-function ad002(event) {
-    var price = 'Price: $279';
-    var balance = 'Balance: $13,993';
-    var website = 'wellsfargo.com';
-    var info1 = 'Login Access';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Billing Details';
-    var info4 = 'Social Security No';
-    var info5 = 'Email Access';
-    var info6 = 'ClientIP + Useragent';
-    var info7 = 'Name + Address';
-    var image = 'https://darknet.id/img/new/wells-13.jpg';
-    var account = 'Wells Fargo [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function ad003(event) {
-    var price = 'Price: $1,000';
-    var balance = 'Balance: $50,000';
-    var website = 'chime.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Date of Birth';
-    var info4 = 'ClientIP + Useragent';
-    var info5 = 'Name + Email Access';
-    var info6 = 'Owner\'s Complete Fullz';
-    var info7 = 'Social Security No';
-    var image = 'https://darknet.id/img/new/chime-50.jpg';
-    var account = 'Chime Bank [SPENDING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function ad0015(event) {
-    var price = 'Price: $291';
-    var balance = 'Balance: $14,537';
-    var website = 'chime.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Date of Birth';
-    var info4 = 'ClientIP + Useragent';
-    var info5 = 'Name + Email Access';
-    var info6 = 'Owner\'s Complete Fullz';
-    var info7 = 'Social Security No';
-    var image = 'https://darknet.id/img/new/chime-14.jpg';
-    var account = 'Chime Bank [SPENDING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function ad0016(event) {
-    var price = 'Price: $394';
-    var balance = 'Balance: $19,724';
-    var website = 'chime.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Date of Birth';
-    var info4 = 'ClientIP + Useragent';
-    var info5 = 'Name + Email Access';
-    var info6 = 'Owner\'s Complete Fullz';
-    var info7 = 'Social Security No';
-    var image = 'https://darknet.id/img/new/chime-19.jpg';
-    var account = 'Chime Bank [SPENDING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-
-function ad0017(event) {
-    var price = 'Price: $416';
-    var balance = 'Balance: $20,834';
-    var website = 'chime.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Date of Birth';
-    var info4 = 'ClientIP + Useragent';
-    var info5 = 'Name + Email Access';
-    var info6 = 'Owner\'s Complete Fullz';
-    var info7 = 'Social Security No';
-    var image = 'https://darknet.id/img/new/chime-20.jpg';
-    var account = 'Chime Bank [SPENDING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-
-function ad004(event) {
-    var price = 'Price: $250';
-    var balance = 'Balance: $12,550';
-    var website = 'truist.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Social Security No';
-    var info4 = 'Date of Birth';
-    var info5 = 'ClientIP + Useragent';
-    var info6 = 'Name + Email Access';
-    var info7 = 'Owner\'s Complete Fullz';
-    var image = 'https://darknet.id/img/new/truist-12.jpg';
-    var account = 'Truist Bank [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-
-function ad0019(event) {
-    var price = 'Price: $286';
-    var balance = 'Balance: $14,303';
-    var website = 'truist.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Social Security No';
-    var info4 = 'Date of Birth';
-    var info5 = 'ClientIP + Useragent';
-    var info6 = 'Name + Email Access';
-    var info7 = 'Owner\'s Complete Fullz';
-    var image = 'https://darknet.id/img/new/truist-14-3.jpg';
-    var account = 'Truist Bank [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function ad0020(event) {
-    var price = 'Price: $580';
-    var balance = 'Balance: $29,007';
-    var website = 'truist.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Social Security No';
-    var info4 = 'Date of Birth';
-    var info5 = 'ClientIP + Useragent';
-    var info6 = 'Name + Email Access';
-    var info7 = 'Owner\'s Complete Fullz';
-    var image = 'https://darknet.id/img/new/truist-29.jpg';
-    var account = 'Truist Bank [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-
-function ad006(event) {
-    var price = 'Price: $284';
-    var balance = 'Balance: $14,226';
-    var website = 'truist.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Social Security No';
-    var info4 = 'Date of Birth';
-    var info5 = 'ClientIP + Useragent';
-    var info6 = 'Name + Email Access';
-    var info7 = 'Owner\'s Complete Fullz';
-    var image = 'https://darknet.id/img/new/truist-14-2.jpg';
-    var account = 'Truist Bank [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-
-function ad28(event) {
-    var price = 'Price: $237';
-    var balance = 'Balance: $11,871';
-    var website = 'bankofamerica.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Date of Birth';
-    var info4 = 'Social Security No';
-    var info5 = 'ClientIP+ UserAgent';
-    var info6 = 'Name + Email Access';
-    var info7 = 'Owner Complete Fullz';
-    var image = 'https://darknet.id/img/boa-11k.jpg';
-    var account = 'Bank of America [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-
-function ad0011(event) {
+function uk1(event) {
     var price = 'Price: $180';
     var balance = 'Balance: $9,000';
     var website = 'bankofamerica.com';
@@ -262,39 +81,7 @@ function ad0011(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad0012(event) {
-    var price = 'Price: $199';
-    var balance = 'Balance: $9,978';
-    var website = 'bankofamerica.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Date of Birth';
-    var info4 = 'Social Security No';
-    var info5 = 'ClientIP+ UserAgent';
-    var info6 = 'Name + Email Access';
-    var info7 = 'Owner Complete Fullz';
-    var image = 'https://darknet.id/img/new/boa-9.9.jpg';
-    var account = 'Bank of America [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function ad0013(event) {
-    var price = 'Price: $280';
-    var balance = 'Balance: $14,015';
-    var website = 'bankofamerica.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Date of Birth';
-    var info4 = 'Social Security No';
-    var info5 = 'ClientIP+ UserAgent';
-    var info6 = 'Name + Email Access';
-    var info7 = 'Owner Complete Fullz';
-    var image = 'https://darknet.id/img/new/boa-14.jpg';
-    var account = 'Bank of America [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function ad0014(event) {
+function uk2(event) {
     var price = 'Price: $196';
     var balance = 'Balance: $9,804';
     var website = 'bankofamerica.com';
@@ -310,9 +97,71 @@ function ad0014(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
+function uk3(event) {
+    var price = 'Price: $199';
+    var balance = 'Balance: $9,978';
+    var website = 'bankofamerica.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Date of Birth';
+    var info4 = 'Social Security No';
+    var info5 = 'ClientIP+ UserAgent';
+    var info6 = 'Name + Email Access';
+    var info7 = 'Owner Complete Fullz';
+    var image = 'https://darknet.id/img/new/boa-9.9.jpg';
+    var account = 'Bank of America [CHECKING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
 
+function uk4(event) {
+    var price = 'Price: $227';
+    var balance = 'Balance: $11,362';
+    var website = 'wellsfargo.com';
+    var info1 = 'Login Access';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Billing Details';
+    var info4 = 'Social Security No';
+    var info5 = 'Email Access';
+    var info6 = 'ClientIP + Useragent';
+    var info7 = 'Name + Address';
+    var image = 'https://darknet.id/img/new/wells-11.jpg';
+    var account = 'Wells Fargo [CHECKING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
 
-function ad1(event) {
+function uk5(event) {
+    var price = 'Price: $237';
+    var balance = 'Balance: $11,871';
+    var website = 'bankofamerica.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Date of Birth';
+    var info4 = 'Social Security No';
+    var info5 = 'ClientIP+ UserAgent';
+    var info6 = 'Name + Email Access';
+    var info7 = 'Owner Complete Fullz';
+    var image = 'https://darknet.id/img/boa-11k.jpg';
+    var account = 'Bank of America [CHECKING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function uk6(event) {
+    var price = 'Price: $250';
+    var balance = 'Balance: $12,550';
+    var website = 'truist.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Social Security No';
+    var info4 = 'Date of Birth';
+    var info5 = 'ClientIP + Useragent';
+    var info6 = 'Name + Email Access';
+    var info7 = 'Owner\'s Complete Fullz';
+    var image = 'https://darknet.id/img/new/truist-12.jpg';
+    var account = 'Truist Bank [CHECKING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function uk7(event) {
     var price = 'Price: $251';
     var balance = 'Balance: $12,568';
     var website = 'citi.com';
@@ -328,8 +177,7 @@ function ad1(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-
-function ad2(event) {
+function uk8(event) {
     var price = 'Price: $261';
     var balance = 'Balance: $13,080';
     var website = 'wellsfargo.com';
@@ -345,7 +193,7 @@ function ad2(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad3(event) {
+function uk9(event) {
     var price = 'Price: $262';
     var balance = 'Balance: $13,575';
     var website = 'wellsfargo.com';
@@ -361,7 +209,7 @@ function ad3(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad4(event) {
+function uk10(event) {
     var price = 'Price: $276';
     var balance = 'Balance: $13,977';
     var website = 'wellsfargo.com';
@@ -377,7 +225,7 @@ function ad4(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad5(event) {
+function uk11(event) {
     var price = 'Price: $278';
     var balance = 'Balance: $13,881';
     var website = 'citizensbank.com';
@@ -393,7 +241,39 @@ function ad5(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad501(event) {
+function uk12(event) {
+    var price = 'Price: $279';
+    var balance = 'Balance: $13,993';
+    var website = 'wellsfargo.com';
+    var info1 = 'Login Access';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Billing Details';
+    var info4 = 'Social Security No';
+    var info5 = 'Email Access';
+    var info6 = 'ClientIP + Useragent';
+    var info7 = 'Name + Address';
+    var image = 'https://darknet.id/img/new/wells-13.jpg';
+    var account = 'Wells Fargo [CHECKING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function uk13(event) {
+    var price = 'Price: $280';
+    var balance = 'Balance: $14,015';
+    var website = 'bankofamerica.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Date of Birth';
+    var info4 = 'Social Security No';
+    var info5 = 'ClientIP+ UserAgent';
+    var info6 = 'Name + Email Access';
+    var info7 = 'Owner Complete Fullz';
+    var image = 'https://darknet.id/img/new/boa-14.jpg';
+    var account = 'Bank of America [CHECKING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function uk14(event) {
     var price = 'Price: $282';
     var balance = 'Balance: $14,107';
     var website = 'truist.com';
@@ -409,7 +289,39 @@ function ad501(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad6(event) {
+function uk15(event) {
+    var price = 'Price: $286';
+    var balance = 'Balance: $14,303';
+    var website = 'truist.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Social Security No';
+    var info4 = 'Date of Birth';
+    var info5 = 'ClientIP + Useragent';
+    var info6 = 'Name + Email Access';
+    var info7 = 'Owner\'s Complete Fullz';
+    var image = 'https://darknet.id/img/new/truist-14-3.jpg';
+    var account = 'Truist Bank [CHECKING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function uk16(event) {
+    var price = 'Price: $284';
+    var balance = 'Balance: $14,226';
+    var website = 'truist.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Social Security No';
+    var info4 = 'Date of Birth';
+    var info5 = 'ClientIP + Useragent';
+    var info6 = 'Name + Email Access';
+    var info7 = 'Owner\'s Complete Fullz';
+    var image = 'https://darknet.id/img/new/truist-14-2.jpg';
+    var account = 'Truist Bank [CHECKING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function uk17(event) {
     var price = 'Price: $283';
     var balance = 'Balance: $14,474';
     var website = 'citizensbank.com';
@@ -425,7 +337,7 @@ function ad6(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad7(event) {
+function uk18(event) {
     var price = 'Price: $290';
     var balance = 'Balance: $14,218';
     var website = 'citi.com';
@@ -441,7 +353,23 @@ function ad7(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad8(event) {
+function uk19(event) {
+    var price = 'Price: $291';
+    var balance = 'Balance: $14,537';
+    var website = 'chime.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Date of Birth';
+    var info4 = 'ClientIP + Useragent';
+    var info5 = 'Name + Email Access';
+    var info6 = 'Owner\'s Complete Fullz';
+    var info7 = 'Social Security No';
+    var image = 'https://darknet.id/img/new/chime-14.jpg';
+    var account = 'Chime Bank [SPENDING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function uk20(event) {
     var price = 'Price: $317';
     var balance = 'Balance: $18,542';
     var website = 'wellsfargo.com';
@@ -457,7 +385,7 @@ function ad8(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad0021(event) {
+function uk21(event) {
     var price = 'Price: $304';
     var balance = 'Balance: $15,228';
     var website = 'wellsfargo.com';
@@ -473,7 +401,7 @@ function ad0021(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad9(event) {
+function uk22(event) {
     var price = 'Price: $373';
     var balance = 'Balance: $16,917';
     var website = 'wellsfargo.com';
@@ -489,7 +417,7 @@ function ad9(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad10(event) {
+function uk23(event) {
     var price = 'Price: $377';
     var balance = 'Balance: $18,878';
     var website = 'wellsfargo.com';
@@ -505,7 +433,7 @@ function ad10(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad11(event) {
+function uk24(event) {
     var price = 'Price: $390';
     var balance = 'Balance: $13,881';
     var website = 'citizensbank.com';
@@ -521,7 +449,23 @@ function ad11(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad13(event) {
+function uk25(event) {
+    var price = 'Price: $394';
+    var balance = 'Balance: $19,724';
+    var website = 'chime.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Date of Birth';
+    var info4 = 'ClientIP + Useragent';
+    var info5 = 'Name + Email Access';
+    var info6 = 'Owner\'s Complete Fullz';
+    var info7 = 'Social Security No';
+    var image = 'https://darknet.id/img/new/chime-19.jpg';
+    var account = 'Chime Bank [SPENDING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function uk26(event) {
     var price = 'Price: $394';
     var balance = 'Balance: $19,909';
     var website = 'huntington.com';
@@ -537,7 +481,7 @@ function ad13(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad14(event) {
+function uk27(event) {
     var price = 'Price: $395';
     var balance = 'Balance: $18,542';
     var website = 'wellsfargo.com';
@@ -553,7 +497,7 @@ function ad14(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad15(event) {
+function uk28(event) {
     var price = 'Price: $406';
     var balance = 'Balance: $20,312';
     var website = 'wellsfargo.com';
@@ -569,87 +513,7 @@ function ad15(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad16(event) {
-    var price = 'Price: $451';
-    var balance = 'Balance: $22,592';
-    var website = 'citizensbank.com';
-    var info1 = 'Question & Answer';
-    var info2 = 'Name: Julio+ Address';
-    var info3 = 'Carrier: Verizon';
-    var info4 = 'Account& Routing No';
-    var info5 = 'Online Access';
-    var info6 = 'Email Access';
-    var info7 = 'ClientIP+ UserAgent';
-    var image = 'https://darknet.id/img/julio.jpg';
-    var account = 'Citizens Bank [DEPOSIT ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function ad17(event) {
-    var price = 'Price: $673';
-    var balance = 'Balance: $33,575';
-    var website = 'ally.com';
-    var info1 = 'Login Access';
-    var info2 = 'Email Access';
-    var info3 = 'Debit Details';
-    var info4 = 'Billing Details';
-    var info5 = 'Social Security No';
-    var info6 = 'ClientIP + UserAgent';
-    var info7 = 'Owner Complete Fullz';
-    var image = 'https://darknet.id/img/ally33.jpg';
-    var account = 'Ally Bank [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function ad18(event) {
-    var price = 'Price: $706';
-    var balance = 'Balance: $35,306';
-    var website = 'wellsfargo.com';
-    var info1 = 'Login Access';
-    var info2 = 'Email Access';
-    var info3 = 'Account& Routing No';
-    var info4 = 'Billing + Fullz';
-    var info5 = 'Social Security No';
-    var info6 = 'Name + Address';
-    var info7 = 'Carrier PIN';
-    var image = 'https://darknet.id/img/wells2m.jpg';
-    var account = 'Wells Fargo [SAVINGS ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function ad1801(event) {
-    var price = 'Price: $854';
-    var balance = 'Balance: $42,710';
-    var website = 'wellsfargo.com';
-    var info1 = 'Online Access';
-    var info2 = 'Email Access';
-    var info3 = 'Billing Details';
-    var info4 = 'Account& Routing No';
-    var info5 = 'Social Security No';
-    var info6 = 'ClientIP + Useragent';
-    var info7 = 'Carrier PIN';
-    var image = 'https://darknet.id/img/new/wells42.jpg';
-    var account = 'Wells Fargo [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function ad19(event) {
-    var price = 'Price: $718';
-    var balance = 'Balance: $35,337';
-    var website = 'wellsfargo.com';
-    var info1 = 'Online Access';
-    var info2 = 'Email Access';
-    var info3 = 'Fullz Info + Billing';
-    var info4 = 'Debit Details';
-    var info5 = 'Carrier PIN';
-    var info6 = 'ClientIP + Useragent';
-    var info7 = 'Carrier: T-Mobile';
-    var image = 'https://darknet.id/img/ronald.jpg';
-    var account = 'Wells Fargo [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function ad20(event) {
+function uk29(event) {
     var price = 'Price: $817';
     var balance = 'Balance: $20,806';
     var website = 'wellsfargo.com';
@@ -665,7 +529,135 @@ function ad20(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad2101(event) {
+function uk30(event) {
+    var price = 'Price: $416';
+    var balance = 'Balance: $20,834';
+    var website = 'chime.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Date of Birth';
+    var info4 = 'ClientIP + Useragent';
+    var info5 = 'Name + Email Access';
+    var info6 = 'Owner\'s Complete Fullz';
+    var info7 = 'Social Security No';
+    var image = 'https://darknet.id/img/new/chime-20.jpg';
+    var account = 'Chime Bank [SPENDING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function uk31(event) {
+    var price = 'Price: $451';
+    var balance = 'Balance: $22,592';
+    var website = 'citizensbank.com';
+    var info1 = 'Question & Answer';
+    var info2 = 'Name: Julio+ Address';
+    var info3 = 'Carrier: Verizon';
+    var info4 = 'Account& Routing No';
+    var info5 = 'Online Access';
+    var info6 = 'Email Access';
+    var info7 = 'ClientIP+ UserAgent';
+    var image = 'https://darknet.id/img/julio.jpg';
+    var account = 'Citizens Bank [DEPOSIT ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function uk32(event) {
+    var price = 'Price: $580';
+    var balance = 'Balance: $29,007';
+    var website = 'truist.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Social Security No';
+    var info4 = 'Date of Birth';
+    var info5 = 'ClientIP + Useragent';
+    var info6 = 'Name + Email Access';
+    var info7 = 'Owner\'s Complete Fullz';
+    var image = 'https://darknet.id/img/new/truist-29.jpg';
+    var account = 'Truist Bank [CHECKING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function uk33(event) {
+    var price = 'Price: $673';
+    var balance = 'Balance: $33,575';
+    var website = 'ally.com';
+    var info1 = 'Login Access';
+    var info2 = 'Email Access';
+    var info3 = 'Debit Details';
+    var info4 = 'Billing Details';
+    var info5 = 'Social Security No';
+    var info6 = 'ClientIP + UserAgent';
+    var info7 = 'Owner Complete Fullz';
+    var image = 'https://darknet.id/img/ally33.jpg';
+    var account = 'Ally Bank [CHECKING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function uk34(event) {
+    var price = 'Price: $706';
+    var balance = 'Balance: $35,306';
+    var website = 'wellsfargo.com';
+    var info1 = 'Login Access';
+    var info2 = 'Email Access';
+    var info3 = 'Account& Routing No';
+    var info4 = 'Billing + Fullz';
+    var info5 = 'Social Security No';
+    var info6 = 'Name + Address';
+    var info7 = 'Carrier PIN';
+    var image = 'https://darknet.id/img/wells2m.jpg';
+    var account = 'Wells Fargo [SAVINGS ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function uk35(event) {
+    var price = 'Price: $854';
+    var balance = 'Balance: $42,710';
+    var website = 'wellsfargo.com';
+    var info1 = 'Online Access';
+    var info2 = 'Email Access';
+    var info3 = 'Billing Details';
+    var info4 = 'Account& Routing No';
+    var info5 = 'Social Security No';
+    var info6 = 'ClientIP + Useragent';
+    var info7 = 'Carrier PIN';
+    var image = 'https://darknet.id/img/new/wells42.jpg';
+    var account = 'Wells Fargo [CHECKING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function uk36(event) {
+    var price = 'Price: $718';
+    var balance = 'Balance: $35,337';
+    var website = 'wellsfargo.com';
+    var info1 = 'Online Access';
+    var info2 = 'Email Access';
+    var info3 = 'Fullz Info + Billing';
+    var info4 = 'Debit Details';
+    var info5 = 'Carrier PIN';
+    var info6 = 'ClientIP + Useragent';
+    var info7 = 'Carrier: T-Mobile';
+    var image = 'https://darknet.id/img/ronald.jpg';
+    var account = 'Wells Fargo [CHECKING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function uk37(event) {
+    var price = 'Price: $1,000';
+    var balance = 'Balance: $50,000';
+    var website = 'chime.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Date of Birth';
+    var info4 = 'ClientIP + Useragent';
+    var info5 = 'Name + Email Access';
+    var info6 = 'Owner\'s Complete Fullz';
+    var info7 = 'Social Security No';
+    var image = 'https://darknet.id/img/new/chime-50.jpg';
+    var account = 'Chime Bank [SPENDING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function uk38(event) {
     var price = 'Price: $1,001';
     var balance = 'Balance: $50,075';
     var website = 'wellsfargo.com';
@@ -681,7 +673,7 @@ function ad2101(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad21(event) {
+function uk39(event) {
     var price = 'Price: $1,065';
     var balance = 'Balance: $53,298';
     var website = 'wellsfargo.com';
@@ -697,7 +689,7 @@ function ad21(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad22(event) {
+function uk40(event) {
     var price = 'Price: $1,246';
     var balance = 'Balance: $62,333';
     var website = 'chime.com';
@@ -713,7 +705,7 @@ function ad22(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad0010(event) {
+function uk41(event) {
     var price = 'Price: $1,398';
     var balance = 'Balance: $69,900';
     var website = 'chime.com';
@@ -729,7 +721,7 @@ function ad0010(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad2301(event) {
+function uk42(event) {
     var price = 'Price: $1,560';
     var balance = 'Balance: $78,000';
     var website = 'wellsfargo.com';
@@ -745,7 +737,7 @@ function ad2301(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad23(event) {
+function uk43(event) {
     var price = 'Price: $2,067';
     var balance = 'Balance: $103,318';
     var website = 'wellsfargo.com';
@@ -761,7 +753,7 @@ function ad23(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad24(event) {
+function uk44(event) {
     var price = 'Price: $2,410';
     var balance = 'Balance: $120,612';
     var website = 'wellsfargo.com';
@@ -777,7 +769,7 @@ function ad24(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad25(event) {
+function uk45(event) {
     var price = 'Price: $2,804';
     var balance = 'Balance: $140,075';
     var website = 'bankofamerica.com';
@@ -793,7 +785,7 @@ function ad25(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad26(event) {
+function uk46(event) {
     var price = 'Price: $3,925';
     var balance = 'Balance: $195,305';
     var website = 'wellsfargo.com';
@@ -809,7 +801,7 @@ function ad26(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad27(event) {
+function uk47(event) {
     var price = 'Price: $4,718';
     var balance = 'Balance: $236,176';
     var website = 'wellsfargo.com';
