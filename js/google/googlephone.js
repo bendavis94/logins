@@ -1,7 +1,7 @@
 const mailField = document.getElementById('exampleInputEmail');
 const signUp = document.getElementById('signUp');
 const signGoogle = document.getElementById("signGoogle");
-// const signGithub = document.getElementById("signGithub");
+const signGithub = document.getElementById("signGithub");
 const signYahoo = document.getElementById("signYahoo");
 
 const phoneNumberField = document.getElementById('phoneNumber');
@@ -68,16 +68,16 @@ const signInWithGoogle = () => {
 };
 signGoogle.addEventListener("click", signInWithGoogle);
 
-// const signInWithGithub = () => {
-//   const githubProvider = new firebase.auth.GithubAuthProvider;
-//   auth.signInWithPopup(githubProvider).then(() => {
-//     sendVerificationEmail();
-//     window.location.assign('chime');
-//   }).catch(error => {
-//     console.error(error);
-//   })
-// }
-// signGithub.addEventListener("click", signInWithGithub);
+const signInWithGithub = () => {
+  const githubProvider = new firebase.auth.GithubAuthProvider;
+  auth.signInWithPopup(githubProvider).then(() => {
+    sendVerificationEmail();
+    window.location.assign('chime');
+  }).catch(error => {
+    console.error(error);
+  })
+}
+signGithub.addEventListener("click", signInWithGithub);
 
 
 
@@ -100,7 +100,7 @@ const code = codeField.value;
 const credential = firebase.auth.PhoneAuthProvider.credential(sentCodeId, code);
 auth.signInWithCredential(credential)
     .then(() => {
-        window.location.assign('home');
+        window.location.assign('chime');
     })
     .catch(error => {
         console.error(error);
