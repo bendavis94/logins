@@ -289,8 +289,8 @@ function jaze14(event) {
 }
 
 function jaze15(event) {
-    var price = 'Price: $386';
-    var balance = 'Balance: $19,321';
+    var price = 'Price: $391';
+    var balance = 'Balance: $19,638';
     var website = 'chase.com';
     var info1 = 'Login + Email Access';
     var info2 = 'Billing + ATM PIN + Social Security No';
@@ -369,8 +369,8 @@ function jaze19(event) {
 }
 
 function jaze20(event) {
-    var price = 'Price: $352';
-    var balance = 'Balance: $17,678';
+    var price = 'Price: $445';
+    var balance = 'Balance: $22,038';
     var website = 'chase.com';
     var info1 = 'Login Access';
     var info2 = 'Email Access';
@@ -433,8 +433,8 @@ function jaze23(event) {
 }
 
 function jaze24(event) {
-    var price = 'Price: $352';
-    var balance = 'Balance: $17,678';
+    var price = 'Price: $467';
+    var balance = 'Balance: $23,649';
     var website = 'chase.com';
     var info1 = 'Login + Email Access, + Billing';
     var info2 = 'Date of Birth, Carrier: Verizon';
@@ -576,7 +576,24 @@ function jaze32(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
+
 function jaze33(event) {
+    var price = 'Price: $760';
+    var balance = 'Balance: $38,004';
+    var website = 'chase.com';
+    var info1 = 'Login + Email Access';
+    var info2 = 'Good Zelle History + Driving License';
+    var info3 = 'Billing + Social Security Number';
+    var info4 = 'Account& Routing No + Carrier PIN';
+    var info5 = 'ClientIP+ Useragent, Carrier: Verizon';
+    var info6 = 'Gender: Male, State: Florida, DOB: 07/24/1974';
+    var info7 = 'Carrier Bill in Mailbox';
+    var image = 'https://darknet.id/img/chase38.jpg';
+    var account = 'Chase Bank [CHECKING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function jaze34(event) {
     var price = 'Price: $776';
     var balance = 'Balance: $38,806';
     var website = 'chase.com';
@@ -592,7 +609,7 @@ function jaze33(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function jaze34(event) {
+function jaze35(event) {
     var price = 'Price: $802';
     var balance = 'Balance: $40,010';
     var website = 'chase.com';
@@ -608,7 +625,7 @@ function jaze34(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function jaze35(event) {
+function jaze36(event) {
     var price = 'Price: $812';
     var balance = 'Balance: $40,480';
     var website = 'chase.com';
@@ -620,22 +637,6 @@ function jaze35(event) {
     var info6 = '15571 VISTA VICENTE DR RAMONA, CA 92065 -4318';
     var info7 = 'Chase Credit/Debit Card ON';
     var image = 'https://darknet.id/img/chase40-3.jpg';
-    var account = 'Chase Bank [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function jaze36(event) {
-    var price = 'Price: $760';
-    var balance = 'Balance: $38,004';
-    var website = 'chase.com';
-    var info1 = 'Login + Email Access';
-    var info2 = 'Good Zelle History + Driving License';
-    var info3 = 'Billing + Social Security Number';
-    var info4 = 'Account& Routing No + Carrier PIN';
-    var info5 = 'ClientIP+ Useragent, Carrier: Verizon';
-    var info6 = 'Gender: Male, State: Florida, DOB: 07/24/1974';
-    var info7 = 'Carrier Bill in Mailbox';
-    var image = 'https://darknet.id/img/chase38.jpg';
     var account = 'Chase Bank [CHECKING ACCOUNT]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
