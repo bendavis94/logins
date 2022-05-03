@@ -26,61 +26,81 @@
 		if(((JSON.parse(localStorage.getItem('banklogs')).length) == 2)){
 			if(user.email){
 				for(var i = 0; i < items.length; i++) {
-					var msgs = [
-					` 
-					${toastbitcoin} bitcoin payment not detected, scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}, 
+					var msgs = [` ${toastbitcoin} bitcoin payment not detected, scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}, 
 					to download ${items[0].account} with ${items[0].balance}, <br> 
 					and ${items[1].account} with ${items[1].balance}, <br>
-					a copy of bank log details will be sent to ${user.email} after $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} payment
-					`
-					];
+					a copy of bank log details will be sent to ${user.email} after $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} payment`];
 					i++;
 					if (i === msgs.length) {
 						i = 0;
 					}
-			
 					return msgs[i];
 				}
-			} 
+			} else if(!user.email && user.phoneNumber){
+				for(var i = 0; i < items.length; i++) {
+					var msgs = [` ${toastbitcoin} bitcoin payment not detected, scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}, 
+					to download ${items[0].account} with ${items[0].balance}, <br> 
+					and ${items[1].account} with ${items[1].balance}, <br>
+					a copy of bank log details will be sent to ${user.phoneNumber} after $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} payment`];
+					i++;
+					if (i === msgs.length) {
+						i = 0;
+					}
+					return msgs[i];
+				}
+			}
 		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 1)){
 			if(user.email){
 				for(var i = 0; i < items.length; i++) {
-					var msgs = [
-					` 	
-						${toastbitcoin} bitcoin payment not detected, scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}, 
+					var msgs = [` ${toastbitcoin} bitcoin payment not detected, scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}, 
 						to download ${items[0].account} with ${items[0].balance}, <br>
-						a copy of bank log details will be sent to ${user.email} after $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} payment
-
-					`
-					];
+						a copy of bank log details will be sent to ${user.email} after $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} payment`];
 					i++;
 					if (i === msgs.length) {
 						i = 0;
 					}
-			
 					return msgs[i];
 				}
-			} 
+			} else if(!user.email && user.phoneNumber){
+				for(var i = 0; i < items.length; i++) {
+					var msgs = [` ${toastbitcoin} bitcoin payment not detected, scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}, 
+						to download ${items[0].account} with ${items[0].balance}, <br>
+						a copy of bank log details will be sent to ${user.phoneNumber} after $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} payment`];
+					i++;
+					if (i === msgs.length) {
+						i = 0;
+					}
+					return msgs[i];
+				}
+			}
 		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 3)){
 			if(user.email){
 				for(var i = 0; i < items.length; i++) {
-					var msgs = [
-					` 
-						${toastbitcoin} bitcoin payment not detected, scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}, 
+					var msgs = [` ${toastbitcoin} bitcoin payment not detected, scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}, 
 						to download ${items[0].account} with ${items[0].balance}, <br>
 						and ${items[1].account} with ${items[1].balance}, <br>
 						and ${items[2].account} with ${items[2].balance}, <br>
-						a copy of bank log details will be sent to ${user.email} after $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} payment
-					`
-					];
+						a copy of bank log details will be sent to ${user.email} after $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} payment`];
 					i++;
 					if (i === msgs.length) {
 						i = 0;
 					}
-			
 					return msgs[i];
 				}
-			} 
+			} else if(!user.email && user.phoneNumber){
+				for(var i = 0; i < items.length; i++) {
+					var msgs = [` ${toastbitcoin} bitcoin payment not detected, scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}, 
+						to download ${items[0].account} with ${items[0].balance}, <br>
+						and ${items[1].account} with ${items[1].balance}, <br>
+						and ${items[2].account} with ${items[2].balance}, <br>
+						a copy of bank log details will be sent to ${user.phoneNumber} after $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} payment`];
+					i++;
+					if (i === msgs.length) {
+						i = 0;
+					}
+					return msgs[i];
+				}
+			}
 		}
 	};
 
