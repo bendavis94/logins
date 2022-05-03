@@ -505,22 +505,6 @@ function ad11(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad12(event) {
-    var price = 'Price: $391';
-    var balance = 'Balance: $17,001';
-    var website = 'clarionbank.com';
-    var info1 = 'Online Access';
-    var info2 = 'Email Access';
-    var info3 = 'Complete Fullz';
-    var info4 = 'Billing Details';
-    var info5 = 'Account& Routing No';
-    var info6 = 'ClientIP + UserAgent';
-    var info7 = 'Name + Address';
-    var image = 'https://darknet.id/img/clarion17.jpg';
-    var account = 'Clarion Bank [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
 function ad13(event) {
     var price = 'Price: $394';
     var balance = 'Balance: $19,909';
