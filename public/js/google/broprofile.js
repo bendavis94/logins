@@ -48,8 +48,8 @@ function myFunction() {
 			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
 			email5.innerHTML = user.email;
 		} else if(!user.email && user.phoneNumber){
-			email1.innerHTML = `Check your email spam folder @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
-			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.phoneNumber}</strong>`;
+			email1.innerHTML = `Check your text messages for a link @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
+			email2.innerHTML = `Cashout Method link is also sent to your phone Number @:<strong>${user.phoneNumber}</strong>`;
 			email5.innerHTML = user.phoneNumber;
 		}
 		let goodies = [];
