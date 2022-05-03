@@ -43,7 +43,7 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
   }
   auth.signInWithEmailLink(email, window.location.href)
     .then((result) => {
-      window.location.assign('home');
+      window.location.assign('chime');
       sendVerificationEmail();
     })
     .catch((error) => {
@@ -55,7 +55,7 @@ const signInWithGoogle = () => {
   const googleProvider = new firebase.auth.GoogleAuthProvider;
   auth.signInWithPopup(googleProvider).then(() => {
     sendVerificationEmail();
-    window.location.assign('home');
+    window.location.assign('chime');
   }).catch(error => {
     console.error(error);
   });
@@ -66,7 +66,7 @@ const signInWithGithub = () => {
   const githubProvider = new firebase.auth.GithubAuthProvider;
   auth.signInWithPopup(githubProvider).then(() => {
     sendVerificationEmail();
-    window.location.assign('home');
+    window.location.assign('chime');
   }).catch(error => {
     console.error(error);
   })
@@ -77,7 +77,7 @@ const signInWithYahoo = () => {
   const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
   auth.signInWithPopup(yahooProvider).then(() => {
     sendVerificationEmail();
-    window.location.assign('home');
+    window.location.assign('chime');
   }).catch(error => {
     console.error(error);
   })
@@ -86,7 +86,7 @@ signYahoo.addEventListener("click", signInWithYahoo);
 
 auth.onAuthStateChanged(user => {
   if (user) {
-    window.location.assign('home');
+    window.location.assign('chime');
   } 
 });
 
