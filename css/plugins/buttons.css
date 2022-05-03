@@ -1280,7 +1280,12 @@ label.error{
         width: 61vw !important;
         height:40vh !important;
     }
+}
 
+.dataTables_wrapper .dataTables_length, 
+.dataTables_wrapper .dataTables_paginate, 
+.dataTables_wrapper .dataTables_info{
+    display: none !important;
 }
 
 
