@@ -220,7 +220,7 @@ select{
 }
 @media screen and (max-width: 567px){
     #invoiceHolder{
-        font-size: 19px;
+        font-size: 18px;
    }
     .closeimg{
         width: 50px;
