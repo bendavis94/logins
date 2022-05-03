@@ -615,7 +615,7 @@ function ad21(event) {
 function ad22(event) {
     var price = 'Price: $1,246';
     var balance = 'Balance: $62,333';
-    var website = 'citi.com';
+    var website = 'chime.com';
     var info1 = 'Username + Password';
     var info2 = 'Account& Routing No';
     var info3 = 'Date of Birth';
@@ -624,6 +624,22 @@ function ad22(event) {
     var info6 = 'Name + Email Access';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/images/chime-60.jpg';
+    var account = 'Chime Bank [SPENDING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function ad0010(event) {
+    var price = 'Price: $1,398';
+    var balance = 'Balance: $69,900';
+    var website = 'chime.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Date of Birth';
+    var info4 = 'Social Security No';
+    var info5 = 'ClientIP+ UserAgent';
+    var info6 = 'Name + Email Access';
+    var info7 = 'Owner Complete Fullz';
+    var image = 'https://darknet.id/images/new/chime-69.jpg';
     var account = 'Chime Bank [SPENDING ACCOUNT]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
