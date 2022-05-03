@@ -178,21 +178,6 @@ function ad004(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad0018(event) {
-    var price = 'Price: $109';
-    var balance = 'Balance: $5,512';
-    var website = 'truist.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Social Security No';
-    var info4 = 'Date of Birth';
-    var info5 = 'ClientIP + Useragent';
-    var info6 = 'Name + Email Access';
-    var info7 = 'Owner\'s Complete Fullz';
-    var image = 'https://darknet.id/img/new/truist-5.jpg';
-    var account = 'Truist Bank [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
 
 function ad0019(event) {
     var price = 'Price: $286';
@@ -260,69 +245,6 @@ function ad28(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad007(event) {
-    var price = 'Price: $115';
-    var balance = 'Balance: $5,757';
-    var website = 'bankofamerica.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Date of Birth';
-    var info4 = 'Social Security No';
-    var info5 = 'ClientIP+ UserAgent';
-    var info6 = 'Name + Email Access';
-    var info7 = 'Owner Complete Fullz';
-    var image = 'https://darknet.id/img/new/boa-5.jpg';
-    var account = 'Bank of America [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function ad007(event) {
-    var price = 'Price: $115';
-    var balance = 'Balance: $5,757';
-    var website = 'bankofamerica.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Date of Birth';
-    var info4 = 'Social Security No';
-    var info5 = 'ClientIP+ UserAgent';
-    var info6 = 'Name + Email Access';
-    var info7 = 'Owner Complete Fullz';
-    var image = 'https://darknet.id/img/new/boa-5.jpg';
-    var account = 'Bank of America [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function ad008(event) {
-    var price = 'Price: $160';
-    var balance = 'Balance: $8,022';
-    var website = 'bankofamerica.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Date of Birth';
-    var info4 = 'Social Security No';
-    var info5 = 'ClientIP+ UserAgent';
-    var info6 = 'Name + Email Access';
-    var info7 = 'Owner Complete Fullz';
-    var image = 'https://darknet.id/img/new/boa-8.jpg';
-    var account = 'Bank of America [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function ad009(event) {
-    var price = 'Price: $113';
-    var balance = 'Balance: $5,726';
-    var website = 'bankofamerica.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Date of Birth';
-    var info4 = 'Social Security No';
-    var info5 = 'ClientIP+ UserAgent';
-    var info6 = 'Name + Email Access';
-    var info7 = 'Owner Complete Fullz';
-    var image = 'https://darknet.id/img/new/boa-5.7.jpg';
-    var account = 'Bank of America [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
 
 function ad0011(event) {
     var price = 'Price: $180';
