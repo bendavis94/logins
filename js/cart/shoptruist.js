@@ -193,7 +193,7 @@ function ad007(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad007(event) {
+function ad008(event) {
     var price = 'Price: $160';
     var balance = 'Balance: $8,022';
     var website = 'bankofamerica.com';
