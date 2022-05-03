@@ -457,6 +457,22 @@ function ad8(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
+function ad0021(event) {
+    var price = 'Price: $304';
+    var balance = 'Balance: $15,228';
+    var website = 'wellsfargo.com';
+    var info1 = 'Login Access';
+    var info2 = 'Email Access';
+    var info3 = 'Social Security No';
+    var info4 = 'Billing Details';
+    var info5 = 'Account& Routing No';
+    var info6 = 'ClientIP + UserAgent';
+    var info7 = 'Date of Birth';
+    var image = 'https://darknet.id/img/new/wells-15.jpg';
+    var account = 'Wells Fargo [SAVINGS ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
 function ad9(event) {
     var price = 'Price: $373';
     var balance = 'Balance: $16,917';
