@@ -91,7 +91,6 @@ const sendVerificationCode = () => {
     .then(confirmationResult => {
       const sentCodeId = confirmationResult.verificationId;
       signInWithPhoneButton.addEventListener('click', () => signInWithPhone(sentCodeId));
-      // document.getElementById('phone-form').addEventListener('submit', (event) => {event.preventDefault; signInWithPhone(sentCodeId)});
     })
 }
 const signInWithPhone = sentCodeId => {
