@@ -1289,3 +1289,8 @@ label.error{
 }
 
 
+#theIcon{
+    font-size: 32px;
+    color: lime;
+    cursor: pointer;
+}
