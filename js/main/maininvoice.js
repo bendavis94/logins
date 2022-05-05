@@ -94,23 +94,18 @@
         });
     };
     navbar_init();
-
-
-    var plugins_init = function() {
-        var checkBox = $("input[type=checkbox]:not(.js-switch), input[type=radio]:not(.no-uniform)");
-        if (checkBox.length > 0) {
-            checkBox.each(function() {
-                $(this).uniform();
-            });
-        }
-        ;var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
-        elems.forEach(function(html) {
-            var switchery = new Switchery(html,{
-                size: 'small',
-                color: 'lime'
-            });
-        });
-    };
-    plugins_init();
 }
 )(jQuery);
+
+function changeImage() {
+    var image = document.getElementById('theIcon');
+    if(image.classList.contains('fa-toggle-on')){
+        image.classList.remove('fa-toggle-on')
+        image.classList.add('fa-toggle-off');
+        image.style.color = 'white';
+    } else if(image.classList.contains('fa-toggle-off')){
+        image.classList.remove('fa-toggle-off')
+        image.classList.add('fa-toggle-on');
+        image.style.color = 'lime'
+    }
+}
