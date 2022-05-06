@@ -203,7 +203,8 @@ select{
 #showtoasts{
     font-size: 18px;
     width: 99%;
-    padding: 0 !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
 }
 .modal-title{
     font-size: 20px;
