@@ -185,12 +185,15 @@ function updateCartTotal() {
 
 
     if(JSON.parse(localStorage.getItem('banklogs')).length === 1) {
-        document.getElementById('showtoasts').innerHTML = 'Download 1 Bank Log✅';
+        document.getElementById('showtoasts').innerHTML = `
+            Download 1 BankLog<img src="https://media.tenor.com/images/07d353ba86b2d22d37c4c4400cdbf2f3/tenor.gif" style="border-radius: 4px; width: 51px;" />
+        `;
         document.getElementById('titlelogs2').innerText = 'Cart: 1, Total: $' + total.toLocaleString();
     } else {
         document.getElementById('showtoasts').innerHTML = `Download 
             ${JSON.parse(localStorage.getItem('banklogs')).length}
-        Bank Logs✅`;
+            BankLogs<img src="https://media.tenor.com/images/07d353ba86b2d22d37c4c4400cdbf2f3/tenor.gif" style="border-radius: 4px; width: 51px;" />
+        `;
         document.getElementById('titlelogs2').innerText = `Cart: ${JSON.parse(localStorage.getItem('banklogs')).length}, Total: $${total.toLocaleString()}`
     }
     localStorage.setItem('banktotal',total);
