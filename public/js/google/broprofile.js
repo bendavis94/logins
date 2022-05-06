@@ -279,3 +279,10 @@ function drawHand(ctx, pos, length, width) {
     ctx.stroke();
     ctx.rotate(-pos);
 }
+
+var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+if(isChrome){
+    document.getElementById('predat').style.display = 'block'
+} else{
+    document.getElementById('predat').style.display = 'none';
+}
