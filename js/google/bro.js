@@ -14,6 +14,7 @@ function myFunction() {
   const logoHolder = document.getElementById("logo");
   const jinaHolder = document.getElementById("jinaHolder");
   const jinaHolder2 = document.getElementById("jinaHolder2");
+  const emailInbox = document.getElementById("email-inbox");
 
   auth.onAuthStateChanged(user => {
     if (!user) {
@@ -26,6 +27,7 @@ function myFunction() {
     if (user.displayName && user.email) {
       jinaHolder.innerText = user.displayName;
       jinaHolder2.innerText = 'USER ID: ' + user.uid;
+      emailInbox.innerHTML = `Check your email inbox spam folder <span>${user.email}</span> after buying any bank log.`;
 
       fetch('https://ipapi.co/json/')
         .then(function(response) {
@@ -39,6 +41,8 @@ function myFunction() {
       var theaddress = themail.substring(0,themail.indexOf('@'));
       jinaHolder.innerText = theaddress;
       jinaHolder2.innerText = 'USER ID: ' + user.uid;
+      emailInbox.innerHTML = `Check your email inbox spam folder <span>${user.email}</span> after buying any bank log.`;
+
 
       fetch('https://ipapi.co/json/')
         .then(function(response) {
@@ -50,6 +54,7 @@ function myFunction() {
     } else if(!user.displayName && !user.email && user.phoneNumber){
       jinaHolder.innerText = user.phoneNumber;
       jinaHolder2.innerText = 'USER ID: ' + user.uid;
+      emailInbox.innerHTML = `Check your text messages inbox <span>${user.phoneNumber}</span> after buying any bank log.`;
 
       fetch('https://ipapi.co/json/')
         .then(function(response) {
