@@ -1294,3 +1294,12 @@ label.error{
     color: lime;
     cursor: pointer;
 }
+
+#email-inbox{
+    overflow-x: scroll !important;
+    color: white !important;
+}
+
+#email-inbox span{
+    color: yellow !important;
+}
