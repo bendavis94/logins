@@ -29,7 +29,7 @@ const sendVerificationEmail = () => {
       alert('Check Verification Link sent to your email')
   })
   .catch(error => {
-      alert(error.message);
+      console.error(error.message);
   })
 }
 
@@ -46,7 +46,7 @@ const signUpFunction = () => {
       window.localStorage.setItem('emailForSignIn', email);
   })
   .catch(error => {
-      alert(error.message);
+      console.error(error.message);
   });
 }
 signUp.addEventListener('click', signUpFunction);
@@ -74,7 +74,7 @@ const signInWithGoogle = () => {
     sendVerificationEmail();
     window.location.assign('home');
   }).catch(error => {
-    alert(error.message)
+    console.error(error.message)
   });
 };
 signGoogle.addEventListener("click", signInWithGoogle);
@@ -85,7 +85,7 @@ const signInWithGithub = () => {
     sendVerificationEmail();
     window.location.assign('home');
   }).catch(error => {
-    alert(error.message);
+    console.error(error.message);
   });
 };
 signGithub.addEventListener("click", signInWithGithub);
@@ -113,7 +113,7 @@ auth.signInWithCredential(credential)
         window.location.assign('home');
     })
     .catch(error => {
-        alert(error.message);
+        console.error(error.message);
     })
 }
 getCodeButton.addEventListener('click', sendVerificationCode);
@@ -125,7 +125,7 @@ const signInWithYahoo = () => {
     sendVerificationEmail();
     window.location.assign('home');
   }).catch(error => {
-    alert(error.message);
+    console.error(error.message);
   })
 }
 signYahoo.addEventListener("click", signInWithYahoo);
