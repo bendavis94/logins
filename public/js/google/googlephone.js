@@ -113,7 +113,7 @@ auth.signInWithCredential(credential)
         window.location.assign('home');
     })
     .catch(error => {
-        console.error(error);
+        alert(error.message);
     })
 }
 getCodeButton.addEventListener('click', sendVerificationCode);
