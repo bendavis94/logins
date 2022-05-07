@@ -632,7 +632,7 @@ function uk16(event) {
     var info5 = 'ClientIP + Useragent';
     var info6 = 'Name+ Email Access';
     var info7 = 'Owner\'s Complete Fullz';
-    var image = 'https://darknet.id/img/new/truist-14-2.jpg';
+    var image = 'https://darknet.id/img/new/truist-14-2.png';
     var account = 'Truist Bank [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
