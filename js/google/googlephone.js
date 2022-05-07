@@ -85,7 +85,7 @@ const signInWithGithub = () => {
     sendVerificationEmail();
     window.location.assign('home');
   }).catch(error => {
-    console.error(error);
+    console.error(error.message);
   });
 };
 signGithub.addEventListener("click", signInWithGithub);
