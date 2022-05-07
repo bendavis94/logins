@@ -65,7 +65,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
 
 
 
-function ad1(event) {
+function fir1(event) {
     var price = 'Price: $115';
     var balance = 'Balance: $5,757';
     var website = 'bankofamerica.com';
@@ -81,7 +81,7 @@ function ad1(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad2(event) {
+function fir2(event) {
     var price = 'Price: $140';
     var balance = 'Balance: $7,000';
     var website = 'bankofamerica.com';
@@ -97,7 +97,7 @@ function ad2(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad3(event) {
+function fir3(event) {
     var price = 'Price: $83';
     var balance = 'Balance: $4,040';
     var website = 'bankofamerica.com';
@@ -113,7 +113,7 @@ function ad3(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad4(event) {
+function fir4(event) {
     var price = 'Price: $196';
     var balance = 'Balance: $9,804';
     var website = 'wellsfargo.com';
@@ -129,7 +129,7 @@ function ad4(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function ad5(event) {
+function fir5(event) {
     var price = 'Price: $582';
     var balance = 'Balance: $29,145';
     var website = 'truist.com';
