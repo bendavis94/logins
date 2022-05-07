@@ -396,7 +396,23 @@ function fir21(event) {
     var info5 = 'ClientIP+ UserAgent';
     var info6 = 'Name+ Email Access';
     var info7 = 'Owner Complete Fullz';
-    var image = 'https://darknet.id/img/new/boa-3.png';
+    var image = 'https://darknet.id/img/new/chase-7.png';
+    var account = 'Chase Bank [CHECKING]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function fir22(event) {
+    var price = 'Price: $75';
+    var balance = 'Balance: $3,798';
+    var website = 'chase.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Social Security No';
+    var info4 = 'Date of Birth';
+    var info5 = 'ClientIP+ UserAgent';
+    var info6 = 'Name+ Email Access';
+    var info7 = 'Owner Complete Fullz';
+    var image = 'https://darknet.id/img/new/chase-3.png';
     var account = 'Chase Bank [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
