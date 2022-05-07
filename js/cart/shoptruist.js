@@ -317,7 +317,7 @@ function fir16(event) {
     var info6 = 'Account& Routing No';
     var info7 = 'Owner\'s Complete Fullz';
     var image = 'https://darknet.id/img/new/td-16.png';
-    var account = 'Truist Bank [CHECKING]';
+    var account = 'TD Bank [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
