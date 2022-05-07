@@ -289,8 +289,8 @@ function fir14(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function fir13(event) {
-    var price = 'Price: $80';
+function fir15(event) {
+    var price = 'Price: $79';
     var balance = 'Balance: $3,925';
     var website = 'truist.com';
     var info1 = 'Username + Password';
