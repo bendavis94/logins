@@ -113,6 +113,22 @@ function ad3(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
+function ad4(event) {
+    var price = 'Price: $196';
+    var balance = 'Balance: $9,804';
+    var website = 'wellsfargo.com';
+    var info1 = 'Login Access';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Billing Details';
+    var info4 = 'Social Security No';
+    var info5 = 'Email Access';
+    var info6 = 'ClientIP + Useragent';
+    var info7 = 'Name + Address';
+    var image = 'https://darknet.id/img/new/wells-9.png';
+    var account = 'Wells Fargo [CHECKING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
 
 
 
