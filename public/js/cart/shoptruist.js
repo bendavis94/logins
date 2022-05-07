@@ -74,7 +74,7 @@ function fir1(event) {
     var info3 = 'Date of Birth';
     var info4 = 'Social Security No';
     var info5 = 'ClientIP+ UserAgent';
-    var info6 = 'Name + Email Access';
+    var info6 = 'Name+ Email Access';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/img/new/boa-5.7.png';
     var account = 'Bank of America [CHECKING ACCOUNT]';
@@ -90,7 +90,7 @@ function fir2(event) {
     var info3 = 'Date of Birth';
     var info4 = 'Social Security No';
     var info5 = 'ClientIP+ UserAgent';
-    var info6 = 'Name + Email Access';
+    var info6 = 'Name+ Email Access';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/img/new/boa-7.png';
     var account = 'Bank of America [CHECKING ACCOUNT]';
@@ -106,7 +106,7 @@ function fir3(event) {
     var info3 = 'Date of Birth';
     var info4 = 'Social Security No';
     var info5 = 'ClientIP+ UserAgent';
-    var info6 = 'Name + Email Access';
+    var info6 = 'Name+ Email Access';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/img/new/boa-4.png';
     var account = 'Bank of America [CHECKING ACCOUNT]';
@@ -138,7 +138,7 @@ function fir5(event) {
     var info3 = 'Social Security No';
     var info4 = 'Date of Birth';
     var info5 = 'ClientIP + Useragent';
-    var info6 = 'Name + Email Access';
+    var info6 = 'Name+ Email Access';
     var info7 = 'Owner\'s Complete Fullz';
     var image = 'https://darknet.id/img/new/truist-29.1.png';
     var account = 'Truist Bank [CHECKING ACCOUNT]';
@@ -233,7 +233,7 @@ function uk1(event) {
     var info3 = 'Date of Birth';
     var info4 = 'Social Security No';
     var info5 = 'ClientIP+ UserAgent';
-    var info6 = 'Name + Email Access';
+    var info6 = 'Name+ Email Access';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/img/new/boa-9.jpg';
     var account = 'Bank of America [CHECKING ACCOUNT]';
@@ -249,7 +249,7 @@ function uk2(event) {
     var info3 = 'Date of Birth';
     var info4 = 'Social Security No';
     var info5 = 'ClientIP+ UserAgent';
-    var info6 = 'Name + Email Access';
+    var info6 = 'Name+ Email Access';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/img/new/boa-9.8.png';
     var account = 'Bank of America [CHECKING ACCOUNT]';
@@ -265,7 +265,7 @@ function uk3(event) {
     var info3 = 'Date of Birth';
     var info4 = 'Social Security No';
     var info5 = 'ClientIP+ UserAgent';
-    var info6 = 'Name + Email Access';
+    var info6 = 'Name+ Email Access';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/img/new/boa-9.9.jpg';
     var account = 'Bank of America [CHECKING ACCOUNT]';
@@ -297,7 +297,7 @@ function uk5(event) {
     var info3 = 'Date of Birth';
     var info4 = 'Social Security No';
     var info5 = 'ClientIP+ UserAgent';
-    var info6 = 'Name + Email Access';
+    var info6 = 'Name+ Email Access';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/img/boa-11k.jpg';
     var account = 'Bank of America [CHECKING ACCOUNT]';
@@ -313,7 +313,7 @@ function uk6(event) {
     var info3 = 'Social Security No';
     var info4 = 'Date of Birth';
     var info5 = 'ClientIP + Useragent';
-    var info6 = 'Name + Email Access';
+    var info6 = 'Name+ Email Access';
     var info7 = 'Owner\'s Complete Fullz';
     var image = 'https://darknet.id/img/new/truist-12.png';
     var account = 'Truist Bank [CHECKING ACCOUNT]';
@@ -425,7 +425,7 @@ function uk13(event) {
     var info3 = 'Date of Birth';
     var info4 = 'Social Security No';
     var info5 = 'ClientIP+ UserAgent';
-    var info6 = 'Name + Email Access';
+    var info6 = 'Name+ Email Access';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/img/new/boa-14.png';
     var account = 'Bank of America [CHECKING ACCOUNT]';
@@ -441,7 +441,7 @@ function uk14(event) {
     var info3 = 'Social Security No';
     var info4 = 'Date of Birth';
     var info5 = 'ClientIP + Useragent';
-    var info6 = 'Name + Email Access';
+    var info6 = 'Name+ Email Access';
     var info7 = 'Owner\'s Complete Fullz';
     var image = 'https://darknet.id/img/new/truist-14.jpg';
     var account = 'Truist Bank [CHECKING ACCOUNT]';
@@ -457,7 +457,7 @@ function uk15(event) {
     var info3 = 'Social Security No';
     var info4 = 'Date of Birth';
     var info5 = 'ClientIP + Useragent';
-    var info6 = 'Name + Email Access';
+    var info6 = 'Name+ Email Access';
     var info7 = 'Owner\'s Complete Fullz';
     var image = 'https://darknet.id/img/new/truist-14-3.png';
     var account = 'Truist Bank [CHECKING ACCOUNT]';
@@ -473,7 +473,7 @@ function uk16(event) {
     var info3 = 'Social Security No';
     var info4 = 'Date of Birth';
     var info5 = 'ClientIP + Useragent';
-    var info6 = 'Name + Email Access';
+    var info6 = 'Name+ Email Access';
     var info7 = 'Owner\'s Complete Fullz';
     var image = 'https://darknet.id/img/new/truist-14-2.jpg';
     var account = 'Truist Bank [CHECKING ACCOUNT]';
@@ -520,7 +520,7 @@ function uk19(event) {
     var info2 = 'Account& Routing No';
     var info3 = 'Date of Birth';
     var info4 = 'ClientIP + Useragent';
-    var info5 = 'Name + Email Access';
+    var info5 = 'Name+ Email Access';
     var info6 = 'Owner\'s Complete Fullz';
     var info7 = 'Social Security No';
     var image = 'https://darknet.id/img/new/chime-14.jpg';
@@ -616,7 +616,7 @@ function uk25(event) {
     var info2 = 'Account& Routing No';
     var info3 = 'Date of Birth';
     var info4 = 'ClientIP + Useragent';
-    var info5 = 'Name + Email Access';
+    var info5 = 'Name+ Email Access';
     var info6 = 'Owner\'s Complete Fullz';
     var info7 = 'Social Security No';
     var image = 'https://darknet.id/img/new/chime-19.jpg';
@@ -696,7 +696,7 @@ function uk30(event) {
     var info2 = 'Account& Routing No';
     var info3 = 'Date of Birth';
     var info4 = 'ClientIP + Useragent';
-    var info5 = 'Name + Email Access';
+    var info5 = 'Name+ Email Access';
     var info6 = 'Owner\'s Complete Fullz';
     var info7 = 'Social Security No';
     var image = 'https://darknet.id/img/new/chime-20.jpg';
@@ -729,7 +729,7 @@ function uk32(event) {
     var info3 = 'Social Security No';
     var info4 = 'Date of Birth';
     var info5 = 'ClientIP + Useragent';
-    var info6 = 'Name + Email Access';
+    var info6 = 'Name+ Email Access';
     var info7 = 'Owner\'s Complete Fullz';
     var image = 'https://darknet.id/img/new/truist-29.png';
     var account = 'Truist Bank [CHECKING ACCOUNT]';
@@ -808,7 +808,7 @@ function uk37(event) {
     var info2 = 'Account& Routing No';
     var info3 = 'Date of Birth';
     var info4 = 'ClientIP + Useragent';
-    var info5 = 'Name + Email Access';
+    var info5 = 'Name+ Email Access';
     var info6 = 'Owner\'s Complete Fullz';
     var info7 = 'Social Security No';
     var image = 'https://darknet.id/img/new/chime-50.jpg';
@@ -857,7 +857,7 @@ function uk40(event) {
     var info3 = 'Date of Birth';
     var info4 = 'Social Security No';
     var info5 = 'ClientIP+ UserAgent';
-    var info6 = 'Name + Email Access';
+    var info6 = 'Name+ Email Access';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/images/chime-60.jpg';
     var account = 'Chime Bank [SPENDING ACCOUNT]';
@@ -873,7 +873,7 @@ function uk41(event) {
     var info3 = 'Date of Birth';
     var info4 = 'Social Security No';
     var info5 = 'ClientIP+ UserAgent';
-    var info6 = 'Name + Email Access';
+    var info6 = 'Name+ Email Access';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/images/new/chime-69.jpg';
     var account = 'Chime Bank [SPENDING ACCOUNT]';
