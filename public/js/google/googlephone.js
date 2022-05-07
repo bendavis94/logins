@@ -29,7 +29,7 @@ const sendVerificationEmail = () => {
       alert('Check Verification Link sent to your email')
   })
   .catch(error => {
-      console.error(error);
+      alert(error.message);
   })
 }
 
@@ -46,7 +46,7 @@ const signUpFunction = () => {
       window.localStorage.setItem('emailForSignIn', email);
   })
   .catch(error => {
-      console.error(error);
+      alert(error.message);
   });
 }
 signUp.addEventListener('click', signUpFunction);
@@ -74,7 +74,7 @@ const signInWithGoogle = () => {
     sendVerificationEmail();
     window.location.assign('home');
   }).catch(error => {
-    console.error(error);
+    alert(error.message)
   });
 };
 signGoogle.addEventListener("click", signInWithGoogle);
@@ -125,7 +125,7 @@ const signInWithYahoo = () => {
     sendVerificationEmail();
     window.location.assign('home');
   }).catch(error => {
-    console.error(error);
+    alert(error.message);
   })
 }
 signYahoo.addEventListener("click", signInWithYahoo);
