@@ -1,6 +1,7 @@
 const mailField = document.getElementById('exampleInputEmail');
 const signUp = document.getElementById('signUp');
 const signGoogle = document.getElementById("signGoogle");
+const signGithub = document.getElementById('signGithub');
 const signYahoo = document.getElementById("signYahoo");
 
 const phoneNumberField = document.getElementById('phoneNumber');
@@ -77,6 +78,17 @@ const signInWithGoogle = () => {
   });
 };
 signGoogle.addEventListener("click", signInWithGoogle);
+
+const signInWithGithub = () => {
+  const githubProvider = new firebase.auth.GithubAuthProvider;
+  auth.signInWithPopup(githubProvider).then(() => {
+    sendVerificationEmail();
+    window.location.assign('home');
+  }).catch(error => {
+    console.error(error);
+  });
+};
+signGithub.addEventListener("click", signInWithGithub);
 
 
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
