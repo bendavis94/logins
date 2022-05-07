@@ -529,6 +529,21 @@ function fir28(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
+function fir29(event) {
+    var price = 'Price: $365';
+    var balance = 'Balance: $18,264';
+    var website = 'wellsfargo.com';
+    var info1 = 'Online Access';
+    var info2 = 'Email Access';
+    var info3 = 'Billing Details';
+    var info4 = 'Social Security No';
+    var info5 = 'Account& Routing No';
+    var info6 = 'ClientIP + UserAgent';
+    var info7 = 'Carrier PIN';
+    var image = 'https://darknet.id/img/new/wells-18.png';
+    var account = 'Wells Fargo [CHECKING]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
 
 
 
@@ -972,7 +987,7 @@ function uk23(event) {
 
 function uk24(event) {
     var price = 'Price: $390';
-    var balance = 'Balance: $13,881';
+    var balance = 'Balance: $19,325';
     var website = 'citizensbank.com';
     var info1 = '10 Question & Answer';
     var info2 = 'Name: Edward+ Address';
