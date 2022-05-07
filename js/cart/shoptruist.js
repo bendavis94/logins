@@ -77,7 +77,7 @@ function fir1(event) {
     var info6 = 'Name+ Email Access';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/img/new/boa-5.7.png';
-    var account = 'Bank of America [CHECKING ACCOUNT]';
+    var account = 'Bank of America [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -93,7 +93,7 @@ function fir2(event) {
     var info6 = 'Name+ Email Access';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/img/new/boa-7.png';
-    var account = 'Bank of America [CHECKING ACCOUNT]';
+    var account = 'Bank of America [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -109,7 +109,7 @@ function fir3(event) {
     var info6 = 'Name+ Email Access';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/img/new/boa-4.png';
-    var account = 'Bank of America [CHECKING ACCOUNT]';
+    var account = 'Bank of America [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -125,7 +125,7 @@ function fir4(event) {
     var info6 = 'ClientIP + Useragent';
     var info7 = 'Name + Address';
     var image = 'https://darknet.id/img/new/wells-9.png';
-    var account = 'Wells Fargo [CHECKING ACCOUNT]';
+    var account = 'Wells Fargo [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -141,7 +141,7 @@ function fir5(event) {
     var info6 = 'Name+ Email Access';
     var info7 = 'Owner\'s Complete Fullz';
     var image = 'https://darknet.id/img/new/truist-29.1.png';
-    var account = 'Truist Bank [CHECKING ACCOUNT]';
+    var account = 'Truist Bank [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -236,7 +236,7 @@ function uk1(event) {
     var info6 = 'Name+ Email Access';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/img/new/boa-9.jpg';
-    var account = 'Bank of America [CHECKING ACCOUNT]';
+    var account = 'Bank of America [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -252,7 +252,7 @@ function uk2(event) {
     var info6 = 'Name+ Email Access';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/img/new/boa-9.8.png';
-    var account = 'Bank of America [CHECKING ACCOUNT]';
+    var account = 'Bank of America [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -268,7 +268,7 @@ function uk3(event) {
     var info6 = 'Name+ Email Access';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/img/new/boa-9.9.jpg';
-    var account = 'Bank of America [CHECKING ACCOUNT]';
+    var account = 'Bank of America [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -284,7 +284,7 @@ function uk4(event) {
     var info6 = 'ClientIP + Useragent';
     var info7 = 'Name + Address';
     var image = 'https://darknet.id/img/new/wells-11.png';
-    var account = 'Wells Fargo [CHECKING ACCOUNT]';
+    var account = 'Wells Fargo [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -300,7 +300,7 @@ function uk5(event) {
     var info6 = 'Name+ Email Access';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/img/boa-11k.jpg';
-    var account = 'Bank of America [CHECKING ACCOUNT]';
+    var account = 'Bank of America [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -316,7 +316,7 @@ function uk6(event) {
     var info6 = 'Name+ Email Access';
     var info7 = 'Owner\'s Complete Fullz';
     var image = 'https://darknet.id/img/new/truist-12.png';
-    var account = 'Truist Bank [CHECKING ACCOUNT]';
+    var account = 'Truist Bank [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -332,7 +332,7 @@ function uk7(event) {
     var info6 = 'Account& Routing No';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/images/sale.jpg';
-    var account = 'Citi Bank [CHECKING ACCOUNT]';
+    var account = 'Citi Bank [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -364,7 +364,7 @@ function uk9(event) {
     var info6 = 'ClientIP + Useragent';
     var info7 = 'Zelle History';
     var image = 'https://darknet.id/img/derrick.jpg';
-    var account = 'Wells Fargo [SAVINGS ACCOUNT]';
+    var account = 'Wells Fargo [SAVINGS]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -412,7 +412,7 @@ function uk12(event) {
     var info6 = 'ClientIP + Useragent';
     var info7 = 'Name + Address';
     var image = 'https://darknet.id/img/new/wells-13.png';
-    var account = 'Wells Fargo [CHECKING ACCOUNT]';
+    var account = 'Wells Fargo [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -428,7 +428,7 @@ function uk13(event) {
     var info6 = 'Name+ Email Access';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/img/new/boa-14.png';
-    var account = 'Bank of America [CHECKING ACCOUNT]';
+    var account = 'Bank of America [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -444,7 +444,7 @@ function uk14(event) {
     var info6 = 'Name+ Email Access';
     var info7 = 'Owner\'s Complete Fullz';
     var image = 'https://darknet.id/img/new/truist-14.jpg';
-    var account = 'Truist Bank [CHECKING ACCOUNT]';
+    var account = 'Truist Bank [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -460,7 +460,7 @@ function uk15(event) {
     var info6 = 'Name+ Email Access';
     var info7 = 'Owner\'s Complete Fullz';
     var image = 'https://darknet.id/img/new/truist-14-3.png';
-    var account = 'Truist Bank [CHECKING ACCOUNT]';
+    var account = 'Truist Bank [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -476,7 +476,7 @@ function uk16(event) {
     var info6 = 'Name+ Email Access';
     var info7 = 'Owner\'s Complete Fullz';
     var image = 'https://darknet.id/img/new/truist-14-2.jpg';
-    var account = 'Truist Bank [CHECKING ACCOUNT]';
+    var account = 'Truist Bank [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -492,7 +492,7 @@ function uk17(event) {
     var info6 = 'ClientIP + Useragent';
     var info7 = 'Online Access';
     var image = 'https://darknet.id/img/michael.jpg';
-    var account = 'Citizens Bank [DEPOSIT ACCOUNT]';
+    var account = 'Citizens Bank [DEPOSIT]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -524,7 +524,7 @@ function uk19(event) {
     var info6 = 'Owner\'s Complete Fullz';
     var info7 = 'Social Security No';
     var image = 'https://darknet.id/img/new/chime-14.jpg';
-    var account = 'Chime Bank [SPENDING ACCOUNT]';
+    var account = 'Chime Bank [SPENDING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -540,7 +540,7 @@ function uk20(event) {
     var info6 = 'ClientIP + UserAgent';
     var info7 = 'Date of Birth';
     var image = 'https://darknet.id/img/wells15.jpg';
-    var account = 'Wells Fargo [CHECKING ACCOUNT]';
+    var account = 'Wells Fargo [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -556,7 +556,7 @@ function uk21(event) {
     var info6 = 'ClientIP + UserAgent';
     var info7 = 'Date of Birth';
     var image = 'https://darknet.id/img/new/wells-15.jpg';
-    var account = 'Wells Fargo [SAVINGS ACCOUNT]';
+    var account = 'Wells Fargo [SAVINGS]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -604,7 +604,7 @@ function uk24(event) {
     var info6 = 'ATM PIN, Debit Card';
     var info7 = 'ClientIP+ UserAgent';
     var image = 'https://darknet.id/img/edward.jpg';
-    var account = 'Citizens Bank [DEPOSIT ACCOUNT]';
+    var account = 'Citizens Bank [DEPOSIT]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -620,7 +620,7 @@ function uk25(event) {
     var info6 = 'Owner\'s Complete Fullz';
     var info7 = 'Social Security No';
     var image = 'https://darknet.id/img/new/chime-19.jpg';
-    var account = 'Chime Bank [SPENDING ACCOUNT]';
+    var account = 'Chime Bank [SPENDING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -636,7 +636,7 @@ function uk26(event) {
     var info6 = 'ClientIP + UserAgent';
     var info7 = 'Billing + D.O.B';
     var image = 'https://darknet.id/img/hunt-19.jpg';
-    var account = 'Huntington Bank [CHECKING ACCOUNT]';
+    var account = 'Huntington Bank [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -652,7 +652,7 @@ function uk27(event) {
     var info6 = 'ClientIP + UserAgent';
     var info7 = 'Date of Birth';
     var image = 'https://darknet.id/img/wells18-2.jpg';
-    var account = 'Wells Fargo [CHECKING ACCOUNT]';
+    var account = 'Wells Fargo [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -700,7 +700,7 @@ function uk30(event) {
     var info6 = 'Owner\'s Complete Fullz';
     var info7 = 'Social Security No';
     var image = 'https://darknet.id/img/new/chime-20.jpg';
-    var account = 'Chime Bank [SPENDING ACCOUNT]';
+    var account = 'Chime Bank [SPENDING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -716,7 +716,7 @@ function uk31(event) {
     var info6 = 'Email Access';
     var info7 = 'ClientIP+ UserAgent';
     var image = 'https://darknet.id/img/julio.jpg';
-    var account = 'Citizens Bank [DEPOSIT ACCOUNT]';
+    var account = 'Citizens Bank [DEPOSIT]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -732,7 +732,7 @@ function uk32(event) {
     var info6 = 'Name+ Email Access';
     var info7 = 'Owner\'s Complete Fullz';
     var image = 'https://darknet.id/img/new/truist-29.png';
-    var account = 'Truist Bank [CHECKING ACCOUNT]';
+    var account = 'Truist Bank [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -748,7 +748,7 @@ function uk33(event) {
     var info6 = 'ClientIP + UserAgent';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/img/ally33.jpg';
-    var account = 'Ally Bank [CHECKING ACCOUNT]';
+    var account = 'Ally Bank [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -764,7 +764,7 @@ function uk34(event) {
     var info6 = 'Name + Address';
     var info7 = 'Carrier PIN';
     var image = 'https://darknet.id/img/wells2m.jpg';
-    var account = 'Wells Fargo [SAVINGS ACCOUNT]';
+    var account = 'Wells Fargo [SAVINGS]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -780,7 +780,7 @@ function uk35(event) {
     var info6 = 'ClientIP + Useragent';
     var info7 = 'Carrier PIN';
     var image = 'https://darknet.id/img/new/wells42.jpg';
-    var account = 'Wells Fargo [CHECKING ACCOUNT]';
+    var account = 'Wells Fargo [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -796,7 +796,7 @@ function uk36(event) {
     var info6 = 'ClientIP + Useragent';
     var info7 = 'Carrier: T-Mobile';
     var image = 'https://darknet.id/img/ronald.jpg';
-    var account = 'Wells Fargo [CHECKING ACCOUNT]';
+    var account = 'Wells Fargo [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -812,7 +812,7 @@ function uk37(event) {
     var info6 = 'Owner\'s Complete Fullz';
     var info7 = 'Social Security No';
     var image = 'https://darknet.id/img/new/chime-50.jpg';
-    var account = 'Chime Bank [SPENDING ACCOUNT]';
+    var account = 'Chime Bank [SPENDING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -828,7 +828,7 @@ function uk38(event) {
     var info6 = 'Carrier: Verizon';
     var info7 = 'Social Security No';
     var image = 'https://darknet.id/img/new/wells-50.png';
-    var account = 'Wells Fargo [CHECKING ACCOUNT]';
+    var account = 'Wells Fargo [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -876,7 +876,7 @@ function uk41(event) {
     var info6 = 'Name+ Email Access';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/images/new/chime-69.jpg';
-    var account = 'Chime Bank [SPENDING ACCOUNT]';
+    var account = 'Chime Bank [SPENDING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -892,7 +892,7 @@ function uk42(event) {
     var info6 = 'Date of Birth';
     var info7 = 'Carrier PIN';
     var image = 'https://darknet.id/img/new/wells-78.png';
-    var account = 'Wells Fargo [CHECKING ACCOUNT]';
+    var account = 'Wells Fargo [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -908,7 +908,7 @@ function uk43(event) {
     var info6 = 'Date of Birth';
     var info7 = 'Carrier PIN';
     var image = 'https://darknet.id/img/wells103.jpg';
-    var account = 'Wells Fargo [SAVINGS ACCOUNT]';
+    var account = 'Wells Fargo [SAVINGS]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -940,7 +940,7 @@ function uk45(event) {
     var info6 = 'ClientIP + Useragent';
     var info7 = 'Social Security No';
     var image = 'https://darknet.id/img/natalya.jpg';
-    var account = 'Bank of America [SAVINGS ACCOUNT]';
+    var account = 'Bank of America [SAVINGS]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -956,7 +956,7 @@ function uk46(event) {
     var info6 = 'ClientIP + Useragent';
     var info7 = 'Card Details + Name';
     var image = 'https://darknet.id/img/dorry.jpg';
-    var account = 'Wells Fargo [CHECKING ACCOUNT]';
+    var account = 'Wells Fargo [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
