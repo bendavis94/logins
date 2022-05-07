@@ -305,6 +305,22 @@ function fir15(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
+function fir16(event) {
+    var price = 'Price: $338';
+    var balance = 'Balance: $16,905';
+    var website = 'td.com';
+    var info1 = 'Online Access';
+    var info2 = 'Email Access';
+    var info3 = 'Question & Answer';
+    var info4 = 'Name + Address';
+    var info5 = 'Card Information';
+    var info6 = 'Account& Routing No';
+    var info7 = 'Owner\'s Complete Fullz';
+    var image = 'https://darknet.id/img/new/td-16.png';
+    var account = 'Truist Bank [CHECKING]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
 
 
 
