@@ -227,12 +227,17 @@
 }
 )(jQuery);
 
+var addToCartButtons = document.getElementsByClassName('medium');
+for(var i = 0; i <addToCartButtons.length; i++){
+  var btn = addToCartButtons[i];
+  btn.addEventListener('click', addToCartClicked);
+}
 
-
-
-$("#exampleModal").on("show.bs.modal", function (event) {
-    ("use strict");
-});
+function addToCartClicked(event){
+    $("#exampleModal").on("show.bs.modal", function (event) {
+      ("use strict");
+    });
+}
 
 function changeImage() {
     var image = document.getElementById('theIcon');
