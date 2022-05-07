@@ -577,7 +577,7 @@ function fir31(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function fir31(event) {
+function fir32(event) {
     var price = 'Price: $90';
     var balance = 'Balance: $4,500';
     var website = 'truist.com';
@@ -592,6 +592,23 @@ function fir31(event) {
     var account = 'Truist Bank [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
+
+function fir33(event) {
+    var price = 'Price: $248';
+    var balance = 'Balance: $12,437';
+    var website = 'truist.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Social Security No';
+    var info4 = 'Date of Birth';
+    var info5 = 'ClientIP + Useragent';
+    var info6 = 'Name+ Email Access';
+    var info7 = 'Owner\'s Complete Fullz';
+    var image = 'https://darknet.id/img/new/truist-12.4.png';
+    var account = 'Truist Bank [CHECKING]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
 
 
 
