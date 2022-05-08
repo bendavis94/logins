@@ -1354,3 +1354,24 @@ label.error{
 #email-inbox span{
     color: yellow !important;
 }
+
+
+
+
+
+
+.chase-section{
+    padding: 54px 0;
+}
+
+@media screen and (max-width: 767px){
+    .chase-section{
+        padding: 78px 0;
+    }
+}
+
+
+
+
+
+
