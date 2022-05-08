@@ -163,7 +163,7 @@
             });
         }
     
-        $('#services-carousel').owlCarousel({
+        $('#blog-carousel').owlCarousel({
             loop: true,
             responsiveClass: true,
             dots: true,
@@ -176,7 +176,7 @@
             responsive: {
                 0: {
                     items: 2,
-                    margin: 10
+                    margin: 5
                 },
                 768: {
                     items: 3,
@@ -187,7 +187,7 @@
                     margin: 10
                 },
                 1200: {
-                    items: 5,
+                    items: 6,
                     margin: 10
                 }
             }
