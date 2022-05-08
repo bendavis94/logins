@@ -62,7 +62,7 @@ function myFunction() {
               ${user.phoneNumber}, your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
           `;
       });
-    } else if(!user.displayName && !user.email && user.phoneNumber){
+    } else if(!user.displayName && !user.email && !user.phoneNumber){
       jinaHolder.innerText = 'Anonymous';
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'User ID: ' + user.uid;
