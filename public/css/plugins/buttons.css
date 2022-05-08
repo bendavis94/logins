@@ -1357,8 +1357,23 @@ label.error{
 
 .blog-p{
     font-weight: 500 !important;
+    font-size: 16px !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
+#blog-carousel .service-inner-box{
+    padding: 0 !important;
+    margin: 0 !important;
+}
 
+#blog-carousel .service-content-box{
+    padding: 0 !important;
+    margin: 0 !important;
+}
 
+#blog-carousel .img-holder{
+    margin: 0 !important;
+    padding: 0 !important;
+}
 
