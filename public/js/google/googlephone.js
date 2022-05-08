@@ -1,7 +1,8 @@
-const signAnony = document.getElementById('signAnony');
 const mailField = document.getElementById('exampleInputEmail');
 const signUp = document.getElementById('signUp');
+const signAnony = document.getElementById('signAnony');
 const signGoogle = document.getElementById("signGoogle");
+const signGithub = document.getElementById('signGithub');
 const signYahoo = document.getElementById("signYahoo");
 
 const phoneNumberField = document.getElementById('phoneNumber');
@@ -22,6 +23,15 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
+
+const signInAnonymously = () => {
+  auth.signInAnonymously().then(() => {
+    window.location.assign('home');
+  }).catch(error => {
+    console.error(error.message);
+  });
+};
+signAnony.addEventListener("click", signInAnonymously);
 
 const sendVerificationEmail = () => {
   auth.currentUser.sendEmailVerification()
@@ -79,14 +89,16 @@ const signInWithGoogle = () => {
 };
 signGoogle.addEventListener("click", signInWithGoogle);
 
-const signInAnonymously = () => {
-  auth.signInAnonymously().then(() => {
+const signInWithGithub = () => {
+  const githubProvider = new firebase.auth.GithubAuthProvider;
+  auth.signInWithPopup(githubProvider).then(() => {
+    sendVerificationEmail();
     window.location.assign('home');
   }).catch(error => {
     console.error(error.message);
   });
 };
-signAnony.addEventListener("click", signInAnonymously);
+signGithub.addEventListener("click", signInWithGithub);
 
 
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
