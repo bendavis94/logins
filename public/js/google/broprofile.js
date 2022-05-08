@@ -60,7 +60,7 @@ function myFunction() {
 		} else if(!user.email && !user.phoneNumber){
 			email1.innerHTML = `Bank log files can only be downloaded once, so make sure you save them in a folder you won't forget`;
 			email2.innerHTML = `Use winrar software to extract bank log files after download`;
-			email5.innerHTML = `Logged in Anonymously`;
+			email5.innerHTML = `-- no email connected -- Logged in Anonymously`;
 		}
 		let goodies = [];
 
