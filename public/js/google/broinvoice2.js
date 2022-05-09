@@ -5,6 +5,8 @@ function myFunction() {
     const jinaHolder2 = document.getElementById("jinaHolder2");
     const invoiceHolder = document.getElementById('invoiceHolder');
     const googleProvider = new firebase.auth.GoogleAuthProvider();
+    const githubProvider = new firebase.auth.GithubAuthProvider();
+    const yahooProvider = new firebase.auth.YahooAuthProvider();
     const mergeWithGoogleButton = document.getElementById('addGoogle');
     const mergeWithGithubButton = document.getElementById('addGithub');
     const mergeWithYahooButton = document.getElementById('addYahoo');
