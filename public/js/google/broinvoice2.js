@@ -6,12 +6,12 @@ function myFunction() {
     const invoiceHolder = document.getElementById('invoiceHolder');
 
     const googleProvider = new firebase.auth.GoogleAuthProvider();
-    const githubProvider = new firebase.auth.GithubAuthProvider();
-    const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
+    // const githubProvider = new firebase.auth.GithubAuthProvider();
+    // const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
 
     const mergeWithGoogleButton = document.getElementById('addGoogle');
-    const mergeWithGithubButton = document.getElementById('addGithub');
-    const mergeWithYahooButton = document.getElementById('addYahoo');
+    // const mergeWithGithubButton = document.getElementById('addGithub');
+    // const mergeWithYahooButton = document.getElementById('addYahoo');
   
     auth.onAuthStateChanged(user => {
       if (!user) {
@@ -98,29 +98,29 @@ function myFunction() {
         } 
         mergeWithGoogleButton.addEventListener('click', mergeWithGoogle);
 
-        const mergeWithGithub = () => {
-            const user = auth.currentUser;
-            user.linkWithPopup(githubProvider)
-                .then(() => {
-                    window.location.reload();
-                })
-                .catch(error => {
-                    alert('An error has occurred')
-                })
-        } 
-        mergeWithGithubButton.addEventListener('click', mergeWithGithub);
+        // const mergeWithGithub = () => {
+        //     const user = auth.currentUser;
+        //     user.linkWithPopup(githubProvider)
+        //         .then(() => {
+        //             window.location.reload();
+        //         })
+        //         .catch(error => {
+        //             alert('An error has occurred')
+        //         })
+        // } 
+        // mergeWithGithubButton.addEventListener('click', mergeWithGithub);
 
-        const mergeWithYahoo = () => {
-            const user = auth.currentUser;
-            user.linkWithPopup(yahooProvider)
-            .then(() => {
-                window.location.reload();
-            })
-            .catch(error => {
-                alert('An error has occurred')
-            })
-        } 
-        mergeWithYahooButton.addEventListener('click', mergeWithYahoo);
+        // const mergeWithYahoo = () => {
+        //     const user = auth.currentUser;
+        //     user.linkWithPopup(yahooProvider)
+        //     .then(() => {
+        //         window.location.reload();
+        //     })
+        //     .catch(error => {
+        //         alert('An error has occurred')
+        //     })
+        // } 
+        // mergeWithYahooButton.addEventListener('click', mergeWithYahoo);
         
     });
   
