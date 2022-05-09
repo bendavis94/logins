@@ -87,40 +87,106 @@ function myFunction() {
       }
 
         const mergeWithGoogle = () => {
+            // const user = auth.currentUser;
+            // user.linkWithPopup(googleProvider)
+            //     .then(() => {
+            //         window.location.reload();
+            //     })
+            //     .catch(error => {
+            //         alert('An error has occurred')
+            //     })
             const user = auth.currentUser;
-            user.linkWithPopup(googleProvider)
-                .then(() => {
-                    window.location.reload();
-                })
-                .catch(error => {
-                    alert('An error has occurred')
-                })
+            if(user) {
+                const providerIndex = checkIfLinked(user, 'google.com');
+                if(providerIndex != -1)
+                    unmerge(user, providerIndex);
+                else
+                    merge(user, googleProvider);
+            }
         } 
-        mergeWithGoogleButton.addEventListener('click', mergeWithGoogle);
 
-        const mergeWithGithub = () => {
-            const user = auth.currentUser;
-            user.linkWithPopup(githubProvider)
+        const merge = (previousUser, provider) => {
+            auth.signInWithPopup(provider)
+            .then(user => {
+                const secondAccountCred = user.credential;
+                auth.currentUser.delete()
                 .then(() => {
-                    window.location.reload();
+                    return previousUser.linkWithCredential(secondAccountCred);
                 })
-                .catch(error => {
-                    alert('An error has occurred')
+                .then(() => {
+                    auth.signInWithCredential(secondAccountCred);
+                    console.log('Accounts linked successfully!');
                 })
-        } 
-        mergeWithGithubButton.addEventListener('click', mergeWithGithub);
+            })
+        }
 
-        const mergeWithYahoo = () => {
-            const user = auth.currentUser;
-            user.linkWithPopup(yahooProvider)
+        const unmerge = (user, providerIndex) => {
+            user.unlink(user.providerData[providerIndex].providerId)
             .then(() => {
-                window.location.reload();
+                console.log('Unlinked successfully!');
             })
             .catch(error => {
-                alert('An error has occurred')
+                console.error(error);
             })
-        } 
-        mergeWithYahooButton.addEventListener('click', mergeWithYahoo);
+        }
+        
+        const checkIfLinked = (user, providerId) => {
+            const userProviders = user.providerData;
+            let providerIndex = -1;
+            for(let i = 0; i < userProviders.length; i++) {
+                if(userProviders[i].providerId === providerId)
+                    providerIndex = i;
+            }
+            return providerIndex;
+        }
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        mergeWithGoogleButton.addEventListener('click', mergeWithGoogle);
+
+        // const mergeWithGithub = () => {
+        //     const user = auth.currentUser;
+        //     user.linkWithPopup(githubProvider)
+        //         .then(() => {
+        //             window.location.reload();
+        //         })
+        //         .catch(error => {
+        //             alert('An error has occurred')
+        //         })
+        // } 
+        // mergeWithGithubButton.addEventListener('click', mergeWithGithub);
+
+        // const mergeWithYahoo = () => {
+        //     const user = auth.currentUser;
+        //     user.linkWithPopup(yahooProvider)
+        //     .then(() => {
+        //         window.location.reload();
+        //     })
+        //     .catch(error => {
+        //         alert('An error has occurred')
+        //     })
+        // } 
+        // mergeWithYahooButton.addEventListener('click', mergeWithYahoo);
         
     });
   
