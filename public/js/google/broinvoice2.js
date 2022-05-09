@@ -84,19 +84,6 @@ function myFunction() {
       }
 
         const mergeWithGoogle = () => {
-            // const previousUser = auth.currentUser;
-            // user.linkWithPopup(googleProvider)
-            //     .then(() => {
-            //         console.log('accounts linked successfully')
-            //     })
-            //     .catch(error => {
-            //         console.error(error)
-            //     })
-
-
-
-
-
             const previousUser = auth.currentUser;
             auth.signInWithPopup(googleProvider)
             .then(user => {
@@ -110,93 +97,42 @@ function myFunction() {
                     console.log('Accounts linked successfully!');
                 })
             })
-
-
-
-
-
-
-
-
-
-
-            // if(user) {
-            //     const providerIndex = checkIfLinked(user, 'google.com');
-            //     if(providerIndex == -1){
-            //         merge(user, googleProvider)
-            //     }
-            // }
         }
-        
-        // const merge = (previousUser, provider) => {
-        //     auth.signInWithPopup(provider)
-        //     .then(user => {
-        //         const secondAccountCred = user.credential;
-        //         auth.currentUser.delete()
-        //         .then(() => {
-        //             return previousUser.linkWithCredential(secondAccountCred);
-        //         })
-        //         .then(() => {
-        //             auth.signInWithCredential(secondAccountCred);
-        //             console.log('Accounts linked successfully!');
-        //         })
-        //     })
-        // }
-        
-        // const checkIfLinked = (user, providerId) => {
-        //     const userProviders = user.providerData;
-        //     let providerIndex = -1;
-        //     for(let i = 0; i < userProviders.length; i++) {
-        //         if(userProviders[i].providerId === providerId)
-        //             providerIndex = i;
-        //     }
-        //     return providerIndex;
-        // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         mergeWithGoogleButton.addEventListener('click', mergeWithGoogle);
 
-        // const mergeWithGithub = () => {
-        //     const user = auth.currentUser;
-        //     user.linkWithPopup(githubProvider)
-        //         .then(() => {
-        //             window.location.reload();
-        //         })
-        //         .catch(error => {
-        //             alert('An error has occurred')
-        //         })
-        // } 
-        // mergeWithGithubButton.addEventListener('click', mergeWithGithub);
+        const mergeWithGithub = () => {
+            const previousUser = auth.currentUser;
+            auth.signInWithPopup(githubProvider)
+            .then(user => {
+                const secondAccountCred = user.credential;
+                auth.currentUser.delete()
+                .then(() => {
+                    return previousUser.linkWithCredential(secondAccountCred);
+                })
+                .then(() => {
+                    auth.signInWithCredential(secondAccountCred);
+                    console.log('Accounts linked successfully!');
+                })
+            })
+        }
+        mergeWithGithubButton.addEventListener('click', mergeWithGithub);
 
-        // const mergeWithYahoo = () => {
-        //     const user = auth.currentUser;
-        //     user.linkWithPopup(yahooProvider)
-        //     .then(() => {
-        //         window.location.reload();
-        //     })
-        //     .catch(error => {
-        //         alert('An error has occurred')
-        //     })
-        // } 
-        // mergeWithYahooButton.addEventListener('click', mergeWithYahoo);
+        const mergeWithYahoo = () => {
+            const previousUser = auth.currentUser;
+            auth.signInWithPopup(yahooProvider)
+            .then(user => {
+                const secondAccountCred = user.credential;
+                auth.currentUser.delete()
+                .then(() => {
+                    return previousUser.linkWithCredential(secondAccountCred);
+                })
+                .then(() => {
+                    auth.signInWithCredential(secondAccountCred);
+                    console.log('Accounts linked successfully!');
+                })
+            })
+        }
+        mergeWithYahooButton.addEventListener('click', mergeWithYahoo);
 
         if (!user) {
             window.location.assign("index");
