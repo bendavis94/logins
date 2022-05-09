@@ -97,10 +97,9 @@ function myFunction() {
             //     })
             if(user) {
                 const providerIndex = checkIfLinked(user, 'google.com');
-                if(providerIndex != -1)
-                    unmerge(user, providerIndex);
-                else
-                    merge(user, googleProvider);
+                if(providerIndex == -1){
+                    merge(user, googleProvider)
+                }
             }
         }
         
@@ -116,16 +115,6 @@ function myFunction() {
                     auth.signInWithCredential(secondAccountCred);
                     console.log('Accounts linked successfully!');
                 })
-            })
-        }
-        
-        const unmerge = (user, providerIndex) => {
-            user.unlink(user.providerData[providerIndex].providerId)
-            .then(() => {
-                console.log('Unlinked successfully!');
-            })
-            .catch(error => {
-                console.error(error);
             })
         }
         
