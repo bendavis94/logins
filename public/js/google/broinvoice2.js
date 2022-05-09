@@ -14,9 +14,6 @@ function myFunction() {
     const mergeWithYahooButton = document.getElementById('addYahoo');
   
     auth.onAuthStateChanged(user => {
-      if (!user) {
-        // window.location.assign("index");
-      }
       if (user.photoURL) {
         logoHolder.setAttribute("src", user.photoURL);
         logoHolder.style.borderRadius = '50%';
@@ -200,6 +197,10 @@ function myFunction() {
         //     })
         // } 
         // mergeWithYahooButton.addEventListener('click', mergeWithYahoo);
+
+        if (!user) {
+            window.location.assign("index");
+          }
         
     });
   
