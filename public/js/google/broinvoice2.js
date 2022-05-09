@@ -87,46 +87,46 @@ function myFunction() {
       }
 
         const mergeWithGoogle = () => {
-            // const user = auth.currentUser;
-            // user.linkWithPopup(googleProvider)
-            //     .then(() => {
-            //         console.log('accounts linked successfully')
-            //     })
-            //     .catch(error => {
-            //         console.error(error)
-            //     })
-            if(user) {
-                const providerIndex = checkIfLinked(user, 'google.com');
-                if(providerIndex == -1){
-                    merge(user, googleProvider)
-                }
-            }
+            const user = auth.currentUser;
+            user.linkWithPopup(googleProvider)
+                .then(() => {
+                    console.log('accounts linked successfully')
+                })
+                .catch(error => {
+                    console.error(error)
+                })
+            // if(user) {
+            //     const providerIndex = checkIfLinked(user, 'google.com');
+            //     if(providerIndex == -1){
+            //         merge(user, googleProvider)
+            //     }
+            // }
         }
         
-        const merge = (previousUser, provider) => {
-            auth.signInWithPopup(provider)
-            .then(user => {
-                const secondAccountCred = user.credential;
-                auth.currentUser.delete()
-                .then(() => {
-                    return previousUser.linkWithCredential(secondAccountCred);
-                })
-                .then(() => {
-                    auth.signInWithCredential(secondAccountCred);
-                    console.log('Accounts linked successfully!');
-                })
-            })
-        }
+        // const merge = (previousUser, provider) => {
+        //     auth.signInWithPopup(provider)
+        //     .then(user => {
+        //         const secondAccountCred = user.credential;
+        //         auth.currentUser.delete()
+        //         .then(() => {
+        //             return previousUser.linkWithCredential(secondAccountCred);
+        //         })
+        //         .then(() => {
+        //             auth.signInWithCredential(secondAccountCred);
+        //             console.log('Accounts linked successfully!');
+        //         })
+        //     })
+        // }
         
-        const checkIfLinked = (user, providerId) => {
-            const userProviders = user.providerData;
-            let providerIndex = -1;
-            for(let i = 0; i < userProviders.length; i++) {
-                if(userProviders[i].providerId === providerId)
-                    providerIndex = i;
-            }
-            return providerIndex;
-        }
+        // const checkIfLinked = (user, providerId) => {
+        //     const userProviders = user.providerData;
+        //     let providerIndex = -1;
+        //     for(let i = 0; i < userProviders.length; i++) {
+        //         if(userProviders[i].providerId === providerId)
+        //             providerIndex = i;
+        //     }
+        //     return providerIndex;
+        // }
 
 
 
