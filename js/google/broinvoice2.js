@@ -132,15 +132,15 @@ function myFunction() {
         //     })
         // }
         
-        // const checkIfLinked = (user, providerId) => {
-        //     const userProviders = user.providerData;
-        //     let providerIndex = -1;
-        //     for(let i = 0; i < userProviders.length; i++) {
-        //         if(userProviders[i].providerId === providerId)
-        //             providerIndex = i;
-        //     }
-        //     return providerIndex;
-        // }
+        const checkIfLinked = (user, providerId) => {
+            const userProviders = user.providerData;
+            let providerIndex = -1;
+            for(let i = 0; i < userProviders.length; i++) {
+                if(userProviders[i].providerId === providerId)
+                    providerIndex = i;
+            }
+            return providerIndex;
+        }
         
 
 
