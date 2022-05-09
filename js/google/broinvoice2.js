@@ -15,7 +15,7 @@ function myFunction() {
   
     auth.onAuthStateChanged(user => {
     const providerIndex = checkIfLinked(user, 'google.com');
-    console.log(providerIndex)
+    console.log(providerIndex);
       if (!user) {
         window.location.assign("index");
       }
