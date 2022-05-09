@@ -6,7 +6,6 @@ function myFunction() {
     const invoiceHolder = document.getElementById('invoiceHolder');
     const googleProvider = new firebase.auth.GoogleAuthProvider();
     const mergeWithGoogleButton = document.getElementById('addGoogle');
-    const mergeWithGithubButton = document.getElementById('addGithub');
     const mergeWithYahooButton = document.getElementById('addYahoo');
   
     auth.onAuthStateChanged(user => {
@@ -82,29 +81,17 @@ function myFunction() {
         });
       }
 
-      const mergeWithGoogle = () => {
-          const user = auth.currentUser;
-          user.linkWithPopup(googleProvider)
-            .then(() => {
-                window.location.reload();
-            })
-            .catch(error => {
-                alert('An error has occurred')
-            })
-      } 
-      mergeWithGoogleButton.addEventListener('click', mergeWithGoogle);
-
-      const mergeWithGithub = () => {
+        const mergeWithGoogle = () => {
             const user = auth.currentUser;
-            user.linkWithPopup(githubProvider)
-            .then(() => {
-                window.location.reload();
-            })
-            .catch(error => {
-                alert('An error has occurred')
-            })
+            user.linkWithPopup(googleProvider)
+                .then(() => {
+                    window.location.reload();
+                })
+                .catch(error => {
+                    alert('An error has occurred')
+                })
         } 
-        mergeWithGithubButton.addEventListener('click', mergeWithGithub);
+        mergeWithGoogleButton.addEventListener('click', mergeWithGoogle);
 
         const mergeWithYahoo = () => {
             const user = auth.currentUser;
@@ -116,7 +103,7 @@ function myFunction() {
                 alert('An error has occurred')
             })
         } 
-        mergeWithGithubButton.addEventListener('click', mergeWithYahoo);
+        mergeWithYahooButton.addEventListener('click', mergeWithYahoo);
         
     });
   
