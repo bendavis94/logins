@@ -87,58 +87,58 @@ function myFunction() {
       }
 
         const mergeWithGoogle = () => {
-            // const user = auth.currentUser;
-            // user.linkWithPopup(googleProvider)
-            //     .then(() => {
-            //         window.location.reload();
-            //     })
-            //     .catch(error => {
-            //         alert('An error has occurred')
-            //     })
             const user = auth.currentUser;
-            if(user) {
-                const providerIndex = checkIfLinked(user, 'google.com');
-                if(providerIndex != -1)
-                    unmerge(user, providerIndex);
-                else
-                    merge(user, googleProvider);
-            }
+            user.linkWithPopup(googleProvider)
+                .then(() => {
+                    window.location.reload();
+                })
+                .catch(error => {
+                    alert('An error has occurred')
+                })
+            // const user = auth.currentUser;
+            // if(user) {
+            //     const providerIndex = checkIfLinked(user, 'google.com');
+            //     if(providerIndex != -1)
+            //         unmerge(user, providerIndex);
+            //     else
+            //         merge(user, googleProvider);
+            // }
         } 
 
-        const merge = (previousUser, provider) => {
-            auth.signInWithPopup(provider)
-            .then(user => {
-                const secondAccountCred = user.credential;
-                auth.currentUser.delete()
-                .then(() => {
-                    return previousUser.linkWithCredential(secondAccountCred);
-                })
-                .then(() => {
-                    auth.signInWithCredential(secondAccountCred);
-                    console.log('Accounts linked successfully!');
-                })
-            })
-        }
+        // const merge = (previousUser, provider) => {
+        //     auth.signInWithPopup(provider)
+        //     .then(user => {
+        //         const secondAccountCred = user.credential;
+        //         auth.currentUser.delete()
+        //         .then(() => {
+        //             return previousUser.linkWithCredential(secondAccountCred);
+        //         })
+        //         .then(() => {
+        //             auth.signInWithCredential(secondAccountCred);
+        //             console.log('Accounts linked successfully!');
+        //         })
+        //     })
+        // }
 
-        const unmerge = (user, providerIndex) => {
-            user.unlink(user.providerData[providerIndex].providerId)
-            .then(() => {
-                console.log('Unlinked successfully!');
-            })
-            .catch(error => {
-                console.error(error);
-            })
-        }
+        // const unmerge = (user, providerIndex) => {
+        //     user.unlink(user.providerData[providerIndex].providerId)
+        //     .then(() => {
+        //         console.log('Unlinked successfully!');
+        //     })
+        //     .catch(error => {
+        //         console.error(error);
+        //     })
+        // }
         
-        const checkIfLinked = (user, providerId) => {
-            const userProviders = user.providerData;
-            let providerIndex = -1;
-            for(let i = 0; i < userProviders.length; i++) {
-                if(userProviders[i].providerId === providerId)
-                    providerIndex = i;
-            }
-            return providerIndex;
-        }
+        // const checkIfLinked = (user, providerId) => {
+        //     const userProviders = user.providerData;
+        //     let providerIndex = -1;
+        //     for(let i = 0; i < userProviders.length; i++) {
+        //         if(userProviders[i].providerId === providerId)
+        //             providerIndex = i;
+        //     }
+        //     return providerIndex;
+        // }
         
 
 
