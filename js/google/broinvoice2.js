@@ -80,21 +80,17 @@ function myFunction() {
         });
       }
 
-    //   const mergeWithGoogle = () => {
-    //       const user = auth.currentUser;
-    //       user.linkWithPopup(googleProvider)
-    //         .then(() => {
-    //             window.location.reload();
-    //         })
-    //         .catch(error => {
-    //             alert('An error has occurred')
-    //         })
-    //   } 
-    //   mergeWithGoogleButton.addEventListener('click', mergeWithGoogle);
-
-    var credential = firebase.auth.GoogleAuthProvider.credential(googleUser.getAuthResponse().id_token);
-
-    mergeWithGoogleButton.addEventListener('click', auth.currentUser.linkWithCredential(credential).then((usercred) => {window.location.reload()}).catch((error) => {console.log("Error")}));
+      const mergeWithGoogle = () => {
+          const user = auth.currentUser;
+          user.linkWithPopup(googleProvider)
+            .then(() => {
+                window.location.reload();
+            })
+            .catch(error => {
+                alert('An error has occurred')
+            })
+      } 
+      mergeWithGoogleButton.addEventListener('click', mergeWithGoogle);
         
     });
   
