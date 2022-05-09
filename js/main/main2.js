@@ -273,7 +273,7 @@ function changeImage() {
     if(image.classList.contains('fa-toggle-on')){
         image.classList.remove('fa-toggle-on')
         image.classList.add('fa-toggle-off');
-        image.style.color = 'aqua';
+        image.style.color = 'yellow';
     } else if(image.classList.contains('fa-toggle-off')){
         image.classList.remove('fa-toggle-off')
         image.classList.add('fa-toggle-on');
