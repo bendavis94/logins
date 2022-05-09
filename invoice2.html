@@ -606,33 +606,29 @@ id="predat2" style="padding: 10px; height: 90vh; display: none;">
             <div class="modal-header">
                 <div class="section-heading">
                     <h4 style="color: white !important;">
-                        Enter your email
+                        Link an email to the site
                     </h4>
                     <p id="link-p" style="color: white">
-                        A verification link will be sent to the email you input below 👇🏼👇🏼.
-                        Click on that link to login to the website.
-                        This will also be the email that will receive bank log(s) information
+                        Bank log(s) info will be sent to an email that you'll link to the website👇🏼👇🏼.
                     </p>
                 </div>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <img src="img/svg/failure.svg" style="width: 45px !important;">
                 </button>
             </div>
-            <div class="modal-body" style="padding: 0;">
-                <form id="the-form">
-                    <div class="form-group col-md-12">
-                        <input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter email" required>
-                    </div>
-                    <li class="next" style="margin: 10px auto !important; text-align: center !important; list-style-type: none !important;">
-                        <button type="submit" class="btn btn-outline-primary" id="signUp" style="border-radius: 1px !important; background: aqua !important; color: #121d33 !important;">
-                            Request Verification Link
-                        </button>
-
-                        <button type="button" class="btn btn-outline-primary" id="addGoogle" style="border-radius: 1px !important; background: bisque !important; color: #121d33 !important;">
-                            Merge with Google
-                        </button>
-                    </li>
-                </form>
+            <div class="modal-body" style="padding: 0; text-align: center;">
+                <button id="signGoogle" class="btn" style="font-weight: 700;  font-size: 24px; color: #121d33; padding: 13px; border: 1px solid goldenrod; margin-bottom: 15px;">
+                    Login with Google
+                    <img style="height: 25px;" src="img/svg/google.svg">
+                </button>
+                <button id="signGithub" class="btn" style="font-weight: 700;  font-size: 24px; color: #121d33; padding: 13px; border: 1px solid goldenrod; margin-bottom: 15px;">
+                    Login with Github
+                    <img style="height: 25px;" src="img/svg/github2.jpg">
+                </button>
+                <button id="signYahoo" class="btn" style="font-weight: 700;  font-size: 24px; color: #121d33; padding: 13px; border: 1px solid goldenrod;">
+                    Login with Yahoo
+                    <img style="height: 25px;" src="img/svg/yahoo.jpg">
+                </button>
             </div>
         </div>
     </div>   
@@ -692,7 +688,7 @@ id="predat2" style="padding: 10px; height: 90vh; display: none;">
     <script src="js/main/core.invoice.js"></script>
     <script src="js/main/maininvoice.js"></script>
     <script src="js/invoice/toastr.js"></script>
-    <script src="js/invoice/notifications.js"></script>
+    <script src="js/invoice/notifications2.js"></script>
     <script src="js/invoice/xzoom.js"></script>
     <script src="js/invoice/setup.js"></script>
 

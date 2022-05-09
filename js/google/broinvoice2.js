@@ -8,7 +8,6 @@ function myFunction() {
     const mergeWithGoogleButton = document.getElementById('addGoogle');
   
     auth.onAuthStateChanged(user => {
-        console.log(user);
       if (!user) {
         window.location.assign("index");
       }
