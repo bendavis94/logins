@@ -93,7 +93,7 @@ function myFunction() {
                     console.log('accounts linked successfully')
                 })
                 .catch(error => {
-                    alert('An error has occurred')
+                    console.error(error)
                 })
             // const user = auth.currentUser;
             // if(user) {
