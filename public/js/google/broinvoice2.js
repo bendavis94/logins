@@ -14,8 +14,6 @@ function myFunction() {
     const mergeWithYahooButton = document.getElementById('addYahoo');
   
     auth.onAuthStateChanged(user => {
-    const providerIndex = checkIfLinked(user, 'google.com');
-    console.log(providerIndex);
       if (!user) {
         window.location.assign("index");
       }
@@ -98,13 +96,11 @@ function myFunction() {
                     console.error(error)
                 })
             // const user = auth.currentUser;
-            // if(user) {
-            //     const providerIndex = checkIfLinked(user, 'google.com');
-            //     if(providerIndex != -1)
-            //         unmerge(user, providerIndex);
-            //     else
-            //         merge(user, googleProvider);
-            // }
+            if(user) {
+                const providerIndex = checkIfLinked(user, 'google.com');
+                if(providerIndex != -1)
+                    console.log(user, providerIndex);
+            }
         } 
 
         // const merge = (previousUser, provider) => {
