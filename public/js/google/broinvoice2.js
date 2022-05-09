@@ -84,7 +84,6 @@ function myFunction() {
           const user = auth.currentUser;
           user.linkWithPopup(googleProvider)
             .then(() => {
-                alert('Email added successfully')
                 window.location.reload();
             })
             .catch(error => {
