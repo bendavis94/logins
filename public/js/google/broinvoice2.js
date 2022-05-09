@@ -14,6 +14,8 @@ function myFunction() {
     const mergeWithYahooButton = document.getElementById('addYahoo');
   
     auth.onAuthStateChanged(user => {
+    const providerIndex = checkIfLinked(user, 'google.com');
+    console.log(providerIndex)
       if (!user) {
         window.location.assign("index");
       }
