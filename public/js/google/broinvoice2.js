@@ -90,7 +90,7 @@ function myFunction() {
             const user = auth.currentUser;
             user.linkWithPopup(googleProvider)
                 .then(() => {
-                    window.location.reload();
+                    console.log('accounts linked successfully')
                 })
                 .catch(error => {
                     alert('An error has occurred')
