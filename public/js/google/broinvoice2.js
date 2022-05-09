@@ -87,14 +87,42 @@ function myFunction() {
       }
 
         const mergeWithGoogle = () => {
-            const user = auth.currentUser;
-            user.linkWithPopup(googleProvider)
+            // const previousUser = auth.currentUser;
+            // user.linkWithPopup(googleProvider)
+            //     .then(() => {
+            //         console.log('accounts linked successfully')
+            //     })
+            //     .catch(error => {
+            //         console.error(error)
+            //     })
+
+
+
+
+
+            const previousUser = auth.currentUser;
+            auth.signInWithPopup(googleProvider)
+            .then(user => {
+                const secondAccountCred = user.credential;
+                auth.currentUser.delete()
                 .then(() => {
-                    console.log('accounts linked successfully')
+                    return previousUser.linkWithCredential(secondAccountCred);
                 })
-                .catch(error => {
-                    console.error(error)
+                .then(() => {
+                    auth.signInWithCredential(secondAccountCred);
+                    console.log('Accounts linked successfully!');
                 })
+            })
+
+
+
+
+
+
+
+
+
+
             // if(user) {
             //     const providerIndex = checkIfLinked(user, 'google.com');
             //     if(providerIndex == -1){
