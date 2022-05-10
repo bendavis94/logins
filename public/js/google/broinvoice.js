@@ -14,7 +14,7 @@ function myFunction() {
       logoHolder.setAttribute("src", user.photoURL);
       logoHolder.style.borderRadius = '50%';
     }
-    if (user.displayName && user.email) {
+    if (user.displayName) {
       jinaHolder.innerText = user.displayName;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'Invoice to: '+ user.email;
@@ -47,7 +47,7 @@ function myFunction() {
               ${theaddress}, Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
           `;
       });
-    } else if(!user.displayName && !user.email && user.phoneNumber){
+    } else if(user.phoneNumber){
       jinaHolder.innerText = user.phoneNumber;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'Invoice to: '+ user.phoneNumber;
@@ -62,7 +62,7 @@ function myFunction() {
               ${user.phoneNumber}, your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
           `;
       });
-    } else if(!user.displayName && !user.email && !user.phoneNumber){
+    } else if(user.isAnonymous){
       jinaHolder.innerText = 'Anonymous';
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'User ID: ' + user.uid;
