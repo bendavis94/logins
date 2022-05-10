@@ -6,14 +6,6 @@ function myFunction() {
 	const invoiceHolder = document.getElementById('invoiceHolder');
 
 	auth.onAuthStateChanged(user => {
-		if (user.photoURL != null) {
-			logoHolder.setAttribute("src", user.photoURL);
-			logoHolder.style.borderRadius = '50%';
-		} else if (user.photoURL == null) {
-			console.log('no photo url')
-		} else{
-            console.log('Not found')
-        }
 		if (user.displayName && user.email) {
 			jinaHolder.innerText = user.displayName;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
@@ -81,6 +73,12 @@ function myFunction() {
         if (!user) {
 			window.location.assign("index");
 		}
+        if (user.photoURL) {
+			logoHolder.setAttribute("src", user.photoURL);
+			logoHolder.style.borderRadius = '50%';
+		} else {
+            console.log('Not found')
+        }
 	});
 
 	document.getElementById("thebodyz").oncontextmenu = function() {
