@@ -6,10 +6,10 @@ function myFunction() {
 	const invoiceHolder = document.getElementById('invoiceHolder');
 
 	auth.onAuthStateChanged(user => {
-		if (user.photoURL) {
+		if (user.photoURL != null) {
 			logoHolder.setAttribute("src", user.photoURL);
 			logoHolder.style.borderRadius = '50%';
-		} else if (!user.photoURL) {
+		} else if (user.photoURL == null) {
 			console.log('no photo url')
 		} else{
             console.log('Not found')
