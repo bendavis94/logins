@@ -15,7 +15,7 @@ function myFunction() {
 	const auth = firebase.auth();
 
 	auth.onAuthStateChanged(user => {
-		if (!user) {
+		if (!user.email) {
 			window.location.assign("index");
 		}
 		if (user.photoURL) {
@@ -40,12 +40,7 @@ function myFunction() {
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			rockHolder.innerText = user.phoneNumber;
 			tableidHolder.value = "Name: " + user.phoneNumber;
-		} else if(!user.displayName && !user.email && !user.phoneNumber){
-			jinaHolder.innerText = 'Anonymous';
-			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			rockHolder.innerText = 'Anonymous';
-			tableidHolder.value = "Name: Anonymous";
-		}
+		} 
 		if (user.uid) {
 			uidHolder.innerText = user.uid;
 		}
@@ -57,11 +52,7 @@ function myFunction() {
 			email1.innerHTML = `Check your text messages for a link @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method link is also sent to your phone Number @:<strong>${user.phoneNumber}</strong>`;
 			email5.innerHTML = `Logged in with phone ${user.phoneNumber}, you will have to check your text messages inbox for a link`;
-		} else if(!user.email && !user.phoneNumber){
-			email1.innerHTML = `Bank log files can only be downloaded once, so make sure you save them in a folder you won't forget`;
-			email2.innerHTML = `Use winrar software to extract bank log files after download`;
-			email5.innerHTML = `-- no email connected -- Logged in Anonymously`;
-		}
+		} 
 		let goodies = [];
 
 		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.displayName && user.email){
@@ -71,10 +62,8 @@ function myFunction() {
 			}
 		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && !user.displayName && user.email){
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
-
 			var themail = user.email;
 			var theaddress = themail.substring(0,themail.indexOf('@'));
-
 			for(var i = 0; i < goodies.length; i++) {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = theaddress;
 			}
@@ -83,12 +72,7 @@ function myFunction() {
 			for(var i = 0; i < goodies.length; i++) {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
 			}
-		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && !user.displayName && !user.email && !user.phoneNumber){
-			goodies = JSON.parse(localStorage.getItem('banklogs'));
-			for(var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous';
-			}
-		}
+		} 
 		else {
 			console.log('No items are present')
 		}
@@ -165,9 +149,6 @@ function myFunction() {
 	document.getElementById("thebodyz").oncontextmenu = function() {
 		return false
 	};
-
-
-
 
 	document.getElementById('file').addEventListener('change', (event) => {
 		const file = event.target.files[0];
