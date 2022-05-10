@@ -22,7 +22,7 @@ function myFunction() {
 			logoHolder.setAttribute("src", user.photoURL);
 			logoHolder.style.borderRadius = '50%';
 		}
-		if (user.displayName && user.email) {
+		if (user.displayName) {
 			jinaHolder.innerText = user.displayName;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			rockHolder.innerText = user.displayName;
@@ -35,12 +35,12 @@ function myFunction() {
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			rockHolder.innerText = theaddress;
 			tableidHolder.value = "Name: " + theaddress;
-		} else if(!user.displayImage && !user.email && user.phoneNumber){
+		} else if(user.phoneNumber){
 			jinaHolder.innerText = user.phoneNumber;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			rockHolder.innerText = user.phoneNumber;
 			tableidHolder.value = "Name: " + user.phoneNumber;
-		} else if(!user.displayName && !user.email && !user.phoneNumber){
+		} else if(user.isAnonymous){
 			jinaHolder.innerText = 'Anonymous';
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			rockHolder.innerText = 'Anonymous';
@@ -53,37 +53,35 @@ function myFunction() {
 			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
 			email5.innerHTML = user.email;
-		} else if(!user.email && user.phoneNumber){
+		} else if(user.phoneNumber){
 			email1.innerHTML = `Check your text messages for a link @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method link is also sent to your phone Number @:<strong>${user.phoneNumber}</strong>`;
 			email5.innerHTML = `Logged in with phone ${user.phoneNumber}, you will have to check your text messages inbox for a link`;
-		} else if(!user.email && !user.phoneNumber){
+		} else if(user.isAnonymous){
 			email1.innerHTML = `Bank log files can only be downloaded once, so make sure you save them in a folder you won't forget`;
 			email2.innerHTML = `Use winrar software to extract bank log files after download`;
 			email5.innerHTML = `-- no email connected -- Logged in Anonymously`;
 		}
 		let goodies = [];
 
-		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.displayName && user.email){
+		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.displayName){
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
 			for(var i = 0; i < goodies.length; i++) {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.displayName;
 			}
 		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && !user.displayName && user.email){
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
-
 			var themail = user.email;
 			var theaddress = themail.substring(0,themail.indexOf('@'));
-
 			for(var i = 0; i < goodies.length; i++) {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = theaddress;
 			}
-		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && !user.displayName && !user.email && user.phoneNumber){
+		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.phoneNumber){
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
 			for(var i = 0; i < goodies.length; i++) {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
 			}
-		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && !user.displayName && !user.email && !user.phoneNumber){
+		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.isAnonymous){
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
 			for(var i = 0; i < goodies.length; i++) {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous';
@@ -92,7 +90,6 @@ function myFunction() {
 		else {
 			console.log('No items are present')
 		}
-
 	});
 
 	const editInformation = () => {

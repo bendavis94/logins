@@ -17,7 +17,6 @@ function myFunction() {
   const emailInbox = document.getElementById("email-inbox");
 
   auth.onAuthStateChanged(user => {
-    console.log(user);
     if (!user) {
       window.location.assign("index");
     }
@@ -25,7 +24,7 @@ function myFunction() {
       logoHolder.setAttribute("src", user.photoURL);
       logoHolder.style.borderRadius = '50%';
     }
-    if (user.displayName && user.email) {
+    if (user.displayName) {
       jinaHolder.innerText = user.displayName;
       jinaHolder2.innerText = 'USER ID: ' + user.uid;
       emailInbox.innerHTML = `Check your email inbox spam folder <span>${user.email}</span> after buying any bank log.`;
@@ -52,7 +51,7 @@ function myFunction() {
         .then(function(data) {
           document.getElementById('footer-email').innerHTML = `${theaddress}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
       });
-    } else if(!user.displayName && !user.email && user.phoneNumber){
+    } else if(user.phoneNumber){
       jinaHolder.innerText = user.phoneNumber;
       jinaHolder2.innerText = 'USER ID: ' + user.uid;
       emailInbox.innerHTML = `Check your text messages inbox <span>${user.phoneNumber}</span> after buying any bank log.`;
@@ -64,7 +63,7 @@ function myFunction() {
         .then(function(data) {
           document.getElementById('footer-email').innerHTML = `${user.phoneNumber}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
       });
-    } else if(!user.displayName && !user.email && !user.phoneNumber){
+    } else if(user.isAnonymous){
       jinaHolder.innerText = 'Anonymous';
       jinaHolder2.innerText = 'USER ID: ' + user.uid;
       emailInbox.innerHTML = `Forum open to persons over the age of 18 years.`;
