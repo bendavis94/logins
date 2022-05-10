@@ -17,7 +17,7 @@ function myFunction() {
       if (user.photoURL) {
         logoHolder.setAttribute("src", user.photoURL);
         logoHolder.style.borderRadius = '50%';
-      } else {
+      } else if(!user.photoURL) {
           console.log('no photo url')
       }
       if (user.displayName && user.email) {
