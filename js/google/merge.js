@@ -10,19 +10,9 @@ function merge() {
     const mergeWithYahooButton = document.getElementById('addYahoo');
 
     const mergeWithGoogle = () => {
-        const previousUser = auth.currentUser;
         auth.signInWithPopup(googleProvider)
             .then(user => {
-                const secondAccountCred = user.credential;
-                auth.currentUser.delete()
-                    .then(() => {
-                        return previousUser.linkWithCredential(secondAccountCred);
-                    })
-                    .then(() => {
-                        auth.signInWithCredential(secondAccountCred);
-                        window.location.reload();
-                        console.log('Accounts linked successfully!');
-                    })
+                console.log('success')
             })
     }
     mergeWithGoogleButton.addEventListener('click', mergeWithGoogle);
