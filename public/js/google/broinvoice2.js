@@ -29,7 +29,6 @@ function myFunction() {
                     `;
 				});
 			document.getElementById('invoice-footer').style.display = 'block';
-			document.getElementById('invoice-anony').style.display = 'none';
 		} else if (!user.displayName && user.email) {
 			var themail = user.email;
 			var theaddress = themail.substring(0, themail.indexOf('@'));
@@ -48,7 +47,6 @@ function myFunction() {
                     `;
 				});
 			document.getElementById('invoice-footer').style.display = 'block';
-			document.getElementById('invoice-anony').style.display = 'none';
 		} else if (user.phoneNumber) {
 			jinaHolder.innerText = user.phoneNumber;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
@@ -64,7 +62,6 @@ function myFunction() {
                     `;
 				});
 			document.getElementById('invoice-footer').style.display = 'block';
-			document.getElementById('invoice-anony').style.display = 'none';
 		} else if (user.isAnonymous) {
 			jinaHolder.innerText = 'Anonymous';
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
@@ -79,7 +76,6 @@ function myFunction() {
                         Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}</strong>
                     `;
 				});
-			document.getElementById('invoice-footer').style.display = 'none';
 			document.getElementById('invoice-anony').style.display = 'block';
 		}
 	});
