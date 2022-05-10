@@ -1,4 +1,4 @@
-// function myFunction() {
+function myFunction() {
 	const auth = firebase.auth();
 	const logoHolder = document.getElementById("logo");
 	const jinaHolder = document.getElementById("jinaHolder");
@@ -143,7 +143,7 @@
 	document.getElementById("thebodyz").oncontextmenu = function() {
 		return false
 	};
-// }
+}
 
 
 var canvas = document.getElementById("canvas");
