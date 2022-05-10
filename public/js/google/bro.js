@@ -18,7 +18,11 @@ function myFunction() {
 
   auth.onAuthStateChanged(user => {
     if (!user.email) {
-      window.location.assign("index");
+      auth.signOut().then(() => {
+        window.location.assign("index");
+      }).catch(error => {
+        console.error(error);
+      });
     }
     if (user.photoURL) {
       logoHolder.setAttribute("src", user.photoURL);
