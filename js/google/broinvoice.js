@@ -7,9 +7,9 @@ function myFunction() {
   
 
   auth.onAuthStateChanged(user => {
-		if (!user) {
-			window.location.assign("index");
-		}
+    if (!user) {
+      window.location.assign("index");
+    }
     if (user.photoURL) {
       logoHolder.setAttribute("src", user.photoURL);
       logoHolder.style.borderRadius = '50%';
@@ -62,7 +62,22 @@ function myFunction() {
               ${user.phoneNumber}, your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
           `;
       });
-    } 
+    } else if(!user.displayName && !user.email && !user.phoneNumber){
+      jinaHolder.innerText = 'Anonymous';
+      jinaHolder2.innerText = 'User ID: ' + user.uid;
+      invoiceHolder.innerText = 'User ID: ' + user.uid;
+
+      fetch('https://ipapi.co/json/')
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          document.getElementById('yourIP').innerHTML = `
+              <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
+              Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}</strong>
+          `;
+      });
+    }
   });
 
   document.getElementById("thebodyz").oncontextmenu = function() {
