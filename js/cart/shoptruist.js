@@ -349,7 +349,7 @@ function fir18(event) {
     var info6 = 'Name+ Email Access';
     var info7 = 'Owner\'s Complete Fullz';
     var image = 'https://darknet.id/img/new/truist-3.8.png';
-    var account = 'Truist Bank [SAVINGS]';
+    var account = 'Truist Bank [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -625,7 +625,37 @@ function fir35(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
+function fir36(event) {
+    var price = 'Price: $49';
+    var balance = 'Balance: $1,242';
+    var website = 'bankofamerica.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Date of Birth';
+    var info4 = 'Social Security No';
+    var info5 = 'ClientIP+ UserAgent';
+    var info6 = 'Name+ Email Access';
+    var info7 = 'Owner Complete Fullz';
+    var image = 'https://darknet.id/img/new/boa-1.png';
+    var account = 'Bank of America [CHECKING]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
 
+function fir37(event) {
+    var price = 'Price: $48';
+    var balance = 'Balance: $1,200';
+    var website = 'truist.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Social Security No';
+    var info4 = 'Date of Birth';
+    var info5 = 'ClientIP + Useragent';
+    var info6 = 'Name+ Email Access';
+    var info7 = 'Owner\'s Complete Fullz';
+    var image = 'https://darknet.id/img/new/truist-1.2.png';
+    var account = 'Truist Bank [CHECKING]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
 
 
 
