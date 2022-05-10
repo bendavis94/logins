@@ -41,10 +41,11 @@ function myFunction() {
 			rockHolder.innerText = user.phoneNumber;
 			tableidHolder.value = "Name: " + user.phoneNumber;
 		} else if(user.isAnonymous){
-			jinaHolder.innerText = 'Anonymous';
-			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			rockHolder.innerText = 'Anonymous';
-			tableidHolder.value = "Name: Anonymous";
+			auth.signOut().then(() => {
+				window.location.assign("index");
+			  }).catch(error => {
+				console.error(error);
+			  });
 		}
 		if (user.uid) {
 			uidHolder.innerText = user.uid;
@@ -57,11 +58,7 @@ function myFunction() {
 			email1.innerHTML = `Check your text messages for a link @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method link is also sent to your phone Number @:<strong>${user.phoneNumber}</strong>`;
 			email5.innerHTML = `Logged in with phone ${user.phoneNumber}, you will have to check your text messages inbox for a link`;
-		} else if(user.isAnonymous){
-			email1.innerHTML = `Bank log files can only be downloaded once, so make sure you save them in a folder you won't forget`;
-			email2.innerHTML = `Use winrar software to extract bank log files after download`;
-			email5.innerHTML = `-- no email connected -- Logged in Anonymously`;
-		}
+		} 
 		let goodies = [];
 
 		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.displayName){
@@ -81,13 +78,7 @@ function myFunction() {
 			for(var i = 0; i < goodies.length; i++) {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
 			}
-		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.isAnonymous){
-			goodies = JSON.parse(localStorage.getItem('banklogs'));
-			for(var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous';
-			}
-		}
-		else {
+		} else {
 			console.log('No items are present')
 		}
 	});

@@ -1,6 +1,5 @@
 const mailField = document.getElementById('exampleInputEmail');
 const signUp = document.getElementById('signUp');
-const signAnony = document.getElementById('signAnony');
 const signGoogle = document.getElementById("signGoogle");
 const signGithub = document.getElementById('signGithub');
 const signYahoo = document.getElementById("signYahoo");
@@ -23,15 +22,6 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
-
-const signInAnonymously = () => {
-  auth.signInAnonymously().then(() => {
-    window.location.assign('home');
-  }).catch(error => {
-    console.error(error.message);
-  });
-};
-signAnony.addEventListener("click", signInAnonymously);
 
 const sendVerificationEmail = () => {
   auth.currentUser.sendEmailVerification()
