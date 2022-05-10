@@ -65,15 +65,14 @@ function myFunction() {
 	mergeWithYahooButton.addEventListener('click', mergeWithYahoo);
 
 	auth.onAuthStateChanged(user => {
-		if (!user) {
-			window.location.assign("index");
-		}
 		if (user.photoURL) {
 			logoHolder.setAttribute("src", user.photoURL);
 			logoHolder.style.borderRadius = '50%';
 		} else if (!user.photoURL) {
 			console.log('no photo url')
-		}
+		} else{
+            console.log('Not found')
+        }
 		if (user.displayName && user.email) {
 			jinaHolder.innerText = user.displayName;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
@@ -137,6 +136,9 @@ function myFunction() {
                 Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}</strong>
             `;
 				});
+		}
+        if (!user) {
+			window.location.assign("index");
 		}
 	});
 
