@@ -1,5 +1,5 @@
 function merge() {
-    
+
     const auth = firebase.auth();
     const googleProvider = new firebase.auth.GoogleAuthProvider();
     const githubProvider = new firebase.auth.GithubAuthProvider();
@@ -20,6 +20,7 @@ function merge() {
                     })
                     .then(() => {
                         auth.signInWithCredential(secondAccountCred);
+                        window.location.reload();
                         console.log('Accounts linked successfully!');
                     })
             })
