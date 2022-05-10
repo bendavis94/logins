@@ -76,7 +76,7 @@ function myFunction() {
                         Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}</strong>
                     `;
 				});
-			document.getElementById('invoice-anony').style.display = 'block';
+			document.getElementById('invoice-anony').style.display = 'block !important';
 		}
 	});
 
