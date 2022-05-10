@@ -66,7 +66,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
 
 
 function fir1(event) {
-    var price = 'Price: $115';
+    var price = 'Price: $230';
     var balance = 'Balance: $5,757';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
@@ -82,7 +82,7 @@ function fir1(event) {
 }
 
 function fir2(event) {
-    var price = 'Price: $140';
+    var price = 'Price: $280';
     var balance = 'Balance: $7,000';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
@@ -98,7 +98,7 @@ function fir2(event) {
 }
 
 function fir3(event) {
-    var price = 'Price: $83';
+    var price = 'Price: $166';
     var balance = 'Balance: $4,040';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
@@ -114,8 +114,8 @@ function fir3(event) {
 }
 
 function fir4(event) {
-    var price = 'Price: $196';
-    var balance = 'Balance: $9,804';
+    var price = 'Price: $390';
+    var balance = 'Balance: $9,800';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
     var info2 = 'Account& Routing No';
@@ -130,7 +130,7 @@ function fir4(event) {
 }
 
 function fir5(event) {
-    var price = 'Price: $582';
+    var price = 'Price: $1,164';
     var balance = 'Balance: $29,145';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -146,7 +146,7 @@ function fir5(event) {
 }
 
 function fir6(event) {
-    var price = 'Price: $207';
+    var price = 'Price: $414';
     var balance = 'Balance: $10,392';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -162,7 +162,7 @@ function fir6(event) {
 }
 
 function fir7(event) {
-    var price = 'Price: $149';
+    var price = 'Price: $298';
     var balance = 'Balance: $7,476';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -178,7 +178,7 @@ function fir7(event) {
 }
 
 function fir8(event) {
-    var price = 'Price: $100';
+    var price = 'Price: $200';
     var balance = 'Balance: $5,027';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -194,7 +194,7 @@ function fir8(event) {
 }
 
 function fir9(event) {
-    var price = 'Price: $110';
+    var price = 'Price: $220';
     var balance = 'Balance: $5,513';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -210,7 +210,7 @@ function fir9(event) {
 }
 
 function fir10(event) {
-    var price = 'Price: $114';
+    var price = 'Price: $228';
     var balance = 'Balance: $5,728';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -226,7 +226,7 @@ function fir10(event) {
 }
 
 function fir11(event) {
-    var price = 'Price: $2,615';
+    var price = 'Price: $5,230';
     var balance = 'Balance: $130,750';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
@@ -242,7 +242,7 @@ function fir11(event) {
 }
 
 function fir12(event) {
-    var price = 'Price: $87';
+    var price = 'Price: $174';
     var balance = 'Balance: $4,200';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -258,7 +258,7 @@ function fir12(event) {
 }
 
 function fir13(event) {
-    var price = 'Price: $96';
+    var price = 'Price: $192';
     var balance = 'Balance: $4,900';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -274,7 +274,7 @@ function fir13(event) {
 }
 
 function fir14(event) {
-    var price = 'Price: $128';
+    var price = 'Price: $256';
     var balance = 'Balance: $6,422';
     var website = 'navyfederal.org';
     var info1 = 'Username + Password';
@@ -290,7 +290,7 @@ function fir14(event) {
 }
 
 function fir15(event) {
-    var price = 'Price: $79';
+    var price = 'Price: $158';
     var balance = 'Balance: $3,925';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -306,7 +306,7 @@ function fir15(event) {
 }
 
 function fir16(event) {
-    var price = 'Price: $338';
+    var price = 'Price: $676';
     var balance = 'Balance: $16,905';
     var website = 'td.com';
     var info1 = 'Online Access';
@@ -322,7 +322,7 @@ function fir16(event) {
 }
 
 function fir17(event) {
-    var price = 'Price: $81';
+    var price = 'Price: $162';
     var balance = 'Balance: $3,953';
     var website = 'td.com';
     var info1 = 'Online Access';
@@ -338,7 +338,7 @@ function fir17(event) {
 }
 
 function fir18(event) {
-    var price = 'Price: $76';
+    var price = 'Price: $152';
     var balance = 'Balance: $3,800';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -354,7 +354,7 @@ function fir18(event) {
 }
 
 function fir19(event) {
-    var price = 'Price: $152';
+    var price = 'Price: $304';
     var balance = 'Balance: $7,625';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -370,7 +370,7 @@ function fir19(event) {
 }
 
 function fir20(event) {
-    var price = 'Price: $67';
+    var price = 'Price: $134';
     var balance = 'Balance: $3,300';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
@@ -386,7 +386,7 @@ function fir20(event) {
 }
 
 function fir21(event) {
-    var price = 'Price: $141';
+    var price = 'Price: $282';
     var balance = 'Balance: $7,001';
     var website = 'chase.com';
     var info1 = 'Username + Password';
@@ -402,7 +402,7 @@ function fir21(event) {
 }
 
 function fir22(event) {
-    var price = 'Price: $75';
+    var price = 'Price: $150';
     var balance = 'Balance: $3,798';
     var website = 'chase.com';
     var info1 = 'Username + Password';
@@ -418,7 +418,7 @@ function fir22(event) {
 }
 
 function fir23(event) {
-    var price = 'Price: $95';
+    var price = 'Price: $190';
     var balance = 'Balance: $4,833';
     var website = 'chase.com';
     var info1 = 'Username + Password';
@@ -434,7 +434,7 @@ function fir23(event) {
 }
 
 function fir24(event) {
-    var price = 'Price: $544';
+    var price = 'Price: $1,088';
     var balance = 'Balance: $27,212';
     var website = 'chase.com';
     var info1 = 'Username + Password';
@@ -450,23 +450,7 @@ function fir24(event) {
 }
 
 function fir25(event) {
-    var price = 'Price: $664';
-    var balance = 'Balance: $33,200';
-    var website = 'chase.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Social Security No';
-    var info4 = 'Date of Birth';
-    var info5 = 'ClientIP+ UserAgent';
-    var info6 = 'Name+ Email Access';
-    var info7 = 'Owner Complete Fullz';
-    var image = 'https://darknet.id/img/new/chase-33.png';
-    var account = 'Chase Bank [CHECKING]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function fir25(event) {
-    var price = 'Price: $664';
+    var price = 'Price: $1,328';
     var balance = 'Balance: $33,200';
     var website = 'chase.com';
     var info1 = 'Username + Password';
@@ -482,7 +466,7 @@ function fir25(event) {
 }
 
 function fir26(event) {
-    var price = 'Price: $206';
+    var price = 'Price: $412';
     var balance = 'Balance: $10,304';
     var website = 'chase.com';
     var info1 = 'Username + Password';
@@ -498,7 +482,7 @@ function fir26(event) {
 }
 
 function fir27(event) {
-    var price = 'Price: $129';
+    var price = 'Price: $258';
     var balance = 'Balance: $6,041';
     var website = 'navyfederal.org';
     var info1 = 'Username + Password';
@@ -514,7 +498,7 @@ function fir27(event) {
 }
 
 function fir28(event) {
-    var price = 'Price: $669';
+    var price = 'Price: $1,338';
     var balance = 'Balance: $33,475';
     var website = 'td.com';
     var info1 = 'Online Access';
@@ -530,7 +514,7 @@ function fir28(event) {
 }
 
 function fir29(event) {
-    var price = 'Price: $365';
+    var price = 'Price: $730';
     var balance = 'Balance: $18,264';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -546,7 +530,7 @@ function fir29(event) {
 }
 
 function fir30(event) {
-    var price = 'Price: $152';
+    var price = 'Price: $304';
     var balance = 'Balance: $7,625';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -562,7 +546,7 @@ function fir30(event) {
 }
 
 function fir31(event) {
-    var price = 'Price: $184';
+    var price = 'Price: $368';
     var balance = 'Balance: $9,231';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -578,7 +562,7 @@ function fir31(event) {
 }
 
 function fir32(event) {
-    var price = 'Price: $90';
+    var price = 'Price: $180';
     var balance = 'Balance: $4,500';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -594,7 +578,7 @@ function fir32(event) {
 }
 
 function fir33(event) {
-    var price = 'Price: $248';
+    var price = 'Price: $496';
     var balance = 'Balance: $12,437';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -610,7 +594,7 @@ function fir33(event) {
 }
 
 function fir34(event) {
-    var price = 'Price: $174';
+    var price = 'Price: $348';
     var balance = 'Balance: $8,705';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -626,7 +610,7 @@ function fir34(event) {
 }
 
 function fir35(event) {
-    var price = 'Price: $1,160';
+    var price = 'Price: $2,320';
     var balance = 'Balance: $58,000';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -714,7 +698,7 @@ function fir35(event) {
 
 
 function uk1(event) {
-    var price = 'Price: $180';
+    var price = 'Price: $360';
     var balance = 'Balance: $9,000';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
@@ -730,7 +714,7 @@ function uk1(event) {
 }
 
 function uk2(event) {
-    var price = 'Price: $196';
+    var price = 'Price: $392';
     var balance = 'Balance: $9,804';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
@@ -746,7 +730,7 @@ function uk2(event) {
 }
 
 function uk3(event) {
-    var price = 'Price: $199';
+    var price = 'Price: $398';
     var balance = 'Balance: $9,978';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
@@ -762,7 +746,7 @@ function uk3(event) {
 }
 
 function uk4(event) {
-    var price = 'Price: $227';
+    var price = 'Price: $454';
     var balance = 'Balance: $11,362';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -778,7 +762,7 @@ function uk4(event) {
 }
 
 function uk5(event) {
-    var price = 'Price: $237';
+    var price = 'Price: $474';
     var balance = 'Balance: $11,871';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
@@ -794,7 +778,7 @@ function uk5(event) {
 }
 
 function uk6(event) {
-    var price = 'Price: $250';
+    var price = 'Price: $500';
     var balance = 'Balance: $12,550';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -810,7 +794,7 @@ function uk6(event) {
 }
 
 function uk7(event) {
-    var price = 'Price: $251';
+    var price = 'Price: $502';
     var balance = 'Balance: $12,568';
     var website = 'citi.com';
     var info1 = 'Username + Password';
@@ -826,7 +810,7 @@ function uk7(event) {
 }
 
 function uk8(event) {
-    var price = 'Price: $261';
+    var price = 'Price: $522';
     var balance = 'Balance: $13,080';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -842,7 +826,7 @@ function uk8(event) {
 }
 
 function uk9(event) {
-    var price = 'Price: $262';
+    var price = 'Price: $524';
     var balance = 'Balance: $13,575';
     var website = 'wellsfargo.com';
     var info1 = 'Online& Email Access';
@@ -858,7 +842,7 @@ function uk9(event) {
 }
 
 function uk10(event) {
-    var price = 'Price: $276';
+    var price = 'Price: $552';
     var balance = 'Balance: $13,977';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -874,7 +858,7 @@ function uk10(event) {
 }
 
 function uk11(event) {
-    var price = 'Price: $278';
+    var price = 'Price: $556';
     var balance = 'Balance: $13,881';
     var website = 'citizensbank.com';
     var info1 = 'Question & Answer';
@@ -890,7 +874,7 @@ function uk11(event) {
 }
 
 function uk12(event) {
-    var price = 'Price: $279';
+    var price = 'Price: $558';
     var balance = 'Balance: $13,993';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -906,7 +890,7 @@ function uk12(event) {
 }
 
 function uk13(event) {
-    var price = 'Price: $280';
+    var price = 'Price: $560';
     var balance = 'Balance: $14,015';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
@@ -922,7 +906,7 @@ function uk13(event) {
 }
 
 function uk14(event) {
-    var price = 'Price: $282';
+    var price = 'Price: $564';
     var balance = 'Balance: $14,107';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -938,7 +922,7 @@ function uk14(event) {
 }
 
 function uk15(event) {
-    var price = 'Price: $286';
+    var price = 'Price: $572';
     var balance = 'Balance: $14,303';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -954,7 +938,7 @@ function uk15(event) {
 }
 
 function uk16(event) {
-    var price = 'Price: $284';
+    var price = 'Price: $568';
     var balance = 'Balance: $14,226';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -970,7 +954,7 @@ function uk16(event) {
 }
 
 function uk17(event) {
-    var price = 'Price: $283';
+    var price = 'Price: $566';
     var balance = 'Balance: $14,474';
     var website = 'citizensbank.com';
     var info1 = 'Question & Answer';
@@ -986,7 +970,7 @@ function uk17(event) {
 }
 
 function uk18(event) {
-    var price = 'Price: $290';
+    var price = 'Price: $580';
     var balance = 'Balance: $14,218';
     var website = 'citi.com';
     var info1 = 'Login Access';
@@ -1002,7 +986,7 @@ function uk18(event) {
 }
 
 function uk19(event) {
-    var price = 'Price: $291';
+    var price = 'Price: $582';
     var balance = 'Balance: $14,537';
     var website = 'chime.com';
     var info1 = 'Username + Password';
@@ -1018,7 +1002,7 @@ function uk19(event) {
 }
 
 function uk20(event) {
-    var price = 'Price: $317';
+    var price = 'Price: $634';
     var balance = 'Balance: $18,542';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -1034,7 +1018,7 @@ function uk20(event) {
 }
 
 function uk21(event) {
-    var price = 'Price: $304';
+    var price = 'Price: $608';
     var balance = 'Balance: $15,228';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -1050,7 +1034,7 @@ function uk21(event) {
 }
 
 function uk22(event) {
-    var price = 'Price: $373';
+    var price = 'Price: $746';
     var balance = 'Balance: $16,917';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -1066,7 +1050,7 @@ function uk22(event) {
 }
 
 function uk23(event) {
-    var price = 'Price: $377';
+    var price = 'Price: $754';
     var balance = 'Balance: $18,878';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -1082,7 +1066,7 @@ function uk23(event) {
 }
 
 function uk24(event) {
-    var price = 'Price: $390';
+    var price = 'Price: $780';
     var balance = 'Balance: $19,325';
     var website = 'citizensbank.com';
     var info1 = '10 Question & Answer';
@@ -1098,7 +1082,7 @@ function uk24(event) {
 }
 
 function uk25(event) {
-    var price = 'Price: $394';
+    var price = 'Price: $786';
     var balance = 'Balance: $19,724';
     var website = 'chime.com';
     var info1 = 'Username + Password';
@@ -1114,7 +1098,7 @@ function uk25(event) {
 }
 
 function uk26(event) {
-    var price = 'Price: $394';
+    var price = 'Price: $792';
     var balance = 'Balance: $19,909';
     var website = 'huntington.com';
     var info1 = 'Login Access';
@@ -1130,7 +1114,7 @@ function uk26(event) {
 }
 
 function uk27(event) {
-    var price = 'Price: $395';
+    var price = 'Price: $790';
     var balance = 'Balance: $18,542';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -1146,7 +1130,7 @@ function uk27(event) {
 }
 
 function uk28(event) {
-    var price = 'Price: $406';
+    var price = 'Price: $812';
     var balance = 'Balance: $20,312';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -1162,7 +1146,7 @@ function uk28(event) {
 }
 
 function uk29(event) {
-    var price = 'Price: $817';
+    var price = 'Price: $832';
     var balance = 'Balance: $20,806';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -1178,7 +1162,7 @@ function uk29(event) {
 }
 
 function uk30(event) {
-    var price = 'Price: $416';
+    var price = 'Price: $840';
     var balance = 'Balance: $20,834';
     var website = 'chime.com';
     var info1 = 'Username + Password';
@@ -1194,7 +1178,7 @@ function uk30(event) {
 }
 
 function uk31(event) {
-    var price = 'Price: $451';
+    var price = 'Price: $902';
     var balance = 'Balance: $22,592';
     var website = 'citizensbank.com';
     var info1 = 'Question & Answer';
@@ -1210,7 +1194,7 @@ function uk31(event) {
 }
 
 function uk32(event) {
-    var price = 'Price: $580';
+    var price = 'Price: $1,160';
     var balance = 'Balance: $29,007';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -1226,7 +1210,7 @@ function uk32(event) {
 }
 
 function uk33(event) {
-    var price = 'Price: $673';
+    var price = 'Price: $1,346';
     var balance = 'Balance: $33,575';
     var website = 'ally.com';
     var info1 = 'Login Access';
@@ -1242,7 +1226,7 @@ function uk33(event) {
 }
 
 function uk34(event) {
-    var price = 'Price: $706';
+    var price = 'Price: $1,412';
     var balance = 'Balance: $35,306';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -1258,7 +1242,7 @@ function uk34(event) {
 }
 
 function uk35(event) {
-    var price = 'Price: $854';
+    var price = 'Price: $1,708';
     var balance = 'Balance: $42,710';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -1274,7 +1258,7 @@ function uk35(event) {
 }
 
 function uk36(event) {
-    var price = 'Price: $718';
+    var price = 'Price: $1,436';
     var balance = 'Balance: $35,337';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -1290,7 +1274,7 @@ function uk36(event) {
 }
 
 function uk37(event) {
-    var price = 'Price: $1,000';
+    var price = 'Price: $2,000';
     var balance = 'Balance: $50,000';
     var website = 'chime.com';
     var info1 = 'Username + Password';
@@ -1306,7 +1290,7 @@ function uk37(event) {
 }
 
 function uk38(event) {
-    var price = 'Price: $1,001';
+    var price = 'Price: $2,002';
     var balance = 'Balance: $50,075';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -1322,7 +1306,7 @@ function uk38(event) {
 }
 
 function uk39(event) {
-    var price = 'Price: $1,065';
+    var price = 'Price: $2,130';
     var balance = 'Balance: $53,298';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -1338,7 +1322,7 @@ function uk39(event) {
 }
 
 function uk40(event) {
-    var price = 'Price: $1,246';
+    var price = 'Price: $2,492';
     var balance = 'Balance: $62,333';
     var website = 'chime.com';
     var info1 = 'Username + Password';
@@ -1354,7 +1338,7 @@ function uk40(event) {
 }
 
 function uk41(event) {
-    var price = 'Price: $1,398';
+    var price = 'Price: $2,796';
     var balance = 'Balance: $69,900';
     var website = 'chime.com';
     var info1 = 'Username + Password';
@@ -1370,7 +1354,7 @@ function uk41(event) {
 }
 
 function uk42(event) {
-    var price = 'Price: $1,560';
+    var price = 'Price: $3,120';
     var balance = 'Balance: $78,000';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -1386,7 +1370,7 @@ function uk42(event) {
 }
 
 function uk43(event) {
-    var price = 'Price: $2,067';
+    var price = 'Price: $4,134';
     var balance = 'Balance: $103,318';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -1402,7 +1386,7 @@ function uk43(event) {
 }
 
 function uk44(event) {
-    var price = 'Price: $2,410';
+    var price = 'Price: $4,820';
     var balance = 'Balance: $120,612';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -1418,7 +1402,7 @@ function uk44(event) {
 }
 
 function uk45(event) {
-    var price = 'Price: $2,804';
+    var price = 'Price: $5,608';
     var balance = 'Balance: $140,075';
     var website = 'bankofamerica.com';
     var info1 = 'Online Access';
@@ -1434,7 +1418,7 @@ function uk45(event) {
 }
 
 function uk46(event) {
-    var price = 'Price: $3,925';
+    var price = 'Price: $7,850';
     var balance = 'Balance: $195,305';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -1450,7 +1434,7 @@ function uk46(event) {
 }
 
 function uk47(event) {
-    var price = 'Price: $4,718';
+    var price = 'Price: $9,436';
     var balance = 'Balance: $236,176';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
