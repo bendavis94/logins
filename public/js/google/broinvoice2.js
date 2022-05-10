@@ -28,7 +28,7 @@ function myFunction() {
                         ${user.displayName}, your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
                     `;
 				});
-			document.getElementById('invoice-footer').style.display = 'none !important';
+			document.getElementById('invoice-footer').style.display = 'none';
 		} else if (!user.displayName && user.email) {
 			var themail = user.email;
 			var theaddress = themail.substring(0, themail.indexOf('@'));
@@ -46,7 +46,7 @@ function myFunction() {
                         ${theaddress}, Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
                     `;
 				});
-			document.getElementById('invoice-footer').style.display = 'none !important';
+			document.getElementById('invoice-footer').style.display = 'none';
 		} else if (!user.displayName && !user.email && user.phoneNumber) {
 			jinaHolder.innerText = user.phoneNumber;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
