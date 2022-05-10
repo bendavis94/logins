@@ -17,6 +17,7 @@ function myFunction() {
   const emailInbox = document.getElementById("email-inbox");
 
   auth.onAuthStateChanged(user => {
+    console.log(user);
     if (!user) {
       window.location.assign("index");
     }
