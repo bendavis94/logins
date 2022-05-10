@@ -63,19 +63,7 @@ function myFunction() {
         .then(function(data) {
           document.getElementById('footer-email').innerHTML = `${user.phoneNumber}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
       });
-    } else if(!user.displayName && !user.email && !user.phoneNumber){
-      jinaHolder.innerText = 'Anonymous';
-      jinaHolder2.innerText = 'USER ID: ' + user.uid;
-      emailInbox.innerHTML = `Forum open to persons over the age of 18 years.`;
-
-      fetch('https://ipapi.co/json/')
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(data) {
-          document.getElementById('footer-email').innerHTML = `Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
-      }); 
-    }
+    } 
   });
 
   document.getElementById("thebodyz").oncontextmenu = function() {
