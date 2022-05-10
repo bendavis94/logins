@@ -411,16 +411,16 @@ function uk99(event) {
 }
 
 function uk98(event) {
-    var price = 'Price: $165';
-    var balance = 'Balance: $4,148';
+    var price = 'Price: $829';
+    var balance = 'Balance: $20,728';
     var website = 'wellsfargo.com';
-    var info1 = 'Online Access';
-    var info2 = 'Email Access';
-    var info3 = 'Billing Details';
+    var info1 = 'Online + Email Access';
+    var info2 = 'PIN(verified), Sex: Male, State: Texas';
+    var info3 = 'Owner Signature + Billing';
     var info4 = 'Account& Routing No';
-    var info5 = 'Social Security No';
-    var info6 = 'ClientIP + Useragent';
-    var info7 = 'Carrier PIN';
+    var info5 = 'Debit Card Info w/ATM';
+    var info6 = 'Personal Fullz + IP';
+    var info7 = 'Address + Phone Number';
     var image = 'https://darknet.id/img/new/wells-4.jpg';
     var account = 'Wells Fargo [EVERYDAY CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
