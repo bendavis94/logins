@@ -488,22 +488,6 @@ function uk7(event) {
 }
 
 
-function uk11(event) {
-    var price = 'Price: $556';
-    var balance = 'Balance: $13,881';
-    var website = 'citizensbank.com';
-    var info1 = 'Question & Answer';
-    var info2 = 'Name: "James"+ Address';
-    var info3 = 'Carrier: Verizon';
-    var info4 = 'Account& Routing No';
-    var info5 = 'ATM PIN + Debit Info';
-    var info6 = 'Online & Email Access';
-    var info7 = 'ClientIP+ UserAgent';
-    var image = 'https://darknet.id/img/jamescitizen.jpg';
-    var account = 'Citizens Bank [DEPOSIT ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
 function uk13(event) {
     var price = 'Price: $560';
     var balance = 'Balance: $14,015';
@@ -517,23 +501,6 @@ function uk13(event) {
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/img/new/boa-14.png';
     var account = 'Bank of America [CHECKING]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-
-function uk17(event) {
-    var price = 'Price: $566';
-    var balance = 'Balance: $14,474';
-    var website = 'citizensbank.com';
-    var info1 = 'Question & Answer';
-    var info2 = 'Name: "Michael"';
-    var info3 = 'Carrier: T-Mobile';
-    var info4 = 'Account& Routing No';
-    var info5 = 'CC Info + Address';
-    var info6 = 'ClientIP + Useragent';
-    var info7 = 'Online Access';
-    var image = 'https://darknet.id/img/michael.jpg';
-    var account = 'Citizens Bank [DEPOSIT]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -554,22 +521,6 @@ function uk18(event) {
 }
 
 
-function uk24(event) {
-    var price = 'Price: $780';
-    var balance = 'Balance: $19,325';
-    var website = 'citizensbank.com';
-    var info1 = '10 Question & Answer';
-    var info2 = 'Name: Edward+ Address';
-    var info3 = 'Carrier: Verizon';
-    var info4 = 'Account& Routing No';
-    var info5 = 'Online& Email Access';
-    var info6 = 'ATM PIN, Debit Card';
-    var info7 = 'ClientIP+ UserAgent';
-    var image = 'https://darknet.id/img/edward.jpg';
-    var account = 'Citizens Bank [DEPOSIT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
 function uk26(event) {
     var price = 'Price: $792';
     var balance = 'Balance: $19,909';
@@ -583,23 +534,6 @@ function uk26(event) {
     var info7 = 'Billing + D.O.B';
     var image = 'https://darknet.id/img/hunt-19.jpg';
     var account = 'Huntington Bank [CHECKING]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-
-function uk31(event) {
-    var price = 'Price: $902';
-    var balance = 'Balance: $22,592';
-    var website = 'citizensbank.com';
-    var info1 = 'Question & Answer';
-    var info2 = 'Name: Julio+ Address';
-    var info3 = 'Carrier: Verizon';
-    var info4 = 'Account& Routing No';
-    var info5 = 'Online Access';
-    var info6 = 'Email Access';
-    var info7 = 'ClientIP+ UserAgent';
-    var image = 'https://darknet.id/img/julio.jpg';
-    var account = 'Citizens Bank [DEPOSIT]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
