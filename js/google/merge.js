@@ -1,3 +1,4 @@
+const auth = firebase.auth();
 const googleProvider = new firebase.auth.GoogleAuthProvider();
 const githubProvider = new firebase.auth.GithubAuthProvider();
 const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
