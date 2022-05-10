@@ -17,7 +17,7 @@ function myFunction() {
   const emailInbox = document.getElementById("email-inbox");
 
   auth.onAuthStateChanged(user => {
-    if (!user) {
+    if (!user.email) {
       window.location.assign("index");
     }
     if (user.photoURL) {
