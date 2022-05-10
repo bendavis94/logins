@@ -11,9 +11,6 @@ function merge() {
 
     const mergeWithGoogle = () => {
         auth.signInWithPopup(googleProvider)
-            .then(user => {
-                console.log('success')
-            })
     }
     mergeWithGoogleButton.addEventListener('click', mergeWithGoogle);
 
