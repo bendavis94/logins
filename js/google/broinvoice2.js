@@ -6,6 +6,9 @@ function myFunction() {
 	const invoiceHolder = document.getElementById('invoiceHolder');
 
 	auth.onAuthStateChanged(user => {
+        if (!user) {
+			window.location.assign("index");
+		}
         if (user.photoURL) {
 			logoHolder.setAttribute("src", user.photoURL);
 			logoHolder.style.borderRadius = '50%';
@@ -21,9 +24,9 @@ function myFunction() {
 				})
 				.then(function(data) {
 					document.getElementById('yourIP').innerHTML = `
-                <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-                ${user.displayName}, your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
-            `;
+                        <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
+                        ${user.displayName}, your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
+                    `;
 				});
 		} else if (!user.displayName && user.email) {
 			var themail = user.email;
@@ -32,50 +35,44 @@ function myFunction() {
 			jinaHolder.innerText = theaddress;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			invoiceHolder.innerText = 'Invoice to: ' + user.email;
-
 			fetch('https://ipapi.co/json/')
 				.then(function(response) {
 					return response.json();
 				})
 				.then(function(data) {
 					document.getElementById('yourIP').innerHTML = `
-                <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-                ${theaddress}, Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
-            `;
+                        <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
+                        ${theaddress}, Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
+                    `;
 				});
 		} else if (!user.displayName && !user.email && user.phoneNumber) {
 			jinaHolder.innerText = user.phoneNumber;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			invoiceHolder.innerText = 'Invoice to: ' + user.phoneNumber;
-
 			fetch('https://ipapi.co/json/')
 				.then(function(response) {
 					return response.json();
 				})
 				.then(function(data) {
 					document.getElementById('yourIP').innerHTML = `
-                <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-                ${user.phoneNumber}, your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
-            `;
+                        <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
+                        ${user.phoneNumber}, your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
+                    `;
 				});
 		} else if (!user.displayName && !user.email && !user.phoneNumber) {
 			jinaHolder.innerText = 'Anonymous';
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			invoiceHolder.innerText = 'User ID: ' + user.uid;
-
 			fetch('https://ipapi.co/json/')
 				.then(function(response) {
 					return response.json();
 				})
 				.then(function(data) {
 					document.getElementById('yourIP').innerHTML = `
-                <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-                Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}</strong>
-            `;
+                        <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
+                        Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}</strong>
+                    `;
 				});
-		}
-        if (!user) {
-			window.location.assign("index");
 		}
 	});
 
