@@ -58,7 +58,7 @@ function myFunction() {
 			jinaHolder.innerText = 'Anonymous';
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			rockHolder.innerText = 'Anonymous';
-			tableidHolder.value = "Name: Anonymou";
+			tableidHolder.value = "Name: Anonymous";
 		}
 		if (user.uid) {
 			uidHolder.innerText = user.uid;
