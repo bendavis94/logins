@@ -3,6 +3,7 @@ const signUp = document.getElementById('signUp');
 const signGoogle = document.getElementById("signGoogle");
 const signGithub = document.getElementById('signGithub');
 const signYahoo = document.getElementById("signYahoo");
+const signAnony = document.getElementById("signAnony");
 
 const phoneNumberField = document.getElementById('phoneNumber');
 const codeField = document.getElementById('code');
@@ -67,6 +68,15 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
       alert('Wrong email entered')
     });
 }
+
+const signInAnonymous = () => {
+  auth.signInAnonymously.then(() => {
+    window.location.assign('home');
+  }).catch(error => {
+    console.error(error.message)
+  });
+};
+signAnony.addEventListener("click", signInAnonymous);
 
 const signInWithGoogle = () => {
   const googleProvider = new firebase.auth.GoogleAuthProvider;
