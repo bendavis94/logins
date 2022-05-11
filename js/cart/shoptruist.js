@@ -562,23 +562,6 @@ function uk97(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function uk96(event) {
-    var price = 'Price: $80';
-    var balance = 'Balance: $2,000';
-    var website = 'chime.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Date of Birth';
-    var info4 = 'Social Security No';
-    var info5 = 'ClientIP+ UserAgent';
-    var info6 = 'Name+ Email Access';
-    var info7 = 'Owner Complete Fullz';
-    var image = 'https://darknet.id/img/new/chime-2.jpg';
-    var account = 'Chime Bank [SPENDING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-
 function uk41(event) {
     var price = 'Price: $2,796';
     var balance = 'Balance: $69,900';
