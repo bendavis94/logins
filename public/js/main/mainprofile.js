@@ -169,7 +169,7 @@
             smartSpeed: 500,
             autoplay: true,
             autoplayTimeout: 2000,
-            autoplayHoverPause: true,
+            autoplayHoverPause: false,
             navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
             responsive: {
                 0: {
@@ -185,8 +185,8 @@
                     margin: 10
                 },
                 1200: {
-                    items: 6,
-                    margin: 10
+                    items: 7,
+                    margin: 5
                 }
             }
         });
