@@ -3,7 +3,6 @@ const signUp = document.getElementById('signUp');
 const signGoogle = document.getElementById("signGoogle");
 const signGithub = document.getElementById('signGithub');
 const signYahoo = document.getElementById("signYahoo");
-const signAnony = document.getElementById("signAnony");
 
 const phoneNumberField = document.getElementById('phoneNumber');
 const codeField = document.getElementById('code');
@@ -23,16 +22,6 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
-
-
-const signInAnony = () => {
-  auth.signInAnonymously().then(() => {
-    window.location.assign('home');
-  }).catch(error => {
-    console.error(error.message)
-  });
-};
-signAnony.addEventListener("click", signInAnony);
 
 const sendVerificationEmail = () => {
   auth.currentUser.sendEmailVerification()
