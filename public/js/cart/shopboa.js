@@ -371,6 +371,7 @@ function fir28(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
+
 function fir37(event) {
     var price = 'Price: $1,777';
     var balance = 'Balance: $44,426';
