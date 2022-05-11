@@ -64,10 +64,16 @@ function myFunction() {
           document.getElementById('footer-email').innerHTML = `${user.phoneNumber}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
       });
     } else if(user.isAnonymous){
-      auth.signOut().then(() => {
-        window.location.assign("index");
-      }).catch(error => {
-        console.error(error);
+      jinaHolder.innerText = 'Anonymous';
+      jinaHolder2.innerText = 'USER ID: ' + user.uid;
+      emailInbox.innerHTML = `Forum open to persons over the age of 18 years`;
+
+      fetch('https://ipapi.co/json/')
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          document.getElementById('footer-email').innerHTML = `Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
       });
     }
   });
