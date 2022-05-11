@@ -185,7 +185,7 @@
                     margin: 10
                 },
                 1200: {
-                    items: 7,
+                    items: 6,
                     margin: 5
                 }
             }
