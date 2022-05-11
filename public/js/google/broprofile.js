@@ -41,11 +41,10 @@ function myFunction() {
 			rockHolder.innerText = user.phoneNumber;
 			tableidHolder.value = "Name: " + user.phoneNumber;
 		} else if(user.isAnonymous){
-			auth.signOut().then(() => {
-				window.location.assign("index");
-			  }).catch(error => {
-				console.error(error);
-			  });
+			jinaHolder.innerText = 'Anonymous';
+			jinaHolder2.innerText = 'User ID: ' + user.uid;
+			rockHolder.innerText = 'Anonymous';
+			tableidHolder.value = "Name: Anonymou";
 		}
 		if (user.uid) {
 			uidHolder.innerText = user.uid;
@@ -58,6 +57,10 @@ function myFunction() {
 			email1.innerHTML = `Check your text messages for a link @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method link is also sent to your phone Number @:<strong>${user.phoneNumber}</strong>`;
 			email5.innerHTML = `Logged in with phone ${user.phoneNumber}, you will have to check your text messages inbox for a link`;
+		} else if(user.isAnonymous){
+			email1.innerHTML = `Bank log files can only be downloaded once, so make sure you save them in a folder you won't forget`;
+			email2.innerHTML = `Contact @bendavis96 on telegram if you have any issue with a bank log that you buy`;
+			email5.innerHTML = `Logged in anonymously, there's no email invoice that will be sent`;
 		} 
 		let goodies = [];
 
@@ -77,6 +80,11 @@ function myFunction() {
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
 			for(var i = 0; i < goodies.length; i++) {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
+			}
+		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.isAnonymous){
+			goodies = JSON.parse(localStorage.getItem('banklogs'));
+			for(var i = 0; i < goodies.length; i++) {
+				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous';
 			}
 		} else {
 			console.log('No items are present')
