@@ -24,6 +24,16 @@ firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
 
+
+const signInAnony = () => {
+  auth.signInAnonymously().then(() => {
+    window.location.assign('home');
+  }).catch(error => {
+    console.error(error.message)
+  });
+};
+signAnony.addEventListener("click", signInAnony);
+
 const sendVerificationEmail = () => {
   auth.currentUser.sendEmailVerification()
   .then(() => {
@@ -69,14 +79,7 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
     });
 }
 
-const signInAnonymous = () => {
-  auth.signInAnonymously.then(() => {
-    window.location.assign('home');
-  }).catch(error => {
-    console.error(error.message)
-  });
-};
-signAnony.addEventListener("click", signInAnonymous);
+
 
 const signInWithGoogle = () => {
   const googleProvider = new firebase.auth.GoogleAuthProvider;
