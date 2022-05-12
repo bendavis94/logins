@@ -161,35 +161,6 @@
                 }
             });
         }
-        $('#blog-carousel').owlCarousel({
-            loop: true,
-            responsiveClass: true,
-            dots: true,
-            nav: true,
-            smartSpeed: 500,
-            autoplay: true,
-            autoplayTimeout: 2000,
-            autoplayHoverPause: false,
-            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-            responsive: {
-                0: {
-                    items: 2,
-                    margin: 5
-                },
-                768: {
-                    items: 3,
-                    margin: 10
-                },
-                992: {
-                    items: 3,
-                    margin: 10
-                },
-                1200: {
-                    items: 6,
-                    margin: 5
-                }
-            }
-        });
         $('.countup').counterUp({
             delay: 25,
             time: 2000
