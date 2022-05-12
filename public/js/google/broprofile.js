@@ -47,7 +47,7 @@ function myFunction() {
 			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
 			email5.innerHTML = user.email;
 
-		} else if(!user.displayImage && user.email) {
+		} else if(!user.displayName && user.email) {
 			var themail = user.email;
 			var theaddress = themail.substring(0,themail.indexOf('@'));
 
