@@ -64,15 +64,6 @@ function myFunction() {
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			rockHolder.innerText = user.phoneNumber;
 			tableidHolder.value = "Name: " + user.phoneNumber;
-		} else if(user.isAnonymous){
-			jinaHolder.innerText = 'Anonymous';
-			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			rockHolder.innerText = 'Anonymous';
-			tableidHolder.value = "Name: Anonymous";
-
-			email1.innerHTML = `Bank log files can only be downloaded once, make sure you save them in a folder you won't forget`;
-			email2.innerHTML = `Cashout Method tutorial also comes together with any bank log that you buy`;
-			email5.innerHTML = `Logged in Anonymously, no email invoice will be sent`;
 		} 
 		if (user.uid) {
 			uidHolder.innerText = user.uid;
@@ -96,11 +87,6 @@ function myFunction() {
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
 			for(var i = 0; i < goodies.length; i++) {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
-			}
-		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.isAnonymous){
-			goodies = JSON.parse(localStorage.getItem('banklogs'));
-			for(var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous';
 			}
 		} else {
 			console.log('No items are present')
