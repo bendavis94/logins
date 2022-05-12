@@ -64,6 +64,160 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
 }
 
 
+
+function fir98(event) {
+    var price = 'Price: $112';
+    var balance = 'Balance: $2,824';
+    var website = 'chase.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Social Security No';
+    var info4 = 'Date of Birth';
+    var info5 = 'ClientIP+ UserAgent';
+    var info6 = 'Name+ Email Access';
+    var info7 = 'Owner Complete Fullz';
+    var image = 'https://darknet.id/img/new/chase-2.8.jpg';
+    var account = 'Chase Bank [CHECKING]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function fir25(event) {
+    var price = 'Price: $1,328';
+    var balance = 'Balance: $33,200';
+    var website = 'chase.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Social Security No';
+    var info4 = 'Date of Birth';
+    var info5 = 'ClientIP+ UserAgent';
+    var info6 = 'Name+ Email Access';
+    var info7 = 'Owner Complete Fullz';
+    var image = 'https://darknet.id/img/new/chase-33.png';
+    var account = 'Chase Bank [CHECKING]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function fir97(event) {
+    var price = 'Price: $229';
+    var balance = 'Balance: $5,745';
+    var website = 'chase.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Social Security No';
+    var info4 = 'Date of Birth';
+    var info5 = 'ClientIP+ UserAgent';
+    var info6 = 'Name+ Email Access';
+    var info7 = 'Owner Complete Fullz';
+    var image = 'https://darknet.id/img/new/chase-5.7.jpg';
+    var account = 'Chase Bank [CHECKING]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function fir23(event) {
+    var price = 'Price: $190';
+    var balance = 'Balance: $4,833';
+    var website = 'chase.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Social Security No';
+    var info4 = 'Date of Birth';
+    var info5 = 'ClientIP+ UserAgent';
+    var info6 = 'Name+ Email Access';
+    var info7 = 'Owner Complete Fullz';
+    var image = 'https://darknet.id/img/new/chase-4.png';
+    var account = 'Chase Bank [CHECKING]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function fir24(event) {
+    var price = 'Price: $1,088';
+    var balance = 'Balance: $27,212';
+    var website = 'chase.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Social Security No';
+    var info4 = 'Date of Birth';
+    var info5 = 'ClientIP+ UserAgent';
+    var info6 = 'Name+ Email Access';
+    var info7 = 'Owner Complete Fullz';
+    var image = 'https://darknet.id/img/new/chase-27.png';
+    var account = 'Chase Bank [CHECKING]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+
+function fir21(event) {
+    var price = 'Price: $282';
+    var balance = 'Balance: $7,001';
+    var website = 'chase.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Social Security No';
+    var info4 = 'Date of Birth';
+    var info5 = 'ClientIP+ UserAgent';
+    var info6 = 'Name+ Email Access';
+    var info7 = 'Owner Complete Fullz';
+    var image = 'https://darknet.id/img/new/chase-7.png';
+    var account = 'Chase Bank [CHECKING]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function fir22(event) {
+    var price = 'Price: $150';
+    var balance = 'Balance: $3,798';
+    var website = 'chase.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Social Security No';
+    var info4 = 'Date of Birth';
+    var info5 = 'ClientIP+ UserAgent';
+    var info6 = 'Name+ Email Access';
+    var info7 = 'Owner Complete Fullz';
+    var image = 'https://darknet.id/img/new/chase-3.png';
+    var account = 'Chase Bank [CHECKING]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+function fir99(event) {
+    var price = 'Price: $232';
+    var balance = 'Balance: $5,813';
+    var website = 'chase.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Social Security No';
+    var info4 = 'Date of Birth';
+    var info5 = 'ClientIP+ UserAgent';
+    var info6 = 'Name+ Email Access';
+    var info7 = 'Owner Complete Fullz';
+    var image = 'https://darknet.id/img/new/chase-5.jpg';
+    var account = 'Chase Bank [CHECKING]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function jaze1(event) {
     var price = 'Price: $488';
     var balance = 'Balance: $12,245';
