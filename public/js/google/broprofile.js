@@ -42,6 +42,11 @@ function myFunction() {
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			rockHolder.innerText = user.displayName;
 			tableidHolder.value = "Name: " + user.displayName;
+
+			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
+			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
+			email5.innerHTML = user.email;
+
 		} else if(!user.displayImage && user.email) {
 			var themail = user.email;
 			var theaddress = themail.substring(0,themail.indexOf('@'));
@@ -50,6 +55,10 @@ function myFunction() {
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			rockHolder.innerText = theaddress;
 			tableidHolder.value = "Name: " + theaddress;
+
+			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
+			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
+			email5.innerHTML = user.email;
 		} else if(user.phoneNumber){
 			jinaHolder.innerText = user.phoneNumber;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
@@ -60,23 +69,15 @@ function myFunction() {
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			rockHolder.innerText = 'Anonymous';
 			tableidHolder.value = "Name: Anonymous";
+
+			email1.innerHTML = `Bank log files can only be downloaded once, make sure you save them in a folder you won't forget`;
+			email2.innerHTML = `Cashout Method tutorial also comes together with any bank log that you buy`;
+			email5.innerHTML = `Logged in Anonymously, no email invoice will be sent`;
 		} 
 		if (user.uid) {
 			uidHolder.innerText = user.uid;
 		}
-		if (user.email) {
-			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
-			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
-			email5.innerHTML = user.email;
-		} else if(user.phoneNumber){
-			email1.innerHTML = `Check your text messages for a link @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
-			email2.innerHTML = `Cashout Method link is also sent to your phone Number @:<strong>${user.phoneNumber}</strong>`;
-			email5.innerHTML = `Logged in with phone ${user.phoneNumber}, you will have to check your text messages inbox for a link`;
-		} else if(user.isAnonymous){
-			email1.innerHTML = `Bank log files can only be downloaded once, make sure you save them in a folder you won't forget`;
-			email2.innerHTML = `Cashout Method tutorial also comes together with any bank log that you buy`;
-			email5.innerHTML = `Logged in Anonymously, no email invoice will be sent`;
-		}
+
 		let goodies = [];
 
 		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.displayName){
