@@ -1230,39 +1230,41 @@ footer h3:after{
 ::-webkit-scrollbar-thumb:hover {
     background: #fff !important;
 }
+
+
 .masonry-4{
 	margin:0;
 	padding:0;
-	-moz-column-gap:10px;
-	-webkit-column-gap:10px;
-	column-gap:10px
+	-moz-column-gap:7px;
+	-webkit-column-gap:7px;
+	column-gap:7px
 }
 .masonry-4 a{
 	display:block;
-	margin-top:10px
+	margin-top:7px
 }
 .masonry-4 a:first-child{
 	margin-top:0
 }
-@media screen and (min-width: 576px){
+@media screen and (min-width: 276px){
 	.masonry-4{
 		-moz-column-count:2;
 		-webkit-column-count:2;
 		column-count:2
 	}
 }
-@media screen and (min-width: 768px){
+@media screen and (min-width: 767px){
 	.masonry-4{
-		-moz-column-count:2;
-		-webkit-column-count:2;
-		column-count:2
+		-moz-column-count:4;
+		-webkit-column-count:4;
+		column-count:4
 	}
 }
 @media screen and (min-width: 992px){
 	.masonry-4{
-		-moz-column-count:3;
-		-webkit-column-count:3;
-		column-count:3
+		-moz-column-count:5;
+		-webkit-column-count:5;
+		column-count:5
 	}
 }
 @media screen and (min-width: 1200px){
@@ -1362,4 +1364,4 @@ footer h3:after{
 .masonry-item:first-child{
 	margin-top:0
 }
-/*# sourceMappingURL=syles-2.css.map */
+/*# sourceMappingURL=styles-2.css.map */
