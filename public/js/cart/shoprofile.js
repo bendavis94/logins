@@ -58,7 +58,6 @@ function updateCartTotal() {
         var price4 = data.price.replace('Price: ','').replace(',','').replace('$','');
         total = total + (price4 * 1);
     });
-    console.log(total)
     document.getElementById('thetot').innerHTML = `Checkout: $${total.toLocaleString()}`;
     localStorage.setItem('time-left',600);
 }
