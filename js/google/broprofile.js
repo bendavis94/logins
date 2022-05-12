@@ -18,10 +18,7 @@ function myFunction() {
 	const jinaHolder = document.getElementById("jinaHolder");
 	const jinaHolder2 = document.getElementById("jinaHolder2");
 	const rockHolder = document.getElementById("rockHolder");
-	const displayNameField = document.getElementById("displayName");
 	const tableidHolder = document.getElementById('nameBro');
-	const photoField = document.getElementById("photo");
-	const editButton = document.getElementById("edit");
 	const uidHolder = document.getElementById('uidHolder');
 	const email1 = document.getElementById('yourEmail1');
 	const email2 = document.getElementById('yourEmail2');
@@ -40,7 +37,6 @@ function myFunction() {
 		if (user.displayName) {
 			jinaHolder.innerText = user.displayName;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			rockHolder.innerText = user.displayName;
 			tableidHolder.value = "Name: " + user.displayName;
 
 			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
@@ -53,7 +49,6 @@ function myFunction() {
 
 			jinaHolder.innerText = theaddress;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			rockHolder.innerText = theaddress;
 			tableidHolder.value = "Name: " + theaddress;
 
 			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
@@ -62,7 +57,6 @@ function myFunction() {
 		} else if(user.phoneNumber){
 			jinaHolder.innerText = user.phoneNumber;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			rockHolder.innerText = user.phoneNumber;
 			tableidHolder.value = "Name: " + user.phoneNumber;
 
 			email1.innerHTML = `Check your text messages inbox @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
