@@ -17,9 +17,7 @@ function myFunction() {
 	const logoHolder = document.getElementById("logo");
 	const jinaHolder = document.getElementById("jinaHolder");
 	const jinaHolder2 = document.getElementById("jinaHolder2");
-	const rockHolder = document.getElementById("rockHolder");
 	const tableidHolder = document.getElementById('nameBro');
-	const uidHolder = document.getElementById('uidHolder');
 	const email1 = document.getElementById('yourEmail1');
 	const email2 = document.getElementById('yourEmail2');
 	const email5 = document.getElementById('yourEmail5');
@@ -63,9 +61,6 @@ function myFunction() {
 			email2.innerHTML = `Cashout Method link is also sent to your phone Number @:<strong>${user.phoneNumber}</strong>`;
 			email5.innerHTML = user.phoneNumber;
 		} 
-		if (user.uid) {
-			uidHolder.innerText = user.uid;
-		}
 
 		let goodies = [];
 
