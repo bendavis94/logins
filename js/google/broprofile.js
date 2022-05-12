@@ -68,13 +68,7 @@ function myFunction() {
 			email1.innerHTML = `Check your text messages inbox @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method link is also sent to your phone Number @:<strong>${user.phoneNumber}</strong>`;
 			email5.innerHTML = user.phoneNumber;
-		} else if(user.isAnonymous){
-			auth.signOut().then(() => {
-			  window.location.assign("index");
-			}).catch(error => {
-			  console.error(error);
-			});
-		  }
+		} 
 		if (user.uid) {
 			uidHolder.innerText = user.uid;
 		}
