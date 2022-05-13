@@ -24,7 +24,7 @@ function myFunction() {
       logoHolder.setAttribute("src", user.photoURL);
       logoHolder.style.borderRadius = '50%';
     }
-    if (user.displayName) {
+    if (user.displayName && user.email) {
       jinaHolder.innerText = user.displayName;
       jinaHolder2.innerText = 'USER ID: ' + user.uid;
       emailInbox.innerHTML = `Check your email inbox spam folder <span>${user.email}</span> after buying any bank log.`;
