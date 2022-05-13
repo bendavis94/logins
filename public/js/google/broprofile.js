@@ -42,7 +42,7 @@ function myFunction() {
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			rockHolder.innerText = user.displayName;
 			tableidHolder.value = "Name: " + user.displayName;
-		} else if(!user.displayImage && user.email) {
+		} else if(!user.displayName && user.email) {
 			var themail = user.email;
 			var theaddress = themail.substring(0,themail.indexOf('@'));
 
