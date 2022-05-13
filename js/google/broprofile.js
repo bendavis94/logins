@@ -36,7 +36,7 @@ function myFunction() {
 			logoHolder.setAttribute("src", user.photoURL);
 			logoHolder.style.borderRadius = '50%';
 		}
-		if (user.displayName) {
+		if (user.displayName && user.email) {
 			jinaHolder.innerText = user.displayName;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			rockHolder.innerText = user.displayName;
