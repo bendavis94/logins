@@ -46,7 +46,7 @@ auth.onAuthStateChanged(user => {
 			} else if(user.isAnonymous){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						Anonymous User, your account has insufficient balance to complete the download, <br>
+						Your anonymous account has insufficient balance to complete the download, <br>
 						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download 
 						${items[0].account} with ${items[0].balance}, <br> 
 						and ${items[1].account} with ${items[1].balance} <br>
@@ -88,7 +88,7 @@ auth.onAuthStateChanged(user => {
 			} else if(user.isAnonymous){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						Anonymous User, your account has insufficient balance to complete the download, <br>
+						Your anonymous account has insufficient balance to complete the download, <br>
 						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download 
 						${items[0].account} with ${items[0].balance}
 					`];
@@ -133,7 +133,7 @@ auth.onAuthStateChanged(user => {
 			}  else if(user.isAnonymous){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						Anonymous User, your account has insufficient balance to complete the download, <br>
+						Your anonymous account has insufficient balance to complete the download, <br>
 						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download 
 						${items[0].account} with ${items[0].balance}, <br> 
 						and ${items[1].account} with ${items[1].balance}, <br>
