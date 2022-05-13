@@ -31,7 +31,7 @@ function myFunction() {
 
 	auth.onAuthStateChanged(user => {
 		if (!user) {
-			// window.location.assign("index");
+			window.location.assign("index");
 		}
 		if (user.photoURL) {
 			logoHolder.setAttribute("src", user.photoURL);
@@ -75,7 +75,7 @@ function myFunction() {
 		} else if(user.isAnonymous){
 			email1.innerHTML = `Bank log files can only be downloaded once, make sure you save them in a folder you won't forget`;
 			email2.innerHTML = `Use winrar software to extract bank log files after a successful download`;
-			email5.innerHTML = 'Anonymous';
+			email5.innerHTML = 'Logged in Anonymously, no email invoice will be sent, you can logout of the website and login again with an email or choose to remain anonymous';
 		}
 		let goodies = [];
 
