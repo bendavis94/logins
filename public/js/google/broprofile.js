@@ -17,7 +17,12 @@ function myFunction() {
 	const logoHolder = document.getElementById("logo");
 	const jinaHolder = document.getElementById("jinaHolder");
 	const jinaHolder2 = document.getElementById("jinaHolder2");
+	const rockHolder = document.getElementById("rockHolder");
+	const displayNameField = document.getElementById("displayName");
 	const tableidHolder = document.getElementById('nameBro');
+	const photoField = document.getElementById("photo");
+	const editButton = document.getElementById("edit");
+	const uidHolder = document.getElementById('uidHolder');
 	const email1 = document.getElementById('yourEmail1');
 	const email2 = document.getElementById('yourEmail2');
 	const email5 = document.getElementById('yourEmail5');
@@ -26,7 +31,7 @@ function myFunction() {
 
 	auth.onAuthStateChanged(user => {
 		if (!user) {
-			window.location.assign("index");
+			// window.location.assign("index");
 		}
 		if (user.photoURL) {
 			logoHolder.setAttribute("src", user.photoURL);
@@ -35,33 +40,43 @@ function myFunction() {
 		if (user.displayName) {
 			jinaHolder.innerText = user.displayName;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
+			rockHolder.innerText = user.displayName;
 			tableidHolder.value = "Name: " + user.displayName;
-
-			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
-			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
-			email5.innerHTML = user.email;
-
-		} else if(!user.displayName && user.email) {
+		} else if(!user.displayImage && user.email) {
 			var themail = user.email;
 			var theaddress = themail.substring(0,themail.indexOf('@'));
 
 			jinaHolder.innerText = theaddress;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
+			rockHolder.innerText = theaddress;
 			tableidHolder.value = "Name: " + theaddress;
-
+		} else if(user.phoneNumber){
+			jinaHolder.innerText = user.phoneNumber;
+			jinaHolder2.innerText = 'User ID: ' + user.uid;
+			rockHolder.innerText = user.phoneNumber;
+			tableidHolder.value = "Name: " + user.phoneNumber;
+		} else if(user.isAnonymous){
+			jinaHolder.innerText = 'Anonymous';
+			jinaHolder2.innerText = 'User ID: ' + user.uid;
+			rockHolder.innerText = 'Anonymous';
+			tableidHolder.value = "Name: Anonymous";
+		}
+		if (user.uid) {
+			uidHolder.innerText = user.uid;
+		}
+		if (user.email) {
 			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
 			email5.innerHTML = user.email;
 		} else if(user.phoneNumber){
-			jinaHolder.innerText = user.phoneNumber;
-			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			tableidHolder.value = "Name: " + user.phoneNumber;
-
-			email1.innerHTML = `Check your text messages inbox @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
+			email1.innerHTML = `Check your text messages for a link @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method link is also sent to your phone Number @:<strong>${user.phoneNumber}</strong>`;
-			email5.innerHTML = user.phoneNumber;
-		} 
-
+			email5.innerHTML = `Logged in with phone ${user.phoneNumber}, you will have to check your text messages inbox for a link`;
+		} else if(user.isAnonymous){
+			email1.innerHTML = `Bank log files can only be downloaded once, make sure you save them in a folder you won't forget`;
+			email2.innerHTML = `Use winrar software to extract bank log files after a successful download`;
+			email5.innerHTML = 'Anonymous';
+		}
 		let goodies = [];
 
 		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.displayName){
@@ -81,10 +96,61 @@ function myFunction() {
 			for(var i = 0; i < goodies.length; i++) {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
 			}
-		} else {
+		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.isAnonymous){
+			goodies = JSON.parse(localStorage.getItem('banklogs'));
+			for(var i = 0; i < goodies.length; i++) {
+				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous';
+			}
+		}  else {
 			console.log('No items are present')
 		}
 	});
+
+	const editInformation = () => {
+		const _0x9108xb = {
+			newDisplayName: displayNameField.value,
+			newPhotoURL: photoField.value
+		};
+		const user = auth.currentUser;
+		changeNameAndPhoto(user, _0x9108xb);
+	};
+	const changeNameAndPhoto = (user, _0x9108xb) => {
+		const {
+			newDisplayName,
+			newPhotoURL
+		} = _0x9108xb;
+		if (newDisplayName && newPhotoURL) {
+			user.updateProfile({
+				displayName: newDisplayName,
+				photoURL: newPhotoURL
+			}).then(() => {
+				alert("Profile Updated Successfully !");
+			}).catch(error => {
+				console.error(error);
+			});
+		} else {
+			if (newDisplayName) {
+				user.updateProfile({
+					displayName: newDisplayName
+				}).then(() => {
+					alert("Display Name Updated Successfully !");
+				}).catch(error => {
+					console.error(error);
+				});
+			} else {
+				if (newPhotoURL) {
+					user.updateProfile({
+						photoURL: newPhotoURL
+					}).then(() => {
+						alert("PhotoURL Updated Successfully !");
+					}).catch(error => {
+						console.error(error);
+					});
+				}
+			}
+		}
+	};
+	editButton.addEventListener("click", editInformation);
 
 	fetch('https://ipapi.co/json/')
 	.then(function(response) {
@@ -110,6 +176,9 @@ function myFunction() {
 	document.getElementById("thebodyz").oncontextmenu = function() {
 		return false
 	};
+
+
+
 
 	document.getElementById('file').addEventListener('change', (event) => {
 		const file = event.target.files[0];
@@ -236,6 +305,15 @@ function drawHand(ctx, pos, length, width) {
     ctx.stroke();
     ctx.rotate(-pos);
 }
+
+var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+if(isChrome){
+    document.getElementById('predat').style.display = 'block'
+} else{
+    document.getElementById('predat').style.display = 'none';
+}
+
+
 
 function getItems(){
     db.collection("todo-items").onSnapshot((snapshot) => {
