@@ -66,7 +66,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
 
 
 function fir1(event) {
-    var price = 'Price: $230';
+    var price = 'Price: $115';
     var balance = 'Balance: $5,757';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
@@ -82,7 +82,7 @@ function fir1(event) {
 }
 
 function fir2(event) {
-    var price = 'Price: $280';
+    var price = 'Price: $140';
     var balance = 'Balance: $7,000';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
@@ -98,7 +98,7 @@ function fir2(event) {
 }
 
 function fir3(event) {
-    var price = 'Price: $166';
+    var price = 'Price: $83';
     var balance = 'Balance: $4,040';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
@@ -115,7 +115,7 @@ function fir3(event) {
 
 
 function fir11(event) {
-    var price = 'Price: $5,230';
+    var price = 'Price: $2,615';
     var balance = 'Balance: $130,750';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
@@ -132,7 +132,7 @@ function fir11(event) {
 
 
 function fir14(event) {
-    var price = 'Price: $256';
+    var price = 'Price: $128';
     var balance = 'Balance: $6,422';
     var website = 'navyfederal.org';
     var info1 = 'Username + Password';
@@ -148,7 +148,7 @@ function fir14(event) {
 }
 
 function fir16(event) {
-    var price = 'Price: $676';
+    var price = 'Price: $338';
     var balance = 'Balance: $16,905';
     var website = 'td.com';
     var info1 = 'Online Access';
@@ -164,7 +164,7 @@ function fir16(event) {
 }
 
 function fir17(event) {
-    var price = 'Price: $162';
+    var price = 'Price: $81';
     var balance = 'Balance: $3,953';
     var website = 'td.com';
     var info1 = 'Online Access';
@@ -180,7 +180,7 @@ function fir17(event) {
 }
 
 function fir20(event) {
-    var price = 'Price: $134';
+    var price = 'Price: $67';
     var balance = 'Balance: $3,300';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
@@ -195,7 +195,7 @@ function fir20(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 function fir26(event) {
-    var price = 'Price: $412';
+    var price = 'Price: $206';
     var balance = 'Balance: $10,304';
     var website = 'citi.com';
     var info1 = 'Username + Password';
@@ -211,7 +211,7 @@ function fir26(event) {
 }
 
 function fir27(event) {
-    var price = 'Price: $258';
+    var price = 'Price: $129';
     var balance = 'Balance: $6,041';
     var website = 'navyfederal.org';
     var info1 = 'Username + Password';
@@ -227,7 +227,7 @@ function fir27(event) {
 }
 
 function fir28(event) {
-    var price = 'Price: $1,338';
+    var price = 'Price: $669';
     var balance = 'Balance: $33,475';
     var website = 'td.com';
     var info1 = 'Online Access';
@@ -244,7 +244,7 @@ function fir28(event) {
 
 
 function fir37(event) {
-    var price = 'Price: $1,777';
+    var price = 'Price: $888';
     var balance = 'Balance: $44,426';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
@@ -326,7 +326,7 @@ function fir37(event) {
 
 
 function uk1(event) {
-    var price = 'Price: $360';
+    var price = 'Price: $180';
     var balance = 'Balance: $9,000';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
@@ -342,7 +342,7 @@ function uk1(event) {
 }
 
 function uk2(event) {
-    var price = 'Price: $392';
+    var price = 'Price: $196';
     var balance = 'Balance: $9,804';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
@@ -358,7 +358,7 @@ function uk2(event) {
 }
 
 function uk3(event) {
-    var price = 'Price: $398';
+    var price = 'Price: $199';
     var balance = 'Balance: $9,978';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
@@ -374,7 +374,7 @@ function uk3(event) {
 }
 
 function uk5(event) {
-    var price = 'Price: $474';
+    var price = 'Price: $237';
     var balance = 'Balance: $11,871';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
@@ -391,7 +391,7 @@ function uk5(event) {
 
 
 function uk7(event) {
-    var price = 'Price: $502';
+    var price = 'Price: $251';
     var balance = 'Balance: $12,568';
     var website = 'citi.com';
     var info1 = 'Username + Password';
@@ -408,7 +408,7 @@ function uk7(event) {
 
 
 function uk13(event) {
-    var price = 'Price: $560';
+    var price = 'Price: $280';
     var balance = 'Balance: $14,015';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
@@ -424,7 +424,7 @@ function uk13(event) {
 }
 
 function uk18(event) {
-    var price = 'Price: $580';
+    var price = 'Price: $290';
     var balance = 'Balance: $14,218';
     var website = 'citi.com';
     var info1 = 'Login Access';
@@ -441,7 +441,7 @@ function uk18(event) {
 
 
 function uk26(event) {
-    var price = 'Price: $792';
+    var price = 'Price: $396';
     var balance = 'Balance: $19,909';
     var website = 'huntington.com';
     var info1 = 'Login Access';
@@ -458,7 +458,7 @@ function uk26(event) {
 
 
 function uk33(event) {
-    var price = 'Price: $1,346';
+    var price = 'Price: $673';
     var balance = 'Balance: $33,575';
     var website = 'ally.com';
     var info1 = 'Login Access';
@@ -477,7 +477,7 @@ function uk33(event) {
 
 
 function uk45(event) {
-    var price = 'Price: $5,608';
+    var price = 'Price: $2,804';
     var balance = 'Balance: $140,075';
     var website = 'bankofamerica.com';
     var info1 = 'Online Access';
