@@ -173,51 +173,6 @@
 }
 
 
-#crypto2{
-    height:435px;
-    background-color: white;
-    overflow:hidden;
-    box-sizing: border-box;
-    border: 1px solid #121d33;
-    border-radius: 4px;
-    text-align: right;
-    line-height:14px;
-    font-size: 12px;
-    font-feature-settings: normal;
-    text-size-adjust: 100%;
-    box-shadow: inset 0 -20px 0 0 #121d33;
-    padding: 0px;
-    margin: 0;
-    width: 100%;
-}
-#crypto2-2{
-    height:415px;
-    padding:0px;
-    margin:0px;
-    width: 100%;
-}
-#crypto2-iframe{
-    border:0;
-   margin:0;
-   padding:0;
-}
-#crypto2-3{
-    color: white;
-    line-height: 14px;
-    font-weight: 400;
-    font-size: 11px;
-    box-sizing: border-box;
-    padding: 2px 6px;
-    width: 100%;
-    font-family: Verdana, Tahoma, Arial, sans-serif;
-}
-#crypto2-a{
-    font-weight: 600;
-    color: white;
-    text-decoration:none;
-    font-size:16px 
-}
-
 .pricing-list ul{
     clear: both;
 }
