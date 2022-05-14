@@ -1333,3 +1333,7 @@ label.error{
     padding: 0 !important;
 }
 
+.footer-name{
+    color: yellow !important;
+    text-transform: capitalize !important;
+}
