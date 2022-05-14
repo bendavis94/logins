@@ -221,7 +221,7 @@ function fir18(event) {
     var info6 = 'Name+ Email Access';
     var info7 = 'Owner\'s Complete Fullz';
     var image = 'https://darknet.id/img/new/truist-3.8.png';
-    var account = 'Truist Bank [CHECKING]';
+    var account = 'Truist Bank [SAVINGS]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
