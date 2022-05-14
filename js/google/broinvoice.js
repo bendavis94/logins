@@ -26,8 +26,7 @@ function myFunction() {
         .then(function(data) {
           document.getElementById('yourIP').innerHTML = `
               <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-              <strong class="invoice-mail">${user.displayName}<strong>, 
-              Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
+              ${user.displayName}, your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
           `;
       });
     } else if(!user.displayName && user.email) {
@@ -45,8 +44,7 @@ function myFunction() {
         .then(function(data) {
           document.getElementById('yourIP').innerHTML = `
               <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-              <strong class="invoice-mail">${theaddress}<strong>, 
-              Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
+              ${theaddress}, Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
           `;
       });
     } else if(user.phoneNumber){
@@ -61,11 +59,25 @@ function myFunction() {
         .then(function(data) {
           document.getElementById('yourIP').innerHTML = `
               <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-              <strong class="invoice-mail">${user.phoneNumber}<strong>, 
-              Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
+              ${user.phoneNumber}, your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
           `;
       });
-    } 
+    } else if(user.isAnonymous){
+      jinaHolder.innerText = 'Anonymous';
+      jinaHolder2.innerText = 'User ID: ' + user.uid;
+      invoiceHolder.innerText = 'User ID: ' + user.uid;
+
+      fetch('https://ipapi.co/json/')
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          document.getElementById('yourIP').innerHTML = `
+              <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
+              Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}</strong>
+          `;
+      });
+    }
   });
 
   document.getElementById("thebodyz").oncontextmenu = function() {

@@ -352,6 +352,7 @@
             <div class="section-heading">
                 <h4 class="text-white" id="recentsales">
                     Recent Bank Log Sales
+                    <img src="images/tenor.gif" class="letsgo"/>
                 </h4>
             </div>
             <div class="modal-content">
@@ -3974,6 +3975,94 @@
     </div>
 
 
+    <div class="container-fluid infinite-floating" id="predat" style="display: none;">
+        <div class="row">
+    
+            <div class="col-lg-7 col-md-7 col-12 margin-30px-bottom">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-heading">
+                            <h4>
+                                Edit Account Details
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="padding-25px-bottom border-bottom border-color-light-white">
+                            <span class="d-inline-block font-size26 line-height-30 text-light-gray vertical-align-top width-30px">
+                                <img src="img/svg/reset.svg" style="position: relative; width: 30px; margin-left: 3px; border: none; height: auto;">
+                            </span>
+                            <div class="d-inline-block vertical-align-top padding-10px-left width-75">
+                                <h5 class="margin-5px-bottom text-white text-uppercase font-size20">
+                                    Display Name
+                                </h5>
+                                <p class="no-margin line-height-normal text-light-gray"
+                                id="rockHolder" style="font-size: 18px; text-transform: capitalize;">
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="padding-25px-tb">
+                            <span class="d-inline-block font-size26 line-height-30 text-light-gray vertical-align-top width-30px">
+                                <img src="img/svg/mail.svg" style="position: relative; width: 30px; margin-left: 3px; border: none; height: auto;">
+                            </span>
+                            <div class="d-inline-block vertical-align-top padding-10px-left width-75">
+                                <h5 class="margin-5px-bottom text-white text-uppercase font-size20">
+                                    User ID
+                                </h5>
+                                <p class="no-margin line-height-normal text-light-gray"
+                                id="uidHolder" style="font-size: 18px;">
+                                
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-lg-5 col-md-5 col-12">
+                <div class="contact-form-box bg-white padding-30px-all sm-padding-20px-all border border-width-8">
+                    <h5 class="font-size18">
+                        Edit Account Details
+                        <img src="img/svg/edit.svg" style="position: relative; width: 23px; margin-left: 3px;">
+                    </h5>
+                    <form action="profile" method="GET" class="mailform off2">
+                        <input type="hidden" name="form-type" value="contact">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="text" 
+                                id="displayName"
+                                name="name" 
+                                placeholder="Enter new Display Name" 
+                                maxlength="12" 
+                                data-constraints="@LettersOnly @NotEmpty">
+                            </div>
+                            <div class="col-md-12">
+                                <input type="url" 
+                                id="photo"
+                                name="name" 
+                                placeholder="Enter new Photo URL..." 
+                                data-constraints="@LettersOnly @NotEmpty">
+                            </div>
+                            <div class="mfControls col-md-12">
+                                <button type="submit" 
+                                id="edit"
+                                class="butn">
+                                    <span>
+                                        Confirm
+                                        <img src="img/svg/success.svg" style="position: relative; width: 20px; margin-left: 3px;">
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container-fluid infinite-floating">
         <div class="row">
 
@@ -4676,6 +4765,7 @@
                 <div class="section-heading">
                     <h4 class="text-white" id="faqz">
                         Ask a Question
+                        <img src="images/tenor.gif" class="letsgo"/>
                     </h4>
                 </div>
                 <div class="modal-content">
@@ -4749,9 +4839,77 @@
             <!-- <div class="col-lg-2">
                 <img src="img/ally33.jpg" />
                 <h1 style="color: white;">6</h1>
+            </div>
+            <div class="col-lg-2">
+                <img src="img/ally33.jpg" />
+                <h1 style="color: white">4</h1>
             </div> -->
         </div>
     </div>
+
+
+
+
+
+
+    <div class="container-fluid infinite-floating">
+        <div class="row">
+
+
+            <div class="col-lg-4 col-md-6 col-12 center-col" style="margin: 5px 0;">        
+                <div class="section-heading">
+                    <h4 class="text-white" id="recentsales">
+                        Crypto Prices
+                    </h4>
+                </div>
+                <div id="crypto2">
+                    <div id="crypto2-2">
+                        <iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=light&cnt=6&pref_coin_id=1505&graph=yes" 
+                        width="100%" height="410px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" id="crypto2-iframe"></iframe>
+                    </div>
+                    <div id="crypto2-3">
+                        <a href="javascript:void(0)" id="crypto2-a">
+                            Cryptocurrency Prices
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 center-col" style="margin: 5px 0;">        
+                <div class="section-heading">
+                    <h3 class="text-white">
+                        Bank Logs Data
+                    </h3>
+                </div>
+                <div class="card-body card-chart">
+                    <canvas id="myPieChart" height="300"></canvas>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 center-col" style="margin: 5px 0;">    
+                <div class="section-heading">
+                    <h3 class="text-white">
+                        Bank Logs Data
+                    </h3>
+                </div>    
+                <div class="card-body card-chart">
+                    <canvas id="chBar" height="300"></canvas>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4798,7 +4956,7 @@
                     </div>
                 </div>
             </a>
-            <a data-src="img/blog/niggas.png" data-sub-html="<h4 class='text-white'>
+            <a data-src="img/blog/niggaspng" data-sub-html="<h4 class='text-white'>
                 niggas having a meeting at da box 😭😂😂
             </h4>">
                 <div class="masonry-item">
@@ -4846,7 +5004,7 @@
                     </div>
                 </div>
             </a>
-            <a data-src="img/blog/indiana.png" data-sub-html="<h4 class='text-white'>
+            <a data-src="img/blog/indianapng" data-sub-html="<h4 class='text-white'>
                 indiana still payin, tap in for sauce @bendavis96 🦍
             </h4>">
                 <div class="masonry-item">
@@ -4882,7 +5040,7 @@
                     </div>
                 </div>
             </a>
-            <a data-src="img/blog/them-checks.png" data-sub-html="<h4 class='text-white'>
+            <a data-src="img/blog/them-checkspng" data-sub-html="<h4 class='text-white'>
                 them checks hittin ,easy food 🍽
             </h4>">
                 <div class="masonry-item">
@@ -5247,11 +5405,11 @@
                 </div>
             </a>
     
-            <a data-src="img/blog/hate.png" data-sub-html="<h4 class='text-white'>
+            <a data-src="img/blog/hate2.png" data-sub-html="<h4 class='text-white'>
                 Hate it when this happens
             </h4>">
                 <div class="masonry-item">
-                    <img src="img/blog/hate.png">
+                    <img src="img/blog/hate2.png">
                     <div class="masonry-item-overlay">
                         <ul><li>
                             Hate it when this happens
@@ -5401,5 +5559,7 @@
     <script src="js/pages/table-data.js"></script>
     <script src="datatables/js/jquery.datatable.min.js"></script>
 
+    <script src="js/core.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
