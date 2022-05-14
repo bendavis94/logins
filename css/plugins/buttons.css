@@ -1364,3 +1364,6 @@ label.error{
     }
     
 }
+.invoice-mail{
+    text-transform: capitalize !important;
+}
