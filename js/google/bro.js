@@ -24,17 +24,17 @@ function myFunction() {
       logoHolder.setAttribute("src", user.photoURL);
       logoHolder.style.borderRadius = '50%';
     }
-    if (user.isAnonymous) {
-      jinaHolder.innerText = 'Anonymous';
+    if (user.displayName && user.email) {
+      jinaHolder.innerText = user.displayName;
       jinaHolder2.innerText = 'USER ID: ' + user.uid;
-      emailInbox.innerHTML = `Forum open to persons over the age of 18 years.`;
+      emailInbox.innerHTML = `Check your email inbox spam folder <span>${user.email}</span> after buying any bank log.`;
 
       fetch('https://ipapi.co/json/')
         .then(function(response) {
           return response.json();
         })
         .then(function(data) {
-          document.getElementById('footer-email').innerHTML = `Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
+          document.getElementById('footer-email').innerHTML = `${user.displayName}, your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
       });
     } else if(!user.displayName && user.email) {
       var themail = user.email;
@@ -63,19 +63,19 @@ function myFunction() {
         .then(function(data) {
           document.getElementById('footer-email').innerHTML = `${user.phoneNumber}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
       });
-    } else if (user.displayName && user.email) {
-      jinaHolder.innerText = user.displayName;
+    } else if(user.isAnonymous){
+      jinaHolder.innerText = 'Anonymous';
       jinaHolder2.innerText = 'USER ID: ' + user.uid;
-      emailInbox.innerHTML = `Check your email inbox spam folder <span>${user.email}</span> after buying any bank log.`;
+      emailInbox.innerHTML = `Forum open to persons over the age of 18 years.`;
 
       fetch('https://ipapi.co/json/')
         .then(function(response) {
           return response.json();
         })
         .then(function(data) {
-          document.getElementById('footer-email').innerHTML = `${user.displayName}, your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
+          document.getElementById('footer-email').innerHTML = `Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
       });
-    } 
+    }
   });
 
   document.getElementById("thebodyz").oncontextmenu = function() {
