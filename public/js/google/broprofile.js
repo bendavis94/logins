@@ -36,16 +36,16 @@ function myFunction() {
 			logoHolder.setAttribute("src", user.photoURL);
 			logoHolder.style.borderRadius = '50%';
 		}
-		if (user.isAnonymous) {
-			jinaHolder.innerText = 'Anonymous';
+		if (user.displayName && user.email) {
+			jinaHolder.innerText = user.displayName;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			rockHolder.innerText = 'Anonymous';
-			tableidHolder.value = "Name: Anonymous";
+			rockHolder.innerText = user.displayName;
+			tableidHolder.value = "Name: " + user.displayName;
 			uidHolder.innerText = user.uid;
 
-			email1.innerHTML = `Bank log files can only be downloaded once, make sure you save them in a folder you won't forget`;
-			email2.innerHTML = `Use winrar software to extract bank log files after a successful download`;
-			email5.innerHTML = 'Logged in Anonymously, no email invoice will be sent, you can logout of the website and login again with an email or choose to remain anonymous';
+			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
+			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
+			email5.innerHTML = user.email;
 		} else if(!user.displayName && user.email) {
 			var themail = user.email;
 			var theaddress = themail.substring(0,themail.indexOf('@'));
@@ -69,25 +69,25 @@ function myFunction() {
 			email1.innerHTML = `Check your text messages for a link @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method link is also sent to your phone Number @:<strong>${user.phoneNumber}</strong>`;
 			email5.innerHTML = `Logged in with phone ${user.phoneNumber}, you will have to check your text messages inbox for a link`;
-		} else if (user.displayName && user.email) {
-			jinaHolder.innerText = user.displayName;
+		} else if(user.isAnonymous){
+			jinaHolder.innerText = 'Anonymous';
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			rockHolder.innerText = user.displayName;
-			tableidHolder.value = "Name: " + user.displayName;
+			rockHolder.innerText = 'Anonymous';
+			tableidHolder.value = "Name: Anonymous";
 			uidHolder.innerText = user.uid;
 
-			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
-			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
-			email5.innerHTML = user.email;
+			email1.innerHTML = `Bank log files can only be downloaded once, make sure you save them in a folder you won't forget`;
+			email2.innerHTML = `Use winrar software to extract bank log files after a successful download`;
+			email5.innerHTML = 'Logged in Anonymously, no email invoice will be sent, you can logout of the website and login again with an email or choose to remain anonymous';
 		}
 
 
 		let goodies = [];
 
-		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.isAnonymous){
+		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.displayName){
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
 			for(var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous';
+				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.displayName;
 			}
 		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && !user.displayName && user.email){
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
@@ -101,12 +101,12 @@ function myFunction() {
 			for(var i = 0; i < goodies.length; i++) {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
 			}
-		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.displayName){
+		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.isAnonymous){
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
 			for(var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.displayName;
+				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous';
 			}
-		} else {
+		}  else {
 			console.log('No items are present')
 		}
 	});
