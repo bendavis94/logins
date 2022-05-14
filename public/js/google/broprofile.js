@@ -30,7 +30,7 @@ function myFunction() {
 
 	auth.onAuthStateChanged(user => {
 		if (!user) {
-			// window.location.assign("index");
+			window.location.assign("index");
 		}
 		if (user.photoURL) {
 			logoHolder.setAttribute("src", user.photoURL);
@@ -96,51 +96,6 @@ function myFunction() {
 		}
 	});
 
-	const editInformation = () => {
-		const _0x9108xb = {
-			newDisplayName: displayNameField.value,
-			newPhotoURL: photoField.value
-		};
-		const user = auth.currentUser;
-		changeNameAndPhoto(user, _0x9108xb);
-	};
-	const changeNameAndPhoto = (user, _0x9108xb) => {
-		const {
-			newDisplayName,
-			newPhotoURL
-		} = _0x9108xb;
-		if (newDisplayName && newPhotoURL) {
-			user.updateProfile({
-				displayName: newDisplayName,
-				photoURL: newPhotoURL
-			}).then(() => {
-				alert("Profile Updated Successfully !");
-			}).catch(error => {
-				console.error(error);
-			});
-		} else {
-			if (newDisplayName) {
-				user.updateProfile({
-					displayName: newDisplayName
-				}).then(() => {
-					alert("Display Name Updated Successfully !");
-				}).catch(error => {
-					console.error(error);
-				});
-			} else {
-				if (newPhotoURL) {
-					user.updateProfile({
-						photoURL: newPhotoURL
-					}).then(() => {
-						alert("PhotoURL Updated Successfully !");
-					}).catch(error => {
-						console.error(error);
-					});
-				}
-			}
-		}
-	};
-	editButton.addEventListener("click", editInformation);
 
 	fetch('https://ipapi.co/json/')
 	.then(function(response) {
@@ -166,8 +121,6 @@ function myFunction() {
 	document.getElementById("thebodyz").oncontextmenu = function() {
 		return false
 	};
-
-
 
 
 	document.getElementById('file').addEventListener('change', (event) => {
@@ -295,15 +248,6 @@ function drawHand(ctx, pos, length, width) {
     ctx.stroke();
     ctx.rotate(-pos);
 }
-
-var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
-if(isChrome){
-    document.getElementById('predat').style.display = 'block'
-} else{
-    document.getElementById('predat').style.display = 'none';
-}
-
-
 
 function getItems(){
     db.collection("todo-items").onSnapshot((snapshot) => {
