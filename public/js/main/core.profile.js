@@ -201,3 +201,973 @@ https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
 )(jQuery);
 
 
+(jQuery),
+function(t, e) {
+	"function" == typeof define && define.amd ? define(["jquery"], e) : "object" == typeof module && module.exports ? module.exports = e(require("jquery")) : e(t.jQuery)
+}(this, function(f) {
+	! function() {
+		"use strict";
+		var i = {
+			mode: "lg-slide",
+			cssEasing: "ease",
+			easing: "linear",
+			speed: 600,
+			height: "100%",
+			width: "100%",
+			addClass: "",
+			startClass: "lg-start-zoom",
+			backdropDuration: 150,
+			hideBarsDelay: 6e3,
+			useLeft: !1,
+			ariaLabelledby: "",
+			ariaDescribedby: "",
+			closable: !0,
+			loop: !0,
+			escKey: !0,
+			keyPress: !0,
+			controls: !0,
+			slideEndAnimatoin: !0,
+			hideControlOnEnd: !1,
+			mousewheel: !0,
+			getCaptionFromTitleOrAlt: !0,
+			appendSubHtmlTo: ".lg-sub-html",
+			subHtmlSelectorRelative: !1,
+			preload: 1,
+			showAfterLoad: !0,
+			selector: "",
+			selectWithin: "",
+			nextHtml: "",
+			prevHtml: "",
+			index: !1,
+			iframeMaxWidth: "100%",
+			download: !0,
+			counter: !0,
+			appendCounterTo: ".lg-toolbar",
+			swipeThreshold: 50,
+			enableSwipe: !0,
+			enableDrag: !0,
+			dynamic: !1,
+			dynamicEl: [],
+			galleryId: 1,
+			supportLegacyBrowser: !0
+		};
+
+		function e(t, e) {
+			if (this.el = t, this.$el = f(t), this.s = f.extend({}, i, e), this.s.dynamic && "undefined" !== this.s.dynamicEl && this.s.dynamicEl.constructor === Array && !this.s.dynamicEl.length) throw "When using dynamic mode, you must also define dynamicEl as an Array.";
+			return this.modules = {}, this.lGalleryOn = !1, this.lgBusy = !1, this.hideBarTimeout = !1, this.isTouch = "ontouchstart" in document.documentElement, this.s.slideEndAnimatoin && (this.s.hideControlOnEnd = !1), this.s.dynamic ? this.$items = this.s.dynamicEl : "this" === this.s.selector ? this.$items = this.$el : "" !== this.s.selector ? this.s.selectWithin ? this.$items = f(this.s.selectWithin).find(this.s.selector) : this.$items = this.$el.find(f(this.s.selector)) : this.$items = this.$el.children(), this.$slide = "", this.$outer = "", this.init(), this
+		}
+		e.prototype.init = function() {
+			var t = this;
+			t.s.preload > t.$items.length && (t.s.preload = t.$items.length);
+			var e = window.location.hash;
+			0 < e.indexOf("lg=" + this.s.galleryId) && (t.index = parseInt(e.split("&slide=")[1], 10), f("body").addClass("lg-from-hash"), f("body").hasClass("lg-on") || (setTimeout(function() {
+				t.build(t.index)
+			}), f("body").addClass("lg-on"))), t.s.dynamic ? (t.$el.trigger("onBeforeOpen.lg"), t.index = t.s.index || 0, f("body").hasClass("lg-on") || setTimeout(function() {
+				t.build(t.index), f("body").addClass("lg-on")
+			})) : t.$items.on("click.lgcustom", function(e) {
+				try {
+					e.preventDefault(), e.preventDefault()
+				} catch (t) {
+					e.returnValue = !1
+				}
+				t.$el.trigger("onBeforeOpen.lg"), t.index = t.s.index || t.$items.index(this), f("body").hasClass("lg-on") || (t.build(t.index), f("body").addClass("lg-on"))
+			})
+		}, e.prototype.build = function(t) {
+			var e = this;
+			e.structure(), f.each(f.fn.lightGallery.modules, function(t) {
+				e.modules[t] = new f.fn.lightGallery.modules[t](e.el)
+			}), e.slide(t, !1, !1, !1), e.s.keyPress && e.keyPress(), 1 < e.$items.length ? (e.arrow(), setTimeout(function() {
+				e.enableDrag(), e.enableSwipe()
+			}, 50), e.s.mousewheel && e.mousewheel()) : e.$slide.on("click.lg", function() {
+				e.$el.trigger("onSlideClick.lg")
+			}), e.counter(), e.closeGallery(), e.$el.trigger("onAfterOpen.lg"), 0 < e.s.hideBarsDelay && e.$outer.on("mousemove.lg click.lg touchstart.lg", function() {
+				e.$outer.removeClass("lg-hide-items"), clearTimeout(e.hideBarTimeout), e.hideBarTimeout = setTimeout(function() {
+					e.$outer.addClass("lg-hide-items")
+				}, e.s.hideBarsDelay)
+			}), e.$outer.trigger("mousemove.lg")
+		}, e.prototype.structure = function() {
+			var t = "",
+				e = "",
+				i = 0,
+				n = "",
+				o = this;
+			for (f("body").append('<div class="lg-backdrop"></div>'), f(".lg-backdrop").css("transition-duration", this.s.backdropDuration + "ms"), i = 0; i < this.$items.length; i++) t += '<div class="lg-item"></div>';
+			this.s.controls && 1 < this.$items.length && (e = '<div class="lg-actions"><button type="button" aria-label="Previous slide" class="lg-prev lg-icon">' + this.s.prevHtml + '</button><button type="button" aria-label="Next slide" class="lg-next lg-icon">' + this.s.nextHtml + "</button></div>"), ".lg-sub-html" === this.s.appendSubHtmlTo && (n = '<div role="status" aria-live="polite" class="lg-sub-html"></div>');
+			var n = '<div tabindex="-1" aria-modal="true" ' + (this.s.ariaLabelledby ? 'aria-labelledby="' + this.s.ariaLabelledby + '"' : "") + " " + (this.s.ariaDescribedby ? 'aria-describedby="' + this.s.ariaDescribedby + '"' : "") + ' role="dialog" class="lg-outer ' + this.s.addClass + " " + this.s.startClass + '"><div class="lg" style="width:' + this.s.width + "; height:" + this.s.height + '"><div class="lg-inner">' + t + '</div><div class="lg-toolbar lg-group"><button type="button" aria-label="Close gallery" class="lg-close lg-icon"></button></div>' + e + n + "</div></div>";
+			f("body").append(n), this.$outer = f(".lg-outer"), this.$outer.focus(), this.$slide = this.$outer.find(".lg-item"), this.s.useLeft ? (this.$outer.addClass("lg-use-left"), this.s.mode = "lg-slide") : this.$outer.addClass("lg-use-css3"), o.setTop(), f(window).on("resize.lg orientationchange.lg", function() {
+				setTimeout(function() {
+					o.setTop()
+				}, 100)
+			}), this.$slide.eq(this.index).addClass("lg-current"), this.doCss() ? this.$outer.addClass("lg-css3") : (this.$outer.addClass("lg-css"), this.s.speed = 0), this.$outer.addClass(this.s.mode), this.s.enableDrag && 1 < this.$items.length && this.$outer.addClass("lg-grab"), this.s.showAfterLoad && this.$outer.addClass("lg-show-after-load"), this.doCss() && ((n = this.$outer.find(".lg-inner")).css("transition-timing-function", this.s.cssEasing), n.css("transition-duration", this.s.speed + "ms")), setTimeout(function() {
+				f(".lg-backdrop").addClass("in")
+			}), setTimeout(function() {
+				o.$outer.addClass("lg-visible")
+			}, this.s.backdropDuration), this.s.download && this.$outer.find(".lg-toolbar").append('<a id="lg-download" aria-label="Download" target="_blank" download class="lg-download lg-icon"></a>'), this.prevScrollTop = f(window).scrollTop()
+		}, e.prototype.setTop = function() {
+			var t, e, i;
+			"100%" !== this.s.height && (e = ((t = f(window).height()) - parseInt(this.s.height, 10)) / 2, i = this.$outer.find(".lg"), t >= parseInt(this.s.height, 10) ? i.css("top", e + "px") : i.css("top", "0px"))
+		}, e.prototype.doCss = function() {
+			return !! function() {
+				for (var t = ["transition", "MozTransition", "WebkitTransition", "OTransition", "msTransition", "KhtmlTransition"], e = document.documentElement, i = 0, i = 0; i < t.length; i++)
+					if (t[i] in e.style) return !0
+			}()
+		}, e.prototype.isVideo = function(t, e) {
+			var i = this.s.dynamic ? this.s.dynamicEl[e].html : this.$items.eq(e).attr("data-html");
+			if (!t) return i ? {
+				html5: !0
+			} : (console.error("lightGallery :- data-src is not provided on slide item " + (e + 1) + ". Please make sure the selector property is properly configured. More info - http://sachinchoolur.github.io/lightGallery/demos/html-markup.html"), !1);
+			var n = t.match(/\/\/(?:www\.)?youtu(?:\.be|be\.com|be-nocookie\.com)\/(?:watch\?v=|embed\/)?([a-z0-9\-\_\%]+)/i),
+				i = t.match(/\/\/(?:www\.)?vimeo.com\/([0-9a-z\-_]+)/i),
+				e = t.match(/\/\/(?:www\.)?dai.ly\/([0-9a-z\-_]+)/i),
+				t = t.match(/\/\/(?:www\.)?(?:vk\.com|vkontakte\.ru)\/(?:video_ext\.php\?)(.*)/i);
+			return n ? {
+				youtube: n
+			} : i ? {
+				vimeo: i
+			} : e ? {
+				dailymotion: e
+			} : t ? {
+				vk: t
+			} : void 0
+		}, e.prototype.counter = function() {
+			this.s.counter && f(this.s.appendCounterTo).append('<div id="lg-counter" role="status" aria-live="polite"><span id="lg-counter-current">' + (parseInt(this.index, 10) + 1) + '</span> / <span id="lg-counter-all">' + this.$items.length + "</span></div>")
+		}, e.prototype.addHtml = function(t) {
+			var e, i, n, o = null;
+			this.s.dynamic ? this.s.dynamicEl[t].subHtmlUrl ? e = this.s.dynamicEl[t].subHtmlUrl : o = this.s.dynamicEl[t].subHtml : (i = this.$items.eq(t)).attr("data-sub-html-url") ? e = i.attr("data-sub-html-url") : (o = i.attr("data-sub-html"), this.s.getCaptionFromTitleOrAlt && !o && (o = i.attr("title") || i.find("img").first().attr("alt"))), e || (null != o ? "." !== (n = o.substring(0, 1)) && "#" !== n || (o = (this.s.subHtmlSelectorRelative && !this.s.dynamic ? i.find(o) : f(o)).html()) : o = ""), ".lg-sub-html" === this.s.appendSubHtmlTo ? e ? this.$outer.find(this.s.appendSubHtmlTo).load(e) : this.$outer.find(this.s.appendSubHtmlTo).html(o) : e ? this.$slide.eq(t).load(e) : this.$slide.eq(t).append(o), null != o && ("" === o ? this.$outer.find(this.s.appendSubHtmlTo).addClass("lg-empty-html") : this.$outer.find(this.s.appendSubHtmlTo).removeClass("lg-empty-html")), this.$el.trigger("onAfterAppendSubHtml.lg", [t])
+		}, e.prototype.preload = function(t) {
+			for (var e = 1, i = 1, e = 1; e <= this.s.preload && !(e >= this.$items.length - t); e++) this.loadContent(t + e, !1, 0);
+			for (i = 1; i <= this.s.preload && !(t - i < 0); i++) this.loadContent(t - i, !1, 0)
+		}, e.prototype.loadContent = function(e, t, i) {
+			var n, r, o, a, s, l, h = this,
+				d = !1,
+				c = function(t) {
+					for (var e = [], i = [], n = 0; n < t.length; n++) {
+						var o = t[n].split(" ");
+						"" === o[0] && o.splice(0, 1), i.push(o[0]), e.push(o[1])
+					}
+					for (var a = f(window).width(), s = 0; s < e.length; s++)
+						if (parseInt(e[s], 10) > a) {
+							r = i[s];
+							break
+						}
+				},
+				u = h.s.dynamic ? (h.s.dynamicEl[e].poster && (d = !0, o = h.s.dynamicEl[e].poster), s = h.s.dynamicEl[e].html, r = h.s.dynamicEl[e].src, l = h.s.dynamicEl[e].alt, h.s.dynamicEl[e].responsive && c(h.s.dynamicEl[e].responsive.split(",")), a = h.s.dynamicEl[e].srcset, h.s.dynamicEl[e].sizes) : ((p = h.$items.eq(e)).attr("data-poster") && (d = !0, o = p.attr("data-poster")), s = p.attr("data-html"), r = p.attr("href") || p.attr("data-src"), l = p.attr("title") || p.find("img").first().attr("alt"), p.attr("data-responsive") && c(p.attr("data-responsive").split(",")), a = p.attr("data-srcset"), p.attr("data-sizes")),
+				c = !1;
+			h.s.dynamic ? h.s.dynamicEl[e].iframe && (c = !0) : "true" === h.$items.eq(e).attr("data-iframe") && (c = !0);
+			var p = h.isVideo(r, e);
+			if (!h.$slide.eq(e).hasClass("lg-loaded")) {
+				if (c ? h.$slide.eq(e).prepend('<div class="lg-video-cont lg-has-iframe" style="max-width:' + h.s.iframeMaxWidth + '"><div class="lg-video"><iframe class="lg-object" frameborder="0" src="' + r + '"  allowfullscreen="true"></iframe></div></div>') : d ? (c = "", c = p && p.youtube ? "lg-has-youtube" : p && p.vimeo ? "lg-has-vimeo" : "lg-has-html5", h.$slide.eq(e).prepend('<div class="lg-video-cont ' + c + ' "><div class="lg-video"><span class="lg-video-play"></span><img class="lg-object lg-has-poster" src="' + o + '" /></div></div>')) : p ? (h.$slide.eq(e).prepend('<div class="lg-video-cont "><div class="lg-video"></div></div>'), h.$el.trigger("hasVideo.lg", [e, r, s])) : (l = l ? 'alt="' + l + '"' : "", h.$slide.eq(e).prepend('<div class="lg-img-wrap"><img class="lg-object lg-image" ' + l + ' src="' + r + '" /></div>')), h.$el.trigger("onAferAppendSlide.lg", [e]), n = h.$slide.eq(e).find(".lg-object"), u && n.attr("sizes", u), a && (n.attr("srcset", a), this.s.supportLegacyBrowser)) try {
+					picturefill({
+						elements: [n[0]]
+					})
+				} catch (t) {
+					console.warn("lightGallery :- If you want srcset to be supported for older browser please include picturefil version 2 javascript library in your document.")
+				}
+				".lg-sub-html" !== this.s.appendSubHtmlTo && h.addHtml(e), h.$slide.eq(e).addClass("lg-loaded")
+			}
+			h.$slide.eq(e).find(".lg-object").on("load.lg error.lg", function() {
+				var t = 0;
+				i && !f("body").hasClass("lg-from-hash") && (t = i), setTimeout(function() {
+					h.$slide.eq(e).addClass("lg-complete"), h.$el.trigger("onSlideItemLoad.lg", [e, i || 0])
+				}, t)
+			}), p && p.html5 && !d && h.$slide.eq(e).addClass("lg-complete"), !0 === t && (h.$slide.eq(e).hasClass("lg-complete") ? h.preload(e) : h.$slide.eq(e).find(".lg-object").on("load.lg error.lg", function() {
+				h.preload(e)
+			}))
+		}, e.prototype.slide = function(t, e, i, n) {
+			var o, a, s, r, l, h = this.$outer.find(".lg-current").index(),
+				d = this;
+			d.lGalleryOn && h === t || (o = this.$slide.length, a = d.lGalleryOn ? this.s.speed : 0, d.lgBusy || (this.s.download && ((s = d.s.dynamic ? !1 !== d.s.dynamicEl[t].downloadUrl && (d.s.dynamicEl[t].downloadUrl || d.s.dynamicEl[t].src) : "false" !== d.$items.eq(t).attr("data-download-url") && (d.$items.eq(t).attr("data-download-url") || d.$items.eq(t).attr("href") || d.$items.eq(t).attr("data-src"))) ? (f("#lg-download").attr("href", s), d.$outer.removeClass("lg-hide-download")) : d.$outer.addClass("lg-hide-download")), this.$el.trigger("onBeforeSlide.lg", [h, t, e, i]), d.lgBusy = !0, clearTimeout(d.hideBarTimeout), ".lg-sub-html" === this.s.appendSubHtmlTo && setTimeout(function() {
+				d.addHtml(t)
+			}, a), this.arrowDisable(t), n || (t < h ? n = "prev" : h < t && (n = "next")), e ? (this.$slide.removeClass("lg-prev-slide lg-current lg-next-slide"), 2 < o ? (r = t - 1, l = t + 1, (0 === t && h === o - 1 || t === o - 1 && 0 === h) && (l = 0, r = o - 1)) : (r = 0, l = 1), "prev" === n ? d.$slide.eq(l).addClass("lg-next-slide") : d.$slide.eq(r).addClass("lg-prev-slide"), d.$slide.eq(t).addClass("lg-current")) : (d.$outer.addClass("lg-no-trans"), this.$slide.removeClass("lg-prev-slide lg-next-slide"), "prev" === n ? (this.$slide.eq(t).addClass("lg-prev-slide"), this.$slide.eq(h).addClass("lg-next-slide")) : (this.$slide.eq(t).addClass("lg-next-slide"), this.$slide.eq(h).addClass("lg-prev-slide")), setTimeout(function() {
+				d.$slide.removeClass("lg-current"), d.$slide.eq(t).addClass("lg-current"), d.$outer.removeClass("lg-no-trans")
+			}, 50)), d.lGalleryOn ? (setTimeout(function() {
+				d.loadContent(t, !0, 0)
+			}, this.s.speed + 50), setTimeout(function() {
+				d.lgBusy = !1, d.$el.trigger("onAfterSlide.lg", [h, t, e, i])
+			}, this.s.speed)) : (d.loadContent(t, !0, d.s.backdropDuration), d.lgBusy = !1, d.$el.trigger("onAfterSlide.lg", [h, t, e, i])), d.lGalleryOn = !0, this.s.counter && f("#lg-counter-current").text(t + 1)), d.index = t)
+		}, e.prototype.goToNextSlide = function(t) {
+			var e = this,
+				i = e.s.loop;
+			t && e.$slide.length < 3 && (i = !1), e.lgBusy || (e.index + 1 < e.$slide.length ? (e.index++, e.$el.trigger("onBeforeNextSlide.lg", [e.index]), e.slide(e.index, t, !1, "next")) : i ? (e.index = 0, e.$el.trigger("onBeforeNextSlide.lg", [e.index]), e.slide(e.index, t, !1, "next")) : e.s.slideEndAnimatoin && !t && (e.$outer.addClass("lg-right-end"), setTimeout(function() {
+				e.$outer.removeClass("lg-right-end")
+			}, 400)))
+		}, e.prototype.goToPrevSlide = function(t) {
+			var e = this,
+				i = e.s.loop;
+			t && e.$slide.length < 3 && (i = !1), e.lgBusy || (0 < e.index ? (e.index--, e.$el.trigger("onBeforePrevSlide.lg", [e.index, t]), e.slide(e.index, t, !1, "prev")) : i ? (e.index = e.$items.length - 1, e.$el.trigger("onBeforePrevSlide.lg", [e.index, t]), e.slide(e.index, t, !1, "prev")) : e.s.slideEndAnimatoin && !t && (e.$outer.addClass("lg-left-end"), setTimeout(function() {
+				e.$outer.removeClass("lg-left-end")
+			}, 400)))
+		}, e.prototype.keyPress = function() {
+			var e = this;
+			1 < this.$items.length && f(window).on("keyup.lg", function(t) {
+				1 < e.$items.length && (37 === t.keyCode && (t.preventDefault(), e.goToPrevSlide()), 39 === t.keyCode && (t.preventDefault(), e.goToNextSlide()))
+			}), f(window).on("keydown.lg", function(t) {
+				!0 === e.s.escKey && 27 === t.keyCode && (t.preventDefault(), e.$outer.hasClass("lg-thumb-open") ? e.$outer.removeClass("lg-thumb-open") : e.destroy())
+			})
+		}, e.prototype.arrow = function() {
+			var t = this;
+			this.$outer.find(".lg-prev").on("click.lg", function() {
+				t.goToPrevSlide()
+			}), this.$outer.find(".lg-next").on("click.lg", function() {
+				t.goToNextSlide()
+			})
+		}, e.prototype.arrowDisable = function(t) {
+			!this.s.loop && this.s.hideControlOnEnd && (t + 1 < this.$slide.length ? this.$outer.find(".lg-next").removeAttr("disabled").removeClass("disabled") : this.$outer.find(".lg-next").attr("disabled", "disabled").addClass("disabled"), 0 < t ? this.$outer.find(".lg-prev").removeAttr("disabled").removeClass("disabled") : this.$outer.find(".lg-prev").attr("disabled", "disabled").addClass("disabled"))
+		}, e.prototype.setTranslate = function(t, e, i) {
+			this.s.useLeft ? t.css("left", e) : t.css({
+				transform: "translate3d(" + e + "px, " + i + "px, 0px)"
+			})
+		}, e.prototype.touchMove = function(t, e) {
+			t = e - t;
+			15 < Math.abs(t) && (this.$outer.addClass("lg-dragging"), this.setTranslate(this.$slide.eq(this.index), t, 0), this.setTranslate(f(".lg-prev-slide"), -this.$slide.eq(this.index).width() + t, 0), this.setTranslate(f(".lg-next-slide"), this.$slide.eq(this.index).width() + t, 0))
+		}, e.prototype.touchEnd = function(t) {
+			var e = this;
+			"lg-slide" !== e.s.mode && e.$outer.addClass("lg-slide"), this.$slide.not(".lg-current, .lg-prev-slide, .lg-next-slide").css("opacity", "0"), setTimeout(function() {
+				e.$outer.removeClass("lg-dragging"), t < 0 && Math.abs(t) > e.s.swipeThreshold ? e.goToNextSlide(!0) : 0 < t && Math.abs(t) > e.s.swipeThreshold ? e.goToPrevSlide(!0) : Math.abs(t) < 5 && e.$el.trigger("onSlideClick.lg"), e.$slide.removeAttr("style")
+			}), setTimeout(function() {
+				e.$outer.hasClass("lg-dragging") || "lg-slide" === e.s.mode || e.$outer.removeClass("lg-slide")
+			}, e.s.speed + 100)
+		}, e.prototype.enableSwipe = function() {
+			var e = this,
+				i = 0,
+				n = 0,
+				o = !1;
+			e.s.enableSwipe && e.doCss() && (e.$slide.on("touchstart.lg", function(t) {
+				e.$outer.hasClass("lg-zoomed") || e.lgBusy || (t.preventDefault(), e.manageSwipeClass(), i = t.originalEvent.targetTouches[0].pageX)
+			}), e.$slide.on("touchmove.lg", function(t) {
+				e.$outer.hasClass("lg-zoomed") || (t.preventDefault(), n = t.originalEvent.targetTouches[0].pageX, e.touchMove(i, n), o = !0)
+			}), e.$slide.on("touchend.lg", function() {
+				e.$outer.hasClass("lg-zoomed") || (o ? (o = !1, e.touchEnd(n - i)) : e.$el.trigger("onSlideClick.lg"))
+			}))
+		}, e.prototype.enableDrag = function() {
+			var e = this,
+				i = 0,
+				n = 0,
+				o = !1,
+				a = !1;
+			e.s.enableDrag && e.doCss() && (e.$slide.on("mousedown.lg", function(t) {
+				e.$outer.hasClass("lg-zoomed") || e.lgBusy || f(t.target).text().trim() || (t.preventDefault(), e.manageSwipeClass(), i = t.pageX, o = !0, e.$outer.scrollLeft += 1, --e.$outer.scrollLeft, e.$outer.removeClass("lg-grab").addClass("lg-grabbing"), e.$el.trigger("onDragstart.lg"))
+			}), f(window).on("mousemove.lg", function(t) {
+				o && (a = !0, n = t.pageX, e.touchMove(i, n), e.$el.trigger("onDragmove.lg"))
+			}), f(window).on("mouseup.lg", function(t) {
+				a ? (a = !1, e.touchEnd(n - i), e.$el.trigger("onDragend.lg")) : (f(t.target).hasClass("lg-object") || f(t.target).hasClass("lg-video-play")) && e.$el.trigger("onSlideClick.lg"), o && (o = !1, e.$outer.removeClass("lg-grabbing").addClass("lg-grab"))
+			}))
+		}, e.prototype.manageSwipeClass = function() {
+			var t = this.index + 1,
+				e = this.index - 1;
+			this.s.loop && 2 < this.$slide.length && (0 === this.index ? e = this.$slide.length - 1 : this.index === this.$slide.length - 1 && (t = 0)), this.$slide.removeClass("lg-next-slide lg-prev-slide"), -1 < e && this.$slide.eq(e).addClass("lg-prev-slide"), this.$slide.eq(t).addClass("lg-next-slide")
+		}, e.prototype.mousewheel = function() {
+			var e = this;
+			e.$outer.on("mousewheel.lg", function(t) {
+				t.deltaY && (0 < t.deltaY ? e.goToPrevSlide() : e.goToNextSlide(), t.preventDefault())
+			})
+		}, e.prototype.closeGallery = function() {
+			var e = this,
+				i = !1;
+			this.$outer.find(".lg-close").on("click.lg", function() {
+				e.destroy()
+			}), e.s.closable && (e.$outer.on("mousedown.lg", function(t) {
+				i = !!(f(t.target).is(".lg-outer") || f(t.target).is(".lg-item ") || f(t.target).is(".lg-img-wrap"))
+			}), e.$outer.on("mousemove.lg", function() {
+				i = !1
+			}), e.$outer.on("mouseup.lg", function(t) {
+				(f(t.target).is(".lg-outer") || f(t.target).is(".lg-item ") || f(t.target).is(".lg-img-wrap") && i) && (e.$outer.hasClass("lg-dragging") || e.destroy())
+			}))
+		}, e.prototype.destroy = function(t) {
+			var e = this;
+			t || (e.$el.trigger("onBeforeClose.lg"), f(window).scrollTop(e.prevScrollTop)), t && (e.s.dynamic || this.$items.off("click.lg click.lgcustom"), f.removeData(e.el, "lightGallery")), this.$el.off(".lg.tm"), f.each(f.fn.lightGallery.modules, function(t) {
+				e.modules[t] && e.modules[t].destroy()
+			}), this.lGalleryOn = !1, clearTimeout(e.hideBarTimeout), this.hideBarTimeout = !1, f(window).off(".lg"), f("body").removeClass("lg-on lg-from-hash"), e.$outer && e.$outer.removeClass("lg-visible"), f(".lg-backdrop").removeClass("in"), setTimeout(function() {
+				e.$outer && e.$outer.remove(), f(".lg-backdrop").remove(), t || e.$el.trigger("onCloseAfter.lg"), e.$el.focus()
+			}, e.s.backdropDuration + 50)
+		}, f.fn.lightGallery = function(t) {
+			return this.each(function() {
+				if (f.data(this, "lightGallery")) try {
+					f(this).data("lightGallery").init()
+				} catch (t) {
+					console.error("lightGallery has not initiated properly", t)
+				} else f.data(this, "lightGallery", new e(this, t))
+			})
+		}, f.fn.lightGallery.modules = {}
+	}()
+}),
+function(t, e) {
+	"function" == typeof define && define.amd ? define(["jquery"], e) : "object" == typeof module && module.exports ? module.exports = e(require("jquery")) : e(t.jQuery)
+}(this, function(i) {
+	! function() {
+		"use strict";
+
+		function t(t) {
+			return this.core = i(t).data("lightGallery"), this.$el = i(t), !(this.core.$items.length < 2) && (this.core.s = i.extend({}, e, this.core.s), this.interval = !1, this.fromAuto = !0, this.canceledOnTouch = !1, this.fourceAutoplayTemp = this.core.s.fourceAutoplay, this.core.doCss() || (this.core.s.progressBar = !1), this.init(), this)
+		}
+		var e = {
+			autoplay: !1,
+			pause: 5e3,
+			progressBar: !0,
+			fourceAutoplay: !1,
+			autoplayControls: !0,
+			appendAutoplayControlsTo: ".lg-toolbar"
+		};
+		t.prototype.init = function() {
+			var t = this;
+			t.core.s.autoplayControls && t.controls(), t.core.s.progressBar && t.core.$outer.find(".lg").append('<div class="lg-progress-bar"><div class="lg-progress"></div></div>'), t.progress(), t.core.s.autoplay && t.$el.one("onSlideItemLoad.lg.tm", function() {
+				t.startlAuto()
+			}), t.$el.on("onDragstart.lg.tm touchstart.lg.tm", function() {
+				t.interval && (t.cancelAuto(), t.canceledOnTouch = !0)
+			}), t.$el.on("onDragend.lg.tm touchend.lg.tm onSlideClick.lg.tm", function() {
+				!t.interval && t.canceledOnTouch && (t.startlAuto(), t.canceledOnTouch = !1)
+			})
+		}, t.prototype.progress = function() {
+			var t, e, i = this;
+			i.$el.on("onBeforeSlide.lg.tm", function() {
+				i.core.s.progressBar && i.fromAuto && (t = i.core.$outer.find(".lg-progress-bar"), e = i.core.$outer.find(".lg-progress"), i.interval && (e.removeAttr("style"), t.removeClass("lg-start"), setTimeout(function() {
+					e.css("transition", "width " + (i.core.s.speed + i.core.s.pause) + "ms ease 0s"), t.addClass("lg-start")
+				}, 20))), i.fromAuto || i.core.s.fourceAutoplay || i.cancelAuto(), i.fromAuto = !1
+			})
+		}, t.prototype.controls = function() {
+			var t = this;
+			i(this.core.s.appendAutoplayControlsTo).append('<button type="button" aria-label="Toggle autoplay" class="lg-autoplay-button lg-icon"></button>'), t.core.$outer.find(".lg-autoplay-button").on("click.lg", function() {
+				i(t.core.$outer).hasClass("lg-show-autoplay") ? (t.cancelAuto(), t.core.s.fourceAutoplay = !1) : t.interval || (t.startlAuto(), t.core.s.fourceAutoplay = t.fourceAutoplayTemp)
+			})
+		}, t.prototype.startlAuto = function() {
+			var t = this;
+			t.core.$outer.find(".lg-progress").css("transition", "width " + (t.core.s.speed + t.core.s.pause) + "ms ease 0s"), t.core.$outer.addClass("lg-show-autoplay"), t.core.$outer.find(".lg-progress-bar").addClass("lg-start"), t.interval = setInterval(function() {
+				t.core.index + 1 < t.core.$items.length ? t.core.index++ : t.core.index = 0, t.fromAuto = !0, t.core.slide(t.core.index, !1, !1, "next")
+			}, t.core.s.speed + t.core.s.pause)
+		}, t.prototype.cancelAuto = function() {
+			clearInterval(this.interval), this.interval = !1, this.core.$outer.find(".lg-progress").removeAttr("style"), this.core.$outer.removeClass("lg-show-autoplay"), this.core.$outer.find(".lg-progress-bar").removeClass("lg-start")
+		}, t.prototype.destroy = function() {
+			this.cancelAuto(), this.core.$outer.find(".lg-progress-bar").remove()
+		}, i.fn.lightGallery.modules.autoplay = t
+	}()
+}),
+function(t, e) {
+	"function" == typeof define && define.amd ? define(["jquery"], e) : "object" == typeof module && module.exports ? module.exports = e(require("jquery")) : e(t.jQuery)
+}(this, function(n) {
+	! function() {
+		"use strict";
+		var e = {
+			fullScreen: !0
+		};
+
+		function i() {
+			return document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement
+		}
+
+		function t(t) {
+			return this.core = n(t).data("lightGallery"), this.$el = n(t), this.core.s = n.extend({}, e, this.core.s), this.init(), this
+		}
+		t.prototype.init = function() {
+			this.core.s.fullScreen && (document.fullscreenEnabled || document.webkitFullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled) && (this.core.$outer.find(".lg-toolbar").append('<button type="button" aria-label="Toggle fullscreen" class="lg-fullscreen lg-icon"></button>'), this.fullScreen())
+		}, t.prototype.requestFullscreen = function() {
+			var t = document.documentElement;
+			t.requestFullscreen ? t.requestFullscreen() : t.msRequestFullscreen ? t.msRequestFullscreen() : t.mozRequestFullScreen ? t.mozRequestFullScreen() : t.webkitRequestFullscreen && t.webkitRequestFullscreen()
+		}, t.prototype.exitFullscreen = function() {
+			document.exitFullscreen ? document.exitFullscreen() : document.msExitFullscreen ? document.msExitFullscreen() : document.mozCancelFullScreen ? document.mozCancelFullScreen() : document.webkitExitFullscreen && document.webkitExitFullscreen()
+		}, t.prototype.fullScreen = function() {
+			var t = this;
+			n(document).on("fullscreenchange.lg webkitfullscreenchange.lg mozfullscreenchange.lg MSFullscreenChange.lg", function() {
+				t.core.$outer.toggleClass("lg-fullscreen-on")
+			}), this.core.$outer.find(".lg-fullscreen").on("click.lg", function() {
+				i() ? t.exitFullscreen() : t.requestFullscreen()
+			})
+		}, t.prototype.destroy = function() {
+			i() && this.exitFullscreen(), n(document).off("fullscreenchange.lg webkitfullscreenchange.lg mozfullscreenchange.lg MSFullscreenChange.lg")
+		}, n.fn.lightGallery.modules.fullscreen = t
+	}()
+}),
+function(t) {
+	"function" == typeof define && define.amd ? define(["jquery"], t) : "object" == typeof exports ? module.exports = t(require("jquery")) : t(jQuery)
+}(function(s) {
+	! function() {
+		"use strict";
+
+		function t(t) {
+			return this.core = s(t).data("lightGallery"), this.$el = s(t), this.core.s = s.extend({}, e, this.core.s), this.core.s.pager && 1 < this.core.$items.length && this.init(), this
+		}
+		var e = {
+			pager: !1
+		};
+		t.prototype.init = function() {
+			var n, t, e, i = this,
+				o = "";
+			if (i.core.$outer.find(".lg").append('<div class="lg-pager-outer"></div>'), i.core.s.dynamic)
+				for (var a = 0; a < i.core.s.dynamicEl.length; a++) o += '<span class="lg-pager-cont"> <span class="lg-pager"></span><div class="lg-pager-thumb-cont"><span class="lg-caret"></span> <img src="' + i.core.s.dynamicEl[a].thumb + '" /></div></span>';
+			else i.core.$items.each(function() {
+				i.core.s.exThumbImage ? o += '<span class="lg-pager-cont"> <span class="lg-pager"></span><div class="lg-pager-thumb-cont"><span class="lg-caret"></span> <img src="' + s(this).attr(i.core.s.exThumbImage) + '" /></div></span>' : o += '<span class="lg-pager-cont"> <span class="lg-pager"></span><div class="lg-pager-thumb-cont"><span class="lg-caret"></span> <img src="' + s(this).find("img").attr("src") + '" /></div></span>'
+			});
+			(t = i.core.$outer.find(".lg-pager-outer")).html(o), (n = i.core.$outer.find(".lg-pager-cont")).on("click.lg touchend.lg", function() {
+				var t = s(this);
+				i.core.index = t.index(), i.core.slide(i.core.index, !1, !0, !1)
+			}), t.on("mouseover.lg", function() {
+				clearTimeout(e), t.addClass("lg-pager-hover")
+			}), t.on("mouseout.lg", function() {
+				e = setTimeout(function() {
+					t.removeClass("lg-pager-hover")
+				})
+			}), i.core.$el.on("onBeforeSlide.lg.tm", function(t, e, i) {
+				n.removeClass("lg-pager-active"), n.eq(i).addClass("lg-pager-active")
+			})
+		}, t.prototype.destroy = function() {}, s.fn.lightGallery.modules.pager = t
+	}()
+}),
+function(t, e) {
+	"function" == typeof define && define.amd ? define(["jquery"], e) : "object" == typeof module && module.exports ? module.exports = e(require("jquery")) : e(t.jQuery)
+}(this, function(r) {
+	! function() {
+		"use strict";
+
+		function t(t) {
+			return this.core = r(t).data("lightGallery"), this.core.s = r.extend({}, e, this.core.s), this.$el = r(t), this.$thumbOuter = null, this.thumbOuterWidth = 0, this.thumbTotalWidth = this.core.$items.length * (this.core.s.thumbWidth + this.core.s.thumbMargin), this.thumbIndex = this.core.index, this.core.s.animateThumb && (this.core.s.thumbHeight = "100%"), this.left = 0, this.init(), this
+		}
+		var e = {
+			thumbnail: !0,
+			animateThumb: !0,
+			currentPagerPosition: "middle",
+			thumbWidth: 100,
+			thumbHeight: "80px",
+			thumbContHeight: 100,
+			thumbMargin: 5,
+			exThumbImage: !1,
+			showThumbByDefault: !0,
+			toogleThumb: !0,
+			pullCaptionUp: !0,
+			enableThumbDrag: !0,
+			enableThumbSwipe: !0,
+			swipeThreshold: 50,
+			loadYoutubeThumbnail: !0,
+			youtubeThumbSize: 1,
+			loadVimeoThumbnail: !0,
+			vimeoThumbSize: "thumbnail_small",
+			loadDailymotionThumbnail: !0
+		};
+		t.prototype.init = function() {
+			var t = this;
+			this.core.s.thumbnail && 1 < this.core.$items.length && (this.core.s.showThumbByDefault && setTimeout(function() {
+				t.core.$outer.addClass("lg-thumb-open")
+			}, 700), this.core.s.pullCaptionUp && this.core.$outer.addClass("lg-pull-caption-up"), this.build(), this.core.s.animateThumb && this.core.doCss() ? (this.core.s.enableThumbDrag && this.enableThumbDrag(), this.core.s.enableThumbSwipe && this.enableThumbSwipe(), this.thumbClickable = !1) : this.thumbClickable = !0, this.toogle(), this.thumbkeyPress())
+		}, t.prototype.build = function() {
+			var t, o = this,
+				a = "",
+				s = "";
+			switch (this.core.s.vimeoThumbSize) {
+				case "thumbnail_large":
+					s = "640";
+					break;
+				case "thumbnail_medium":
+					s = "200x150";
+					break;
+				case "thumbnail_small":
+					s = "100x75"
+			}
+
+			function e(t, e, i) {
+				var n, t = o.core.isVideo(t, i) || {},
+					i = "";
+				t.youtube || t.vimeo || t.dailymotion ? t.youtube ? n = o.core.s.loadYoutubeThumbnail ? "//img.youtube.com/vi/" + t.youtube[1] + "/" + o.core.s.youtubeThumbSize + ".jpg" : e : t.vimeo ? o.core.s.loadVimeoThumbnail ? (n = "//i.vimeocdn.com/video/error_" + s + ".jpg", i = t.vimeo[1]) : n = e : t.dailymotion && (n = o.core.s.loadDailymotionThumbnail ? "//www.dailymotion.com/thumbnail/video/" + t.dailymotion[1] : e) : n = e, a += '<div data-vimeo-id="' + i + '" class="lg-thumb-item" style="width:' + o.core.s.thumbWidth + "px; height: " + o.core.s.thumbHeight + "; margin-right: " + o.core.s.thumbMargin + 'px"><img src="' + n + '" /></div>', i = ""
+			}
+			if (o.core.$outer.addClass("lg-has-thumb"), o.core.$outer.find(".lg").append('<div class="lg-thumb-outer"><div class="lg-thumb lg-group"></div></div>'), o.$thumbOuter = o.core.$outer.find(".lg-thumb-outer"), o.thumbOuterWidth = o.$thumbOuter.width(), o.core.s.animateThumb && o.core.$outer.find(".lg-thumb").css({
+					width: o.thumbTotalWidth + "px",
+					position: "relative"
+				}), this.core.s.animateThumb && o.$thumbOuter.css("height", o.core.s.thumbContHeight + "px"), o.core.s.dynamic)
+				for (var i = 0; i < o.core.s.dynamicEl.length; i++) e(o.core.s.dynamicEl[i].src, o.core.s.dynamicEl[i].thumb, i);
+			else o.core.$items.each(function(t) {
+				o.core.s.exThumbImage ? e(r(this).attr("href") || r(this).attr("data-src"), r(this).attr(o.core.s.exThumbImage), t) : e(r(this).attr("href") || r(this).attr("data-src"), r(this).find("img").attr("src"), t)
+			});
+			o.core.$outer.find(".lg-thumb").html(a), (t = o.core.$outer.find(".lg-thumb-item")).each(function() {
+				var e = r(this),
+					t = e.attr("data-vimeo-id");
+				t && r.getJSON("//www.vimeo.com/api/v2/video/" + t + ".json?callback=?", {
+					format: "json"
+				}, function(t) {
+					e.find("img").attr("src", t[0][o.core.s.vimeoThumbSize])
+				})
+			}), t.eq(o.core.index).addClass("active"), o.core.$el.on("onBeforeSlide.lg.tm", function() {
+				t.removeClass("active"), t.eq(o.core.index).addClass("active")
+			}), t.on("click.lg touchend.lg", function() {
+				var t = r(this);
+				setTimeout(function() {
+					(!o.thumbClickable || o.core.lgBusy) && o.core.doCss() || (o.core.index = t.index(), o.core.slide(o.core.index, !1, !0, !1))
+				}, 50)
+			}), o.core.$el.on("onBeforeSlide.lg.tm", function() {
+				o.animateThumb(o.core.index)
+			}), r(window).on("resize.lg.thumb orientationchange.lg.thumb", function() {
+				setTimeout(function() {
+					o.animateThumb(o.core.index), o.thumbOuterWidth = o.$thumbOuter.width()
+				}, 200)
+			})
+		}, t.prototype.setTranslate = function(t) {
+			this.core.$outer.find(".lg-thumb").css({
+				transform: "translate3d(-" + t + "px, 0px, 0px)"
+			})
+		}, t.prototype.animateThumb = function(t) {
+			var e, i = this.core.$outer.find(".lg-thumb");
+			if (this.core.s.animateThumb) {
+				switch (this.core.s.currentPagerPosition) {
+					case "left":
+						e = 0;
+						break;
+					case "middle":
+						e = this.thumbOuterWidth / 2 - this.core.s.thumbWidth / 2;
+						break;
+					case "right":
+						e = this.thumbOuterWidth - this.core.s.thumbWidth
+				}
+				this.left = (this.core.s.thumbWidth + this.core.s.thumbMargin) * t - 1 - e, this.left > this.thumbTotalWidth - this.thumbOuterWidth && (this.left = this.thumbTotalWidth - this.thumbOuterWidth), this.left < 0 && (this.left = 0), this.core.lGalleryOn ? (i.hasClass("on") || this.core.$outer.find(".lg-thumb").css("transition-duration", this.core.s.speed + "ms"), this.core.doCss() || i.animate({
+					left: -this.left + "px"
+				}, this.core.s.speed)) : this.core.doCss() || i.css("left", -this.left + "px"), this.setTranslate(this.left)
+			}
+		}, t.prototype.enableThumbDrag = function() {
+			var e = this,
+				i = 0,
+				n = 0,
+				o = !1,
+				a = !1,
+				s = 0;
+			e.$thumbOuter.addClass("lg-grab"), e.core.$outer.find(".lg-thumb").on("mousedown.lg.thumb", function(t) {
+				e.thumbTotalWidth > e.thumbOuterWidth && (t.preventDefault(), i = t.pageX, o = !0, e.core.$outer.scrollLeft += 1, --e.core.$outer.scrollLeft, e.thumbClickable = !1, e.$thumbOuter.removeClass("lg-grab").addClass("lg-grabbing"))
+			}), r(window).on("mousemove.lg.thumb", function(t) {
+				o && (s = e.left, a = !0, n = t.pageX, e.$thumbOuter.addClass("lg-dragging"), (s -= n - i) > e.thumbTotalWidth - e.thumbOuterWidth && (s = e.thumbTotalWidth - e.thumbOuterWidth), s < 0 && (s = 0), e.setTranslate(s))
+			}), r(window).on("mouseup.lg.thumb", function() {
+				a ? (a = !1, e.$thumbOuter.removeClass("lg-dragging"), e.left = s, Math.abs(n - i) < e.core.s.swipeThreshold && (e.thumbClickable = !0)) : e.thumbClickable = !0, o && (o = !1, e.$thumbOuter.removeClass("lg-grabbing").addClass("lg-grab"))
+			})
+		}, t.prototype.enableThumbSwipe = function() {
+			var e = this,
+				i = 0,
+				n = 0,
+				o = !1,
+				a = 0;
+			e.core.$outer.find(".lg-thumb").on("touchstart.lg", function(t) {
+				e.thumbTotalWidth > e.thumbOuterWidth && (t.preventDefault(), i = t.originalEvent.targetTouches[0].pageX, e.thumbClickable = !1)
+			}), e.core.$outer.find(".lg-thumb").on("touchmove.lg", function(t) {
+				e.thumbTotalWidth > e.thumbOuterWidth && (t.preventDefault(), n = t.originalEvent.targetTouches[0].pageX, o = !0, e.$thumbOuter.addClass("lg-dragging"), a = e.left, (a -= n - i) > e.thumbTotalWidth - e.thumbOuterWidth && (a = e.thumbTotalWidth - e.thumbOuterWidth), a < 0 && (a = 0), e.setTranslate(a))
+			}), e.core.$outer.find(".lg-thumb").on("touchend.lg", function() {
+				e.thumbTotalWidth > e.thumbOuterWidth && o ? (o = !1, e.$thumbOuter.removeClass("lg-dragging"), Math.abs(n - i) < e.core.s.swipeThreshold && (e.thumbClickable = !0), e.left = a) : e.thumbClickable = !0
+			})
+		}, t.prototype.toogle = function() {
+			var t = this;
+			t.core.s.toogleThumb && (t.core.$outer.addClass("lg-can-toggle"), t.$thumbOuter.append('<button type="button" aria-label="Toggle thumbnails" class="lg-toogle-thumb lg-icon"></button>'), t.core.$outer.find(".lg-toogle-thumb").on("click.lg", function() {
+				t.core.$outer.toggleClass("lg-thumb-open")
+			}))
+		}, t.prototype.thumbkeyPress = function() {
+			var e = this;
+			r(window).on("keydown.lg.thumb", function(t) {
+				38 === t.keyCode ? (t.preventDefault(), e.core.$outer.addClass("lg-thumb-open")) : 40 === t.keyCode && (t.preventDefault(), e.core.$outer.removeClass("lg-thumb-open"))
+			})
+		}, t.prototype.destroy = function() {
+			this.core.s.thumbnail && 1 < this.core.$items.length && (r(window).off("resize.lg.thumb orientationchange.lg.thumb keydown.lg.thumb"), this.$thumbOuter.remove(), this.core.$outer.removeClass("lg-has-thumb"))
+		}, r.fn.lightGallery.modules.Thumbnail = t
+	}()
+}),
+function(t, e) {
+	"function" == typeof define && define.amd ? define(["jquery"], e) : "object" == typeof module && module.exports ? module.exports = e(require("jquery")) : e(t.jQuery)
+}(this, function(h) {
+	! function() {
+		"use strict";
+
+		function t(t) {
+			return this.core = h(t).data("lightGallery"), this.$el = h(t), this.core.s = h.extend({}, e, this.core.s), this.videoLoaded = !1, this.init(), this
+		}
+		var e = {
+			videoMaxWidth: "855px",
+			autoplayFirstVideo: !0,
+			youtubePlayerParams: !1,
+			vimeoPlayerParams: !1,
+			dailymotionPlayerParams: !1,
+			vkPlayerParams: !1,
+			videojs: !1,
+			videojsOptions: {}
+		};
+		t.prototype.init = function() {
+			var n = this;
+			n.core.$el.on("hasVideo.lg.tm", function(t, e, i, n) {
+				var o = this;
+				if (o.core.$slide.eq(e).find(".lg-video").append(o.loadVideo(i, "lg-object", !0, e, n)), n)
+					if (o.core.s.videojs) try {
+						videojs(o.core.$slide.eq(e).find(".lg-html5").get(0), o.core.s.videojsOptions, function() {
+							!o.videoLoaded && o.core.s.autoplayFirstVideo && this.play()
+						})
+					} catch (t) {
+						console.error("Make sure you have included videojs")
+					} else !o.videoLoaded && o.core.s.autoplayFirstVideo && o.core.$slide.eq(e).find(".lg-html5").get(0).play()
+			}.bind(this)), n.core.$el.on("onAferAppendSlide.lg.tm", function(t, e) {
+				e = this.core.$slide.eq(e).find(".lg-video-cont");
+				e.hasClass("lg-has-iframe") || (e.css("max-width", this.core.s.videoMaxWidth), this.videoLoaded = !0)
+			}.bind(this)), n.core.doCss() && 1 < n.core.$items.length && (n.core.s.enableSwipe || n.core.s.enableDrag) ? n.core.$el.on("onSlideClick.lg.tm", function() {
+				var t = n.core.$slide.eq(n.core.index);
+				n.loadVideoOnclick(t)
+			}) : n.core.$slide.on("click.lg", function() {
+				n.loadVideoOnclick(h(this))
+			}), n.core.$el.on("onBeforeSlide.lg.tm", function(t, e, i) {
+				var n = this,
+					o = n.core.$slide.eq(e),
+					a = o.find(".lg-youtube").get(0),
+					s = o.find(".lg-vimeo").get(0),
+					r = o.find(".lg-dailymotion").get(0),
+					e = o.find(".lg-vk").get(0),
+					l = o.find(".lg-html5").get(0);
+				if (a) a.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', "*");
+				else if (s) try {
+						$f(s).api("pause")
+					} catch (t) {
+						console.error("Make sure you have included froogaloop2 js")
+					} else if (r) r.contentWindow.postMessage("pause", "*");
+					else if (l)
+					if (n.core.s.videojs) try {
+						videojs(l).pause()
+					} catch (t) {
+						console.error("Make sure you have included videojs")
+					} else l.pause();
+				e && h(e).attr("src", h(e).attr("src").replace("&autoplay", "&noplay"));
+				e = n.core.s.dynamic ? n.core.s.dynamicEl[i].src : n.core.$items.eq(i).attr("href") || n.core.$items.eq(i).attr("data-src");
+				i = n.core.isVideo(e, i) || {};
+				(i.youtube || i.vimeo || i.dailymotion || i.vk) && n.core.$outer.addClass("lg-hide-download")
+			}.bind(this)), n.core.$el.on("onAfterSlide.lg.tm", function(t, e) {
+				n.core.$slide.eq(e).removeClass("lg-video-playing")
+			}), n.core.s.autoplayFirstVideo && n.core.$el.on("onAferAppendSlide.lg.tm", function(t, e) {
+				var i;
+				n.core.lGalleryOn || (i = n.core.$slide.eq(e), setTimeout(function() {
+					n.loadVideoOnclick(i)
+				}, 100))
+			})
+		}, t.prototype.loadVideo = function(t, e, i, n, o) {
+			var a = this,
+				s = "",
+				r = 1,
+				l = "",
+				n = this.core.isVideo(t, n) || {},
+				a = a.core.s.dynamic ? a.core.s.dynamicEl[a.core.index].title : a.core.$items.eq(a.core.index).attr("title") || a.core.$items.eq(a.core.index).find("img").first().attr("alt");
+			return a = a ? 'title="' + a + '"' : "", i && (r = !this.videoLoaded && this.core.s.autoplayFirstVideo ? 1 : 0), n.youtube ? (l = "?wmode=opaque&autoplay=" + r + "&enablejsapi=1", this.core.s.youtubePlayerParams && (l = l + "&" + h.param(this.core.s.youtubePlayerParams)), s = '<iframe class="lg-video-object lg-youtube ' + e + '" ' + a + ' width="560" height="315" src="//www.youtube.com/embed/' + n.youtube[1] + l + '" frameborder="0" allowfullscreen></iframe>') : n.vimeo ? (l = "?autoplay=" + r + "&api=1", this.core.s.vimeoPlayerParams && (l = l + "&" + h.param(this.core.s.vimeoPlayerParams)), s = '<iframe class="lg-video-object lg-vimeo ' + e + '" ' + a + ' width="560" height="315"  src="//player.vimeo.com/video/' + n.vimeo[1] + l + '" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>') : n.dailymotion ? (l = "?wmode=opaque&autoplay=" + r + "&api=postMessage", this.core.s.dailymotionPlayerParams && (l = l + "&" + h.param(this.core.s.dailymotionPlayerParams)), s = '<iframe class="lg-video-object lg-dailymotion ' + e + '" ' + a + ' width="560" height="315" src="//www.dailymotion.com/embed/video/' + n.dailymotion[1] + l + '" frameborder="0" allowfullscreen></iframe>') : n.html5 ? ("." !== (i = o.substring(0, 1)) && "#" !== i || (o = h(o).html()), s = o) : n.vk && (l = "&autoplay=" + r, this.core.s.vkPlayerParams && (l = l + "&" + h.param(this.core.s.vkPlayerParams)), s = '<iframe class="lg-video-object lg-vk ' + e + '" ' + a + ' width="560" height="315" src="//vk.com/video_ext.php?' + n.vk[1] + l + '" frameborder="0" allowfullscreen></iframe>'), s
+		}, t.prototype.loadVideoOnclick = function(i) {
+			var n = this;
+			if (i.find(".lg-object").hasClass("lg-has-poster") && i.find(".lg-object").is(":visible"))
+				if (i.hasClass("lg-has-video")) {
+					var t = i.find(".lg-youtube").get(0),
+						e = i.find(".lg-vimeo").get(0),
+						o = i.find(".lg-dailymotion").get(0),
+						a = i.find(".lg-html5").get(0);
+					if (t) t.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', "*");
+					else if (e) try {
+							$f(e).api("play")
+						} catch (t) {
+							console.error("Make sure you have included froogaloop2 js")
+						} else if (o) o.contentWindow.postMessage("play", "*");
+						else if (a)
+						if (n.core.s.videojs) try {
+							videojs(a).play()
+						} catch (t) {
+							console.error("Make sure you have included videojs")
+						} else a.play();
+					i.addClass("lg-video-playing")
+				} else {
+					i.addClass("lg-video-playing lg-has-video");
+					o = function(t, e) {
+						if (i.find(".lg-video").append(n.loadVideo(t, "", !1, n.core.index, e)), e)
+							if (n.core.s.videojs) try {
+								videojs(n.core.$slide.eq(n.core.index).find(".lg-html5").get(0), n.core.s.videojsOptions, function() {
+									this.play()
+								})
+							} catch (t) {
+								console.error("Make sure you have included videojs")
+							} else n.core.$slide.eq(n.core.index).find(".lg-html5").get(0).play()
+					};
+					n.core.s.dynamic ? o(n.core.s.dynamicEl[n.core.index].src, n.core.s.dynamicEl[n.core.index].html) : o(n.core.$items.eq(n.core.index).attr("href") || n.core.$items.eq(n.core.index).attr("data-src"), n.core.$items.eq(n.core.index).attr("data-html"));
+					o = i.find(".lg-object");
+					i.find(".lg-video").append(o), i.find(".lg-video-object").hasClass("lg-html5") || (i.removeClass("lg-complete"), i.find(".lg-video-object").on("load.lg error.lg", function() {
+						i.addClass("lg-complete")
+					}))
+				}
+		}, t.prototype.destroy = function() {
+			this.videoLoaded = !1
+		}, h.fn.lightGallery.modules.video = t
+	}()
+}),
+function(t, e) {
+	"function" == typeof define && define.amd ? define(["jquery"], e) : "object" == typeof module && module.exports ? module.exports = e(require("jquery")) : e(t.jQuery)
+}(this, function(u) {
+	! function() {
+		"use strict";
+
+		function t(t) {
+			return this.core = u(t).data("lightGallery"), this.core.s = u.extend({}, n, this.core.s), this.core.s.zoom && this.core.doCss() && (this.init(), this.zoomabletimeout = !1, this.pageX = u(window).width() / 2, this.pageY = u(window).height() / 2 + u(window).scrollTop()), this
+		}
+		var e, i, n = {
+			scale: 1,
+			zoom: !0,
+			actualSize: !0,
+			enableZoomAfter: 300,
+			useLeftForZoom: (e = !1, (i = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./)) && parseInt(i[2], 10) < 54 && (e = !0), e)
+		};
+		t.prototype.init = function() {
+			var a = this,
+				t = '<button type="button" aria-label="Zoom in" id="lg-zoom-in" class="lg-icon"></button><button type="button" aria-label="Zoom out" id="lg-zoom-out" class="lg-icon"></button>';
+			a.core.s.actualSize && (t += '<button type="button" aria-label="Actual size" id="lg-actual-size" class="lg-icon"></button>'), a.core.s.useLeftForZoom ? a.core.$outer.addClass("lg-use-left-for-zoom") : a.core.$outer.addClass("lg-use-transition-for-zoom"), this.core.$outer.find(".lg-toolbar").append(t), a.core.$el.on("onSlideItemLoad.lg.tm.zoom", function(t, e, i) {
+				var n = a.core.s.enableZoomAfter + i;
+				u("body").hasClass("lg-from-hash") && i ? n = 0 : u("body").removeClass("lg-from-hash"), a.zoomabletimeout = setTimeout(function() {
+					a.core.$slide.eq(e).addClass("lg-zoomable")
+				}, n + 30)
+			});
+
+			function e(t) {
+				var e = a.core.$outer.find(".lg-current .lg-image"),
+					i = (u(window).width() - e.prop("offsetWidth")) / 2,
+					n = (u(window).height() - e.prop("offsetHeight")) / 2 + u(window).scrollTop(),
+					i = (t - 1) * (a.pageX - i),
+					n = (t - 1) * (a.pageY - n);
+				e.css("transform", "scale3d(" + t + ", " + t + ", 1)").attr("data-scale", t), (a.core.s.useLeftForZoom ? e.parent().css({
+					left: -i + "px",
+					top: -n + "px"
+				}) : e.parent().css("transform", "translate3d(-" + i + "px, -" + n + "px, 0)")).attr("data-x", i).attr("data-y", n)
+			}
+
+			function s() {
+				1 < r ? a.core.$outer.addClass("lg-zoomed") : a.resetZoom(), r < 1 && (r = 1), e(r)
+			}
+
+			function n(t, e, i, n) {
+				var o = e.prop("offsetWidth"),
+					e = a.core.s.dynamic ? a.core.s.dynamicEl[i].width || e[0].naturalWidth || o : a.core.$items.eq(i).attr("data-width") || e[0].naturalWidth || o;
+				a.core.$outer.hasClass("lg-zoomed") ? r = 1 : o < e && (r = e / o || 2), n ? (a.pageX = u(window).width() / 2, a.pageY = u(window).height() / 2 + u(window).scrollTop()) : (a.pageX = t.pageX || t.originalEvent.targetTouches[0].pageX, a.pageY = t.pageY || t.originalEvent.targetTouches[0].pageY), s(), setTimeout(function() {
+					a.core.$outer.removeClass("lg-grabbing").addClass("lg-grab")
+				}, 10)
+			}
+			var r = 1,
+				o = !1;
+			a.core.$el.on("onAferAppendSlide.lg.tm.zoom", function(t, e) {
+				var i = a.core.$slide.eq(e).find(".lg-image");
+				i.on("dblclick", function(t) {
+					n(t, i, e)
+				}), i.on("touchstart", function(t) {
+					o ? (clearTimeout(o), o = null, n(t, i, e)) : o = setTimeout(function() {
+						o = null
+					}, 300), t.preventDefault()
+				})
+			}), u(window).on("resize.lg.zoom scroll.lg.zoom orientationchange.lg.zoom", function() {
+				a.pageX = u(window).width() / 2, a.pageY = u(window).height() / 2 + u(window).scrollTop(), e(r)
+			}), u("#lg-zoom-out").on("click.lg", function() {
+				a.core.$outer.find(".lg-current .lg-image").length && (r -= a.core.s.scale, s())
+			}), u("#lg-zoom-in").on("click.lg", function() {
+				a.core.$outer.find(".lg-current .lg-image").length && (r += a.core.s.scale, s())
+			}), u("#lg-actual-size").on("click.lg", function(t) {
+				n(t, a.core.$slide.eq(a.core.index).find(".lg-image"), a.core.index, !0)
+			}), a.core.$el.on("onBeforeSlide.lg.tm", function() {
+				r = 1, a.resetZoom()
+			}), a.zoomDrag(), a.zoomSwipe()
+		}, t.prototype.getCurrentTransform = function(t) {
+			if (!t) return 0;
+			t = window.getComputedStyle(t, null), t = t.getPropertyValue("-webkit-transform") || t.getPropertyValue("-moz-transform") || t.getPropertyValue("-ms-transform") || t.getPropertyValue("-o-transform") || t.getPropertyValue("transform") || "none";
+			return "none" !== t ? t.split("(")[1].split(")")[0].split(",") : 0
+		}, t.prototype.getCurrentRotation = function(t) {
+			if (!t) return 0;
+			t = this.getCurrentTransform(t);
+			return t ? Math.round(Math.atan2(t[1], t[0]) * (180 / Math.PI)) : 0
+		}, t.prototype.getModifier = function(t, e, i) {
+			var n = t;
+			t = Math.abs(t);
+			var o = this.getCurrentTransform(i);
+			if (!o) return 1;
+			var a, i = 1;
+			return "X" === e ? (a = Math.sign(parseFloat(o[0])), 0 === t || 180 === t ? i = 1 : 90 === t && (i = -90 === n && 1 === a || 90 === n && -1 === a ? -1 : 1), i *= a) : (a = Math.sign(parseFloat(o[3])), 0 === t || 180 === t ? i = 1 : 90 === t && (t = parseFloat(o[1]), o = parseFloat(o[2]), i = Math.sign(t * o * n * a)), i *= a), i
+		}, t.prototype.getImageSize = function(t, e, i) {
+			return 90 === e && (i = "x" === i ? "y" : "x"), t.prop({
+				y: "offsetHeight",
+				x: "offsetWidth"
+			} [i])
+		}, t.prototype.getDragCords = function(t, e) {
+			return 90 === e ? {
+				x: t.pageY,
+				y: t.pageX
+			} : {
+				x: t.pageX,
+				y: t.pageY
+			}
+		}, t.prototype.getSwipeCords = function(t, e) {
+			var i = t.originalEvent.targetTouches[0].pageX,
+				t = t.originalEvent.targetTouches[0].pageY;
+			return 90 === e ? {
+				x: t,
+				y: i
+			} : {
+				x: i,
+				y: t
+			}
+		}, t.prototype.getPossibleDragCords = function(t, e) {
+			var i = (this.core.$outer.find(".lg").height() - this.getImageSize(t, e, "y")) / 2,
+				n = Math.abs(this.getImageSize(t, e, "y") * Math.abs(t.attr("data-scale")) - this.core.$outer.find(".lg").height() + i),
+				o = (this.core.$outer.find(".lg").width() - this.getImageSize(t, e, "x")) / 2,
+				t = Math.abs(this.getImageSize(t, e, "x") * Math.abs(t.attr("data-scale")) - this.core.$outer.find(".lg").width() + o);
+			return 90 === e ? {
+				minY: o,
+				maxY: t,
+				minX: i,
+				maxX: n
+			} : {
+				minY: i,
+				maxY: n,
+				minX: o,
+				maxX: t
+			}
+		}, t.prototype.getDragAllowedAxises = function(t, e) {
+			var i = this.getImageSize(t, e, "y") * t.attr("data-scale") > this.core.$outer.find(".lg").height(),
+				t = this.getImageSize(t, e, "x") * t.attr("data-scale") > this.core.$outer.find(".lg").width();
+			return 90 === e ? {
+				allowX: i,
+				allowY: t
+			} : {
+				allowX: t,
+				allowY: i
+			}
+		}, t.prototype.resetZoom = function() {
+			this.core.$outer.removeClass("lg-zoomed"), this.core.$slide.find(".lg-img-wrap").removeAttr("style data-x data-y"), this.core.$slide.find(".lg-image").removeAttr("style data-scale"), this.pageX = u(window).width() / 2, this.pageY = u(window).height() / 2 + u(window).scrollTop()
+		}, t.prototype.zoomSwipe = function() {
+			var n, o = this,
+				a = {},
+				s = {},
+				r = !1,
+				l = !1,
+				h = !1,
+				d = 0;
+			o.core.$slide.on("touchstart.lg", function(t) {
+				var e;
+				o.core.$outer.hasClass("lg-zoomed") && (e = o.core.$slide.eq(o.core.index).find(".lg-object"), n = o.core.$slide.eq(o.core.index).find(".lg-img-rotate")[0], d = o.getCurrentRotation(n), e = o.getDragAllowedAxises(e, Math.abs(d)), h = e.allowY, ((l = e.allowX) || h) && (t.preventDefault(), a = o.getSwipeCords(t, Math.abs(d))))
+			}), o.core.$slide.on("touchmove.lg", function(t) {
+				var e, i;
+				o.core.$outer.hasClass("lg-zoomed") && (e = o.core.$slide.eq(o.core.index).find(".lg-img-wrap"), t.preventDefault(), r = !0, s = o.getSwipeCords(t, Math.abs(d)), o.core.$outer.addClass("lg-zoom-dragging"), i = h ? -Math.abs(e.attr("data-y")) + (s.y - a.y) * o.getModifier(d, "Y", n) : -Math.abs(e.attr("data-y")), t = l ? -Math.abs(e.attr("data-x")) + (s.x - a.x) * o.getModifier(d, "X", n) : -Math.abs(e.attr("data-x")), (15 < Math.abs(s.x - a.x) || 15 < Math.abs(s.y - a.y)) && (o.core.s.useLeftForZoom ? e.css({
+					left: t + "px",
+					top: i + "px"
+				}) : e.css("transform", "translate3d(" + t + "px, " + i + "px, 0)")))
+			}), o.core.$slide.on("touchend.lg", function() {
+				o.core.$outer.hasClass("lg-zoomed") && r && (r = !1, o.core.$outer.removeClass("lg-zoom-dragging"), o.touchendZoom(a, s, l, h, d))
+			})
+		}, t.prototype.zoomDrag = function() {
+			var n, o = this,
+				a = {},
+				s = {},
+				r = !1,
+				l = !1,
+				h = !1,
+				d = !1,
+				c = 0;
+			o.core.$slide.on("mousedown.lg.zoom", function(t) {
+				n = o.core.$slide.eq(o.core.index).find(".lg-img-rotate")[0], c = o.getCurrentRotation(n);
+				var e = o.core.$slide.eq(o.core.index).find(".lg-object"),
+					e = o.getDragAllowedAxises(e, Math.abs(c));
+				d = e.allowY, h = e.allowX, o.core.$outer.hasClass("lg-zoomed") && u(t.target).hasClass("lg-object") && (h || d) && (t.preventDefault(), a = o.getDragCords(t, Math.abs(c)), r = !0, o.core.$outer.scrollLeft += 1, --o.core.$outer.scrollLeft, o.core.$outer.removeClass("lg-grab").addClass("lg-grabbing"))
+			}), u(window).on("mousemove.lg.zoom", function(t) {
+				var e, i;
+				r && (e = o.core.$slide.eq(o.core.index).find(".lg-img-wrap"), l = !0, s = o.getDragCords(t, Math.abs(c)), o.core.$outer.addClass("lg-zoom-dragging"), i = d ? -Math.abs(e.attr("data-y")) + (s.y - a.y) * o.getModifier(c, "Y", n) : -Math.abs(e.attr("data-y")), t = h ? -Math.abs(e.attr("data-x")) + (s.x - a.x) * o.getModifier(c, "X", n) : -Math.abs(e.attr("data-x")), o.core.s.useLeftForZoom ? e.css({
+					left: t + "px",
+					top: i + "px"
+				}) : e.css("transform", "translate3d(" + t + "px, " + i + "px, 0)"))
+			}), u(window).on("mouseup.lg.zoom", function(t) {
+				r && (r = !1, o.core.$outer.removeClass("lg-zoom-dragging"), !l || a.x === s.x && a.y === s.y || (s = o.getDragCords(t, Math.abs(c)), o.touchendZoom(a, s, h, d, c)), l = !1), o.core.$outer.removeClass("lg-grabbing").addClass("lg-grab")
+			})
+		}, t.prototype.touchendZoom = function(t, e, i, n, o) {
+			var a = this,
+				s = a.core.$slide.eq(a.core.index).find(".lg-img-wrap"),
+				r = a.core.$slide.eq(a.core.index).find(".lg-object"),
+				l = a.core.$slide.eq(a.core.index).find(".lg-img-rotate")[0],
+				h = -Math.abs(s.attr("data-x")) + (e.x - t.x) * a.getModifier(o, "X", l),
+				l = -Math.abs(s.attr("data-y")) + (e.y - t.y) * a.getModifier(o, "Y", l),
+				o = a.getPossibleDragCords(r, Math.abs(o));
+			(15 < Math.abs(e.x - t.x) || 15 < Math.abs(e.y - t.y)) && (n && (l <= -o.maxY ? l = -o.maxY : l >= -o.minY && (l = -o.minY)), i && (h <= -o.maxX ? h = -o.maxX : h >= -o.minX && (h = -o.minX)), n ? s.attr("data-y", Math.abs(l)) : l = -Math.abs(s.attr("data-y")), i ? s.attr("data-x", Math.abs(h)) : h = -Math.abs(s.attr("data-x")), a.core.s.useLeftForZoom ? s.css({
+				left: h + "px",
+				top: l + "px"
+			}) : s.css("transform", "translate3d(" + h + "px, " + l + "px, 0)"))
+		}, t.prototype.destroy = function() {
+			var t = this;
+			t.core.$el.off(".lg.zoom"), u(window).off(".lg.zoom"), t.core.$slide.off(".lg.zoom"), t.core.$el.off(".lg.tm.zoom"), t.resetZoom(), clearTimeout(t.zoomabletimeout), t.zoomabletimeout = !1
+		}, u.fn.lightGallery.modules.zoom = t
+	}()
+}),
+function(t) {
+	"function" == typeof define && define.amd ? define(["jquery"], t) : "object" == typeof exports ? module.exports = t(require("jquery")) : t(jQuery)
+}(function(i) {
+	! function() {
+		"use strict";
+
+		function t(t) {
+			return this.core = i(t).data("lightGallery"), this.core.s = i.extend({}, e, this.core.s), this.core.s.hash && (this.oldHash = window.location.hash, this.init()), this
+		}
+		var e = {
+			hash: !0
+		};
+		t.prototype.init = function() {
+			var e, n = this;
+			n.core.$el.on("onAfterSlide.lg.tm", function(t, e, i) {
+				history.replaceState ? history.replaceState(null, null, window.location.pathname + window.location.search + "#lg=" + n.core.s.galleryId + "&slide=" + i) : window.location.hash = "lg=" + n.core.s.galleryId + "&slide=" + i
+			}), i(window).on("hashchange.lg.hash", function() {
+				e = window.location.hash;
+				var t = parseInt(e.split("&slide=")[1], 10); - 1 < e.indexOf("lg=" + n.core.s.galleryId) ? n.core.slide(t, !1, !1) : n.core.lGalleryOn && n.core.destroy()
+			})
+		}, t.prototype.destroy = function() {
+			this.core.s.hash && (this.oldHash && this.oldHash.indexOf("lg=" + this.core.s.galleryId) < 0 ? history.replaceState ? history.replaceState(null, null, this.oldHash) : window.location.hash = this.oldHash : history.replaceState ? history.replaceState(null, document.title, window.location.pathname + window.location.search) : window.location.hash = "", this.core.$el.off(".lg.hash"))
+		}, i.fn.lightGallery.modules.hash = t
+	}()
+}),
+function(t, e) {
+	"function" == typeof define && define.amd ? define(["jquery"], e) : "object" == typeof module && module.exports ? module.exports = e(require("jquery")) : e(t.jQuery)
+}(this, function(i) {
+	! function() {
+		"use strict";
+
+		function t(t) {
+			return this.core = i(t).data("lightGallery"), this.core.s = i.extend({}, e, this.core.s), this.core.s.rotate && this.core.doCss() && this.init(), this
+		}
+		var e = {
+			rotate: !0,
+			rotateLeft: !0,
+			rotateRight: !0,
+			flipHorizontal: !0,
+			flipVertical: !0
+		};
+		t.prototype.buildTemplates = function() {
+			var t = "";
+			this.core.s.flipVertical && (t += '<button aria-label="Flip vertical" class="lg-flip-ver lg-icon"></button>'), this.core.s.flipHorizontal && (t += '<button aria-label="flip horizontal" class="lg-flip-hor lg-icon"></button>'), this.core.s.rotateLeft && (t += '<button aria-label="Rotate left" class="lg-rotate-left lg-icon"></button>'), this.core.s.rotateRight && (t += '<button aria-label="Rotate right" class="lg-rotate-right lg-icon"></button>'), this.core.$outer.find(".lg-toolbar").append(t)
+		}, t.prototype.init = function() {
+			var n = this;
+			this.buildTemplates(), this.rotateValuesList = {}, this.core.$el.on("onAferAppendSlide.lg.tm.rotate", function(t, e) {
+				n.core.$slide.eq(e).find(".lg-img-wrap").wrap('<div class="lg-img-rotate"></div>')
+			}), this.core.$outer.find(".lg-rotate-left").on("click.lg", this.rotateLeft.bind(this)), this.core.$outer.find(".lg-rotate-right").on("click.lg", this.rotateRight.bind(this)), this.core.$outer.find(".lg-flip-hor").on("click.lg", this.flipHorizontal.bind(this)), this.core.$outer.find(".lg-flip-ver").on("click.lg", this.flipVertical.bind(this)), this.core.$el.on("onBeforeSlide.lg.tm.rotate", function(t, e, i) {
+				n.rotateValuesList[i] || (n.rotateValuesList[i] = {
+					rotate: 0,
+					flipHorizontal: 1,
+					flipVertical: 1
+				})
+			})
+		}, t.prototype.applyStyles = function() {
+			this.core.$slide.eq(this.core.index).find(".lg-img-rotate").css("transform", "rotate(" + this.rotateValuesList[this.core.index].rotate + "deg) scale3d(" + this.rotateValuesList[this.core.index].flipHorizontal + ", " + this.rotateValuesList[this.core.index].flipVertical + ", 1)")
+		}, t.prototype.getCurrentRotation = function(t) {
+			if (!t) return 0;
+			t = window.getComputedStyle(t, null), t = t.getPropertyValue("-webkit-transform") || t.getPropertyValue("-moz-transform") || t.getPropertyValue("-ms-transform") || t.getPropertyValue("-o-transform") || t.getPropertyValue("transform") || "none";
+			if ("none" !== t) {
+				t = t.split("(")[1].split(")")[0].split(",");
+				if (t) {
+					t = Math.round(Math.atan2(t[1], t[0]) * (180 / Math.PI));
+					return t < 0 ? t + 360 : t
+				}
+			}
+			return 0
+		}, t.prototype.rotateLeft = function() {
+			this.rotateValuesList[this.core.index].rotate -= 90, this.applyStyles()
+		}, t.prototype.rotateRight = function() {
+			this.rotateValuesList[this.core.index].rotate += 90, this.applyStyles()
+		}, t.prototype.flipHorizontal = function() {
+			var t = this.core.$slide.eq(this.core.index).find(".lg-img-rotate")[0],
+				t = this.getCurrentRotation(t),
+				t = 90 !== t && 270 !== t ? "flipHorizontal" : "flipVertical";
+			this.rotateValuesList[this.core.index][t] *= -1, this.applyStyles()
+		}, t.prototype.flipVertical = function() {
+			var t = this.core.$slide.eq(this.core.index).find(".lg-img-rotate")[0],
+				t = this.getCurrentRotation(t),
+				t = 90 !== t && 270 !== t ? "flipVertical" : "flipHorizontal";
+			this.rotateValuesList[this.core.index][t] *= -1, this.applyStyles()
+		}, t.prototype.destroy = function() {
+			this.core.$el.off(".lg.tm.rotate"), this.rotateValuesList = {}
+		}, i.fn.lightGallery.modules.rotate = t
+	}()
+})
+
+
+
+
