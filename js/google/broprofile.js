@@ -16,12 +16,7 @@ function myFunction() {
 	const logoHolder = document.getElementById("logo");
 	const jinaHolder = document.getElementById("jinaHolder");
 	const jinaHolder2 = document.getElementById("jinaHolder2");
-	const rockHolder = document.getElementById("rockHolder");
-	const displayNameField = document.getElementById("displayName");
 	const tableidHolder = document.getElementById('nameBro');
-	const photoField = document.getElementById("photo");
-	const editButton = document.getElementById("edit");
-	const uidHolder = document.getElementById('uidHolder');
 	const email1 = document.getElementById('yourEmail1');
 	const email2 = document.getElementById('yourEmail2');
 	const email5 = document.getElementById('yourEmail5');
@@ -39,9 +34,7 @@ function myFunction() {
 		if (user.displayName && user.email) {
 			jinaHolder.innerText = user.displayName;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			rockHolder.innerText = user.displayName;
 			tableidHolder.value = "Name: " + user.displayName;
-			uidHolder.innerText = user.uid;
 
 			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
@@ -52,9 +45,7 @@ function myFunction() {
 
 			jinaHolder.innerText = theaddress;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			rockHolder.innerText = theaddress;
 			tableidHolder.value = "Name: " + theaddress;
-			uidHolder.innerText = user.uid;
 
 			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
@@ -62,24 +53,12 @@ function myFunction() {
 		} else if(user.phoneNumber){
 			jinaHolder.innerText = user.phoneNumber;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			rockHolder.innerText = user.phoneNumber;
 			tableidHolder.value = "Name: " + user.phoneNumber;
-			uidHolder.innerText = user.uid;
 
 			email1.innerHTML = `Check your text messages for a link @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method link is also sent to your phone Number @:<strong>${user.phoneNumber}</strong>`;
 			email5.innerHTML = `Logged in with phone ${user.phoneNumber}, you will have to check your text messages inbox for a link`;
-		} else if(user.isAnonymous){
-			jinaHolder.innerText = 'Anonymous';
-			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			rockHolder.innerText = 'Anonymous';
-			tableidHolder.value = "Name: Anonymous";
-			uidHolder.innerText = user.uid;
-
-			email1.innerHTML = `Bank log files can only be downloaded once, make sure you save them in a folder you won't forget`;
-			email2.innerHTML = `Use winrar software to extract bank log files after a successful download`;
-			email5.innerHTML = 'Logged in Anonymously, no email invoice will be sent, you can logout of the website and login again with an email or choose to remain anonymous';
-		}
+		} 
 
 
 		let goodies = [];
@@ -101,61 +80,11 @@ function myFunction() {
 			for(var i = 0; i < goodies.length; i++) {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
 			}
-		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.isAnonymous){
-			goodies = JSON.parse(localStorage.getItem('banklogs'));
-			for(var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous';
-			}
 		}  else {
 			console.log('No items are present')
 		}
 	});
 
-	const editInformation = () => {
-		const _0x9108xb = {
-			newDisplayName: displayNameField.value,
-			newPhotoURL: photoField.value
-		};
-		const user = auth.currentUser;
-		changeNameAndPhoto(user, _0x9108xb);
-	};
-	const changeNameAndPhoto = (user, _0x9108xb) => {
-		const {
-			newDisplayName,
-			newPhotoURL
-		} = _0x9108xb;
-		if (newDisplayName && newPhotoURL) {
-			user.updateProfile({
-				displayName: newDisplayName,
-				photoURL: newPhotoURL
-			}).then(() => {
-				alert("Profile Updated Successfully !");
-			}).catch(error => {
-				console.error(error);
-			});
-		} else {
-			if (newDisplayName) {
-				user.updateProfile({
-					displayName: newDisplayName
-				}).then(() => {
-					alert("Display Name Updated Successfully !");
-				}).catch(error => {
-					console.error(error);
-				});
-			} else {
-				if (newPhotoURL) {
-					user.updateProfile({
-						photoURL: newPhotoURL
-					}).then(() => {
-						alert("PhotoURL Updated Successfully !");
-					}).catch(error => {
-						console.error(error);
-					});
-				}
-			}
-		}
-	};
-	editButton.addEventListener("click", editInformation);
 
 	fetch('https://ipapi.co/json/')
 	.then(function(response) {
@@ -181,8 +110,6 @@ function myFunction() {
 	document.getElementById("thebodyz").oncontextmenu = function() {
 		return false
 	};
-
-
 
 
 	document.getElementById('file').addEventListener('change', (event) => {
@@ -310,15 +237,6 @@ function drawHand(ctx, pos, length, width) {
     ctx.stroke();
     ctx.rotate(-pos);
 }
-
-var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
-if(isChrome){
-    document.getElementById('predat').style.display = 'block'
-} else{
-    document.getElementById('predat').style.display = 'none';
-}
-
-
 
 function getItems(){
     db.collection("todo-items").onSnapshot((snapshot) => {
