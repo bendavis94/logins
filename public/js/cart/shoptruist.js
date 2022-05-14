@@ -221,7 +221,7 @@ function fir18(event) {
     var info6 = 'Name+ Email Access';
     var info7 = 'Owner\'s Complete Fullz';
     var image = 'https://darknet.id/img/new/truist-3.8.png';
-    var account = 'Truist Bank [SAVINGS]';
+    var account = 'Truist Bank [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -457,7 +457,7 @@ function uk19(event) {
     var info6 = 'Owner\'s Complete Fullz';
     var info7 = 'Social Security No';
     var image = 'https://darknet.id/img/new/chime-14.jpg';
-    var account = 'Chime Bank [CHECKING]';
+    var account = 'Chime Bank [SPENDING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -474,7 +474,7 @@ function uk25(event) {
     var info6 = 'Owner\'s Complete Fullz';
     var info7 = 'Social Security No';
     var image = 'https://darknet.id/img/new/chime-19.png';
-    var account = 'Chime Bank [CHECKING]';
+    var account = 'Chime Bank [SPENDING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
@@ -558,7 +558,7 @@ function uk97(event) {
     var info6 = 'Name+ Email Access';
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/img/new/chime-6.jpg';
-    var account = 'Chime Bank [CHECKING ACCOUNT]';
+    var account = 'Chime Bank [SPENDING ACCOUNT]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
