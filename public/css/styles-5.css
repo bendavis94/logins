@@ -756,6 +756,13 @@ a:hover,a:active{
 		 font-size: 24px;
 	}
 }
+.filtering span:nth-child(1){
+	background: #fab702;
+	color: white;
+}
+.filtering span:nth-child(1) >i {
+	color: white;
+}
  .filtering-style2 span{
 	font-size:12px;
 	font-weight:700

@@ -34,7 +34,7 @@ function myFunction() {
           return response.json();
         })
         .then(function(data) {
-          document.getElementById('footer-email').innerHTML = `${user.displayName}, your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
+          document.getElementById('footer-email').innerHTML = `<span class="footer-name">${user.displayName}<span>, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
       });
     } else if(!user.displayName && user.email) {
       var themail = user.email;
@@ -49,7 +49,7 @@ function myFunction() {
           return response.json();
         })
         .then(function(data) {
-          document.getElementById('footer-email').innerHTML = `${theaddress}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
+          document.getElementById('footer-email').innerHTML = `<span class="footer-name">${theaddress}<span>, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
       });
     } else if(user.phoneNumber){
       jinaHolder.innerText = user.phoneNumber;
@@ -61,19 +61,13 @@ function myFunction() {
           return response.json();
         })
         .then(function(data) {
-          document.getElementById('footer-email').innerHTML = `${user.phoneNumber}, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
+          document.getElementById('footer-email').innerHTML = `<span class="footer-name">${user.phoneNumber}<span>,, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
       });
     } else if(user.isAnonymous){
-      jinaHolder.innerText = 'Anonymous';
-      jinaHolder2.innerText = 'USER ID: ' + user.uid;
-      emailInbox.innerHTML = `Forum open to persons over the age of 18 years.`;
-
-      fetch('https://ipapi.co/json/')
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(data) {
-          document.getElementById('footer-email').innerHTML = `Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
+      auth.signOut().then(() => {
+        window.location.assign("index");
+      }).catch(error => {
+        console.error(error);
       });
     }
   });
