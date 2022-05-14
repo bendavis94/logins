@@ -16,11 +16,7 @@ function myFunction() {
 	const logoHolder = document.getElementById("logo");
 	const jinaHolder = document.getElementById("jinaHolder");
 	const jinaHolder2 = document.getElementById("jinaHolder2");
-	const rockHolder = document.getElementById("rockHolder");
-	const displayNameField = document.getElementById("displayName");
 	const tableidHolder = document.getElementById('nameBro');
-	const photoField = document.getElementById("photo");
-	const editButton = document.getElementById("edit");
 	const uidHolder = document.getElementById('uidHolder');
 	const email1 = document.getElementById('yourEmail1');
 	const email2 = document.getElementById('yourEmail2');
@@ -39,9 +35,7 @@ function myFunction() {
 		if (user.displayName && user.email) {
 			jinaHolder.innerText = user.displayName;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			rockHolder.innerText = user.displayName;
 			tableidHolder.value = "Name: " + user.displayName;
-			uidHolder.innerText = user.uid;
 
 			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
@@ -52,9 +46,7 @@ function myFunction() {
 
 			jinaHolder.innerText = theaddress;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			rockHolder.innerText = theaddress;
 			tableidHolder.value = "Name: " + theaddress;
-			uidHolder.innerText = user.uid;
 
 			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
@@ -62,9 +54,7 @@ function myFunction() {
 		} else if(user.phoneNumber){
 			jinaHolder.innerText = user.phoneNumber;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			rockHolder.innerText = user.phoneNumber;
 			tableidHolder.value = "Name: " + user.phoneNumber;
-			uidHolder.innerText = user.uid;
 
 			email1.innerHTML = `Check your text messages for a link @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method link is also sent to your phone Number @:<strong>${user.phoneNumber}</strong>`;
