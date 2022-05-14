@@ -17,7 +17,6 @@ function myFunction() {
 	const jinaHolder = document.getElementById("jinaHolder");
 	const jinaHolder2 = document.getElementById("jinaHolder2");
 	const tableidHolder = document.getElementById('nameBro');
-	const uidHolder = document.getElementById('uidHolder');
 	const email1 = document.getElementById('yourEmail1');
 	const email2 = document.getElementById('yourEmail2');
 	const email5 = document.getElementById('yourEmail5');
