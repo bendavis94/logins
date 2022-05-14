@@ -61,15 +61,21 @@ function myFunction() {
           return response.json();
         })
         .then(function(data) {
-          document.getElementById('footer-email').innerHTML = `<span class="footer-name">${user.phoneNumber}<span>,, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
+          document.getElementById('footer-email').innerHTML = `<span class="footer-name">${user.phoneNumber}<span>, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
       });
     } else if(user.isAnonymous){
-      auth.signOut().then(() => {
-        window.location.assign("index");
-      }).catch(error => {
-        console.error(error);
+      jinaHolder.innerText = 'Anonymous';
+      jinaHolder2.innerText = 'USER ID: ' + user.uid;
+      emailInbox.innerHTML = `You can login with google/yahoo/email, if you'd like to get bank logs sent via email`;
+
+      fetch('https://ipapi.co/json/')
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          document.getElementById('footer-email').innerHTML = `<span class="footer-name">Anonymous<span>, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
       });
-    }
+    } 
   });
 
   document.getElementById("thebodyz").oncontextmenu = function() {
