@@ -163,6 +163,23 @@ function fir90(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
+function fir65(event) {
+    var price = 'Price: $1,214';
+    var balance = 'Balance: $30,374';
+    var website = 'navyfederal.org';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Social Security No';
+    var info4 = 'Date of Birth';
+    var info5 = 'ClientIP + Useragent';
+    var info6 = 'Name+ Email Access';
+    var info7 = 'Owner\'s Complete Fullz';
+    var image = 'https://darknet.id/img/new/navy-30.png';
+    var account = 'Navy Federal [SAVINGS]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+
 function fir16(event) {
     var price = 'Price: $676';
     var balance = 'Balance: $16,905';
