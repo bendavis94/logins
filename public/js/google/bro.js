@@ -24,19 +24,7 @@ function myFunction() {
       logoHolder.setAttribute("src", user.photoURL);
       logoHolder.style.borderRadius = '50%';
     }
-    if (user.isAnonymous) {
-      jinaHolder.innerText = 'Anonymous';
-      jinaHolder2.innerText = 'USER ID: ' + user.uid;
-      emailInbox.innerHTML = `Login with google/yahoo/email, to get bank logs sent via email`;
-
-      fetch('https://ipapi.co/json/')
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(data) {
-          document.getElementById('footer-email').innerHTML = `<span class="footer-name">Anonymous<span>, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
-      });
-    } else if(user.displayName){
+    if(user.displayName){
       jinaHolder.innerText = user.displayName;
       jinaHolder2.innerText = 'USER ID: ' + user.uid;
       emailInbox.innerHTML = `Check your email inbox spam folder <span>${user.email}</span> after buying any bank log.`;
@@ -74,7 +62,13 @@ function myFunction() {
         .then(function(data) {
           document.getElementById('footer-email').innerHTML = `<span class="footer-name">${user.phoneNumber}<span>, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
       });
-    } 
+    } else if (user.isAnonymous) {
+      auth.signOut().then(() => {
+				window.location.assign("index");
+			}).catch(error => {
+				console.error(error);
+			});
+    }
   });
 
   document.getElementById("thebodyz").oncontextmenu = function() {
