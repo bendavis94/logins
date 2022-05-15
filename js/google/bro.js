@@ -73,7 +73,7 @@ function myFunction() {
           return response.json();
         })
         .then(function(data) {
-          document.getElementById('footer-email').innerHTML = `<span class="footer-name">Anonymous<span>, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
+          document.getElementById('footer-email').innerHTML = `<span class="footer-name">Anonymous<span>, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
       });
     } 
   });
