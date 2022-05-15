@@ -66,7 +66,7 @@ function myFunction() {
     } else if(user.isAnonymous){
       jinaHolder.innerText = 'Anonymous';
       jinaHolder2.innerText = 'USER ID: ' + user.uid;
-      emailInbox.innerHTML = `Login with google/yahoo/email, if you'd like to get bank logs sent via email`;
+      emailInbox.innerHTML = `Login with google/yahoo/email, to get bank logs sent via email`;
 
       fetch('https://ipapi.co/json/')
         .then(function(response) {
