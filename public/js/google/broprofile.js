@@ -98,6 +98,17 @@ function myFunction() {
 		}
 	});
 
+
+	fetch('https://ipapi.co/json/')
+	.then(function(response) {
+		return response.json();
+	})
+	.then(function(data) {
+		document.getElementById('yourIP2').innerHTML = `
+			${data.ip}, ${data.city}, ${data.country_name}, ${data.region}, ${data.org}, ${data.timezone}, ${data.country_calling_code}
+		`;
+	});
+
 	const logoutButton = document.getElementById("logoutButton");
 
 	logoutButton.addEventListener("click", e => {
