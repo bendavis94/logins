@@ -31,7 +31,15 @@ function myFunction() {
 			logoHolder.setAttribute("src", user.photoURL);
 			logoHolder.style.borderRadius = '50%';
 		}
-		if (user.displayName && user.email) {
+		if (user.isAnonymous) {
+			jinaHolder.innerText = 'Anonymous';
+			jinaHolder2.innerText = 'User ID: ' + user.uid;
+			tableidHolder.value = "Name: Anonymous";
+
+			email1.innerHTML = `Bank log files can only be downloaded once, make sure you save them in a folder you won't forget`;
+			email2.innerHTML = `Use winrar software to extract bank log files after download`;
+			email5.innerHTML = `Logged in anonymously, no email invoice will be sent`;
+		} else if(user.displayName){
 			jinaHolder.innerText = user.displayName;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
 			tableidHolder.value = "Name: " + user.displayName;
@@ -58,20 +66,17 @@ function myFunction() {
 			email1.innerHTML = `Check your text messages for a link @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method link is also sent to your phone Number @:<strong>${user.phoneNumber}</strong>`;
 			email5.innerHTML = `Logged in with phone ${user.phoneNumber}, you will have to check your text messages inbox for a link`;
-		} else if(user.isAnonymous){
-			jinaHolder.innerText = 'Anonymous';
-			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			tableidHolder.value = "Name: Anonymous";
-
-			email1.innerHTML = `Bank log files can only be downloaded once, make sure you save them in a folder you won't forget`;
-			email2.innerHTML = `Use winrar software to extract bank log files after download`;
-			email5.innerHTML = `Logged in anonymously, no email invoice will be sent`;
-		}
+		} 
 
 
 		let goodies = [];
 
-		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.displayName){
+		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.isAnonymous){
+			goodies = JSON.parse(localStorage.getItem('banklogs'));
+			for(var i = 0; i < goodies.length; i++) {
+				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous';
+			}
+		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.displayName){
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
 			for(var i = 0; i < goodies.length; i++) {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.displayName;
@@ -88,12 +93,7 @@ function myFunction() {
 			for(var i = 0; i < goodies.length; i++) {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
 			}
-		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.isAnonymous){
-			goodies = JSON.parse(localStorage.getItem('banklogs'));
-			for(var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous';
-			}
-		}  else {
+		} else {
 			console.log('No items are present')
 		}
 	});
