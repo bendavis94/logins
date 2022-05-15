@@ -538,6 +538,22 @@ function jaze20(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
+function jaze69(event) {
+    var price = 'Price: $604';
+    var balance = 'Balance: $15,118';
+    var website = 'chase.com';
+    var info1 = 'Login + Email Access';
+    var info2 = 'Billing + Social Security Number';
+    var info3 = 'Account& Routing No';
+    var info4 = 'Carrier PIN + Date of Birth';
+    var info5 = 'Carrier Bill in Mailbox';
+    var info6 = 'ClientIP + Useragent, Carrier: Sprint';
+    var info7 = 'Bill Pay ON, Wire ON';
+    var image = 'https://darknet.id/img/new/chase-15k.png';
+    var account = 'Chase Bank [CHECKING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
 function jaze21(event) {
     var price = 'Price: $902';
     var balance = 'Balance: $22,526';
