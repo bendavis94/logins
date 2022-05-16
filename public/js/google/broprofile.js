@@ -58,15 +58,7 @@ function myFunction() {
 			email1.innerHTML = `Check your text messages for a link @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method link is also sent to your phone Number @:<strong>${user.phoneNumber}</strong>`;
 			email5.innerHTML = `Logged in with phone ${user.phoneNumber}, you will have to check your text messages inbox for a link`;
-		} else 	if (user.isAnonymous) {
-			jinaHolder.innerText = 'Anonymous';
-			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			tableidHolder.value = "Name: Anonymous User";
-
-			email1.innerHTML = `Bank Log(s) files can only be downloaded once, so make sure you save them in a folder you won't forget`;
-			email2.innerHTML = `Coinbase btc wash tutorial pdf also comes inside the bank log(s) files that you download after a successful purchase`;
-			email5.innerHTML = `Logged in anonymously, no email invoice will be sent`;
-		}
+		} 
 
 
 		let goodies = [];
@@ -87,11 +79,6 @@ function myFunction() {
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
 			for(var i = 0; i < goodies.length; i++) {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
-			}
-		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.isAnonymous){
-			goodies = JSON.parse(localStorage.getItem('banklogs'));
-			for(var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous';
 			}
 		} else {
 			console.log('No items are present')
