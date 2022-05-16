@@ -66,11 +66,20 @@ function myFunction() {
           `;
       });
     } else if(user.isAnonymous){
-      auth.signOut().then(() => {
-				window.location.assign("index");
-			}).catch(error => {
-				console.error(error);
-			});
+      jinaHolder.innerText = 'Anonymous User';
+      jinaHolder2.innerText = 'User ID: ' + user.uid;
+      invoiceHolder.innerText = 'User ID: ' + user.uid;
+
+      fetch('https://ipapi.co/json/')
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          document.getElementById('yourIP').innerHTML = `
+              <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button> 
+              Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}</strong>
+          `;
+      });
     }
   });
 

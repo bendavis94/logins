@@ -43,6 +43,22 @@ auth.onAuthStateChanged(user => {
 					}
 					return msgs[i];
 				}
+			} else if(user.isAnonymous){
+				for(var i = 0; i < items.length; i++) {
+					var msgs = [`
+						Your anonymous account has insufficient balance to complete the download, <br>
+						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download 
+						${items[0].account} with ${items[0].balance}, <br> 
+						and ${items[1].account} with ${items[1].balance} <br>.
+						<hr>
+						Also if you'd like to get bank logs sent via email, login with google/email or yahoo.
+					`];
+					i++;
+					if (i === msgs.length) {
+						i = 0;
+					}
+					return msgs[i];
+				}
 			} 
 		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 1)){
 			if(user.email){
@@ -64,6 +80,21 @@ auth.onAuthStateChanged(user => {
 						${user.phoneNumber}, your account has insufficient balance to complete the download, <br>
 						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download 
 						${items[0].account} with ${items[0].balance}
+					`];
+					i++;
+					if (i === msgs.length) {
+						i = 0;
+					}
+					return msgs[i];
+				}
+			} else if(user.isAnonymous){
+				for(var i = 0; i < items.length; i++) {
+					var msgs = [`
+						Your anonymous account has insufficient balance to complete the download, <br>
+						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download 
+						${items[0].account} with ${items[0].balance}.
+						<hr>
+						Also if you'd like to get bank logs sent via email, login with google/email or yahoo.
 					`];
 					i++;
 					if (i === msgs.length) {
@@ -96,6 +127,23 @@ auth.onAuthStateChanged(user => {
 						${items[0].account} with ${items[0].balance}, <br> 
 						and ${items[1].account} with ${items[1].balance}, <br>
 						and ${items[2].account} with ${items[2].balance}
+					`];
+					i++;
+					if (i === msgs.length) {
+						i = 0;
+					}
+					return msgs[i];
+				}
+			} else if(user.isAnonymous){
+				for(var i = 0; i < items.length; i++) {
+					var msgs = [`
+						${user.phoneNumber}, your account has insufficient balance to complete the download, <br>
+						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download 
+						${items[0].account} with ${items[0].balance}, <br> 
+						and ${items[1].account} with ${items[1].balance}, <br>
+						and ${items[2].account} with ${items[2].balance}. 
+						<hr>
+						Also if you'd like to get bank logs sent via email, login with google/email or yahoo.
 					`];
 					i++;
 					if (i === msgs.length) {
