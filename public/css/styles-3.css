@@ -605,7 +605,7 @@ a:hover,a:active{
 	overflow:hidden;
 	 text-align: center;
 	border:1px solid #eee;
-	border-radius:5px;
+	border-radius:0;
 	-webkit-box-shadow:0 10px 20px 0 rgba(50,50,50,0.12);
 	-moz-box-shadow:0 10px 20px 0 rgba(50,50,50,0.12);
 	box-shadow:0 10px 20px 0 rgba(50,50,50,0.12);
