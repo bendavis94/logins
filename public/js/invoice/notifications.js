@@ -18,7 +18,7 @@ auth.onAuthStateChanged(user => {
 			if(user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${user.email}, ${toastbitcoin} bitcoin confirmation not detected.
+						${user.email}, your account has insufficient balance to complete the download.
 						<hr>
 						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download 
 						${items[0].account} with ${items[0].balance}, <br> 
@@ -33,7 +33,7 @@ auth.onAuthStateChanged(user => {
 			} else if(user.phoneNumber){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${user.phoneNumber}, ${toastbitcoin} bitcoin confirmation not detected.
+						${user.phoneNumber}, your account has insufficient balance to complete the download.
 						<hr>
 						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download 
 						${items[0].account} with ${items[0].balance}, <br> 
@@ -50,7 +50,7 @@ auth.onAuthStateChanged(user => {
 			if(user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${user.email}, ${toastbitcoin} bitcoin confirmation not detected.
+						${user.email}, your account has insufficient balance to complete the download.
 						<hr>
 						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download 
 						${items[0].account} with ${items[0].balance}
@@ -64,7 +64,7 @@ auth.onAuthStateChanged(user => {
 			} else if(user.phoneNumber){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${user.phoneNumber}, ${toastbitcoin} bitcoin confirmation not detected.
+						${user.phoneNumber}, your account has insufficient balance to complete the download.
 						<hr>
 						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download 
 						${items[0].account} with ${items[0].balance}
@@ -80,7 +80,7 @@ auth.onAuthStateChanged(user => {
 			if(user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${user.email}, ${toastbitcoin} bitcoin confirmation not detected.
+						${user.email}, your account has insufficient balance to complete the download.
 						<hr>
 						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download 
 						${items[0].account} with ${items[0].balance}, <br> 
@@ -96,7 +96,7 @@ auth.onAuthStateChanged(user => {
 			} else if(user.phoneNumber){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${user.phoneNumber}, ${toastbitcoin} bitcoin confirmation not detected.
+						${user.phoneNumber}, your account has insufficient balance to complete the download.
 						<hr>
 						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download 
 						${items[0].account} with ${items[0].balance}, <br> 
