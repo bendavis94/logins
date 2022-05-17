@@ -66,7 +66,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
 
 
 function fir98(event) {
-    var price = 'Price: $112';
+    var price = 'Price: $56';
     var balance = 'Balance: $2,824';
     var website = 'chase.com';
     var info1 = 'Username + Password';
@@ -82,7 +82,7 @@ function fir98(event) {
 }
 
 function fir25(event) {
-    var price = 'Price: $1,328';
+    var price = 'Price: $664';
     var balance = 'Balance: $33,200';
     var website = 'chase.com';
     var info1 = 'Username + Password';
@@ -98,7 +98,7 @@ function fir25(event) {
 }
 
 function fir97(event) {
-    var price = 'Price: $229';
+    var price = 'Price: $114';
     var balance = 'Balance: $5,745';
     var website = 'chase.com';
     var info1 = 'Username + Password';
@@ -114,7 +114,7 @@ function fir97(event) {
 }
 
 function fir23(event) {
-    var price = 'Price: $190';
+    var price = 'Price: $95';
     var balance = 'Balance: $4,833';
     var website = 'chase.com';
     var info1 = 'Username + Password';
@@ -130,7 +130,7 @@ function fir23(event) {
 }
 
 function fir24(event) {
-    var price = 'Price: $1,088';
+    var price = 'Price: $544';
     var balance = 'Balance: $27,212';
     var website = 'chase.com';
     var info1 = 'Username + Password';
@@ -147,7 +147,7 @@ function fir24(event) {
 
 
 function fir21(event) {
-    var price = 'Price: $282';
+    var price = 'Price: $141';
     var balance = 'Balance: $7,001';
     var website = 'chase.com';
     var info1 = 'Username + Password';
@@ -163,7 +163,7 @@ function fir21(event) {
 }
 
 function fir22(event) {
-    var price = 'Price: $150';
+    var price = 'Price: $75';
     var balance = 'Balance: $3,798';
     var website = 'chase.com';
     var info1 = 'Username + Password';
@@ -179,7 +179,7 @@ function fir22(event) {
 }
 
 function fir99(event) {
-    var price = 'Price: $232';
+    var price = 'Price: $116';
     var balance = 'Balance: $5,813';
     var website = 'chase.com';
     var info1 = 'Username + Password';
@@ -219,7 +219,7 @@ function fir99(event) {
 
 
 function jaze1(event) {
-    var price = 'Price: $488';
+    var price = 'Price: $244';
     var balance = 'Balance: $12,245';
     var website = 'chase.com';
     var info1 = 'Login + Email Access';
@@ -235,7 +235,7 @@ function jaze1(event) {
 }
 
 function jaze2(event) {
-    var price = 'Price: $546';
+    var price = 'Price: $273';
     var balance = 'Balance: $13,636';
     var website = 'chase.com';
     var info1 = 'Login + Email Access';
@@ -251,7 +251,7 @@ function jaze2(event) {
 }
 
 function jaze3(event) {
-    var price = 'Price: $548';
+    var price = 'Price: $274';
     var balance = 'Balance: $13,691';
     var website = 'chase.com';
     var info1 = 'Login + Email Access, State: Ohio';
@@ -267,7 +267,7 @@ function jaze3(event) {
 }
 
 function jaze4(event) {
-    var price = 'Price: $578';
+    var price = 'Price: $289';
     var balance = 'Balance: $14,516';
     var website = 'chase.com';
     var info1 = 'Login + Email Access, State: New York';
@@ -283,7 +283,7 @@ function jaze4(event) {
 }
 
 function jaze5(event) {
-    var price = 'Price: $592';
+    var price = 'Price: $296';
     var balance = 'Balance: $14,843';
     var website = 'chase.com';
     var info1 = 'Online Access';
@@ -299,7 +299,7 @@ function jaze5(event) {
 }
 
 function jaze6(event) {
-    var price = 'Price: $598';
+    var price = 'Price: $299';
     var balance = 'Balance: $15,001';
     var website = 'chase.com';
     var info1 = 'Login + Email Access';
@@ -315,7 +315,7 @@ function jaze6(event) {
 }
 
 function jaze7(event) {
-    var price = 'Price: $604';
+    var price = 'Price: $302';
     var balance = 'Balance: $15,198';
     var website = 'chase.com';
     var info1 = 'Login Access';
@@ -331,7 +331,7 @@ function jaze7(event) {
 }
 
 function jaze8(event) {
-    var price = 'Price: $614';
+    var price = 'Price: $307';
     var balance = 'Balance: $15,281';
     var website = 'chase.com';
     var info1 = 'Login + Email Access';
@@ -347,7 +347,7 @@ function jaze8(event) {
 }
 
 function jaze9(event) {
-    var price = 'Price: $628';
+    var price = 'Price: $314';
     var balance = 'Balance: $15,740';
     var website = 'chase.com';
     var info1 = 'Login Access';
@@ -363,7 +363,7 @@ function jaze9(event) {
 }
 
 function jaze10(event) {
-    var price = 'Price: $640';
+    var price = 'Price: $320';
     var balance = 'Balance: $16,112';
     var website = 'chase.com';
     var info1 = 'Online Access';
@@ -379,7 +379,7 @@ function jaze10(event) {
 }
 
 function jaze11(event) {
-    var price = 'Price: $694';
+    var price = 'Price: $347';
     var balance = 'Balance: $17,387';
     var website = 'chase.com';
     var info1 = 'Login Access';
@@ -395,7 +395,7 @@ function jaze11(event) {
 }
 
 function jaze12(event) {
-    var price = 'Price: $704';
+    var price = 'Price: $352';
     var balance = 'Balance: $17,678';
     var website = 'chase.com';
     var info1 = 'Login + Email Access, Carrier: T-Mobile';
@@ -411,7 +411,7 @@ function jaze12(event) {
 }
 
 function jaze13(event) {
-    var price = 'Price: $764';
+    var price = 'Price: $382';
     var balance = 'Balance: $18,957';
     var website = 'chase.com';
     var info1 = 'Login + Email Access';
@@ -427,7 +427,7 @@ function jaze13(event) {
 }
 
 function jaze14(event) {
-    var price = 'Price: $772';
+    var price = 'Price: $386';
     var balance = 'Balance: $19,321';
     var website = 'chase.com';
     var info1 = 'Login + Email Access';
@@ -443,7 +443,7 @@ function jaze14(event) {
 }
 
 function jaze15(event) {
-    var price = 'Price: $782';
+    var price = 'Price: $391';
     var balance = 'Balance: $19,638';
     var website = 'chase.com';
     var info1 = 'Login + Email Access';
@@ -459,7 +459,7 @@ function jaze15(event) {
 }
 
 function jaze16(event) {
-    var price = 'Price: $788';
+    var price = 'Price: $394';
     var balance = 'Balance: $19,720';
     var website = 'chase.com';
     var info1 = 'Login + Email Access';
@@ -475,7 +475,7 @@ function jaze16(event) {
 }
 
 function jaze17(event) {
-    var price = 'Price: $794';
+    var price = 'Price: $397';
     var balance = 'Balance: $19,922';
     var website = 'chase.com';
     var info1 = 'Login + Email Access';
@@ -491,7 +491,7 @@ function jaze17(event) {
 }
 
 function jaze18(event) {
-    var price = 'Price: $816';
+    var price = 'Price: $408';
     var balance = 'Balance: $20,015';
     var website = 'chase.com';
     var info1 = 'Login + Email Access';
@@ -507,7 +507,7 @@ function jaze18(event) {
 }
 
 function jaze19(event) {
-    var price = 'Price: $860';
+    var price = 'Price: $430';
     var balance = 'Balance: $21,462';
     var website = 'chase.com';
     var info1 = 'Login + Email Access, Carrier PIN, T-Mobile';
@@ -523,7 +523,7 @@ function jaze19(event) {
 }
 
 function jaze20(event) {
-    var price = 'Price: $890';
+    var price = 'Price: $445';
     var balance = 'Balance: $22,038';
     var website = 'chase.com';
     var info1 = 'Login Access';
@@ -539,7 +539,7 @@ function jaze20(event) {
 }
 
 function jaze69(event) {
-    var price = 'Price: $604';
+    var price = 'Price: $302';
     var balance = 'Balance: $15,118';
     var website = 'chase.com';
     var info1 = 'Login + Email Access';
@@ -555,7 +555,7 @@ function jaze69(event) {
 }
 
 function jaze21(event) {
-    var price = 'Price: $902';
+    var price = 'Price: $451';
     var balance = 'Balance: $22,526';
     var website = 'chase.com';
     var info1 = 'Login + Email Access';
@@ -571,7 +571,7 @@ function jaze21(event) {
 }
 
 function jaze22(event) {
-    var price = 'Price: $914';
+    var price = 'Price: $457';
     var balance = 'Balance: $22,995';
     var website = 'chase.com';
     var info1 = 'Login Access';
@@ -587,7 +587,7 @@ function jaze22(event) {
 }
 
 function jaze23(event) {
-    var price = 'Price: $924';
+    var price = 'Price: $462';
     var balance = 'Balance: $23,089';
     var website = 'chase.com';
     var info1 = 'Login + Email Access';
@@ -603,7 +603,7 @@ function jaze23(event) {
 }
 
 function jaze24(event) {
-    var price = 'Price: $934';
+    var price = 'Price: $467';
     var balance = 'Balance: $23,649';
     var website = 'chase.com';
     var info1 = 'Login + Email Access, + Billing';
@@ -619,7 +619,7 @@ function jaze24(event) {
 }
 
 function jaze25(event) {
-    var price = 'Price: $936';
+    var price = 'Price: $468';
     var balance = 'Balance: $23,354';
     var website = 'chase.com';
     var info1 = 'Login + Email Access, Carrier: Verizon';
@@ -635,7 +635,7 @@ function jaze25(event) {
 }
 
 function jaze26(event) {
-    var price = 'Price: $1,034';
+    var price = 'Price: $517';
     var balance = 'Balance: $26,005';
     var website = 'chase.com';
     var info1 = 'Login Access';
@@ -651,7 +651,7 @@ function jaze26(event) {
 }
 
 function jaze27(event) {
-    var price = 'Price: $1,044';
+    var price = 'Price: $522';
     var balance = 'Balance: $26,147';
     var website = 'chase.com';
     var info1 = 'Login + Email Access';
@@ -667,7 +667,7 @@ function jaze27(event) {
 }
 
 function jaze28(event) {
-    var price = 'Price: $1,084';
+    var price = 'Price: $542';
     var balance = 'Balance: $26,410';
     var website = 'chase.com';
     var info1 = 'Login + Email Access';
@@ -683,7 +683,7 @@ function jaze28(event) {
 }
 
 function jaze29(event) {
-    var price = 'Price: $1,088';
+    var price = 'Price: $544';
     var balance = 'Balance: $26,526';
     var website = 'chase.com';
     var info1 = 'Login Access';
@@ -699,7 +699,7 @@ function jaze29(event) {
 }
 
 function jaze30(event) {
-    var price = 'Price: $1,132';
+    var price = 'Price: $566';
     var balance = 'Balance: $28,252';
     var website = 'chase.com';
     var info1 = 'Login Access';
@@ -715,7 +715,7 @@ function jaze30(event) {
 }
 
 function jaze31(event) {
-    var price = 'Price: $1,248';
+    var price = 'Price: $624';
     var balance = 'Balance: $31,476';
     var website = 'chase.com';
     var info1 = 'Login + Email Access';
@@ -731,7 +731,7 @@ function jaze31(event) {
 }
 
 function jaze32(event) {
-    var price = 'Price: $1,368';
+    var price = 'Price: $684';
     var balance = 'Balance: $34,238';
     var website = 'chase.com';
     var info1 = 'Login + Email Access, Billing Info';
@@ -748,7 +748,7 @@ function jaze32(event) {
 
 
 function jaze33(event) {
-    var price = 'Price: $1,520';
+    var price = 'Price: $760';
     var balance = 'Balance: $38,004';
     var website = 'chase.com';
     var info1 = 'Login + Email Access';
@@ -764,7 +764,7 @@ function jaze33(event) {
 }
 
 function jaze34(event) {
-    var price = 'Price: $1,552';
+    var price = 'Price: $776';
     var balance = 'Balance: $38,806';
     var website = 'chase.com';
     var info1 = 'Login Access';
@@ -780,7 +780,7 @@ function jaze34(event) {
 }
 
 function jaze35(event) {
-    var price = 'Price: $1,604';
+    var price = 'Price: $802';
     var balance = 'Balance: $40,010';
     var website = 'chase.com';
     var info1 = 'Login Access';
@@ -796,7 +796,7 @@ function jaze35(event) {
 }
 
 function jaze36(event) {
-    var price = 'Price: $1,624';
+    var price = 'Price: $812';
     var balance = 'Balance: $40,480';
     var website = 'chase.com';
     var info1 = 'Wire History, Zelle ON';
@@ -812,7 +812,7 @@ function jaze36(event) {
 }
 
 function jaze37(event) {
-    var price = 'Price: $1,654';
+    var price = 'Price: $827';
     var balance = 'Balance: $41,690';
     var website = 'chase.com';
     var info1 = 'Email Access (SBC Global)';
@@ -828,7 +828,7 @@ function jaze37(event) {
 }
 
 function jaze38(event) {
-    var price = 'Price: $1,682';
+    var price = 'Price: $841';
     var balance = 'Balance: $40,787';
     var website = 'chase.com';
     var info1 = 'Login Access';
@@ -844,7 +844,7 @@ function jaze38(event) {
 }
 
 function jaze39(event) {
-    var price = 'Price: $1,862';
+    var price = 'Price: $931';
     var balance = 'Balance: $46,761';
     var website = 'chase.com';
     var info1 = 'Login Access';
@@ -860,7 +860,7 @@ function jaze39(event) {
 }
 
 function jaze40(event) {
-    var price = 'Price: $1,904';
+    var price = 'Price: $952';
     var balance = 'Balance: $47,775';
     var website = 'chase.com';
     var info1 = 'Login Access';
@@ -876,7 +876,7 @@ function jaze40(event) {
 }
 
 function jaze41(event) {
-    var price = 'Price: $1,936';
+    var price = 'Price: $968';
     var balance = 'Balance: $48,503';
     var website = 'chase.com';
     var info1 = 'Login Access';
@@ -892,7 +892,7 @@ function jaze41(event) {
 }
 
 function jaze42(event) {
-    var price = 'Price: $2,284';
+    var price = 'Price: $1,142';
     var balance = 'Balance: $56,629';
     var website = 'chase.com';
     var info1 = 'Carrier: T-Mobile';
@@ -908,7 +908,7 @@ function jaze42(event) {
 }
 
 function jaze43(event) {
-    var price = 'Price: $2,780';
+    var price = 'Price: $1,390';
     var balance = 'Balance: $69,304';
     var website = 'chase.com';
     var info1 = 'Login + Email Access';
@@ -924,7 +924,7 @@ function jaze43(event) {
 }
 
 function jaze44(event) {
-    var price = 'Price: $2,936';
+    var price = 'Price: $1,468';
     var balance = 'Balance: $72,417';
     var website = 'chase.com';
     var info1 = 'Online Access';
@@ -940,7 +940,7 @@ function jaze44(event) {
 }
 
 function jaze45(event) {
-    var price = 'Price: $3,648';
+    var price = 'Price: $1,824';
     var balance = 'Balance: $90,646';
     var website = 'chase.com';
     var info1 = 'Gender: Female';
@@ -956,7 +956,7 @@ function jaze45(event) {
 }
 
 function jaze46(event) {
-    var price = 'Price: $10,538';
+    var price = 'Price: $5,269';
     var balance = 'Balance: $263,896';
     var website = 'chase.com';
     var info1 = 'Login + Email Access, Carrier PIN: T-Mobile';
@@ -972,7 +972,7 @@ function jaze46(event) {
 }
 
 function jaze47(event) {
-    var price = 'Price: $82,490';
+    var price = 'Price: $41,245';
     var balance = 'Balance: $2,010,261';
     var website = 'chase.com';
     var info1 = 'Online + Email Login';
