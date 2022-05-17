@@ -27,7 +27,7 @@ function myFunction() {
     if(user.displayName){
       jinaHolder.innerText = user.displayName;
       jinaHolder2.innerText = 'USER ID: ' + user.uid;
-      emailInbox.innerHTML = `Check your email inbox spam folder <span>${user.email}</span> after buying any bank log.`;
+      emailInbox.innerHTML = `Check your email inbox <span>${user.email}</span> after buying any bank log.`;
 
       fetch('https://ipapi.co/json/')
         .then(function(response) {
@@ -41,7 +41,7 @@ function myFunction() {
       var theaddress = themail.substring(0,themail.indexOf('@'));
       jinaHolder.innerText = theaddress;
       jinaHolder2.innerText = 'USER ID: ' + user.uid;
-      emailInbox.innerHTML = `Check your email inbox spam folder <span>${user.email}</span> after buying any bank log.`;
+      emailInbox.innerHTML = `Check your email inbox <span>${user.email}</span> after buying any bank log.`;
 
       fetch('https://ipapi.co/json/')
         .then(function(response) {
