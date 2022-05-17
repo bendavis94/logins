@@ -1349,7 +1349,10 @@ label.error{
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
-    
+    .ach{
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+    }
 }
 
 @media (min-width: 592px) { 
