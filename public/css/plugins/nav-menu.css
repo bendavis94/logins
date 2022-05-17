@@ -1722,6 +1722,9 @@ th{
     #jinaHolder{
         font-size: 17px;
     }
+    .xs-margin-50px-right{
+		margin-right:40px !important
+	}
 }
 *{
     font-family:"Montserrat",sans-serif;
