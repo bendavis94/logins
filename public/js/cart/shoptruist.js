@@ -64,7 +64,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
 }
 
 function fir5(event) {
-    var price = 'Price: $1,164';
+    var price = 'Price: $582';
     var balance = 'Balance: $29,145';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -80,7 +80,7 @@ function fir5(event) {
 }
 
 function fir6(event) {
-    var price = 'Price: $414';
+    var price = 'Price: $207';
     var balance = 'Balance: $10,392';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -96,7 +96,7 @@ function fir6(event) {
 }
 
 function fir7(event) {
-    var price = 'Price: $298';
+    var price = 'Price: $149';
     var balance = 'Balance: $7,476';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -112,7 +112,7 @@ function fir7(event) {
 }
 
 function fir71(event) {
-    var price = 'Price: $258';
+    var price = 'Price: $129';
     var balance = 'Balance: $6,456';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -128,7 +128,7 @@ function fir71(event) {
 }
 
 function fir8(event) {
-    var price = 'Price: $200';
+    var price = 'Price: $100';
     var balance = 'Balance: $5,027';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -144,7 +144,7 @@ function fir8(event) {
 }
 
 function fir9(event) {
-    var price = 'Price: $220';
+    var price = 'Price: $110';
     var balance = 'Balance: $5,513';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -160,7 +160,7 @@ function fir9(event) {
 }
 
 function fir10(event) {
-    var price = 'Price: $228';
+    var price = 'Price: $114';
     var balance = 'Balance: $5,728';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -176,7 +176,7 @@ function fir10(event) {
 }
 
 function fir12(event) {
-    var price = 'Price: $174';
+    var price = 'Price: $87';
     var balance = 'Balance: $4,200';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -192,7 +192,7 @@ function fir12(event) {
 }
 
 function fir13(event) {
-    var price = 'Price: $192';
+    var price = 'Price: $96';
     var balance = 'Balance: $4,900';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -209,7 +209,7 @@ function fir13(event) {
 
 
 function fir15(event) {
-    var price = 'Price: $158';
+    var price = 'Price: $79';
     var balance = 'Balance: $3,925';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -226,7 +226,7 @@ function fir15(event) {
 
 
 function fir18(event) {
-    var price = 'Price: $152';
+    var price = 'Price: $76';
     var balance = 'Balance: $3,800';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -242,7 +242,7 @@ function fir18(event) {
 }
 
 function fir19(event) {
-    var price = 'Price: $304';
+    var price = 'Price: $152';
     var balance = 'Balance: $7,625';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -260,23 +260,7 @@ function fir19(event) {
 
 
 function fir30(event) {
-    var price = 'Price: $304';
-    var balance = 'Balance: $7,625';
-    var website = 'truist.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Social Security No';
-    var info4 = 'Date of Birth';
-    var info5 = 'ClientIP + Useragent';
-    var info6 = 'Name+ Email Access';
-    var info7 = 'Owner\'s Complete Fullz';
-    var image = 'https://darknet.id/img/new/truist-7.6.png';
-    var account = 'Truist Bank [CHECKING]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function fir31(event) {
-    var price = 'Price: $368';
+    var price = 'Price: $184';
     var balance = 'Balance: $9,231';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -291,8 +275,24 @@ function fir31(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
+function fir31(event) {
+    var price = 'Price: $200';
+    var balance = 'Balance: $10,000';
+    var website = 'truist.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Social Security No';
+    var info4 = 'Date of Birth';
+    var info5 = 'ClientIP + Useragent';
+    var info6 = 'Name+ Email Access';
+    var info7 = 'Owner\'s Complete Fullz';
+    var image = 'https://darknet.id/img/new/truist-10.0.png';
+    var account = 'Truist Bank [CHECKING]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
 function fir32(event) {
-    var price = 'Price: $180';
+    var price = 'Price: $90';
     var balance = 'Balance: $4,500';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -308,7 +308,7 @@ function fir32(event) {
 }
 
 function fir33(event) {
-    var price = 'Price: $496';
+    var price = 'Price: $248';
     var balance = 'Balance: $12,437';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -324,7 +324,7 @@ function fir33(event) {
 }
 
 function fir34(event) {
-    var price = 'Price: $348';
+    var price = 'Price: $174';
     var balance = 'Balance: $8,705';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -340,7 +340,7 @@ function fir34(event) {
 }
 
 function fir35(event) {
-    var price = 'Price: $2,320';
+    var price = 'Price: $1,160';
     var balance = 'Balance: $58,000';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -356,7 +356,7 @@ function fir35(event) {
 }
 
 function fir38(event) {
-    var price = 'Price: $201';
+    var price = 'Price: $101';
     var balance = 'Balance: $5,041';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -372,7 +372,7 @@ function fir38(event) {
 }
 
 function fir39(event) {
-    var price = 'Price: $401';
+    var price = 'Price: $201';
     var balance = 'Balance: $10,003';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -397,7 +397,7 @@ function fir39(event) {
 
 
 function uk6(event) {
-    var price = 'Price: $500';
+    var price = 'Price: $250';
     var balance = 'Balance: $12,550';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -413,7 +413,7 @@ function uk6(event) {
 }
 
 function uk14(event) {
-    var price = 'Price: $564';
+    var price = 'Price: $282';
     var balance = 'Balance: $14,107';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -429,7 +429,7 @@ function uk14(event) {
 }
 
 function uk15(event) {
-    var price = 'Price: $572';
+    var price = 'Price: $286';
     var balance = 'Balance: $14,303';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -445,7 +445,7 @@ function uk15(event) {
 }
 
 function uk16(event) {
-    var price = 'Price: $568';
+    var price = 'Price: $284';
     var balance = 'Balance: $14,226';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -462,7 +462,7 @@ function uk16(event) {
 
 
 function uk19(event) {
-    var price = 'Price: $582';
+    var price = 'Price: $291';
     var balance = 'Balance: $14,537';
     var website = 'chime.com';
     var info1 = 'Username + Password';
@@ -479,7 +479,7 @@ function uk19(event) {
 
 
 function uk25(event) {
-    var price = 'Price: $786';
+    var price = 'Price: $393';
     var balance = 'Balance: $19,724';
     var website = 'chime.com';
     var info1 = 'Username + Password';
@@ -498,7 +498,7 @@ function uk25(event) {
 
 
 function uk30(event) {
-    var price = 'Price: $840';
+    var price = 'Price: $420';
     var balance = 'Balance: $20,834';
     var website = 'chime.com';
     var info1 = 'Username + Password';
@@ -515,7 +515,7 @@ function uk30(event) {
 
 
 function uk32(event) {
-    var price = 'Price: $1,160';
+    var price = 'Price: $580';
     var balance = 'Balance: $29,007';
     var website = 'truist.com';
     var info1 = 'Username + Password';
@@ -531,7 +531,7 @@ function uk32(event) {
 }
 
 function uk37(event) {
-    var price = 'Price: $2,000';
+    var price = 'Price: $1,000';
     var balance = 'Balance: $50,000';
     var website = 'chime.com';
     var info1 = 'Username + Password';
@@ -547,7 +547,7 @@ function uk37(event) {
 }
 
 function uk40(event) {
-    var price = 'Price: $2,492';
+    var price = 'Price: $1,246';
     var balance = 'Balance: $62,333';
     var website = 'chime.com';
     var info1 = 'Username + Password';
@@ -563,7 +563,7 @@ function uk40(event) {
 }
 
 function uk97(event) {
-    var price = 'Price: $240';
+    var price = 'Price: $120';
     var balance = 'Balance: $6,013';
     var website = 'chime.com';
     var info1 = 'Username + Password';
@@ -580,7 +580,7 @@ function uk97(event) {
 
 
 function uk41(event) {
-    var price = 'Price: $2,796';
+    var price = 'Price: $1,390';
     var balance = 'Balance: $69,900';
     var website = 'chime.com';
     var info1 = 'Username + Password';
