@@ -114,6 +114,26 @@ function fir3(event) {
 }
 
 
+function uk97(event) {
+    var price = 'Price: $120';
+    var balance = 'Balance: $6,013';
+    var website = 'chime.com';
+    var info1 = 'Username + Password';
+    var info2 = 'Account& Routing No';
+    var info3 = 'Date of Birth';
+    var info4 = 'Social Security No';
+    var info5 = 'ClientIP+ UserAgent';
+    var info6 = 'Name+ Email Access';
+    var info7 = 'Owner Complete Fullz';
+    var image = 'https://darknet.id/img/new/chime-6.jpg';
+    var account = 'Chime Bank [CHECKING ACCOUNT]';
+    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
+}
+
+
+
+
+
 function fir11(event) {
     var price = 'Price: $2,615';
     var balance = 'Balance: $130,750';
