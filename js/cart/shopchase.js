@@ -66,7 +66,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
 
 
 function fir98(event) {
-    var price = 'Price: $56';
+    var price = 'Price: $80';
     var balance = 'Balance: $2,824';
     var website = 'chase.com';
     var info1 = 'Username + Password';
@@ -147,7 +147,7 @@ function fir21(event) {
 }
 
 function fir22(event) {
-    var price = 'Price: $75';
+    var price = 'Price: $97';
     var balance = 'Balance: $3,798';
     var website = 'chase.com';
     var info1 = 'Username + Password';
