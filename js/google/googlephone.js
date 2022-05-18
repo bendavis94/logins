@@ -70,7 +70,7 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
 }
 
 const signInAnony = () => {
-  auth.signInAnonymously.then(() => {
+  auth.signInAnonymously().then(() => {
     window.location.assign('chime');
   }).catch(error => {
     console.error(error.message)
