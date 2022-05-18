@@ -62,13 +62,7 @@ function myFunction() {
         .then(function(data) {
           document.getElementById('footer-email').innerHTML = `<span class="footer-name">${user.phoneNumber}<span>, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
       });
-    } else if(user.isAnonymous){
-      auth.signOut().then(() => {
-        window.location.assign("index");
-      }).catch(error => {
-        console.error(error);
-      });
-    }
+    } 
   });
 
   document.getElementById("thebodyz").oncontextmenu = function() {

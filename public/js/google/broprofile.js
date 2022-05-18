@@ -58,14 +58,7 @@ function myFunction() {
 			email1.innerHTML = `Check your text messages for a link @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method link is also sent to your phone Number @:<strong>${user.phoneNumber}</strong>`;
 			email5.innerHTML = `Logged in with phone ${user.phoneNumber}, you will have to check your text messages inbox for a link`;
-		} else if(user.isAnonymous){
-			auth.signOut().then(() => {
-			  window.location.assign("index");
-			}).catch(error => {
-			  console.error(error);
-			});
-		}
-
+		} 
 
 		let goodies = [];
 

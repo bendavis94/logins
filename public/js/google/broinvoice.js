@@ -65,13 +65,7 @@ function myFunction() {
               Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
           `;
       });
-    } else if(user.isAnonymous){
-      auth.signOut().then(() => {
-        window.location.assign("index");
-      }).catch(error => {
-        console.error(error);
-      });
-    }
+    } 
   });
 
   document.getElementById("thebodyz").oncontextmenu = function() {
