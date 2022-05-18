@@ -955,58 +955,6 @@ function jaze45(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function jaze46(event) {
-    var price = 'Price: $5,269';
-    var balance = 'Balance: $263,896';
-    var website = 'chase.com';
-    var info1 = 'Login + Email Access, Carrier PIN: T-Mobile';
-    var info2 = 'Zelle ON, Bill Pay OFF, Wire ON';
-    var info3 = 'Billing + Social Security No, State: New York';
-    var info4 = 'Account& Routing No, Wire ON';
-    var info5 = 'Debit Details + ATM PIN';
-    var info6 = 'ClientIP + Useragent, Good Zelle History';
-    var info7 = 'Carrier Bill in Mailbox';
-    var image = 'https://darknet.id/img/chase263.jpg';
-    var account = 'Chase Bank [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function jaze47(event) {
-    var price = 'Price: $41,245';
-    var balance = 'Balance: $2,010,261';
-    var website = 'chase.com';
-    var info1 = 'Online + Email Login';
-    var info2 = 'Billing+ Carrier PIN';
-    var info3 = 'ClientIP + UserAgent';
-    var info4 = 'Carrier: AT&T Mobility';
-    var info5 = 'Carrier Bill in Mailbox';
-    var info6 = 'Zelle Enabled';
-    var info7 = 'Wire Enabled';
-    var image = 'https://darknet.id/img/chase2mil.jpg';
-    var account = 'Chase Bank [Private Client]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
