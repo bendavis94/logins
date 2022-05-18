@@ -413,59 +413,6 @@ function uk16(event) {
 }
 
 
-function uk19(event) {
-    var price = 'Price: $291';
-    var balance = 'Balance: $14,537';
-    var website = 'chime.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Date of Birth';
-    var info4 = 'ClientIP + Useragent';
-    var info5 = 'Name+ Email Access';
-    var info6 = 'Owner\'s Complete Fullz';
-    var info7 = 'Social Security No';
-    var image = 'https://darknet.id/img/new/chime-14.jpg';
-    var account = 'Chime Bank [CHECKING]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-
-function uk25(event) {
-    var price = 'Price: $393';
-    var balance = 'Balance: $19,724';
-    var website = 'chime.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Date of Birth';
-    var info4 = 'ClientIP + Useragent';
-    var info5 = 'Name+ Email Access';
-    var info6 = 'Owner\'s Complete Fullz';
-    var info7 = 'Social Security No';
-    var image = 'https://darknet.id/img/new/chime-19.png';
-    var account = 'Chime Bank [CHECKING]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-
-
-
-function uk30(event) {
-    var price = 'Price: $420';
-    var balance = 'Balance: $20,834';
-    var website = 'chime.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Date of Birth';
-    var info4 = 'ClientIP + Useragent';
-    var info5 = 'Name+ Email Access';
-    var info6 = 'Owner\'s Complete Fullz';
-    var info7 = 'Social Security No';
-    var image = 'https://darknet.id/img/new/chime-20.jpg';
-    var account = 'Chime Bank [SPENDING]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-
 function uk32(event) {
     var price = 'Price: $580';
     var balance = 'Balance: $29,007';
@@ -483,22 +430,6 @@ function uk32(event) {
 }
 
 
-function uk40(event) {
-    var price = 'Price: $1,246';
-    var balance = 'Balance: $62,333';
-    var website = 'chime.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Date of Birth';
-    var info4 = 'Social Security No';
-    var info5 = 'ClientIP+ UserAgent';
-    var info6 = 'Name+ Email Access';
-    var info7 = 'Owner Complete Fullz';
-    var image = 'https://darknet.id/img/chime-60.jpg';
-    var account = 'Chime Bank [SPENDING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
 function uk97(event) {
     var price = 'Price: $120';
     var balance = 'Balance: $6,013';
@@ -512,23 +443,6 @@ function uk97(event) {
     var info7 = 'Owner Complete Fullz';
     var image = 'https://darknet.id/img/new/chime-6.jpg';
     var account = 'Chime Bank [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-
-function uk41(event) {
-    var price = 'Price: $1,390';
-    var balance = 'Balance: $69,900';
-    var website = 'chime.com';
-    var info1 = 'Username + Password';
-    var info2 = 'Account& Routing No';
-    var info3 = 'Date of Birth';
-    var info4 = 'Social Security No';
-    var info5 = 'ClientIP+ UserAgent';
-    var info6 = 'Name+ Email Access';
-    var info7 = 'Owner Complete Fullz';
-    var image = 'https://darknet.id/img/new/chime-69.jpg';
-    var account = 'Chime Bank [SPENDING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
