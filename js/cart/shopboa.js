@@ -200,7 +200,7 @@ function fir16(event) {
 }
 
 function fir17(event) {
-    var price = 'Price: $81';
+    var price = 'Price: $97';
     var balance = 'Balance: $3,953';
     var website = 'td.com';
     var info1 = 'Online Access';
@@ -216,7 +216,7 @@ function fir17(event) {
 }
 
 function fir20(event) {
-    var price = 'Price: $67';
+    var price = 'Price: $85';
     var balance = 'Balance: $3,300';
     var website = 'bankofamerica.com';
     var info1 = 'Username + Password';
