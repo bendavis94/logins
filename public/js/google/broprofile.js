@@ -24,6 +24,7 @@ function myFunction() {
 	const auth = firebase.auth();
 
 	auth.onAuthStateChanged(user => {
+		let goodies = [];
 		if (!user) {
 			window.location.assign("index");
 		}
@@ -39,6 +40,13 @@ function myFunction() {
 			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
 			email5.innerHTML = user.email;
+
+			if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
+				goodies = JSON.parse(localStorage.getItem('banklogs'));
+				for(var i = 0; i < goodies.length; i++) {
+					document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.displayName;
+				}
+			}
 		} else if(!user.displayName && user.email) {
 			var themail = user.email;
 			var theaddress = themail.substring(0,themail.indexOf('@'));
@@ -50,6 +58,13 @@ function myFunction() {
 			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
 			email5.innerHTML = user.email;
+
+			if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
+				goodies = JSON.parse(localStorage.getItem('banklogs'));
+				for(var i = 0; i < goodies.length; i++) {
+					document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = theaddress;
+				}
+			}
 		} else if(user.phoneNumber){
 			jinaHolder.innerText = user.phoneNumber;
 			jinaHolder2.innerText = 'User ID: ' + user.uid;
@@ -58,30 +73,14 @@ function myFunction() {
 			email1.innerHTML = `Check your text messages for a link @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
 			email2.innerHTML = `Cashout Method link is also sent to your phone Number @:<strong>${user.phoneNumber}</strong>`;
 			email5.innerHTML = `Logged in with phone ${user.phoneNumber}, you will have to check your text messages inbox for a link`;
+
+			if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
+				goodies = JSON.parse(localStorage.getItem('banklogs'));
+				for(var i = 0; i < goodies.length; i++) {
+					document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
+				}
+			}
 		} 
-
-		let goodies = [];
-
-		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.displayName){
-			goodies = JSON.parse(localStorage.getItem('banklogs'));
-			for(var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.displayName;
-			}
-		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && !user.displayName && user.email){
-			goodies = JSON.parse(localStorage.getItem('banklogs'));
-			var themail = user.email;
-			var theaddress = themail.substring(0,themail.indexOf('@'));
-			for(var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = theaddress;
-			}
-		} else if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0) && user.phoneNumber){
-			goodies = JSON.parse(localStorage.getItem('banklogs'));
-			for(var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
-			}
-		} else {
-			console.log('No items are present')
-		}
 	});
 
 
