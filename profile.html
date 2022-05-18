@@ -348,6 +348,83 @@
     <div class="container-fluid infinite-floating"> 
     <div class="row">
 
+        <div class="col-xl-4 col-lg-4 col-md-5 col-12">
+
+            <div class="section-heading">
+                <h4 class="text-white" id="notificationz">
+                    Notifications
+                </h4>
+            </div>
+
+            <div class="alert alert-primary alert-dismissible" id="gta1"></div>
+            <div class="alert alert-primary alert-dismissible" id="gta2"></div>
+            <div class="alert alert-success alert-dismissible" id="gta3"></div>
+            <div class="alert alert-success alert-dismissible" id="gta4"></div>
+            <div class="alert alert-success alert-dismissible" id="gta5"></div>
+            <div class="alert alert-success alert-dismissible" id="gta6"></div>
+            <div class="alert alert-warning alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <div id="yourEmail1"></div>
+            </div>
+            <div class="alert alert-warning alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <div id="yourEmail2"></div>
+            </div>
+            <div class="alert alert-danger alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                Your IP address is : <strong id="yourIP2"></strong>, Protect your privacy by using a good VPN.
+            </div>
+
+            <div class="alert alert-primary alert-dismissible" id="demorash"></div>
+            <div class="alert alert-primary alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                Join our telegram group chat @bendavis95 to join the discussion
+            </div>
+
+            <script>
+                    var month = new Array();
+                    month[4] = "May";
+                    month[5] = "June";
+                    month[6] = "July";
+                    month[7] = "August";
+                    
+                    var d = new Date();
+                    var n = month[d.getMonth()];
+                    var y = d.getFullYear();
+                    var m = d.getDate();
+
+                    document.getElementById("demorash").innerHTML = `
+                    Last Updated ${n}  ${m}, ${y}
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    `
+                    document.getElementById('gta1').innerHTML  =  `
+                    Added 1 <strong>B.B.V.A Bank Log</strong>
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    `;
+                    document.getElementById('gta2').innerHTML  =  `
+                    Added 1 <strong>Bank of America Bank Log</strong>
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    `;
+                    document.getElementById('gta3').innerHTML  =  `
+                    Sold <strong>Citi Bank [CHECKING ACCOUNT]</strong>, Balance: $6,127
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    `;
+                    document.getElementById('gta4').innerHTML  =  `
+                    Sold <strong>Truist Bank [CHECKING ACCOUNT]</strong>, Balance: $5,529
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    `;
+                    document.getElementById('gta5').innerHTML  =  `
+                    Sold <strong>Chime Bank [SAVINGS ACCOUNT]</strong>, Balance: $5,449
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    `;
+                    document.getElementById('gta6').innerHTML  =  `
+                    Sold <strong>Navy Federal Bank [SAVINGS ACCOUNT]</strong>, Balance: $6,359
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    `;
+            </script>
+        </div>
+        
+
         <div class="col-xl-8 col-lg-8 col-md-7 col-12">
             <div class="section-heading">
                 <h4 class="text-white" id="recentsales">
@@ -3897,78 +3974,6 @@
 
 
 
-        <div class="col-xl-4 col-lg-4 col-md-5 col-12">
-
-            <div class="section-heading">
-                <h4 class="text-white" id="notificationz">
-                    Notifications
-                </h4>
-            </div>
-
-            <div class="alert alert-primary alert-dismissible" id="gta1"></div>
-            <div class="alert alert-primary alert-dismissible" id="gta2"></div>
-            <div class="alert alert-success alert-dismissible" id="gta3"></div>
-            <div class="alert alert-success alert-dismissible" id="gta4"></div>
-            <div class="alert alert-success alert-dismissible" id="gta5"></div>
-            <div class="alert alert-success alert-dismissible" id="gta6"></div>
-            <div class="alert alert-warning alert-dismissible">
-                <button type="button" class="close" data-dismiss="alert">&times;</button>
-                <div id="yourEmail1"></div>
-            </div>
-            <div class="alert alert-warning alert-dismissible">
-                <button type="button" class="close" data-dismiss="alert">&times;</button>
-                <div id="yourEmail2"></div>
-            </div>
-            <div class="alert alert-danger alert-dismissible">
-                <button type="button" class="close" data-dismiss="alert">&times;</button>
-                Your IP address is : <strong id="yourIP2"></strong>, Protect your privacy by using a good VPN.
-            </div>
-
-            <div class="alert alert-primary alert-dismissible" id="demorash"></div>
-
-            <script>
-                    var month = new Array();
-                    month[4] = "May";
-                    month[5] = "June";
-                    month[6] = "July";
-                    month[7] = "August";
-                    
-                    var d = new Date();
-                    var n = month[d.getMonth()];
-                    var y = d.getFullYear();
-                    var m = d.getDate();
-
-                    document.getElementById("demorash").innerHTML = `
-                    Last Updated ${n}  ${m}, ${y}
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    `
-                    document.getElementById('gta1').innerHTML  =  `
-                    Added 1 <strong>B.B.V.A Bank Log</strong>
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    `;
-                    document.getElementById('gta2').innerHTML  =  `
-                    Added 1 <strong>Bank of America Bank Log</strong>
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    `;
-                    document.getElementById('gta3').innerHTML  =  `
-                    Sold <strong>Citi Bank [CHECKING ACCOUNT]</strong>, Balance: $6,127
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    `;
-                    document.getElementById('gta4').innerHTML  =  `
-                    Sold <strong>Truist Bank [CHECKING ACCOUNT]</strong>, Balance: $5,529
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    `;
-                    document.getElementById('gta5').innerHTML  =  `
-                    Sold <strong>Chime Bank [SAVINGS ACCOUNT]</strong>, Balance: $5,449
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    `;
-                    document.getElementById('gta6').innerHTML  =  `
-                    Sold <strong>Navy Federal Bank [SAVINGS ACCOUNT]</strong>, Balance: $6,359
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    `;
-            </script>
-        </div>
-        
 
     </div>
     </div>
