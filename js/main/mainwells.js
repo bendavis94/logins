@@ -36,23 +36,6 @@
 
     $(document).ready(function() {
 
-        $('#clients').owlCarousel({
-			loop: true,
-			nav: false,
-			dots: false,
-            smartSpeed: 500,
-			autoplay: true,
-			autoplayTimeout: 500,
-			responsiveClass: true,
-			autoplayHoverPause: false,
-			responsive: {
-                0: {items: 5, margin: 10}, 
-                768: {items: 9, margin: 15}, 
-                992: {items: 12, margin: 23}, 
-                1200: {items: 17, margin: 16}
-			}
-		});
-     
         $('#services-carousel').owlCarousel({
             loop: true,
             responsiveClass: true,
