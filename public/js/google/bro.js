@@ -1,86 +1,85 @@
-function myFunction() {
-  var firebaseConfig = {
-    apiKey: "AIzaSyA1L3Q63zrir2ZOQMzc7AxXuPBXjaOnIwo",
-    authDomain: "darknet-id.firebaseapp.com",
-    projectId: "darknet-id",
-    storageBucket: "darknet-id.appspot.com",
-    messagingSenderId: "1049421828082",
-    appId: "1:1049421828082:web:fb69e86a84c74a9af8a56b",
-    measurementId: "G-NPY81TPB7J"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const auth = firebase.auth();
-  const logoHolder = document.getElementById("logo");
-  const jinaHolder = document.getElementById("jinaHolder");
-  const jinaHolder2 = document.getElementById("jinaHolder2");
-  const emailInbox = document.getElementById("email-inbox");
+var firebaseConfig = {
+  apiKey: "AIzaSyA1L3Q63zrir2ZOQMzc7AxXuPBXjaOnIwo",
+  authDomain: "darknet-id.firebaseapp.com",
+  projectId: "darknet-id",
+  storageBucket: "darknet-id.appspot.com",
+  messagingSenderId: "1049421828082",
+  appId: "1:1049421828082:web:fb69e86a84c74a9af8a56b",
+  measurementId: "G-NPY81TPB7J"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const logoHolder = document.getElementById("logo");
+const jinaHolder = document.getElementById("jinaHolder");
+const jinaHolder2 = document.getElementById("jinaHolder2");
+const emailInbox = document.getElementById("email-inbox");
 
-  auth.onAuthStateChanged(user => {
-    if (!user) {
-      window.location.assign("index");
-    }
-    if (user.photoURL) {
-      logoHolder.setAttribute("src", user.photoURL);
-      logoHolder.style.borderRadius = '50%';
-    }
-    if(user.displayName){
-      jinaHolder.innerText = user.displayName;
-      jinaHolder2.innerText = 'USER ID: ' + user.uid;
-      emailInbox.innerHTML = `Check your email inbox <span>${user.email}</span> after buying any bank log.`;
+auth.onAuthStateChanged(user => {
+  if (!user) {
+    window.location.assign("index");
+  }
+  if (user.photoURL) {
+    logoHolder.setAttribute("src", user.photoURL);
+    logoHolder.style.borderRadius = '50%';
+  }
+  if(user.displayName){
+    jinaHolder.innerText = user.displayName;
+    jinaHolder2.innerText = 'USER ID: ' + user.uid;
+    emailInbox.innerHTML = `Check your email inbox <span>${user.email}</span> after buying any bank log.`;
 
-      fetch('https://ipapi.co/json/')
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(data) {
-          document.getElementById('footer-email').innerHTML = `<span class="footer-name">${user.displayName}<span>, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
-      });
-    } else if(!user.displayName && user.email) {
-      var themail = user.email;
-      var theaddress = themail.substring(0,themail.indexOf('@'));
-      jinaHolder.innerText = theaddress;
-      jinaHolder2.innerText = 'USER ID: ' + user.uid;
-      emailInbox.innerHTML = `Check your email inbox <span>${user.email}</span> after buying any bank log.`;
+    fetch('https://ipapi.co/json/')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        document.getElementById('footer-email').innerHTML = `<span class="footer-name">${user.displayName}<span>, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
+    });
+  } else if(!user.displayName && user.email) {
+    var themail = user.email;
+    var theaddress = themail.substring(0,themail.indexOf('@'));
+    jinaHolder.innerText = theaddress;
+    jinaHolder2.innerText = 'USER ID: ' + user.uid;
+    emailInbox.innerHTML = `Check your email inbox <span>${user.email}</span> after buying any bank log.`;
 
-      fetch('https://ipapi.co/json/')
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(data) {
-          document.getElementById('footer-email').innerHTML = `<span class="footer-name">${theaddress}<span>, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
-      });
-    } else if(user.phoneNumber){
-      jinaHolder.innerText = user.phoneNumber;
-      jinaHolder2.innerText = 'USER ID: ' + user.uid;
-      emailInbox.innerHTML = `Check your text messages inbox <span>${user.phoneNumber}</span> after buying any bank log.`;
+    fetch('https://ipapi.co/json/')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        document.getElementById('footer-email').innerHTML = `<span class="footer-name">${theaddress}<span>, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
+    });
+  } else if(user.phoneNumber){
+    jinaHolder.innerText = user.phoneNumber;
+    jinaHolder2.innerText = 'USER ID: ' + user.uid;
+    emailInbox.innerHTML = `Check your text messages inbox <span>${user.phoneNumber}</span> after buying any bank log.`;
 
-      fetch('https://ipapi.co/json/')
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(data) {
-          document.getElementById('footer-email').innerHTML = `<span class="footer-name">${user.phoneNumber}<span>, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
-      });
-    } else if(user.isAnonymous){
-      jinaHolder.innerText = 'Anonymous';
-      jinaHolder2.innerText = 'USER ID: ' + user.uid;
-      emailInbox.innerHTML = `Login with email/google/yahoo to get a copy bank log(s) sent via email`;
+    fetch('https://ipapi.co/json/')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        document.getElementById('footer-email').innerHTML = `<span class="footer-name">${user.phoneNumber}<span>, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
+    });
+  } else if(user.isAnonymous){
+    jinaHolder.innerText = 'Anonymous';
+    jinaHolder2.innerText = 'USER ID: ' + user.uid;
+    emailInbox.innerHTML = `Login with email/google/yahoo to get a copy bank log(s) sent via email`;
 
-      fetch('https://ipapi.co/json/')
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(data) {
-          document.getElementById('footer-email').innerHTML = `Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
-      });
-    }
-  });
+    fetch('https://ipapi.co/json/')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        document.getElementById('footer-email').innerHTML = `Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
+    });
+  }
+});
 
-  document.getElementById("thebodyz").oncontextmenu = function() {
-    return false
-  };
-}
+document.getElementById("thebodyz").oncontextmenu = function() {
+  return false
+};
+
 
 
 

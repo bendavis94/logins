@@ -12,107 +12,105 @@ firebase.initializeApp(firebaseConfig);
 
 var db = firebase.firestore();
 
-// function myFunction() {
-	const logoHolder = document.getElementById("logo");
-	const jinaHolder = document.getElementById("jinaHolder");
-	const jinaHolder2 = document.getElementById("jinaHolder2");
-	const tableidHolder = document.getElementById('nameBro');
-	const email1 = document.getElementById('yourEmail1');
-	const email2 = document.getElementById('yourEmail2');
-	const email5 = document.getElementById('yourEmail5');
-		  
-	const auth = firebase.auth();
+const logoHolder = document.getElementById("logo");
+const jinaHolder = document.getElementById("jinaHolder");
+const jinaHolder2 = document.getElementById("jinaHolder2");
+const tableidHolder = document.getElementById('nameBro');
+const email1 = document.getElementById('yourEmail1');
+const email2 = document.getElementById('yourEmail2');
+const email5 = document.getElementById('yourEmail5');
+		
+const auth = firebase.auth();
 
-	auth.onAuthStateChanged(user => {
-		let goodies = [];
-		if (!user) {
-			window.location.assign("index");
-		}
-		if (user.photoURL) {
-			logoHolder.setAttribute("src", user.photoURL);
-			logoHolder.style.borderRadius = '50%';
-		}
- 		if(user.displayName){
-			jinaHolder.innerText = user.displayName;
-			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			tableidHolder.value = "Name: " + user.displayName;
+auth.onAuthStateChanged(user => {
+	let goodies = [];
+	if (!user) {
+		window.location.assign("index");
+	}
+	if (user.photoURL) {
+		logoHolder.setAttribute("src", user.photoURL);
+		logoHolder.style.borderRadius = '50%';
+	}
+	if(user.displayName){
+		jinaHolder.innerText = user.displayName;
+		jinaHolder2.innerText = 'User ID: ' + user.uid;
+		tableidHolder.value = "Name: " + user.displayName;
 
-			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
-			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
-			email5.innerHTML = user.email;
+		email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
+		email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
+		email5.innerHTML = user.email;
 
-			if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
-				goodies = JSON.parse(localStorage.getItem('banklogs'));
-				for(var i = 0; i < goodies.length; i++) {
-					document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.displayName;
-				}
-			}
-		} else if(!user.displayName && user.email) {
-			var themail = user.email;
-			var theaddress = themail.substring(0,themail.indexOf('@'));
-
-			jinaHolder.innerText = theaddress;
-			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			tableidHolder.value = "Name: " + theaddress;
-
-			email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
-			email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
-			email5.innerHTML = user.email;
-
-			if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
-				goodies = JSON.parse(localStorage.getItem('banklogs'));
-				for(var i = 0; i < goodies.length; i++) {
-					document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = theaddress;
-				}
-			}
-		} else if(user.phoneNumber){
-			jinaHolder.innerText = user.phoneNumber;
-			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			tableidHolder.value = "Name: " + user.phoneNumber;
-
-			email1.innerHTML = `Check your text messages for a link @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
-			email2.innerHTML = `Cashout Method link is also sent to your phone Number @:<strong>${user.phoneNumber}</strong>`;
-			email5.innerHTML = `Logged in with phone ${user.phoneNumber}, you will have to check your text messages inbox for a link`;
-
-			if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
-				goodies = JSON.parse(localStorage.getItem('banklogs'));
-				for(var i = 0; i < goodies.length; i++) {
-					document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
-				}
-			}
-		} else if(user.isAnonymous){
-			jinaHolder.innerText = 'Anonymous';
-			jinaHolder2.innerText = 'User ID: ' + user.uid;
-			tableidHolder.value = "Name: Anonymous";
-
-			email1.innerHTML = `Bank Log files can only be downloaded once, so make sure you save them in a folder you won't forget`;
-			email2.innerHTML = `Login with email/google/yahoo to get a copy of bank logs sent via email`;
-			email5.innerHTML = `Logged in anonymously, no email invoice will be sent`;
-
-			if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
-				goodies = JSON.parse(localStorage.getItem('banklogs'));
-				for(var i = 0; i < goodies.length; i++) {
-					document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous';
-				}
+		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
+			goodies = JSON.parse(localStorage.getItem('banklogs'));
+			for(var i = 0; i < goodies.length; i++) {
+				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.displayName;
 			}
 		}
+	} else if(!user.displayName && user.email) {
+		var themail = user.email;
+		var theaddress = themail.substring(0,themail.indexOf('@'));
+
+		jinaHolder.innerText = theaddress;
+		jinaHolder2.innerText = 'User ID: ' + user.uid;
+		tableidHolder.value = "Name: " + theaddress;
+
+		email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
+		email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
+		email5.innerHTML = user.email;
+
+		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
+			goodies = JSON.parse(localStorage.getItem('banklogs'));
+			for(var i = 0; i < goodies.length; i++) {
+				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = theaddress;
+			}
+		}
+	} else if(user.phoneNumber){
+		jinaHolder.innerText = user.phoneNumber;
+		jinaHolder2.innerText = 'User ID: ' + user.uid;
+		tableidHolder.value = "Name: " + user.phoneNumber;
+
+		email1.innerHTML = `Check your text messages for a link @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
+		email2.innerHTML = `Cashout Method link is also sent to your phone Number @:<strong>${user.phoneNumber}</strong>`;
+		email5.innerHTML = `Logged in with phone ${user.phoneNumber}, you will have to check your text messages inbox for a link`;
+
+		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
+			goodies = JSON.parse(localStorage.getItem('banklogs'));
+			for(var i = 0; i < goodies.length; i++) {
+				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
+			}
+		}
+	} else if(user.isAnonymous){
+		jinaHolder.innerText = 'Anonymous';
+		jinaHolder2.innerText = 'User ID: ' + user.uid;
+		tableidHolder.value = "Name: Anonymous";
+
+		email1.innerHTML = `Bank Log files can only be downloaded once, so make sure you save them in a folder you won't forget`;
+		email2.innerHTML = `Login with email/google/yahoo to get a copy of bank logs sent via email`;
+		email5.innerHTML = `Logged in anonymously, no email invoice will be sent`;
+
+		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
+			goodies = JSON.parse(localStorage.getItem('banklogs'));
+			for(var i = 0; i < goodies.length; i++) {
+				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous';
+			}
+		}
+	}
+});
+
+const logoutButton = document.getElementById("logoutButton");
+
+logoutButton.addEventListener("click", e => {
+	e.preventDefault();
+	auth.signOut().then(() => {
+		window.location.assign("index");
+	}).catch(error => {
+		console.error(error);
 	});
+});
 
-	const logoutButton = document.getElementById("logoutButton");
-
-	logoutButton.addEventListener("click", e => {
-		e.preventDefault();
-		auth.signOut().then(() => {
-			window.location.assign("index");
-		}).catch(error => {
-			console.error(error);
-		});
-	});
-
-	document.getElementById("thebodyz").oncontextmenu = function() {
-		return false
-	};
-// }
+document.getElementById("thebodyz").oncontextmenu = function() {
+	return false
+};
 
 fetch('https://ipapi.co/json/')
 .then(function(response) {
