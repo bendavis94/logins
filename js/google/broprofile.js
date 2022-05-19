@@ -84,7 +84,7 @@ auth.onAuthStateChanged(user => {
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		tableidHolder.value = "Name: Anonymous";
 
-		email1.innerHTML = `Bank Log files can only be downloaded once, so make sure you save them in a folder you won't forget`;
+		email1.innerHTML = `Bank Log files can only be downloaded <strong>ONCE</strong>, so make sure you save them in a folder you won't forget`;
 		email2.innerHTML = `Login with email/google/yahoo to get a copy of bank log files sent via email. This is optional for users who would like to remain fully anonymous, but you can create a fake email to login to the site`;
 		email5.innerHTML = `Logged in anonymously, no email invoice will be sent`;
 
