@@ -63,19 +63,7 @@ auth.onAuthStateChanged(user => {
       .then(function(data) {
         document.getElementById('footer-email').innerHTML = `<span class="footer-name">${user.phoneNumber}<span>, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
     });
-  } else if(user.isAnonymous){
-    jinaHolder.innerText = 'Anonymous';
-    jinaHolder2.innerText = 'USER ID: ' + user.uid;
-    emailInbox.innerHTML = `Login with email/google/yahoo to get a copy bank log(s) sent via email`;
-
-    fetch('https://ipapi.co/json/')
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(data) {
-        document.getElementById('footer-email').innerHTML = `Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
-    });
-  }
+  } 
 });
 
 document.getElementById("thebodyz").oncontextmenu = function() {
