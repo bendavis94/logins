@@ -1,92 +1,104 @@
-function myFunction() {
-  const auth = firebase.auth();
-  const logoHolder = document.getElementById("logo");
-  const jinaHolder = document.getElementById("jinaHolder");
-  const jinaHolder2 = document.getElementById("jinaHolder2");
-  const invoiceHolder = document.getElementById('invoiceHolder');
-  
+var firebaseConfig = {
+  apiKey: "AIzaSyA1L3Q63zrir2ZOQMzc7AxXuPBXjaOnIwo",
+  authDomain: "darknet-id.firebaseapp.com",
+  projectId: "darknet-id",
+  storageBucket: "darknet-id.appspot.com",
+  messagingSenderId: "1049421828082",
+  appId: "1:1049421828082:web:fb69e86a84c74a9af8a56b",
+  measurementId: "G-NPY81TPB7J"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
-  auth.onAuthStateChanged(user => {
-    if (!user) {
-      window.location.assign("index");
-    }
-    if (user.photoURL) {
-      logoHolder.setAttribute("src", user.photoURL);
-      logoHolder.style.borderRadius = '50%';
-    }
-    if (user.displayName && user.email) {
-      jinaHolder.innerText = user.displayName;
-      jinaHolder2.innerText = 'User ID: ' + user.uid;
-      invoiceHolder.innerText = 'Invoice to: '+ user.email;
 
-      fetch('https://ipapi.co/json/')
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(data) {
-          document.getElementById('yourIP').innerHTML = `
-              <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-              <strong class="invoice-mail">${user.displayName}<strong>, 
-              Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
-          `;
-      });
-    } else if(!user.displayName && user.email) {
-      var themail = user.email;
-      var theaddress = themail.substring(0,themail.indexOf('@'));
+const auth = firebase.auth();
+const logoHolder = document.getElementById("logo");
+const jinaHolder = document.getElementById("jinaHolder");
+const jinaHolder2 = document.getElementById("jinaHolder2");
+const invoiceHolder = document.getElementById('invoiceHolder');
 
-      jinaHolder.innerText = theaddress;
-      jinaHolder2.innerText = 'User ID: ' + user.uid;
-      invoiceHolder.innerText = 'Invoice to: '+ user.email;
 
-      fetch('https://ipapi.co/json/')
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(data) {
-          document.getElementById('yourIP').innerHTML = `
-              <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-              <strong class="invoice-mail">${theaddress}<strong>, 
-              Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
-          `;
-      });
-    } else if(user.phoneNumber){
-      jinaHolder.innerText = user.phoneNumber;
-      jinaHolder2.innerText = 'User ID: ' + user.uid;
-      invoiceHolder.innerText = 'Invoice to: '+ user.phoneNumber;
+auth.onAuthStateChanged(user => {
+  if (!user) {
+    window.location.assign("index");
+  }
+  if (user.photoURL) {
+    logoHolder.setAttribute("src", user.photoURL);
+    logoHolder.style.borderRadius = '50%';
+  }
+  if (user.displayName && user.email) {
+    jinaHolder.innerText = user.displayName;
+    jinaHolder2.innerText = 'User ID: ' + user.uid;
+    invoiceHolder.innerText = 'Invoice to: '+ user.email;
 
-      fetch('https://ipapi.co/json/')
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(data) {
-          document.getElementById('yourIP').innerHTML = `
-              <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-              <strong class="invoice-mail">${user.phoneNumber}<strong>, 
-              Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
-          `;
-      });
-    } else if(user.isAnonymous){
-      jinaHolder.innerText = 'Anonymous';
-      jinaHolder2.innerText = 'User ID: ' + user.uid;
-      invoiceHolder.innerText = 'User ID: ' + user.uid;
+    fetch('https://ipapi.co/json/')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        document.getElementById('yourIP').innerHTML = `
+            <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
+            <strong class="invoice-mail">${user.displayName}<strong>, 
+            Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
+        `;
+    });
+  } else if(!user.displayName && user.email) {
+    var themail = user.email;
+    var theaddress = themail.substring(0,themail.indexOf('@'));
 
-      fetch('https://ipapi.co/json/')
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(data) {
-          document.getElementById('yourIP').innerHTML = `
-              <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
-              Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}</strong>
-          `;
-      });
-    } 
-  });
+    jinaHolder.innerText = theaddress;
+    jinaHolder2.innerText = 'User ID: ' + user.uid;
+    invoiceHolder.innerText = 'Invoice to: '+ user.email;
 
-  document.getElementById("thebodyz").oncontextmenu = function() {
-    return false
-  };
-}
+    fetch('https://ipapi.co/json/')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        document.getElementById('yourIP').innerHTML = `
+            <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
+            <strong class="invoice-mail">${theaddress}<strong>, 
+            Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
+        `;
+    });
+  } else if(user.phoneNumber){
+    jinaHolder.innerText = user.phoneNumber;
+    jinaHolder2.innerText = 'User ID: ' + user.uid;
+    invoiceHolder.innerText = 'Invoice to: '+ user.phoneNumber;
+
+    fetch('https://ipapi.co/json/')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        document.getElementById('yourIP').innerHTML = `
+            <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
+            <strong class="invoice-mail">${user.phoneNumber}<strong>, 
+            Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}</strong>
+        `;
+    });
+  } else if(user.isAnonymous){
+    jinaHolder.innerText = 'Anonymous';
+    jinaHolder2.innerText = 'User ID: ' + user.uid;
+    invoiceHolder.innerText = 'User ID: ' + user.uid;
+
+    fetch('https://ipapi.co/json/')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        document.getElementById('yourIP').innerHTML = `
+            <button type="button" class="close" data-dismiss="alert" style="color: red !important;">&times;</button>
+            Your IP address is: <strong>${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}</strong>
+        `;
+    });
+  } 
+});
+
+document.getElementById("thebodyz").oncontextmenu = function() {
+  return false
+};
+
 
 
 var canvas = document.getElementById("canvas");
