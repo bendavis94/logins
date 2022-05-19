@@ -12,7 +12,7 @@ firebase.initializeApp(firebaseConfig);
 
 var db = firebase.firestore();
 
-function myFunction() {
+// function myFunction() {
 	const logoHolder = document.getElementById("logo");
 	const jinaHolder = document.getElementById("jinaHolder");
 	const jinaHolder2 = document.getElementById("jinaHolder2");
@@ -112,7 +112,7 @@ function myFunction() {
 	document.getElementById("thebodyz").oncontextmenu = function() {
 		return false
 	};
-}
+// }
 
 fetch('https://ipapi.co/json/')
 .then(function(response) {
