@@ -1,5 +1,3 @@
-const auth = firebase.auth();
-
 auth.onAuthStateChanged(user => {
 	"use strict";
 	var toast = localStorage.getItem('banktotal')
