@@ -66,7 +66,7 @@ auth.onAuthStateChanged(user => {
   } else if(user.isAnonymous){
     jinaHolder.innerText = 'Anonymous User';
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
-    emailInbox.innerHTML = `Login with email/google/yahoo to get a bank log sent via email`;
+    emailInbox.innerHTML = `Login with email/google/yahoo to get a copy of bank log files sent via email`;
 
     fetch('https://ipapi.co/json/')
       .then(function(response) {
