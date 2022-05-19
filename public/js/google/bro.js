@@ -9,11 +9,13 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
+
 const logoHolder = document.getElementById("logo");
 const jinaHolder = document.getElementById("jinaHolder");
 const jinaHolder2 = document.getElementById("jinaHolder2");
 const emailInbox = document.getElementById("email-inbox");
+
+const auth = firebase.auth();
 
 auth.onAuthStateChanged(user => {
   if (!user) {
