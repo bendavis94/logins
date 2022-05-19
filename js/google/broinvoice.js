@@ -66,7 +66,7 @@ function myFunction() {
           `;
       });
     } else if(user.isAnonymous){
-      jinaHolder.innerText = 'Anonymous User';
+      jinaHolder.innerText = 'Anonymous';
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'User ID: ' + user.uid;
 

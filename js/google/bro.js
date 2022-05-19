@@ -64,7 +64,7 @@ auth.onAuthStateChanged(user => {
         document.getElementById('footer-email').innerHTML = `<span class="footer-name">${user.phoneNumber}<span>, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
     });
   } else if(user.isAnonymous){
-    jinaHolder.innerText = 'Anonymous User';
+    jinaHolder.innerText = 'Anonymous';
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
     emailInbox.innerHTML = `Login with email/google/yahoo to get a copy of bank log files sent via email`;
 
