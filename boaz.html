@@ -20,8 +20,22 @@
 
     <link rel="stylesheet" href="datatables/css/jquery.datatables_themeroller.css" />
     <link rel="stylesheet" href="css/plugins/rev_slider.css">
-    <link href="css/styles-2.css" rel="stylesheet" id="colors">
+    <link href="css/styles.css" rel="stylesheet" id="colors">
     <link href="css/plugins/buttons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/light-gallery.css">
+    <style>
+        .pricing-list h2{
+            font-size: 32px !important;
+        }
+        @media screen and (max-width: 791px){
+            .pricing-list h2{
+                font-size: 29.5px !important;
+            }
+            .filtering span{
+                font-size: 20px !important;
+            }
+        }
+    </style>
 </head>
 <body id="thebodyz">
     <div id="preloader">
@@ -31,7 +45,7 @@
     </div>
 
     <div class="main-wrapper">
-    
+
 <header class="header-style2"  id="home">
 <div class="navbar-default">
 <div class="container-fluid">
@@ -42,7 +56,7 @@
 
     <div class="navbar-header navbar-header-custom">
         <a href="home" class="navbar-brand logoinner" style="display: flex;">
-            <img id="logo" src="img/logos/logo2.png" alt="">
+            <img id="logo" src="img/logos/logo1.png" alt="">
             <div style="display: grid;">
                 <span id="jinaHolder"> </span>
                 <span id="jinaHolder2"></span>
@@ -216,6 +230,7 @@
         </li>
     </ul>
 
+
     <div class="attr-nav xs-margin-50px-right">
         <ul>
             <li class="dropdown sm-no-margin">
@@ -277,17 +292,19 @@
 </header>
 
 
+
 <!-- start revolution slideshow-->
 <div class="rev_slider_wrapper">
     <div class="rev_slider" id="rev_slider_2" data-version="5.4.5">
+        
         <ul>
             <li data-fstransition="fade" data-transition="scaledownfrombottom" data-easein="default" data-easeout="default" data-slotamount="1" data-masterspeed="1200" data-delay="4000" 
-            data-title="Checking Accounts">
+            data-title="Bank of America">
                 <div class="opacity-full bg-black z-index-1"></div>
-                <img src="wall/bankofamerica.jpg" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgparallax="7" class="rev-slidebg">
+                <img src="wall/bankofamerica2.jpg" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgparallax="7" class="rev-slidebg">
                 <div class="tp-caption small-text text-white slider-text text-uppercase font-weight-300" data-x="30" data-y="center" data-voffset="[-102,-88,-98,-128]" data-fontsize="[21,21,21,21]" data-lineheight="34" data-width="[600, 500, 400, 300]" data-whitespace="[nowrap, nowrap, nowrap, normal]" data-frames='[{ "delay":1000,"speed":900,"frame":"0","from":"y:150px;opacity:0;","ease":"Power3.easeOut","to":"o:1;" },{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeOut"}]'>
                     <p class="white-space">
-                        10 Accounts Available
+                        12 Accounts Available
                     </p>
                 </div>
                 <div class="tp-caption hero-text text-white alt-font font-weight-500 text-uppercase" data-x="30" data-y="center" data-voffset="[-28,-10,-20,-40]"  data-fontsize="[72,62,52,46]" data-lineheight="[72,62,52,46]" data-width="[none, none, none, 300]" data-whitespace="[nowrap, nowrap, nowrap, normal]" data-frames='[{"delay":1100,"speed":900,"frame":"0","from":"y:150px;opacity:0;","ease":"Power3.easeOut","to":"o:1;"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeOut"}]' data-splitout="none">
@@ -303,16 +320,16 @@
             
 
             <li data-transition="scaledownfrombottom" data-easein="default" data-easeout="default" data-slotamount="1" data-masterspeed="1200" data-delay="4000" 
-            data-title="Savings Accounts">
+            data-title="Other Banks">
                 <div class="opacity-full bg-black z-index-1"></div>
-                <img src="wall/bankofamerica2.jpg" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgparallax="7" class="rev-slidebg">
+                <img src="wall/nfcu.jpg" data-bgrepeat="no-repeat" data-bgfit="cover" data-bgparallax="7" class="rev-slidebg">
                 <div class="tp-caption small-text text-white slider-text text-uppercase font-weight-300" data-x="30" data-y="center" data-voffset="[-102,-88,-98,-128]" data-fontsize="[21,21,21,21]" data-lineheight="34" data-width="[600, 500, 400, 300]" data-whitespace="[nowrap, nowrap, nowrap, normal]" data-frames='[{"delay":1000,"speed":900,"frame":"0","from":"y:150px;opacity:0;","ease":"Power3.easeOut","to":"o:1;"},{"delay":"wait", "speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeOut"}]'>
                     <p class="white-space">
-                        12 Accounts Available
+                        19 Accounts Available
                     </p>
                 </div>
                 <div class="tp-caption hero-text text-white alt-font font-weight-500 text-uppercase" data-x="30" data-y="center" data-voffset="[-28,-10,-20,-40]" data-fontsize="[72,62,52,46]" data-lineheight="[72,62,52,46]" data-width="[none, none, none, 300]" data-whitespace="[nowrap, nowrap, nowrap, normal]" data-frames='[{"delay":1100,"speed":900,"frame":"0","from":"y:150px;opacity:0;","ease":"Power3.easeOut","to":"o:1;"},{"delay":"wait", "speed":1000,"frame":"999","to":"opacity:0;","ease":"Power3.easeOut"}]' data-splitout="none">
-                        Savings Accounts
+                        Other Banks
                 </div>
                 <div class="tp-caption" data-x="30" data-y="center"  data-voffset="[64,100,85,94]" data-lineheight="55" data-hoffset="0" data-frames='[{"delay":1200,"speed":900,"frame":"0","from":"y:150px;opacity:0;","ease":"Power3.easeOut","to":"o:1;"},{"delay":"wait","speed":1000, "frame":"999", "to":"opacity:0;","ease":"Power3.easeOut"}]'>
                     <button data-scroll-nav="5" class='btn-style4 white scroll-down'>
@@ -329,511 +346,705 @@
 
 
 
+
 <!-- start contact info section -->
 <section class="parallax" data-background="images/banner.jpg" style="padding: 0;" data-scroll-index="5">
     <div class="opacity-full-dark bg-extra-dark-gray"></div>
     <div class="container-fluid infinite-floating">
     <div class="row">
+    
+    <img src="img/partners/chase.jpg" style="display: none;">
+    
+    <!-- Start links -->
+    <div class="filtering col-sm-12 text-center">
+        <span data-filter='.wells'>
+            BANKOFAMERICA
+        </span>
+        <span data-filter='.others'>
+            OTHERS
+        </span>
+    </div>
+    <!-- End links -->
+    <div class="gallery text-center width-100 product-grid portfolio-gallery-isotope">
 
-<img src="img/partners/nfcu.jpg" style="display: none;">
 
-<!-- Start links -->
-<div class="filtering col-sm-12 text-center">
-    <span data-filter='.checking'>
-        <i class="fas fa-wallet"></i>
-    CHECKING
-    </span>
-    <span data-filter='.savings'>
-        <i class="fas fa-piggy-bank"></i>
-    SAVINGS
-    </span>
+
+
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items wells wow fadeInRight"
+data-src="img/new/boa-3.png" data-sub-html="<button type='submit' class='butn medium white' onclick='fir20()' 
+style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $85</button>">
+    <div class="pricing-list">
+        <div class="pricing-list-price">
+            <h2>$3,300</h2>
+            <img src="img/new/boa-3.png" style="display: none !important;">
+            <img src="img/partners/boa.jpg" class="borderp">
+        </div>
+        <ul>
+            <img src="img/new/boa-3.png">
+            <li>bankofamerica.com</li>
+            <li>Username + Password</li>
+            <li>Account& Routing No</li>
+            <li>Date of Birth</li>
+            <li>Social Security No</li>
+            <li>ClientIP + Useragent</li>
+            <li>Name + Email Access</li>
+            <li>Owner Complete Fullz</li>
+            <li>Bank of America [CHECKING ACCOUNT]</li>
+            <button type="submit" class="butn medium">
+                Buy: $85
+            </button>
+        </ul>
+    </div>
 </div>
-<!-- End links -->
-    <div class="gallery text-center width-100 product-grid">
 
 
-        <div class="col-lg-3 col-xl-2 col-md-4 col-6 items savings  wow fadeInRight" data-wow-delay="0.2s">
-            <div class="pricing-list">
-                <div class="pricing-list-price">
-                    <h2 id="boa1"></h2>
-                    <img src="img/partners/boa.jpg" class="borderp">
-                </div>
-                <ul>
-                    <li>bankofamerica.com</li>
-                    <li>Username + Password</li>
-                    <li>Account& Routing No</li>
-                    <li>Social Security No.</li>
-                    <li>Date of Birth</li>
-                    <li>ClientIP + UserAgent</li>
-                    <li>Name+ Email access</li>
-                    <li>Owner's Complete Fullz</li>
-                    <li>Bank of America [SAVINGS ACCOUNT]</li>
-                    <button type="submit" class="butn medium" id="boa01" data-toggle="modal" data-target="#exampleModal">
-                        
-                    </button>
-                </ul>
-            </div>
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items others wow fadeInRight"  data-wow-delay="0.2s" 
+data-src="img/new/td-3.png" data-sub-html="<button type='submit' class='butn medium white' onclick='fir17()' 
+    style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $97</button>">
+    <div class="pricing-list highlight">
+        <div class="pricing-list-price">
+            <h2 class="text-white">$3,953</h2>
+            <img src="img/new/td-3.png" style="display: none !important;">
+            <img src="img/partners/td.png" class="borderp">
         </div>
+        <ul>
+            <img src="img/new/td-3.png">
+            <li class="text-white">td.com</li>
+            <li class="text-white">Online Access</li>
+            <li class="text-white">Email Access</li>
+            <li class="text-white">Question & Answer</li>
+            <li class="text-white">Name + Address</li>
+            <li class="text-white">Card Information</li>
+            <li class="text-white">Account& Routing No</li>
+            <li class="text-white">Owner Complete Fullz</li>
+            <li class="text-white">TD Bank [CHECKING ACCOUNT]</li>
+            <button type="submit" class="butn medium white">
+                Buy: $97
+            </button>
+        </ul>
+    </div>
+</div>
 
-        <div class="col-lg-3 col-xl-2 col-md-4 col-6 items checking  wow fadeInRight">
-            <div class="pricing-list highlight">
-                <div class="pricing-list-price">
-                    <h2 class="text-white" id="boa2"></h2>
-                    <img src="img/partners/boa.jpg" class="borderp">
-                </div>
-                <ul>
-                    <li class="text-white">bankofamerica.com</li>
-                    <li class="text-white">Username + Password</li>
-                    <li class="text-white">Account& Routing No</li>
-                    <li class="text-white">Social Security No.</li>
-                    <li class="text-white">Date of Birth</li>
-                    <li class="text-white">ClientIP + UserAgent</li>
-                    <li class="text-white">Name+ Email access</li>
-                    <li class="text-white">Owner's Complete Fullz</li>
-                    <li class="text-white">Bank of America [CHECKING ACCOUNT]</li>
-                    <button type="submit" class="butn medium white" id="boa02" data-toggle="modal" data-target="#exampleModal">
-                    
-                    </button>
-                </ul>
-            </div>
-        </div>
 
-        <div class="col-lg-3 col-xl-2 col-md-4 col-6 items savings  wow fadeInRight" data-wow-delay="0.4s">
-            <div class="pricing-list">
-                <div class="pricing-list-price">
-                    <h2 id="boa3"></h2>
-                    <img src="img/partners/boa.jpg" class="borderp">
-                </div>
-                <ul>
-                    <li>bankofamerica.com</li>
-                    <li>Username + Password</li>
-                    <li>Account& Routing No</li>
-                    <li>Social Security No.</li>
-                    <li>Date of Birth</li>
-                    <li>ClientIP + UserAgent</li>
-                    <li>Name+ Email access</li>
-                    <li>Owner's Complete Fullz</li>
-                    <li>Bank of America [SAVINGS ACCOUNT]</li>
-                    <button type="submit" class="butn medium" id="boa03" data-toggle="modal" data-target="#exampleModal">
-                        
-                    </button>
-                </ul>
-            </div>
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items wells wow fadeInRight" data-wow-delay="0.2s"
+data-src="img/new/boa-5.7.png" data-sub-html="<button type='submit' class='butn medium white' onclick='fir1()' 
+style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $115</button>">
+    <div class="pricing-list">
+        <div class="pricing-list-price">
+            <h2>$5,757</h2>
+            <img src="img/new/boa-5.7.png" style="display: none !important;">
+            <img src="img/partners/boa.jpg" class="borderp">
         </div>
+        <ul>
+            <img src="img/new/boa-5.7.png">
+            <li>bankofamerica.com</li>
+            <li>Username + Password</li>
+            <li>Account& Routing No</li>
+            <li>Date of Birth</li>
+            <li>Social Security No</li>
+            <li>ClientIP + Useragent</li>
+            <li>Name + Email Access</li>
+            <li>Owner Complete Fullz</li>
+            <li>Bank of America [CHECKING ACCOUNT]</li>
+            <button type="submit" class="butn medium">
+                Buy: $115
+            </button>
+        </ul>
+    </div>
+</div>
 
-        <div class="col-lg-3 col-xl-2 col-md-4 col-6 items checking  wow fadeInRight"  data-wow-delay="0.6s">
-            <div class="pricing-list highlight">
-                <div class="pricing-list-price">
-                    <h2 class="text-white" id="boa4"></h2>
-                    <img src="img/partners/boa.jpg" class="borderp">
-                </div>
-                <ul>
-                    <li class="text-white">bankofamerica.com</li>
-                    <li class="text-white">Username + Password</li>
-                    <li class="text-white">Account& Routing No</li>
-                    <li class="text-white">Social Security No.</li>
-                    <li class="text-white">Date of Birth</li>
-                    <li class="text-white">ClientIP + UserAgent</li>
-                    <li class="text-white">Name+ Email access</li>
-                    <li class="text-white">Owner's Complete Fullz</li>
-                    <li class="text-white">Bank of America [CHECKING ACCOUNT]</li>
-                    <button type="submit" class="butn medium white" id="boa04" data-toggle="modal" data-target="#exampleModal">
-                    
-                    </button>
-                </ul>
-            </div>
-        </div>
 
-        <div class="col-lg-3 col-xl-2 col-md-4 col-6 items savings  wow fadeInRight" data-wow-delay="0.8s">
-            <div class="pricing-list">
-                <div class="pricing-list-price">
-                    <h2 id="boa5"></h2>
-                    <img src="img/partners/boa.jpg" class="borderp">
-                </div>
-                <ul>
-                    <li>bankofamerica.com</li>
-                    <li>Username + Password</li>
-                    <li>Account& Routing No</li>
-                    <li>Social Security No.</li>
-                    <li>Date of Birth</li>
-                    <li>ClientIP + UserAgent</li>
-                    <li>Name+ Email access</li>
-                    <li>Owner's Complete Fullz</li>
-                    <li>Bank of America [SAVINGS ACCOUNT]</li>
-                    <button type="submit" class="butn medium" id="boa05" data-toggle="modal" data-target="#exampleModal">
-                        
-                    </button>
-                </ul>
-            </div>
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items chime wow fadeInRight" 
+data-src="img/new/chime-6.jpg" data-sub-html="<button type='submit' class='butn medium white' onclick='uk97()' 
+style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $120</button>">
+    <div class="pricing-list highlight">
+        <div class="pricing-list-price">
+            <h2 class="text-white">$6,013</h2>
+            <img src="img/new/chime-6.jpg" style="display: none !important;">
+            <img src="img/partners/chime.jpg" class="borderp">
         </div>
+        <ul>
+            <img src="img/new/chime-6.jpg">
+            <li class="text-white">chime.com</li>
+            <li class="text-white">Username + Password</li>
+            <li class="text-white">Account& Routing No</li>
+            <li class="text-white">Date of Birth</li>
+            <li class="text-white">Social Security No</li>
+            <li class="text-white">ClientIP + Useragent</li>
+            <li class="text-white">Name + Email Access</li>
+            <li class="text-white">Owner Complete Fullz</li>
+            <li class="text-white">Chime Bank [CHECKING ACCOUNT]</li>
+            <button type="submit" class="butn medium white">
+                Buy: $120
+            </button>
+        </ul>
+    </div>
+</div>
 
-        <div class="col-lg-3 col-xl-2 col-md-4 col-6 items checking  wow fadeInRight"  data-wow-delay="1s">
-            <div class="pricing-list highlight">
-                <div class="pricing-list-price">
-                    <h2 class="text-white" id="boa6"></h2>
-                    <img src="img/partners/boa.jpg" class="borderp">
-                </div>
-                <ul>
-                    <li class="text-white">bankofamerica.com</li>
-                    <li class="text-white">Username + Password</li>
-                    <li class="text-white">Account& Routing No</li>
-                    <li class="text-white">Social Security No.</li>
-                    <li class="text-white">Date of Birth</li>
-                    <li class="text-white">ClientIP + UserAgent</li>
-                    <li class="text-white">Name+ Email access</li>
-                    <li class="text-white">Owner's Complete Fullz</li>
-                    <li class="text-white">Bank of America [CHECKING ACCOUNT]</li>
-                    <button type="submit" class="butn medium white" id="boa06" data-toggle="modal" data-target="#exampleModal">
-                    
-                    </button>
-                </ul>
-            </div>
-        </div>
 
-        <div class="col-lg-3 col-xl-2 col-md-4 col-6 items savings  wow fadeInRight">
-            <div class="pricing-list">
-                <div class="pricing-list-price">
-                    <h2 id="boa7"></h2>
-                    <img src="img/partners/boa.jpg" class="borderp">
-                </div>
-                <ul>
-                    <li>bankofamerica.com</li>
-                    <li>Username + Password</li>
-                    <li>Account& Routing No</li>
-                    <li>Social Security No.</li>
-                    <li>Date of Birth</li>
-                    <li>ClientIP + UserAgent</li>
-                    <li>Name+ Email access</li>
-                    <li>Owner's Complete Fullz</li>
-                    <li>Bank of America [SAVINGS ACCOUNT]</li>
-                    <button type="submit" class="butn medium" id="boa07" data-toggle="modal" data-target="#exampleModal">
-                        
-                    </button>
-                </ul>
-            </div>
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items others wow fadeInRight" data-wow-delay="0.4s"
+data-src="img/new/navy-6.0.png" data-sub-html="<button type='submit' class='butn medium white' onclick='fir27()' 
+style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $120</button>">
+    <div class="pricing-list highlight">
+        <div class="pricing-list-price">
+            <h2 class="text-white">$6,041</h2>
+            <img src="img/new/navy-6.0.png" style="display: none !important;">
+            <img src="img/partners/nfcu.jpg" class="borderp">
         </div>
+        <ul>
+            <img src="img/new/navy-6.0.png">
+            <li class="text-white">navyfederal.org</li>
+            <li class="text-white">Username + Password</li>
+            <li class="text-white">Account& Routing No</li>
+            <li class="text-white">Social Security No.</li>
+            <li class="text-white">Date of Birth</li>
+            <li class="text-white">ClientIP + UserAgent</li>
+            <li class="text-white">Name+ Email access</li>
+            <li class="text-white">Owner Complete Fullz</li>
+            <li class="text-white">Navy Federal [CHECKING ACCOUNT]</li>
+            <button type="submit" class="butn medium white">
+                Buy: $120
+            </button>
+        </ul>
+    </div>
+</div>
 
-        <div class="col-lg-3 col-xl-2 col-md-4 col-6 items savings  wow fadeInRight" data-wow-delay="0.2s">
-            <div class="pricing-list">
-                <div class="pricing-list-price">
-                    <h2 id="boa8"></h2>
-                    <img src="img/partners/boa.jpg" class="borderp">
-                </div>
-                <ul>
-                    <li>bankofamerica.com</li>
-                    <li>Username + Password</li>
-                    <li>Account& Routing No</li>
-                    <li>Social Security No.</li>
-                    <li>Date of Birth</li>
-                    <li>ClientIP + UserAgent</li>
-                    <li>Name+ Email access</li>
-                    <li>Owner's Complete Fullz</li>
-                    <li>Bank of America [SAVINGS ACCOUNT]</li>
-                    <button type="submit" class="butn medium" id="boa08" data-toggle="modal" data-target="#exampleModal">
-                        
-                    </button>
-                </ul>
-            </div>
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items others wow fadeInRight" data-wow-delay="0.4s"
+data-src="img/new/navy-6.png" data-sub-html="<button type='submit' class='butn medium white' onclick='fir14()' 
+style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $128</button>">
+    <div class="pricing-list highlight">
+        <div class="pricing-list-price">
+            <h2 class="text-white">$6,422</h2>
+            <img src="img/new/navy-6.png" style="display: none !important;">
+            <img src="img/partners/nfcu.jpg" class="borderp">
         </div>
+        <ul>
+            <img src="img/new/navy-6.png">
+            <li class="text-white">navyfederal.org</li>
+            <li class="text-white">Username + Password</li>
+            <li class="text-white">Account& Routing No</li>
+            <li class="text-white">Social Security No.</li>
+            <li class="text-white">Date of Birth</li>
+            <li class="text-white">ClientIP + UserAgent</li>
+            <li class="text-white">Name+ Email access</li>
+            <li class="text-white">Owner Complete Fullz</li>
+            <li class="text-white">Navy Federal [SAVINGS ACCOUNT]</li>
+            <button type="submit" class="butn medium white">
+                Buy: $128
+            </button>
+        </ul>
+    </div>
+</div>
 
-        <div class="col-lg-3 col-xl-2 col-md-4 col-6 items checking  wow fadeInRight"  data-wow-delay="0.4s">
-            <div class="pricing-list highlight">
-                <div class="pricing-list-price">
-                    <h2 class="text-white" id="boa9"></h2>
-                    <img src="img/partners/boa.jpg" class="borderp">
-                </div>
-                <ul>
-                    <li class="text-white">bankofamerica.com</li>
-                    <li class="text-white">Username + Password</li>
-                    <li class="text-white">Account& Routing No</li>
-                    <li class="text-white">Social Security No.</li>
-                    <li class="text-white">Date of Birth</li>
-                    <li class="text-white">ClientIP + UserAgent</li>
-                    <li class="text-white">Name+ Email access</li>
-                    <li class="text-white">Owner's Complete Fullz</li>
-                    <li class="text-white">Bank of America [CHECKING ACCOUNT]</li>
-                    <button type="submit" class="butn medium white" id="boa09" data-toggle="modal" data-target="#exampleModal">
-                    
-                    </button>
-                </ul>
-            </div>
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items wells wow fadeInRight" data-wow-delay="0.4s"
+data-src="img/new/boa-7.png" data-sub-html="<button type='submit' class='butn medium white' onclick='fir2()' 
+style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $140</button>">
+    <div class="pricing-list">
+        <div class="pricing-list-price">
+            <h2>$7,000</h2>
+            <img src="img/new/boa-7.png" style="display: none !important;">
+            <img src="img/partners/boa.jpg" class="borderp">
         </div>
+        <ul>
+            <img src="img/new/boa-7.png">
+            <li>bankofamerica.com</li>
+            <li>Username + Password</li>
+            <li>Account& Routing No</li>
+            <li>Date of Birth</li>
+            <li>Social Security No</li>
+            <li>ClientIP + Useragent</li>
+            <li>Name + Email Access</li>
+            <li>Owner Complete Fullz</li>
+            <li>Bank of America [CHECKING ACCOUNT]</li>
+            <button type="submit" class="butn medium">
+                Buy: $140
+            </button>
+        </ul>
+    </div>
+</div>
 
-        <div class="col-lg-3 col-xl-2 col-md-4 col-6 items savings  wow fadeInRight" data-wow-delay="0.6s">
-            <div class="pricing-list">
-                <div class="pricing-list-price">
-                    <h2 id="boa10"></h2>
-                    <img src="img/partners/boa.jpg" class="borderp">
-                </div>
-                <ul>
-                    <li>bankofamerica.com</li>
-                    <li>Username + Password</li>
-                    <li>Account& Routing No</li>
-                    <li>Social Security No.</li>
-                    <li>Date of Birth</li>
-                    <li>ClientIP + UserAgent</li>
-                    <li>Name+ Email access</li>
-                    <li>Owner's Complete Fullz</li>
-                    <li>Bank of America [SAVINGS ACCOUNT]</li>
-                    <button type="submit" class="butn medium" id="boa010" data-toggle="modal" data-target="#exampleModal">
-                        
-                    </button>
-                </ul>
-            </div>
-        </div>
 
-        <div class="col-lg-3 col-xl-2 col-md-4 col-6 items checking  wow fadeInRight">
-            <div class="pricing-list highlight">
-                <div class="pricing-list-price">
-                    <h2 class="text-white" id="boa11"></h2>
-                    <img src="img/partners/boa.jpg" class="borderp">
-                </div>
-                <ul>
-                    <li class="text-white">bankofamerica.com</li>
-                    <li class="text-white">Username + Password</li>
-                    <li class="text-white">Account& Routing No</li>
-                    <li class="text-white">Social Security No.</li>
-                    <li class="text-white">Date of Birth</li>
-                    <li class="text-white">ClientIP + UserAgent</li>
-                    <li class="text-white">Name+ Email access</li>
-                    <li class="text-white">Owner's Complete Fullz</li>
-                    <li class="text-white">Bank of America [CHECKING ACCOUNT]</li>
-                    <button type="submit" class="butn medium white" id="boa011" data-toggle="modal" data-target="#exampleModal">
-                    
-                    </button>
-                </ul>
-            </div>
-        </div>
 
-        <div class="col-lg-3 col-xl-2 col-md-4 col-6 items savings  wow fadeInRight" data-wow-delay="0.2s">
-            <div class="pricing-list">
-                <div class="pricing-list-price">
-                    <h2 id="boa12"></h2>
-                    <img src="img/partners/boa.jpg" class="borderp">
-                </div>
-                <ul>
-                    <li>bankofamerica.com</li>
-                    <li>Username + Password</li>
-                    <li>Account& Routing No</li>
-                    <li>Social Security No.</li>
-                    <li>Date of Birth</li>
-                    <li>ClientIP + UserAgent</li>
-                    <li>Name+ Email access</li>
-                    <li>Owner's Complete Fullz</li>
-                    <li>Bank of America [SAVINGS ACCOUNT]</li>
-                    <button type="submit" class="butn medium" id="boa012" data-toggle="modal" data-target="#exampleModal">
-                        
-                    </button>
-                </ul>
-            </div>
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items wells wow fadeInRight" data-wow-delay="0.2s"
+data-src="img/new/boa-9.jpg" data-sub-html="<button type='submit' class='butn medium white' onclick='uk1()' 
+style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $180</button>">
+    <div class="pricing-list">
+        <div class="pricing-list-price">
+            <h2>$9,000</h2>
+            <img src="img/new/boa-9.jpg" style="display: none !important;">
+            <img src="img/partners/boa.jpg" class="borderp">
         </div>
+        <ul>
+            <img src="img/new/boa-9.jpg">
+            <li>bankofamerica.com</li>
+            <li>Username + Password</li>
+            <li>Account& Routing No</li>
+            <li>Date of Birth</li>
+            <li>Social Security No</li>
+            <li>ClientIP + Useragent</li>
+            <li>Name + Email Access</li>
+            <li>Owner Complete Fullz</li>
+            <li>Bank of America [CHECKING ACCOUNT]</li>
+            <button type="submit" class="butn medium">
+                Buy: $180
+            </button>
+        </ul>
+    </div>
+</div>
 
-        <div class="col-lg-3 col-xl-2 col-md-4 col-6 items savings  wow fadeInRight" data-wow-delay="0.4s">
-            <div class="pricing-list">
-                <div class="pricing-list-price">
-                    <h2 id="boa13"></h2>
-                    <img src="img/partners/boa.jpg" class="borderp">
-                </div>
-                <ul>
-                    <li>bankofamerica.com</li>
-                    <li>Username + Password</li>
-                    <li>Account& Routing No</li>
-                    <li>Social Security No.</li>
-                    <li>Date of Birth</li>
-                    <li>ClientIP + UserAgent</li>
-                    <li>Name+ Email access</li>
-                    <li>Owner's Complete Fullz</li>
-                    <li>Bank of America [SAVINGS ACCOUNT]</li>
-                    <button type="submit" class="butn medium" id="boa013" data-toggle="modal" data-target="#exampleModal">
-                        
-                    </button>
-                </ul>
-            </div>
-        </div>
 
-        <div class="col-lg-3 col-xl-2 col-md-4 col-6 items checking  wow fadeInRight"  data-wow-delay="0.6s">
-            <div class="pricing-list highlight">
-                <div class="pricing-list-price">
-                    <h2 class="text-white" id="boa14"></h2>
-                    <img src="img/partners/boa.jpg" class="borderp">
-                </div>
-                <ul>
-                    <li class="text-white">bankofamerica.com</li>
-                    <li class="text-white">Username + Password</li>
-                    <li class="text-white">Account& Routing No</li>
-                    <li class="text-white">Social Security No.</li>
-                    <li class="text-white">Date of Birth</li>
-                    <li class="text-white">ClientIP + UserAgent</li>
-                    <li class="text-white">Name+ Email access</li>
-                    <li class="text-white">Owner's Complete Fullz</li>
-                    <li class="text-white">Bank of America [CHECKING ACCOUNT]</li>
-                    <button type="submit" class="butn medium white" id="boa014" data-toggle="modal" data-target="#exampleModal">
-                    
-                    </button>
-                </ul>
-            </div>
-        </div>
 
-        <div class="col-lg-3 col-xl-2 col-md-4 col-6 items savings  wow fadeInRight" data-wow-delay="0.8s">
-            <div class="pricing-list">
-                <div class="pricing-list-price">
-                    <h2 id="boa15"></h2>
-                    <img src="img/partners/boa.jpg" class="borderp">
-                </div>
-                <ul>
-                    <li>bankofamerica.com</li>
-                    <li>Username + Password</li>
-                    <li>Account& Routing No</li>
-                    <li>Social Security No.</li>
-                    <li>Date of Birth</li>
-                    <li>ClientIP + UserAgent</li>
-                    <li>Name+ Email access</li>
-                    <li>Owner's Complete Fullz</li>
-                    <li>Bank of America [SAVINGS ACCOUNT]</li>
-                    <button type="submit" class="butn medium" id="boa015" data-toggle="modal" data-target="#exampleModal">
-                        
-                    </button>
-                </ul>
-            </div>
-        </div>
 
-        <div class="col-lg-3 col-xl-2 col-md-4 col-6 items checking  wow fadeInRight"  data-wow-delay="1s">
-            <div class="pricing-list highlight">
-                <div class="pricing-list-price">
-                    <h2 class="text-white" id="boa16"></h2>
-                    <img src="img/partners/boa.jpg" class="borderp">
-                </div>
-                <ul>
-                    <li class="text-white">bankofamerica.com</li>
-                    <li class="text-white">Username + Password</li>
-                    <li class="text-white">Account& Routing No</li>
-                    <li class="text-white">Social Security No.</li>
-                    <li class="text-white">Date of Birth</li>
-                    <li class="text-white">ClientIP + UserAgent</li>
-                    <li class="text-white">Name+ Email access</li>
-                    <li class="text-white">Owner's Complete Fullz</li>
-                    <li class="text-white">Bank of America [CHECKING ACCOUNT]</li>
-                    <button type="submit" class="butn medium white" id="boa016" data-toggle="modal" data-target="#exampleModal">
-                    
-                    </button>
-                </ul>
-            </div>
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items others wow fadeInRight" data-wow-delay="0.4s"
+data-src="img/new/navy-9.png" data-sub-html="<button type='submit' class='butn medium white' onclick='fir90()' 
+style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $194</button>">
+    <div class="pricing-list highlight">
+        <div class="pricing-list-price">
+            <h2 class="text-white">$9,711</h2>
+            <img src="img/new/navy-9.png" style="display: none !important;">
+            <img src="img/partners/nfcu.jpg" class="borderp">
         </div>
+        <ul>
+            <img src="img/new/navy-9.png">
+            <li class="text-white">navyfederal.org</li>
+            <li class="text-white">Username + Password</li>
+            <li class="text-white">Account& Routing No</li>
+            <li class="text-white">Social Security No.</li>
+            <li class="text-white">Date of Birth</li>
+            <li class="text-white">ClientIP + UserAgent</li>
+            <li class="text-white">Name+ Email access</li>
+            <li class="text-white">Owner Complete Fullz</li>
+            <li class="text-white">Navy Federal [SAVINGS ACCOUNT]</li>
+            <button type="submit" class="butn medium white">
+                Buy: $194
+            </button>
+        </ul>
+    </div>
+</div>
 
-        <div class="col-lg-3 col-xl-2 col-md-4 col-6 items savings  wow fadeInRight">
-            <div class="pricing-list">
-                <div class="pricing-list-price">
-                    <h2 id="boa17"></h2>
-                    <img src="img/partners/boa.jpg" class="borderp">
-                </div>
-                <ul>
-                    <li>bankofamerica.com</li>
-                    <li>Username + Password</li>
-                    <li>Account& Routing No</li>
-                    <li>Social Security No.</li>
-                    <li>Date of Birth</li>
-                    <li>ClientIP + UserAgent</li>
-                    <li>Name+ Email access</li>
-                    <li>Owner's Complete Fullz</li>
-                    <li>Bank of America [SAVINGS ACCOUNT]</li>
-                    <button type="submit" class="butn medium" id="boa017" data-toggle="modal" data-target="#exampleModal">
-                        
-                    </button>
-                </ul>
-            </div>
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items wells wow fadeInRight" data-wow-delay="0.2s"
+data-src="img/new/boa-9.8.png" data-sub-html="<button type='submit' class='butn medium white' onclick='uk2()' 
+style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $196</button>">
+    <div class="pricing-list">
+        <div class="pricing-list-price">
+            <h2>$9,804</h2>
+            <img src="img/new/boa-9.8.png" style="display: none !important;">
+            <img src="img/partners/boa.jpg" class="borderp">
         </div>
+        <ul>
+            <img src="img/new/boa-9.8.png">
+            <li>bankofamerica.com</li>
+            <li>Username + Password</li>
+            <li>Account& Routing No</li>
+            <li>Date of Birth</li>
+            <li>Social Security No</li>
+            <li>ClientIP + Useragent</li>
+            <li>Name + Email Access</li>
+            <li>Owner Complete Fullz</li>
+            <li>Bank of America [CHECKING ACCOUNT]</li>
+            <button type="submit" class="butn medium">
+                Buy: $196
+            </button>
+        </ul>
+    </div>
+</div>
 
-        <div class="col-lg-3 col-xl-2 col-md-4 col-6 items savings  wow fadeInRight" data-wow-delay="0.2s">
-            <div class="pricing-list">
-                <div class="pricing-list-price">
-                    <h2 id="boa18"></h2>
-                    <img src="img/partners/boa.jpg" class="borderp">
-                </div>
-                <ul>
-                    <li>bankofamerica.com</li>
-                    <li>Username + Password</li>
-                    <li>Account& Routing No</li>
-                    <li>Social Security No.</li>
-                    <li>Date of Birth</li>
-                    <li>ClientIP + UserAgent</li>
-                    <li>Name+ Email access</li>
-                    <li>Owner's Complete Fullz</li>
-                    <li>Bank of America [SAVINGS ACCOUNT]</li>
-                    <button type="submit" class="butn medium" id="boa018" data-toggle="modal" data-target="#exampleModal">
-                        
-                    </button>
-                </ul>
-            </div>
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items wells wow fadeInRight" data-wow-delay="0.2s"
+data-src="img/new/boa-9.9.jpg" data-sub-html="<button type='submit' class='butn medium white' onclick='uk3()' 
+style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $199</button>">
+    <div class="pricing-list">
+        <div class="pricing-list-price">
+            <h2>$9,978</h2>
+            <img src="img/new/boa-9.9.jpg" style="display: none !important;">
+            <img src="img/partners/boa.jpg" class="borderp">
         </div>
+        <ul>
+            <img src="img/new/boa-9.9.jpg">
+            <li>bankofamerica.com</li>
+            <li>Username + Password</li>
+            <li>Account& Routing No</li>
+            <li>Date of Birth</li>
+            <li>Social Security No</li>
+            <li>ClientIP + Useragent</li>
+            <li>Name + Email Access</li>
+            <li>Owner Complete Fullz</li>
+            <li>Bank of America [CHECKING ACCOUNT]</li>
+            <button type="submit" class="butn medium">
+                Buy: $199
+            </button>
+        </ul>
+    </div>
+</div>
 
-        <div class="col-lg-3 col-xl-2 col-md-4 col-6 items checking  wow fadeInRight"  data-wow-delay="0.4s">
-            <div class="pricing-list highlight">
-                <div class="pricing-list-price">
-                    <h2 class="text-white" id="boa19"></h2>
-                    <img src="img/partners/boa.jpg" class="borderp">
-                </div>
-                <ul>
-                    <li class="text-white">bankofamerica.com</li>
-                    <li class="text-white">Username + Password</li>
-                    <li class="text-white">Account& Routing No</li>
-                    <li class="text-white">Social Security No.</li>
-                    <li class="text-white">Date of Birth</li>
-                    <li class="text-white">ClientIP + UserAgent</li>
-                    <li class="text-white">Name+ Email access</li>
-                    <li class="text-white">Owner's Complete Fullz</li>
-                    <li class="text-white">Bank of America [CHECKING ACCOUNT]</li>
-                    <button type="submit" class="butn medium white" id="boa019" data-toggle="modal" data-target="#exampleModal">
-                    
-                    </button>
-                </ul>
-            </div>
-        </div>
 
-        <div class="col-lg-3 col-xl-2 col-md-4 col-6 items savings  wow fadeInRight" data-wow-delay="0.6s">
-            <div class="pricing-list">
-                <div class="pricing-list-price">
-                    <h2 id="boa20"></h2>
-                    <img src="img/partners/boa.jpg" class="borderp">
-                </div>
-                <ul>
-                    <li>bankofamerica.com</li>
-                    <li>Username + Password</li>
-                    <li>Account& Routing No</li>
-                    <li>Social Security No.</li>
-                    <li>Date of Birth</li>
-                    <li>ClientIP + UserAgent</li>
-                    <li>Name+ Email access</li>
-                    <li>Owner's Complete Fullz</li>
-                    <li>Bank of America [SAVINGS ACCOUNT]</li>
-                    <button type="submit" class="butn medium" id="boa020" data-toggle="modal" data-target="#exampleModal">
-                        
-                    </button>
-                </ul>
-            </div>
-        </div>
 
-        <div class="col-lg-3 col-xl-2 col-md-4 col-6 items checking  wow fadeInRight">
-            <div class="pricing-list highlight">
-                <div class="pricing-list-price">
-                    <h2 class="text-white" id="boa21"></h2>
-                    <img src="img/partners/boa.jpg" class="borderp">
-                </div>
-                <ul>
-                    <li class="text-white">bankofamerica.com</li>
-                    <li class="text-white">Username + Password</li>
-                    <li class="text-white">Account& Routing No</li>
-                    <li class="text-white">Social Security No.</li>
-                    <li class="text-white">Date of Birth</li>
-                    <li class="text-white">ClientIP + UserAgent</li>
-                    <li class="text-white">Name+ Email access</li>
-                    <li class="text-white">Owner's Complete Fullz</li>
-                    <li class="text-white">Bank of America [CHECKING ACCOUNT]</li>
-                    <button type="submit" class="butn medium white" id="boa021" data-toggle="modal" data-target="#exampleModal">
-                    
-                    </button>
-                </ul>
-            </div>
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items others wow fadeInRight"
+data-src="img/new/citi-10.png" data-sub-html="<button type='submit' class='butn medium white' onclick='fir26()' 
+style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $206</button>">
+    <div class="pricing-list highlight">
+        <div class="pricing-list-price">
+            <h2 class="text-white">$10,304</h2>
+            <img src="img/new/citi-10.png" style="display: none !important;">
+            <img src="img/partners/citi.jpg" class="borderp">
         </div>
+        <ul>
+            <img src="img/new/citi-10.png">
+            <li class="text-white">citi.com</li>
+            <li class="text-white">Username + Password</li>
+            <li class="text-white">Name + Address</li>
+            <li class="text-white">Email access</li>
+            <li class="text-white">Social Security No.</li>
+            <li class="text-white">Account& Routing No</li>
+            <li class="text-white">Date of Birth</li>
+            <li class="text-white">Owner's Complete Fullz</li>
+            <li class="text-white">Citi Bank [CHECKING ACCOUNT]</li>
+            <button type="submit" class="butn medium white">
+                Buy: $206
+            </button>
+        </ul>
+    </div>
+</div>
+
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items wells wow fadeInRight" data-wow-delay="0.2s"
+data-src="img/boa-11k.jpg" data-sub-html="<button type='submit' class='butn medium white' onclick='uk5()' 
+style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $237</button>">
+    <div class="pricing-list">
+        <div class="pricing-list-price">
+            <h2>$11,871</h2>
+            <img src="img/boa-11k.jpg" style="display: none !important;">
+            <img src="img/partners/boa.jpg" class="borderp">
+        </div>
+        <ul>
+            <img src="img/boa-11k.jpg">
+            <li>bankofamerica.com</li>
+            <li>Username + Password</li>
+            <li>Account& Routing No</li>
+            <li>Date of Birth</li>
+            <li>Social Security No</li>
+            <li>ClientIP + Useragent</li>
+            <li>Name + Email Access</li>
+            <li>Owner Complete Fullz</li>
+            <li>Bank of America [CHECKING ACCOUNT]</li>
+            <button type="submit" class="butn medium">
+                Buy: $237
+            </button>
+        </ul>
+    </div>
+</div>
+
+
+
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items others wow fadeInRight" data-wow-delay="1s"
+data-src="images/sale.jpg" data-sub-html="<button type='submit' class='butn medium white' onclick='uk7()' 
+style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $251</button>">
+    <div class="pricing-list highlight">
+        <div class="pricing-list-price">
+            <h2 class="text-white">$12,568</h2>
+            <img src="images/sale.jpg" style="display: none !important;">
+            <img src="img/partners/citi.jpg" class="borderp">
+        </div>
+        <ul>
+            <img src="images/sale.jpg">
+            <li class="text-white">citi.com</li>
+            <li class="text-white">Username + Password</li>
+            <li class="text-white">Name + Address</li>
+            <li class="text-white">Email Access</li>
+            <li class="text-white">Social Security No</li>
+            <li class="text-white">Date of Birth</li>
+            <li class="text-white">Account& Routing No</li>
+            <li class="text-white">Owner Complete Fullz</li>
+            <li class="text-white">Citi Bank [CHECKING ACCOUNT]</li>
+            <button type="submit" class="butn medium white">
+                Buy: $251
+            </button>
+        </ul>
+    </div>
+</div>
+
+
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items wells wow fadeInRight" data-wow-delay="0.2s"
+data-src="img/new/boa-14.png" data-sub-html="<button type='submit' class='butn medium white' onclick='uk13()' 
+style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $280</button>">
+    <div class="pricing-list">
+        <div class="pricing-list-price">
+            <h2>$14,015</h2>
+            <img src="img/new/boa-14.png" style="display: none !important;">
+            <img src="img/partners/boa.jpg" class="borderp">
+        </div>
+        <ul>
+            <img src="img/new/boa-14.png">
+            <li>bankofamerica.com</li>
+            <li>Username + Password</li>
+            <li>Account& Routing No</li>
+            <li>Date of Birth</li>
+            <li>Social Security No</li>
+            <li>ClientIP + Useragent</li>
+            <li>Name + Email Access</li>
+            <li>Owner Complete Fullz</li>
+            <li>Bank of America [CHECKING ACCOUNT]</li>
+            <button type="submit" class="butn medium">
+                Buy: $280
+            </button>
+        </ul>
+    </div>
+</div>
+
+
+
+
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items others wow fadeInRight" data-wow-delay="0.2s"
+data-src="img/citi14.jpg" data-sub-html="<button type='submit' class='butn medium white' onclick='uk18()' 
+style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $290</button>">
+    <div class="pricing-list highlight">
+        <div class="pricing-list-price">
+            <h2 class="text-white">$14,218</h2>
+            <img src="img/citi14.jpg" style="display: none !important;">
+            <img src="img/partners/citi.jpg" class="borderp">
+        </div>
+        <ul>
+            <img src="img/citi14.jpg">
+            <li class="text-white">citi.com</li>
+            <li class="text-white">Login Access</li>
+            <li class="text-white">Email Access</li>
+            <li class="text-white">Driving License</li>
+            <li class="text-white">Billing Details</li>
+            <li class="text-white">Social Security No</li>
+            <li class="text-white">Carrier PIN</li>
+            <li class="text-white">Date of Birth</li>
+            <li class="text-white">Citi Bank [CHECKING ACCOUNT]</li>
+            <button type="submit" class="butn medium white">
+                Buy: $290
+            </button>
+        </ul>
+    </div>
+</div>
+
+
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items others wow fadeInRight"  data-wow-delay="0.2s" 
+data-src="img/new/td-16.png" data-sub-html="<button type='submit' class='butn medium white' onclick='fir16()' 
+    style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $338</button>">
+    <div class="pricing-list highlight">
+        <div class="pricing-list-price">
+            <h2 class="text-white">$16,905</h2>
+            <img src="img/new/td-16.png" style="display: none !important;">
+            <img src="img/partners/td.png" class="borderp">
+        </div>
+        <ul>
+            <img src="img/new/td-16.png">
+            <li class="text-white">td.com</li>
+            <li class="text-white">Online Access</li>
+            <li class="text-white">Email Access</li>
+            <li class="text-white">Question & Answer</li>
+            <li class="text-white">Name + Address</li>
+            <li class="text-white">Card Information</li>
+            <li class="text-white">Account& Routing No</li>
+            <li class="text-white">Owner Complete Fullz</li>
+            <li class="text-white">TD Bank [CHECKING ACCOUNT]</li>
+            <button type="submit" class="butn medium white">
+                Buy: $338
+            </button>
+        </ul>
+    </div>
+</div>
+
+
+
+
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items others wow fadeInRight" data-wow-delay="0.8s"
+data-src="img/hunt19.jpg" data-sub-html="<button type='submit' class='butn medium white' onclick='uk26()' 
+style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $396</button>">
+    <div class="pricing-list highlight">
+        <div class="pricing-list-price">
+            <h2 class="text-white">$19,909</h2>
+            <img src="img/hunt19.jpg" style="display: none !important;">
+            <img src="img/partners/hunt.jpg" class="borderp">
+        </div>
+        <ul>
+            <img src="img/hunt19.jpg">
+            <li class="text-white">huntington.com</li>
+            <li class="text-white">Online Access</li>
+            <li class="text-white">Email Access</li>
+            <li class="text-white">Questions & Answers</li>
+            <li class="text-white">Social Security No</li>
+            <li class="text-white">Driving License</li>
+            <li class="text-white">ClientIP + UserAgent</li>
+            <li class="text-white">Billing + D.O.B</li>
+            <li class="text-white">Huntington Bank [CHECKING ACCOUNT]</li>
+            <button type="submit" class="butn medium highlight">
+                Buy: $396
+            </button>
+        </ul>
+    </div>
+</div>
+
+
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items others wow fadeInRight" data-wow-delay="0.4s"
+data-src="img/new/navy-30.png" data-sub-html="<button type='submit' class='butn medium white' onclick='fir65()' 
+style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $607</button>">
+    <div class="pricing-list highlight">
+        <div class="pricing-list-price">
+            <h2 class="text-white">$30,374</h2>
+            <img src="img/new/navy-30.png" style="display: none !important;">
+            <img src="img/partners/nfcu.jpg" class="borderp">
+        </div>
+        <ul>
+            <img src="img/new/navy-30.png">
+            <li class="text-white">navyfederal.org</li>
+            <li class="text-white">Username + Password</li>
+            <li class="text-white">Account& Routing No</li>
+            <li class="text-white">Social Security No.</li>
+            <li class="text-white">Date of Birth</li>
+            <li class="text-white">ClientIP + UserAgent</li>
+            <li class="text-white">Name+ Email access</li>
+            <li class="text-white">Owner Complete Fullz</li>
+            <li class="text-white">Navy Federal [SAVINGS ACCOUNT]</li>
+            <button type="submit" class="butn medium white">
+                Buy: $607
+            </button>
+        </ul>
+    </div>
+</div>
+
+
+
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items others wow fadeInRight" data-wow-delay="1s"
+data-src="img/ally33.jpg" data-sub-html="<button type='submit' class='butn medium white' onclick='uk33()' 
+style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $673</button>">
+    <div class="pricing-list highlight">
+        <div class="pricing-list-price">
+            <h2 class="text-white">$33,575</h2>
+            <img src="img/ally33.jpg" style="display: none !important;">
+            <img src="images/ally.jpg" class="borderp">
+        </div>
+        <ul>
+            <img src="img/ally33.jpg">
+            <li class="text-white">ally.com</li>
+            <li class="text-white">Login Access</li>
+            <li class="text-white">Email Access</li>
+            <li class="text-white">Debit Details</li>
+            <li class="text-white">Billing Details</li>
+            <li class="text-white">Social Security No</li>
+            <li class="text-white">ClientIP + UserAgent</li>
+            <li class="text-white">Owner Complete Fullz</li>
+            <li class="text-white">Ally Bank [CHECKING ACCOUNT]</li>
+            <button type="submit" class="butn medium white">
+                Buy: $673
+            </button>
+        </ul>
+    </div>
+</div>
+
+
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items others wow fadeInRight"  data-wow-delay="0.2s" 
+data-src="img/new/td-33.png" data-sub-html="<button type='submit' class='butn medium white' onclick='fir28()' 
+    style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $669</button>">
+    <div class="pricing-list highlight">
+        <div class="pricing-list-price">
+            <h2 class="text-white">$33,475</h2>
+            <img src="img/new/td-33.png" style="display: none !important;">
+            <img src="img/partners/td.png" class="borderp">
+        </div>
+        <ul>
+            <img src="img/new/td-33.png">
+            <li class="text-white">td.com</li>
+            <li class="text-white">Online Access</li>
+            <li class="text-white">Email Access</li>
+            <li class="text-white">Question & Answer</li>
+            <li class="text-white">Name + Address</li>
+            <li class="text-white">Card Information</li>
+            <li class="text-white">Account& Routing No</li>
+            <li class="text-white">Owner Complete Fullz</li>
+            <li class="text-white">TD Bank [CHECKING ACCOUNT]</li>
+            <button type="submit" class="butn medium white">
+                Buy: $669
+            </button>
+        </ul>
+    </div>
+</div>
+
+
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items wells wow fadeInRight"
+data-src="img/new/boa-44.jpg" data-sub-html="<button type='submit' class='butn medium white' onclick='fir37()' 
+style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $888</button>">
+    <div class="pricing-list">
+        <div class="pricing-list-price">
+            <h2>$44,426</h2>
+            <img src="img/new/boa-44.jpg" style="display: none !important;">
+            <img src="img/partners/boa.jpg" class="borderp">
+        </div>
+        <ul>
+            <img src="img/new/boa-44.jpg">
+            <li>bankofamerica.com</li>
+            <li>Username + Password</li>
+            <li>Account& Routing No</li>
+            <li>Date of Birth</li>
+            <li>Social Security No</li>
+            <li>ClientIP + Useragent</li>
+            <li>Name + Email Access</li>
+            <li>Owner Complete Fullz</li>
+            <li>Bank of America [CHECKING ACCOUNT]</li>
+            <button type="submit" class="butn medium">
+                Buy: $888
+            </button>
+        </ul>
+    </div>
+</div>
+
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items wells wow fadeInRight" data-wow-delay="0.2s"
+data-src="img/new/boa-130.png" data-sub-html="<button type='submit' class='butn medium white' onclick='fir11()' 
+style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $2,615</button>">
+    <div class="pricing-list">
+        <div class="pricing-list-price">
+            <h2>$130,750</h2>
+            <img src="img/new/boa-130.png" style="display: none !important;">
+            <img src="img/partners/boa.jpg" class="borderp">
+        </div>
+        <ul>
+            <img src="img/new/boa-130.png">
+            <li>bankofamerica.com</li>
+            <li>Username + Password</li>
+            <li>Account& Routing No</li>
+            <li>Date of Birth</li>
+            <li>Social Security No</li>
+            <li>ClientIP + Useragent</li>
+            <li>Name + Email Access</li>
+            <li>Owner Complete Fullz</li>
+            <li>Bank of America [CHECKING ACCOUNT]</li>
+            <button type="submit" class="butn medium">
+                Buy: $2,615
+            </button>
+        </ul>
+    </div>
+</div>
+
+<div class="col-lg-3 col-xl-2 col-md-4 col-6 items wells wow fadeInRight" data-wow-delay="0.2s"
+data-src="img/natalya.jpg" data-sub-html="<button type='submit' class='butn medium white' onclick='uk45()' 
+style='background: yellow' onclick  data-toggle='modal' data-target='#profileModal'>Buy: $2,804</button>">
+    <div class="pricing-list">
+        <div class="pricing-list-price">
+            <h2>$140,075</h2>
+            <img src="img/natalya.jpg" style="display: none !important;">
+            <img src="img/partners/boa.jpg" class="borderp">
+        </div>
+        <ul>
+            <img src="img/natalya.jpg">
+            <li>bankofamerica.com</li>
+            <li>Online Access</li>
+            <li>Owner Complete Fullz</li>
+            <li>Email Access</li>
+            <li>Card Details</li>
+            <li>Name + Address</li>
+            <li>ClientIP + UserAgent</li>
+            <li>Social Security No</li>
+            <li>Bank of America [SAVINGS ACCOUNT]</li>
+            <button type="submit" class="butn medium">
+                Buy: $2,804
+            </button>
+        </ul>
+    </div>
+</div>
+
+
 
 
 
@@ -842,29 +1053,7 @@
 </div>
 </div>
 
-
-<div class="container-fluid lg-display-none" style="margin:0 !important;">
-    <div class="owl-carousel owl-theme clients" id="clients">
-        <div class="item"><img alt="" src="img/partners/bbva.jpg"></div>
-        <div class="item"><img alt="" src="img/partners/chase.jpg"></div>
-        <div class="item"><img alt="" src="img/partners/citi.jpg"></div>
-        <div class="item"><img alt="" src="img/partners/huntington.jpg"></div>
-        <div class="item"><img alt="" src="img/partners/nfcu.jpg"></div>
-        <div class="item"><img alt="" src="img/partners/pnc.jpg"></div>
-        <div class="item"><img alt="" src="img/partners/truist-clients.jpg" style="border-radius: 7px;"></div>
-        <div class="item"><img alt="" src="img/partners/woodforest.jpg"></div>
-        <div class="item"><img alt="" src="img/partners/chime.jpg"></div>
-        <div class="item"><img alt="" src="img/partners/boa.jpg"></div>
-        <div class="item"><img alt="" src="img/partners/scotia.jpg"></div>
-        <div class="item"><img alt="" src="img/partners/rbc.jpg"></div>
-        <div class="item"><img alt="" src="img/partners/shopw.jpg"></div>
-        <div class="item"><img alt="" src="img/partners/fund.jpg"></div>
-        <div class="item"><img alt="" src="img/partners/barclays.jpg"></div>
-        <div class="item"><img alt="" src="img/partners/wellsfargo.png"></div>
-    </div>
-</div>
 </section>
-
 
 <!-- start footer section -->
 <footer class="bg-img background-size-contain" data-overlay-dark="8" data-background="images/banner.jpg" style="padding: 0; margin: 0;">
@@ -1074,7 +1263,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="col-xl-3 col-lg-3 col-md-4 col-6">
                 <h3 class="text-white">Telegram<i class="fab fa-telegram" style="color: #03a9f5;"></i></h3>
                 <div class="padding-10px-all sm-padding-10px-tb border-top border-right border-left border-color-light-white text-center">
@@ -1106,9 +1295,7 @@
 <!-- end footer ection -->
 
 
-
-
-
+    
 </div>
 <!-- end main-wrapper section -->
 <div id="style-switcher" class="infinite-floating">
@@ -1133,67 +1320,7 @@
     <i class="fas fa-angle-up"></i>
 </a>
 
-
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <img src="img/partners/boa.jpg"
-                    alt="" style="width: 70px;"/>
-                <h4 class="modal-title" style="font-weight: 600;" id="exampleModalLabel"></h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <img src="img/svg/failure.svg" width="35px">
-                </button>
-            </div>
-            <div class="modal-body" style="padding: 0;">
-                <div class="form-group balance">
-                    <p class="balance-p-modal"></p>
-                </div>
-                <div class="form-group website">
-                    <p></p>
-                </div>
-                <div class="form-group info1">
-                    <p></p>
-                </div>
-                <div class="form-group info2">
-                    <p></p>
-                </div>
-                <div class="form-group info3">
-                    <p></p>
-                </div>
-                <div class="form-group info4">
-                    <p></p>
-                </div>
-                <div class="form-group info5">
-                    <p></p>
-                </div>
-                <div class="form-group info6">
-                    <p></p>
-                </div>
-                <div class="form-group info7">
-                    <p></p>
-                </div>
-                <div class="form-group image" style="display: none;">
-                    <p></p>
-                </div>
-                <div class="form-group account" style="display: none;">
-                    <p></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="butn medium moneycoming" 
-                    data-dismiss="modal" data-toggle="modal" data-target="#profileModal" >
-                        
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>   
-</div>
-
-
-
-<div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;">
     <div class="modal-dialog mkbhd">
         <div class="modal-content">
             <div class="modal-header">
@@ -1238,21 +1365,21 @@
 
 
 
-
-    <script src="js/cart/boa.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
     <script  src="js/google/bro.js"></script>
     <script src="js/main/core.min.js"></script>
-    <script src="js/main/main2.js"></script>
+    <script src="js/main/mainwells.js"></script>
 
     <script src="datatables/js/jquery.datatable2.min.js"></script>
-    <script src="js/cart/shop33.js"></script>
+    <script src="js/cart/shopboa.js"></script>
 
     <script src="js/rev_slider/jquery.themepunch.tools.min.js"></script>
     <script src="js/rev_slider/jquery.themepunch.revolution.min.js"></script>
 
     <script src="js/pages/particles.js"></script>
 
+    <script src="js/core.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
