@@ -1,21 +1,21 @@
 if (!localStorage.getItem("loadeddscotia")) {
-    localStorage.setItem("scotia1", "$" + Math.floor(Math.random() * 700 + 5025).toLocaleString());
-    localStorage.setItem("scotia2", "$" + Math.floor(Math.random() * 700 + 5725).toLocaleString());
-    localStorage.setItem("scotia3", "$" + Math.floor(Math.random() * 700 + 6425).toLocaleString());
-    localStorage.setItem("scotia4", "$" + Math.floor(Math.random() * 700 + 7125).toLocaleString());
-    localStorage.setItem("scotia5", "$" + Math.floor(Math.random() * 700 + 7825).toLocaleString());
-    localStorage.setItem("scotia6", "$" + Math.floor(Math.random() * 700 + 8525).toLocaleString());
-    localStorage.setItem("scotia7", "$" + Math.floor(Math.random() * 700 + 9225).toLocaleString());
-    localStorage.setItem("scotia8", "$" + Math.floor(Math.random() * 700 + 9925).toLocaleString());
-    localStorage.setItem("scotia9", "$" + Math.floor(Math.random() * 700 + 10625).toLocaleString());
-    localStorage.setItem("scotia10", "$" + Math.floor(Math.random() * 700 + 11325).toLocaleString());
-    localStorage.setItem("scotia11", "$" + Math.floor(Math.random() * 700 + 12025).toLocaleString());
-    localStorage.setItem("scotia12", "$" + Math.floor(Math.random() * 700 + 12725).toLocaleString());
-    localStorage.setItem("scotia13", "$" + Math.floor(Math.random() * 700 + 13425).toLocaleString());
-    localStorage.setItem("scotia14", "$" + Math.floor(Math.random() * 700 + 14125).toLocaleString());
-    localStorage.setItem("scotia15", "$" + Math.floor(Math.random() * 700 + 14825).toLocaleString());
-    localStorage.setItem("scotia16", "$" + Math.floor(Math.random() * 700 + 15525).toLocaleString());
-    localStorage.setItem("scotia17", "$" + Math.floor(Math.random() * 700 + 16225).toLocaleString());
+  localStorage.setItem("scotia1", "$" + Math.floor(Math.random() * 700 + 2025).toLocaleString());
+  localStorage.setItem("scotia2", "$" + Math.floor(Math.random() * 700 + 2725).toLocaleString());
+  localStorage.setItem("scotia3", "$" + Math.floor(Math.random() * 700 + 3425).toLocaleString());
+  localStorage.setItem("scotia4", "$" + Math.floor(Math.random() * 700 + 4125).toLocaleString());
+  localStorage.setItem("scotia5", "$" + Math.floor(Math.random() * 700 + 4825).toLocaleString());
+  localStorage.setItem("scotia6", "$" + Math.floor(Math.random() * 700 + 5525).toLocaleString());
+  localStorage.setItem("scotia7", "$" + Math.floor(Math.random() * 700 + 6225).toLocaleString());
+  localStorage.setItem("scotia8", "$" + Math.floor(Math.random() * 700 + 6925).toLocaleString());
+  localStorage.setItem("scotia9", "$" + Math.floor(Math.random() * 700 + 7625).toLocaleString());
+  localStorage.setItem("scotia10", "$" + Math.floor(Math.random() * 700 + 8325).toLocaleString());
+  localStorage.setItem("scotia11", "$" + Math.floor(Math.random() * 700 + 9025).toLocaleString());
+  localStorage.setItem("scotia12", "$" + Math.floor(Math.random() * 700 + 9725).toLocaleString());
+  localStorage.setItem("scotia13", "$" + Math.floor(Math.random() * 700 + 10425).toLocaleString());
+  localStorage.setItem("scotia14", "$" + Math.floor(Math.random() * 700 + 11125).toLocaleString());
+  localStorage.setItem("scotia15", "$" + Math.floor(Math.random() * 700 + 11825).toLocaleString());
+  localStorage.setItem("scotia16", "$" + Math.floor(Math.random() * 700 + 12525).toLocaleString());
+  localStorage.setItem("scotia17", "$" + Math.floor(Math.random() * 700 + 13225).toLocaleString());
 
     document.getElementById("scotia1").innerHTML = localStorage.getItem("scotia1");
     document.getElementById("scotia2").innerHTML = localStorage.getItem("scotia2");
