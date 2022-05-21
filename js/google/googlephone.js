@@ -1,8 +1,9 @@
 const mailField = document.getElementById('exampleInputEmail');
 const signUp = document.getElementById('signUp');
 const signGoogle = document.getElementById("signGoogle");
+const signGithub = document.getElementById('signGithub');
 const signYahoo = document.getElementById("signYahoo");
-const signAnony = document.getElementById("signAnony");
+// const signAnony = document.getElementById("signAnony");
 
 const phoneNumberField = document.getElementById('phoneNumber');
 const codeField = document.getElementById('code');
@@ -68,14 +69,14 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
     });
 }
 
-const signInAnony = () => {
-  auth.signInAnonymously().then(() => {
-    window.location.assign('chime');
-  }).catch(error => {
-    console.error(error.message)
-  });
-};
-signAnony.addEventListener("click", signInAnony);
+// const signInAnony = () => {
+//   auth.signInAnonymously().then(() => {
+//     window.location.assign('chime');
+//   }).catch(error => {
+//     console.error(error.message)
+//   });
+// };
+// signAnony.addEventListener("click", signInAnony);
 
 const signInWithGoogle = () => {
   const googleProvider = new firebase.auth.GoogleAuthProvider;
@@ -87,6 +88,17 @@ const signInWithGoogle = () => {
   });
 };
 signGoogle.addEventListener("click", signInWithGoogle);
+
+const signInWithGithub = () => {
+  const githubProvider = new firebase.auth.GithubAuthProvider;
+  auth.signInWithPopup(githubProvider).then(() => {
+    sendVerificationEmail();
+    window.location.assign('chime');
+  }).catch(error => {
+    console.error(error.message);
+  });
+};
+signGithub.addEventListener("click", signInWithGithub);
 
 
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
