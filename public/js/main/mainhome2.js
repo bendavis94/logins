@@ -60,7 +60,7 @@
                     margin: 10
                 },
                 1200: {
-                    items: 3,
+                    items: 4,
                     margin: 10
                 }
             }

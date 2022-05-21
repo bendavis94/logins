@@ -763,6 +763,9 @@ td{
     margin: 5px 15px; 
     font-weight: 700   
 }
+.bankof{
+    padding: 7px 4px !important;
+}
 
 @media (max-width:576px){
     #modal-amount, #modal-amount span, .modal-amount .modal-amount span{
