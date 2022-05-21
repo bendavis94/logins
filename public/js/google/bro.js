@@ -35,7 +35,7 @@ auth.onAuthStateChanged(user => {
         return response.json();
       })
       .then(function(data) {
-        document.getElementById('footer-email').innerHTML = `<span class="footer-name">${user.displayName}<span>, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
+        document.getElementById('footer-email').innerHTML = `Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
     });
   } else if(!user.displayName && user.email) {
     var themail = user.email;
@@ -49,7 +49,7 @@ auth.onAuthStateChanged(user => {
         return response.json();
       })
       .then(function(data) {
-        document.getElementById('footer-email').innerHTML = `<span class="footer-name">${theaddress}<span>, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
+        document.getElementById('footer-email').innerHTML = `Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
     });
   } else if(user.phoneNumber){
     jinaHolder.innerText = user.phoneNumber;
@@ -61,7 +61,7 @@ auth.onAuthStateChanged(user => {
         return response.json();
       })
       .then(function(data) {
-        document.getElementById('footer-email').innerHTML = `<span class="footer-name">${user.phoneNumber}<span>, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}`;
+        document.getElementById('footer-email').innerHTML = `Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
     });
   } else if(user.isAnonymous){
     jinaHolder.innerText = 'Anonymous';
@@ -73,7 +73,7 @@ auth.onAuthStateChanged(user => {
         return response.json();
       })
       .then(function(data) {
-        document.getElementById('footer-email').innerHTML = `<span class="footer-name">Anonymous<span>, Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
+        document.getElementById('footer-email').innerHTML = `Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
     });
   } 
 });
