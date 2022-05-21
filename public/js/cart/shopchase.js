@@ -299,7 +299,7 @@ function jaze6(event) {
 }
 
 function jaze7(event) {
-    var price = 'Price: $604';
+    var price = 'Price: $605';
     var balance = 'Balance: $15,198';
     var website = 'chase.com';
     var info1 = 'Login Access';
@@ -667,7 +667,7 @@ function jaze28(event) {
 }
 
 function jaze29(event) {
-    var price = 'Price: $1,088';
+    var price = 'Price: $1,090';
     var balance = 'Balance: $26,526';
     var website = 'chase.com';
     var info1 = 'Login Access';
