@@ -459,23 +459,6 @@ function uk13(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function uk26(event) {
-    var price = 'Price: $396';
-    var balance = 'Balance: $19,909';
-    var website = 'huntington.com';
-    var info1 = 'Login Access';
-    var info2 = 'Email Access';
-    var info3 = 'Social Security No';
-    var info4 = 'Questions & Answers';
-    var info5 = 'Driving License';
-    var info6 = 'ClientIP + UserAgent';
-    var info7 = 'Billing + D.O.B';
-    var image = 'https://darknet.id/img/hunt-19.jpg';
-    var account = 'Huntington Bank [CHECKING]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-
 function uk45(event) {
     var price = 'Price: $2,804';
     var balance = 'Balance: $140,075';
