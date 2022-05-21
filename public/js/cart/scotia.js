@@ -35,23 +35,23 @@ if (!localStorage.getItem("loadeddscotia")) {
     document.getElementById("scotia16").innerHTML = localStorage.getItem("scotia16");
     document.getElementById("scotia17").innerHTML = localStorage.getItem("scotia17");
 
-    document.getElementById("scotia01").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia1").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia02").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia2").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia03").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia3").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia04").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia4").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia05").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia5").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia06").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia6").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia07").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia7").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia08").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia8").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia09").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia9").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia010").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia10").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia011").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia11").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia012").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia12").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia013").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia13").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia014").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia14").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia015").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia15").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia016").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia16").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia017").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia17").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
+    document.getElementById("scotia01").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia1").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia02").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia2").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia03").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia3").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia04").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia4").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia05").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia5").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia06").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia6").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia07").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia7").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia08").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia8").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia09").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia9").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia010").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia10").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia011").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia11").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia012").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia12").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia013").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia13").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia014").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia14").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia015").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia15").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia016").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia16").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia017").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia17").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
 
   } else {
     document.getElementById("scotia1").innerHTML = localStorage.getItem("scotia1");
@@ -72,23 +72,23 @@ if (!localStorage.getItem("loadeddscotia")) {
     document.getElementById("scotia16").innerHTML = localStorage.getItem("scotia16");
     document.getElementById("scotia17").innerHTML = localStorage.getItem("scotia17");
 
-    document.getElementById("scotia01").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia1").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia02").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia2").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia03").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia3").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia04").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia4").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia05").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia5").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia06").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia6").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia07").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia7").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia08").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia8").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia09").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia9").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia010").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia10").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia011").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia11").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia012").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia12").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia013").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia13").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia014").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia14").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia015").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia15").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia016").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia16").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("scotia017").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia17").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
+    document.getElementById("scotia01").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia1").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia02").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia2").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia03").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia3").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia04").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia4").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia05").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia5").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia06").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia6").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia07").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia7").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia08").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia8").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia09").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia9").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia010").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia10").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia011").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia11").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia012").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia12").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia013").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia13").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia014").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia14").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia015").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia15").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia016").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia16").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("scotia017").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("scotia17").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
 
   }
 

@@ -43,27 +43,27 @@ if (!localStorage.getItem("loadedrbc")) {
     document.getElementById("rbc20").innerHTML = localStorage.getItem("rbc20");
     document.getElementById("rbc21").innerHTML = localStorage.getItem("rbc21");
 
-    document.getElementById("rbc01").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc1").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc02").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc2").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc03").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc3").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc04").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc4").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc05").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc5").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc06").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc6").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc07").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc7").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc08").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc8").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc09").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc9").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc010").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc10").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc011").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc11").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc012").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc12").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc013").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc13").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc014").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc14").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc015").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc15").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc016").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc16").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc017").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc17").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc018").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc18").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc019").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc19").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc020").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc20").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc021").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc21").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
+    document.getElementById("rbc01").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc1").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc02").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc2").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc03").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc3").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc04").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc4").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc05").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc5").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc06").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc6").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc07").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc7").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc08").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc8").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc09").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc9").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc010").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc10").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc011").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc11").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc012").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc12").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc013").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc13").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc014").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc14").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc015").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc15").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc016").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc16").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc017").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc17").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc018").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc18").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc019").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc19").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc020").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc20").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc021").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc21").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
 
   } else {
     document.getElementById("rbc1").innerHTML = localStorage.getItem("rbc1");
@@ -88,27 +88,27 @@ if (!localStorage.getItem("loadedrbc")) {
     document.getElementById("rbc20").innerHTML = localStorage.getItem("rbc20");
     document.getElementById("rbc21").innerHTML = localStorage.getItem("rbc21");
 
-    document.getElementById("rbc01").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc1").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc02").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc2").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc03").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc3").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc04").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc4").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc05").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc5").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc06").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc6").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc07").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc7").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc08").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc8").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc09").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc9").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc010").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc10").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc011").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc11").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc012").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc12").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc013").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc13").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc014").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc14").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc015").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc15").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc016").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc16").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc017").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc17").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc018").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc18").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc019").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc19").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc020").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc20").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
-    document.getElementById("rbc021").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc21").replace("$", "").replace(",", "") / 50).toFixed(0)).toLocaleString();
+    document.getElementById("rbc01").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc1").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc02").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc2").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc03").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc3").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc04").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc4").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc05").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc5").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc06").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc6").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc07").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc7").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc08").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc8").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc09").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc9").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc010").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc10").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc011").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc11").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc012").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc12").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc013").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc13").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc014").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc14").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc015").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc15").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc016").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc16").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc017").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc17").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc018").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc18").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc019").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc19").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc020").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc20").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
+    document.getElementById("rbc021").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc21").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
 
   }
 
