@@ -58,7 +58,7 @@ auth.onAuthStateChanged(user => {
 						<hr>
 						${items[1].account} with ${items[1].balance}
 						<hr>
-						To get a copy of ${items[0].account} sent via email, logout of the site and login again via google or email or yahoo. 
+						To get a copy of ${items[0].account} & ${items[1].account} sent via email, logout of the site and login again via google or email or yahoo. 
 						It's optional for users who like to remain fully anonymous
 					`];
 					i++;
@@ -167,7 +167,7 @@ auth.onAuthStateChanged(user => {
 						<hr>
 						${items[2].account} with ${items[2].balance}
 						<hr>
-						To get a copy of ${items[0].account} sent via email, logout of the site and login again via google or email or yahoo. 
+						To get a copy of ${items[0].account} & ${items[1].account} & ${items[2].account} sent via email, logout of the site and login again via google or email or yahoo. 
 						It's optional for users who like to remain fully anonymous
 					`];
 					i++;
