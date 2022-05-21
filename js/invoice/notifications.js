@@ -163,7 +163,7 @@ auth.onAuthStateChanged(user => {
 						<hr>
 						${items[0].account} with ${items[0].balance} and, <br> 
 						<hr>
-						and ${items[1].account} with ${items[1].balance} and, <br>
+						${items[1].account} with ${items[1].balance} and, <br>
 						<hr>
 						${items[2].account} with ${items[2].balance}
 						<hr>
