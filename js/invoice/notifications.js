@@ -100,7 +100,9 @@ auth.onAuthStateChanged(user => {
 						Your anonymous account has insufficient balance to complete the download.
 						<hr>
 						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download <br>
-						${items[0].account} with ${items[0].balance}
+						${items[0].account} with ${items[0].balance} 
+						<hr>
+						If you'd like to get a copy of ${items[0].account} sent via email, login via email/google/yahoo.
 					`];
 					i++;
 					if (i === msgs.length) {
