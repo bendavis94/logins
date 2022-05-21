@@ -66,7 +66,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
 
 
 function fir98(event) {
-    var price = 'Price: $180';
+    var price = 'Price: $160';
     var balance = 'Balance: $2,824';
     var website = 'chase.com';
     var info1 = 'Username + Password';
@@ -826,6 +826,7 @@ function jaze38(event) {
     var account = 'Chase Bank [SAVINGS ACCOUNT]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
+
 
 function jaze39(event) {
     var price = 'Price: $1,862';
