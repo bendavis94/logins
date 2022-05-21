@@ -1312,6 +1312,7 @@ label.error{
 
 #email-inbox{
     color: white !important;
+    font-size: 17px !important;
 }
 
 #email-inbox span{
