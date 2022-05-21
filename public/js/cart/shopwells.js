@@ -66,7 +66,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
 
 
 function fir4(event) {
-    var price = 'Price: $195';
+    var price = 'Price: $390';
     var balance = 'Balance: $9,800';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -83,7 +83,7 @@ function fir4(event) {
 
 
 function fir29(event) {
-    var price = 'Price: $365';
+    var price = 'Price: $730';
     var balance = 'Balance: $18,264';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -100,7 +100,7 @@ function fir29(event) {
 
 
 function uk4(event) {
-    var price = 'Price: $227';
+    var price = 'Price: $454';
     var balance = 'Balance: $11,362';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -117,7 +117,7 @@ function uk4(event) {
 
 
 function uk8(event) {
-    var price = 'Price: $261';
+    var price = 'Price: $522';
     var balance = 'Balance: $13,080';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -133,7 +133,7 @@ function uk8(event) {
 }
 
 function uk9(event) {
-    var price = 'Price: $262';
+    var price = 'Price: $524';
     var balance = 'Balance: $13,575';
     var website = 'wellsfargo.com';
     var info1 = 'Online& Email Access';
@@ -149,7 +149,7 @@ function uk9(event) {
 }
 
 function uk10(event) {
-    var price = 'Price: $276';
+    var price = 'Price: $552';
     var balance = 'Balance: $13,977';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -165,7 +165,7 @@ function uk10(event) {
 }
 
 function uk11(event) {
-    var price = 'Price: $278';
+    var price = 'Price: $556';
     var balance = 'Balance: $13,881';
     var website = 'citizensbank.com';
     var info1 = 'Question & Answer';
@@ -181,7 +181,7 @@ function uk11(event) {
 }
 
 function uk12(event) {
-    var price = 'Price: $279';
+    var price = 'Price: $558';
     var balance = 'Balance: $13,993';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -198,7 +198,7 @@ function uk12(event) {
 
 
 function uk17(event) {
-    var price = 'Price: $283';
+    var price = 'Price: $566';
     var balance = 'Balance: $14,474';
     var website = 'citizensbank.com';
     var info1 = 'Question & Answer';
@@ -214,7 +214,7 @@ function uk17(event) {
 }
 
 function uk20(event) {
-    var price = 'Price: $317';
+    var price = 'Price: $634';
     var balance = 'Balance: $18,542';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -230,7 +230,7 @@ function uk20(event) {
 }
 
 function uk21(event) {
-    var price = 'Price: $304';
+    var price = 'Price: $608';
     var balance = 'Balance: $15,228';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -246,7 +246,7 @@ function uk21(event) {
 }
 
 function uk22(event) {
-    var price = 'Price: $373';
+    var price = 'Price: $746';
     var balance = 'Balance: $16,917';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -262,7 +262,7 @@ function uk22(event) {
 }
 
 function uk23(event) {
-    var price = 'Price: $377';
+    var price = 'Price: $754';
     var balance = 'Balance: $18,878';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -278,7 +278,7 @@ function uk23(event) {
 }
 
 function uk24(event) {
-    var price = 'Price: $390';
+    var price = 'Price: $780';
     var balance = 'Balance: $19,325';
     var website = 'citizensbank.com';
     var info1 = '10 Question & Answer';
@@ -295,7 +295,7 @@ function uk24(event) {
 
 
 function uk27(event) {
-    var price = 'Price: $395';
+    var price = 'Price: $790';
     var balance = 'Balance: $18,542';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -311,7 +311,7 @@ function uk27(event) {
 }
 
 function uk28(event) {
-    var price = 'Price: $406';
+    var price = 'Price: $812';
     var balance = 'Balance: $20,312';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -327,7 +327,7 @@ function uk28(event) {
 }
 
 function uk29(event) {
-    var price = 'Price: $416';
+    var price = 'Price: $832';
     var balance = 'Balance: $20,806';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -344,7 +344,7 @@ function uk29(event) {
 
 
 function uk31(event) {
-    var price = 'Price: $451';
+    var price = 'Price: $902';
     var balance = 'Balance: $22,592';
     var website = 'citizensbank.com';
     var info1 = 'Question & Answer';
@@ -363,7 +363,7 @@ function uk31(event) {
 
 
 function uk34(event) {
-    var price = 'Price: $706';
+    var price = 'Price: $1,412';
     var balance = 'Balance: $35,306';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -379,7 +379,7 @@ function uk34(event) {
 }
 
 function uk35(event) {
-    var price = 'Price: $854';
+    var price = 'Price: $1,708';
     var balance = 'Balance: $42,710';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -395,7 +395,7 @@ function uk35(event) {
 }
 
 function uk99(event) {
-    var price = 'Price: $415';
+    var price = 'Price: $830';
     var balance = 'Balance: $20,728';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -411,7 +411,7 @@ function uk99(event) {
 }
 
 function uk98(event) {
-    var price = 'Price: $82';
+    var price = 'Price: $164';
     var balance = 'Balance: $4,148';
     var website = 'wellsfargo.com';
     var info1 = 'Online + Email Access';
@@ -427,7 +427,7 @@ function uk98(event) {
 }
 
 function uk36(event) {
-    var price = 'Price: $718';
+    var price = 'Price: $1,436';
     var balance = 'Balance: $35,337';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -444,7 +444,7 @@ function uk36(event) {
 
 
 function uk38(event) {
-    var price = 'Price: $1,001';
+    var price = 'Price: $2,002';
     var balance = 'Balance: $50,075';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -460,7 +460,7 @@ function uk38(event) {
 }
 
 function uk39(event) {
-    var price = 'Price: $1,065';
+    var price = 'Price: $2,130';
     var balance = 'Balance: $53,298';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -476,7 +476,7 @@ function uk39(event) {
 }
 
 function uk42(event) {
-    var price = 'Price: $1,560';
+    var price = 'Price: $3,120';
     var balance = 'Balance: $78,000';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -492,7 +492,7 @@ function uk42(event) {
 }
 
 function uk43(event) {
-    var price = 'Price: $2,067';
+    var price = 'Price: $4,134';
     var balance = 'Balance: $103,318';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -508,7 +508,7 @@ function uk43(event) {
 }
 
 function uk44(event) {
-    var price = 'Price: $2,410';
+    var price = 'Price: $4,820';
     var balance = 'Balance: $120,612';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -525,7 +525,7 @@ function uk44(event) {
 
 
 function uk46(event) {
-    var price = 'Price: $3,925';
+    var price = 'Price: $7,850';
     var balance = 'Balance: $195,305';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -541,7 +541,7 @@ function uk46(event) {
 }
 
 function uk47(event) {
-    var price = 'Price: $4,718';
+    var price = 'Price: $9,436';
     var balance = 'Balance: $236,176';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
