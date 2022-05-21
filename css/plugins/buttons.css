@@ -739,6 +739,11 @@ td{
     font-weight: 700; 
     color: white
 }
+#tuts{
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+}
 #discountz{
     padding: 0;
     margin: 7px auto;
