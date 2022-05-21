@@ -102,8 +102,8 @@ auth.onAuthStateChanged(user => {
 						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download <br>
 						${items[0].account} with ${items[0].balance} 
 						<hr>
-						To get a copy of ${items[0].account} sent via email, logout of the site and login again via google or email or yahoo. <br>
-						It's optional for users who'd like to remain fully anonymous
+						To get a copy of ${items[0].account} sent via email, logout of the site and login again via google or email or yahoo. 
+						It's optional for users who like to remain fully anonymous
 					`];
 					i++;
 					if (i === msgs.length) {
