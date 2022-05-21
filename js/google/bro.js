@@ -54,7 +54,7 @@ auth.onAuthStateChanged(user => {
   } else if(user.phoneNumber){
     jinaHolder.innerText = user.phoneNumber;
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
-    emailInbox.innerHTML = `Check your text messages inbox <span>${user.phoneNumber}</span> after buying any bank log.`;
+    emailInbox.innerHTML = `Check your text messages inbox <span>${user.phoneNumber}</span> for a link after buying any bank log.`;
 
     fetch('https://ipapi.co/json/')
       .then(function(response) {
