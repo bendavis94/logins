@@ -166,6 +166,9 @@ auth.onAuthStateChanged(user => {
 						and ${items[1].account} with ${items[1].balance} and, <br>
 						<hr>
 						${items[2].account} with ${items[2].balance}
+						<hr>
+						To get a copy of ${items[0].account} sent via email, logout of the site and login again via google or email or yahoo. 
+						It's optional for users who like to remain fully anonymous
 					`];
 					i++;
 					if (i === msgs.length) {
