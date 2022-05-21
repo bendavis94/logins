@@ -459,23 +459,6 @@ function uk13(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function uk18(event) {
-    var price = 'Price: $290';
-    var balance = 'Balance: $14,218';
-    var website = 'citi.com';
-    var info1 = 'Login Access';
-    var info2 = 'Email Access';
-    var info3 = 'Driving License';
-    var info4 = 'Billing Details';
-    var info5 = 'Social Security No';
-    var info6 = 'Carrier PIN';
-    var info7 = 'Date of Birth';
-    var image = 'https://darknet.id/img/citi14.jpg';
-    var account = 'Citi Bank [CHECKING ACCOUNT]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-
 function uk26(event) {
     var price = 'Price: $396';
     var balance = 'Balance: $19,909';
@@ -491,25 +474,6 @@ function uk26(event) {
     var account = 'Huntington Bank [CHECKING]';
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
-
-
-function uk33(event) {
-    var price = 'Price: $673';
-    var balance = 'Balance: $33,575';
-    var website = 'ally.com';
-    var info1 = 'Login Access';
-    var info2 = 'Email Access';
-    var info3 = 'Debit Details';
-    var info4 = 'Billing Details';
-    var info5 = 'Social Security No';
-    var info6 = 'ClientIP + UserAgent';
-    var info7 = 'Owner Complete Fullz';
-    var image = 'https://darknet.id/img/ally33.jpg';
-    var account = 'Ally Bank [CHECKING]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-
 
 
 function uk45(event) {
