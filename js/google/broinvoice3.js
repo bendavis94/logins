@@ -10,10 +10,6 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   
-  var url = window.location.href;
-  url = url.split( '?' )[0];
-
-  window.location = url;
   
   const auth = firebase.auth();
   const logoHolder = document.getElementById("logo");
@@ -65,6 +61,11 @@ var firebaseConfig = {
     auth.signInWithEmailLink(email, window.location.href)
       .then((result) => {
         sendVerificationEmail();
+
+        var url = window.location.href;
+        url = url.split( '?' )[0];
+        window.location = url;
+        
         window.location.reload();
       })
       .catch((error) => {
