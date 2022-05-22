@@ -21,10 +21,60 @@ var firebaseConfig = {
   const signYahoo = document.getElementById("signYahoo");
   const signGithub = document.getElementById("signGithub");
 
+  const mailField = document.getElementById('exampleInputEmail');
+  const signUp = document.getElementById('signUp');
+
+
+
+  const sendVerificationEmail = () => {
+    auth.currentUser.sendEmailVerification()
+    .then(() => {
+        alert('Check Verification Link sent to your email');
+        window.location.reload()
+    })
+    .catch(error => {
+        console.error(error.message);
+    })
+  }
+  
+  const signUpFunction = () => {
+    event.preventDefault();
+    const email = mailField.value;
+    var actionCodeSettings = {
+        url: 'https://darknet.id',
+        handleCodeInApp: true,
+    };
+    auth.sendSignInLinkToEmail(email, actionCodeSettings)
+    .then(() => {
+        alert('Check your email ' + email + ' inbox for a verification link');
+        window.localStorage.setItem('emailForSignIn', email);
+    })
+    .catch(error => {
+        console.error(error.message);
+    });
+  }
+  signUp.addEventListener('click', signUpFunction);
+  document.getElementById('the-form').addEventListener('submit', signUpFunction);
+  
+  
+  if (auth.isSignInWithEmailLink(window.location.href)) {
+    var email = window.localStorage.getItem('emailForSignIn');
+    if (!email) {
+      email = window.prompt('Enter your email for confirmation');
+    }
+    auth.signInWithEmailLink(email, window.location.href)
+      .then((result) => {
+        sendVerificationEmail();
+      })
+      .catch((error) => {
+        alert('Wrong email entered')
+      });
+  }
+
   const signInWithGoogle = () => {
     const googleProvider = new firebase.auth.GoogleAuthProvider;
     auth.signInWithPopup(googleProvider).then(() => {
-      window.location.reload();
+      sendVerificationEmail();
     }).catch(error => {
       alert(error.message);
     })
@@ -34,7 +84,7 @@ var firebaseConfig = {
   const signInWithGithub = () => {
     const githubProvider = new firebase.auth.GithubAuthProvider;
     auth.signInWithPopup(githubProvider).then(() => {
-      window.location.reload();
+      sendVerificationEmail();
     }).catch(error => {
       alert(error.message);
     })
@@ -44,7 +94,7 @@ var firebaseConfig = {
   const signInWithYahoo = () => {
     const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
     auth.signInWithPopup(yahooProvider).then(() => {
-      window.location.reload();
+      sendVerificationEmail();
     }).catch(error => {
       alert(error.message);
     })
@@ -54,7 +104,7 @@ var firebaseConfig = {
   
   auth.onAuthStateChanged(user => {
     if (!user) {
-      // window.location.assign("index");
+      window.location.assign("index");
     }
     if (user.photoURL) {
       logoHolder.setAttribute("src", user.photoURL);
