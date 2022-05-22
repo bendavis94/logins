@@ -20,7 +20,6 @@ var firebaseConfig = {
 
   const signGoogle = document.getElementById("signGoogle");
   const signYahoo = document.getElementById("signYahoo");
-  const signGithub = document.getElementById("signGithub");
   const mailField = document.getElementById('exampleInputEmail');
   const signUp = document.getElementById('signUp');
 
@@ -79,17 +78,6 @@ var firebaseConfig = {
     })
   };
   signGoogle.addEventListener("click", signInWithGoogle);
-  
-  const signInWithGithub = () => {
-    const githubProvider = new firebase.auth.GithubAuthProvider;
-    auth.signInWithPopup(githubProvider).then(() => {
-      sendVerificationEmail();
-      window.location.reload()
-    }).catch(error => {
-      alert(error.message);
-    })
-  };
-  signGithub.addEventListener("click", signInWithGithub);
 
   const signInWithYahoo = () => {
     const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
