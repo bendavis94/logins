@@ -25,9 +25,6 @@ var firebaseConfig = {
     const googleProvider = new firebase.auth.GoogleAuthProvider;
     auth.signInWithPopup(googleProvider).then(() => {
       document.getElementById('theSign').style.display = 'none';
-      auth.onAuthStateChanged(user => {
-        console.log(user)
-      });
     }).catch(error => {
       console.error(error.message);
     })
@@ -38,9 +35,6 @@ var firebaseConfig = {
     const githubProvider = new firebase.auth.GithubAuthProvider;
     auth.signInWithPopup(githubProvider).then(() => {
       document.getElementById('theSign').style.display = 'none';
-      auth.onAuthStateChanged(user => {
-        console.log(user)
-      });
     }).catch(error => {
       console.error(error.message);
     })
@@ -51,9 +45,6 @@ var firebaseConfig = {
     const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
     auth.signInWithPopup(yahooProvider).then(() => {
       document.getElementById('theSign').style.display = 'none';
-      auth.onAuthStateChanged(user => {
-        console.log(user)
-      });
     }).catch(error => {
       console.error(error.message);
     })
@@ -89,7 +80,11 @@ var firebaseConfig = {
       jinaHolder.innerText = 'Anonymous';
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'User ID: ' + user.uid;
-    } 
+    } else if(user.isAnonymous && user.email){
+      user.updateProfile({
+        isAnonymous: false
+    })
+    }
   });
   
   fetch('https://ipapi.co/json/')
