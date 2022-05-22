@@ -47,7 +47,7 @@ auth.onAuthStateChanged(user => {
 					}
 					return msgs[i];
 				}
-			} else if(user.isAnonymous){
+			} else if(user.isAnonymous || user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
 						Your anonymous account has insufficient balance to complete the download.
