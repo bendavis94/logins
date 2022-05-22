@@ -567,6 +567,9 @@ a:hover,a:active{
 	 font-size: 15px;
 	 font-weight: 500;
 }
+.border{
+	border-color: rgba(22, 160, 134,0.3) !important;
+}
  .border p:first-child{
 	 font-size: 34px;
 	 font-weight: 700;
