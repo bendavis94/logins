@@ -19,7 +19,7 @@ const auth = firebase.auth();
 
 auth.onAuthStateChanged(user => {
   if (!user) {
-    window.location.assign("index");
+    // window.location.assign("index");
   }
   if (user.photoURL) {
     logoHolder.setAttribute("src", user.photoURL);
@@ -51,7 +51,7 @@ fetch('https://ipapi.co/json/')
   return response.json();
 })
 .then(function(data) {
-  document.getElementById('footer-email').innerHTML = `Your IP address is: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
+  document.getElementById('footer-email').innerHTML = `Your IP: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
 });
 
 document.getElementById("thebodyz").oncontextmenu = function() {
