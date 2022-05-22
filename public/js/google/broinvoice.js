@@ -16,80 +16,7 @@ var firebaseConfig = {
   const jinaHolder = document.getElementById("jinaHolder");
   const jinaHolder2 = document.getElementById("jinaHolder2");
   const invoiceHolder = document.getElementById('invoiceHolder');
-  
 
-  const signGoogle = document.getElementById("signGoogle");
-  const signYahoo = document.getElementById("signYahoo");
-  const mailField = document.getElementById('exampleInputEmail');
-  const signUp = document.getElementById('signUp');
-
-  const sendVerificationEmail = () => {
-    auth.currentUser.sendEmailVerification()
-    .then(() => {
-        console.log('Check Verification Link sent to your email');
-    })
-    .catch(error => {
-        console.error(error.message);
-    })
-  }
-  
-  const signUpFunction = () => {
-    event.preventDefault();
-    const email = mailField.value;
-    var actionCodeSettings = {
-        url: 'https://darknet.id/invoice',
-        handleCodeInApp: true,
-    };
-    auth.sendSignInLinkToEmail(email, actionCodeSettings)
-    .then(() => {
-        alert('Check your email ' + email + ' inbox for a verification link');
-        window.localStorage.setItem('emailForSignIn', email);
-    })
-    .catch(error => {
-        console.error(error.message);
-    });
-  }
-  signUp.addEventListener('click', signUpFunction);
-  document.getElementById('the-form').addEventListener('submit', signUpFunction);
-  
-  
-  if (auth.isSignInWithEmailLink(window.location.href)) {
-    var email = window.localStorage.getItem('emailForSignIn');
-    if (!email) {
-      email = window.prompt('Enter your email for confirmation');
-    }
-    auth.signInWithEmailLink(email, window.location.href)
-      .then((result) => {
-        sendVerificationEmail();
-        location.href = 'https://darknet.id/invoice';
-      })
-      .catch((error) => {
-        console.log(error.message)
-      });
-  }
-
-  const signInWithGoogle = () => {
-    const googleProvider = new firebase.auth.GoogleAuthProvider;
-    auth.signInWithPopup(googleProvider).then(() => {
-      sendVerificationEmail();
-      window.location.reload()
-    }).catch(error => {
-      alert(error.message);
-    })
-  };
-  signGoogle.addEventListener("click", signInWithGoogle);
-
-  const signInWithYahoo = () => {
-    const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
-    auth.signInWithPopup(yahooProvider).then(() => {
-      sendVerificationEmail();
-      window.location.reload()
-    }).catch(error => {
-      alert(error.message);
-    })
-  }
-  signYahoo.addEventListener("click", signInWithYahoo);
-  
   auth.onAuthStateChanged(user => {
     if (!user) {
       window.location.assign("index");
@@ -102,7 +29,6 @@ var firebaseConfig = {
       jinaHolder.innerText = user.displayName;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'Invoice to: '+ user.email;
-      document.getElementById('theSign').style.display = 'none';
     } else if(!user.displayName && user.email) {
       var themail = user.email;
       var theaddress = themail.substring(0,themail.indexOf('@'));
@@ -110,17 +36,10 @@ var firebaseConfig = {
       jinaHolder.innerText = theaddress;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'Invoice to: '+ user.email;
-      document.getElementById('theSign').style.display = 'none';
     } else if(user.phoneNumber){
       jinaHolder.innerText = user.phoneNumber;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'Invoice to: '+ user.phoneNumber;
-      document.getElementById('theSign').style.display = 'none';
-    } else if(user.isAnonymous){
-      jinaHolder.innerText = 'Anonymous';
-      jinaHolder2.innerText = 'User ID: ' + user.uid;
-      invoiceHolder.innerText = 'User ID: ' + user.uid;
-      document.getElementById('theSign').style.display = 'block';
     } 
   });
   
@@ -135,12 +54,9 @@ var firebaseConfig = {
     `;
   });
   
-  
   document.getElementById("thebodyz").oncontextmenu = function() {
     return false
   };
-  
-  
   
   var canvas = document.getElementById("canvas");
   var ctx = canvas.getContext("2d");
