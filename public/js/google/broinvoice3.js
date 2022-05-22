@@ -9,7 +9,7 @@ var firebaseConfig = {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-
+  
   const auth = firebase.auth();
   const logoHolder = document.getElementById("logo");
   const jinaHolder = document.getElementById("jinaHolder");
@@ -60,10 +60,7 @@ var firebaseConfig = {
     auth.signInWithEmailLink(email, window.location.href)
       .then((result) => {
         sendVerificationEmail();
-
-        location.href = 'https://darknet.id/invoice2'
-      
-        window.location.reload();
+        location.href = 'https://darknet.id/invoice3';
       })
       .catch((error) => {
         console.log(error.message)
