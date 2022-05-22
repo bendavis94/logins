@@ -1,7 +1,7 @@
+const auth2 = firebase.auth();
 
 
-
-auth.onAuthStateChanged(user => {
+auth2.onAuthStateChanged(user => {
 	// "use strict";
 	var toast = localStorage.getItem('banktotal')
 	let ws = new WebSocket('wss://stream.binance.com:9443/ws/btcusdt@kline_1h');
