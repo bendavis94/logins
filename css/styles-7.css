@@ -875,6 +875,7 @@ a:hover,a:active{
  .invoicebutton:hover {
 	 -webkit-box-shadow:0 5px 10px 0 #49c0d0;
 	 box-shadow:0 5px 10px 0 #49c0d0;
+	 text-transform: uppercase !important;
 }
  .service-box:hover {
 	 transform: scale(1.02);
