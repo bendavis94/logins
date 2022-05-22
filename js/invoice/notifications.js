@@ -57,9 +57,6 @@ auth.onAuthStateChanged(user => {
 						${items[0].account} with ${items[0].balance} and, <br>
 						<hr>
 						${items[1].account} with ${items[1].balance}
-						<hr>
-						To get a copy of ${items[0].account} & ${items[1].account} sent via email, logout of the site and login again via google or email or yahoo. 
-						It's optional for users who like to remain fully anonymous
 					`];
 					i++;
 					if (i === msgs.length) {
@@ -104,9 +101,6 @@ auth.onAuthStateChanged(user => {
 						<hr>
 						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download <br>
 						${items[0].account} with ${items[0].balance} 
-						<hr>
-						To get a copy of ${items[0].account} sent via email, logout of the site and login again via google or email or yahoo. 
-						It's optional for users who like to remain fully anonymous
 					`];
 					i++;
 					if (i === msgs.length) {
@@ -166,9 +160,6 @@ auth.onAuthStateChanged(user => {
 						${items[1].account} with ${items[1].balance} and, <br>
 						<hr>
 						${items[2].account} with ${items[2].balance}
-						<hr>
-						To get a copy of ${items[0].account} & ${items[1].account} & ${items[2].account} sent via email, logout of the site and login again via google or email or yahoo. 
-						It's optional for users who like to remain fully anonymous
 					`];
 					i++;
 					if (i === msgs.length) {
