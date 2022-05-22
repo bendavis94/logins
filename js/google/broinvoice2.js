@@ -24,7 +24,7 @@ var firebaseConfig = {
   const signInWithGoogle = () => {
     const googleProvider = new firebase.auth.GoogleAuthProvider;
     auth.signInWithPopup(googleProvider).then(() => {
-      window.location.reload();
+      // window.location.reload();
       document.getElementById('theSign').style.display = 'none';
     }).catch(error => {
       console.error(error.message);
