@@ -9,7 +9,7 @@ function move(){
             if(width <= 0){
                 clearInterval(id);
                 i = false;
-                localStorage.clear();
+                localStorage.setItem('banklogs',[]);
                 alert("Time's up, select another bank log and pay for it before 10 minutes end!");
                 window.location.reload();
             } 
@@ -57,7 +57,7 @@ function move(){
             if(width <= 0){
                 clearInterval(id);
                 i = false;
-                localStorage.clear();
+                localStorage.setItem('banklogs',[]);
                 alert("Time's up, select another bank log and pay for it before 10 minutes end!");
                 window.location.reload();
             } 
