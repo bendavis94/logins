@@ -167,7 +167,7 @@ auth.onAuthStateChanged(user => {
 						<hr>
 						${items[2].account} with ${items[2].balance}
 						<hr>
-						To get a copy of ${items[0].account} & ${items[1].account} sent via email, scroll down to the bottom of this page and merge your anonymous login with google / email or yahoo. 
+						To get a copy of ${items[0].account} & ${items[1].account} & ${items[2].account} sent via email, scroll down to the bottom of this page and merge your anonymous login with google / email or yahoo. 
 						It's optional for users who like to remain fully anonymous
 					`];
 					i++;
