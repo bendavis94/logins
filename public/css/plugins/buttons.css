@@ -1391,6 +1391,9 @@ label.error{
     background: #121d33 !important;
 }
 
+.invoicebutton{
+	text-transform: uppercase !important;
+}
 
 
 
