@@ -9,7 +9,6 @@ var firebaseConfig = {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  
 
   const auth = firebase.auth();
   const logoHolder = document.getElementById("logo");
@@ -61,7 +60,12 @@ var firebaseConfig = {
     auth.signInWithEmailLink(email, window.location.href)
       .then((result) => {
         sendVerificationEmail();
-        location.replace("https://darknet.id/invoice3")
+
+        if(location.href == 'https://darknet.id/invoice3'){
+          console.log('Yes it is')
+        } else {
+          location.href = 'https://darknet.id/invoice3'
+        }
         window.location.reload();
       })
       .catch((error) => {
@@ -105,7 +109,7 @@ var firebaseConfig = {
   
   auth.onAuthStateChanged(user => {
     if (!user) {
-      window.location.assign("index");
+      // window.location.assign("index");
     }
     if (user.photoURL) {
       logoHolder.setAttribute("src", user.photoURL);
