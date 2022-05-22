@@ -115,7 +115,7 @@ var firebaseConfig = {
       jinaHolder.innerText = user.phoneNumber;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'Invoice to: '+ user.phoneNumber;
-      document.getElementById('theSign').style.display = 'block';
+      document.getElementById('theSign').style.display = 'none';
     } else if(user.isAnonymous){
       jinaHolder.innerText = 'Anonymous';
       jinaHolder2.innerText = 'User ID: ' + user.uid;
