@@ -16,11 +16,33 @@ var firebaseConfig = {
   const jinaHolder = document.getElementById("jinaHolder");
   const jinaHolder2 = document.getElementById("jinaHolder2");
   const invoiceHolder = document.getElementById('invoiceHolder');
+
+  const mergeGoogle = document.getElementById("mergeGoogle");
+  const mergeYahoo = document.getElementById("mergeYahoo");
+  const mergeGithub = document.getElementById("mergeGithub");
+
+  const signInWithGoogle = () => {
+    const googleProvider = new firebase.auth.GoogleAuthProvider;
+    auth.signInWithPopup(googleProvider)
+  };
+  signGoogle.addEventListener("click", signInWithGoogle);
+  
+  const signInWithGithub = () => {
+    const githubProvider = new firebase.auth.GithubAuthProvider;
+    auth.signInWithPopup(githubProvider)
+  };
+  signGithub.addEventListener("click", signInWithGithub);
+
+  const signInWithYahoo = () => {
+    const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
+    auth.signInWithPopup(yahooProvider)
+  }
+  signYahoo.addEventListener("click", signInWithYahoo);
   
   
   auth.onAuthStateChanged(user => {
     if (!user) {
-    //   window.location.assign("index");
+      window.location.assign("index");
     }
     if (user.photoURL) {
       logoHolder.setAttribute("src", user.photoURL);
