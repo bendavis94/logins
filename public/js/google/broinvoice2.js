@@ -30,7 +30,6 @@ var firebaseConfig = {
     auth.currentUser.sendEmailVerification()
     .then(() => {
         alert('Check Verification Link sent to your email');
-        window.location.reload()
     })
     .catch(error => {
         console.error(error.message);
@@ -75,6 +74,7 @@ var firebaseConfig = {
     const googleProvider = new firebase.auth.GoogleAuthProvider;
     auth.signInWithPopup(googleProvider).then(() => {
       sendVerificationEmail();
+      window.location.reload()
     }).catch(error => {
       alert(error.message);
     })
@@ -85,6 +85,7 @@ var firebaseConfig = {
     const githubProvider = new firebase.auth.GithubAuthProvider;
     auth.signInWithPopup(githubProvider).then(() => {
       sendVerificationEmail();
+      window.location.reload()
     }).catch(error => {
       alert(error.message);
     })
@@ -95,6 +96,7 @@ var firebaseConfig = {
     const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
     auth.signInWithPopup(yahooProvider).then(() => {
       sendVerificationEmail();
+      window.location.reload()
     }).catch(error => {
       alert(error.message);
     })
