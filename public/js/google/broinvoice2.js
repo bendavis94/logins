@@ -29,7 +29,7 @@ var firebaseConfig = {
   const sendVerificationEmail = () => {
     auth.currentUser.sendEmailVerification()
     .then(() => {
-        alert('Check Verification Link sent to your email');
+        console.log('Check Verification Link sent to your email');
     })
     .catch(error => {
         console.error(error.message);
