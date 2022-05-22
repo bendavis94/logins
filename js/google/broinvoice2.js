@@ -83,7 +83,7 @@ var firebaseConfig = {
     } else if(user.isAnonymous && user.email){
       user.updateProfile({
         isAnonymous: false
-    })
+      })
     }
   });
   
