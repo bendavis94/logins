@@ -2,7 +2,6 @@ const mailField = document.getElementById('exampleInputEmail');
 const signUp = document.getElementById('signUp');
 const signGoogle = document.getElementById("signGoogle");
 const signYahoo = document.getElementById("signYahoo");
-const signAnony = document.getElementById("signAnony");
 
 const phoneNumberField = document.getElementById('phoneNumber');
 const codeField = document.getElementById('code');
@@ -60,7 +59,7 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
   }
   auth.signInWithEmailLink(email, window.location.href)
     .then((result) => {
-      window.location.assign('chime');
+      window.location.assign('home');
       sendVerificationEmail();
     })
     .catch((error) => {
@@ -68,25 +67,27 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
     });
 }
 
-const signInAnony = () => {
-  auth.signInAnonymously().then(() => {
-    window.location.assign('chime');
-  }).catch(error => {
-    console.error(error.message)
-  });
-};
-signAnony.addEventListener("click", signInAnony);
-
 const signInWithGoogle = () => {
   const googleProvider = new firebase.auth.GoogleAuthProvider;
   auth.signInWithPopup(googleProvider).then(() => {
     sendVerificationEmail();
-    window.location.assign('chime');
+    window.location.assign('home');
   }).catch(error => {
     console.error(error.message)
   });
 };
 signGoogle.addEventListener("click", signInWithGoogle);
+
+const signInWithGithub = () => {
+  const githubProvider = new firebase.auth.GithubAuthProvider;
+  auth.signInWithPopup(githubProvider).then(() => {
+    sendVerificationEmail();
+    window.location.assign('home');
+  }).catch(error => {
+    console.error(error.message)
+  });
+};
+signGithub.addEventListener("click", signInWithGithub);
 
 
 
@@ -109,7 +110,7 @@ const code = codeField.value;
 const credential = firebase.auth.PhoneAuthProvider.credential(sentCodeId, code);
 auth.signInWithCredential(credential)
     .then(() => {
-        window.location.assign('chime');
+        window.location.assign('home');
     })
     .catch(error => {
         console.error(error.message);
@@ -122,7 +123,7 @@ const signInWithYahoo = () => {
   const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
   auth.signInWithPopup(yahooProvider).then(() => {
     sendVerificationEmail();
-    window.location.assign('chime');
+    window.location.assign('home');
   }).catch(error => {
     console.error(error.message);
   })
@@ -131,7 +132,7 @@ signYahoo.addEventListener("click", signInWithYahoo);
 
 auth.onAuthStateChanged(user => {
   if (user) {
-    window.location.assign('chime');
+    window.location.assign('home');
   } 
 });
 

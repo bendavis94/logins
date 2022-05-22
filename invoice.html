@@ -622,37 +622,6 @@ id="predat" style="padding: 10px; height: 90vh; display: none;">
 </section>
 
 
-<section class="bg-img bg-animate" id="theSign" data-background="images/home12.jpg" style="padding: 0 0 32px 0 !important; margin: 0 !important; display: none;">
-    <div class="container-fluid">
-        <div class="row no-margin-bottom">
-
-            <div class="col-lg-6 center-col" style="margin-top: 0 !important;">
-                <div class="bg-black padding-20px-all sm-padding-20px-all border border-width-5">
-                    <div class="text-center section-heading">
-                        <h4 style="color: #fff; font-size: 20px !important;">
-                            To get bank logs sent via email, merge your anonymous login with an email account.
-                        </h4>
-                        <button class="butn medium" id="signGoogle">
-                            Merge with Google <img style="height: 25px;" src="img/svg/google.svg">
-                        </button>
-                        <hr>
-                        <button class="butn medium" id="signEmail" data-toggle="modal" data-target="#loginModal">
-                            Merge with Email <img style="height: 25px;" src="img/svg/mail.svg">
-                        </button>
-                        <hr>
-                        <button class="butn medium" id="signYahoo">
-                            Merge with Yahoo <img style="height: 25px;" src="img/svg/yahoo.jpg">
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
 <!-- start projet ection -->
 <section class="bg-img bg-animate" data-background="images/home12.jpg" 
 id="predat2" style="padding: 10px; height: 90vh; display: none;">
@@ -729,40 +698,6 @@ id="predat2" style="padding: 10px; height: 90vh; display: none;">
 <a href="javascript:void(0)" class="scroll-to-top infinite-floating">
     <i class="fas fa-angle-up"></i>
 </a>
-
-
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content"  style="background: #fff !important">
-            <div class="modal-header">
-                <div class="section-heading">
-                    <h4 style="color: #121d33 !important;">
-                        Merge with Email
-                    </h4>
-                    <p id="link-p">
-                        A verification link will be sent to the email you input below 👇🏼.
-                        Click on that link to login to the website
-                    </p>
-                </div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <img src="img/svg/failure.svg" style="width: 45px !important;">
-                </button>
-            </div>
-            <div class="modal-body" style="padding: 0; background: #fff !important;">
-                <form id="the-form">
-                    <div class="form-group col-md-12">
-                        <input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter email" required>
-                    </div>
-                    <li class="next">
-                        <button type="submit" class="butn medium" id="signUp" data-dismiss="modal">
-                            Get Verification Link
-                        </button>
-                    </li>
-                </form>
-            </div>
-        </div>
-    </div>   
-</div>
 
     <script>
         if(localStorage.getItem('received-funds')){

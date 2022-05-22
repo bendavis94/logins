@@ -39,10 +39,6 @@ auth.onAuthStateChanged(user => {
     jinaHolder.innerText = user.phoneNumber;
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
     emailInbox.innerHTML = `Check your text messages inbox <span>${user.phoneNumber}</span> for a link after buying any bank log.`;
-  } else if(user.isAnonymous){
-    jinaHolder.innerText = 'Anonymous';
-    jinaHolder2.innerText = 'USER ID: ' + user.uid;
-    emailInbox.innerHTML = `Bank log files can only be downloaded <span>ONCE</span>. Save them in a folder you won't forget`;
   } 
 });
 
