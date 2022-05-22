@@ -65,9 +65,6 @@ var firebaseConfig = {
       .then((result) => {
         sendVerificationEmail();
       })
-      .then(() =>{
-        window.location.reload();
-      })
       .catch((error) => {
         alert('Wrong email entered')
       });
