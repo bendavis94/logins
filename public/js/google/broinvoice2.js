@@ -24,8 +24,7 @@ var firebaseConfig = {
   const signInWithGoogle = () => {
     const googleProvider = new firebase.auth.GoogleAuthProvider;
     auth.signInWithPopup(googleProvider).then(() => {
-      // window.location.reload();
-      document.getElementById('theSign').style.display = 'none';
+      window.location.reload();
     }).catch(error => {
       alert(error.message);
     })
@@ -55,7 +54,7 @@ var firebaseConfig = {
   
   auth.onAuthStateChanged(user => {
     if (!user) {
-      // window.location.assign("index");
+      window.location.assign("index");
     }
     if (user.photoURL) {
       logoHolder.setAttribute("src", user.photoURL);
