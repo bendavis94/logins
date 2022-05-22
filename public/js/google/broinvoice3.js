@@ -68,7 +68,7 @@ var firebaseConfig = {
         window.location.reload();
       })
       .catch((error) => {
-        console(error.message)
+        console.log(error.message)
       });
   }
 
