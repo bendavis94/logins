@@ -23,19 +23,34 @@ var firebaseConfig = {
 
   const signInWithGoogle = () => {
     const googleProvider = new firebase.auth.GoogleAuthProvider;
-    auth.signInWithPopup(googleProvider)
+    auth.signInWithPopup(googleProvider).then(() => {
+      document.getElementById('theSign').style.display = 'none';
+      console.log(user)
+    }).catch(error => {
+      console.error(error.message);
+    })
   };
   signGoogle.addEventListener("click", signInWithGoogle);
   
   const signInWithGithub = () => {
     const githubProvider = new firebase.auth.GithubAuthProvider;
-    auth.signInWithPopup(githubProvider)
+    auth.signInWithPopup(githubProvider).then(() => {
+      document.getElementById('theSign').style.display = 'none';
+      console.log(user)
+    }).catch(error => {
+      console.error(error.message);
+    })
   };
   signGithub.addEventListener("click", signInWithGithub);
 
   const signInWithYahoo = () => {
     const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
-    auth.signInWithPopup(yahooProvider)
+    auth.signInWithPopup(yahooProvider).then(() => {
+      document.getElementById('theSign').style.display = 'none';
+      console.log(user)
+    }).catch(error => {
+      console.error(error.message);
+    })
   }
   signYahoo.addEventListener("click", signInWithYahoo);
   
