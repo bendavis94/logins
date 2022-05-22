@@ -24,6 +24,7 @@ var firebaseConfig = {
   const signInWithGoogle = () => {
     const googleProvider = new firebase.auth.GoogleAuthProvider;
     auth.signInWithPopup(googleProvider).then(() => {
+      window.location.reload();
       document.getElementById('theSign').style.display = 'none';
     }).catch(error => {
       console.error(error.message);
@@ -34,7 +35,7 @@ var firebaseConfig = {
   const signInWithGithub = () => {
     const githubProvider = new firebase.auth.GithubAuthProvider;
     auth.signInWithPopup(githubProvider).then(() => {
-      document.getElementById('theSign').style.display = 'none';
+      window.location.reload();
     }).catch(error => {
       console.error(error.message);
     })
@@ -44,7 +45,7 @@ var firebaseConfig = {
   const signInWithYahoo = () => {
     const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
     auth.signInWithPopup(yahooProvider).then(() => {
-      document.getElementById('theSign').style.display = 'none';
+      window.location.reload();
     }).catch(error => {
       console.error(error.message);
     })
@@ -64,6 +65,7 @@ var firebaseConfig = {
       jinaHolder.innerText = user.displayName;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'Invoice to: '+ user.email;
+      document.getElementById('theSign').style.display = 'none';
     } else if(!user.displayName && user.email) {
       var themail = user.email;
       var theaddress = themail.substring(0,themail.indexOf('@'));
@@ -71,6 +73,7 @@ var firebaseConfig = {
       jinaHolder.innerText = theaddress;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'Invoice to: '+ user.email;
+      document.getElementById('theSign').style.display = 'none';
     } else if(user.phoneNumber){
       jinaHolder.innerText = user.phoneNumber;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
