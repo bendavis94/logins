@@ -17,9 +17,9 @@ var firebaseConfig = {
   const jinaHolder2 = document.getElementById("jinaHolder2");
   const invoiceHolder = document.getElementById('invoiceHolder');
 
-  const mergeGoogle = document.getElementById("mergeGoogle");
-  const mergeYahoo = document.getElementById("mergeYahoo");
-  const mergeGithub = document.getElementById("mergeGithub");
+  const signGoogle = document.getElementById("signGoogle");
+  const signYahoo = document.getElementById("signYahoo");
+  const signGithub = document.getElementById("signGithub");
 
   const signInWithGoogle = () => {
     const googleProvider = new firebase.auth.GoogleAuthProvider;
