@@ -10,10 +10,7 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   
-  var url = window.location.href;
-  url = url.split( '?' )[0];
-  window.location = url;
-  
+
   const auth = firebase.auth();
   const logoHolder = document.getElementById("logo");
   const jinaHolder = document.getElementById("jinaHolder");
