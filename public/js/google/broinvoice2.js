@@ -41,7 +41,7 @@ var firebaseConfig = {
     event.preventDefault();
     const email = mailField.value;
     var actionCodeSettings = {
-        url: 'https://darknet.id',
+        url: 'https://darknet.id/invoice2',
         handleCodeInApp: true,
     };
     auth.sendSignInLinkToEmail(email, actionCodeSettings)
