@@ -16,6 +16,7 @@ var firebaseConfig = {
   const jinaHolder = document.getElementById("jinaHolder");
   const jinaHolder2 = document.getElementById("jinaHolder2");
   const invoiceHolder = document.getElementById('invoiceHolder');
+  
 
   const signGoogle = document.getElementById("signGoogle");
   const signYahoo = document.getElementById("signYahoo");
@@ -37,7 +38,7 @@ var firebaseConfig = {
     event.preventDefault();
     const email = mailField.value;
     var actionCodeSettings = {
-        url: 'https://darknet.id/invoice3',
+        url: 'https://darknet.id/invoice7',
         handleCodeInApp: true,
     };
     auth.sendSignInLinkToEmail(email, actionCodeSettings)
@@ -61,10 +62,10 @@ var firebaseConfig = {
     auth.signInWithEmailLink(email, window.location.href)
       .then((result) => {
         sendVerificationEmail();
-        window.location.reload();
+        location.href = 'https://darknet.id/invoice7';
       })
       .catch((error) => {
-        console(error.message)
+        console.log(error.message)
       });
   }
 
@@ -100,7 +101,6 @@ var firebaseConfig = {
     })
   }
   signYahoo.addEventListener("click", signInWithYahoo);
-  
   
   auth.onAuthStateChanged(user => {
     if (!user) {
