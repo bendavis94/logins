@@ -42,7 +42,7 @@ auth.onAuthStateChanged(user => {
   } else if(user.isAnonymous){
     jinaHolder.innerText = 'Anonymous';
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
-    emailInbox.innerHTML = `Bank log files can only be downloaded <span>ONCE<span>. Save them in a folder you won't forget`;
+    emailInbox.innerHTML = `Bank log files can only be downloaded <span>ONCE</span>. Save them in a folder you won't forget`;
   } 
 });
 
