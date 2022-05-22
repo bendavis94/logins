@@ -1382,13 +1382,15 @@ label.error{
 #signGoogle, #signYahoo, #signGithub, #signEmail{
     margin: 7px 0 !important;
     background: yellow !important;
+    font-weight: 700 !important;
+    font-size: 20px !important;
     border: 1.5px solid gold !important;
     color: #121d33 !important;
 }
 
 #signGoogle:hover, #signYahoo:hover, #signGithub:hover, #signEmail:hover{
-    color: #fff !important;
-    background: #121d33 !important;
+    color: #121d33 !important;
+    background: #fff !important;
 }
 
 .invoicebutton{
@@ -1399,6 +1401,7 @@ label.error{
     background: lime !important;
     border: 1px solid limegreen !important;
     color: #121d33 !important;
+    font-weight: 700 !important;
 }
 #exampleInputEmail{
 	border-radius: 1px !important;
@@ -1411,7 +1414,11 @@ label.error{
 #exampleInputEmail:focus{
     text-align: left !important;
 }
-
+#link-p{
+	color: #121d33 !important;
+	font-size: 16px !important;
+	font-family: "Montserrat", sans-serif;
+}
 
 #the-form .next{
 	margin: 10px auto !important; 
@@ -1420,7 +1427,14 @@ label.error{
 }
 
 
-
+#loginModal{
+    top:7vh;
+ }
+ @media (max-width:768px){
+    #loginModal{
+        top: 14vh;
+    }
+ }
 
 
 
