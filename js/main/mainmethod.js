@@ -9,7 +9,7 @@
                     revslider_showDoubleJqueryError(".countdown");
                 } else {
                     countdown = tpj(".countdown").show().countdown({
-                        date: "01 June 2022 00:01:00",
+                        date: "30 June 2022 00:01:00",
                         format: "on"
                     });
                 }
