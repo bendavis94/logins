@@ -1379,14 +1379,14 @@ label.error{
     text-transform: capitalize !important;
 }
 
-#signGoogle, #signYahoo, #signGithub{
+#signGoogle, #signYahoo, #signGithub, #signEmail{
     margin: 7px 0 !important;
     background: yellow !important;
     border: 1.5px solid gold !important;
     color: #121d33 !important;
 }
 
-#signGoogle:hover, #signYahoo:hover, #signGithub:hover{
+#signGoogle:hover, #signYahoo:hover, #signGithub:hover, #signEmail:hover{
     color: #fff !important;
     background: #121d33 !important;
 }
@@ -1395,7 +1395,17 @@ label.error{
 	text-transform: uppercase !important;
 }
 
-
+#signUp{
+    background: lime !important;
+    border: 1px solid limegreen !important;
+    color: #121d33 !important;
+}
+#exampleInputEmail{
+	border-radius: 1px !important;
+	outline:0;
+	font-size: 20px !important;
+	box-shadow:0 0 0 .1rem rgba(0,123,255,.25)
+}
 
 
 
