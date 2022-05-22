@@ -105,7 +105,7 @@ auth.onAuthStateChanged(user => {
 						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download <br>
 						${items[0].account} with ${items[0].balance} 
 						<hr>
-						To get a copy of ${items[0].account} sent via email, scroll down to the bottom of this page and link an email. 
+						To get this bank log sent via email, scroll down to the bottom of this page and link an email. 
 						It's optional for users who like to remain fully anonymous
 					`];
 					i++;
