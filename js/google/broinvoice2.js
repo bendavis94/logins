@@ -27,7 +27,7 @@ var firebaseConfig = {
       // window.location.reload();
       document.getElementById('theSign').style.display = 'none';
     }).catch(error => {
-      console.error(error.message);
+      alert(error.message);
     })
   };
   signGoogle.addEventListener("click", signInWithGoogle);
@@ -37,7 +37,7 @@ var firebaseConfig = {
     auth.signInWithPopup(githubProvider).then(() => {
       window.location.reload();
     }).catch(error => {
-      console.error(error.message);
+      alert(error.message);
     })
   };
   signGithub.addEventListener("click", signInWithGithub);
@@ -47,7 +47,7 @@ var firebaseConfig = {
     auth.signInWithPopup(yahooProvider).then(() => {
       window.location.reload();
     }).catch(error => {
-      console.error(error.message);
+      alert(error.message);
     })
   }
   signYahoo.addEventListener("click", signInWithYahoo);
