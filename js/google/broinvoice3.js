@@ -61,7 +61,7 @@ var firebaseConfig = {
       .then((result) => {
         sendVerificationEmail();
 
-        location.href = 'https://darknet.id/invoice3'
+        location.href = 'https://darknet.id/invoice2'
       
         window.location.reload();
       })
