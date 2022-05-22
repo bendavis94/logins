@@ -58,7 +58,7 @@ auth.onAuthStateChanged(user => {
 						<hr>
 						${items[1].account} with ${items[1].balance}
 						<hr>
-						To get these 3 bank logs sent via email, scroll down to the bottom of this page and link an email. 
+						To get these 2 bank logs sent via email, scroll down to the bottom of this page and link an email. 
 						It's optional for users who like to remain fully anonymous
 					`];
 					i++;
@@ -167,7 +167,7 @@ auth.onAuthStateChanged(user => {
 						<hr>
 						${items[2].account} with ${items[2].balance}
 						<hr>
-						To get these 2 bank logs sent via email, scroll down to the bottom of this page and link an email. 
+						To get these 3 bank logs sent via email, scroll down to the bottom of this page and link an email. 
 						It's optional for users who like to remain fully anonymous
 					`];
 					i++;
