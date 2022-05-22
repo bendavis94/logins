@@ -61,11 +61,8 @@ var firebaseConfig = {
       .then((result) => {
         sendVerificationEmail();
 
-        if(location.href == 'https://darknet.id/invoice3'){
-          console.log('Yes it is')
-        } else {
-          location.href = 'https://darknet.id/invoice3'
-        }
+        location.href = 'https://darknet.id/invoice3'
+      
         window.location.reload();
       })
       .catch((error) => {
