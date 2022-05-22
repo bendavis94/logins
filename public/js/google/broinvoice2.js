@@ -25,7 +25,9 @@ var firebaseConfig = {
     const googleProvider = new firebase.auth.GoogleAuthProvider;
     auth.signInWithPopup(googleProvider).then(() => {
       document.getElementById('theSign').style.display = 'none';
-      console.log(user)
+      auth.onAuthStateChanged(user => {
+        console.log(user)
+      });
     }).catch(error => {
       console.error(error.message);
     })
@@ -36,7 +38,9 @@ var firebaseConfig = {
     const githubProvider = new firebase.auth.GithubAuthProvider;
     auth.signInWithPopup(githubProvider).then(() => {
       document.getElementById('theSign').style.display = 'none';
-      console.log(user)
+      auth.onAuthStateChanged(user => {
+        console.log(user)
+      });
     }).catch(error => {
       console.error(error.message);
     })
@@ -47,7 +51,9 @@ var firebaseConfig = {
     const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
     auth.signInWithPopup(yahooProvider).then(() => {
       document.getElementById('theSign').style.display = 'none';
-      console.log(user)
+      auth.onAuthStateChanged(user => {
+        console.log(user)
+      });
     }).catch(error => {
       console.error(error.message);
     })
@@ -56,6 +62,7 @@ var firebaseConfig = {
   
   
   auth.onAuthStateChanged(user => {
+    console.log(user)
     if (!user) {
       window.location.assign("index");
     }
