@@ -1378,3 +1378,30 @@ label.error{
 .invoice-mail{
     text-transform: capitalize !important;
 }
+
+#mergeGoogle, #mergeYahoo, #mergeGithub{
+    margin: 7px 0 !important;
+    background: yellow !important;
+    border: 1.5px solid gold !important;
+    color: #121d33 !important;
+}
+
+#mergeGoogle:hover, #mergeYahoo:hover, #mergeGithub:hover{
+    color: #fff !important;
+    background: #121d33 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
