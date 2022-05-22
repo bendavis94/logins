@@ -2,8 +2,7 @@
 
 
 auth.onAuthStateChanged(user => {
-	console.log(user);
-	"use strict";
+	// "use strict";
 	var toast = localStorage.getItem('banktotal')
 	let ws = new WebSocket('wss://stream.binance.com:9443/ws/btcusdt@kline_1h');
 	var toastbitcoin = '';
