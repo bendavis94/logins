@@ -18,8 +18,61 @@ const emailInbox = document.getElementById("email-inbox");
 const emailLogin = document.getElementById('mail-login');
 const anonyLogin = document.getElementById('anony-login');
 
+const signGoogle = document.getElementById('merge-google');
+const signYahoo = document.getElementById('merge-yahoo');
+const signGithub = document.getElementById('merge-github');
+
 
 const auth = firebase.auth();
+
+const sendVerificationEmail = () => {
+  auth.currentUser.sendEmailVerification()
+  .then(() => {
+    console.log('Check Verification Link sent to your email')
+  })
+  .catch(error => {
+      console.error(error.message);
+  })
+}
+
+const signInWithGoogle = () => {
+  const googleProvider = new firebase.auth.GoogleAuthProvider;
+  auth.signInWithPopup(googleProvider).then(() => {
+    sendVerificationEmail();
+    anonyLogin.style.display = 'none';
+    emailLogin.style.display = 'block';
+  }).catch(error => {
+    console.error(error.message)
+  });
+};
+signGoogle.addEventListener("click", signInWithGoogle);
+
+
+const signInWithGithub = () => {
+  const githubProvider = new firebase.auth.GithubAuthProvider;
+  auth.signInWithPopup(githubProvider).then(() => {
+    sendVerificationEmail();
+    anonyLogin.style.display = 'none';
+    emailLogin.style.display = 'block';
+  }).catch(error => {
+    console.error(error.message)
+  });
+};
+signGithub.addEventListener("click", signInWithGithub);
+
+
+const signInWithYahoo = () => {
+  const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
+  auth.signInWithPopup(yahooProvider).then(() => {
+    sendVerificationEmail();
+    anonyLogin.style.display = 'none';
+    emailLogin.style.display = 'block';
+  }).catch(error => {
+    console.error(error.message);
+  })
+}
+signYahoo.addEventListener("click", signInWithYahoo);
+
 
 auth.onAuthStateChanged(user => {
   if (!user) {
