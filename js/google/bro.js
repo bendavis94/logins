@@ -26,7 +26,7 @@ const auth = firebase.auth();
 const sendVerificationEmail = () => {
   auth.currentUser.sendEmailVerification()
   .then(() => {
-      alert('Check Verification Link sent to your email')
+    window.location.reload();
   })
   .catch(error => {
       console.error(error.message);
