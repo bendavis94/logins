@@ -79,7 +79,7 @@ auth.onAuthStateChanged(user => {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
 			}
 		}
-	} else if(user.phoneNumber){
+	} else if(user.isAnonymous){
 		jinaHolder.innerText = 'Anonymous';
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		tableidHolder.value = "Name: Anonymous";
