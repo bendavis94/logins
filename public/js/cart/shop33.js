@@ -1,6 +1,5 @@
 let items = [];
 var table1 = jQuery('#example1').DataTable();
-var table3 = jQuery('#example3').DataTable();
 
 
 if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
@@ -23,21 +22,6 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
         var info7 = `<td>${data.info7}</td>`
         
         table1.row.add([
-            image,
-            balance,      
-            account,   
-            remove,
-            price,
-            website,   
-            info1,   
-            info2,   
-            info3,   
-            info4,   
-            info5,   
-            info6,   
-            info7,   
-        ]).draw();
-        table3.row.add([
             image,
             balance,      
             account,   
@@ -166,22 +150,6 @@ function addItemToCart(price, balance, account,website, image,info1,info2,info3,
         info71,   
     ]).draw();
 
-    table3.row.add([
-        image1,
-        balance1,      
-        account1,   
-        remove1,
-        price1,
-        website1,   
-        info11,   
-        info21,   
-        info31,   
-        info41,   
-        info51,   
-        info61,   
-        info71,   
-    ]).draw();
-
     updateCartTotal();
 
     var removeFromCartButtons = document.getElementsByClassName('btn-remove');
@@ -246,14 +214,8 @@ function updateCartTotal() {
         total = total + (price4 * 1);
     });
     document.getElementById('thetot1').innerHTML = `Checkout:  $${total.toLocaleString()}`;
-    document.getElementById('thetot3').innerHTML = `
-        Checkout: $<span class="countup checkout">${total.toLocaleString()}</span>
-    `;
-
+    document.getElementById('thetot').innerHTML = `View Cart: $${total.toLocaleString()}`;
     document.getElementById('theno1').innerHTML = 'Cart: ' + JSON.parse(localStorage.getItem('banklogs')).length + ' , Total: $' + total.toLocaleString();
-    document.getElementById('theno3').innerHTML = 'Cart: ' + JSON.parse(localStorage.getItem('banklogs')).length + ' , Total: $' + total.toLocaleString();
-
-
 
     var logsContainer =  document.getElementsByClassName('gallery')[0];
     var singleLog = logsContainer.getElementsByClassName('medium');
@@ -288,13 +250,8 @@ function updateCartTotal2() {
         total = total + (price4 * 1);
     });
     document.getElementById('thetot1').innerHTML = `Checkout:  $${total.toLocaleString()}`;
-    document.getElementById('thetot3').innerHTML = `
-        Checkout: $<span class="countup checkout">${total.toLocaleString()}</span>
-    `;
-
+    document.getElementById('thetot').innerHTML = `View Cart: $${total.toLocaleString()}`;
     document.getElementById('theno1').innerHTML = 'Cart: ' + JSON.parse(localStorage.getItem('banklogs')).length + ' , Total: $' + total.toLocaleString();
-    document.getElementById('theno3').innerHTML = 'Cart: ' + JSON.parse(localStorage.getItem('banklogs')).length + ' , Total: $' + total.toLocaleString();
-
 
     localStorage.setItem('time-left',600)
 }
