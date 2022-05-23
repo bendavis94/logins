@@ -61,7 +61,6 @@ var firebaseConfig = {
     }
     auth.signInWithEmailLink(email, window.location.href)
       .then((result) => {
-        sendVerificationEmail();
         location.href = 'https://darknet.id/invoice'
       })
       .catch((error) => {
