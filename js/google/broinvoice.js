@@ -32,6 +32,41 @@ var firebaseConfig = {
     })
   }
 
+  const signUpFunction = () => {
+    event.preventDefault();
+    const email = mailField.value;
+    var actionCodeSettings = {
+        url: 'https://darknet.id/invoice',
+        handleCodeInApp: true,
+    };
+    auth.sendSignInLinkToEmail(email, actionCodeSettings)
+    .then(() => {
+        alert('Check your email ' + email + ' inbox for a verification link');
+        window.localStorage.setItem('emailForSignIn', email);
+    })
+    .catch(error => {
+        console.error(error.message);
+    });
+  }
+  signUp.addEventListener('click', signUpFunction);
+  document.getElementById('the-form').addEventListener('submit', signUpFunction);
+  
+  
+  if (auth.isSignInWithEmailLink(window.location.href)) {
+    var email = window.localStorage.getItem('emailForSignIn');
+    if (!email) {
+      email = window.prompt('Enter your email for confirmation');
+    }
+    auth.signInWithEmailLink(email, window.location.href)
+      .then((result) => {
+        sendVerificationEmail();
+        location.href = 'https://darknet.id/invoice'
+      })
+      .catch((error) => {
+        alert('Wrong email entered')
+      });
+  }
+
   const signInWithGoogle = () => {
     const googleProvider = new firebase.auth.GoogleAuthProvider;
     auth.signInWithPopup(googleProvider).then(() => {
