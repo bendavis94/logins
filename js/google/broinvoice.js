@@ -48,8 +48,6 @@ var firebaseConfig = {
   const signInWithGithub = () => {
     const githubProvider = new firebase.auth.GithubAuthProvider;
     auth.signInWithPopup(githubProvider).then(() => {
-      downloadAnony.style.display = 'none';
-      downloadEmail.style.display = 'block';
       sendVerificationEmail();
       window.location.reload();
     }).catch(error => {
