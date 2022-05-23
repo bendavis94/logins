@@ -79,7 +79,7 @@ const signInWithGoogle = () => {
 signGoogle.addEventListener("click", signInWithGoogle);
 
 const signInAnony = () => {
-  auth.signInAnonymously.then(() => {
+  auth.signInAnonymously().then(() => {
     window.location.assign('home');
   }).catch(error => {
     console.error(error.message)
