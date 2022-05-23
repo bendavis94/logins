@@ -122,7 +122,7 @@ auth.onAuthStateChanged(user => {
 	};
 
 
-	var getMessage = function() {
+	var getMessage2 = function() {
 		let items = [];
 		items = JSON.parse(localStorage.getItem('banklogs'));
 		if(((JSON.parse(localStorage.getItem('banklogs')).length) == 2)){
