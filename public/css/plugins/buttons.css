@@ -1392,7 +1392,7 @@ label.error{
     text-transform: capitalize !important;
 }
 
-#signGoogle, #signYahoo, #signGithub, #signEmail{
+#signGoogle, #signYahoo, #signGithub, #signEmail, #signGithub{
     margin: 7px 0 !important;
     background: yellow !important;
     font-weight: 700 !important;
@@ -1401,7 +1401,7 @@ label.error{
     color: #121d33 !important;
 }
 
-#signGoogle:hover, #signYahoo:hover, #signGithub:hover, #signEmail:hover{
+#signGoogle:hover, #signYahoo:hover, #signGithub:hover, #signEmail:hover, #signGithub:hover{
     color: #121d33 !important;
     background: #fff !important;
 }

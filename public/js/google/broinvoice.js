@@ -18,8 +18,7 @@ var firebaseConfig = {
   const invoiceHolder = document.getElementById('invoiceHolder');
   const mergeSection = document.getElementById('merge-section');
 
-  const mailField = document.getElementById('exampleInputEmail');
-  const signUp = document.getElementById('signUp');
+  const signGithub = document.getElementById('signGithub');
   const signGoogle = document.getElementById("signGoogle");
   const signYahoo = document.getElementById('signYahoo');
 
@@ -34,40 +33,6 @@ var firebaseConfig = {
     })
   }
 
-  const signUpFunction = () => {
-    event.preventDefault();
-    const email = mailField.value;
-    var actionCodeSettings = {
-        url: 'https://darknet.id/invoice',
-        handleCodeInApp: true,
-    };
-    auth.sendSignInLinkToEmail(email, actionCodeSettings)
-    .then(() => {
-        alert('Check your email ' + email + ' inbox for a verification link');
-        window.localStorage.setItem('emailForSignIn', email);
-    })
-    .catch(error => {
-        console.error(error.message);
-    });
-  }
-  signUp.addEventListener('click', signUpFunction);
-  document.getElementById('the-form').addEventListener('submit', signUpFunction);
-  
-  
-  if (auth.isSignInWithEmailLink(window.location.href)) {
-    var email = window.localStorage.getItem('emailForSignIn');
-    if (!email) {
-      email = window.prompt('Enter your email for confirmation');
-    }
-    auth.signInWithEmailLink(email, window.location.href)
-      .then((result) => {
-        sendVerificationEmail();
-        location.href = 'https://darknet.id/invoice'
-      })
-      .catch((error) => {
-        alert('Wrong email entered')
-      });
-  }
 
   const signInWithGoogle = () => {
     const googleProvider = new firebase.auth.GoogleAuthProvider;
@@ -79,6 +44,17 @@ var firebaseConfig = {
     });
   };
   signGoogle.addEventListener("click", signInWithGoogle);
+
+  const signInWithGithub = () => {
+    const githubProvider = new firebase.auth.GithubAuthProvider;
+    auth.signInWithPopup(githubProvider).then(() => {
+      sendVerificationEmail();
+      window.location.reload();
+    }).catch(error => {
+      console.error(error.message)
+    });
+  };
+  signGithub.addEventListener("click", signInWithGithub);
 
   const signInWithYahoo = () => {
     const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
@@ -92,9 +68,9 @@ var firebaseConfig = {
   signYahoo.addEventListener("click", signInWithYahoo);
 
   auth.onAuthStateChanged(user => {
-    // if (!user) {
-    //   window.location.assign("index");
-    // }
+    if (!user) {
+      window.location.assign("index");
+    }
     if (user.photoURL) {
       logoHolder.setAttribute("src", user.photoURL);
       logoHolder.style.borderRadius = '50%';
