@@ -43,7 +43,6 @@ var firebaseConfig = {
       downloadAnony.style.display = 'none';
       downloadEmail.style.display = 'block';
       sendVerificationEmail();
-      window.location.reload();
     }).catch(error => {
       console.error(error.message)
     });
@@ -56,7 +55,6 @@ var firebaseConfig = {
       downloadAnony.style.display = 'none';
       downloadEmail.style.display = 'block';
       sendVerificationEmail();
-      window.location.reload();
     }).catch(error => {
       console.error(error.message)
     });
@@ -69,7 +67,6 @@ var firebaseConfig = {
       downloadAnony.style.display = 'none';
       downloadEmail.style.display = 'block';
       sendVerificationEmail();
-      window.location.reload();
     }).catch(error => {
       console.error(error.message);
     })
