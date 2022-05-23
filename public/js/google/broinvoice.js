@@ -17,6 +17,46 @@ const jinaHolder = document.getElementById("jinaHolder");
 const jinaHolder2 = document.getElementById("jinaHolder2");
 const invoiceHolder = document.getElementById('invoiceHolder');
 
+const mergeMail = document.getElementById('merge-mail');
+
+const signGoogle = document.getElementById('merge-google');
+const signYahoo = document.getElementById('merge-yahoo');
+const signGithub = document.getElementById('merge-github');
+
+const signInWithGoogle = () => {
+  const googleProvider = new firebase.auth.GoogleAuthProvider;
+  auth.signInWithPopup(googleProvider).then(() => {
+    sendVerificationEmail();
+    mergeMail.style.display = 'none';
+  }).catch(error => {
+    console.error(error.message)
+  });
+};
+signGoogle.addEventListener("click", signInWithGoogle);
+
+
+const signInWithGithub = () => {
+  const githubProvider = new firebase.auth.GithubAuthProvider;
+  auth.signInWithPopup(githubProvider).then(() => {
+    sendVerificationEmail();
+    mergeMail.style.display = 'none';
+  }).catch(error => {
+    console.error(error.message)
+  });
+};
+signGithub.addEventListener("click", signInWithGithub);
+
+
+const signInWithYahoo = () => {
+  const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
+  auth.signInWithPopup(yahooProvider).then(() => {
+    sendVerificationEmail();
+    mergeMail.style.display = 'none';
+  }).catch(error => {
+    console.error(error.message);
+  })
+}
+signYahoo.addEventListener("click", signInWithYahoo);
 
 auth.onAuthStateChanged(user => {
   if (!user) {
@@ -45,6 +85,7 @@ auth.onAuthStateChanged(user => {
     jinaHolder.innerText = 'Anonymous';
     jinaHolder2.innerText = 'User ID: ' + user.uid;
     invoiceHolder.innerText = 'User ID: ' + user.uid;
+    mergeMail.style.display = 'block';
   } 
 });
 
