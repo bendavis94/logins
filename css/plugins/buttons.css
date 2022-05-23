@@ -1437,6 +1437,16 @@ label.error{
  }
 
 
-
+ .attr-nav>ul>li.dropdown ul.dropdown-menu{
+    left:-307px ;
+    width:400px;
+    border: 1.5px solid aqua !important;
+}
+@media (max-width:576px){
+    .attr-nav>ul>li.dropdown ul.dropdown-menu{
+        left: -220%;
+        width: 365%;
+    }
+}
 
 

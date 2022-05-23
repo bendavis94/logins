@@ -221,50 +221,92 @@
     <div class="attr-nav xs-margin-50px-right">
         <ul>
             <li class="dropdown sm-no-margin">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">  
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <canvas id="canvas" width="60" height="60" class="cart-thumb"></canvas>
                     <span class="badge bg-theme " id="cartlength">
                         0
                     </span>
                 </a>
                 <ul class="dropdown-menu cart-list champez2">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="theno3">
-                                Cart: 0, Total: 0.
-                            </h4>
-                        </div>
-                        <div class="modal-body" id="thetablebro">
-                            <div class="table-responsive">
-                                <table class="table table-striped table-bordered"  id="example3">
-                                    <thead>
-                                        <tr class="table-info">
-                                            <th>Bank</th>
-                                            <th>Balance</th>
-                                            <th>Account</th>
-                                            <th class="remove-th"><i class="fas fa-trash"></i></th>
-                                            <th>Price</th>
-                                            <th>Website</th>
-                                            <th>Info1</th>
-                                            <th>Info2</th>
-                                            <th>Info3</th>
-                                            <th>Info4</th>
-                                            <th>Info5</th>
-                                            <th>Info6</th>
-                                            <th>Info7</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="champez3"></tbody>      
-                                </table>
-                            </div>
-                        </div>    
-                        <div class="modal-footer modal-checkout">
-                            <button type="button" class="butn medium" 
-                            onclick="window.location.assign('invoice')" id="thetot3">
-                                Checkout: $0
-                            </button>
-                        </div>
-                    </div>
+                    <li class="total bg-theme">
+                        <button class="btn-style4 small btn-cart white lesnar"
+                            style="background: yellow; border: 1px solid gold;padding: 8px; float: right;"
+                            data-toggle="modal" data-target="#profileModal">
+                            <span id="thetot">
+                                View Cart: $0
+                            </span>
+                        </button>
+                    </li>
+
+
+
+                    <li class="total bg-theme">
+                        <button class="btn-style4 small btn-cart goldberg" onclick="window.location.assign('paypal')"
+                        style="font-size: 17px;">
+                            PayPal Cashout Method
+                            <img src="images/paypal.jpg" style="position: relative; width: 20px; margin-left: 0px; border: none; height: auto;">
+                        </button>
+                    </li>
+                    <li class="total bg-theme">
+                        <button class="btn-style4 small btn-cart goldberg" onclick="window.location.assign('navyfederal')"
+                        style="font-size: 17px;">
+                            Navy Federal Method
+                            <img src="images/nfcu.jpg" style="position: relative; width: 20px; margin-left: 3px; border: none; height: auto;">
+                        </button>
+                    </li>
+
+                    <li class="total bg-theme">
+                        <button class="btn-style4 small btn-cart goldberg" onclick="window.location.assign('bankofamerica-tutorial')"
+                        style="font-size: 17px;">
+                            Bank of America Method
+                            <img src="images/boa.jpg" style="position: relative; width: 20px; margin-left: 3px; border: none; height: auto;">
+                        </button>
+                    </li>
+
+                    <li class="total bg-theme">
+                        <button class="btn-style4 small btn-cart goldberg" onclick="window.location.assign('shopwithscrip-tutorial')"
+                        style="font-size: 17px;">
+                            ShopWithScrip Method
+                            <img src="images/shopw.jpg" style="position: relative; width: 20px; margin-left: 3px; border: none; height: auto;">
+                        </button>
+                    </li>
+
+                    <li class="total bg-theme">
+                        <button class="btn-style4 small btn-cart goldberg" onclick="window.location.assign('911socks')"
+                        style="font-size: 17px;">
+                            911 Socks Tutorial
+                            <img src="img/content/911.png" style="position: relative; width: 35px; margin-left: 3px; border: none; height: 25px;">
+                        </button>
+                    </li>
+
+                    <li class="total bg-theme">
+                        <button class="btn-style4 small btn-cart goldberg" onclick="window.location.assign('ach')"
+                        style="font-size: 17px;">
+                            ACH Transfer Tutorial
+                            <img src="img/ach/ach.png" style="position: relative; width: 35px; margin-left: 3px; border: none; height: 25px;">
+                        </button>
+                    </li>
+
+                    <li class="total bg-theme">
+                        <button class="btn-style4 small btn-cart goldberg" onclick="window.location.assign('method')"
+                        style="font-size: 17px;">
+                            Coinbase Btc Wash Tutorial
+                            <img src="img/content/coinbase.jfif" style="position: relative; width: 25px; margin-left: 3px; border: none; height: 25px;">
+                        </button>
+                    </li>
+
+                    <li class="total bg-theme">
+                        <button class="btn-style4 small btn-cart white" id="logoutButton" 
+                            style="background: rgba(255, 0, 0, 0.7); border: 1px solid red; padding: 8px; float: right;">
+                            <span class="font-weight-700 font-size14 text-white">
+                                <i class="fas fa-sign-out"></i>
+                                Log Out
+                                <img src="failure.svg" 
+                                    style="position: relative; width: 20px; margin-left: 3px; border: none; height: auto;">
+                            </span>
+                        </button>
+                    </li>
+
                 </ul>
             </li>
         </ul>
