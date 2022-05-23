@@ -47,6 +47,25 @@ auth.onAuthStateChanged(user => {
 					}
 					return msgs[i];
 				}
+			} else if(user.isAnonymous){
+				for(var i = 0; i < items.length; i++) {
+					var msgs = [`
+						Your anonymous account has insufficient balance to complete the download.
+						<hr>
+						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
+						<hr>
+						${items[0].account} with ${items[0].balance} and, <br>
+						<hr>
+						${items[1].account} with ${items[1].balance}
+						<hr>
+						To get these 2 bank logs sent via email, scroll down to the bottom of this page and link an email, it's optional for users who like to remain fully anonymous
+					`];
+					i++;
+					if (i === msgs.length) {
+						i = 0;
+					}
+					return msgs[i];
+				}
 			} 
 		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 1)){
 			if(user.email){
@@ -70,6 +89,22 @@ auth.onAuthStateChanged(user => {
 						<hr>
 						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download <br>
 						${items[0].account} with ${items[0].balance}
+					`];
+					i++;
+					if (i === msgs.length) {
+						i = 0;
+					}
+					return msgs[i];
+				}
+			} else if(user.isAnonymous){
+				for(var i = 0; i < items.length; i++) {
+					var msgs = [`
+						Your anonymous account has insufficient balance to complete the download.
+						<hr>
+						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download <br>
+						${items[0].account} with ${items[0].balance}
+						<hr>
+						To get this bank log sent via email, scroll down to the bottom of this page and link an email, it's optional for users who like to remain fully anonymous
 					`];
 					i++;
 					if (i === msgs.length) {
@@ -117,55 +152,7 @@ auth.onAuthStateChanged(user => {
 					}
 					return msgs[i];
 				}
-			} 
-		} 
-	};
-
-
-	var getMessage2 = function() {
-		let items = [];
-		items = JSON.parse(localStorage.getItem('banklogs'));
-		if(((JSON.parse(localStorage.getItem('banklogs')).length) == 2)){
-			if(user.isAnonymous){
-				for(var i = 0; i < items.length; i++) {
-					var msgs = [`
-						Your anonymous account has insufficient balance to complete the download.
-						<hr>
-						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
-						<hr>
-						${items[0].account} with ${items[0].balance} and, <br>
-						<hr>
-						${items[1].account} with ${items[1].balance}
-						<hr>
-						To get these 2 bank logs sent via email, scroll down to the bottom of this page and link an email, it's optional for users who like to remain fully anonymous
-					`];
-					i++;
-					if (i === msgs.length) {
-						i = 0;
-					}
-					return msgs[i];
-				}
-			} 
-		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 1)){
-	 		if(user.isAnonymous){
-				for(var i = 0; i < items.length; i++) {
-					var msgs = [`
-						Your anonymous account has insufficient balance to complete the download.
-						<hr>
-						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download <br>
-						${items[0].account} with ${items[0].balance}
-						<hr>
-						To get this bank log sent via email, scroll down to the bottom of this page and link an email, it's optional for users who like to remain fully anonymous
-					`];
-					i++;
-					if (i === msgs.length) {
-						i = 0;
-					}
-					return msgs[i];
-				}
-			} 
-		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 3)){
-			if(user.isAnonymous){
+			} else if(user.isAnonymous){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
 						Your anonymous account has insufficient balance to complete the download.
@@ -191,7 +178,6 @@ auth.onAuthStateChanged(user => {
 	};
 
 	var toastbut = document.getElementById('showtoasts');
-	var toastbut_anony = document.getElementById('showtoasts-anony');
 	var toastbut_2 = document.getElementById('showtoasts_2');
 
 	$(toastbut).click(function() {
@@ -209,27 +195,6 @@ auth.onAuthStateChanged(user => {
 		};
 		if (!msg) {
 			msg = getMessage();
-		}
-		var $toast = toastr[shortCutFunction](msg, title);
-		$toastlast = $toast;
-	});
-	
-
-	$(toastbut_anony).click(function() {
-		var shortCutFunction = 'success';
-		var msg = '';
-		var title = '';
-		toastr.options = {
-			closeButton: true,
-			debug: false,
-			newestOnTop: true,
-			progressBar: true,
-			positionClass: 'toast-top-full-width',
-			preventDuplicates: true,
-			onclick: null
-		};
-		if (!msg) {
-			msg = getMessage2();
 		}
 		var $toast = toastr[shortCutFunction](msg, title);
 		$toastlast = $toast;

@@ -186,13 +186,9 @@ function updateCartTotal() {
 
     if(JSON.parse(localStorage.getItem('banklogs')).length === 1) {
         document.getElementById('showtoasts').innerHTML = 'Download 1 Bank Log✅';
-        document.getElementById('showtoasts-anony').innerHTML = 'Download 1 Bank Log✅';
         document.getElementById('titlelogs2').innerText = 'Cart: 1, Total: $' + total.toLocaleString();
     } else {
         document.getElementById('showtoasts').innerHTML = `Download 
-            ${JSON.parse(localStorage.getItem('banklogs')).length}
-        Bank Logs✅`;
-        document.getElementById('showtoasts-anony').innerHTML = `Download 
             ${JSON.parse(localStorage.getItem('banklogs')).length}
         Bank Logs✅`;
         document.getElementById('titlelogs2').innerText = `Cart: ${JSON.parse(localStorage.getItem('banklogs')).length}, Total: $${total.toLocaleString()}`

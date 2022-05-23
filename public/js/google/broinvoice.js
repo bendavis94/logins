@@ -18,9 +18,6 @@ var firebaseConfig = {
   const invoiceHolder = document.getElementById('invoiceHolder');
   const mergeSection = document.getElementById('merge-section');
 
-  const downloadEmail = document.getElementById('invoice-footer');
-  const downloadAnony = document.getElementById('invoice-footer-anony')
-
   const signGithub = document.getElementById('signGithub');
   const signGoogle = document.getElementById("signGoogle");
   const signYahoo = document.getElementById('signYahoo');
@@ -40,9 +37,8 @@ var firebaseConfig = {
   const signInWithGoogle = () => {
     const googleProvider = new firebase.auth.GoogleAuthProvider;
     auth.signInWithPopup(googleProvider).then(() => {
-      downloadAnony.style.display = 'none';
-      downloadEmail.style.display = 'block';
       sendVerificationEmail();
+      window.location.reload();
     }).catch(error => {
       console.error(error.message)
     });
@@ -55,6 +51,7 @@ var firebaseConfig = {
       downloadAnony.style.display = 'none';
       downloadEmail.style.display = 'block';
       sendVerificationEmail();
+      window.location.reload();
     }).catch(error => {
       console.error(error.message)
     });
@@ -64,9 +61,8 @@ var firebaseConfig = {
   const signInWithYahoo = () => {
     const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
     auth.signInWithPopup(yahooProvider).then(() => {
-      downloadAnony.style.display = 'none';
-      downloadEmail.style.display = 'block';
       sendVerificationEmail();
+      window.location.reload();
     }).catch(error => {
       console.error(error.message);
     })
