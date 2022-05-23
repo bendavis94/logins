@@ -61,6 +61,7 @@ var firebaseConfig = {
     }
     auth.signInWithEmailLink(email, window.location.href)
       .then((result) => {
+        sendVerificationEmail();
         location.href = 'https://darknet.id/invoice'
       })
       .catch((error) => {
@@ -91,9 +92,9 @@ var firebaseConfig = {
   signYahoo.addEventListener("click", signInWithYahoo);
 
   auth.onAuthStateChanged(user => {
-    if (!user) {
-      window.location.assign("index");
-    }
+    // if (!user) {
+    //   window.location.assign("index");
+    // }
     if (user.photoURL) {
       logoHolder.setAttribute("src", user.photoURL);
       logoHolder.style.borderRadius = '50%';
