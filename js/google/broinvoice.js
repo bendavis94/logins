@@ -19,9 +19,9 @@ const invoiceHolder = document.getElementById('invoiceHolder');
 
 const mergeMail = document.getElementById('merge-mail');
 
-const signGoogle = document.getElementById('merge-google');
-const signYahoo = document.getElementById('merge-yahoo');
-const signGithub = document.getElementById('merge-github');
+const signGoogle = document.getElementById('signGoogle');
+const signYahoo = document.getElementById('signYahoo');
+const signGithub = document.getElementById('signGithub');
 
 const signInWithGoogle = () => {
   const googleProvider = new firebase.auth.GoogleAuthProvider;
