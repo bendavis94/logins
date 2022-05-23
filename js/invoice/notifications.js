@@ -57,6 +57,8 @@ auth.onAuthStateChanged(user => {
 						${items[0].account} with ${items[0].balance} and, <br>
 						<hr>
 						${items[1].account} with ${items[1].balance}
+						<hr>
+						To get these 2 bank logs sent via email, scroll down to the bottom of this page and link an email, it's optional for users who like to remain anonymous
 					`];
 					i++;
 					if (i === msgs.length) {
@@ -101,6 +103,8 @@ auth.onAuthStateChanged(user => {
 						<hr>
 						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download <br>
 						${items[0].account} with ${items[0].balance}
+						<hr>
+						To get this bank log sent via email, scroll down to the bottom of this page and link an email, it's optional for users who like to remain anonymous
 					`];
 					i++;
 					if (i === msgs.length) {
@@ -160,6 +164,8 @@ auth.onAuthStateChanged(user => {
 						${items[1].account} with ${items[1].balance} and, <br>
 						<hr>
 						${items[2].account} with ${items[2].balance}
+						<hr>
+						To get these 3 bank logs sent via email, scroll down to the bottom of this page and link an email, it's optional for users who like to remain anonymous
 					`];
 					i++;
 					if (i === msgs.length) {
