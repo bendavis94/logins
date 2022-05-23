@@ -20,7 +20,7 @@ auth.onAuthStateChanged(user => {
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
 						<hr>
-						${items[0].account} with ${items[0].balance} and, <br>
+						${items[0].account} with ${items[0].balance}
 						<hr>
 						${items[1].account} with ${items[1].balance}
 					`];
@@ -37,7 +37,7 @@ auth.onAuthStateChanged(user => {
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
 						<hr>
-						${items[0].account} with ${items[0].balance} and, <br>
+						${items[0].account} with ${items[0].balance}
 						<hr>
 						${items[1].account} with ${items[1].balance}
 					`];
@@ -54,7 +54,7 @@ auth.onAuthStateChanged(user => {
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
 						<hr>
-						${items[0].account} with ${items[0].balance} and, <br>
+						${items[0].account} with ${items[0].balance}
 						<hr>
 						${items[1].account} with ${items[1].balance}
 					`];
@@ -117,9 +117,9 @@ auth.onAuthStateChanged(user => {
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
 						<hr> 
-						${items[0].account} with ${items[0].balance} and, <br> 
+						${items[0].account} with ${items[0].balance}
 						<hr>
-						${items[1].account} with ${items[1].balance} and, <br>
+						${items[1].account} with ${items[1].balance}
 						<hr>
 						${items[2].account} with ${items[2].balance}
 					`];
@@ -136,9 +136,9 @@ auth.onAuthStateChanged(user => {
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
-						${items[0].account} with ${items[0].balance} and, <br> 
+						${items[0].account} with ${items[0].balance}
 						<hr>
-						${items[1].account} with ${items[1].balance} and, <br>
+						${items[1].account} with ${items[1].balance}
 						<hr>
 						${items[2].account} with ${items[2].balance}
 					`];
@@ -155,9 +155,9 @@ auth.onAuthStateChanged(user => {
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
-						${items[0].account} with ${items[0].balance} and, <br> 
+						${items[0].account} with ${items[0].balance}
 						<hr>
-						${items[1].account} with ${items[1].balance} and, <br>
+						${items[1].account} with ${items[1].balance}
 						<hr>
 						${items[2].account} with ${items[2].balance}
 					`];
