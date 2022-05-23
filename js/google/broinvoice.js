@@ -81,7 +81,6 @@ var firebaseConfig = {
       jinaHolder.innerText = user.displayName;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'Invoice to: '+ user.email;
-      downloadEmail.style.display = 'block';
     } else if(!user.displayName && user.email) {
       var themail = user.email;
       var theaddress = themail.substring(0,themail.indexOf('@'));
@@ -89,12 +88,10 @@ var firebaseConfig = {
       jinaHolder.innerText = theaddress;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'Invoice to: '+ user.email;
-      downloadEmail.style.display = 'block'
     } else if(user.phoneNumber){
       jinaHolder.innerText = user.phoneNumber;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'Invoice to: '+ user.phoneNumber;
-      downloadEmail.style.display = 'block'
     } else if(user.isAnonymous){
       jinaHolder.innerText = 'Anonymous';
       jinaHolder2.innerText = 'User ID: ' + user.uid;
