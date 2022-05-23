@@ -18,26 +18,6 @@ const emailInbox = document.getElementById("email-inbox");
 
 const auth = firebase.auth();
 
-const signInWithGithub = () => {
-  const githubProvider = new firebase.auth.GithubAuthProvider;
-  auth.signInWithPopup(githubProvider).then(() => {
-    sendVerificationEmail();
-  }).catch(error => {
-    console.error(error.message)
-  });
-};
-signGithub.addEventListener("click", signInWithGithub);
-
-const signInWithYahoo = () => {
-  const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
-  auth.signInWithPopup(yahooProvider).then(() => {
-    sendVerificationEmail();
-  }).catch(error => {
-    console.error(error.message);
-  })
-}
-signYahoo.addEventListener("click", signInWithYahoo);
-
 auth.onAuthStateChanged(user => {
   if (!user) {
     window.location.assign("index");
