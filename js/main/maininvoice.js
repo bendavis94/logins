@@ -139,3 +139,7 @@ function changeImage() {
         image.style.color = 'lime'
     }
 }
+
+$("#exampleModal").on("show.bs.modal", function (event) {
+    ("use strict");
+});
