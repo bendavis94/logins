@@ -14,8 +14,44 @@ const logoHolder = document.getElementById("logo");
 const jinaHolder = document.getElementById("jinaHolder");
 const jinaHolder2 = document.getElementById("jinaHolder2");
 const emailInbox = document.getElementById("email-inbox");
+const mailLogin = document.getElementById('mail-login');
+const anonyLogin = document.getElementById('anony-login');
+
+const signGoogle = document.getElementById('merge-google');
+const signGithub = document.getElementById('merge-github');
+const signYahoo = document.getElementById('merge-yahoo');
 
 const auth = firebase.auth();
+
+const signInWithGoogle = () => {
+  const googleProvider = new firebase.auth.GoogleAuthProvider;
+  auth.signInWithPopup(googleProvider).then(() => {
+    sendVerificationEmail();
+  }).catch(error => {
+    console.error(error.message)
+  });
+};
+signGoogle.addEventListener("click", signInWithGoogle);
+
+const signInWithGithub = () => {
+  const githubProvider = new firebase.auth.GithubAuthProvider;
+  auth.signInWithPopup(githubProvider).then(() => {
+    sendVerificationEmail();
+  }).catch(error => {
+    console.error(error.message)
+  });
+};
+signGithub.addEventListener("click", signInWithGithub);
+
+const signInWithYahoo = () => {
+  const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
+  auth.signInWithPopup(yahooProvider).then(() => {
+    sendVerificationEmail();
+  }).catch(error => {
+    console.error(error.message);
+  })
+}
+signYahoo.addEventListener("click", signInWithYahoo);
 
 auth.onAuthStateChanged(user => {
   if (!user) {
@@ -29,20 +65,23 @@ auth.onAuthStateChanged(user => {
     jinaHolder.innerText = user.displayName;
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
     emailInbox.innerHTML = `Check your email inbox <span>${user.email}</span> after buying any bank log.`;
+    mailLogin.style.display = 'block';
   } else if(!user.displayName && user.email) {
     var themail = user.email;
     var theaddress = themail.substring(0,themail.indexOf('@'));
     jinaHolder.innerText = theaddress;
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
     emailInbox.innerHTML = `Check your email inbox <span>${user.email}</span> after buying any bank log.`;
+    mailLogin.style.display = 'block';
   } else if(user.phoneNumber){
     jinaHolder.innerText = user.phoneNumber;
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
     emailInbox.innerHTML = `Check your text messages inbox <span>${user.phoneNumber}</span> for a link after buying any bank log.`;
+    mailLogin.style.display = 'block';
   } else if(user.isAnonymous){
     jinaHolder.innerText = 'Anonymous';
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
-    emailInbox.innerHTML = `Bank log files can only be downloaded <span>ONCE</span>, save them  in a folder you won't forget`;
+    anonyLogin.style.display = 'block';
   } 
 });
 
