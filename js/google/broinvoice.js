@@ -22,6 +22,16 @@ var firebaseConfig = {
   const signYahoo = document.getElementById('signYahoo');
   const signGithub = document.getElementById("signGithub");
 
+  const sendVerificationEmail = () => {
+    auth.currentUser.sendEmailVerification()
+    .then(() => {
+        alert('Check Verification Link sent to your email')
+    })
+    .catch(error => {
+        console.error(error.message);
+    })
+  }
+
   const signInWithGoogle = () => {
     const googleProvider = new firebase.auth.GoogleAuthProvider;
     auth.signInWithPopup(googleProvider).then(() => {
