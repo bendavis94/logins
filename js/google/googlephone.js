@@ -1,6 +1,7 @@
 const mailField = document.getElementById('exampleInputEmail');
 const signUp = document.getElementById('signUp');
 const signGoogle = document.getElementById("signGoogle");
+const signYahoo = document.getElementById('signYahoo');
 const signAnony = document.getElementById("signAnony");
 
 const phoneNumberField = document.getElementById('phoneNumber');
