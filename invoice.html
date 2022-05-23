@@ -638,8 +638,8 @@ id="predat" style="padding: 10px; height: 90vh; display: none;">
                             Merge with Google <img style="height: 25px;" src="img/svg/google.svg">
                         </button>
                         <hr>
-                        <button class="butn medium" id="signEmail" data-toggle="modal" data-target="#loginModal">
-                            Merge with Email <img style="height: 25px;" src="img/svg/mail.svg">
+                        <button class="butn medium" id="signGithub">
+                            Merge with Github <img style="height: 25px;" src="img/svg/github.png">
                         </button>
                         <hr>
                         <button class="butn medium" id="signYahoo">
@@ -731,38 +731,6 @@ id="predat2" style="padding: 10px; height: 90vh; display: none;">
     <i class="fas fa-angle-up"></i>
 </a>
 
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="section-heading">
-                    <h4 style="color: #fff !important;">
-                        Merge with Email
-                    </h4>
-                    <p id="link-p">
-                        A verification link will be sent to the email you input below 👇🏼.
-                        Click on that link to login to the website
-                    </p>
-                </div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <img src="img/svg/failure.svg" style="width: 45px !important;">
-                </button>
-            </div>
-            <div class="modal-body" style="padding: 0;">
-                <form id="the-form">
-                    <div class="form-group col-md-12">
-                        <input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter email" required>
-                    </div>
-                    <li class="next">
-                        <button type="submit" class="butn medium" id="signUp" data-dismiss="modal">
-                            Get Verification Link
-                        </button>
-                    </li>
-                </form>
-            </div>
-        </div>
-    </div>   
-</div>
 
     <script>
         if(localStorage.getItem('received-funds')){
