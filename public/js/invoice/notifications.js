@@ -47,26 +47,7 @@ auth.onAuthStateChanged(user => {
 					}
 					return msgs[i];
 				}
-			} else if(user.isAnonymous){
-				for(var i = 0; i < items.length; i++) {
-					var msgs = [`
-						Your anonymous account has insufficient balance to complete the download.
-						<hr>
-						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
-						<hr>
-						${items[0].account} with ${items[0].balance} and, <br>
-						<hr>
-						${items[1].account} with ${items[1].balance}
-						<hr>
-						To get these 2 bank logs sent via email, scroll down to the bottom of this page and link an email, it's optional for users who like to remain fully anonymous
-					`];
-					i++;
-					if (i === msgs.length) {
-						i = 0;
-					}
-					return msgs[i];
-				}
-			} 
+			}
 		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 1)){
 			if(user.email){
 				for(var i = 0; i < items.length; i++) {
@@ -89,22 +70,6 @@ auth.onAuthStateChanged(user => {
 						<hr>
 						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download <br>
 						${items[0].account} with ${items[0].balance}
-					`];
-					i++;
-					if (i === msgs.length) {
-						i = 0;
-					}
-					return msgs[i];
-				}
-			} else if(user.isAnonymous){
-				for(var i = 0; i < items.length; i++) {
-					var msgs = [`
-						Your anonymous account has insufficient balance to complete the download.
-						<hr>
-						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download <br>
-						${items[0].account} with ${items[0].balance}
-						<hr>
-						To get this bank log sent via email, scroll down to the bottom of this page and link an email, it's optional for users who like to remain fully anonymous
 					`];
 					i++;
 					if (i === msgs.length) {
@@ -152,28 +117,7 @@ auth.onAuthStateChanged(user => {
 					}
 					return msgs[i];
 				}
-			} else if(user.isAnonymous){
-				for(var i = 0; i < items.length; i++) {
-					var msgs = [`
-						Your anonymous account has insufficient balance to complete the download.
-						<hr>
-						Send a one time payment of ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
-						<hr>
-						${items[0].account} with ${items[0].balance} and, <br> 
-						<hr>
-						${items[1].account} with ${items[1].balance} and, <br>
-						<hr>
-						${items[2].account} with ${items[2].balance}
-						<hr>
-						To get these 3 bank logs sent via email, scroll down to the bottom of this page and link an email, it's optional for users who like to remain fully anonymous
-					`];
-					i++;
-					if (i === msgs.length) {
-						i = 0;
-					}
-					return msgs[i];
-				}
-			} 
+			}
 		} 
 	};
 
