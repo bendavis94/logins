@@ -437,7 +437,7 @@ function removeCartItem(event) {
 
 function addItemToCart(price, balance, account,website, image,info1,info2,info3,info4,info5,info6,info7){
 
-    var cartItems = document.getElementsByClassName('champez3')[0]
+    var cartItems = document.getElementsByClassName('champez1')[0]
     var cartItemNames = cartItems.getElementsByTagName('tr');
     for (var i = 0; i < cartItemNames.length; i++) {
         if(cartItemNames[i].innerHTML.includes(balance)){
