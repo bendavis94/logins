@@ -18,6 +18,8 @@ var firebaseConfig = {
   const invoiceHolder = document.getElementById('invoiceHolder');
   const mergeSection = document.getElementById('merge-section');
 
+  const mailField = document.getElementById('exampleInputEmail');
+  const signUp = document.getElementById('signUp');
   const signGoogle = document.getElementById("signGoogle");
   const signYahoo = document.getElementById('signYahoo');
   const signGithub = document.getElementById("signGithub");
