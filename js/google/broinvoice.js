@@ -18,6 +18,9 @@ var firebaseConfig = {
   const invoiceHolder = document.getElementById('invoiceHolder');
   const mergeSection = document.getElementById('merge-section');
 
+  const downloadEmail = document.getElementById('invoice-footer');
+  const downloadAnony = document.getElementById('invoice-footer-anony')
+
   const signGithub = document.getElementById('signGithub');
   const signGoogle = document.getElementById("signGoogle");
   const signYahoo = document.getElementById('signYahoo');
@@ -26,7 +29,7 @@ var firebaseConfig = {
   const sendVerificationEmail = () => {
     auth.currentUser.sendEmailVerification()
     .then(() => {
-        alert('Check Verification Link sent to your email')
+        console.log('Check Verification Link sent to your email')
     })
     .catch(error => {
         console.error(error.message);
@@ -37,6 +40,8 @@ var firebaseConfig = {
   const signInWithGoogle = () => {
     const googleProvider = new firebase.auth.GoogleAuthProvider;
     auth.signInWithPopup(googleProvider).then(() => {
+      downloadAnony.style.display = 'none';
+      downloadEmail.style.display = 'block';
       sendVerificationEmail();
       window.location.reload();
     }).catch(error => {
@@ -48,6 +53,8 @@ var firebaseConfig = {
   const signInWithGithub = () => {
     const githubProvider = new firebase.auth.GithubAuthProvider;
     auth.signInWithPopup(githubProvider).then(() => {
+      downloadAnony.style.display = 'none';
+      downloadEmail.style.display = 'block';
       sendVerificationEmail();
       window.location.reload();
     }).catch(error => {
@@ -59,6 +66,8 @@ var firebaseConfig = {
   const signInWithYahoo = () => {
     const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
     auth.signInWithPopup(yahooProvider).then(() => {
+      downloadAnony.style.display = 'none';
+      downloadEmail.style.display = 'block';
       sendVerificationEmail();
       window.location.reload();
     }).catch(error => {
@@ -79,7 +88,7 @@ var firebaseConfig = {
       jinaHolder.innerText = user.displayName;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'Invoice to: '+ user.email;
-      mergeSection.style.display = 'none'
+      downloadEmail.style.display = 'block';
     } else if(!user.displayName && user.email) {
       var themail = user.email;
       var theaddress = themail.substring(0,themail.indexOf('@'));
@@ -87,16 +96,17 @@ var firebaseConfig = {
       jinaHolder.innerText = theaddress;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'Invoice to: '+ user.email;
-      mergeSection.style.display = 'none'
+      downloadEmail.style.display = 'block'
     } else if(user.phoneNumber){
       jinaHolder.innerText = user.phoneNumber;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'Invoice to: '+ user.phoneNumber;
-      mergeSection.style.display = 'none'
+      downloadEmail.style.display = 'block'
     } else if(user.isAnonymous){
       jinaHolder.innerText = 'Anonymous';
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'User ID: ' + user.uid;
+      downloadAnony.style.display = 'block'
       mergeSection.style.display = 'block'
     } 
   });
