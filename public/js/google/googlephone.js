@@ -1,7 +1,7 @@
 const mailField = document.getElementById('exampleInputEmail');
 const signUp = document.getElementById('signUp');
 const signGoogle = document.getElementById("signGoogle");
-const signYahoo = document.getElementById("signYahoo");
+const signAnony = document.getElementById("signAnony");
 
 const phoneNumberField = document.getElementById('phoneNumber');
 const codeField = document.getElementById('code');
@@ -78,16 +78,14 @@ const signInWithGoogle = () => {
 };
 signGoogle.addEventListener("click", signInWithGoogle);
 
-const signInWithGithub = () => {
-  const githubProvider = new firebase.auth.GithubAuthProvider;
-  auth.signInWithPopup(githubProvider).then(() => {
-    sendVerificationEmail();
+const signInAnony = () => {
+  auth.signInAnonymously.then(() => {
     window.location.assign('home');
   }).catch(error => {
     console.error(error.message)
   });
 };
-signGithub.addEventListener("click", signInWithGithub);
+signAnony.addEventListener("click", signInAnony);
 
 
 
