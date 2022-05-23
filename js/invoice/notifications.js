@@ -71,7 +71,7 @@ auth.onAuthStateChanged(user => {
 					var msgs = [`
 						${user.email}, your account has insufficient balance to complete the download.
 						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download <br>
+						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: <br>
 						${items[0].account} with ${items[0].balance}
 					`];
 					i++;
@@ -85,7 +85,7 @@ auth.onAuthStateChanged(user => {
 					var msgs = [`
 						${user.phoneNumber}, your account has insufficient balance to complete the download.
 						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download <br>
+						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: <br>
 						${items[0].account} with ${items[0].balance}
 					`];
 					i++;
@@ -99,7 +99,7 @@ auth.onAuthStateChanged(user => {
 					var msgs = [`
 						Your anonymous account has insufficient balance to complete the download.
 						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download <br>
+						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: <br>
 						${items[0].account} with ${items[0].balance}
 					`];
 					i++;
