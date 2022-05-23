@@ -1,11 +1,11 @@
 .lesnar span{
     color: #121d33;
     font-weight: 700;
+    font-size: 23px !important;
 }
 .lesnar:hover span{
     color: #fff;
 }
-
 .goldberg{
     background: white;
     border: 1px solid rgba(18, 29, 51,0.3);
