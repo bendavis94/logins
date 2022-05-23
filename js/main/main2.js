@@ -132,11 +132,7 @@
 				}
 			});
 		}
-       
-        $('.countup').counterUp({
-            delay: 25,
-            time: 2000
-        });
+    
 
     });
     $window.on("load", function() {
