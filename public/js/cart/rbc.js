@@ -1,25 +1,26 @@
 if (!localStorage.getItem("loadedrbc")) {
-  localStorage.setItem("rbc1", "$" + Math.floor(Math.random() * 700 + 2025).toLocaleString());
-  localStorage.setItem("rbc2", "$" + Math.floor(Math.random() * 700 + 2725).toLocaleString());
-  localStorage.setItem("rbc3", "$" + Math.floor(Math.random() * 700 + 3425).toLocaleString());
-  localStorage.setItem("rbc4", "$" + Math.floor(Math.random() * 700 + 4125).toLocaleString());
-  localStorage.setItem("rbc5", "$" + Math.floor(Math.random() * 700 + 4825).toLocaleString());
-  localStorage.setItem("rbc6", "$" + Math.floor(Math.random() * 700 + 5525).toLocaleString());
-  localStorage.setItem("rbc7", "$" + Math.floor(Math.random() * 700 + 6225).toLocaleString());
-  localStorage.setItem("rbc8", "$" + Math.floor(Math.random() * 700 + 6925).toLocaleString());
-  localStorage.setItem("rbc9", "$" + Math.floor(Math.random() * 700 + 7625).toLocaleString());
-  localStorage.setItem("rbc10", "$" + Math.floor(Math.random() * 700 + 8325).toLocaleString());
-  localStorage.setItem("rbc11", "$" + Math.floor(Math.random() * 700 + 9025).toLocaleString());
-  localStorage.setItem("rbc12", "$" + Math.floor(Math.random() * 700 + 9725).toLocaleString());
-  localStorage.setItem("rbc13", "$" + Math.floor(Math.random() * 700 + 10425).toLocaleString());
-  localStorage.setItem("rbc14", "$" + Math.floor(Math.random() * 700 + 11125).toLocaleString());
-  localStorage.setItem("rbc15", "$" + Math.floor(Math.random() * 700 + 11825).toLocaleString());
-  localStorage.setItem("rbc16", "$" + Math.floor(Math.random() * 700 + 12525).toLocaleString());
-  localStorage.setItem("rbc17", "$" + Math.floor(Math.random() * 700 + 13225).toLocaleString());
-  localStorage.setItem("rbc18", "$" + Math.floor(Math.random() * 700 + 13925).toLocaleString());
-  localStorage.setItem("rbc19", "$" + Math.floor(Math.random() * 700 + 14625).toLocaleString());
-  localStorage.setItem("rbc20", "$" + Math.floor(Math.random() * 700 + 15325).toLocaleString());
-  localStorage.setItem("rbc21", "$" + Math.floor(Math.random() * 700 + 16025).toLocaleString());
+  localStorage.setItem("rbc1", "$" + Math.floor(Math.random() * 700 + 5025).toLocaleString());
+  localStorage.setItem("rbc2", "$" + Math.floor(Math.random() * 700 + 5725).toLocaleString());
+  localStorage.setItem("rbc3", "$" + Math.floor(Math.random() * 700 + 6425).toLocaleString());
+  localStorage.setItem("rbc4", "$" + Math.floor(Math.random() * 700 + 7125).toLocaleString());
+  localStorage.setItem("rbc5", "$" + Math.floor(Math.random() * 700 + 7825).toLocaleString());
+  localStorage.setItem("rbc6", "$" + Math.floor(Math.random() * 700 + 8525).toLocaleString());
+  localStorage.setItem("rbc7", "$" + Math.floor(Math.random() * 700 + 9225).toLocaleString());
+  localStorage.setItem("rbc8", "$" + Math.floor(Math.random() * 700 + 9925).toLocaleString());
+  localStorage.setItem("rbc9", "$" + Math.floor(Math.random() * 700 + 10625).toLocaleString());
+  localStorage.setItem("rbc10", "$" + Math.floor(Math.random() * 700 + 11325).toLocaleString());
+  localStorage.setItem("rbc11", "$" + Math.floor(Math.random() * 700 + 12025).toLocaleString());
+  localStorage.setItem("rbc12", "$" + Math.floor(Math.random() * 700 + 12725).toLocaleString());
+  localStorage.setItem("rbc13", "$" + Math.floor(Math.random() * 700 + 13425).toLocaleString());
+  localStorage.setItem("rbc14", "$" + Math.floor(Math.random() * 700 + 14125).toLocaleString());
+  localStorage.setItem("rbc15", "$" + Math.floor(Math.random() * 700 + 14825).toLocaleString());
+  localStorage.setItem("rbc16", "$" + Math.floor(Math.random() * 700 + 15525).toLocaleString());
+  localStorage.setItem("rbc17", "$" + Math.floor(Math.random() * 700 + 16225).toLocaleString());
+  localStorage.setItem("rbc18", "$" + Math.floor(Math.random() * 700 + 16925).toLocaleString());
+  localStorage.setItem("rbc19", "$" + Math.floor(Math.random() * 700 + 17625).toLocaleString());
+  localStorage.setItem("rbc20", "$" + Math.floor(Math.random() * 700 + 18325).toLocaleString());
+  localStorage.setItem("rbc21", "$" + Math.floor(Math.random() * 700 + 19025).toLocaleString());
+
 
 
     document.getElementById("rbc1").innerHTML = localStorage.getItem("rbc1");
@@ -43,6 +44,7 @@ if (!localStorage.getItem("loadedrbc")) {
     document.getElementById("rbc19").innerHTML = localStorage.getItem("rbc19");
     document.getElementById("rbc20").innerHTML = localStorage.getItem("rbc20");
     document.getElementById("rbc21").innerHTML = localStorage.getItem("rbc21");
+
     document.getElementById("rbc01").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc1").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
     document.getElementById("rbc02").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc2").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
     document.getElementById("rbc03").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc3").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
@@ -86,6 +88,7 @@ if (!localStorage.getItem("loadedrbc")) {
     document.getElementById("rbc19").innerHTML = localStorage.getItem("rbc19");
     document.getElementById("rbc20").innerHTML = localStorage.getItem("rbc20");
     document.getElementById("rbc21").innerHTML = localStorage.getItem("rbc21");
+
     document.getElementById("rbc01").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc1").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
     document.getElementById("rbc02").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc2").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
     document.getElementById("rbc03").innerHTML = "Buy: $" + parseFloat((localStorage.getItem("rbc3").replace("$", "").replace(",", "") / 25).toFixed(0)).toLocaleString();
