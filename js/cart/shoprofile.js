@@ -1,10 +1,10 @@
 let items = [];
 
 var month = new Array();
-month[2] = "March";
-month[3] = "April";
 month[4] = "May";
 month[5] = "June";
+month[6] = "July";
+month[7] = "August";
 var d = new Date();
 var n = month[d.getMonth()];
 var y = d.getFullYear();
