@@ -86,7 +86,7 @@ auth.onAuthStateChanged(user => {
     jinaHolder.innerText = user.displayName;
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
     emailInbox.innerHTML = `Check your email inbox <span>${user.email}</span> after buying any bank log.`;
-    emailLogin.style.direction = 'block';
+    emailLogin.style.display = 'block';
   } else if(!user.displayName && user.email) {
     var themail = user.email;
     var theaddress = themail.substring(0,themail.indexOf('@'));
