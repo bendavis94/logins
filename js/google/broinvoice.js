@@ -16,6 +16,7 @@ var firebaseConfig = {
   const jinaHolder = document.getElementById("jinaHolder");
   const jinaHolder2 = document.getElementById("jinaHolder2");
   const invoiceHolder = document.getElementById('invoiceHolder');
+  const mergeSection = document.getElementById('merge-section');
 
   const signGoogle = document.getElementById("signGoogle");
   const signYahoo = document.getElementById('signYahoo');
@@ -66,6 +67,7 @@ var firebaseConfig = {
       jinaHolder.innerText = user.displayName;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'Invoice to: '+ user.email;
+      mergeSection.style.display = 'none'
     } else if(!user.displayName && user.email) {
       var themail = user.email;
       var theaddress = themail.substring(0,themail.indexOf('@'));
@@ -73,14 +75,17 @@ var firebaseConfig = {
       jinaHolder.innerText = theaddress;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'Invoice to: '+ user.email;
+      mergeSection.style.display = 'none'
     } else if(user.phoneNumber){
       jinaHolder.innerText = user.phoneNumber;
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'Invoice to: '+ user.phoneNumber;
+      mergeSection.style.display = 'none'
     } else if(user.isAnonymous){
       jinaHolder.innerText = 'Anonymous';
       jinaHolder2.innerText = 'User ID: ' + user.uid;
       invoiceHolder.innerText = 'User ID: ' + user.uid;
+      mergeSection.style.display = 'block'
     } 
   });
   
