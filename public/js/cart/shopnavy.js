@@ -1,7 +1,18 @@
 let items = [];
-var table3 = jQuery('#example3').DataTable();
+var table3 = jQuery('#example1').DataTable();
+
+var month = new Array();
+month[4] = "May";
+month[5] = "June";
+month[6] = "July";
+month[7] = "August";
+var d = new Date();
+var n = month[d.getMonth()];
+var y = d.getFullYear();
+var m = d.getDate();
 
 if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
+
     items = JSON.parse(localStorage.getItem('banklogs'));
     document.getElementById('cartlength').innerText = (JSON.parse(localStorage.getItem('banklogs')).length);
 
@@ -43,10 +54,10 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
         button.addEventListener('click', removeCartItem)
     }
     updateCartTotal();
+
 } else {
     document.getElementById('cartlength').style.display = 'none';
 }
-
 
 function removeCartItem(event) {
     var buttonClicked = event.target
@@ -91,6 +102,7 @@ function removeItemFromCart(price, balance,account,website,image,info1,info2,inf
     window.location.reload()
 }
 
+
 function updateCartTotal() {
     let items3 = (JSON.parse(localStorage.getItem('banklogs')));
     var total = 0;
@@ -98,9 +110,11 @@ function updateCartTotal() {
         var price4 = data.price.replace('Price: ','').replace(',','').replace('$','');
         total = total + (price4 * 1);
     });
-    document.getElementById('thetot3').innerHTML = `Checkout:  $${total.toLocaleString()}`;
+    document.getElementById('thetot1').innerHTML = `Checkout:  $${total.toLocaleString()}`;
+    document.getElementById('theno1').innerHTML = 'Cart: ' + JSON.parse(localStorage.getItem('banklogs')).length + ' , Total: $' + total.toLocaleString();
 
-    document.getElementById('theno3').innerHTML = 'Cart: ' + JSON.parse(localStorage.getItem('banklogs')).length + ' , Total: $' + total.toLocaleString();
 
+    document.getElementById('thetot').innerHTML = `View Cart: $${total.toLocaleString()}`;
     localStorage.setItem('time-left',600);
 }
+
