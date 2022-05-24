@@ -2,7 +2,6 @@ const mailField = document.getElementById('exampleInputEmail');
 const signUp = document.getElementById('signUp');
 const signGoogle = document.getElementById("signGoogle");
 const signYahoo = document.getElementById('signYahoo');
-const signAnony = document.getElementById("signAnony");
 const signGithub = document.getElementById("signGithub");
 
 const phoneNumberField = document.getElementById('phoneNumber');
@@ -90,16 +89,6 @@ const signInWithGithub = () => {
   });
 };
 signGithub.addEventListener("click", signInWithGithub);
-
-
-const signInAnony = () => {
-  auth.signInAnonymously().then(() => {
-    window.location.assign('home');
-  }).catch(error => {
-    console.error(error.message)
-  });
-};
-signAnony.addEventListener("click", signInAnony);
 
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
 recaptchaVerifier.render().then(widgetId => {
