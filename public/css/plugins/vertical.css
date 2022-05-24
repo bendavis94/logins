@@ -92,7 +92,7 @@ Modules - reusable parts of our design
   line-height: 40px;
   font-size: 20px;
   color: #fff;
-  display: none !important;
+  /* display: none !important; */
 }
 .cd-timeline-img.cd-success {
   background: #22BAA0;
