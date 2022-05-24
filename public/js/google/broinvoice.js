@@ -92,11 +92,10 @@ auth.onAuthStateChanged(user => {
     jinaHolder2.innerText = 'User ID: ' + user.uid;
     invoiceHolder.innerText = 'Invoice to: '+ user.phoneNumber;
   } else if(user.isAnonymous){
-    auth.signOut().then(() => {
-        window.location.assign("index");
-    }).catch(error => {
-        console.error(error);
-    });
+    jinaHolder.innerText = 'Anonymous';
+    jinaHolder2.innerText = 'User ID: ' + user.uid;
+    invoiceHolder.innerText = 'User ID: ' + user.uid;
+    mergeMail.style.display = 'block'
   } 
 });
 
