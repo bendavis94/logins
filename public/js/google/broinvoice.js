@@ -24,19 +24,13 @@ const signYahoo = document.getElementById('signYahoo');
 
 const sendVerificationEmail = () => {
   auth.currentUser.sendEmailVerification()
-  .then(() => {
-    console.log('Check Verification Link sent to your email')
-  })
-  .catch(error => {
-      console.error(error.message);
-  })
 }
 
 const signInWithGoogle = () => {
   const googleProvider = new firebase.auth.GoogleAuthProvider;
   auth.signInWithPopup(googleProvider).then(() => {
     sendVerificationEmail();
-    mergeMail.style.display = 'none';
+    window.location.reload()
   }).catch(error => {
     console.error(error.message)
   });
@@ -47,7 +41,7 @@ const signInWithYahoo = () => {
   const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
   auth.signInWithPopup(yahooProvider).then(() => {
     sendVerificationEmail();
-    mergeMail.style.display = 'none';
+    window.location.reload()
   }).catch(error => {
     console.error(error.message);
   })
