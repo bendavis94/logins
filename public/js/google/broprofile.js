@@ -19,6 +19,8 @@ const tableidHolder = document.getElementById('nameBro');
 const email1 = document.getElementById('yourEmail1');
 const email2 = document.getElementById('yourEmail2');
 const email5 = document.getElementById('yourEmail5');
+const emailInbox = document.getElementById('email-inbox')
+
 		
 const auth = firebase.auth();
 
@@ -39,6 +41,7 @@ auth.onAuthStateChanged(user => {
 		email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
 		email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
 		email5.innerHTML = user.email;
+        emailInbox.innerHTML = `Check your email inbox <span>${user.email}</span> after buying any bank log.`;
 
 		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
@@ -57,6 +60,7 @@ auth.onAuthStateChanged(user => {
 		email1.innerHTML = `Check your email spam folder @:<strong>${user.email}</strong> after buying a bank log`;
 		email2.innerHTML = `Cashout Method is also sent to your email address @:<strong>${user.email}</strong>`;
 		email5.innerHTML = user.email;
+        emailInbox.innerHTML = `Check your email inbox <span>${user.email}</span> after buying any bank log.`;
 
 		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
@@ -72,6 +76,7 @@ auth.onAuthStateChanged(user => {
 		email1.innerHTML = `Check your text messages for a link @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
 		email2.innerHTML = `Cashout Method link is also sent to your phone Number @:<strong>${user.phoneNumber}</strong>`;
 		email5.innerHTML = `Logged in with phone ${user.phoneNumber}, you will have to check your text messages inbox for a link`;
+        emailInbox.innerHTML = `Check your text messages inbox <span>${user.phoneNumber}</span> for a link after buying any bank log.`;
 
 		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
@@ -102,9 +107,8 @@ fetch('https://ipapi.co/json/')
 	return response.json();
 })
 .then(function(data) {
-	document.getElementById('yourIP2').innerHTML = `
-		${data.ip}, ${data.city}, ${data.country_name}, ${data.region}, ${data.org}, ${data.timezone}, Country code: ${data.country_calling_code}
-	`;
+	document.getElementById('yourIP2').innerHTML = `${data.ip}, ${data.city}, ${data.country_name}, ${data.region}, ${data.org}, ${data.timezone}, Country code: ${data.country_calling_code}`;
+    document.getElementById('footer-email').innerHTML = `Your IP: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
 });
 
 
