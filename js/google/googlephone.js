@@ -29,7 +29,7 @@ const sendVerificationEmail = () => {
       alert('Check Verification Link sent to your email')
   })
   .catch(error => {
-    alert(error.message);
+    console.log(error.message);
   })
 }
 
