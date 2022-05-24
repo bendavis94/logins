@@ -20,8 +20,6 @@ const anonyLogin = document.getElementById('anony-login');
 
 const signGoogle = document.getElementById('merge-google');
 const signYahoo = document.getElementById('merge-yahoo');
-const signGithub = document.getElementById('merge-github');
-
 
 const auth = firebase.auth();
 
@@ -46,20 +44,6 @@ const signInWithGoogle = () => {
   });
 };
 signGoogle.addEventListener("click", signInWithGoogle);
-
-
-const signInWithGithub = () => {
-  const githubProvider = new firebase.auth.GithubAuthProvider;
-  auth.signInWithPopup(githubProvider).then(() => {
-    sendVerificationEmail();
-    anonyLogin.style.display = 'none';
-    emailLogin.style.display = 'block';
-  }).catch(error => {
-    console.error(error.message)
-  });
-};
-signGithub.addEventListener("click", signInWithGithub);
-
 
 const signInWithYahoo = () => {
   const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
