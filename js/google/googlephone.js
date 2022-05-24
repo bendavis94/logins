@@ -25,10 +25,10 @@ const auth = firebase.auth();
 const sendVerificationEmail = () => {
   auth.currentUser.sendEmailVerification()
   .then(() => {
-      alert('Check Verification Link sent to your email')
+    alert('Check Verification Link sent to your email')
   })
   .catch(error => {
-      console.error(error.message);
+    alert(error.message);
   })
 }
 
@@ -41,11 +41,11 @@ const signUpFunction = () => {
   };
   auth.sendSignInLinkToEmail(email, actionCodeSettings)
   .then(() => {
-      alert('Check your email ' + email + ' inbox for a verification link');
-      window.localStorage.setItem('emailForSignIn', email);
+    alert('Check your email ' + email + ' inbox for a verification link');
+    window.localStorage.setItem('emailForSignIn', email);
   })
   .catch(error => {
-      console.error(error.message);
+    alert(error.message);
   });
 }
 signUp.addEventListener('click', signUpFunction);
@@ -73,7 +73,7 @@ const signInWithGoogle = () => {
     sendVerificationEmail();
     window.location.assign('home');
   }).catch(error => {
-    console.error(error.message)
+    alert(error.message)
   });
 };
 signGoogle.addEventListener("click", signInWithGoogle);
@@ -97,10 +97,10 @@ const code = codeField.value;
 const credential = firebase.auth.PhoneAuthProvider.credential(sentCodeId, code);
 auth.signInWithCredential(credential)
     .then(() => {
-        window.location.assign('home');
+      window.location.assign('home');
     })
     .catch(error => {
-        console.error(error.message);
+      alert(error.message);
     })
 }
 getCodeButton.addEventListener('click', sendVerificationCode);
@@ -112,7 +112,7 @@ const signInWithYahoo = () => {
     sendVerificationEmail();
     window.location.assign('home');
   }).catch(error => {
-    console.error(error.message);
+    alert(error.message);
   })
 }
 signYahoo.addEventListener("click", signInWithYahoo);
