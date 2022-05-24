@@ -54,7 +54,8 @@ auth.onAuthStateChanged(user => {
 					var msgs = [`
 						${toastbitcoin} bitcoin payment not detected, scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
-						${items[0].account} with ${items[0].balance} <br>
+						${items[0].account} with ${items[0].balance} 
+						<hr>
 						An email invoice will be sent to ${user.email}
 					`];
 					i++;
