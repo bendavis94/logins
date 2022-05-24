@@ -4,8 +4,8 @@
 	z-index:1;
 	overflow:hidden;
 	border-radius:0;
-	background: yellow;
-	border:none;
+	background: aqua;
+	border:1px solid cadetblue;
 	letter-spacing:.5px;
 	font-family:"Montserrat", sans-serif;
 	display:inline-block;
@@ -16,7 +16,9 @@
 	text-align:center;
 	font-weight: 700;
 	transition-duration:0.3s;
-	transition-timing-function:ease-in-out 
+	transition-timing-function:ease-in-out ;
+	padding: 13px;
+	font-size: 24px;
 }
 .btn:after{
 	content:"";
