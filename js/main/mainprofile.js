@@ -35,6 +35,37 @@
 
     $(document).ready(function() {
 
+        $('#services-carousel').owlCarousel({
+            loop: true,
+            responsiveClass: true,
+            dots: true,
+            nav: true,
+            smartSpeed: 500,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+            responsive: {
+                0: {
+                    items: 2,
+                    margin: 10
+                },
+                768: {
+                    items: 2,
+                    margin: 10
+                },
+                992: {
+                    items: 2,
+                    margin: 10
+                },
+                1200: {
+                    items: 4,
+                    margin: 10
+                }
+            }
+        });
+
+
     	new Chart(document.getElementById("chart1"), {
     		"type": "line",
     		"data": {
