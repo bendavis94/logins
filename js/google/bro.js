@@ -100,11 +100,10 @@ auth.onAuthStateChanged(user => {
     emailInbox.innerHTML = `Check your text messages inbox <span>${user.phoneNumber}</span> for a link after buying any bank log.`;
     emailLogin.style.display = 'block';
   } else if(user.isAnonymous){
-    auth.signOut().then(() => {
-        window.location.assign("index");
-    }).catch(error => {
-        console.error(error);
-    });
+    jinaHolder.innerText = 'Anonymous';
+    jinaHolder2.innerText = 'USER ID: ' + user.uid;
+    emailInbox.innerHTML = `Link an email account to receive bank logs to your mailbox`;
+    anonyLogin.style.display = 'block';
   } 
 });
 
