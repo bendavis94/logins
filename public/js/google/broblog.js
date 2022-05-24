@@ -16,7 +16,6 @@ const jinaHolder2 = document.getElementById("jinaHolder2");
 const auth = firebase.auth();
 
 auth.onAuthStateChanged(user => {
-	let goodies = [];
 	if (!user) {
 		window.location.assign("index");
 	}
