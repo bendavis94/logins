@@ -16,13 +16,11 @@ auth.onAuthStateChanged(user => {
 			if(user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${user.email}, your account has insufficient balance to complete the download.
+						${toastbitcoin} bitcoin payment not detected, scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
-						<hr>
-						${items[0].account} with ${items[0].balance}
-						<hr>
-						${items[1].account} with ${items[1].balance}
+						${items[0].account} with ${items[0].balance} <br>
+						${items[1].account} with ${items[1].balance} <br>
+						An email invoice will be sent to ${user.email}
 					`];
 					i++;
 					if (i === msgs.length) {
@@ -82,15 +80,12 @@ auth.onAuthStateChanged(user => {
 			if(user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${user.email}, your account has insufficient balance to complete the download.
+						${toastbitcoin} bitcoin payment not detected, scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
-						<hr> 
-						${items[0].account} with ${items[0].balance}
-						<hr>
-						${items[1].account} with ${items[1].balance}
-						<hr>
-						${items[2].account} with ${items[2].balance}
+						${items[0].account} with ${items[0].balance} <br>
+						${items[1].account} with ${items[1].balance} <br>
+						${items[2].account} with ${items[2].balance} <br>
+						An email invoice will be sent to ${user.email}
 					`];
 					i++;
 					if (i === msgs.length) {
