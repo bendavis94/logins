@@ -17,37 +17,6 @@ const jinaHolder = document.getElementById("jinaHolder");
 const jinaHolder2 = document.getElementById("jinaHolder2");
 const invoiceHolder = document.getElementById('invoiceHolder');
 
-const mergeMail = document.getElementById('merge-mail');
-
-const signGoogle = document.getElementById('signGoogle');
-const signYahoo = document.getElementById('signYahoo');
-
-const sendVerificationEmail = () => {
-  auth.currentUser.sendEmailVerification()
-}
-
-const signInWithGoogle = () => {
-  const googleProvider = new firebase.auth.GoogleAuthProvider;
-  auth.signInWithPopup(googleProvider).then(() => {
-    sendVerificationEmail();
-    window.location.reload();
-  }).catch(error => {
-    console.error(error.message)
-  });
-};
-signGoogle.addEventListener("click", signInWithGoogle);
-
-const signInWithYahoo = () => {
-  const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
-  auth.signInWithPopup(yahooProvider).then(() => {
-    sendVerificationEmail();
-    window.location.reload()
-  }).catch(error => {
-    console.error(error.message);
-  })
-}
-signYahoo.addEventListener("click", signInWithYahoo);
-
 auth.onAuthStateChanged(user => {
   if (!user) {
     window.location.assign("index");
@@ -71,12 +40,7 @@ auth.onAuthStateChanged(user => {
     jinaHolder.innerText = user.phoneNumber;
     jinaHolder2.innerText = 'User ID: ' + user.uid;
     invoiceHolder.innerText = 'Invoice to: '+ user.phoneNumber;
-  } else if(user.isAnonymous){
-    jinaHolder.innerText = 'Anonymous';
-    jinaHolder2.innerText = 'User ID: ' + user.uid;
-    invoiceHolder.innerText = 'User ID: ' + user.uid;
-    mergeMail.style.display = 'block'
-  } 
+  }
 });
 
 fetch('https://ipapi.co/json/')

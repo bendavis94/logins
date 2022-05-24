@@ -47,24 +47,7 @@ auth.onAuthStateChanged(user => {
 					}
 					return msgs[i];
 				}
-			} else if(user.isAnonymous){
-				for(var i = 0; i < items.length; i++) {
-					var msgs = [`
-						Your anonymous account has insufficient balance to complete the download.
-						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
-						<hr>
-						${items[0].account} with ${items[0].balance}
-						<hr>
-						${items[1].account} with ${items[1].balance}
-					`];
-					i++;
-					if (i === msgs.length) {
-						i = 0;
-					}
-					return msgs[i];
-				}
-			}
+			} 
 		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 1)){
 			if(user.email){
 				for(var i = 0; i < items.length; i++) {
@@ -84,20 +67,6 @@ auth.onAuthStateChanged(user => {
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
 						${user.phoneNumber}, your account has insufficient balance to complete the download.
-						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: <br>
-						${items[0].account} with ${items[0].balance}
-					`];
-					i++;
-					if (i === msgs.length) {
-						i = 0;
-					}
-					return msgs[i];
-				}
-			} else if(user.isAnonymous){
-				for(var i = 0; i < items.length; i++) {
-					var msgs = [`
-						Your anonymous account has insufficient balance to complete the download.
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: <br>
 						${items[0].account} with ${items[0].balance}
@@ -133,25 +102,6 @@ auth.onAuthStateChanged(user => {
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
 						${user.phoneNumber}, your account has insufficient balance to complete the download.
-						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
-						<hr>
-						${items[0].account} with ${items[0].balance}
-						<hr>
-						${items[1].account} with ${items[1].balance}
-						<hr>
-						${items[2].account} with ${items[2].balance}
-					`];
-					i++;
-					if (i === msgs.length) {
-						i = 0;
-					}
-					return msgs[i];
-				}
-			} else if(user.isAnonymous){
-				for(var i = 0; i < items.length; i++) {
-					var msgs = [`
-						Your account has insufficient balance to complete the download.
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
