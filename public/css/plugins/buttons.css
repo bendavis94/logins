@@ -1219,7 +1219,7 @@ label.error{
 
 @media (max-width:776px){
     #merge-google, #merge-github, #merge-yahoo{
-        padding: 10px 2px !important;
+        padding: 10px !important;
         font-size: 17px !important;
     }
 }
