@@ -33,6 +33,264 @@
         }
     });
 
+    $(document).ready(function() {
+
+    	new Chart(document.getElementById("chart1"), {
+    		"type": "line",
+    		"data": {
+    			"labels": [
+                    "Bank of America", 
+                    "Barclays", 
+                    "B.B.V.A", 
+                    "Chase", 
+                    "Chime", 
+                    "Citi", 
+                    "Huntington",
+                    "Navy Federal",
+                    "P.N.C",
+                    "R.B.C",
+                    "Scotia",
+                    "ShopWithScrip",
+                    "Truist",
+                    "Wells Fargo",
+                    "Woodforest"
+                ],
+    			"datasets": [{
+    				"label": "Logs Available",
+    				"data": [
+                        21, 
+                        30, 
+                        24, 
+                        25, 
+                        30,
+                        27,
+                        28,
+                        21,
+                        23, 
+                        21, 
+                        17, 
+                        23, 
+                        22, 
+                        30, 
+                        20
+                    ],
+    				"fill": false,
+    				"borderColor": "rgb(99, 203, 137)",
+    				"lineTension": 0.1
+    			}]
+    		},
+    		"options": {}
+    	});
+
+    	new Chart(document.getElementById("chart2"), {
+    		"type": "bar",
+    		"data": {
+    			"labels": [
+                    "Bank of America", 
+                    "Barclays", 
+                    "B.B.V.A", 
+                    "Chase", 
+                    "Chime", 
+                    "Citi", 
+                    "Huntington",
+                    "Navy Federal",
+                    "P.N.C",
+                    "R.B.C",
+                    "Scotia",
+                    "ShopWithScrip",
+                    "Truist",
+                    "Wells Fargo",
+                    "Woodforest"
+                ],
+    			"datasets": [{
+    				"label": "Logs Available",
+                    "data": [
+                        21, 
+                        30, 
+                        24, 
+                        25, 
+                        30,
+                        27,
+                        28,
+                        21,
+                        23, 
+                        21, 
+                        17, 
+                        23, 
+                        22, 
+                        30, 
+                        20
+                    ],
+    				"fill": false,
+    				"backgroundColor": [
+                        "rgba(236, 94, 105, 0.2)", 
+                        "rgba(255, 159, 64, 0.2)", 
+                        "rgba(241, 194, 5, 0.2)", 
+                        "rgba(99, 203, 137, 0.2)", 
+                        "rgba(0, 112, 224, 0.2)", 
+                        "rgba(153, 102, 255, 0.2)", 
+                        "rgba(201, 203, 207, 0.2)",
+                        "rgba(0, 112, 224, 0.2)", 
+                        "rgba(236, 94, 105, 0.2)", 
+                        "rgba(255, 159, 64, 0.2)", 
+                        "rgba(241, 194, 5, 0.2)", 
+                        "rgba(99, 203, 137, 0.2)", 
+                        "rgba(0, 112, 224, 0.2)", 
+                        "rgba(153, 102, 255, 0.2)", 
+                        "rgba(201, 203, 207, 0.2)"
+                    ],
+    				"borderColor": [
+                        "rgb(236, 94, 105)", 
+                        "rgb(255, 159, 64)", 
+                        "rgb(241, 194, 5)", 
+                        "rgb(99, 203, 137)", 
+                        "rgb(0, 112, 224)", 
+                        "rgb(153, 102, 255)", 
+                        "rgb(201, 203, 207)",
+                        "rgb(0, 112, 224)", 
+                        "rgb(236, 94, 105)", 
+                        "rgb(255, 159, 64)", 
+                        "rgb(241, 194, 5)", 
+                        "rgb(99, 203, 137)", 
+                        "rgb(0, 112, 224)", 
+                        "rgb(153, 102, 255)", 
+                        "rgb(201, 203, 207)",
+                    ],
+    				"borderWidth": 1
+    			}]
+    		},
+    		"options": {
+    			"scales": {
+    				"yAxes": [{
+    					"ticks": {
+    						"beginAtZero": true
+    					}
+    				}]
+    			}
+    		}
+    	});
+
+    	new Chart(document.getElementById("chart3"), {
+    		"type": "pie",
+    		"data": {
+                "labels": [
+                    "Bank of America", 
+                    "Barclays", 
+                    "B.B.V.A", 
+                    "Chase", 
+                    "Chime", 
+                    "Citi", 
+                    "Huntington",
+                    "Navy Federal",
+                    "P.N.C",
+                    "R.B.C",
+                    "Scotia",
+                    "ShopWithScrip",
+                    "Truist",
+                    "Wells Fargo",
+                    "Woodforest"
+                ],
+    			"datasets": [{
+    				"label": "Logs Available",
+                    "data": [
+                        21, 
+                        30, 
+                        24, 
+                        25, 
+                        30,
+                        27,
+                        28,
+                        21,
+                        23, 
+                        21, 
+                        17, 
+                        23, 
+                        22, 
+                        30, 
+                        20
+                    ],
+                    "backgroundColor": [
+                        "rgba(236, 94, 105, 0.7)", 
+                        "rgba(255, 159, 64, 0.7)", 
+                        "rgba(241, 194, 5, 0.7)", 
+                        "rgba(99, 203, 137, 0.7)", 
+                        "rgba(0, 112, 224, 0.7)", 
+                        "rgba(153, 102, 255, 0.7)", 
+                        "rgba(201, 203, 207, 0.7)",
+                        "rgba(0, 112, 224, 0.7)", 
+                        "rgba(236, 94, 105, 0.7)", 
+                        "rgba(255, 159, 64, 0.7)", 
+                        "rgba(241, 194, 5, 0.7)", 
+                        "rgba(99, 203, 137, 0.7)", 
+                        "rgba(0, 112, 224, 0.7)", 
+                        "rgba(153, 102, 255, 0.7)", 
+                        "rgba(201, 203, 207, 0.7)"
+                    ],
+    			}]
+    		}
+    	});
+
+        new Chart(document.getElementById("chart4"), {
+    		"type": "doughnut",
+    		"data": {
+                "labels": [
+                    "Bank of America", 
+                    "Barclays", 
+                    "B.B.V.A", 
+                    "Chase", 
+                    "Chime", 
+                    "Citi", 
+                    "Huntington",
+                    "Navy Federal",
+                    "P.N.C",
+                    "R.B.C",
+                    "Scotia",
+                    "ShopWithScrip",
+                    "Truist",
+                    "Wells Fargo",
+                    "Woodforest"
+                ],
+    			"datasets": [{
+    				"label": "Logs Available",
+                    "data": [
+                        21, 
+                        30, 
+                        24, 
+                        25, 
+                        30,
+                        27,
+                        28,
+                        21,
+                        23, 
+                        21, 
+                        17, 
+                        23, 
+                        22, 
+                        30, 
+                        20
+                    ],
+                    "backgroundColor": [
+                        "rgba(236, 94, 105, 0.7)", 
+                        "rgba(255, 159, 64, 0.7)", 
+                        "rgba(241, 194, 5, 0.7)", 
+                        "rgba(99, 203, 137, 0.7)", 
+                        "rgba(0, 112, 224, 0.7)", 
+                        "rgba(153, 102, 255, 0.7)", 
+                        "rgba(201, 203, 207, 0.7)",
+                        "rgba(0, 112, 224, 0.7)", 
+                        "rgba(236, 94, 105, 0.7)", 
+                        "rgba(255, 159, 64, 0.7)", 
+                        "rgba(241, 194, 5, 0.7)", 
+                        "rgba(99, 203, 137, 0.7)", 
+                        "rgba(0, 112, 224, 0.7)", 
+                        "rgba(153, 102, 255, 0.7)", 
+                        "rgba(201, 203, 207, 0.7)"
+                    ],
+    			}]
+    		}
+    	});
+
+    });
     function toggleFullScreen() {
         if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
             if (document.documentElement.requestFullscreen) {
