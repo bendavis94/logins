@@ -19,7 +19,7 @@ const auth = firebase.auth();
 
 auth.onAuthStateChanged(user => {
   if (!user) {
-    window.location.assign("index");
+    // window.location.assign("index");
   }
   if (user.photoURL) {
     logoHolder.setAttribute("src", user.photoURL);
@@ -39,13 +39,7 @@ auth.onAuthStateChanged(user => {
     jinaHolder.innerText = user.phoneNumber;
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
     emailInbox.innerHTML = `Check your text messages inbox <span>${user.phoneNumber}</span> for a link after buying any bank log.`;
-  } else if(user.isAnonymous){
-    auth.signOut().then(() => {
-      window.location.assign("index");
-    }).catch(error => {
-        console.error(error);
-    });
-  }
+  } 
 });
 
 fetch('https://ipapi.co/json/')
