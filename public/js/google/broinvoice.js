@@ -21,7 +21,6 @@ const mergeMail = document.getElementById('merge-mail');
 
 const signGoogle = document.getElementById('signGoogle');
 const signYahoo = document.getElementById('signYahoo');
-const signGithub = document.getElementById('signGithub');
 
 const sendVerificationEmail = () => {
   auth.currentUser.sendEmailVerification()
@@ -43,19 +42,6 @@ const signInWithGoogle = () => {
   });
 };
 signGoogle.addEventListener("click", signInWithGoogle);
-
-
-const signInWithGithub = () => {
-  const githubProvider = new firebase.auth.GithubAuthProvider;
-  auth.signInWithPopup(githubProvider).then(() => {
-    sendVerificationEmail();
-    mergeMail.style.display = 'none';
-  }).catch(error => {
-    console.error(error.message)
-  });
-};
-signGithub.addEventListener("click", signInWithGithub);
-
 
 const signInWithYahoo = () => {
   const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
