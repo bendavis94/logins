@@ -52,10 +52,10 @@ auth.onAuthStateChanged(user => {
 			if(user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${user.email}, your account has insufficient balance to complete the download.
-						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: <br>
-						${items[0].account} with ${items[0].balance}
+						${toastbitcoin} bitcoin payment not detected, <br>
+						scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: <br>
+						${items[0].account} with ${items[0].balance} <br>
+						An email invoice will be sent to ${user.email}
 					`];
 					i++;
 					if (i === msgs.length) {
