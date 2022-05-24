@@ -30,19 +30,16 @@ auth.onAuthStateChanged(user => {
     jinaHolder.innerText = user.displayName;
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
     emailInbox.innerHTML = `Check your email inbox <span>${user.email}</span> after buying any bank log.`;
-    emailLogin.style.display = 'block';
   } else if(!user.displayName && user.email) {
     var themail = user.email;
     var theaddress = themail.substring(0,themail.indexOf('@'));
     jinaHolder.innerText = theaddress;
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
     emailInbox.innerHTML = `Check your email inbox <span>${user.email}</span> after buying any bank log.`;
-    emailLogin.style.display = 'block';
   } else if(user.phoneNumber){
     jinaHolder.innerText = user.phoneNumber;
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
     emailInbox.innerHTML = `Check your text messages inbox <span>${user.phoneNumber}</span> for a link after buying any bank log.`;
-    emailLogin.style.display = 'block';
   } else if(user.isAnonymous){
     auth.signOut().then(() => {
       window.location.assign("index");
