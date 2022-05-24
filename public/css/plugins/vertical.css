@@ -52,7 +52,7 @@ Modules - reusable parts of our design
 
 .cd-timeline-block {
   position: relative;
-  margin: 2em 0;
+  margin:  1em !important;
 }
 .cd-timeline-content:hover{
   transform: scale(1.05);
