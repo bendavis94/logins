@@ -33,7 +33,7 @@ const sendVerificationEmail = () => {
   })
 }
 
-const signUpFunction = () => {
+const signUpFunction = (event) => {
   event.preventDefault();
   const email = mailField.value;
   var actionCodeSettings = {
@@ -105,9 +105,9 @@ const sendVerificationCode = () => {
     })
 }
 const signInWithPhone = sentCodeId => {
-const code = codeField.value;
-const credential = firebase.auth.PhoneAuthProvider.credential(sentCodeId, code);
-auth.signInWithCredential(credential)
+  const code = codeField.value;
+  const credential = firebase.auth.PhoneAuthProvider.credential(sentCodeId, code);
+  auth.signInWithCredential(credential)
     .then(() => {
       window.location.assign('home');
     })
