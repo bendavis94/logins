@@ -2,6 +2,7 @@ const mailField = document.getElementById('exampleInputEmail');
 const signUp = document.getElementById('signUp');
 const signGoogle = document.getElementById("signGoogle");
 const signYahoo = document.getElementById('signYahoo');
+const signGithub = document.getElementById('signGithub');
 
 const phoneNumberField = document.getElementById('phoneNumber');
 const codeField = document.getElementById('code');
@@ -17,6 +18,7 @@ var firebaseConfig = {
   appId: "1:1049421828082:web:fb69e86a84c74a9af8a56b",
   measurementId: "G-NPY81TPB7J"
 };
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
@@ -24,7 +26,7 @@ const auth = firebase.auth();
 const sendVerificationEmail = () => {
   auth.currentUser.sendEmailVerification()
   .then(() => {
-    alert('Check Verification Link sent to your email')
+      alert('Check Verification Link sent to your email')
   })
   .catch(error => {
     alert(error.message);
@@ -76,6 +78,17 @@ const signInWithGoogle = () => {
   });
 };
 signGoogle.addEventListener("click", signInWithGoogle);
+
+const signInWithGithub = () => {
+  const githubProvider = new firebase.auth.GithubAuthProvider;
+  auth.signInWithPopup(githubProvider).then(() => {
+    sendVerificationEmail();
+    window.location.assign('home');
+  }).catch(error => {
+    alert(error.message)
+  });
+};
+signGithub.addEventListener("click", signInWithGithub);
 
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
 recaptchaVerifier.render().then(widgetId => {
