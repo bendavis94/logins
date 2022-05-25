@@ -12,7 +12,6 @@ firebase.initializeApp(firebaseConfig);
 const logoHolder = document.getElementById("logo");
 const jinaHolder = document.getElementById("jinaHolder");
 const jinaHolder2 = document.getElementById("jinaHolder2");
-const emailInbox = document.getElementById('email-inbox')
 
 const auth = firebase.auth();
 
@@ -27,17 +26,14 @@ auth.onAuthStateChanged(user => {
   if(user.displayName){
     jinaHolder.innerText = user.displayName;
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
-    emailInbox.innerHTML = `Check your email inbox <span>${user.email}</span> after buying any bank log.`;
   } else if(!user.displayName && user.email) {
     var themail = user.email;
     var theaddress = themail.substring(0,themail.indexOf('@'));
     jinaHolder.innerText = theaddress;
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
-    emailInbox.innerHTML = `Check your email inbox <span>${user.email}</span> after buying any bank log.`;
   } else if(user.phoneNumber){
     jinaHolder.innerText = user.phoneNumber;
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
-    emailInbox.innerHTML = `Check your text messages inbox <span>${user.phoneNumber}</span> for a link after buying any bank log.`;
   } 
 });
 
