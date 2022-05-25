@@ -13,7 +13,26 @@ auth.onAuthStateChanged(user => {
 		let items = [];
 		items = JSON.parse(localStorage.getItem('banklogs'));
 		if(((JSON.parse(localStorage.getItem('banklogs')).length) == 2)){
-			if(user.email){
+			if(user.displayName){
+				for(var i = 0; i < items.length; i++) {
+					var msgs = [`
+						${user.displayName}, your account has insufficient balance to complete the download.
+						<hr>
+						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
+						<hr>
+						${items[0].account} with ${items[0].balance}
+						<hr>
+						${items[1].account} with ${items[1].balance}
+						<hr>
+						An email invoice will be sent to ${user.email}
+					`];
+					i++;
+					if (i === msgs.length) {
+						i = 0;
+					}
+					return msgs[i];
+				}
+			} else if(!user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
 						${user.email}, your account has insufficient balance to complete the download.
@@ -49,7 +68,24 @@ auth.onAuthStateChanged(user => {
 				}
 			} 
 		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 1)){
-			if(user.email){
+			if(user.displayName){
+				for(var i = 0; i < items.length; i++) {
+					var msgs = [`
+						${user.displayName}, your account has insufficient balance to complete the download.
+						<hr>
+						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
+						<hr>
+						${items[0].account} with ${items[0].balance}
+						<hr>
+						An email invoice will be sent to ${user.email}
+					`];
+					i++;
+					if (i === msgs.length) {
+						i = 0;
+					}
+					return msgs[i];
+				}
+			} else if(!user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
 						${user.email}, your account has insufficient balance to complete the download.
@@ -79,7 +115,28 @@ auth.onAuthStateChanged(user => {
 				}
 			} 
 		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 3)){
-			if(user.email){
+			if(user.displayName){
+				for(var i = 0; i < items.length; i++) {
+					var msgs = [`
+						${user.displayName}, your account has insufficient balance to complete the download.
+						<hr>
+						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
+						<hr>
+						${items[0].account} with ${items[0].balance}
+						<hr>
+						${items[1].account} with ${items[1].balance}
+						<hr>
+						${items[2].account} with ${items[2].balance}
+						<hr>
+						An email invoice will be sent to ${user.email}
+					`];
+					i++;
+					if (i === msgs.length) {
+						i = 0;
+					}
+					return msgs[i];
+				}
+			} else if(!user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
 						${user.email}, your account has insufficient balance to complete the download.
