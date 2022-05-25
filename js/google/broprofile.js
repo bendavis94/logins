@@ -103,7 +103,7 @@ fetch('https://ipapi.co/json/')
 })
 .then(function(data) {
 	document.getElementById('yourIP2').innerHTML = `${data.ip}, ${data.city}, ${data.country_name}, ${data.region}, ${data.org}, ${data.timezone}, Country code: ${data.country_calling_code}`;
-    document.getElementById('footer-email').innerHTML = `Your IP: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
+    document.getElementById('footer-email').innerHTML = `Your IP address: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
 });
 
 
