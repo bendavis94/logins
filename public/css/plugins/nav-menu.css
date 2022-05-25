@@ -1237,7 +1237,7 @@ header{
 }
 /*# sourceMappingURL=nav-menu.css.map */
 .champez2 li{
-    border-bottom: 1px solid yellow;
+    border-bottom: 1px solid rgba(255 , 255 , 0, 0.3) !important;
 }
 
 @media screen and (max-width: 769px) and (min-width: 568px){
@@ -1687,10 +1687,6 @@ th{
     color: #121d33;
     font-weight: 600;
 }
-.btn-cart span{
-    font-weight: 600;
-    font-size: 18px;
-}
 .popimg{
     color: #000;
     font-weight: 600;
@@ -1867,3 +1863,11 @@ h3.text-white{
 	content:'+'
 }
 
+.nav-img{
+    position: relative; 
+    width: 20px !important; 
+    height: 20px !important;
+    margin-left: 3px; 
+    border: none !important; 
+    border-radius: 4px !important;
+}
