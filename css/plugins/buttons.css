@@ -1,7 +1,13 @@
+.lesnar{
+    background: yellow; 
+    border: 1px solid gold;
+    padding: 8px; 
+    float: right;
+}
 .lesnar span{
     color: #121d33;
     font-weight: 700;
-    font-size: 20px !important;
+    font-size: 19px !important;
 }
 .lesnar:hover span{
     color: #fff;
@@ -10,13 +16,20 @@
     background: white;
     border: 1px solid rgba(18, 29, 51,0.3);
     color: #121d33;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
     padding: 8px;
     align-items: center;
     float: right;
 }
 .goldberg:hover{
+    color: #fff;
+}
+#logoutButton{
+    background: rgba(255, 0, 0, 0.7); 
+    border: 1px solid red; 
+    padding: 8px; 
+    float: right;
     color: #fff;
 }
 .gta{
@@ -130,13 +143,6 @@
     #otherbanks{
         font-size: 26px;
    }
-}
-.goldberg img{
-    position: relative;
-    width: 20px;
-    margin-left: 3px;
-    border: none;
-    height: auto;
 }
 .borderp{
     width: 36px;
@@ -1451,8 +1457,8 @@ label.error{
 
 
  .attr-nav>ul>li.dropdown ul.dropdown-menu{
-    left:-307px ;
-    width:400px;
+    left:-267px ;
+    width:360px;
     border: 1.5px solid aqua !important;
 }
 @media (max-width:576px){
