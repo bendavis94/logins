@@ -52,15 +52,15 @@
                     margin: 10
                 },
                 768: {
-                    items: 2,
+                    items: 3,
                     margin: 10
                 },
                 992: {
-                    items: 2,
+                    items: 3,
                     margin: 10
                 },
                 1200: {
-                    items: 4,
+                    items: 5,
                     margin: 10
                 }
             }

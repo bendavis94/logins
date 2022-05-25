@@ -42,7 +42,7 @@ fetch('https://ipapi.co/json/')
   return response.json();
 })
 .then(function(data) {
-  document.getElementById('footer-email').innerHTML = `Your IP: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
+  document.getElementById('footer-email').innerHTML = `Your IP address: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
 });
 
 const logoutButton = document.getElementById("logoutButton");
