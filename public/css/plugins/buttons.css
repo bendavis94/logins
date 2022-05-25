@@ -1463,3 +1463,13 @@ label.error{
 }
 
 
+.tele-ch{
+    padding: 7px 5px !important;
+}
+
+@media (max-width:776px){
+    .tele-ch{
+        font-size: 17px !important;
+        padding: 7px 0px !important;
+    }
+}
