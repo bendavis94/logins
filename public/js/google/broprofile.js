@@ -184,6 +184,8 @@ const changeNameAndPhoto = (user, newNameAndPhoto) => {
         })
         .then(() => {
             alert('Profile Updated Successfully !');
+            document.getElementById('jinaHolder').innerText = displayNameField.value;
+            document.getElementById('logo').style.borderRadius = '50%';
         })
         .catch(error => {
             console.error(error);
@@ -208,6 +210,7 @@ const changeNameAndPhoto = (user, newNameAndPhoto) => {
         .then(() => {
             alert('PhotoURL Updated Successfully !');
             document.getElementById('logo').setAttribute("src", user.photoURL);
+            document.getElementById('logo').style.borderRadius = '50%';
         })
         .catch(error => {
             console.error(error);
