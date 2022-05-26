@@ -195,7 +195,7 @@ const changeNameAndPhoto = (user, newNameAndPhoto) => {
         })
         .then(() => {
             console.log('Display Name Updated Successfully !');
-            document.getElementById('jinaHolder').innerText = displayName;
+            document.getElementById('jinaHolder').innerText = displayNameField.value;
         })
         .catch(error => {
             console.error(error);
