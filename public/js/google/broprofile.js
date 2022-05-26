@@ -80,11 +80,20 @@ auth.onAuthStateChanged(user => {
 			}
 		}
 	} else if(user.isAnonymous){
-        auth.signOut().then(() => {
-            window.location.assign("index");
-        }).catch(error => {
-            console.error(error);
-        });
+        jinaHolder.innerText = 'Anonymous';
+		jinaHolder2.innerText = 'User ID: ' + user.uid;
+		tableidHolder.value = "Name: Anonymous";
+
+		email1.innerHTML = `Bank log files can only be downloaded <strong>ONCE</strong>, save them in a folder you won't forget`;
+		email2.innerHTML = `If you'd like to get a copy of bank log files sent via email, login with google, email or yahoo`;
+		email5.innerHTML = `Logged in anonymously, no email invoice will be sent`;
+
+		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
+			goodies = JSON.parse(localStorage.getItem('banklogs'));
+			for(var i = 0; i < goodies.length; i++) {
+				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous';
+			}
+		}
     }
 });
 
