@@ -204,8 +204,22 @@ select{
     width: auto;
     border-radius: 7px;
 }
+
+
+
+
+
 #displayName, #photo, #nameBro, textarea{
     width: 100%;
+}
+#nameBro{
+    border: 2px solid lightblue; 
+    padding: 7px; 
+    background: white !important; 
+    border-radius: 0 !important;
+}
+#questionz{
+    
 }
 #showtoasts{
     font-size: 18px;
