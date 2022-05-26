@@ -83,7 +83,13 @@ auth.onAuthStateChanged(user => {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
 			}
 		}
-    } 
+    } else if(user.isAnonymous){
+        auth.signOut().then(() => {
+          window.location.assign("index");
+        }).catch(error => {
+            console.error(error);
+        });
+      }
 });
 
 const logoutButton = document.getElementById("logoutButton");
