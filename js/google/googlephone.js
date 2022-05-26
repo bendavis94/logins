@@ -25,14 +25,14 @@ const auth = firebase.auth();
 const sendVerificationEmail = () => {
   auth.currentUser.sendEmailVerification()
   .then(() => {
-      alert('Check Verification Link sent to your email')
+    console.log('Check Verification Link sent to your email')
   })
   .catch(error => {
     console.log(error.message);
   })
 }
 
-const signUpFunction = (event) => {
+const signUpFunction = () => {
   event.preventDefault();
   const email = mailField.value;
   var actionCodeSettings = {
@@ -115,7 +115,6 @@ const signInWithPhone = sentCodeId => {
     })
 }
 getCodeButton.addEventListener('click', sendVerificationCode);
-
 
 const signInWithYahoo = () => {
   const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
