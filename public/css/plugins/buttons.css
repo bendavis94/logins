@@ -209,23 +209,31 @@ select{
 
 
 
-#displayName, #photo, #nameBro, textarea{
+#displayName, #photo, #nameBro, #new-name, #new-photo, textarea{
     width: 100%;
 }
-#nameBro{
+#nameBro, #new-name, #new-photo{
     border: 2px solid lightblue; 
     padding: 7px; 
     background: white !important; 
     border-radius: 0 !important;
-}
-#questionz{
-    
 }
 #showtoasts{
     font-size: 18px;
     width: 99%;
     padding-left: 7px !important;
     padding-right: 7px !important;
+}
+#update-profile{
+    font-size: 18px;
+    padding-left: 7px !important;
+    padding-right: 7px !important;
+    width: auto !important;
+}
+#update-profile img{
+    position: relative; 
+    width: 20px; 
+    margin-left: 3px;
 }
 .letsgo{
     border-radius: 3px;

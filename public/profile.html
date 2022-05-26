@@ -3888,8 +3888,6 @@
             </div>
         </div>
 
-
-
         <div class="col-xl-4 col-lg-4 col-md-5 col-12">
 
             <div class="section-heading">
@@ -3970,8 +3968,6 @@
 
     </div>
     </div>
-
-
 
 
     <div class="container-fluid infinite-floating">
@@ -4774,7 +4770,7 @@
         </div>
     </div>
 
-    <div class="container-fluid" style="display: none !important">
+    <div class="container-fluid">
         <div class="section-heading">
             <h3>Crypto Prices</h3>
         </div>
@@ -4801,6 +4797,38 @@
                 <div id="crypto2">
                     <iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&pref_coin_id=1505&invert_hover=no"></iframe>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid infinite-floating">
+        <div class="row">
+
+            <div class="col-lg-4 col-md-4 col-12 center-col" style="padding: 30px 0">
+
+                <div class="section-heading">
+                    <h4 class="text-white" id="faqz">
+                        Edit Account Info
+                    </h4>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-body" style="padding: 0; margin: 0;">
+                        <div class="col-md-12">
+                            <label>New Display Name:</label>
+                            <input type="text" placeholder="Enter new display name" id="new-name" data-constraints="@LettersOnly @NotEmpty" maxlength="12">
+                        </div>
+                        <div class="col-md-12">
+                            <label>New Profile Picture:</label>
+                            <input type="text" placeholder="Enter photo URL" id="new-photo" data-constraints="@LettersOnly @NotEmpty" maxlength="75">
+                        </div>
+                    </div>    
+                    <div class="modal-footer" style="margin: 0; padding: 5px 0;">
+                        <button class="btn-style4" id="update-profile">     
+                            CONFIRM <img src="img/svg/success.svg">
+                        </button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
