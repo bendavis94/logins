@@ -35,8 +35,11 @@ auth.onAuthStateChanged(user => {
     jinaHolder.innerText = user.phoneNumber;
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
   } else if(user.isAnonymous){
-    jinaHolder.innerText = 'Anonymous';
-    jinaHolder2.innerText = 'USER ID: ' + user.uid;
+    auth.signOut().then(() => {
+      window.location.assign("index");
+    }).catch(error => {
+      console.error(error);
+    });
   }
 });
 
