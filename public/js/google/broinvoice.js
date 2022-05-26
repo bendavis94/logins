@@ -40,9 +40,11 @@ auth.onAuthStateChanged(user => {
     jinaHolder2.innerText = 'User ID: ' + user.uid;
     invoiceHolder.innerText = 'Invoice to: '+ user.phoneNumber;
   } else if(user.isAnonymous){
-    jinaHolder.innerText = 'Anonymous';
-    jinaHolder2.innerText = 'User ID: ' + user.uid;
-    invoiceHolder.innerText = 'User ID: ' + user.uid;
+    auth.signOut().then(() => {
+      window.location.assign("index");
+    }).catch(error => {
+      console.error(error);
+    });
   }
 });
 
