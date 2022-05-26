@@ -39,11 +39,7 @@ auth.onAuthStateChanged(user => {
     jinaHolder.innerText = user.phoneNumber;
     jinaHolder2.innerText = 'User ID: ' + user.uid;
     invoiceHolder.innerText = 'Invoice to: '+ user.phoneNumber;
-  } else if(user.isAnonymous){
-    jinaHolder.innerText = 'Anonymous';
-    jinaHolder2.innerText = 'User ID: ' + user.uid;
-    invoiceHolder.innerText = 'User ID: ' + user.uid;
-  }
+  } 
 });
 
 fetch('https://ipapi.co/json/')
