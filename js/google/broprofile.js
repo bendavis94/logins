@@ -183,7 +183,7 @@ const changeNameAndPhoto = (user, newNameAndPhoto) => {
             photoURL: newPhotoURL
         })
         .then(() => {
-            console.log('Profile Updated Successfully !');
+            alert('Profile Updated Successfully !');
         })
         .catch(error => {
             console.error(error);
@@ -194,7 +194,7 @@ const changeNameAndPhoto = (user, newNameAndPhoto) => {
             displayName: newDisplayName
         })
         .then(() => {
-            console.log('Display Name Updated Successfully !');
+            alert('Display Name Updated Successfully !');
             document.getElementById('jinaHolder').innerText = displayNameField.value;
         })
         .catch(error => {
@@ -206,7 +206,8 @@ const changeNameAndPhoto = (user, newNameAndPhoto) => {
             photoURL: newPhotoURL
         })
         .then(() => {
-            console.log('PhotoURL Updated Successfully !');
+            alert('PhotoURL Updated Successfully !');
+            document.getElementById('logo').setAttribute("src", user.photoURL);
         })
         .catch(error => {
             console.error(error);
