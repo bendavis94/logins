@@ -10,13 +10,13 @@ const signInWithPhoneButton = document.getElementById('signInWithPhone');
 const getCodeButton = document.getElementById('getCode');
 
 var firebaseConfig = {
-  apiKey: "AIzaSyA1L3Q63zrir2ZOQMzc7AxXuPBXjaOnIwo",
-  authDomain: "darknet-id.firebaseapp.com",
-  projectId: "darknet-id",
-  storageBucket: "darknet-id.appspot.com",
-  messagingSenderId: "1049421828082",
-  appId: "1:1049421828082:web:fb69e86a84c74a9af8a56b",
-  measurementId: "G-NPY81TPB7J"
+  apiKey: "AIzaSyDqtvSwE6h8eaLiKyvzu3aPf0JXNgbI-SU",
+  authDomain: "darknet-logins.firebaseapp.com",
+  projectId: "darknet-logins",
+  storageBucket: "darknet-logins.appspot.com",
+  messagingSenderId: "1063580056043",
+  appId: "1:1063580056043:web:96ca2d3c70a813cbc841ae",
+  measurementId: "G-ZYDKRNKCEN"
 };
 firebase.initializeApp(firebaseConfig);
 
