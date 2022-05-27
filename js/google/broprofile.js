@@ -20,7 +20,6 @@ const email2 = document.getElementById('yourEmail2');
 const email5 = document.getElementById('yourEmail5');
 
 const displayNameField = document.getElementById('new-name');
-const photoField = document.getElementById('new-photo');
 const editButton = document.getElementById('update-profile');
 
 
@@ -29,7 +28,7 @@ const auth = firebase.auth();
 auth.onAuthStateChanged(user => {
 	let goodies = [];
 	if (!user) {
-		// window.location.assign("index");
+		window.location.assign("index");
 	}
 	if (user.photoURL) {
 		logoHolder.setAttribute("src", user.photoURL);
@@ -163,8 +162,7 @@ function displayImage(row, images){
 
 const editInformation = () => {
     const newNameAndPhoto = {
-        newDisplayName: displayNameField.value,
-        newPhotoURL: photoField.value
+        newDisplayName: displayNameField.value
     };
     const user = auth.currentUser;
     changeNameAndPhoto(user, newNameAndPhoto);
@@ -172,23 +170,8 @@ const editInformation = () => {
 }
 
 const changeNameAndPhoto = (user, newNameAndPhoto) => {
-    const {newDisplayName, newPhotoURL} = newNameAndPhoto;
-    //Changes displayName and photoURL properties
-    if(newDisplayName && newPhotoURL)
-        user.updateProfile({
-            displayName: newDisplayName,
-            photoURL: newPhotoURL
-        })
-        .then(() => {
-            alert('Profile Updated Successfully !');
-            document.getElementById('jinaHolder').innerText = displayNameField.value;
-            document.getElementById('logo').style.borderRadius = '50%';
-        })
-        .catch(error => {
-            console.error(error);
-        })
-    //Changes only displaName
-    else if(newDisplayName)
+    const {newDisplayName} = newNameAndPhoto;
+    if(newDisplayName) {
         user.updateProfile({
             displayName: newDisplayName
         })
@@ -199,19 +182,7 @@ const changeNameAndPhoto = (user, newNameAndPhoto) => {
         .catch(error => {
             console.error(error);
         })
-    //Changes only photoURL
-    else if(newPhotoURL)
-        user.updateProfile({
-            photoURL: newPhotoURL
-        })
-        .then(() => {
-            alert('PhotoURL Updated Successfully !');
-            document.getElementById('logo').setAttribute("src", user.photoURL);
-            document.getElementById('logo').style.borderRadius = '50%';
-        })
-        .catch(error => {
-            console.error(error);
-        })
+    }
 }
 
 editButton.addEventListener('click', editInformation);
