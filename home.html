@@ -479,7 +479,63 @@
                         </h4>
                 </div>
             </div>
+        </div>
 
+        <div class="container-fluid infinite-floating" id="edit-info">
+            <div class="row">
+    
+                <div class="col-lg-4 col-md-4 col-12 center-col" style="padding: 30px 0">
+    
+                    <div class="section-heading">
+                        <h4 class="text-white" id="faqz">
+                            Edit Display Name
+                        </h4>
+                    </div>
+                    <div class="modal-content">
+                        <div class="modal-body" style="padding: 0; margin: 0;">
+                            <div class="col-md-12">
+                                <label>New Display Name:</label>
+                                <input type="text" placeholder="Enter new display name..." id="new-name" data-constraints="@LettersOnly @NotEmpty" maxlength="17">
+                            </div>
+                        </div>    
+                        <div class="modal-footer" style="margin: 0; padding: 5px 0;">
+                            <button class="btn-style4" id="update-profile">     
+                                CONFIRM <img src="img/svg/success.svg">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4 col-md-4 col-12 center-col" style="padding: 30px 0;">
+                    <div class="section-heading">
+                        <h4 class="text-white" id="faqz">
+                            Update Profile Picture
+                        </h4>
+                    </div>
+                    <div class="modal-content">
+                        <div class="modal-body" style="padding: 0; margin: 0;">
+                            <div class="col-md-12">
+                                <label>Upload new profile photo:</label>
+                                <div class="custom-file">
+                                    <input class="custom-file-input" type="file" id="profile-pic" name="Profile" accept="image/*" />
+                                    <label class="custom-file-label" data-browse="Browse">Choose file</label>
+                                </div>
+                
+                                <div class="progress progress-md progress-rounded" style="border: 1px solid lightgray; margin: 7px 0 !important;">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated  bg-success" 
+                                        id="pablos-2"
+                                        style="width: 100%;">
+                                        <span id="escoz-2" style="margin: 0 auto !important;">
+                                            Upload Progress: 0%
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+    
+            </div>
         </div>
 
         <div class="container-fluid lg-display-none">
@@ -705,7 +761,7 @@
 
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
-    <script  src="js/google/bro.js"></script>
+    <script  src="js/google/brohome.js"></script>
     <script src="js/main/core.home2.js"></script>
     <script src="js/main/mainhome2.js"></script>
 
