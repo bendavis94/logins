@@ -17,6 +17,12 @@
     padding:0;
 }
 
+@media (max-width:776px){
+    #crypto1{
+        height: 540px;
+    }
+}
+
 #crypto2{
     height:40px; 
     background-color: #fff; 
