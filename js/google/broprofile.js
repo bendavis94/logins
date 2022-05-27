@@ -221,7 +221,7 @@ editButton.addEventListener('click', editInformation);
 
 document.getElementById('profile-pic').addEventListener('change', (event) => {
 	const file = event.target.files[0];
-	const storageRef = firebase.storage().ref('images' + file.name);
+	const storageRef = firebase.storage().ref('profiles/images' + file.name);
 	storageRef.put(file).on('state_changed', (snapshot) => {
 		const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
 		const progressBar_2 = document.getElementById("pablos-2");
