@@ -126,18 +126,18 @@ document.getElementById('file').addEventListener('change', (event) => {
 	}, async () => {
 		const url = await storageRef.getDownloadURL();
 
-        const user = auth.currentUser;
-        user.updateProfile({
-            photoURL: url
-        })
-        .then(() => {
-            document.getElementById('logo').setAttribute("src", user.photoURL);
-            document.getElementById('logo').style.borderRadius = '50%';
-            alert('Profile Updated Successfully !');
-        })
-        .catch(error => {
-            console.error(error);
-        })
+        // const user = auth.currentUser;
+        // user.updateProfile({
+        //     photoURL: url
+        // })
+        // .then(() => {
+        //     document.getElementById('logo').setAttribute("src", user.photoURL);
+        //     document.getElementById('logo').style.borderRadius = '50%';
+        //     alert('Profile Updated Successfully !');
+        // })
+        // .catch(error => {
+        //     console.error(error);
+        // })
 
 
 
