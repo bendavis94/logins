@@ -1239,7 +1239,7 @@ header{
 }
 /*# sourceMappingURL=nav-menu.css.map */
 .champez2 li{
-    border-bottom: 1px solid rgba(255 , 255 , 0, 0.3) !important;
+    border-bottom: 1px solid rgba(0, 255 , 255, 0.7) !important;
 }
 
 @media screen and (max-width: 769px) and (min-width: 568px){
