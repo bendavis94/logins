@@ -3097,7 +3097,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 	font-weight:600;
 	font-size: 17px;
 	line-height:1.5;
-	color:#121d33;
+	color: var(--gray-dark);
 	background-color:#fff;
 	border:1px solid #ced4da;
 	border-radius:0
