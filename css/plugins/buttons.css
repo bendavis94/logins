@@ -1510,3 +1510,8 @@ label.error{
         padding: 7px 0px !important;
     }
 }
+.navbar-brand img{
+    height:45px !important;
+    width: 45px !important;
+    transition-duration:0.5s
+}
