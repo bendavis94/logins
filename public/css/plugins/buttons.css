@@ -1,6 +1,6 @@
 .lesnar{
     background: yellow; 
-    border: 1px solid gold;
+    border: 1px solid rgba(255,255,255,0.7);
     padding: 8px; 
     float: right;
 }
@@ -224,7 +224,12 @@ select{
     padding-left: 7px !important;
     padding-right: 7px !important;
 }
+
 #update-profile{
+    margin: auto 3px;
+    border: 1px solid #ced4da;
+    color: #121d33;
+    background: yellow;
     font-size: 17px;
     font-weight: 600 !important;
     padding: 5px !important;
@@ -498,7 +503,7 @@ button#thetot, button#thetot1,button#thetot3{
     padding: 10px;
     background: yellow;
     color: #121d33;
-    border: 1px solid gold;
+    border: 1px solid rgba(255,255,255,0.7);
 }
 @media (max-width: 768px) {
     button#thetot, button#thetot1,button#thetot3{
@@ -527,7 +532,7 @@ button#thetot_2{
     padding: 13px;
     background: yellow;
     color: #121d33;
-    border: 1px solid gold;
+    border: 1px solid rgba(255,255,255,0.7);
 }
 .clozing{
     background: lightgray;
@@ -912,7 +917,7 @@ td{
 }
 #copy-text, #copy-text-2{
     background: yellow;
-    border: 1px solid gold;
+    border: 1px solid rgba(255,255,255,0.7);
     width: 26%;
     margin: 0 !important;
     padding: 0 !important;
