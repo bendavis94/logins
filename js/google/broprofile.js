@@ -131,9 +131,9 @@ document.getElementById('file').addEventListener('change', (event) => {
             photoURL: url
         })
         .then(() => {
-            alert('Profile Updated Successfully !');
-            document.getElementById('jinaHolder').innerText = displayNameField.value;
+            document.getElementById('logo').setAttribute("src", user.photoURL);
             document.getElementById('logo').style.borderRadius = '50%';
+            alert('Profile Updated Successfully !');
         })
         .catch(error => {
             console.error(error);
