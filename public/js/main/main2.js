@@ -253,10 +253,9 @@ function addToCartClicked(event){
     $("#exampleModal").on("show.bs.modal", function (event) {
       ("use strict");
       var modal = $(this);
-      modal.find(".modal-title").text(account);
+      modal.find(".modal-title").text("Balance: " + balance);
       modal.find(".moneycoming").text(price);
       modal.find(".website p").text(website);
-      modal.find(".balance p").text("Balance: " + balance);
       modal.find(".info1 p").text(info1);
       modal.find(".info2 p").text(info2);
       modal.find(".info3 p").text(info3);
