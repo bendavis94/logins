@@ -125,6 +125,22 @@ document.getElementById('file').addEventListener('change', (event) => {
 		console.log('an error has occurred')
 	}, async () => {
 		const url = await storageRef.getDownloadURL();
+
+        const user = auth.currentUser;
+        user.updateProfile({
+            photoURL: url
+        })
+        .then(() => {
+            alert('Profile Updated Successfully !');
+            document.getElementById('jinaHolder').innerText = displayNameField.value;
+            document.getElementById('logo').style.borderRadius = '50%';
+        })
+        .catch(error => {
+            console.error(error);
+        })
+
+
+
 		var cartRow = document.createElement('div');
 		cartRow.classList.add('col-xl-2','col-lg-3','col-md-4','col-6');
 		var cartItems = document.getElementById('list');
