@@ -475,6 +475,9 @@ select{
     border-right: none;
     color: white !important;
 }
+.modal-body div:first-child p{
+    border-top: none;
+}
 .modal-body div p:first-child{
     margin-top: 0 !important;
 }
@@ -482,7 +485,7 @@ select{
     font-size: 32px !important;
     padding-top: 17px !important;
 }
-.info7{
+.account{
     border: 1px solid rgba(135,206,235,0.2);
     border-left: none;
     border-right: none;
@@ -559,11 +562,11 @@ button#thetot_2{
 #exampleModalLabel{
     text-align: center;
     color: white;
-    font-size: 23px;
+    font-size: 32px;
 }
-@media (max-width:576px){
+@media (max-width:776px){
     #exampleModalLabel{
-        font-size: 21px;
+        font-size: 28px;
     }
 }
 .champez3{
