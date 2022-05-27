@@ -225,14 +225,14 @@ select{
     padding-right: 7px !important;
 }
 #update-profile{
-    font-size: 18px;
-    padding-left: 7px !important;
-    padding-right: 7px !important;
+    font-size: 17px;
+    font-weight: 600 !important;
+    padding: 5px !important;
     width: auto !important;
 }
 #update-profile img{
     position: relative; 
-    width: 20px; 
+    width: 17px; 
     margin-left: 3px;
 }
 .letsgo{

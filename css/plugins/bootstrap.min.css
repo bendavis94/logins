@@ -3094,12 +3094,13 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 	z-index:1;
 	height:calc(1.5em + .75rem + 2px);
 	padding:.375rem .75rem;
-	font-weight:400;
+	font-weight:600;
+	font-size: 17px;
 	line-height:1.5;
-	color:#495057;
+	color:#121d33;
 	background-color:#fff;
 	border:1px solid #ced4da;
-	border-radius:.25rem
+	border-radius:0
 }
 .custom-file-label::after{
 	position:absolute;
@@ -3111,11 +3112,13 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 	height:calc(1.5em + .75rem);
 	padding:.375rem .75rem;
 	line-height:1.5;
-	color:#495057;
+	font-size: 17px;
+	font-weight: 600;
+	color:#121d33;
 	content:"Browse";
-	background-color:#e9ecef;
+	background-color:yellow;
 	border-left:inherit;
-	border-radius:0 .25rem .25rem 0
+	border-radius:0 
 }
 .custom-range{
 	width:100%;
