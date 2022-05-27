@@ -29,7 +29,7 @@ const auth = firebase.auth();
 auth.onAuthStateChanged(user => {
 	let goodies = [];
 	if (!user) {
-		window.location.assign("index");
+		// window.location.assign("index");
 	}
 	if (user.photoURL) {
 		logoHolder.setAttribute("src", user.photoURL);
@@ -125,22 +125,7 @@ document.getElementById('file').addEventListener('change', (event) => {
 		console.log('an error has occurred')
 	}, async () => {
 		const url = await storageRef.getDownloadURL();
-
-        // const user = auth.currentUser;
-        // user.updateProfile({
-        //     photoURL: url
-        // })
-        // .then(() => {
-        //     document.getElementById('logo').setAttribute("src", user.photoURL);
-        //     document.getElementById('logo').style.borderRadius = '50%';
-        //     alert('Profile Updated Successfully !');
-        // })
-        // .catch(error => {
-        //     console.error(error);
-        // })
-
-
-
+        
 		var cartRow = document.createElement('div');
 		cartRow.classList.add('col-xl-2','col-lg-3','col-md-4','col-6');
 		var cartItems = document.getElementById('list');
@@ -234,6 +219,34 @@ editButton.addEventListener('click', editInformation);
 
 
 
+document.getElementById('profile-pic').addEventListener('change', (event) => {
+	const file = event.target.files[0];
+	const storageRef = firebase.storage().ref('images' + file.name);
+	storageRef.put(file).on('state_changed', (snapshot) => {
+		const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+		const progressBar_2 = document.getElementById("pablos-2");
+		progressBar_2.style.width = progress +'%';
+		document.getElementById('escoz-2').innerHTML = 'Upload Progress: ' + progress + '%';
+	}, (err) => {
+		console.log('an error has occurred')
+	}, async () => {
+		const url = await storageRef.getDownloadURL();
+
+        const user = auth.currentUser;
+        user.updateProfile({
+            photoURL: url
+        })
+        .then(() => {
+            document.getElementById('logo').setAttribute("src", user.photoURL);
+            document.getElementById('logo').style.borderRadius = '50%';
+            alert('Profile Updated Successfully !');
+        })
+        .catch(error => {
+            console.error(error);
+        })
+
+	});
+});
 
 
 
