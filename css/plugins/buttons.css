@@ -1530,14 +1530,9 @@ label.error{
     font-size: 17px;
     font-weight: 600 !important;
     padding: 5px !important;
-    width: 120px !important;
+    width: 12px !important;
     height: 44px !important;
     text-transform: none !important;
-}
-@media screen and (max-width: 777px){
-   #update-profile{
-       max-width: 10px !important;
-   }
 }
 #update-profile img{
     position: relative; 
