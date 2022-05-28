@@ -20,7 +20,6 @@ var firebaseConfig = {
   const auth = firebase.auth();
   
   auth.onAuthStateChanged(user => {
-    console.log(user);
     if (!user) {
       window.location.assign("index");
     }
