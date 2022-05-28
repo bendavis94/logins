@@ -13,7 +13,7 @@ auth.onAuthStateChanged(user => {
 		let items = [];
 		items = JSON.parse(localStorage.getItem('banklogs'));
 		if(((JSON.parse(localStorage.getItem('banklogs')).length) == 2)){
-			if(user.displayName){
+			if(user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
 						${user.displayName}, your account has insufficient balance to complete the download.
@@ -89,7 +89,7 @@ auth.onAuthStateChanged(user => {
 				}
 			}
 		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 1)){
-			if(user.displayName){
+			if(user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
 						${user.displayName}, your account has insufficient balance to complete the download.
@@ -157,7 +157,7 @@ auth.onAuthStateChanged(user => {
 				}
 			}
 		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 3)){
-			if(user.displayName){
+			if(user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
 						${user.displayName}, your account has insufficient balance to complete the download.
