@@ -76,15 +76,28 @@ auth.onAuthStateChanged(user => {
 		email2.innerHTML = `Cashout Method link is also sent to your phone Number @:<strong>${user.phoneNumber}</strong>`;
 		email5.innerHTML = `Logged in with phone ${user.phoneNumber}, you will have to check your text messages inbox for a link`;
 
-        document.getElementById('edit-info').style.display = 'none'
-
 		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
 			for(var i = 0; i < goodies.length; i++) {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
 			}
 		}
-    } 
+    } else if(user.isAnonymous){
+        jinaHolder.innerText = user.phoneNumber;
+		jinaHolder2.innerText = 'User ID: ' + user.uid;
+		tableidHolder.value = "Name: Anonymous";
+
+		email1.innerHTML = `Bank log files can only be downloaded <strong>ONCE</strong>, save them in a folder you won't forget`;
+		email2.innerHTML = `If you'd like to get bank logs sent via email, login with google/email or yahoo`;
+		email5.innerHTML = `Logged in anonymously, no email invoice will be sent`;
+
+		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
+			goodies = JSON.parse(localStorage.getItem('banklogs'));
+			for(var i = 0; i < goodies.length; i++) {
+				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymouss'
+			}
+		}
+    }
 });
 
 const logoutButton = document.getElementById("logoutButton");
