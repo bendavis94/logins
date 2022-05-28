@@ -214,6 +214,7 @@ const changeNameAndPhoto = (user, newNameAndPhoto) => {
 }
 
 editButton.addEventListener('click', editInformation);
+document.getElementById('edit-form').addEventListener('submit', editInformation);
 
 
 
