@@ -248,10 +248,12 @@ select{
     font-size: 24px;
     font-weight: 700;
     color: aqua;
+    padding: 10px 0 !important;
+    text-align: center !important;
 }
 @media screen and (max-width: 567px){
     #invoiceHolder{
-        font-size: 18px;
+        font-size: 17px;
         color: aqua !important;
    }
     .closeimg{
@@ -944,7 +946,7 @@ td{
 }
 #invoice-email-large{
     padding: 0;
-    margin: 0;
+    margin: 0 auto !important;
 }
 #invoice-table-div{
     padding: 0;
@@ -1259,9 +1261,16 @@ label.error{
 
 
 #yourIP{
-    margin: 0 !important; 
+    margin: 0 auto !important; 
     padding: 7px !important; 
-    width: 100% !important;
+    width: auto !important;
+    text-align: center !important;
+}
+
+@media (min-width:776px){
+    #yourIP{
+        padding-right: 30px !important;
+    }
 }
 
 .margin-0-padding-0{
