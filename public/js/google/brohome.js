@@ -38,7 +38,10 @@ var firebaseConfig = {
     } else if(user.phoneNumber){
       jinaHolder.innerText = user.phoneNumber;
       jinaHolder2.innerText = 'USER ID: ' + user.uid;
-    } 
+    } else if(user.isAnonymous){
+      jinaHolder.innerText = 'Anonymous';
+      jinaHolder2.innerText = 'USER ID: ' + user.uid;
+    }
   });
   
   fetch('https://ipapi.co/json/')
