@@ -16,7 +16,7 @@ auth.onAuthStateChanged(user => {
 			if(user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${user.displayName}, your account has insufficient funds to complete the download.
+						${user.displayName}, ${toastbitcoin} bitcoin payment not detected
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
 						<hr>
@@ -35,7 +35,7 @@ auth.onAuthStateChanged(user => {
 			} else if(!user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						Your account has insufficient funds to complete the download.
+						${toastbitcoin} bitcoin payment not detected
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
 						<hr> 
@@ -54,7 +54,7 @@ auth.onAuthStateChanged(user => {
 			} else if(user.phoneNumber){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						Your account has insufficient funds to complete the download.
+						${toastbitcoin} bitcoin payment not detected
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
@@ -73,7 +73,7 @@ auth.onAuthStateChanged(user => {
 			} else if(user.isAnonymous && user.displayName){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${user.displayName}, your anonymous account has insufficient funds to complete the download.
+						${user.displayName}, ${toastbitcoin} bitcoin payment not detected
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
@@ -90,7 +90,7 @@ auth.onAuthStateChanged(user => {
 			} else if(user.isAnonymous && !user.displayName){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						Your anonymous account has insufficient funds to complete the download.
+						${toastbitcoin} bitcoin payment not detected
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
@@ -109,7 +109,7 @@ auth.onAuthStateChanged(user => {
 			if(user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${user.displayName}, your account has insufficient funds to complete the download.
+						${user.displayName}, ${toastbitcoin} bitcoin payment not detected
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
 						<hr>
@@ -126,7 +126,7 @@ auth.onAuthStateChanged(user => {
 			} else if(!user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						Your account has insufficient funds to complete the download.
+						${toastbitcoin} bitcoin payment not detected
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
 						<hr> 
@@ -143,7 +143,7 @@ auth.onAuthStateChanged(user => {
 			} else if(user.phoneNumber){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						Your account has insufficient funds to complete the download.
+						${toastbitcoin} bitcoin payment not detected
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
@@ -160,7 +160,7 @@ auth.onAuthStateChanged(user => {
 			} else if(user.isAnonymous && user.displayName){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${user.displayName}, your anonymous account has insufficient funds to complete the download.
+						${user.displayName}, ${toastbitcoin} bitcoin payment not detected
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
@@ -175,7 +175,7 @@ auth.onAuthStateChanged(user => {
 			} else if(user.isAnonymous && !user.displayName){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						Your anonymous account has insufficient funds to complete the download.
+						${toastbitcoin} bitcoin payment not detected
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
@@ -192,7 +192,7 @@ auth.onAuthStateChanged(user => {
 			if(user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${user.displayName}, your account has insufficient funds to complete the download.
+						${user.displayName}, ${toastbitcoin} bitcoin payment not detected
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
 						<hr>
@@ -213,7 +213,7 @@ auth.onAuthStateChanged(user => {
 			} else if(!user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						Your account has insufficient funds to complete the download.
+						${toastbitcoin} bitcoin payment not detected
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
 						<hr> 
@@ -234,7 +234,7 @@ auth.onAuthStateChanged(user => {
 			} else if(user.phoneNumber){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						Your account has insufficient funds to complete the download.
+						${toastbitcoin} bitcoin payment not detected
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
@@ -255,7 +255,7 @@ auth.onAuthStateChanged(user => {
 			} else if(user.isAnonymous && user.displayName){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${user.displayName}, your anonymous account has insufficient funds to complete the download.
+						${user.displayName}, ${toastbitcoin} bitcoin payment not detected
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
@@ -274,7 +274,7 @@ auth.onAuthStateChanged(user => {
 			} else if(user.isAnonymous && !user.displayName){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						Your anonymous account has insufficient funds to complete the download.
+						${toastbitcoin} bitcoin payment not detected
 						<hr>
 						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
