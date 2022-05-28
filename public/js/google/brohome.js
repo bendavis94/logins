@@ -97,8 +97,7 @@ const changeNameAndPhoto = (user, newNameAndPhoto) => {
             displayName: newDisplayName
         })
         .then(() => {
-            alert('Display Name Updated Successfully !');
-            document.getElementById('jinaHolder').innerText = displayNameField.value;
+            window.location.reload();
         })
         .catch(error => {
             console.error(error);
@@ -129,9 +128,7 @@ document.getElementById('profile-pic').addEventListener('change', (event) => {
             photoURL: url
         })
         .then(() => {
-            document.getElementById('logo').setAttribute("src", user.photoURL);
-            document.getElementById('logo').style.borderRadius = '50%';
-            alert('Profile Updated Successfully !');
+          window.location.reload();
         })
         .catch(error => {
             console.error(error);
