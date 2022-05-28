@@ -18,7 +18,7 @@ auth.onAuthStateChanged(user => {
 					var msgs = [`
 						${user.displayName}, ${toastbitcoin} bitcoin payment not detected
 						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
 						${items[0].account} with ${items[0].balance}
 						<hr>
@@ -37,8 +37,8 @@ auth.onAuthStateChanged(user => {
 					var msgs = [`
 						${toastbitcoin} bitcoin payment not detected
 						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
-						<hr> 
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
+						<hr>
 						${items[0].account} with ${items[0].balance}
 						<hr>
 						${items[1].account} with ${items[1].balance}
@@ -56,7 +56,7 @@ auth.onAuthStateChanged(user => {
 					var msgs = [`
 						${toastbitcoin} bitcoin payment not detected
 						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
 						${items[0].account} with ${items[0].balance}
 						<hr>
@@ -75,7 +75,7 @@ auth.onAuthStateChanged(user => {
 					var msgs = [`
 						${user.displayName}, ${toastbitcoin} bitcoin payment not detected
 						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
 						${items[0].account} with ${items[0].balance}
 						<hr>
@@ -92,7 +92,7 @@ auth.onAuthStateChanged(user => {
 					var msgs = [`
 						${toastbitcoin} bitcoin payment not detected
 						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
 						${items[0].account} with ${items[0].balance}
 						<hr>
@@ -111,7 +111,7 @@ auth.onAuthStateChanged(user => {
 					var msgs = [`
 						${user.displayName}, ${toastbitcoin} bitcoin payment not detected
 						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
 						${items[0].account} with ${items[0].balance}
 						<hr>
@@ -128,8 +128,8 @@ auth.onAuthStateChanged(user => {
 					var msgs = [`
 						${toastbitcoin} bitcoin payment not detected
 						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
-						<hr> 
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
+						<hr>
 						${items[0].account} with ${items[0].balance}
 						<hr>
 						An email invoice will be sent to ${user.email}
@@ -145,7 +145,7 @@ auth.onAuthStateChanged(user => {
 					var msgs = [`
 						${toastbitcoin} bitcoin payment not detected
 						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
 						${items[0].account} with ${items[0].balance}
 						<hr>
@@ -162,7 +162,7 @@ auth.onAuthStateChanged(user => {
 					var msgs = [`
 						${user.displayName}, ${toastbitcoin} bitcoin payment not detected
 						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
 						${items[0].account} with ${items[0].balance}
 					`];
@@ -177,7 +177,7 @@ auth.onAuthStateChanged(user => {
 					var msgs = [`
 						${toastbitcoin} bitcoin payment not detected
 						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
 						${items[0].account} with ${items[0].balance}
 					`];
@@ -194,7 +194,7 @@ auth.onAuthStateChanged(user => {
 					var msgs = [`
 						${user.displayName}, ${toastbitcoin} bitcoin payment not detected
 						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
 						${items[0].account} with ${items[0].balance}
 						<hr>
@@ -215,8 +215,8 @@ auth.onAuthStateChanged(user => {
 					var msgs = [`
 						${toastbitcoin} bitcoin payment not detected
 						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download:
-						<hr> 
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
+						<hr>
 						${items[0].account} with ${items[0].balance}
 						<hr>
 						${items[1].account} with ${items[1].balance}
@@ -236,7 +236,7 @@ auth.onAuthStateChanged(user => {
 					var msgs = [`
 						${toastbitcoin} bitcoin payment not detected
 						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
 						${items[0].account} with ${items[0].balance}
 						<hr>
@@ -257,7 +257,7 @@ auth.onAuthStateChanged(user => {
 					var msgs = [`
 						${user.displayName}, ${toastbitcoin} bitcoin payment not detected
 						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
 						${items[0].account} with ${items[0].balance}
 						<hr>
@@ -276,7 +276,7 @@ auth.onAuthStateChanged(user => {
 					var msgs = [`
 						${toastbitcoin} bitcoin payment not detected
 						<hr>
-						Scan the bitcoin address and send ${toastbitcoin} BTC/ $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
 						${items[0].account} with ${items[0].balance}
 						<hr>
