@@ -25,7 +25,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
         var cartItems2 = document.getElementsByClassName('champez2')[0];
         var cartRowContents = `
             <td>
-                <span class="label label-warning">Pending Payment<i class="fas fa-spin fa-sync-alt spinner-bordez"></i></span>
+                <span class="label label-warning">Pending<i class="fas fa-spin fa-sync-alt spinner-bordez"></i></span>
             </td>
             <td class="btn-balance">${(items[i].balance).replace('Balance: ','')}</td>
             <td><img src=${items[i].image} width="50px" style="border-radius: 2px"></td>
