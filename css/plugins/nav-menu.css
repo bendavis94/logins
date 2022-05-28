@@ -1729,11 +1729,6 @@ th{
     color: aqua;
     text-align: center;
 }
-#invoiceHolder{
-    font-size: 13px;
-    padding: 10px;
-    margin: 0;
-}
 #showtoasts{
     font-weight: 600;
     border: 1px solid gold;
