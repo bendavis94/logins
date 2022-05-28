@@ -13,6 +13,8 @@ var firebaseConfig = {
   const jinaHolder = document.getElementById("jinaHolder");
   const jinaHolder2 = document.getElementById("jinaHolder2");
   
+  const displayNameField = document.getElementById('new-name');
+  const editButton = document.getElementById('update-profile');
   const auth = firebase.auth();
   
   auth.onAuthStateChanged(user => {
