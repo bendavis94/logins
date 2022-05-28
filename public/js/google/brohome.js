@@ -212,6 +212,7 @@ function drawHand(ctx, pos, length, width) {
 }
 
 var ua = navigator.userAgent.toLowerCase(); 
+console.log(ua);
 if (ua.indexOf('safari') != -1) { 
   if (ua.indexOf('chrome') > -1) {
     document.getElementById('edit-info').style.display = 'block'
