@@ -94,7 +94,7 @@ auth.onAuthStateChanged(user => {
 		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
 			for(var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymouss'
+				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.displayName
 			}
 		}
     } else if(user.isAnonymous && !user.displayName){
@@ -109,7 +109,7 @@ auth.onAuthStateChanged(user => {
 		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
 			goodies = JSON.parse(localStorage.getItem('banklogs'));
 			for(var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymouss'
+				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous'
 			}
 		}
     }
