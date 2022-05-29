@@ -177,7 +177,6 @@
         font-size: 30px;
    }
 }
-
 .pricing-list ul{
     clear: both;
 }
@@ -631,6 +630,23 @@ button#thetot_2{
 @media (max-width:776px){
     .pricing-list ul li:nth-child(9){
         font-size: 15px !important;
+        display: block !important;
+    }
+}
+@media (max-width:380px){
+    .pricing-list ul li{
+        font-size:14px;
+        font-weight:500;
+        padding:2px 0 
+   }
+    .pricing-list ul li:nth-child(9){
+        font-size: 14px !important;
+        display: block !important;
+    }
+}
+@media (max-width:370px){
+    .pricing-list ul li:nth-child(9){
+        font-size: 13px !important;
         display: block !important;
     }
 }
