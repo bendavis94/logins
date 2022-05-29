@@ -33,6 +33,57 @@
         }
     });
 
+    $(document).ready(function() {
+
+        $('#clients').owlCarousel({
+			loop: true,
+			nav: false,
+			dots: false,
+            smartSpeed: 500,
+			autoplay: true,
+			autoplayTimeout: 2000,
+			responsiveClass: true,
+			autoplayHoverPause: false,
+			responsive: {
+                0: {items: 5, margin: 10}, 
+                768: {items: 9, margin: 15}, 
+                992: {items: 12, margin: 23}, 
+                1200: {items: 17, margin: 16}
+			}
+		});
+     
+        $('#services-carousel').owlCarousel({
+            loop: true,
+            responsiveClass: true,
+            dots: true,
+            nav: true,
+            smartSpeed: 500,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+            responsive: {
+                0: {
+                    items: 2,
+                    margin: 10
+                },
+                768: {
+                    items: 3,
+                    margin: 10
+                },
+                992: {
+                    items: 3,
+                    margin: 10
+                },
+                1200: {
+                    items: 5,
+                    margin: 10
+                }
+            }
+        });
+
+    });
+
     function toggleFullScreen() {
         if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
             if (document.documentElement.requestFullscreen) {
