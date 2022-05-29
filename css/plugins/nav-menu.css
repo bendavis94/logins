@@ -1723,7 +1723,7 @@ th{
 		margin-right:24px !important
 	}
     #jinaHolder{
-        font-size: 16px;
+        font-size: 16px !important;
     }
     #jinaHolder2{
         font-size: 6px !important;
