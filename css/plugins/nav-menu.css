@@ -1244,7 +1244,7 @@ header{
 
 @media screen and (max-width: 769px) and (min-width: 568px){
     .navbar-nav{
-        width: 45%;
+        width: 40%;
     }
 }
 @media screen and (max-width:470px){
@@ -1302,7 +1302,7 @@ header{
         box-shadow: none;
    }
    .navbar-nav{
-       width: 40%;
+       width: 38%;
    }
    .champez2 .sm-display-none{
        display: block !important;
