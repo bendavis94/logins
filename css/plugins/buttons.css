@@ -1542,3 +1542,10 @@ label.error{
     width: 17px; 
     margin-left: 3px;
 }
+
+
+@media screen and (max-width: 380px){
+    .gta-boa{
+        font-size: 16px; 
+    }
+}
