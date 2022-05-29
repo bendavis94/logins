@@ -1552,3 +1552,9 @@ label.error{
         font-size: 16px; 
     }
 }
+
+@media screen and (max-width: 380px){
+    .filtering span{
+        font-size: 21px;
+   }
+}
