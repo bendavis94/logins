@@ -62,7 +62,7 @@ auth.onAuthStateChanged(user => {
 						<hr>
 						${items[1].account} with ${items[1].balance}
 						<hr>
-						A link will be sent to your phone ${user.phoneNumber}
+						An invoice link will be sent to your phone number ${user.phoneNumber}
 					`];
 					i++;
 					if (i === msgs.length) {
@@ -115,7 +115,7 @@ auth.onAuthStateChanged(user => {
 						<hr>
 						${items[0].account} with ${items[0].balance}
 						<hr>
-						A link will be sent to your phone ${user.phoneNumber}
+						An invoice link will be sent to your phone number ${user.phoneNumber}
 					`];
 					i++;
 					if (i === msgs.length) {
@@ -180,7 +180,7 @@ auth.onAuthStateChanged(user => {
 						<hr>
 						${items[2].account} with ${items[2].balance}
 						<hr>
-						A link will be sent to your phone ${user.phoneNumber}
+						An invoice link will be sent to your phone number ${user.phoneNumber}
 					`];
 					i++;
 					if (i === msgs.length) {
