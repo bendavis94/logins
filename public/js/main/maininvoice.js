@@ -90,7 +90,7 @@
         
         $('.countup').counterUp({
             delay: 25,
-            time: 3500
+            time: 4900
         });
 
     });
