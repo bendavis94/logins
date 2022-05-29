@@ -150,11 +150,6 @@
 			});
 		}
 
-        $('.countup').counterUp({
-            delay: 25,
-            time: 7000
-        });
-
     });
     $window.on("load", function() {
         $.scrollIt({
