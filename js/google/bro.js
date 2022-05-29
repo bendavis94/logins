@@ -17,7 +17,7 @@ const auth = firebase.auth();
 
 auth.onAuthStateChanged(user => {
   if (!user) {
-    window.location.assign("index");
+    // window.location.assign("index");
   }
   if (user.photoURL) {
     logoHolder.setAttribute("src", user.photoURL);
