@@ -1881,8 +1881,8 @@ h3.text-white{
     border-radius: 4px !important;
 }
 
-@media screen and (max-width: 370px){
+@media screen and (max-width: 380px){
     .navbar-nav{
-        width:91%;
+        width:88%;
    }
 }
