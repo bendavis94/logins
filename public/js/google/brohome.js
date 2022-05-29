@@ -117,7 +117,7 @@ document.getElementById('file').addEventListener('change', (event) => {
 		const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
 		const progressBar_2 = document.getElementById("pablos");
 		progressBar_2.style.width = progress +'%';
-		document.getElementById('escoz').innerHTML = 'Upload Progress: ' + progress + '%';
+		document.getElementById('escoz-3').innerHTML = 'Upload Progress: ' + progress + '%';
 	}, (err) => {
 		console.log('an error has occurred')
 	}, async () => {

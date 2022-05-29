@@ -689,13 +689,16 @@ td{
     color: #121d33;
     font-weight: 500;
 }
-#escoz, #escoz-2{
+#escoz{
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     color: #121d33;
 }
-#escoz-2{
+#escoz-2, #escoz-3{
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
     color: forestgreen;
 }
 #the-other-one{
