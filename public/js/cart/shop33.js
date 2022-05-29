@@ -214,7 +214,7 @@ function updateCartTotal() {
         total = total + (price4 * 1);
     });
     document.getElementById('thetot1').innerHTML = `Checkout:  $${total.toLocaleString()}`;
-    document.getElementById('thetot').innerHTML = `View Cart: $${total.toLocaleString()}`;
+    document.getElementById('thetot').innerHTML = `View cart $<span class="countup">${total.toLocaleString()}</span>`;
     document.getElementById('theno1').innerHTML = 'Cart: ' + JSON.parse(localStorage.getItem('banklogs')).length + ' , Total: $' + total.toLocaleString();
 
     var logsContainer =  document.getElementsByClassName('gallery')[0];
@@ -250,7 +250,7 @@ function updateCartTotal2() {
         total = total + (price4 * 1);
     });
     document.getElementById('thetot1').innerHTML = `Checkout:  $${total.toLocaleString()}`;
-    document.getElementById('thetot').innerHTML = `View Cart: $${total.toLocaleString()}`;
+    document.getElementById('thetot').innerHTML = `View cart $<span class="countup">${total.toLocaleString()}</span>`;
     document.getElementById('theno1').innerHTML = 'Cart: ' + JSON.parse(localStorage.getItem('banklogs')).length + ' , Total: $' + total.toLocaleString();
 
     localStorage.setItem('time-left',600)

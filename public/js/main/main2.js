@@ -152,7 +152,7 @@
 
         $('.countup').counterUp({
             delay: 25,
-            time: 2000
+            time: 7000
         });
 
     });
