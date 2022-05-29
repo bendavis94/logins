@@ -1718,6 +1718,17 @@ th{
 		margin-right:39px !important
 	}
 }
+@media screen and (max-width: 377px) {
+    .xs-margin-50px-right{
+		margin-right:24px !important
+	}
+    #jinaHolder{
+        font-size: 16px;
+    }
+    #jinaHolder2{
+        font-size: 6px !important;
+    }
+}
 *{
     font-family:"Montserrat",sans-serif;
     font-weight: 500;
