@@ -67,7 +67,22 @@ auth.onAuthStateChanged(user => {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = theaddress;
 			}
 		}
-	} else if(user.phoneNumber){
+	} else if(user.phoneNumber && user.displayName){
+		jinaHolder.innerText = user.displayName;
+		jinaHolder2.innerText = 'User ID: ' + user.uid;
+		tableidHolder.value = "Name: " + user.displayName;
+
+		email1.innerHTML = `Check your text messages for a link @:<strong>${user.phoneNumber}</strong> after buying a bank log`;
+		email2.innerHTML = `Cashout Method link is also sent to your phone Number @:<strong>${user.phoneNumber}</strong>`;
+		email5.innerHTML = `Logged in with phone ${user.phoneNumber}, you will have to check your text messages inbox for a link`;
+
+		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
+			goodies = JSON.parse(localStorage.getItem('banklogs'));
+			for(var i = 0; i < goodies.length; i++) {
+				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
+			}
+		}
+    } else if(user.phoneNumber && !user.displayName){
 		jinaHolder.innerText = user.phoneNumber;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		tableidHolder.value = "Name: " + user.phoneNumber;
