@@ -76,31 +76,13 @@ auth.onAuthStateChanged(user => {
 			if(user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						HUNTINGTON bank
-						<br>
-						Name:  Steven Thomas 
-						<br>
-						Bank Account number:42137083
-						<br>
-						Routine number 041215032
-						<br>
-						DATE OF BIRTH :  19/12/1961
-						<br>
-						Mothers maiden:Villalobos
-						<br>
-						Username - stefibeth
-						<br>
-						Password -dexnmex5
-						<br>
-						SSN; 239-31-5727
-						<br>
-						Address; 176 Sandy Cross Rd Hobbsville NC 27946 P.O. box 9130 Marlborough, MA 01752
-						<br>
-						Bank Phone number 508 263-6700
-						<br>
-						steventhomas593th@aol.com
-						<br>
-						Password Godlives12
+						${user.displayName}, ${toastbitcoin} bitcoin payment not detected
+						<hr>
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
+						<hr>
+						${items[0].account} with ${items[0].balance}
+						<hr>
+						An email invoice will be sent to ${user.email}
 					`];
 					i++;
 					if (i === msgs.length) {
