@@ -97,7 +97,7 @@ auth.onAuthStateChanged(user => {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous';
 			}
 		}
-    } else if(user.isAnonymous){
+    } else if(user.isAnonymous && user.displayName){
         jinaHolder.innerText = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		tableidHolder.value = "Name: Anonymous";
