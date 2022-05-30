@@ -31,7 +31,10 @@ auth.onAuthStateChanged(user => {
     var theaddress = themail.substring(0,themail.indexOf('@'));
     jinaHolder.innerText = theaddress;
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
-  } else if(user.phoneNumber){
+  } else if(user.phoneNumber && user.displayName){
+    jinaHolder.innerText = user.displayName;
+    jinaHolder2.innerText = 'USER ID: ' + user.uid;
+  } else if(user.phoneNumber && !user.displayName){
     jinaHolder.innerText = user.phoneNumber;
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
   } 

@@ -35,7 +35,11 @@ auth.onAuthStateChanged(user => {
     jinaHolder.innerText = theaddress;
     jinaHolder2.innerText = 'User ID: ' + user.uid;
     invoiceHolder.innerText = 'Invoice to: '+ user.email;
-  } else if(user.phoneNumber){
+  } else if(user.phoneNumber && user.displayName){
+    jinaHolder.innerText = user.displayName;
+    jinaHolder2.innerText = 'User ID: ' + user.uid;
+    invoiceHolder.innerText = 'Invoice to: '+ user.phoneNumber;
+  } else if(user.phoneNumber && !user.displayName){
     jinaHolder.innerText = user.phoneNumber;
     jinaHolder2.innerText = 'User ID: ' + user.uid;
     invoiceHolder.innerText = 'Invoice to: '+ user.phoneNumber;
