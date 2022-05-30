@@ -25,6 +25,15 @@ const editButton = document.getElementById('update-profile');
 
 const auth = firebase.auth();
 
+var ua = navigator.userAgent.toLowerCase(); 
+if (ua.indexOf('safari') != -1) { 
+  if (ua.indexOf('chrome') > -1 || ua.indexOf('edg') > -1) {
+    document.getElementById('edit-info').style.display = 'block'
+  } else {
+    document.getElementById('edit-info').style.display = 'none'
+  }
+}
+
 auth.onAuthStateChanged(user => {
 	let goodies = [];
 	if (!user) {
@@ -86,7 +95,7 @@ auth.onAuthStateChanged(user => {
         jinaHolder.innerText = 'Anonymous';
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
 		tableidHolder.value = "Name: Anonymous";
-
+        document.getElementById('edit-info').style.display = 'none'
 		email1.innerHTML = `Bank log files can only be downloaded <strong>ONCE</strong>, save them in a folder you won't forget`;
 		email2.innerHTML = `If you'd like to get a copy of bank log files sent via email, login to the site with google/email or yahoo`;
 		email5.innerHTML = `Logged in anonymously, no email invoice will be sent`;
@@ -391,12 +400,3 @@ function markCompleted(id){
 }
 
 getItems();
-
-var ua = navigator.userAgent.toLowerCase(); 
-if (ua.indexOf('safari') != -1) { 
-  if (ua.indexOf('chrome') > -1 || ua.indexOf('edg') > -1) {
-    document.getElementById('edit-info').style.display = 'block'
-  } else {
-    document.getElementById('edit-info').style.display = 'none'
-  }
-}
