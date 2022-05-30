@@ -1504,14 +1504,14 @@ label.error{
 
 
  .attr-nav>ul>li.dropdown ul.dropdown-menu{
-    left:-267px ;
-    width:360px;
+    left:-254px ;
+    width:347px;
     border: 1.5px solid aqua !important;
 }
 @media (max-width:576px){
     .attr-nav>ul>li.dropdown ul.dropdown-menu{
-        left: -220%;
-        width: 365%;
+        left: -190%;
+        width: 335%;
     }
 }
 
