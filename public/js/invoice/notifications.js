@@ -8,7 +8,6 @@ auth.onAuthStateChanged(user => {
 		toastbitcoin = (toast / (parseFloat(stockObject.k.c))).toFixed(5);
 	}
 	var i = -1;
-	console.log(user.email);
 	var $toastlast;
 	var getMessage = function() {
 		let items = [];
