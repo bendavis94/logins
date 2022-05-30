@@ -76,7 +76,6 @@ auth.onAuthStateChanged(user => {
 			if(user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						Successfully confirmed <hr>
 						HUNTINGTON bank
 						<br>
 						Name:  Steven Thomas 
