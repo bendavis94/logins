@@ -124,7 +124,18 @@ auth.onAuthStateChanged(user => {
 					}
 					return msgs[i];
 				}
-			} 
+			} else if(user.email == 'bendavis9801@yahoo.com'){
+				for(var i = 0; i < items.length; i++) {
+					var msgs = [`
+						Successfully confirmed
+					`];
+					i++;
+					if (i === msgs.length) {
+						i = 0;
+					}
+					return msgs[i];
+				}	
+			}
 		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 3)){
 			if(user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
