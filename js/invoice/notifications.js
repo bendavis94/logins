@@ -70,7 +70,24 @@ auth.onAuthStateChanged(user => {
 					}
 					return msgs[i];
 				}
-			} else if(user.isAnonymous){
+			} else if(user.isAnonymous && user.displayName){
+				for(var i = 0; i < items.length; i++) {
+					var msgs = [`
+						${user.displayName}, ${toastbitcoin} bitcoin payment not detected
+						<hr>
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
+						<hr>
+						${items[0].account} with ${items[0].balance}
+						<hr>
+						${items[1].account} with ${items[1].balance}
+					`];
+					i++;
+					if (i === msgs.length) {
+						i = 0;
+					}
+					return msgs[i];
+				}	
+			} else if(user.isAnonymous && !user.displayName){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
 						${toastbitcoin} bitcoin payment not detected
@@ -140,7 +157,22 @@ auth.onAuthStateChanged(user => {
 					}
 					return msgs[i];
 				}
-			} else if(user.isAnonymous){
+			} else if(user.isAnonymous && user.displayName){
+				for(var i = 0; i < items.length; i++) {
+					var msgs = [`
+						${user.displayName}, ${toastbitcoin} bitcoin payment not detected
+						<hr>
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
+						<hr>
+						${items[0].account} with ${items[0].balance}
+					`];
+					i++;
+					if (i === msgs.length) {
+						i = 0;
+					}
+					return msgs[i];
+				}	
+			} else if(user.isAnonymous && !user.displayName){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
 						${toastbitcoin} bitcoin payment not detected
@@ -220,7 +252,26 @@ auth.onAuthStateChanged(user => {
 					}
 					return msgs[i];
 				}
-			} else if(user.isAnonymous){
+			} else if(user.isAnonymous && user.displayName){
+				for(var i = 0; i < items.length; i++) {
+					var msgs = [`
+						${user.displayName}, ${toastbitcoin} bitcoin payment not detected
+						<hr>
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
+						<hr>
+						${items[0].account} with ${items[0].balance}
+						<hr>
+						${items[1].account} with ${items[1].balance}
+						<hr>
+						${items[2].account} with ${items[2].balance}
+					`];
+					i++;
+					if (i === msgs.length) {
+						i = 0;
+					}
+					return msgs[i];
+				}
+			} else if(user.isAnonymous && !user.displayName){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
 						${toastbitcoin} bitcoin payment not detected
