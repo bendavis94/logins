@@ -34,11 +34,11 @@ auth.onAuthStateChanged(user => {
   } else if(user.phoneNumber){
     jinaHolder.innerText = user.phoneNumber;
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
-  } else if(user.isAnonymous){
-    jinaHolder.innerText = 'Anonymous';
-    jinaHolder2.innerText = 'USER ID: ' + user.uid;
   } else if(user.isAnonymous && user.displayName){
     jinaHolder.innerText = user.displayName;
+    jinaHolder2.innerText = 'USER ID: ' + user.uid;
+  } else if(user.isAnonymous && !user.displayName){
+    jinaHolder.innerText = 'Anonymous';
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
   }
 });
