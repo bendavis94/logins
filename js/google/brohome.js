@@ -26,6 +26,7 @@ const editButton = document.getElementById('update-profile');
 const auth = firebase.auth();
 
 auth.onAuthStateChanged(user => {
+    console.log(user);
 	let goodies = [];
 	if (!user) {
 		window.location.assign("index");
