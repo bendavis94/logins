@@ -50,13 +50,19 @@ document.getElementById('the-form').addEventListener('submit', signUpFunction);
 if (auth.isSignInWithEmailLink(window.location.href)) {
   var email = window.localStorage.getItem('emailForSignIn');
   if (!email) {
+    localStorage.setItem('the-email', true)
     email = window.prompt('Enter your email for confirmation');
   }
   auth.signInWithEmailLink(email, window.location.href)
     .then((result) => {
-      alert('Return to previous tab, email has been confirmed')
-      window.close();
-      sendVerificationEmail();
+      if(localStorage.getItem('the-email')){
+        alert('Return to previous tab, email has been confirmed')
+        window.close();
+        sendVerificationEmail();
+      } else {
+        window.location.assign('home');
+        sendVerificationEmail();
+      }
     })
     .catch((error) => {
       alert('Wrong email entered')
