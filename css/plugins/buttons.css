@@ -718,6 +718,9 @@ td{
     border-radius: 0 ;
     border: 1px solid rgba(135,206,235,0.2);
 }
+#profileModal .modal-header{
+    margin: 0 auto !important;
+}
 @media (max-width:576px){
     #modalsend{
         margin-top: 0;
