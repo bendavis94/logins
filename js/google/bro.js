@@ -25,18 +25,24 @@ auth.onAuthStateChanged(user => {
   }
   if(user.displayName && user.email){
     jinaHolder.innerText = user.displayName;
-    jinaHolder2.innerText = 'USER ID: ' + user.uid;
+    jinaHolder2.innerText = 'User ID: ' + user.uid;
   } else if(!user.displayName && user.email) {
     var themail = user.email;
     var theaddress = themail.substring(0,themail.indexOf('@'));
     jinaHolder.innerText = theaddress;
-    jinaHolder2.innerText = 'USER ID: ' + user.uid;
+    jinaHolder2.innerText = 'User ID: ' + user.uid;
   } else if(user.phoneNumber && user.displayName){
     jinaHolder.innerText = user.displayName;
-    jinaHolder2.innerText = 'USER ID: ' + user.uid;
+    jinaHolder2.innerText = 'User ID: ' + user.uid;
   } else if(user.phoneNumber && !user.displayName){
     jinaHolder.innerText = user.phoneNumber;
-    jinaHolder2.innerText = 'USER ID: ' + user.uid;
+    jinaHolder2.innerText = 'User ID: ' + user.uid;
+  } else if(user.isAnonymous && user.displayName){
+    jinaHolder.innerText = user.displayName;
+    jinaHolder2.innerText = 'User ID: ' + user.uid;
+  } else if(user.isAnonymous && !user.displayName){
+    jinaHolder.innerText = 'Anonymous';
+    jinaHolder2.innerText = 'User ID: ' + user.uid;
   } 
 });
 
