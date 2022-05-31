@@ -1338,13 +1338,13 @@ label.error{
     right:0 !important;
     left: 28vw !important;
     width:72vw !important;
-    height:71vh !important;
+    height:61vh !important;
 }
 @media (max-width:576px){
     #particles-js{
         left: 0 !important;
         width: 100vw !important;
-        height:39vh !important;
+        height:29vh !important;
     }
 }
 @media (min-width: 576px) and (max-width: 768px) { 

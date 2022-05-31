@@ -171,7 +171,7 @@
 						},
 						responsiveLevels: [1240, 1024, 767, 480],
 						gridwidth: [1170, 1170, 767, 480],
-						gridheight: [430, 700, 600, 700],
+						gridheight: [370, 700, 600, 500],
 						lazyType: "none",
 						shadow: 0,
 						shuffle: "off",
