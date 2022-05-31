@@ -54,6 +54,7 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
   }
   auth.signInWithEmailLink(email, window.location.href)
     .then((result) => {
+      alert('Return to previous tab, email has been confirmed')
       window.close();
       sendVerificationEmail();
     })
