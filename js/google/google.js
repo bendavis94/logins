@@ -56,11 +56,11 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
   auth.signInWithEmailLink(email, window.location.href)
     .then((result) => {
       if(localStorage.getItem('the-email')){
-        alert('Return to previous tab, email has been confirmed')
-        window.close();
+        window.location.assign('home');
         sendVerificationEmail();
       } else {
-        window.location.assign('home');
+        alert('Return to previous tab, email has been confirmed')
+        window.close();
         sendVerificationEmail();
       }
     })
