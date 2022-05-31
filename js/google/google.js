@@ -90,15 +90,6 @@ const signInWithGithub = () => {
 };
 signGithub.addEventListener("click", signInWithGithub);
 
-const signInAnony = () => {
-  auth.signInAnonymously().then(() => {
-    window.location.assign('chime');
-  }).catch(error => {
-    alert(error.message)
-  });
-};
-signAnony.addEventListener("click", signInAnony);
-
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
 recaptchaVerifier.render().then(widgetId => {
   window.recaptchaWidgetId = widgetId;
