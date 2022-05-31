@@ -54,7 +54,7 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
   }
   auth.signInWithEmailLink(email, window.location.href)
     .then((result) => {
-      window.location.assign('home');
+      window.close();
       sendVerificationEmail();
     })
     .catch((error) => {
