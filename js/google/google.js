@@ -24,12 +24,6 @@ const auth = firebase.auth();
 
 const sendVerificationEmail = () => {
   auth.currentUser.sendEmailVerification()
-  .then(() => {
-    console.log('Check Verification Link sent to your email')
-  })
-  .catch(error => {
-    console.log(error.message);
-  })
 }
 
 const signUpFunction = () => {
