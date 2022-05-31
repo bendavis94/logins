@@ -1362,7 +1362,7 @@ label.error{
         height:40vh !important;
     }
 }
-
+.dataTables_wrapper .dataTables_filter, 
 .dataTables_wrapper .dataTables_length, 
 .dataTables_wrapper .dataTables_paginate, 
 .dataTables_wrapper .dataTables_info{
