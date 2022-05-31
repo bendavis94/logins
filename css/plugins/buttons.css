@@ -727,8 +727,8 @@ td{
         padding: 2px;
    }
     #profileModal .modal-header{
-        margin: 0;
-        padding: 2px;
+        margin: 0 auto !important;
+        padding: 7px;
         text-align: center;
    }
 }
