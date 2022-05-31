@@ -41,7 +41,7 @@ auth.onAuthStateChanged(user => {
     jinaHolder.innerText = user.displayName;
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
   } else if(user.isAnonymous && !user.displayName){
-    jinaHolder.innerText = 'Anonymous User';
+    jinaHolder.innerText = 'Anonymous';
     jinaHolder2.innerText = 'USER ID: ' + user.uid;
   }
 });
