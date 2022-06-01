@@ -145,7 +145,7 @@
                         20
                     ],
     				"fill": false,
-    				"borderColor": "rgb(99, 203, 137)",
+    				"borderColor": "rgb(0,255,0,0.49)",
     				"lineTension": 0.1
     			}]
     		},
