@@ -43,7 +43,15 @@ auth.onAuthStateChanged(user => {
     jinaHolder.innerText = user.phoneNumber;
     jinaHolder2.innerText = 'User ID: ' + user.uid;
     invoiceHolder.innerText = 'Invoice to: '+ user.phoneNumber;
-  } 
+  } else if(user.isAnonymous && user.displayName){
+    jinaHolder.innerText = user.displayName;
+    jinaHolder2.innerText = 'User ID: ' + user.uid;
+    invoiceHolder.innerText = 'User ID: ' + user.uid;
+  } else if(user.isAnonymous && !user.displayName){
+    jinaHolder.innerText = 'Anonymous';
+    jinaHolder2.innerText = 'User ID: ' + user.uid;
+    invoiceHolder.innerText = 'User ID: ' + user.uid;
+  }
 });
 
 fetch('https://ipapi.co/json/')
@@ -57,6 +65,16 @@ fetch('https://ipapi.co/json/')
   `;
 });
 
+const logoutButton = document.getElementById("logoutButton");
+
+logoutButton.addEventListener("click", e => {
+    e.preventDefault();
+    auth.signOut().then(() => {
+        window.location.assign("index");
+    }).catch(error => {
+        console.error(error);
+    });
+});
 
 document.getElementById("thebodyz").oncontextmenu = function() {
   return false
