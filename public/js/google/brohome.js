@@ -118,7 +118,7 @@ auth.onAuthStateChanged(user => {
 		tableidHolder.value = "Name: Anonymous";
 
 		email1.innerHTML = `Bank log files can only be downloaded <strong>ONCE</strong>, save them in a folder you won't forget`;
-		email2.innerHTML = `If you'd like to get a copy of bank log files sent via email, login with google/ email or yahoo`;
+		email2.innerHTML = `If you'd like to get a copy of bank log files sent via email, logout of the site and login again with google/ email or yahoo`;
 		email5.innerHTML = `Logged in anonymously, no email invoice will be sent`;
 
 		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
