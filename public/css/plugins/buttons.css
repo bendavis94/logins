@@ -1559,3 +1559,12 @@ label.error{
         font-size: 21px;
    }
 }
+
+.icon{
+    color: #fff !important;
+    font-size: 24px !important;
+}
+.logso{
+    color: #fff !important;
+    font-size: 18px !important;
+}
