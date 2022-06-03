@@ -320,6 +320,11 @@
     		}
     	});
 
+        $('.countup').counterUp({
+            delay: 25,
+            time: 4900
+        });
+
     });
     function toggleFullScreen() {
         if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
