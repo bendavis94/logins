@@ -2,10 +2,10 @@ let items = [];
 var table3 = jQuery('#example1').DataTable();
 
 var month = new Array();
-month[4] = "May";
 month[5] = "June";
 month[6] = "July";
 month[7] = "August";
+month[8] = "Septemeber";
 var d = new Date();
 var n = month[d.getMonth()];
 var y = d.getFullYear();
