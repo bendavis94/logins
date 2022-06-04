@@ -70,6 +70,23 @@ auth.onAuthStateChanged(user => {
 					}
 					return msgs[i];
 				}
+			} else if(user.isAnonymous){
+				for(var i = 0; i < items.length; i++) {
+					var msgs = [`
+						${toastbitcoin} BTC payment not detected
+						<hr>
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
+						<hr>
+						${items[0].account} with ${items[0].balance}
+						<hr>
+						${items[1].account} with ${items[1].balance}
+					`];
+					i++;
+					if (i === msgs.length) {
+						i = 0;
+					}
+					return msgs[i];
+				}
 			} 
 		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 1)){
 			if(user.displayName && user.email){
@@ -123,7 +140,22 @@ auth.onAuthStateChanged(user => {
 					}
 					return msgs[i];
 				}
-			} 
+			} else if(user.isAnonymous){
+				for(var i = 0; i < items.length; i++) {
+					var msgs = [`
+						${toastbitcoin} BTC payment not detected
+						<hr>
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
+						<hr>
+						${items[0].account} with ${items[0].balance}
+					`];
+					i++;
+					if (i === msgs.length) {
+						i = 0;
+					}
+					return msgs[i];
+				}
+			}
 		} else if(((JSON.parse(localStorage.getItem('banklogs')).length) == 3)){
 			if(user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
@@ -181,6 +213,25 @@ auth.onAuthStateChanged(user => {
 						${items[2].account} with ${items[2].balance}
 						<hr>
 						An invoice link will be sent to your phone number ${user.phoneNumber}
+					`];
+					i++;
+					if (i === msgs.length) {
+						i = 0;
+					}
+					return msgs[i];
+				}
+			} else if(user.isAnonymous){
+				for(var i = 0; i < items.length; i++) {
+					var msgs = [`
+						${toastbitcoin} BTC payment not detected
+						<hr>
+						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
+						<hr>
+						${items[0].account} with ${items[0].balance}
+						<hr>
+						${items[1].account} with ${items[1].balance}
+						<hr>
+						${items[2].account} with ${items[2].balance}
 					`];
 					i++;
 					if (i === msgs.length) {
