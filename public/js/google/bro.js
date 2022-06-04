@@ -12,6 +12,7 @@ firebase.initializeApp(firebaseConfig);
 const logoHolder = document.getElementById("logo");
 const jinaHolder = document.getElementById("jinaHolder");
 const jinaHolder2 = document.getElementById("jinaHolder2");
+const logoutButton = document.getElementById('logoutButton');
 
 const auth = firebase.auth();
 
