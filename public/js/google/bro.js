@@ -47,6 +47,17 @@ auth.onAuthStateChanged(user => {
   }
 });
 
+logoutButton.addEventListener('click', () => {
+  auth.signOut()
+  .then(() => {
+      window.location.assign('index');
+  })
+  .catch(error => {
+      console.error(error);
+  })
+})
+
+
 fetch('https://ipapi.co/json/')
 .then(function(response) {
   return response.json();
