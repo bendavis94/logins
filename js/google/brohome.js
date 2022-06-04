@@ -131,6 +131,17 @@ auth.onAuthStateChanged(user => {
     }
 });
 
+logoutButton.addEventListener('click', () => {
+    auth.signOut()
+    .then(() => {
+        window.location.assign('index');
+    })
+    .catch(error => {
+        console.error(error);
+    })
+})
+
+
 document.getElementById("thebodyz").oncontextmenu = function() {
 	return false
 };
