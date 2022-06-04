@@ -16,7 +16,7 @@ auth.onAuthStateChanged(user => {
 			if(user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${user.displayName}, ${toastbitcoin} BTC payment not detected
+						${user.displayName}, ${toastbitcoin} BTC confirmation not detected
 						<hr>
 						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
@@ -35,7 +35,7 @@ auth.onAuthStateChanged(user => {
 			} else if(!user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${toastbitcoin} BTC payment not detected
+						${toastbitcoin} BTC confirmation not detected
 						<hr>
 						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
@@ -54,7 +54,7 @@ auth.onAuthStateChanged(user => {
 			} else if(user.phoneNumber){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${toastbitcoin} BTC payment not detected
+						${toastbitcoin} BTC confirmation not detected
 						<hr>
 						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
@@ -73,7 +73,7 @@ auth.onAuthStateChanged(user => {
 			} else if(user.isAnonymous){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${toastbitcoin} BTC payment not detected
+						${toastbitcoin} BTC confirmation not detected
 						<hr>
 						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
@@ -92,7 +92,7 @@ auth.onAuthStateChanged(user => {
 			if(user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${user.displayName}, ${toastbitcoin} BTC payment not detected
+						${user.displayName}, ${toastbitcoin} BTC confirmation not detected
 						<hr>
 						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
@@ -109,7 +109,7 @@ auth.onAuthStateChanged(user => {
 			} else if(!user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${toastbitcoin} BTC payment not detected
+						${toastbitcoin} BTC confirmation not detected
 						<hr>
 						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
@@ -126,7 +126,7 @@ auth.onAuthStateChanged(user => {
 			} else if(user.phoneNumber){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${toastbitcoin} BTC payment not detected
+						${toastbitcoin} BTC confirmation not detected
 						<hr>
 						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
@@ -143,7 +143,7 @@ auth.onAuthStateChanged(user => {
 			} else if(user.isAnonymous){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${toastbitcoin} BTC payment not detected
+						${toastbitcoin} BTC confirmation not detected
 						<hr>
 						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
@@ -160,7 +160,7 @@ auth.onAuthStateChanged(user => {
 			if(user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${user.displayName}, ${toastbitcoin} BTC payment not detected
+						${user.displayName}, ${toastbitcoin} BTC confirmation not detected
 						<hr>
 						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
@@ -181,7 +181,7 @@ auth.onAuthStateChanged(user => {
 			} else if(!user.displayName && user.email){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${toastbitcoin} BTC payment not detected
+						${toastbitcoin} BTC confirmation not detected
 						<hr>
 						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
@@ -202,7 +202,7 @@ auth.onAuthStateChanged(user => {
 			} else if(user.phoneNumber){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${toastbitcoin} BTC payment not detected
+						${toastbitcoin} BTC confirmation not detected
 						<hr>
 						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
@@ -223,7 +223,7 @@ auth.onAuthStateChanged(user => {
 			} else if(user.isAnonymous){
 				for(var i = 0; i < items.length; i++) {
 					var msgs = [`
-						${toastbitcoin} BTC payment not detected
+						${toastbitcoin} BTC confirmation not detected
 						<hr>
 						Scan the bitcoin address and send $${toast.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} to download: 
 						<hr>
