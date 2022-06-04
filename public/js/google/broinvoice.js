@@ -58,16 +58,6 @@ fetch('https://ipapi.co/json/')
 });
 
 
-const logoutButton = document.getElementById("logoutButton");
-
-logoutButton.addEventListener("click", e => {
-    e.preventDefault();
-    auth.signOut().then(() => {
-        window.location.assign("index");
-    }).catch(error => {
-        console.error(error);
-    });
-});
 document.getElementById("thebodyz").oncontextmenu = function() {
   return false
 };
