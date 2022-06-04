@@ -48,17 +48,6 @@ fetch('https://ipapi.co/json/')
   document.getElementById('footer-email').innerHTML = `Your IP address: ${data.ip}, ${data.city}, ${data.country_name}, ${data.org}, ${data.region}`;
 });
 
-const logoutButton = document.getElementById("logoutButton");
-
-logoutButton.addEventListener("click", e => {
-    e.preventDefault();
-    auth.signOut().then(() => {
-        window.location.assign("index");
-    }).catch(error => {
-        console.error(error);
-    });
-});
-
 document.getElementById("thebodyz").oncontextmenu = function() {
   return false
 };
