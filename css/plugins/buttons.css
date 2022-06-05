@@ -1559,7 +1559,9 @@ label.error{
         font-size: 21px;
    }
 }
-
+.fa-telegram{
+    color: #03a9f5 !important;
+}
 .icon{
     color: #fff !important;
     font-size: 24px !important;
