@@ -15,7 +15,6 @@ const logoHolder = document.getElementById("logo");
 const jinaHolder = document.getElementById("jinaHolder");
 const jinaHolder2 = document.getElementById("jinaHolder2");
 const invoiceHolder = document.getElementById('invoiceHolder');
-const logoutButton = document.getElementById('logoutButton');
 
 auth.onAuthStateChanged(user => {
   if (!user) {
@@ -44,26 +43,9 @@ auth.onAuthStateChanged(user => {
     jinaHolder.innerText = user.phoneNumber;
     jinaHolder2.innerText = 'User ID: ' + user.uid;
     invoiceHolder.innerText = 'Invoice to: '+ user.phoneNumber;
-  } else if(user.isAnonymous && user.displayName){
-    jinaHolder.innerText = user.displayName;
-    jinaHolder2.innerText = 'User ID: ' + user.uid;
-    invoiceHolder.innerText = 'User ID: ' + user.uid;
-  } else if(user.isAnonymous && !user.displayName){
-    jinaHolder.innerText = 'Anonymous';
-    jinaHolder2.innerText = 'User ID: ' + user.uid;
-    invoiceHolder.innerText = 'User ID: ' + user.uid;
-  }
+  } 
 });
 
-logoutButton.addEventListener('click', () => {
-  auth.signOut()
-  .then(() => {
-      window.location.assign('index');
-  })
-  .catch(error => {
-      console.error(error);
-  })
-})
 
 
 fetch('https://ipapi.co/json/')
