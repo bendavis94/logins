@@ -12,7 +12,6 @@ firebase.initializeApp(firebaseConfig);
 const logoHolder = document.getElementById("logo");
 const jinaHolder = document.getElementById("jinaHolder");
 const jinaHolder2 = document.getElementById("jinaHolder2");
-const logoutButton = document.getElementById('logoutButton');
 
 const auth = firebase.auth();
 
@@ -38,24 +37,8 @@ auth.onAuthStateChanged(user => {
   } else if(user.phoneNumber && !user.displayName){
     jinaHolder.innerText = user.phoneNumber;
     jinaHolder2.innerText = 'User ID: ' + user.uid;
-  } else if(user.isAnonymous && user.displayName){
-    jinaHolder.innerText = user.displayName;
-    jinaHolder2.innerText =  'User ID: ' + user.uid; 
-  } else if(user.isAnonymous && !user.displayName){
-    jinaHolder.innerText = 'Anonymous';
-    jinaHolder2.innerText =  'User ID: ' + user.uid; 
-  }
+  } 
 });
-
-logoutButton.addEventListener('click', () => {
-  auth.signOut()
-  .then(() => {
-      window.location.assign('index');
-  })
-  .catch(error => {
-      console.error(error);
-  })
-})
 
 
 fetch('https://ipapi.co/json/')
