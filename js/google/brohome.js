@@ -18,7 +18,6 @@ const tableidHolder = document.getElementById('nameBro');
 const email1 = document.getElementById('yourEmail1');
 const email2 = document.getElementById('yourEmail2');
 const email5 = document.getElementById('yourEmail5');
-const logoutButton = document.getElementById('logoutButton');
 
 
 const displayNameField = document.getElementById('new-name');
@@ -99,48 +98,8 @@ auth.onAuthStateChanged(user => {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
 			}
 		}
-    }  else if(user.isAnonymous && user.displayName){
-		jinaHolder.innerText = user.displayName;
-		jinaHolder2.innerText = 'User ID: ' + user.uid;
-		tableidHolder.value = "Name: " + user.displayName;
-
-		email1.innerHTML = `Bank log files can only be downloaded once, save them in a folder you won't forget. Use winrar software to extract bank log files after download`;
-		email2.innerHTML = `If you'd like to get a copy of bank log files sent via email, create a "fake" email account on protonmail or yahoo or google, and use that email to login to the site`;
-		email5.innerHTML = `Logged in anonymously, no email invoice will be sent`;
-
-		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
-			goodies = JSON.parse(localStorage.getItem('banklogs'));
-			for(var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.displayName;
-			}
-		}
-    } else if(user.isAnonymous && !user.displayName){
-		jinaHolder.innerText = 'Anonymous';
-		jinaHolder2.innerText = 'User ID: ' + user.uid;
-		tableidHolder.value = "Name: " + user.displayName;
-
-		email1.innerHTML = `Bank log files can only be downloaded once, save them in a folder you won't forget. Use winrar software to extract bank log files after download`;
-		email2.innerHTML = `If you'd like to get a copy of bank log files sent via email, create a "fake" email account on protonmail or yahoo or google, and use that email to login to the site`;
-		email5.innerHTML = `Logged in anonymously, no email invoice will be sent`;
-
-		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
-			goodies = JSON.parse(localStorage.getItem('banklogs'));
-			for(var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous';
-			}
-		}
-    } 
+    }  
 });
-
-logoutButton.addEventListener('click', () => {
-    auth.signOut()
-    .then(() => {
-        window.location.assign('../');
-    })
-    .catch(error => {
-        console.error(error);
-    })
-  })
 
 document.getElementById("thebodyz").oncontextmenu = function() {
 	return false
