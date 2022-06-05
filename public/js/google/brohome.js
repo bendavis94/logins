@@ -18,6 +18,8 @@ const tableidHolder = document.getElementById('nameBro');
 const email1 = document.getElementById('yourEmail1');
 const email2 = document.getElementById('yourEmail2');
 const email5 = document.getElementById('yourEmail5');
+const logoutButton = document.getElementById('logoutButton');
+
 
 const displayNameField = document.getElementById('new-name');
 const editButton = document.getElementById('update-profile');
@@ -129,6 +131,16 @@ auth.onAuthStateChanged(user => {
 		}
     } 
 });
+
+logoutButton.addEventListener('click', () => {
+    auth.signOut()
+    .then(() => {
+        window.location.assign('../');
+    })
+    .catch(error => {
+        console.error(error);
+    })
+  })
 
 document.getElementById("thebodyz").oncontextmenu = function() {
 	return false
