@@ -97,37 +97,7 @@ auth.onAuthStateChanged(user => {
 				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.phoneNumber;
 			}
 		}
-    } else if(user.isAnonymous && user.displayName){
-        jinaHolder.innerText = user.displayName;
-		jinaHolder2.innerText = 'User ID: ' + user.uid;
-		tableidHolder.value = "Name: " + user.displayName;
-
-		email1.innerHTML = `Bank log files can only be downloaded <strong>ONCE</strong>, save them in a folder you won't forget, also use winrar software to extract log files after download`;
-		email2.innerHTML = `If you'd like to get a copy of bank log files sent via email, create a "fake" email account on protonmail, google or yahoo, and use it to login to the site`;
-		email5.innerHTML = `Logged in anonymously, no email invoice will be sent.   You can logout of the website and login again using an email account to get an email invoice.`;
-
-		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
-			goodies = JSON.parse(localStorage.getItem('banklogs'));
-			for(var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = user.displayName;
-			}
-		}
-    }  else if(user.isAnonymous && !user.displayName){
-        jinaHolder.innerText = 'Anonymous';
-		jinaHolder2.innerText = 'User ID: ' + user.uid;
-		tableidHolder.value = "Name: Anonymous";
-
-		email1.innerHTML = `Bank log files can only be downloaded <strong>ONCE</strong>, save them in a folder you won't forget, also use winrar software to extract log files after download`;
-		email2.innerHTML = `If you'd like to get a copy of bank log files sent via email, create a "fake" email account on protonmail, google or yahoo, and use it to login to the site`;
-		email5.innerHTML = `Logged in anonymously, no email invoice will be sent.   You can logout of the website and login again using an email account to get an email invoice.`;
-
-		if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 0)){
-			goodies = JSON.parse(localStorage.getItem('banklogs'));
-			for(var i = 0; i < goodies.length; i++) {
-				document.getElementById(`name-on-table${items.indexOf(items[i])}`).innerHTML = 'Anonymous'
-			}
-		}
-    }  
+    } 
 });
 
 document.getElementById("thebodyz").oncontextmenu = function() {
