@@ -15,6 +15,7 @@ const logoHolder = document.getElementById("logo");
 const jinaHolder = document.getElementById("jinaHolder");
 const jinaHolder2 = document.getElementById("jinaHolder2");
 const invoiceHolder = document.getElementById('invoiceHolder');
+const logoutButton = document.getElementById('logoutButton');
 
 auth.onAuthStateChanged(user => {
   if (!user) {
@@ -53,6 +54,16 @@ auth.onAuthStateChanged(user => {
     invoiceHolder.innerText = 'User ID: ' + user.uid;
   }
 });
+
+logoutButton.addEventListener('click', () => {
+  auth.signOut()
+  .then(() => {
+      window.location.assign('../');
+  })
+  .catch(error => {
+      console.error(error);
+  })
+})
 
 fetch('https://ipapi.co/json/')
 .then(function(response) {
