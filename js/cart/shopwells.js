@@ -50,7 +50,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
 
 
 function fir4(event) {
-    var price = 'Price: $390';
+    var price = 'Price: $1,400';
     var balance = 'Balance: $9,800';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -67,7 +67,7 @@ function fir4(event) {
 
 
 function fir29(event) {
-    var price = 'Price: $730';
+    var price = 'Price: $2,609';
     var balance = 'Balance: $18,264';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -84,7 +84,7 @@ function fir29(event) {
 
 
 function uk4(event) {
-    var price = 'Price: $454';
+    var price = 'Price: $1,623';
     var balance = 'Balance: $11,362';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -101,7 +101,7 @@ function uk4(event) {
 
 
 function uk8(event) {
-    var price = 'Price: $522';
+    var price = 'Price: $1,868';
     var balance = 'Balance: $13,080';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -117,7 +117,7 @@ function uk8(event) {
 }
 
 function uk9(event) {
-    var price = 'Price: $524';
+    var price = 'Price: $1,939';
     var balance = 'Balance: $13,575';
     var website = 'wellsfargo.com';
     var info1 = 'Online& Email Access';
@@ -133,7 +133,7 @@ function uk9(event) {
 }
 
 function uk10(event) {
-    var price = 'Price: $552';
+    var price = 'Price: $1,996';
     var balance = 'Balance: $13,977';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -149,7 +149,7 @@ function uk10(event) {
 }
 
 function uk11(event) {
-    var price = 'Price: $556';
+    var price = 'Price: $1,983';
     var balance = 'Balance: $13,881';
     var website = 'citizensbank.com';
     var info1 = 'Question & Answer';
@@ -165,7 +165,7 @@ function uk11(event) {
 }
 
 function uk12(event) {
-    var price = 'Price: $558';
+    var price = 'Price: $1,999';
     var balance = 'Balance: $13,993';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -182,7 +182,7 @@ function uk12(event) {
 
 
 function uk17(event) {
-    var price = 'Price: $566';
+    var price = 'Price: $2,067';
     var balance = 'Balance: $14,474';
     var website = 'citizensbank.com';
     var info1 = 'Question & Answer';
@@ -198,8 +198,8 @@ function uk17(event) {
 }
 
 function uk20(event) {
-    var price = 'Price: $634';
-    var balance = 'Balance: $18,542';
+    var price = 'Price: $2,266';
+    var balance = 'Balance: $15,864';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
     var info2 = 'Email Access';
@@ -214,7 +214,7 @@ function uk20(event) {
 }
 
 function uk21(event) {
-    var price = 'Price: $608';
+    var price = 'Price: $2,175';
     var balance = 'Balance: $15,228';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -230,7 +230,7 @@ function uk21(event) {
 }
 
 function uk22(event) {
-    var price = 'Price: $746';
+    var price = 'Price: $2,416';
     var balance = 'Balance: $16,917';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -246,7 +246,7 @@ function uk22(event) {
 }
 
 function uk23(event) {
-    var price = 'Price: $754';
+    var price = 'Price: $2,696';
     var balance = 'Balance: $18,878';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -262,7 +262,7 @@ function uk23(event) {
 }
 
 function uk24(event) {
-    var price = 'Price: $780';
+    var price = 'Price: $2,760';
     var balance = 'Balance: $19,325';
     var website = 'citizensbank.com';
     var info1 = '10 Question & Answer';
@@ -279,7 +279,7 @@ function uk24(event) {
 
 
 function uk27(event) {
-    var price = 'Price: $790';
+    var price = 'Price: $2,648';
     var balance = 'Balance: $18,542';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -295,7 +295,7 @@ function uk27(event) {
 }
 
 function uk28(event) {
-    var price = 'Price: $812';
+    var price = 'Price: $2,901';
     var balance = 'Balance: $20,312';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -311,7 +311,7 @@ function uk28(event) {
 }
 
 function uk29(event) {
-    var price = 'Price: $832';
+    var price = 'Price: $2,972';
     var balance = 'Balance: $20,806';
     var website = 'wellsfargo.com';
     var info1 = 'Login Access';
@@ -328,7 +328,7 @@ function uk29(event) {
 
 
 function uk31(event) {
-    var price = 'Price: $902';
+    var price = 'Price: $3,227';
     var balance = 'Balance: $22,592';
     var website = 'citizensbank.com';
     var info1 = 'Question & Answer';
@@ -345,41 +345,8 @@ function uk31(event) {
 
 
 
-
-function uk34(event) {
-    var price = 'Price: $1,412';
-    var balance = 'Balance: $35,306';
-    var website = 'wellsfargo.com';
-    var info1 = 'Login Access';
-    var info2 = 'Email Access';
-    var info3 = 'Account& Routing No';
-    var info4 = 'Billing + Fullz';
-    var info5 = 'Social Security No';
-    var info6 = 'Name + Address';
-    var info7 = 'Carrier PIN';
-    var image = 'https://darknet.id/img/wells2m.jpg';
-    var account = 'Wells Fargo [SAVINGS]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function uk35(event) {
-    var price = 'Price: $1,708';
-    var balance = 'Balance: $42,710';
-    var website = 'wellsfargo.com';
-    var info1 = 'Online Access';
-    var info2 = 'Email Access';
-    var info3 = 'Billing Details';
-    var info4 = 'Account& Routing No';
-    var info5 = 'Social Security No';
-    var info6 = 'ClientIP + Useragent';
-    var info7 = 'Carrier PIN';
-    var image = 'https://darknet.id/img/new/wells42.jpg';
-    var account = 'Wells Fargo [CHECKING]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
 function uk99(event) {
-    var price = 'Price: $830';
+    var price = 'Price: $2,961';
     var balance = 'Balance: $20,728';
     var website = 'wellsfargo.com';
     var info1 = 'Online Access';
@@ -395,7 +362,7 @@ function uk99(event) {
 }
 
 function uk98(event) {
-    var price = 'Price: $164';
+    var price = 'Price: $592';
     var balance = 'Balance: $4,148';
     var website = 'wellsfargo.com';
     var info1 = 'Online + Email Access';
@@ -410,135 +377,6 @@ function uk98(event) {
     addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
 }
 
-function uk36(event) {
-    var price = 'Price: $1,436';
-    var balance = 'Balance: $35,337';
-    var website = 'wellsfargo.com';
-    var info1 = 'Online Access';
-    var info2 = 'Email Access';
-    var info3 = 'Fullz Info + Billing';
-    var info4 = 'Debit Details';
-    var info5 = 'Carrier PIN';
-    var info6 = 'ClientIP + Useragent';
-    var info7 = 'Carrier: T-Mobile';
-    var image = 'https://darknet.id/img/ronald.jpg';
-    var account = 'Wells Fargo [CHECKING]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-
-function uk38(event) {
-    var price = 'Price: $2,002';
-    var balance = 'Balance: $50,075';
-    var website = 'wellsfargo.com';
-    var info1 = 'Online Access';
-    var info2 = 'Email Access';
-    var info3 = 'Bill Pay ON';
-    var info4 = 'Carrier Bill in MailBox';
-    var info5 = 'Name + Address';
-    var info6 = 'Carrier: Verizon';
-    var info7 = 'Social Security No';
-    var image = 'https://darknet.id/img/new/wells-50.png';
-    var account = 'Wells Fargo [CHECKING]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function uk39(event) {
-    var price = 'Price: $2,130';
-    var balance = 'Balance: $53,298';
-    var website = 'wellsfargo.com';
-    var info1 = 'Online Access';
-    var info2 = 'Email Access';
-    var info3 = 'Bill Pay ON';
-    var info4 = 'Carrier Bill in MailBox';
-    var info5 = 'Name + Address';
-    var info6 = 'Carrier: T-Mobile';
-    var info7 = 'Social Security No';
-    var image = 'https://darknet.id/img/unknown2.jpg';
-    var account = 'Wells Fargo [Lakehouse Checking]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function uk42(event) {
-    var price = 'Price: $3,120';
-    var balance = 'Balance: $78,000';
-    var website = 'wellsfargo.com';
-    var info1 = 'Login Access';
-    var info2 = 'Email Access';
-    var info3 = 'Billing Details';
-    var info4 = 'Social Security No';
-    var info5 = 'Accont& Routing No';
-    var info6 = 'Date of Birth';
-    var info7 = 'Carrier PIN';
-    var image = 'https://darknet.id/img/new/wells-78.png';
-    var account = 'Wells Fargo [CHECKING]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function uk43(event) {
-    var price = 'Price: $4,134';
-    var balance = 'Balance: $103,318';
-    var website = 'wellsfargo.com';
-    var info1 = 'Login Access';
-    var info2 = 'Email Access';
-    var info3 = 'Billing Details';
-    var info4 = 'Social Security No';
-    var info5 = 'Accont& Routing No';
-    var info6 = 'Date of Birth';
-    var info7 = 'Carrier PIN';
-    var image = 'https://darknet.id/img/wells103.jpg';
-    var account = 'Wells Fargo [SAVINGS]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function uk44(event) {
-    var price = 'Price: $4,820';
-    var balance = 'Balance: $120,612';
-    var website = 'wellsfargo.com';
-    var info1 = 'Online Access';
-    var info2 = 'Email Access';
-    var info3 = 'Account& Routing No';
-    var info4 = 'Card Details';
-    var info5 = 'Social Security No';
-    var info6 = 'ClientIP + UserAgent';
-    var info7 = 'Complete Fullz';
-    var image = 'https://darknet.id/img/wells120.jpg';
-    var account = 'Wells Fargo [High Perf MMM]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-
-function uk46(event) {
-    var price = 'Price: $7,850';
-    var balance = 'Balance: $195,305';
-    var website = 'wellsfargo.com';
-    var info1 = 'Online Access';
-    var info2 = 'Email Access';
-    var info3 = 'Zelle Active + Address';
-    var info4 = 'Account& Routing No';
-    var info5 = 'Social Security No';
-    var info6 = 'ClientIP + Useragent';
-    var info7 = 'Card Details + Name';
-    var image = 'https://darknet.id/img/dorry.jpg';
-    var account = 'Wells Fargo [CHECKING]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
-
-function uk47(event) {
-    var price = 'Price: $9,436';
-    var balance = 'Balance: $236,176';
-    var website = 'wellsfargo.com';
-    var info1 = 'Online Access';
-    var info2 = 'Email Access';
-    var info3 = 'Owner Complete Fullz';
-    var info4 = 'Account& Routing No';
-    var info5 = 'Carrier PIN: T-Mobile';
-    var info6 = 'ClientIP + Useragent';
-    var info7 = 'Social Security No';
-    var image = 'https://darknet.id/img/john.jpg';
-    var account = 'Wells Fargo [HIGH PERF MMA]';
-    addItemToCart(price, balance, account,website,image,info1,info2,info3,info4,info5,info6,info7);
-}
 
 
 
